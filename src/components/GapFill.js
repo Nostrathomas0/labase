@@ -17,7 +17,7 @@ function GapFill({ template, correctAnswer, onAnswer }) {
         type="text"
         value={userInput}
         onChange={(e) => setUserInput(e.target.value)} // Update state on input change
-        placeholder="Type your answer here"
+        placeholder="Type your answer"
       />
       <button type="submit">Submit</button>
     </form>
