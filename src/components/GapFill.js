@@ -22,6 +22,6 @@ function GapFill({ template, correctAnswer, onAnswer }) {
       <button type="submit">Submit</button>
     </form>
   );
-}
+} 
 
 export default GapFill;
