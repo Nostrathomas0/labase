@@ -8,7 +8,7 @@ function GapFill({ template, correctAnswer, onAnswer }) {
     e.preventDefault(); // Prevent the form from refreshing the page
     onAnswer(userInput.trim().toLowerCase() === correctAnswer.toLowerCase()); // Invoke the callback with the result
     setUserInput(''); // Optional: Clear the input after submission
-  };
+  }; 
 
   return (
     <form onSubmit={handleSubmit}>
