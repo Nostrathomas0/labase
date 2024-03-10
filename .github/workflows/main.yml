@@ -3,16 +3,16 @@ name: Upload Website
 on:
   push:
     branches:
-      - master  # Change to 'master' if you are using the master branch
+      - master  
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '18.19.1'  # Adjust this to match your project's Node.js version
 
@@ -25,10 +25,9 @@ jobs:
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
-          args: --acl public-read --follow-symlinks --delete --exclude '.git/*' --exclude '.github/*' --exclude '.gitignore' --exclude 'node_modules/*' --exclude 'src/*' --exclude 'public/*'
-          source_dir: build  # The directory to sync to S3, usually 'build' for React apps
+          args: --acl public-read --follow-symlinks --delete --exclude '.git/*' --exclude '.github/*' --exclude '.gitignore' --exclude 'node_modules/*' --exclude 'src/*' --exclude 'public/*' ./build/
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'eu-west-3'  # Change to your AWS region, 'us-west-1' is just an example
+          AWS_REGION: 'eu-west-3'  
