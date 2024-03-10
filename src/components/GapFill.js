@@ -23,5 +23,5 @@ function GapFill({ template, correctAnswer, onAnswer }) {
     </form>
   );
 }
- 
+
 export default GapFill;
