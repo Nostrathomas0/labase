@@ -1,0 +1,45 @@
+{
+  "topic": "Adjectives",
+  "pages": [
+    {
+      "images": ["assets/images/A1/2Adjectives/1.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "Adjectives are often abbreviated (abb.) as",
+          "options": ["adj.", "adv.", "n.", "v."],
+          "correctAnswer": "adj."
+        }
+      ]
+    },
+    {
+      "images": ["assets/images/A1/2Adjectives/2.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "Choose the correct phrase.",
+          "options": ["a day sunny", "sunny a day", "a sunny day", "an sunny day"],
+          "correctAnswer": "a sunny day"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which of the following is NOT a determiner",
+          "options": ["adjectives", "numbers", "demonstratives", "nouns"],
+          "correctAnswer": "adjectives"
+        }
+      ]
+    },
+    {
+      "images": ["assets/images/A1/2Adjectives/3.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "Which option correctly completes the sentence: 'I have _____ friends coming over tonight.'",
+          "options": ["many", "some", "a few", "any"],
+          "correctAnswer": "some"
+        }
+      ]
+    }
+    
+  ]
+}

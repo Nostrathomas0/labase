@@ -35,4 +35,39 @@
   to {
     transform: rotate(360deg);
   }
+  
+}
+.Grammar {
+  /* Set the maximum width of the container and center it */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Add some space around the container */
+}
+
+.Grammar p, .Grammar button, .Grammar img {
+  /* Add some margin to elements inside Grammar for better spacing */
+  margin-bottom: 15px;
+}
+
+.Grammar button {
+  /* Style the buttons a bit */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Grammar button:hover {
+  /* Slightly darken button on hover for feedback */
+  background-color: #0056b3;
+}
+
+.Grammar img {
+  /* Ensure images are not too large */
+  max-width: 100%;
+  height: auto;
 }

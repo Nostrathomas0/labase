@@ -1,0 +1,172 @@
+{
+  "topic": "Nouns",
+  "pages": [
+    {
+      "images": ["assets/images/A1/1Nouns/1.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "Nouns are ______ .",
+          "options": ["people", "places", "things", "all of the above"],
+          "correctAnswer": "all of the above"
+        },
+        {
+          "type": "click",
+          "instructions": "Click on the pronouns",
+          "words": ["I", "love", "you", ".", "You", "love", "me","."],
+          "keywords": ["I","you", "me"]
+        }
+      ]
+    },
+    {
+      "images": ["assets/images/A1/1Nouns/2.png"],
+      "questions": [
+        {
+          "type": "click",
+          "instructions": "Which of the following nouns are plural nouns?",
+          "words": ["a camera", "a skateboard", "shoes", "a hat", "a camera lens", "wheels", "glasses", "a phone", "an apple", "shoelaces"],
+          "keyWords": ["shoes", "glasses", "shoelaces"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "_____ apple.",
+          "options": ["a", "an"],
+          "correctAnswer": "an"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "_____ orange.",
+          "options": ["a", "an"],
+          "correctAnswer": "an"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "_____ banana.",
+          "options": ["a", "an"],
+          "correctAnswer": "a"
+        }
+      ]   
+    },
+    {
+      "images": ["assets/images/A1/1Nouns/3.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "Choose the correct plural form of 'city':",
+          "options": ["citys", "cites", "cities"],
+          "correctAnswer": "cities"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Choose the correct plural form of 'knife':",
+          "options": ["knifes", "knives", "knifees"],
+          "correctAnswer": "knives"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "What is the plural form of 'box'?",
+          "options": ["boxs", "box", "boxes", "boxies"],
+          "correctAnswer": "boxes"
+        },
+        {
+          "type": "gapFill",
+          "template": "There are four _____ playing in the park.",
+          "correctAnswer": ["children"]
+        },
+        {
+          "type": "gapFill",
+          "template": "Put up some _____ on the wall for the home phone and wifi router.",
+          "correctAnswer": ["shelves"]
+        }
+      ]
+    },
+    {
+      "images": ["assets/images/A1/1Nouns/4.png"],
+      "questions": [
+        {
+          "type": "wordBank",
+          "paragraph": [
+            "Yesterday, I went to the supermarket because I needed to buy some (1) ______ for breakfast.",
+            "While I was there, I also decided to pick up a bottle of orange (2) ______ because I love drinking it in the morning.",
+            "On my way home, I bumped into my neighbor who always has great (3) ______ on how to save (4) ______ on groceries.",
+            "She suggested that buying in bulk could help me save a lot, which I thought was one of her best (5) ______ yet.",
+            "When I finally got home, I checked my phone and saw that there was some important (6) ______ about the community park renovation.",
+            "It made me think about the environment and how we should recycle more, especially (7) ______, to reduce waste.",
+            "After reflecting on this, I remembered that my teacher had given us some (8) ______ to do, which was due the next day, so I got started on that right away."
+          ],
+          "wordBank": ["ideas", "advice", "fruit", "metal", "juice", "money", "news", "homework"],
+          "correctAnswers": ["fruit", "juice", "advice", "money", "ideas", "news", "metal", "homework"]
+        }
+      ]
+    },
+    {
+      "images": ["assets/images/A1/1Nouns/5.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "Which subject pronoun is for talking about yourself?",
+          "options": ["i", "She", "I", "They"],
+          "correctAnswer": "I"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "What is the correct form of 'to be' to use with 'I'?",
+          "options": ["Is", "Am", "Are", "Be"],
+          "correctAnswer": "Am"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Choose the correct sentence.",
+          "options": ["She are a teacher.", "He am a doctor.", "They is students.", "We are friends."],
+          "correctAnswer": "We are friends."
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which option completes the sentence correctly? 'The flowers _____ beautiful.'",
+          "options": ["is", "are", "am", "be"],
+          "correctAnswer": "are"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Select the correct sentence.",
+          "options": ["You is happy.", "They am sad.", "He are tired.", "She is excited."],
+          "correctAnswer": "She is excited."
+        }
+      ]
+    }, {
+      "images": ["assets/images/A1/1Nouns/6.png"],
+      "questions": [
+        {
+          "type": "gapFill",
+          "template": "Maria is talking to _____ about the new project.",
+          "correctAnswer": "him"
+        },
+        {
+          "type": "gapFill",
+          "template": "This is the book that belongs to _____ . We left it here yesterday.",
+          "correctAnswer": "us"
+        },
+        {
+          "type": "gapFill",
+          "template": "Can _____ email the documents to _____ by tomorrow?",
+          "correctAnswer": ["she", "me"]
+        },
+        {
+          "type": "gapFill",
+          "template": "My parents bought a gift for _____ . It's a surprise!",
+          "correctAnswer": "you"
+        },
+        {
+          "type": "gapFill",
+          "template": "The story didn't make sense to _____ , so they asked for clarification.",
+          "correctAnswer": "them"
+        },
+        {
+          "type": "gapFill",
+          "template": "During the trip, we took many photos of _____ at the beach.",
+          "correctAnswer": "us"
+        }
+      ]
+    }
+  ]
+}

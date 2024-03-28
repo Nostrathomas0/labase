@@ -1,34 +1,31 @@
 import React from 'react';
-import './App.css';
-import ImageDisplay from './components/ImageDisplay';
-import MultipleChoice from './components/MultipleChoice';
-import GapFill from './components/GapFill';
-import Image1 from './assets/images/there/1.png'
-import Image2 from './assets/images/there/2.png'
-
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import NounsPage from './components/pages/NounsPage'; // Import your new component
+import AdjectivesPage from './components/pages/AdjectivesPage';
+import VerbsPage from './components/pages/VerbsPage';
+import TherePage from './components/pages/TherePage'
 
 function App() {
-  const handleAnswer = (isCorrect) => {
-    alert(isCorrect ? 'Correct!' : 'Try again!');
-  };
-
   return (
-    <div className="App">
-      <ImageDisplay imagePath={Image1} altText="There is/are" />
-      <ImageDisplay imagePath={Image2} altText="Descriptive Alt Text for Image 2" />
-      
-      <MultipleChoice 
-        question="There are ______ apples" 
-        options={['a', 'an', 'some', 'a lot']} 
-        correctAnswer="some"
-        onAnswer={handleAnswer}
-      />
-      <GapFill 
-        template="_____ the picnic." 
-        correctAnswer="at"
-        onAnswer={handleAnswer}
-      />
-    </div>
+    <Router>
+      <div>
+        <nav>
+        <ul>
+          <li><Link to="/grammar/nouns">Nouns</Link></li>
+          <li><Link to="/grammar/adjectives">Adjectives</Link></li>
+          <li><Link to="/grammar/verbs">Verbs</Link></li>
+          <li><Link to="/grammar/there-is-are">There is/are</Link></li>
+        </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/grammar/nouns" element={<NounsPage />} />
+          <Route path="/grammar/adjectives" element={<AdjectivesPage />} />
+          <Route path="/grammar/verbs" element={<VerbsPage />} />
+          <Route path="/grammar/there-is-are" element={<TherePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

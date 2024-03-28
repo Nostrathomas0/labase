@@ -1,0 +1,21 @@
+[
+    {
+      "level": "A1",
+      "topics": [
+        { "name": "Nouns", "id": "nouns" },
+        { "name": "Adjectives", "id": "adjectives" },
+        { "name": "Verbs", "id": "verbs" },
+        { "name": "There is/are", "id": "there-is-are" }
+      ]
+    },
+    {
+      "level": "A2",
+      "topics": [
+        { "name": "Past Simple", "id": "past-simple" },
+        { "name": "Past Continuous", "id": "past-continuous" }
+       
+      ]
+    }
+   
+  ]
+  

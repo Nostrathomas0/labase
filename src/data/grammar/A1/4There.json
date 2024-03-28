@@ -1,0 +1,71 @@
+{
+  "topic": "There is/are",
+  "pages": [
+    {
+      "images": ["assets/images/A1/4There/1.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "There are ______ apples",
+          "options": ["a", "an", "some", "a lot"],
+          "correctAnswer": "some"
+        },
+        {
+          "type": "gapFill",
+          "template": "_____ the picnic.",
+          "correctAnswer": "at"
+        }
+      ]
+    }, 
+    {
+      "images": ["assets/images/A1/4There/2.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "There are ______ apples",
+          "options": ["a", "an", "some", "a lot"],
+          "correctAnswer": "some"
+        },
+        {
+          "type": "gapFill",
+          "template": "_____ the picnic.",
+          "correctAnswer": "at"
+        }
+      ]
+    },
+    {
+      "images": ["assets/images/A1/4There/3.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "There are ______ apples",
+          "options": ["a", "an", "some", "a lot"],
+          "correctAnswer": "some"
+        },
+        {
+          "type": "gapFill",
+          "template": "_____ the picnic.",
+          "correctAnswer": "at"
+        }
+      ]
+    },
+    {
+      "images": ["assets/images/A1/4There/4.png"],
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "There are ______ apples",
+          "options": ["a", "an", "some", "a lot"],
+          "correctAnswer": "some"
+        },
+        {
+          "type": "gapFill",
+          "template": "_____ the picnic.",
+          "correctAnswer": "at"
+        }
+      ]
+    }
+  ]
+}
+
+  
