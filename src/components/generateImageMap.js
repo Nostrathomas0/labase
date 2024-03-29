@@ -7,19 +7,18 @@ const outputPath = path.join(__dirname, '../imageMap.js'); // Where to save imag
 let imports = '';
 let mappings = 'const imageMap = {\n';
 
-function processDir(dir) {
+function processDir(dir, prefix = '') {
   fs.readdirSync(dir).forEach(file => {
     const absolutePath = path.join(dir, file);
     if (fs.statSync(absolutePath).isDirectory()) {
-      return processDir(absolutePath); // Recursively handle directories
+      processDir(absolutePath, path.join(prefix, file)); // Recurse into subdirectories
     } else {
-      // Process each image file
-      const relativePath = path.relative(imagesDir, absolutePath);
+      // Generate a relative path that matches the keys used in components/JSON
+      const relativePath = path.join(prefix, file).replace(/\\/g, '/'); // Ensure forward slashes
       const importName = 'image_' + relativePath.replace(/[^a-zA-Z0-9]/g, '_');
-      
-      // Ensure import paths are correctly relative to the src directory
-      imports += `import ${importName} from './assets/images/${relativePath.replace(/\\/g, '/')}';\n`;
-      mappings += `  '${relativePath.replace(/\\/g, '/')}': ${importName},\n`;
+
+      imports += `import ${importName} from '../assets/images/${relativePath}';\n`;
+      mappings += `  '${relativePath}': ${importName},\n`; // Use relativePath as the key
     }
   });
 }
