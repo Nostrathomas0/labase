@@ -17,7 +17,7 @@ function processDir(dir, prefix = '') {
       const relativePath = path.join(prefix, file).replace(/\\/g, '/'); // Ensure forward slashes
       const importName = 'image_' + relativePath.replace(/[^a-zA-Z0-9]/g, '_');
 
-      imports += `import ${importName} from '../assets/images/${relativePath}';\n`;
+      imports += `import ${importName} from './assets/images/${relativePath}';\n`;
       mappings += `  '${relativePath}': ${importName},\n`; // Use relativePath as the key
     }
   });
