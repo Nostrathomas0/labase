@@ -71,3 +71,20 @@
   max-width: 100%;
   height: auto;
 }
+.text {
+  font-family:  sans-serif;
+}
+
+.italic {
+  font-style: italic;
+  font-family:  sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+  font-family:  sans-serif;
+}
+
+.underline {
+  text-decoration: underline;
+}

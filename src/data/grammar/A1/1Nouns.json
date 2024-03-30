@@ -16,7 +16,16 @@
         },
         {
           "type": "click",
-          "instructions": "Click on the pronouns",
+          "instructions": [
+            {
+              "text": "These sentences have pronouns and verbs.",
+              "textStyle": "underline"
+            }, 
+            {
+              "text": " Click on the pronouns", 
+              "textStyle":"italic"
+            }
+        ],
           "words": ["I", "love", "you", ".", "You", "love", "me","."],
           "keyWords": ["I", "you", "me"]
         }
@@ -31,9 +40,19 @@
         },
         {
           "type": "click",
-          "instructions": "Which of the following nouns are plural nouns?",
-          "words": ["a camera", "a skateboard", "shoes", "a hat", "a camera lens", "wheels", "glasses", "a phone", "an apple", "shoelaces"],
-          "keyWords": ["shoes", "glasses", "shoelaces"]
+            "instructions": [
+              {"text": "Some words are easier to count than others. For example, we can't say ", "textStyle": "text"},
+              {"text": "two money.", "textStyle": "italic"},
+              {"text": " Money only has a singular form. Likewise ", "textStyle": "text"},
+              {"text": "4 walls on the floor ", "textStyle": "bold"},
+              {"text": "is about ", "textStyle": "text"},
+              {"text": "how ", "textStyle": "italic"},
+              {"text": "countable something is. Moon is countable when we talk about the moons of Mars, Saturn and Jupiter but here it's", "textStyle": "text"},
+              {"text": "The", "textStyle": "bold"},
+              {"text": "moon. Read the list and click on the plural nouns? Then click on the correct article to use with those nouns.", "textStyle": "text"}
+            ],
+          "words": ["a camera,", "a skateboard,", "shoes,", "a hat,", "a camera lens,", "wheels,", "glasses,", "a phone,", "an apple,", "shoelaces"],
+          "keyWords": ["shoes", "glasses", "shoelaces", "wheels"]
         },
         {
           "type": "multipleChoice",
@@ -46,6 +65,12 @@
         "question": "_____ banana.",
         "options": ["a", "an"],
         "correctAnswer": "a"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "My shoes are on _____ floor.",
+          "options": ["the", "a", "an"],
+          "correctAnswer": "the"
         }
       ]
     },
@@ -64,19 +89,19 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Choose the correct plural form of 'knife':",
+          "question": "What is the correct plural form of 'knife':",
           "options": ["knifes", "knives", "knifees"],
           "correctAnswer": "knives"
         },
         {
           "type": "multipleChoice",
-          "question": "What is the plural form of 'box'?",
+          "question": "And what about the plural form of 'box'?",
           "options": ["boxs", "box", "boxes", "boxies"],
           "correctAnswer": "boxes"
         },
         {
           "type": "gapFill",
-          "template": "There are four _____ playing in the park.",
+          "template": "Write the plural form of child. There are four _____ playing in the park.",
           "correctAnswer": ["children"]
         },
         {

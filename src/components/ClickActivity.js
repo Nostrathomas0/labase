@@ -1,5 +1,5 @@
-// click.js
 import React from 'react';
+import Instructions from './GrammarTopic'; // Import the Instructions component
 
 const ClickActivity = ({ instructions, words, keyWords }) => {
   const handleWordClick = (word) => {
@@ -12,7 +12,8 @@ const ClickActivity = ({ instructions, words, keyWords }) => {
 
   return (
     <div>
-      <p>{instructions}</p>
+      {/* Use the Instructions component to render the instructions array */}
+      <Instructions instructions={instructions} />
       <div>
         {words.map((word, index) => (
           <span key={index} onClick={() => handleWordClick(word)} style={{ cursor: 'pointer', marginRight: '5px' }}>

@@ -6,57 +6,68 @@ import MultipleChoice from './MultipleChoice';
 import GapFill from './GapFill';
 import ClickActivity from './ClickActivity';
 import WordBankActivity from './WordBankActivity';
+import Instructions from './Instructions'
 
-// Accept contentData as a prop
 function GrammarTopic({ contentData }) {
   console.log(contentData);
+
+  // Check if contentData is defined and has questions
+  if (!contentData || !contentData.questions) {
+    console.error('Invalid contentData provided to GrammarTopic');
+    return null; // Render nothing or a placeholder indicating the data is missing
+  }
+
+  const { topic, questions } = contentData;
+
   const handleAnswer = (isCorrect) => {
     alert(isCorrect ? 'Correct!' : 'Try again!');
   };
 
- 
   return (
     <div className="Grammar">
-      {contentData.questions.map((item, index) => { // Directly iterate over questions
-        switch (item.type) {
+      <h2>{topic}</h2>
+      {questions.map((question, questionIndex) => {
+        switch (question.type) {
           case 'imageDisplay':
-            console.log(`Rendering image with path: ${item.imagePath}`);
-            return <ImageDisplay key={`image-${index}`} imagePath={item.imagePath} altText={item.altText} />;
+            console.log(`Rendering image with path: ${question.imagePath}`);
+            return <ImageDisplay key={`image-${questionIndex}`} imagePath={question.imagePath} altText={question.altText} />;
           case 'multipleChoice':
             return (
               <MultipleChoice
-                key={`mc-${index}`} // Updated key
-                question={item.question}
-                options={item.options}
-                correctAnswer={item.correctAnswer}
+                key={`mc-${questionIndex}`}
+                question={question.question}
+                options={question.options}
+                correctAnswer={question.correctAnswer}
                 onAnswer={handleAnswer}
               />
             );
           case 'gapFill':
             return (
               <GapFill
-                key={`gap-${index}`} // Updated key
-                template={item.template}
-                correctAnswer={item.correctAnswer}
+                key={`gap-${questionIndex}`}
+                template={question.template}
+                correctAnswer={question.correctAnswer}
                 onAnswer={handleAnswer}
               />
             );
-          case 'click': // Adjusted to your new question type
+          case 'click':
             return (
-              <ClickActivity
-                key={`click-${index}`} // Updated key
-                instructions={item.instructions}
-                words={item.words}
-                keyWords={item.keyWords}
-              />
+              <div key={`click-${questionIndex}`}>
+                <Instructions instructions={question.instructions} />
+                <ClickActivity
+                  instructions={question.instructions}
+                  words={question.words}
+                  keyWords={question.keyWords}
+                />
+              </div>
             );
           case 'wordBank':
             return (
               <WordBankActivity
-                key={`wordbank-${index}`} // Updated key
-                paragraph={item.paragraph}
-                wordBank={item.wordBank}
-                correctAnswers={item.correctAnswers}
+                key={`wordbank-${questionIndex}`}
+                paragraph={question.paragraph}
+                wordBank={question.wordBank}
+                correctAnswers={question.correctAnswers}
               />
             );
           default:

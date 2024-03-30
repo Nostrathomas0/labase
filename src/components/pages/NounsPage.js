@@ -18,7 +18,7 @@ const NounsPage = () => {
   return (
     <div>
       <h1>Nouns</h1>
-      <GrammarTopic contentData={NounsData.pages[currentPage]} />
+      <GrammarTopic contentData={NounsData.pages[currentPage].questions} />
       <PageTurner 
         currentPage={currentPage + 1}
         totalPages={NounsData.pages.length}
