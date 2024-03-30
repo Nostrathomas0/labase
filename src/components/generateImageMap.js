@@ -11,17 +11,24 @@ function processDir(dir, prefix = '') {
   fs.readdirSync(dir).forEach(file => {
     const absolutePath = path.join(dir, file);
     if (fs.statSync(absolutePath).isDirectory()) {
-      processDir(absolutePath, path.join(prefix, file)); // Recurse into subdirectories
+      // When encountering a directory, recursively call processDir with updated prefix
+      processDir(absolutePath, path.join(prefix, file)); 
     } else {
-      // Generate a relative path that matches the keys used in components/JSON
-      const relativePath = path.join(prefix, file).replace(/\\/g, '/'); // Ensure forward slashes
+      // Generate a relative path for the key, ensuring forward slashes
+      const relativePath = path.join(prefix, file).replace(/\\/g, '/');
+
+      // Create a safe variable name for the import by replacing non-alphanumeric characters
       const importName = 'image_' + relativePath.replace(/[^a-zA-Z0-9]/g, '_');
 
+      // Import the image from its relative path within the 'assets/images' directory
       imports += `import ${importName} from './assets/images/${relativePath}';\n`;
-      mappings += `  '${relativePath}': ${importName},\n`; // Use relativePath as the key
+
+      // Use the relative path (without 'assets/images/') as the key in the mapping
+      mappings += `  '${relativePath}': ${importName},\n`;
     }
   });
 }
+
 
 processDir(imagesDir); // Start processing the images directory
 

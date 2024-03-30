@@ -2,8 +2,12 @@
   "topic": "Nouns",
   "pages": [
     {
-      "images": ["assets/images/A1/1Nouns/1.png"],
       "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/1Nouns/1.png",
+          "altText": "Image description for accessibility"
+        },
         {
           "type": "multipleChoice",
           "question": "Nouns are ______ .",
@@ -14,13 +18,17 @@
           "type": "click",
           "instructions": "Click on the pronouns",
           "words": ["I", "love", "you", ".", "You", "love", "me","."],
-          "keywords": ["I","you", "me"]
+          "keyWords": ["I", "you", "me"]
         }
       ]
     },
     {
-      "images": ["assets/images/A1/1Nouns/2.png"],
       "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/1Nouns/2.png",
+          "altText": "Image description for accessibility"
+        },
         {
           "type": "click",
           "instructions": "Which of the following nouns are plural nouns?",
@@ -34,22 +42,20 @@
           "correctAnswer": "an"
         },
         {
-          "type": "multipleChoice",
-          "question": "_____ orange.",
-          "options": ["a", "an"],
-          "correctAnswer": "an"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "_____ banana.",
-          "options": ["a", "an"],
-          "correctAnswer": "a"
+        "type": "multipleChoice",
+        "question": "_____ banana.",
+        "options": ["a", "an"],
+        "correctAnswer": "a"
         }
-      ]   
+      ]
     },
     {
-      "images": ["assets/images/A1/1Nouns/3.png"],
       "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/1Nouns/3.png",
+          "altText": "Description for Image 3"
+        },
         {
           "type": "multipleChoice",
           "question": "Choose the correct plural form of 'city':",
@@ -81,27 +87,27 @@
       ]
     },
     {
-      "images": ["assets/images/A1/1Nouns/4.png"],
       "questions": [
         {
+          "type": "imageDisplay",
+          "imagePath": "A1/1Nouns/4.png",
+          "altText": "Description for Image 4"
+        },
+        {
           "type": "wordBank",
-          "paragraph": [
-            "Yesterday, I went to the supermarket because I needed to buy some (1) ______ for breakfast.",
-            "While I was there, I also decided to pick up a bottle of orange (2) ______ because I love drinking it in the morning.",
-            "On my way home, I bumped into my neighbor who always has great (3) ______ on how to save (4) ______ on groceries.",
-            "She suggested that buying in bulk could help me save a lot, which I thought was one of her best (5) ______ yet.",
-            "When I finally got home, I checked my phone and saw that there was some important (6) ______ about the community park renovation.",
-            "It made me think about the environment and how we should recycle more, especially (7) ______, to reduce waste.",
-            "After reflecting on this, I remembered that my teacher had given us some (8) ______ to do, which was due the next day, so I got started on that right away."
-          ],
+          "paragraph": "Yesterday, I went to the supermarket because I needed to buy some (1) ______ for breakfast. While I was there, I also decided to pick up a bottle of orange (2) ______ because I love drinking it in the morning. On my way home, I bumped into my neighbor who always has great (3) ______ on how to save (4) ______ on groceries. She suggested that buying in bulk could help me save a lot, which I thought was one of her best (5) ______ yet. When I finally got home, I checked my phone and saw that there was some important (6) ______ about the community park renovation. It made me think about the environment and how we should recycle more, especially (7) ______, to reduce waste. After reflecting on this, I remembered that my teacher had given us some (8) ______ to do, which was due the next day, so I got started on that right away.",
           "wordBank": ["ideas", "advice", "fruit", "metal", "juice", "money", "news", "homework"],
           "correctAnswers": ["fruit", "juice", "advice", "money", "ideas", "news", "metal", "homework"]
         }
       ]
     },
     {
-      "images": ["assets/images/A1/1Nouns/5.png"],
       "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/1Nouns/5.png",
+          "altText": "Description for Image 5"
+        },
         {
           "type": "multipleChoice",
           "question": "Which subject pronoun is for talking about yourself?",
@@ -133,9 +139,14 @@
           "correctAnswer": "She is excited."
         }
       ]
-    }, {
-      "images": ["assets/images/A1/1Nouns/6.png"],
+    },
+    {
       "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/1Nouns/6.png",
+          "altText": "Description for Image 6"
+        },
         {
           "type": "gapFill",
           "template": "Maria is talking to _____ about the new project.",
@@ -169,4 +180,8 @@
       ]
     }
   ]
-}
+}   
+
+
+
+  

@@ -17,53 +17,52 @@ function GrammarTopic({ contentData }) {
  
   return (
     <div className="Grammar">
-      {contentData.pages.map((page, pageIndex) => (
-        page.questions.map((item, index) => {
-          switch (item.type) {
-            case 'imageDisplay':
-              return <ImageDisplay key={`image-${pageIndex}-${index}`} imagePath={item.imagePath} altText={item.altText} />;
-            case 'multipleChoice':
-              return (
-                <MultipleChoice
-                  key={`mc-${pageIndex}-${index}`}
-                  question={item.question}
-                  options={item.options}
-                  correctAnswer={item.correctAnswer}
-                  onAnswer={handleAnswer}
-                />
-              );
-            case 'gapFill':
-              return (
-                <GapFill
-                  key={`gap-${pageIndex}-${index}`}
-                  template={item.template}
-                  correctAnswer={item.correctAnswer}
-                  onAnswer={handleAnswer}
-                />
-              );
-              case 'click': // Adjusted to your new question type
-              return (
-                <ClickActivity
-                  key={`click-${pageIndex}-${index}`}
-                  instructions={item.instructions}
-                  words={item.words}
-                  keyWords={item.keyWords}
-                />
-              );
-            case 'wordBank':
-              return (
-                <WordBankActivity
-                  key={`wordbank-${pageIndex}-${index}`}
-                  paragraph={item.paragraph}
-                  wordBank={item.wordBank}
-                  correctAnswers={item.correctAnswers}
-                />
-              );
-            default:
-              return null;
-          }
-        })
-      ))}
+      {contentData.questions.map((item, index) => { // Directly iterate over questions
+        switch (item.type) {
+          case 'imageDisplay':
+            console.log(`Rendering image with path: ${item.imagePath}`);
+            return <ImageDisplay key={`image-${index}`} imagePath={item.imagePath} altText={item.altText} />;
+          case 'multipleChoice':
+            return (
+              <MultipleChoice
+                key={`mc-${index}`} // Updated key
+                question={item.question}
+                options={item.options}
+                correctAnswer={item.correctAnswer}
+                onAnswer={handleAnswer}
+              />
+            );
+          case 'gapFill':
+            return (
+              <GapFill
+                key={`gap-${index}`} // Updated key
+                template={item.template}
+                correctAnswer={item.correctAnswer}
+                onAnswer={handleAnswer}
+              />
+            );
+          case 'click': // Adjusted to your new question type
+            return (
+              <ClickActivity
+                key={`click-${index}`} // Updated key
+                instructions={item.instructions}
+                words={item.words}
+                keyWords={item.keyWords}
+              />
+            );
+          case 'wordBank':
+            return (
+              <WordBankActivity
+                key={`wordbank-${index}`} // Updated key
+                paragraph={item.paragraph}
+                wordBank={item.wordBank}
+                correctAnswers={item.correctAnswers}
+              />
+            );
+          default:
+            return null;
+        }
+      })}
     </div>
   );
 }

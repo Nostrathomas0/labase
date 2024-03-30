@@ -1,24 +1,30 @@
 // VerbsPage.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import GrammarTopic from '../GrammarTopic';
 import VerbsData from '../../data/grammar/A1/3Verbs.json'; // Import the JSON data for nouns
+import PageTurner from '../PageTurner';
 
 const VerbsPage = () => {
-  const [verbsData, setVerbsData] = useState(null);
+  const [currentPage, setCurrentPage] = useState(0);
 
-  useEffect(() => {
-    setVerbsData(VerbsData);
-    console.log(VerbsData);
-  }, []);
+  const nextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, VerbsData.pages.length - 1));
+  };
 
-  if (!verbsData) {
-    return <div>Loading...</div>;
-  }
-    
+  const previousPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+  };
+   
   return (
     <div>
       <h1>Verbs</h1>
-      <GrammarTopic contentData={verbsData} />
+      <GrammarTopic contentData={VerbsData.pages[currentPage]} />
+      <PageTurner
+        currentPage={currentPage + 1}
+        totalPages={VerbsData.pages.length}
+        onNext={nextPage}
+        onPrevious={previousPage}
+        />
     </div>
   );
 }

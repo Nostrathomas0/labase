@@ -1,26 +1,30 @@
 // NounsPage.js
-import React, { useState, useEffect } from 'react';
-import NounsData from '../../data/grammar/A1/1Nouns.json'; // Adjust the import path as necessary
-import GrammarTopic from '../GrammarTopic'
+import React, { useState } from 'react';
+import NounsData from '../../data/grammar/A1/1Nouns.json';
+import GrammarTopic from '../GrammarTopic';
+import PageTurner from '../PageTurner'; // Import PageTurner component
 
 const NounsPage = () => {
-  const [nounsData, setNounsData] = useState(null);
+  const [currentPage, setCurrentPage] = useState(0);
 
-  useEffect(() => {
-    // Directly set NounsData into state, no fetching from a server
-    setNounsData(NounsData);
-    console.log(NounsData); // Log the data to verify it's being loaded correctly
-  }, []);
+  const nextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, NounsData.pages.length - 1));
+  };
 
-  if (!nounsData) {
-    return <div>Loading...</div>;
-  }
+  const previousPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+  };
 
-  // Render your nouns content using nounsData
   return (
     <div>
       <h1>Nouns</h1>
-      <GrammarTopic contentData={nounsData} />
+      <GrammarTopic contentData={NounsData.pages[currentPage]} />
+      <PageTurner 
+        currentPage={currentPage + 1}
+        totalPages={NounsData.pages.length}
+        onNext={nextPage}
+        onPrevious={previousPage}
+      />
     </div>
   );
 };
