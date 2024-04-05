@@ -1,0 +1,40 @@
+{
+  "levels": [
+    {
+      "level": "A1",
+      "points": [
+        { "name": "Nouns", "path": "/A1/nouns" },
+        { "name": "Adjectives", "path": "/A1/adjectives" },
+        { "name": "Verbs", "path": "/A1/verbs" },
+        { "name": "There", "path": "/A1/there" }
+      ]
+    },
+    {
+      "level": "A2",
+      "points": [
+        { "name": "Past Continuous", "path": "/A2/past-cont" },
+        { "name": "Future Simple", "path": "/A2/future" },
+        { "name": "Going to", "path": "/A2/going-to" },
+        { "name": "Comparatives and Superlatives", "path": "/A2/comp-supe" }
+      ]
+    },
+    {
+      "level": "B1",
+      "points": [
+        { "name": "Present Perfect Continuous", "path": "/B1/pres-perf-cont" },
+        { "name": "Past Perfect Continuous", "path": "/B1/past-perf-cont" },
+        { "name": "Second Conditional", "path": "/B1/2nd-cond" },
+        { "name": "Modal Verbs", "path": "/B1/modal-verbs" }
+      ]
+    },
+    {
+      "level": "B2",
+      "points": [
+        { "name": "Mixed Conditionals", "path": "/B2/mixed-cond" },
+        { "name": "Causatives", "path": "/B2/causatives" },
+        { "name": "Modals of Probability", "path": "/B2/modals-prob" },
+        { "name": "Future Perfect", "path": "/B2/future-perf" }
+      ]
+    }
+  ]
+}

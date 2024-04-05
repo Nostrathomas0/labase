@@ -71,20 +71,25 @@
   max-width: 100%;
   height: auto;
 }
-.text {
-  font-family:  sans-serif;
+.instructions .text {
+  font-family: sans-serif;
 }
 
-.italic {
+.instructions .italic {
   font-style: italic;
-  font-family:  sans-serif;
+  font-family: sans-serif;
 }
 
-.bold {
+.instructions .bold {
   font-weight: bold;
-  font-family:  sans-serif;
+  font-family: sans-serif;
 }
 
-.underline {
+.instructions .underline {
   text-decoration: underline;
+}
+
+.instructions .default {
+  /* Define default styles here, similar to .text if needed */
+  font-family: sans-serif;
 }

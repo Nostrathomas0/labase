@@ -1,5 +1,5 @@
 import React from 'react';
-import Instructions from './GrammarTopic'; // Import the Instructions component
+import Instructions from '../GrammarTopic'; // Import the Instructions component
 
 const ClickActivity = ({ instructions, words, keyWords }) => {
   const handleWordClick = (word) => {

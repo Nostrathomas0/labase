@@ -2,44 +2,129 @@
   "topic": "Adjectives",
   "pages": [
     {
-      "images": ["assets/images/A1/2Adjectives/1.png"],
       "questions": [
         {
+          "type": "imageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/1.png",
+          "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+        },
+        {
           "type": "multipleChoice",
-          "question": "Adjectives are often abbreviated (abb.) as",
+          "question": "Adjectives can be abbreviated (abb.) as",
           "options": ["adj.", "adv.", "n.", "v."],
           "correctAnswer": "adj."
         }
       ]
     },
     {
-      "images": ["assets/images/A1/2Adjectives/2.png"],
-      "questions": [
+      "questions":  [
+        { 
+          "type": "imageDisplay",
+          "imagesPath": "assets/images/A1/2Adjectives/2.png",
+          "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+        },
         {
           "type": "multipleChoice",
           "question": "Choose the correct phrase.",
           "options": ["a day sunny", "sunny a day", "a sunny day", "an sunny day"],
           "correctAnswer": "a sunny day"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "Which of the following is NOT a determiner",
-          "options": ["adjectives", "numbers", "demonstratives", "nouns"],
-          "correctAnswer": "adjectives"
         }
       ]
     },
     {
-      "images": ["assets/images/A1/2Adjectives/3.png"],
-      "questions": [
+      "questions":  [
+        {
+          "type":"ImageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/3.png",
+          "altText": "'dumb', 'boring', 'lazy', 'frustrating' are adjectives. So are feelings like 'bored', 'tired' and 'angry'"
+        },
+        {
+          "type": "click",
+              "instructions": [
+                {
+                  "text": "These sentences' quantifiers are ",
+                  "textStyle": "text"
+                },
+                {
+                  "text": "underlined.",
+                  "textStyle": "underline"
+                }, 
+                {
+                  "text": " Click on the quantifiers below", 
+                  "textStyle":"italic"
+                }
+            ],
+          "words": ["when", "some", "you", "lots of", "never", "many", "any", "loads of", "no","."],
+          "keyWords": ["when", "some", "you", "lots of", "many", "any", "loads of", "no"]
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/4.png",
+          "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+        },
+        {
+          "type": "click",
+            "instructions": [
+              {
+                "text": "Far",
+                "textStyle": "bold"
+              },
+              {
+                "text": "(adj.) at a great distance",
+                "textStyle": "text"
+              },
+              {
+                "text": "click on the phrase that talks about something close.",
+                "textStyle": "underline"
+              }
+            ],
+          "words": ["This thing right here", "That thing over there"],    
+          "keyWords": ["This thing right here"]
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/5.png",
+          "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+        },
         {
           "type": "multipleChoice",
-          "question": "Which option correctly completes the sentence: 'I have _____ friends coming over tonight.'",
-          "options": ["many", "some", "a few", "any"],
-          "correctAnswer": "some"
+          "question": "Adjectives can compare 2 objects.'The ship is farther than the tree'. Farther can also be written further.",
+          "options": ["further"],
+          "correctAnswer": "further" 
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/6.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/7.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/8.png"
         }
       ]
     }
-    
-  ]
-}
+  ]  
+}    

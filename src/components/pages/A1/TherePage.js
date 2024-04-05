@@ -1,8 +1,8 @@
 // TherePage.js
 import React, { useState } from 'react';
-import GrammarTopic from '../GrammarTopic';
-import ThereData from '../../data/grammar/A1/4There.json'; // Import the JSON data for nouns
-import PageTurner from '../PageTurner';
+import GrammarTopic from '../../GrammarTopic';
+import ThereData from '../../../data/grammar/A1/4There.json'; // Import the JSON data for nouns
+import PageTurner from '../../common/PageTurner'
 
 const TherePage = () => {
   const [currentPage, setCurrentPage] = useState(0);

@@ -40,7 +40,7 @@
         },
         {
           "type": "click",
-            "instructions": [
+          "instructions": [
               {"text": "Some words are easier to count than others. For example, we can't say ", "textStyle": "text"},
               {"text": "two money.", "textStyle": "italic"},
               {"text": " Money only has a singular form. Likewise ", "textStyle": "text"},

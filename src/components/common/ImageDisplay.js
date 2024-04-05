@@ -1,6 +1,6 @@
 // ImageDisplay.js
 import React from 'react';
-import imageMap from '../imageMap';
+import imageMap from '../../imageMap';
 
 function ImageDisplay({ imagePath, altText = 'image' }) {
   const ImageSrc = imageMap[imagePath];
