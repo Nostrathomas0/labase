@@ -5,7 +5,11 @@
         "questions":  [
           {
             "type": "ImageDisplay",
-            "imagePath": "assets/images/A1/3Verbs/1.png"
+            "imagePath": "assets/images/A2/1PresCont/2.png"
+          },
+          {
+            "type": "MultipleChoice",
+            "imagePath": "assets/images/A1/3Verbs/2.png"
           }
         ]
       },
@@ -13,7 +17,7 @@
         "questions":  [
           {
             "type": "ImageDisplay",
-            "imagePath": "assets/images/A1/3Verbs/2.png"
+            "imagePath": "assets/images/A2/1PresCont/2.png"
           }
         ]
       },

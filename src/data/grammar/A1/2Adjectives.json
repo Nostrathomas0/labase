@@ -26,7 +26,7 @@
         {
           "type": "multipleChoice",
           "question": "Choose the correct phrase.",
-          "options": ["a day sunny", "sunny a day", "a sunny day", "an sunny day"],
+          "options": ["a day sunny", "sunny a day", "a sunny day", "sunny day a"],
           "correctAnswer": "a sunny day"
         }
       ]
@@ -34,37 +34,85 @@
     {
       "questions":  [
         {
-          "type":"ImageDisplay",
+          "type":"imageDisplay",
           "imagePath": "assets/images/A1/2Adjectives/3.png",
           "altText": "'dumb', 'boring', 'lazy', 'frustrating' are adjectives. So are feelings like 'bored', 'tired' and 'angry'"
         },
         {
-          "type": "click",
-              "instructions": [
-                {
-                  "text": "These sentences' quantifiers are ",
-                  "textStyle": "text"
-                },
-                {
-                  "text": "underlined.",
-                  "textStyle": "underline"
-                }, 
-                {
-                  "text": " Click on the quantifiers below", 
-                  "textStyle":"italic"
-                }
-            ],
-          "words": ["when", "some", "you", "lots of", "never", "many", "any", "loads of", "no","."],
-          "keyWords": ["when", "some", "you", "lots of", "many", "any", "loads of", "no"]
+          "type": "GapFill",
+          "template": "_____ are bags and pots.",
+          "correctAnswer": "There"
+        },
+        {
+          "type": "GapFill",
+          "template": "There _____ some milk and bread.",
+          "correctAnswer": "is"
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
+          "type": "imageDisplay",
           "imagePath": "assets/images/A1/2Adjectives/4.png",
           "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+        },
+        {
+          "type": "click",
+              "instructions": [
+                {
+                  "text":  "close (adj.) is pronounced, ",
+                  "textStyle": "default" 
+                },
+                {  
+                  "text": "/klous/",
+                  "textStyle": "italic"
+                },
+                {
+                  "text": "with a clear /s/ sound"
+                },
+                {  
+                  "text":  "Think about the men's conversation.",
+                  "textStyle": "default"
+                },
+                {
+                  "text": "Bill: Hey Bob, was your dog digging a hole in my garden last night?",
+                  "textStyle": "Italic"
+                }, 
+                {
+                  "text": "Bob: Martha? No, it couldn't have beem her. She was in bed with me at 10 o'clock.", 
+                  "textStyle":"italic"
+                },
+                {
+                  "text": "Bill: Well I got up at midnight and looked out the window and saw a golden retriever acting like a Texan who struck oil.",
+                  "textStyle": "italic"
+                },
+                {
+                  "text": "Bob: Ah that explains the dirt in my bed. Here take this money.",
+                  "textStyle": "italic"
+                },
+                {
+                  "text": "Bob explains that",
+                  "textStyle": "default"
+                }
+            ],
+          "words": ["his wife's name is Martha,", "his bed was dirty in the morning", "he's planting a garden", "his dog ran away to Texas"],
+          "keyWords": ["his bed was dirty in the morning"]
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/5.png",
+          "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Adjectives can compare 2 objects.'The ship is farther than the tree'. Farther can also be written further.",
+          "options": ["further", "farther"],
+          "correctAnswer": "further" 
         },
         {
           "type": "click",
@@ -78,52 +126,89 @@
                 "textStyle": "text"
               },
               {
-                "text": "click on the phrase that talks about something close.",
+                "text": "click on the phrase that talks about something far.",
                 "textStyle": "underline"
               }
             ],
-          "words": ["This thing right here", "That thing over there"],    
-          "keyWords": ["This thing right here"]
+          "words": ["This tree right here", "That boat over there"],    
+          "keyWords": ["This tree right here"]
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/5.png",
-          "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+          "type": "imageDisplay",
+          "imagePath": "assets/images/A1/2Adjectives/6.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "Adjectives can compare 2 objects.'The ship is farther than the tree'. Farther can also be written further.",
-          "options": ["further"],
-          "correctAnswer": "further" 
+          "type": "GapFill",
+          "template": "___ shoes fit me.",
+          "correctAnswer": "These"
+        },
+        {
+          "type": "GapFill",
+          "template": "_____ guys are my friends.",
+          "correctAnswer": "These"
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/6.png"
-        }
-      ]
-    },
-    {
-      "questions":  [
-        {
-          "type": "ImageDisplay",
+          "type": "imageDisplay",
           "imagePath": "assets/images/A1/2Adjectives/7.png"
+        },
+        {
+          "type": "GapFill",
+          "template": "I want that shirt that _____ lady is wearing.",
+          "correctAnswer": "that"
+        },
+        {
+          "type": "GapFill",
+          "template": "Look at _____ building over there. It's huge!",
+          "correctAnswer": "that"
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
+          "type": "imageDisplay",
           "imagePath": "assets/images/A1/2Adjectives/8.png"
-        }
+        },
+        [
+          {
+            "type": "multipleChoice",
+            "question": "Which possessive pronoun correctly completes the sentence: 'Is this ______ book?'",
+            "options": ["yours", "your", "you're", "their"],
+            "correctAnswer": "your"
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Choose the correct possessive pronoun to fill in the blank: 'I think this pen is _______.'",
+            "options": ["hers", "her", "she's", "their"],
+            "correctAnswer": "hers"
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Select the possessive pronoun that best completes the sentence: 'This room is ______ because their name is on the door.'",
+            "options": ["their", "theirs", "they're", "them"],
+            "correctAnswer": "theirs"
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which possessive pronoun correctly completes the sentence: '______ shoes are over there by the door.'",
+            "options": ["Your", "Yours", "You're", "Their"],
+            "correctAnswer": "Your"
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Choose the correct possessive pronoun for the sentence: 'Is that car _______?'",
+            "options": ["yours", "your", "you're", "their"],
+            "correctAnswer": "yours"
+          }
+        ]
       ]
     }
   ]  
