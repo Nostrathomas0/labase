@@ -1,11 +1,30 @@
 {
-  "topic": "Adjectives",
+  "topic": "Verbs",
   "pages": [
     {
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/3Verbs/1.png"
+          "imagePath": "A1/3Verbs/1.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {
+              "text": "Action Verbs",
+              "textStyle": "bold"
+            },
+            {
+              "text": "Click on the main verb",
+              "textStyle": "bold"
+            },{
+              "text": "",
+              "textStyle": "bold"
+            }
+          ],
+          "words": ["We ", "are ", "filming ", "a ", "movie."],
+          "keyWords": ["filming"]
         }
       ]
     },
@@ -13,7 +32,14 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/3Verbs/2.png"
+          "imagePath": "A1/3Verbs/2.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "What's the only verb with more than 5 forms?",
+          "options": ["go", "do", "have", "be"],
+          "correctAnswer": "be"
         }
       ]
     },
@@ -21,7 +47,18 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/3Verbs/3.png"
+          "imagePath": "A1/3Verbs/3.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {},
+        {}
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "A1/3Verbs/4.png"
         }
       ]
     },
@@ -29,7 +66,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/3Verbs/4.png"
+          "imagePath": "A1/3Verbs/5.png"
         }
       ]
     },
@@ -37,7 +74,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/3Verbs/5.png"
+          "imagePath": "A1/3Verbs/6.png"
         }
       ]
     },
@@ -45,7 +82,15 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/3Verbs/6.png"
+          "imagePath": "A1/3Verbs/7.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "A1/3Verbs/8.png"
         }
       ]
     }

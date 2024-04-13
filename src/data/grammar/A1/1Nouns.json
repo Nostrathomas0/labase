@@ -9,18 +9,59 @@
           "altText": "Image description for accessibility"
         },
         {
-          "type": "multipleChoice",
-          "question": "Nouns are ______ .",
-          "options": ["people", "places", "things", "all of the above"],
-          "correctAnswer": "all of the above"
-        },
-        {
           "type": "click",
           "instructions": [
             {
-              "text": "These sentences have pronouns and verbs.",
-              "textStyle": "underline"
+              "text": "A noun is anyone, anything or any place you can name. There are millions, maybe even billions of nouns!",
+              "textStyle": "text"
             }, 
+            {
+              "text": "Michael Jordon, Paris, France, my glasses,",
+              "textStyle": "italic"
+            },
+            {
+               "text": "There are fewer pronouns." 
+            },   
+            {
+               "text": "I & me",
+               "textStyle": "bold"
+            },
+            { 
+               "text": "},use for myself. 1st person singular"
+            },
+            {  
+               "text": "you",
+               "textStyle": "bold"
+            },
+            {  "text": "is both singular and plural. It's the only 2nd person pronoun."
+            },
+            { 
+               "text": "he & him", 
+               "textStyle":"bold"
+            },
+            {  "text": "she & her",
+               "textStyle": "bold"
+            },
+            {
+               "text": "are male and female respectively"
+            },
+            {
+               "text": "it",
+               "textStyle":"bold"
+            },
+            {
+                "text": "is for things."
+            },
+            {
+               "text": "we & us",
+               "textStyle":"bold"
+            },
+            { "text": "are for you and me, 1st person plural"
+            },
+            {
+              "text": "they & them"
+             
+            },
             {
               "text": " Click on the pronouns", 
               "textStyle":"italic"
@@ -28,6 +69,12 @@
         ],
           "words": ["I", "love", "you", ".", "You", "love", "me","."],
           "keyWords": ["I", "you", "me"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Nouns are ______ .",
+          "options": ["people", "places", "things", "all of the above"],
+          "correctAnswer": "all of the above"
         }
       ]
     },
