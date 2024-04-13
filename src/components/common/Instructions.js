@@ -10,7 +10,7 @@ const Instructions = ({ instructions = [] }) => {
   return (
     <div className='instructions'>
       {instructions.map((instruction, index) => (
-        <span key={index} className={instruction.textStyle || 'default'}>
+        <span key={index} className={instruction.text || 'default'}>
           {instructions.textStyle}
         </span>
       ))}

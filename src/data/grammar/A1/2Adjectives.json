@@ -5,8 +5,27 @@
       "questions": [
         {
           "type": "imageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/1.png",
+          "imagePath": "A1/2Adjectives/1.png",
           "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+        },
+        {
+          "type":"click",
+          "instructions": [
+            {
+              "text": "Adjectives",
+              "textStyle": "bold"
+            },
+            {
+              "text": "Describe nouns.",
+              "textStyle": "text"
+            },
+            {
+              "text": "Click on the adjective.",
+              "textStyle": "underline"
+            }
+          ],
+          "words": ["fast", "live", "smart", "curious", "like", "make", "fair"],
+          "keyWords": ["fast", "live", "smart", "curious", "fair"]
         },
         {
           "type": "multipleChoice",
@@ -20,8 +39,14 @@
       "questions":  [
         { 
           "type": "imageDisplay",
-          "imagesPath": "assets/images/A1/2Adjectives/2.png",
+          "imagePath": "A1/2Adjectives/2.png",
           "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Adjectives go _______ the noun the describe?",
+          "options": ["before", "after", "either before or after"],
+          "correctAnswer": "before"
         },
         {
           "type": "multipleChoice",
@@ -35,18 +60,24 @@
       "questions":  [
         {
           "type":"imageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/3.png",
+          "imagePath": "A1/2Adjectives/3.png",
           "altText": "'dumb', 'boring', 'lazy', 'frustrating' are adjectives. So are feelings like 'bored', 'tired' and 'angry'"
         },
         {
-          "type": "GapFill",
-          "template": "_____ are bags and pots.",
-          "correctAnswer": "There"
+          "type": "multipleChoice",
+          "question": "There isn't ______ coffee.",
+          "options": ["many", "much", "any", "a lot" ],
+          "correctAnswer": "any"
         },
         {
           "type": "GapFill",
           "template": "There _____ some milk and bread.",
           "correctAnswer": "is"
+        },
+        {
+          "type": "GapFill",
+          "template": "_____ are bags and bowls.",
+          "correctAnswer": "There"
         }
       ]
     },
@@ -54,15 +85,21 @@
       "questions":  [
         {
           "type": "imageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/4.png",
+          "imagePath": "A1/2Adjectives/4.png",
           "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
         },
         {
           "type": "click",
               "instructions": [
                 {
-                  "text":  "close (adj.) is pronounced, ",
-                  "textStyle": "default" 
+                },
+                {
+                  "text": "Adjectives can be the object of a sentence."
+                },
+                {
+                  "text": "Close describes their distance." 
+                },{
+                  "text":  "close (adj.) is pronounced, "
                 },
                 {  
                   "text": "/klous/",
@@ -72,7 +109,7 @@
                   "text": "with a clear /s/ sound"
                 },
                 {  
-                  "text":  "Think about the men's conversation.",
+                  "text":  "Imagine the men's conversation.",
                   "textStyle": "default"
                 },
                 {
@@ -84,7 +121,7 @@
                   "textStyle":"italic"
                 },
                 {
-                  "text": "Bill: Well I got up at midnight and looked out the window and saw a golden retriever acting like a Texan who struck oil.",
+                  "text": "Bill: Well I got up at midnight and looked out the window and saw a golden retriever digging like a Texan who struck oil.",
                   "textStyle": "italic"
                 },
                 {
@@ -105,14 +142,8 @@
       "questions":  [
         {
           "type": "imageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/5.png",
+          "imagePath": "A1/2Adjectives/5.png",
           "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "Adjectives can compare 2 objects.'The ship is farther than the tree'. Farther can also be written further.",
-          "options": ["further", "farther"],
-          "correctAnswer": "further" 
         },
         {
           "type": "click",
@@ -139,7 +170,8 @@
       "questions":  [
         {
           "type": "imageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/6.png"
+          "imagePath": "A1/2Adjectives/6.png",
+          "altText": "fil"
         },
         {
           "type": "GapFill",
@@ -157,7 +189,8 @@
       "questions":  [
         {
           "type": "imageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/7.png"
+          "imagePath": "A1/2Adjectives/7.png",
+          "altText": "fil"
         },
         {
           "type": "GapFill",
@@ -175,9 +208,30 @@
       "questions":  [
         {
           "type": "imageDisplay",
-          "imagePath": "assets/images/A1/2Adjectives/8.png"
+          "imagePath": "A1/2Adjectives/8.png",
+          "altText": "adj. 'right', 'fair', 'well-respected', 'clear', green, 'early', 'late' 'shady', 'exciting'"
         },
         [
+          {
+            "type": "click", 
+              "instructions": [
+              {
+                "text": "Adjectives can be the object of a sentence."
+              },
+              {
+                "text": "Close describes their distance." 
+              },
+              {  
+                "text": "/klous/",
+                "textStyle": "italic"
+              },
+              {
+                "text": "with a clear /s/ sound"
+              }
+            ],
+      "words": ["Which", "McDonalds", "do", "you", "want to go to", "while", "you're", "still", "close", "to", "home."],
+      "keyWords": []
+          },
           {
             "type": "multipleChoice",
             "question": "Which possessive pronoun correctly completes the sentence: 'Is this ______ book?'",

@@ -8,6 +8,7 @@ const AdjectivesPage = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const { pages } = AdjectivesData; // Deconstruct pages array
   const currentQuestions = pages[currentPage].questions
+  console.log('Current Questions:', currentQuestions);
   const nextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, AdjectivesData.pages.length - 1));
 };
@@ -20,6 +21,7 @@ const AdjectivesPage = () => {
     <div>
       <h1>Adjectives</h1>
       <GrammarTopic contentData={currentQuestions || []} />
+      console.log()
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={AdjectivesData.pages.length}

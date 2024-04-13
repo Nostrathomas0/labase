@@ -1,7 +1,7 @@
 // src/components/MultipleChoice.js
 import React, { useState } from 'react';
-
 function MultipleChoice({ question, options, correctAnswer, onAnswer }) {
+  console.log({ question, options, correctAnswer }); // Check received props
   const [selected, setSelected] = useState('');
 
   const handleOptionClick = (option) => {
