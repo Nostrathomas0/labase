@@ -6,10 +6,12 @@ import PageTurner from '../../common/PageTurner'
 
 const TherePage = () => {
   const [currentPage, setCurrentPage] = useState(0);
-
+  const { pages } = ThereData;
+  const currentQuestions = pages[currentPage].questions
+  console.log('Current Questions:', currentQuestions);
   const nextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, ThereData.pages.length - 1));
-  };
+};
 
   const previousPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
@@ -18,7 +20,8 @@ const TherePage = () => {
   return (
     <div>
       <h1>Here and There</h1>
-      <GrammarTopic contentData={ThereData.pages[currentPage]} />
+      <GrammarTopic contentData={currentQuestions || []} />
+      console.log('rendered')
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={ThereData.pages.length}

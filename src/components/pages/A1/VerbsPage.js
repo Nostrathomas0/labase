@@ -1,7 +1,7 @@
 // VerbsPage.js
 import React, { useState } from 'react';
 import GrammarTopic from '../../GrammarTopic';
-import VerbsData from '../../../data/grammar/A1/3Verbs.json'; // Import the JSON data for nouns
+import VerbsData from '../../../data/grammar/A1/3Verbs.json'; // Import the JSON data
 import PageTurner from '../../common/PageTurner'
 
 const VerbsPage = () => {
@@ -17,7 +17,6 @@ const VerbsPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
   };  
   
-   
   return (
     <div>
       <h1>Verbs</h1>
