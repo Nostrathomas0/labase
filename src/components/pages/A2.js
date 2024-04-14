@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const A2 = () => {
   // Define the list of topics for A1 level. You can expand this list based on your topics.
   const topics = [
-    { name: 'PastCont', path: '/A2/past-cont' },
+    { name: 'PastCont', path: '/A2/pastCont' },
     { name: 'Future', path: '/A2/future' },
-    { name: 'GoingTo', path: '/A2/going-to' },
-    { name: 'CompSupe', path: '/A2/comp-supe' },
+    { name: 'GoingTo', path: '/A2/goingTo' },
+    { name: 'CompSupe', path: '/A2/compSupe' },
     // Add more topics as needed
   ];
 

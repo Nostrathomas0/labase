@@ -12,7 +12,7 @@ import AdjectivesPage from './components/pages/A1/AdjectivesPage';
 import VerbsPage from './components/pages/A1/VerbsPage';
 import TherePage from './components/pages/A1/TherePage'; // Use TherePage for "There"
 // Imports for A2 level topic pages
-import PastContPage from './components/pages/A2/PresContPage';
+import PastContPage from './components/pages/A2/PastContPage';
 import FuturePage from './components/pages/A2/FuturePage';
 import GoingToPage from './components/pages/A2/GoingToPage';
 import CompSupePage from './components/pages/A2/CompSupePage';

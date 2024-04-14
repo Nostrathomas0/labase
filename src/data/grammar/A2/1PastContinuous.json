@@ -4,21 +4,16 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "assets/images/A2/1PastCont/1.png"
           },
           {
             "type": "click",
               "instructions": [
-                {
-                  "text": "Setting describes where, when and the weather. Start a story like this,"
+                {"text": "Setting describes where, when and the weather. Start a story like this,"
                 },
-                {
-                  "text": "I was working on my computer, the breeze was blowing lightly through the window when I heard a shout.",
-                  "textStyle": "italic"
-                }, 
-                {
-                  "text": ""
+                {"text": "I was working on my computer, the breeze was blowing lightly through the window when I heard a shout.", "textStyle": "italic"}, 
+                {"text": ""
                 }
               ],
               "words": [" "],
@@ -30,7 +25,7 @@
       {
       "questions":  [
         {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "assets/images/A2/1PastCont/2.png"
         },
         {},
@@ -40,7 +35,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "assets/images/A2/1PastCont/3.png"
           }
         ]
@@ -48,7 +43,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "assets/images/A2/1PastCont/4.png"
           }
         ]
@@ -56,7 +51,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "assets/images/A1/A2/1PastConts/5.png"
           }
         ]

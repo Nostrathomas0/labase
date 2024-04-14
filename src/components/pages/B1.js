@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const B1 = () => {
   // Define the list of topics for A1 level. You can expand this list based on your topics.
   const topics = [
-    { name: 'PresPerfCont', path: '/B1/pres-perf-cont' },
-    { name: 'PastPerfCont', path: '/B1/past-perf-cont' },
+    { name: 'PresPerfCont', path: '/B1/presPerfCont' },
+    { name: 'PastPerfCont', path: '/B1/pastPerfCont' },
     { name: '2ndCond', path: '/B1/2ndCond' },
-    { name: 'ModalVerbs', path: '/B1/modal-verbs' },
+    { name: 'ModalVerbs', path: '/B1/modalVerbs' },
     // Add more topics as needed
   ];
 

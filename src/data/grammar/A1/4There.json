@@ -4,46 +4,83 @@
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/4There/1.png",
+          "type": "imageDisplay",
+          "imagePath": "A1/4There/1.png",
+          "altText": "Here and There , Adverbs of place. Here and There can also be considered pronouns because they are extremly Front Headed"
+        },
+        {
+          "type":"click",
+          "instruction": [
+            {"text": "Click here", "textStyle": "italic" },
+            {"text": "Click there", "textStyle": "bold"}
+          ],
+          "words": ["here", "there"],
+          "keyWords": ["here", "there"]
+        },
+        {
+          "type": "gapFill",
+          "template": "Here and there both end with _____",
+          "correctAnswer": "e"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/4There/2.png",
           "altText": "Here and There are Adverbs of Place, Adverbs of place. Here and There can also be considered pronouns because they are extremly Front Headed"
         },
         {
           "type":"click",
           "instruction": [
-            {
-              "text": "Click here",
-              "textStyle": "italic"
-            },
-            {
-              "text": "Click there",
-              "textStyle": "bold"
-            }
-          ]
+            {"text": "Click here",  "textStyle": "italic"},
+            {"text": "Click there", "textStyle": "bold"}
+          ],
+          "words": ["here", "there"],
+          "keyWords": ["here", "there"]
+        },
+        {
+          "type": "gapFill",
+          "template": "Here and there both end with _____",
+          "correctAnswer": ""
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/4There/2.png"
+          "type": "imageDisplay",
+          "imagePath": "A1/4There/3.png",
+          "altText": "Here and There are Adverbs of Place, Adverbs of place. Here and There can also be considered pronouns because they are extremly Front Headed"
+        },
+        {  
+          "type": "gapFill",
+          "template": "Here and there both end with _____",
+          "correctAnswer": ""},
+        {
+          "type": "multipleChoice",
+          "question": "Nouns are ______ .",
+          "options": ["people", "places", "things", "all of the above"],
+          "correctAnswer": "all of the above"
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/4There/3.png"
-        }
-      ]
-    },
-    {
-      "questions":  [
+          "type": "imageDisplay",
+          "imagePath": "A1/4There/4.png"
+        },
+        {"type": "multipleChoice",
+        "question": "Nouns are ______ .",
+        "options": ["people", "places", "things", "all of the above"],
+        "correctAnswer": "all of the above"},
         {
-          "type": "ImageDisplay",
-          "imagePath": "assets/images/A1/4There/4.png"
+          "type": "multipleChoice",
+          "question": "Nouns are ______ .",
+          "options": ["people", "places", "things", "all of the above"],
+          "correctAnswer": "all of the above"
         }
       ]
     }

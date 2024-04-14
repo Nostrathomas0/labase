@@ -11,61 +11,24 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "A noun is anyone, anything or any place you can name. There are millions, maybe even billions of nouns!",
-              "textStyle": "text"
-            }, 
-            {
-              "text": "Michael Jordon, Paris, France, my glasses,",
-              "textStyle": "italic"
-            },
-            {
-               "text": "There are fewer pronouns." 
-            },   
-            {
-               "text": "I & me",
-               "textStyle": "bold"
-            },
-            { 
-               "text": "},use for myself. 1st person singular"
-            },
-            {  
-               "text": "you",
-               "textStyle": "bold"
-            },
-            {  "text": "is both singular and plural. It's the only 2nd person pronoun."
-            },
-            { 
-               "text": "he & him", 
-               "textStyle":"bold"
-            },
-            {  "text": "she & her",
-               "textStyle": "bold"
-            },
-            {
-               "text": "are male and female respectively"
-            },
-            {
-               "text": "it",
-               "textStyle":"bold"
-            },
-            {
-                "text": "is for things."
-            },
-            {
-               "text": "we & us",
-               "textStyle":"bold"
-            },
-            { "text": "are for you and me, 1st person plural"
-            },
-            {
-              "text": "they & them"
-             
-            },
-            {
-              "text": " Click on the pronouns", 
-              "textStyle":"italic"
-            }
+            {"text": "A noun is anyone, anything or any place you can name. ", "textStyle": "text"}, 
+            {"text": "Michael Jordon, Paris, France, my glasses... ", "textStyle": "italic"},
+            {"text": "There are millions, maybe even billions more! There are fewer pronouns. ", "textStyle": "text"},   
+            {"text": "I & me ", "textStyle": "bold"},
+            {"text": "refer to the person speaking, 1st person singular. ",  "textStyle": "text" },
+            {"text": "you ", "textStyle": "bold"},
+            {"text": "is for the person or people being spoken to. It's the only 2nd person pronoun.  ", "textStyle": "text"},
+            {"text": "he & him ", "textStyle":"bold"},
+            {"text": "and ", "textStyle": "text"},
+            {"text": "she & her ","textStyle": "bold"},
+            {"text": "are male and female respectively.  ", "textStyle": "text" },
+            {"text": "it ", "textStyle":"bold"},
+            {"text": "is for things. ", "textStyle": "text"},
+            {"text": "we & us ", "textStyle":"bold"},
+            {"text": "are for you and me, 1st person plural. And lastly the 3rd person plural ", "textStyle": "text"},
+            {"text": "they & them ", "textStyle": "text" },
+            {"text": "can also be a neutral pronoun when those being referred to are agendered or otherwise unspecified."},
+            {"text": " Click on the pronouns",  "textStyle":"italic" }
         ],
           "words": ["I", "love", "you", ".", "You", "love", "me","."],
           "keyWords": ["I", "you", "me"]

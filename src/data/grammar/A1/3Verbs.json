@@ -4,24 +4,16 @@
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
+          "type": "imageDisplay",
           "imagePath": "A1/3Verbs/1.png",
           "altText": "V. go, stay, play, wait, have, walk, work"
         },
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "Action Verbs",
-              "textStyle": "bold"
-            },
-            {
-              "text": "Click on the main verb",
-              "textStyle": "bold"
-            },{
-              "text": "",
-              "textStyle": "bold"
-            }
+            {"text": "Action Verbs", "textStyle": "bold"},
+            { "text": "Click on the main verb", "textStyle": "bold" },
+            { "text": "", "textStyle": "bold"}
           ],
           "words": ["We ", "are ", "filming ", "a ", "movie."],
           "keyWords": ["filming"]
@@ -31,7 +23,7 @@
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
+          "type": "imageDisplay",
           "imagePath": "A1/3Verbs/2.png",
           "altText": "V. go, stay, play, wait, have, walk, work"
         },
@@ -46,51 +38,144 @@
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
+          "type": "imageDisplay",
           "imagePath": "A1/3Verbs/3.png",
           "altText": "V. go, stay, play, wait, have, walk, work"
         },
-        {},
-        {}
-      ]
-    },
-    {
-      "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A1/3Verbs/4.png"
+          "type": "gapFill",
+          "template": "She live_____ close to my school.",
+          "correctAnswer": ["s"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "What tense has the 3rd person s?",
+          "options": ["present continuous", "present simple" ],
+          "correctAnswer": "present simple" 
+        },
+        {
+          "type": "multipleChoice",
+          "question": "We ______ out on weekends when we can.",
+          "options": ["go", "goes", "going", "went"],
+          "correctAnswer": "go"
+        },
+        {
+          "type": "gapFill",
+          "template": "When Jackie Chan _____ up in the morning, he springs to his feet.",
+          "correctAnswer": ["wakes", "gets"]
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A1/3Verbs/5.png"
+          "type": "imageDisplay",
+          "imagePath": "A1/3Verbs/4.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {"text": "Action verbs in progress are written with -ing", "textStyle":"underline"},
+            {"text": "You're learing English grammar.", "textStyle":"bold"},
+            {"text": "Present Continuous", "textStyle": "bold" },
+            {"text": "Click on the main verb", "textStyle": "underline"}
+          ],
+          "words": ["", ""],
+          "keyWords": ["", ""]
+        },
+        {
+          "type": "gapFill",
+          "template": "I'm learn_____ English.",
+          "correctAnswer": "ing"
+        },
+        {
+
+        },
+        {
+
+        }
+
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/3Verbs/5.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {
+          "type": "click",
+          "instructions": [
+            { "text": "Verb 2 is a new form of each verb to signify past tense.", "textStyle":"underline"},
+            {"text": "Some common verbs change vowels", "textStyle":"text"},
+            {"text": "meet > met, get > got, give > gave, draw > drew, eat > ate", "textStyle": "bold"},
+            {"text": "many other verbs fix -ed after the root and maybe double a letter.", "textStyle":"text"},
+            {"type": "work > worked, stop > stopped, show > showed, click > clicked", "textStyle": "bold"},
+            {"text": "click the verb2s", "textStyle":"text"}
+          ],
+          "words": ["meet", "gave", "drank", "burned", "swam"],
+          "keyWords": ["gave", "drank", "burned", "swam"]
+        },
+        {
+          "type": "multipleChoice",
+          "questions": "Which is the verb2 form used in past simple?",
+          "options": ["drink", "drank", "drunk"],
+          "correctAnswer": "drank"
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A1/3Verbs/6.png"
+          "type": "imageDisplay",
+          "imagePath": "A1/3Verbs/6.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {"text": "drank and ate", "textStyle": "italic"},
+            {"text": "have irregular verb2 forms", "textStyle":"text"},
+            {"text": "click the verb 2s", "textStyle": "text"}
+          ],
+          "options": ["come", "became", "drank", "knew", "began", "find", "saw"],
+          "correctAnswer": ["became", "drank", "knew", "began", "saw"]
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A1/3Verbs/7.png"
+          "type": "imageDisplay",
+          "imagePath": "A1/3Verbs/7.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {"text": "State verbs do not have an 'ing' form because they describe facts, proclimations and stable truths.", "textStyle":"text"},
+            {"text": "Is this grammar right?", "textStyle":"text"},
+            {"text": "I'm liking eating pineapple.", "textStyle": "italic"}
+          ],
+          "words": ["right", "wrong"],
+          "keyWords": ["wrong"]
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A1/3Verbs/8.png"
+          "type": "imageDisplay",
+          "imagePath": "A1/3Verbs/8.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {
+          "type": "multipleChoice",
+          "questions": "Which is the verb2 form used in past simple?",
+          "optionis": ["is", "was", "been"],
+          "correctAnswer": "was"
         }
       ]
     }

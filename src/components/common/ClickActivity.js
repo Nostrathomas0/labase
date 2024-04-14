@@ -14,10 +14,10 @@ const ClickActivity = ({ instructions, words, keyWords }) => {
     <div>
       {/* Use the Instructions component to render the instructions array */}
       <Instructions instructions={instructions} />
-      <div>
+      <div className="blockquote">
         {words.map((word, index) => (
           <span key={index} onClick={() => handleWordClick(word)} style={{ cursor: 'pointer', marginRight: '5px' }}>
-            {word}
+          {word}
           </span>
         ))}
       </div>

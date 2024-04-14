@@ -11,18 +11,9 @@
         {
           "type":"click",
           "instructions": [
-            {
-              "text": "Adjectives",
-              "textStyle": "bold"
-            },
-            {
-              "text": "Describe nouns.",
-              "textStyle": "text"
-            },
-            {
-              "text": "Click on the adjective.",
-              "textStyle": "underline"
-            }
+            {"text": "Adjectives", "textStyle": "bold"},
+            {"text": "Describe nouns.", "textStyle": "text"},
+            {"text": "Click on the adjective.", "textStyle": "underline"}
           ],
           "words": ["fast", "live", "smart", "curious", "like", "make", "fair"],
           "keyWords": ["fast", "live", "smart", "curious", "fair"]
@@ -90,48 +81,18 @@
         },
         {
           "type": "click",
-              "instructions": [
-                {
-                },
-                {
-                  "text": "Adjectives can be the object of a sentence."
-                },
-                {
-                  "text": "Close describes their distance." 
-                },{
-                  "text":  "close (adj.) is pronounced, "
-                },
-                {  
-                  "text": "/klous/",
-                  "textStyle": "italic"
-                },
-                {
-                  "text": "with a clear /s/ sound"
-                },
-                {  
-                  "text":  "Imagine the men's conversation.",
-                  "textStyle": "default"
-                },
-                {
-                  "text": "Bill: Hey Bob, was your dog digging a hole in my garden last night?",
-                  "textStyle": "Italic"
-                }, 
-                {
-                  "text": "Bob: Martha? No, it couldn't have beem her. She was in bed with me at 10 o'clock.", 
-                  "textStyle":"italic"
-                },
-                {
-                  "text": "Bill: Well I got up at midnight and looked out the window and saw a golden retriever digging like a Texan who struck oil.",
-                  "textStyle": "italic"
-                },
-                {
-                  "text": "Bob: Ah that explains the dirt in my bed. Here take this money.",
-                  "textStyle": "italic"
-                },
-                {
-                  "text": "Bob explains that",
-                  "textStyle": "default"
-                }
+            "instructions": [
+              {"text": "Adjectives can be the object of a sentence.", "textStyle": "text"},
+              {"text": "Close describes their distance.", "textStyle": "text" },
+              {"text": "close (adj.) is pronounced, ",  "textStyle": "text" },
+              {"text": "/klous/",  "textStyle": "italic"},
+              {"text": "with a clear /s/ sound", "textStyle": "text"},
+              {"text": "Imagine the men's conversation.", "textStyle": "text"},
+              {"text": "Bill: Hey Bob, was your dog digging a hole in my garden last night?", "textStyle": "Italic"}, 
+              {"text": "Bob: Martha? No, it couldn't have beem her. She was in bed with me at 10 o'clock.",  "textStyle":"italic"},
+              {"text": "Bill: Well I got up at midnight and looked out the window and saw a golden retriever digging like a Texan who struck oil.", "textStyle": "italic" },
+              {"text": "Bob: Ah that explains the dirt in my bed. Here take this money.", "textStyle": "italic" },
+              {"text": "Bob explains that", "textStyle": "default" }
             ],
           "words": ["his wife's name is Martha,", "his bed was dirty in the morning", "he's planting a garden", "his dog ran away to Texas"],
           "keyWords": ["his bed was dirty in the morning"]
@@ -148,18 +109,9 @@
         {
           "type": "click",
             "instructions": [
-              {
-                "text": "Far",
-                "textStyle": "bold"
-              },
-              {
-                "text": "(adj.) at a great distance",
-                "textStyle": "text"
-              },
-              {
-                "text": "click on the phrase that talks about something far.",
-                "textStyle": "underline"
-              }
+              {"text": "Far", "textStyle": "bold"},
+              {"text": "(adj.) at a great distance", "textStyle": "text"},
+              {"text": "click on the phrase that talks about something far.", "textStyle": "underline"}
             ],
           "words": ["This tree right here", "That boat over there"],    
           "keyWords": ["This tree right here"]
@@ -211,58 +163,47 @@
           "imagePath": "A1/2Adjectives/8.png",
           "altText": "adj. 'right', 'fair', 'well-respected', 'clear', green, 'early', 'late' 'shady', 'exciting'"
         },
-        [
-          {
-            "type": "click", 
-              "instructions": [
-              {
-                "text": "Adjectives can be the object of a sentence."
-              },
-              {
-                "text": "Close describes their distance." 
-              },
-              {  
-                "text": "/klous/",
-                "textStyle": "italic"
-              },
-              {
-                "text": "with a clear /s/ sound"
-              }
-            ],
-      "words": ["Which", "McDonalds", "do", "you", "want to go to", "while", "you're", "still", "close", "to", "home."],
-      "keyWords": []
-          },
-          {
-            "type": "multipleChoice",
-            "question": "Which possessive pronoun correctly completes the sentence: 'Is this ______ book?'",
-            "options": ["yours", "your", "you're", "their"],
-            "correctAnswer": "your"
-          },
-          {
-            "type": "multipleChoice",
-            "question": "Choose the correct possessive pronoun to fill in the blank: 'I think this pen is _______.'",
-            "options": ["hers", "her", "she's", "their"],
-            "correctAnswer": "hers"
-          },
-          {
-            "type": "multipleChoice",
-            "question": "Select the possessive pronoun that best completes the sentence: 'This room is ______ because their name is on the door.'",
-            "options": ["their", "theirs", "they're", "them"],
-            "correctAnswer": "theirs"
-          },
-          {
-            "type": "multipleChoice",
-            "question": "Which possessive pronoun correctly completes the sentence: '______ shoes are over there by the door.'",
-            "options": ["Your", "Yours", "You're", "Their"],
-            "correctAnswer": "Your"
-          },
-          {
-            "type": "multipleChoice",
-            "question": "Choose the correct possessive pronoun for the sentence: 'Is that car _______?'",
-            "options": ["yours", "your", "you're", "their"],
-            "correctAnswer": "yours"
-          }
-        ]
+        {
+          "type": "click", 
+            "instructions": [
+              {"text": "Adjectives can be the object of a sentence.", "textStyle": "text"},
+              {"text": "Close describes their distance.",  "textStyle": "text"},
+              {"text": "/klous/", "textStyle": "italic"},
+              {"text": "with a clear /s/ sound", "textStyle": "text"}
+          ],
+            "words": ["Which", "McDonalds", "do", "you", "want to go to", "while", "you're", "still", "close", "to", "home."],
+            "keyWords": ["close"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which possessive pronoun correctly completes the sentence: 'Is this ______ book?'",
+          "options": ["yours", "your", "you're", "their"],
+          "correctAnswer": "your"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Choose the correct possessive pronoun to fill in the blank: 'I think this pen is _______.'",
+          "options": ["hers", "her", "she's", "their"],
+          "correctAnswer": "hers"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Select the possessive pronoun that best completes the sentence: 'This room is ______ because their name is on the door.'",
+          "options": ["their", "theirs", "they're", "them"],
+          "correctAnswer": "theirs"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which possessive pronoun correctly completes the sentence: '______ shoes are over there by the door.'",
+          "options": ["Your", "Yours", "You're", "Their"],
+          "correctAnswer": "Your"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Choose the correct possessive pronoun for the sentence: 'Is that car _______?'",
+          "options": ["yours", "your", "you're", "their"],
+          "correctAnswer": "yours"
+        }
       ]
     }
   ]  

@@ -9,7 +9,7 @@ const A1 = () => {
     { name: 'Nouns', path: '/A1/nouns' },
     { name: 'Adjectives', path: '/A1/adjectives' },
     { name: 'Verbs', path: '/A1/verbs' },
-    { name: 'There is/are', path: '/A1/there-is-are' },
+    { name: 'There is/are', path: '/A1/there' },
     // Add more topics as needed
   ];
 

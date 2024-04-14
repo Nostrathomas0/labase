@@ -1,38 +1,34 @@
-// GoingToPage.js
+// CompSupe.js
 import React, { useState } from 'react';
-
-import GoingToData from '../../../data/grammar/A2/3GoingTo.json';
 import GrammarTopic from '../../GrammarTopic';
+import GoingToData from '../../../data/grammar/A2/3GoingTo.json';
 import PageTurner from '../../common/PageTurner'
 
 const GoingToPage = () => {
-  const [currentPage, setCurrentPage] = useState(0); // Tracks the current page within the topic
-  const { topic, pages } = GoingToData; // Destructuring the data; 'topic' will be 'Going To' for this page
-  const totalPages = pages.length; // Total number of pages within this topic
+  const [currentPage, setCurrentPage] = useState(0);
+  const { pages } = GoingToData;
+  const currentQuestions = pages[currentPage].questions
+  console.log('Current Questions:', currentQuestions);
+  const nextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, GoingToData.pages.length - 1));
+};
 
-  // Logic to move to the next page, ensuring we don't go past the last page
-  const nextPage = () => setCurrentPage(current => Math.min(current + 1, totalPages - 1));
+  const previousPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+  };
 
-  // Logic to move to the previous page, ensuring we don't go before the first page
-  const prevPage = () => setCurrentPage(current => Math.max(current - 1, 0));
-
-  // Handling the case where there are no pages or data to display
-  if (!pages || pages.length === 0) {
-    return <div>No pages data available</div>;
-  }
-
+   
   return (
     <div>
-      <h1>{topic}</h1> {/* Displaying the topic at the top of the page */}
-      {/* Rendering the current page's content using the GrammarTopic component */}
-      <GrammarTopic topic={topic} contentData={pages[currentPage].questions} />
-      {/* PageTurner component to navigate between pages */}
+      <h1>Going To</h1>
+      <GrammarTopic contentData={currentQuestions || []} />
+      console.log('rendered')
       <PageTurner
-        currentPage={currentPage + 1} // +1 because pages are 0-indexed but we want to display starting from 1 for users
-        totalPages={totalPages}
+        currentPage={currentPage + 1}
+        totalPages={GoingToData.pages.length}
         onNext={nextPage}
-        onPrevious={prevPage}
-      />
+        onPrevious={previousPage}
+        />
     </div>
   );
 };
