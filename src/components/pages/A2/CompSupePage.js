@@ -22,7 +22,7 @@ const CompSupePage = () => {
     <div>
       <h1>Comparative and Superlative Adjectives</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+     
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={CompSupeData.pages.length}

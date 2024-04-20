@@ -21,8 +21,7 @@ const MixedCondPage = () => {
     <div>
       <h1>Mixed Conditionals</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
-      <PageTurner
+        <PageTurner
         currentPage={currentPage + 1}
         totalPages={MixedCondData.pages.length}
         onNext={nextPage}

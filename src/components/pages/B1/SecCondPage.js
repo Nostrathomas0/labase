@@ -22,7 +22,7 @@ const SecCondPage = () => {
     <div>
       <h1>Second Conditional</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+    
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={SecCondData.pages.length}

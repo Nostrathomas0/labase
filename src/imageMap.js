@@ -4,7 +4,7 @@ import image_A1_1Nouns_3_png from './assets/images/A1/1Nouns/3.png';
 import image_A1_1Nouns_4_png from './assets/images/A1/1Nouns/4.png';
 import image_A1_1Nouns_5_png from './assets/images/A1/1Nouns/5.png';
 import image_A1_1Nouns_6_png from './assets/images/A1/1Nouns/6.png';
-import image_A1_1Nouns_n3_png from './assets/images/A1/1Nouns/n3.png';
+import image_A1_1Nouns_7_png from './assets/images/A1/1Nouns/7.png';
 import image_A1_2Adjectives_1_png from './assets/images/A1/2Adjectives/1.png';
 import image_A1_2Adjectives_2_png from './assets/images/A1/2Adjectives/2.png';
 import image_A1_2Adjectives_3_png from './assets/images/A1/2Adjectives/3.png';
@@ -40,7 +40,7 @@ const imageMap = {
   'A1/1Nouns/4.png': image_A1_1Nouns_4_png,
   'A1/1Nouns/5.png': image_A1_1Nouns_5_png,
   'A1/1Nouns/6.png': image_A1_1Nouns_6_png,
-  'A1/1Nouns/n3.png': image_A1_1Nouns_n3_png,
+  'A1/1Nouns/7.png': image_A1_1Nouns_7_png,
   'A1/2Adjectives/1.png': image_A1_2Adjectives_1_png,
   'A1/2Adjectives/2.png': image_A1_2Adjectives_2_png,
   'A1/2Adjectives/3.png': image_A1_2Adjectives_3_png,

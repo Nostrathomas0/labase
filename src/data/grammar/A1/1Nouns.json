@@ -6,38 +6,42 @@
         {
           "type": "imageDisplay",
           "imagePath": "A1/1Nouns/1.png",
-          "altText": "Image description for accessibility"
+          "altText": "nouns provide names for people places and things. When you're referring to a person by name you're using their name as a noun."
         },
         {
           "type": "click",
           "instructions": [
-            {"text": "A noun is anyone, anything or any place you can name. ", "textStyle": "text"}, 
-            {"text": "Michael Jordon, Paris, France, my glasses... ", "textStyle": "italic"},
-            {"text": "There are millions, maybe even billions more! There are fewer pronouns. ", "textStyle": "text"},   
-            {"text": "I & me ", "textStyle": "bold"},
-            {"text": "refer to the person speaking, 1st person singular. ",  "textStyle": "text" },
-            {"text": "you ", "textStyle": "bold"},
-            {"text": "is for the person or people being spoken to. It's the only 2nd person pronoun.  ", "textStyle": "text"},
-            {"text": "he & him ", "textStyle":"bold"},
-            {"text": "and ", "textStyle": "text"},
-            {"text": "she & her ","textStyle": "bold"},
-            {"text": "are male and female respectively.  ", "textStyle": "text" },
-            {"text": "it ", "textStyle":"bold"},
-            {"text": "is for things. ", "textStyle": "text"},
-            {"text": "we & us ", "textStyle":"bold"},
-            {"text": "are for you and me, 1st person plural. And lastly the 3rd person plural ", "textStyle": "text"},
-            {"text": "they & them ", "textStyle": "text" },
-            {"text": "can also be a neutral pronoun when those being referred to are agendered or otherwise unspecified."},
-            {"text": " Click on the pronouns",  "textStyle":"italic" }
+            {"text": "A noun is anybody, anything, any place or anyone you can name. ", "textStyle": "text"}, 
+            {"text": "Michael Jordon, a dog, France, your hands ", "textStyle": "italic"},
+            {"text": "You can add articles like", "textStyle": "text", "newLine":true},
+            {"text": " a / an ", "textStyle": "bold"},
+            {"text": "to make a noun phrase, but don't add articles to names or pronouns.", "textStyle": "text"},
+            {"text": "There are much fewer pronouns. These are them : ", "textStyle": "text", "newLine": true},   
+            {"text": "I & me ", "textStyle": "bold", "newLine":true},
+            {"text": " for the person speaking, 1st person singular ", "textStyle": "text" },
+            {"text": "you ", "textStyle": "bold", "newLine": true},
+            {"text": " for the person or people you're speaking to.  ", "textStyle": "text"},
+            {"text": "he & him ", "textStyle":"bold", "newLine": true },
+            {"text": " and ", "textStyle": "text"},
+            {"text": "she & her ","textStyle": "bold", "newLine": true },
+            {"text": " are for men and women,  ", "textStyle": "text" },
+            {"text": "it ", "textStyle":"bold", "newLine": true },
+            {"text": " is for things, ", "textStyle": "text"},
+            {"text": "we & us ", "textStyle":"bold", "newLine":true},
+            {"text": " are for you and me together, 1st person plural.", "textStyle":"text"},
+            {"text": " 3rd person plural ", "textStyle": "text", "newLine":true},
+            {"text": "they & them ", "textStyle": "bold"},
+            {"text": " is for 2+ people or things, neutral or otherwise unspecified."},
+            {"text": " Click on the pronouns",  "textStyle":"italic", "newParagraph":true }
         ],
           "words": ["I", "love", "you", ".", "You", "love", "me","."],
           "keyWords": ["I", "you", "me"]
         },
         {
           "type": "multipleChoice",
-          "question": "Nouns are ______ .",
+          "question": "What are nouns?",
           "options": ["people", "places", "things", "all of the above"],
-          "correctAnswer": "all of the above"
+          "correctAnswer": ["all of the above"]
         }
       ]
     },
@@ -49,32 +53,16 @@
           "altText": "Image description for accessibility"
         },
         {
-          "type": "click",
-          "instructions": [
-              {"text": "Some words are easier to count than others. For example, we can't say ", "textStyle": "text"},
-              {"text": "two money.", "textStyle": "italic"},
-              {"text": " Money only has a singular form. Likewise ", "textStyle": "text"},
-              {"text": "4 walls on the floor ", "textStyle": "bold"},
-              {"text": "is about ", "textStyle": "text"},
-              {"text": "how ", "textStyle": "italic"},
-              {"text": "countable something is. Moon is countable when we talk about the moons of Mars, Saturn and Jupiter but here it's", "textStyle": "text"},
-              {"text": "The", "textStyle": "bold"},
-              {"text": "moon. Read the list and click on the plural nouns? Then click on the correct article to use with those nouns.", "textStyle": "text"}
-            ],
-          "words": ["a camera,", "a skateboard,", "shoes,", "a hat,", "a camera lens,", "wheels,", "glasses,", "a phone,", "an apple,", "shoelaces"],
-          "keyWords": ["shoes", "glasses", "shoelaces", "wheels"]
-        },
-        {
           "type": "multipleChoice",
           "question": "_____ apple.",
           "options": ["a", "an"],
           "correctAnswer": "an"
         },
         {
-        "type": "multipleChoice",
-        "question": "_____ banana.",
-        "options": ["a", "an"],
-        "correctAnswer": "a"
+          "type": "multipleChoice",
+          "question": "_____ banana.",
+          "options": ["a", "an"],
+          "correctAnswer": "a"
         },
         {
           "type": "multipleChoice",
@@ -86,11 +74,45 @@
     },
     {
       "questions": [
+        
         {
           "type": "imageDisplay",
           "imagePath": "A1/1Nouns/3.png",
           "altText": "Description for Image 3"
         },
+        {
+          "type": "click",
+          "instructions": [
+              {"text": " Some nouns are easier to count than others. For example, we can't say ", "textStyle": "text"},
+              {"text": " two moneies. ", "textStyle": "italic"},
+              {"text": " Money only has a singular form. And so has ", "textStyle": "text"},
+              {"text": " information . ", "textStyle": "bold"},
+              {"text": " Countable nouns are literally nouns that you can count.  ", "textStyle": "text"},
+              {"text": " 1 drink ", "textStyle": "italic"},
+              {"text": " is fine to say. You can even say ", "textStyle": "text"},
+              {"text": " one water ", "textStyle": "italic"},
+              {"text": " if you're making an order at a bar, but water is a liquid so it's uncountable.", "textStyle": "text"},
+              {"text": " Most materials are uncountable", "textStyle": "text"},
+              {"text": " coffee, gasoline, wood, steel, carbon", "textStyle": "bold"},
+              {"text": " Click on the plural nouns?", "textStyle": "text"}
+            ],
+          "words": ["a camera,", "a skateboard,", "shoes,", "a hat,", "a camera lens,", "wheels,", "glasses,", "a phone,", "an apple,", "shoelaces"],
+          "keyWords": ["shoes", "glasses", "shoelaces", "wheels"]
+        }
+      
+    ]
+  },
+  {
+    "questions": [
+      {
+        "type": "imageDisplay",
+        "imagePath": "A1/1Nouns/2.png",
+        "altText": "Image description for accessibility"
+      },
+        
+        
+        
+        
         {
           "type": "multipleChoice",
           "question": "Choose the correct plural form of 'city':",
@@ -111,12 +133,12 @@
         },
         {
           "type": "gapFill",
-          "template": "Write the plural form of child. There are four _____ playing in the park.",
-          "correctAnswer": ["children"]
+          "template": " There are four _____ (person) playing in the park.",
+          "correctAnswer": ["person"]
         },
         {
           "type": "gapFill",
-          "template": "Put up some _____ on the wall for the home phone and wifi router.",
+          "template": "Put up some _____(shelf) on the wall for the home phone and wifi router.",
           "correctAnswer": ["shelves"]
         }
       ]
@@ -185,32 +207,32 @@
         {
           "type": "gapFill",
           "template": "Maria is talking to _____ about the new project.",
-          "correctAnswer": "him"
+          "correctAnswer": ["him"]
         },
         {
           "type": "gapFill",
           "template": "This is the book that belongs to _____ . We left it here yesterday.",
-          "correctAnswer": "us"
+          "correctAnswer": ["us"]
         },
         {
           "type": "gapFill",
-          "template": "Can _____ email the documents to _____ by tomorrow?",
+          "template": "Can _____ email the documents to me by tomorrow?",
           "correctAnswer": ["she", "me"]
         },
         {
           "type": "gapFill",
           "template": "My parents bought a gift for _____ . It's a surprise!",
-          "correctAnswer": "you"
+          "correctAnswer": ["you"]
         },
         {
           "type": "gapFill",
           "template": "The story didn't make sense to _____ , so they asked for clarification.",
-          "correctAnswer": "them"
+          "correctAnswer": ["them"]
         },
         {
           "type": "gapFill",
           "template": "During the trip, we took many photos of _____ at the beach.",
-          "correctAnswer": "us"
+          "correctAnswer": ["us"]
         }
       ]
     }

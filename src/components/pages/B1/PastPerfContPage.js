@@ -22,7 +22,7 @@ const PastPerfContPage = () => {
     <div>
       <h1>PastPerfCont</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+     
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={PastPerfContData.pages.length}

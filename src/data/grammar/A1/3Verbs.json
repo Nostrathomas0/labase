@@ -6,14 +6,20 @@
         {
           "type": "imageDisplay",
           "imagePath": "A1/3Verbs/1.png",
-          "altText": "V. go, stay, play, wait, have, walk, work"
+          "altText": "Action V.s go, stay, play, wait, have, walk, work"
         },
         {
           "type": "click",
           "instructions": [
-            {"text": "Action Verbs", "textStyle": "bold"},
-            { "text": "Click on the main verb", "textStyle": "bold" },
-            { "text": "", "textStyle": "bold"}
+            {"text": "Action Verbs ", "textStyle": "bold"},
+            {"text": "I'm learning.", "textStyle":"italic"},
+            {"text": "The event happens progressively, usually starting at a known time and continuing.", "textStyle": "text", "newLine":true},
+            {"text": "In a sentence you may see more than one verb side by side. The preceeding verb", "textStyle": "text", "newLine":true},
+            {"text": " are ", "textStyle": "bold"},
+            {"text": "is the auxilliary verb (aux.), ", "textStyle": "text"},
+            {"text": "followed by a main verb, ", "textStyle":"text"},
+            {"text": " filming ", "textStyle": "bold"},
+            {"text": "Click on the action verb below", "textStyle": "italic", "newParagraph":true}
           ],
           "words": ["We ", "are ", "filming ", "a ", "movie."],
           "keyWords": ["filming"]
@@ -25,7 +31,7 @@
         {
           "type": "imageDisplay",
           "imagePath": "A1/3Verbs/2.png",
-          "altText": "V. go, stay, play, wait, have, walk, work"
+          "altText": "State v. live, have, like, love, hate, look, look like, appear, smell, smell like, !must "
         },
         {
           "type": "multipleChoice",
@@ -43,15 +49,15 @@
           "altText": "V. go, stay, play, wait, have, walk, work"
         },
         {
-          "type": "gapFill",
-          "template": "She live_____ close to my school.",
-          "correctAnswer": ["s"]
-        },
-        {
           "type": "multipleChoice",
           "question": "What tense has the 3rd person s?",
           "options": ["present continuous", "present simple" ],
           "correctAnswer": "present simple" 
+        },
+        {
+          "type": "gapFill",
+          "template": "She live_____ close to my school.",
+          "correctAnswer": ["s"]
         },
         {
           "type": "multipleChoice",
@@ -62,7 +68,7 @@
         {
           "type": "gapFill",
           "template": "When Jackie Chan _____ up in the morning, he springs to his feet.",
-          "correctAnswer": ["wakes", "gets"]
+          "correctAnswer": ["gets", "wakes", "rises", "is"]
         }
       ]
     },
@@ -77,25 +83,29 @@
           "type": "click",
           "instructions": [
             {"text": "Action verbs in progress are written with -ing", "textStyle":"underline"},
-            {"text": "You're learing English grammar.", "textStyle":"bold"},
-            {"text": "Present Continuous", "textStyle": "bold" },
-            {"text": "Click on the main verb", "textStyle": "underline"}
+            {"text": "You're learing English grammar.", "textStyle":"bold", "newLine":true},
+            {"text": "Present Continuous asks a bit of conjugation.", "textStyle": "underline", "newLine":true},
+            {"text": "Click on the aux. verbs in the sentence, then complete the words in the next activity", "textStyle": "italic", "NewParagraph":true}
           ],
-          "words": ["", ""],
-          "keyWords": ["", ""]
+          "words": [ "I","'m", " working", " at", " noon.", " When ", "are ", "you", "flying", "out", "?", " The ", "movie", "'s", "starting", "at", "8 o'clock"],
+          "keyWords": ["'m", "are", "'s"]
         },
         {
           "type": "gapFill",
           "template": "I'm learn_____ English.",
-          "correctAnswer": "ing"
+          "correctAnswer": ["ing"]
         },
         {
-
+          "type": "gapFill",
+          "template": "They_____ taking their boat out today.",
+          "correctAnswer": ["re", "are"]
         },
         {
+          "type": "gapFill",
+          "template": "FC Barcelona _____ playing tonight.",
+          "correctAnswer": ["is","'s"]
 
         }
-
       ]
     },
     {
@@ -108,12 +118,12 @@
         {
           "type": "click",
           "instructions": [
-            { "text": "Verb 2 is a new form of each verb to signify past tense.", "textStyle":"underline"},
+            {"text": "Verb 2 is a new form of each verb to signify past tense.", "textStyle":"underline"},
             {"text": "Some common verbs change vowels", "textStyle":"text"},
             {"text": "meet > met, get > got, give > gave, draw > drew, eat > ate", "textStyle": "bold"},
-            {"text": "many other verbs fix -ed after the root and maybe double a letter.", "textStyle":"text"},
+            {"text": "many other verbs fix -ed after the root. Some double a letter in between.", "textStyle":"text"},
             {"type": "work > worked, stop > stopped, show > showed, click > clicked", "textStyle": "bold"},
-            {"text": "click the verb2s", "textStyle":"text"}
+            {"text": "click the verb2s", "textStyle":"text", "newParagraph":true}
           ],
           "words": ["meet", "gave", "drank", "burned", "swam"],
           "keyWords": ["gave", "drank", "burned", "swam"]
@@ -137,11 +147,11 @@
           "type": "click",
           "instructions": [
             {"text": "drank and ate", "textStyle": "italic"},
-            {"text": "have irregular verb2 forms", "textStyle":"text"},
+            {"text": "are irregular verb2s", "textStyle":"text"},
             {"text": "click the verb 2s", "textStyle": "text"}
           ],
-          "options": ["come", "became", "drank", "knew", "began", "find", "saw"],
-          "correctAnswer": ["became", "drank", "knew", "began", "saw"]
+          "options": ["come", "became", "eaten", "knew", "began", "find", "saw"],
+          "correctAnswer": ["became", "knew", "began", "saw"]
         }
       ]
     },
@@ -156,8 +166,8 @@
           "type": "click",
           "instructions": [
             {"text": "State verbs do not have an 'ing' form because they describe facts, proclimations and stable truths.", "textStyle":"text"},
-            {"text": "Is this grammar right?", "textStyle":"text"},
-            {"text": "I'm liking eating pineapple.", "textStyle": "italic"}
+            {"text": "Is this grammar right?", "textStyle":"text", "newLine":true},
+            {"text": "I'm liking eating MacDonalds?.", "textStyle": "italic"}
           ],
           "words": ["right", "wrong"],
           "keyWords": ["wrong"]

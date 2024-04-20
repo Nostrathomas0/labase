@@ -22,7 +22,7 @@ const PastContPage = () => {
     <div>
       <h1>Past Continuous</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+    
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={PastContData.pages.length}

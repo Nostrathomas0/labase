@@ -9,16 +9,6 @@
           "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
         },
         {
-          "type":"click",
-          "instructions": [
-            {"text": "Adjectives", "textStyle": "bold"},
-            {"text": "Describe nouns.", "textStyle": "text"},
-            {"text": "Click on the adjective.", "textStyle": "underline"}
-          ],
-          "words": ["fast", "live", "smart", "curious", "like", "make", "fair"],
-          "keyWords": ["fast", "live", "smart", "curious", "fair"]
-        },
-        {
           "type": "multipleChoice",
           "question": "Adjectives can be abbreviated (abb.) as",
           "options": ["adj.", "adv.", "n.", "v."],
@@ -38,6 +28,15 @@
           "question": "Adjectives go _______ the noun the describe?",
           "options": ["before", "after", "either before or after"],
           "correctAnswer": "before"
+        },
+        {
+          "type":"click",
+          "instructions": [
+           
+            {"text": "Click on the adjectives in the sentence below.", "textStyle": "italic"}
+          ],
+          "words": ["At", "the", "live", "demo,", "the", "engineer", "showcased",  "a", "fast", "new", "software", "that", "could,", "much", "like", "previous", "versions,",  "analyze", "data", "and", "make", "fair", "assessments", "of", "complex", "situations", "for", "curious",  "users."],
+          "keyWords": ["fast", "live", "previous", "curious", "fair"]
         },
         {
           "type": "multipleChoice",
@@ -63,12 +62,12 @@
         {
           "type": "GapFill",
           "template": "There _____ some milk and bread.",
-          "correctAnswer": "is"
+          "correctAnswer": ["is"]
         },
         {
           "type": "GapFill",
           "template": "_____ are bags and bowls.",
-          "correctAnswer": "There"
+          "correctAnswer": ["There"]
         }
       ]
     },
@@ -82,18 +81,26 @@
         {
           "type": "click",
             "instructions": [
-              {"text": "Adjectives can be the object of a sentence.", "textStyle": "text"},
-              {"text": "Close describes their distance.", "textStyle": "text" },
-              {"text": "close (adj.) is pronounced, ",  "textStyle": "text" },
-              {"text": "/klous/",  "textStyle": "italic"},
-              {"text": "with a clear /s/ sound", "textStyle": "text"},
-              {"text": "Imagine the men's conversation.", "textStyle": "text"},
-              {"text": "Bill: Hey Bob, was your dog digging a hole in my garden last night?", "textStyle": "Italic"}, 
-              {"text": "Bob: Martha? No, it couldn't have beem her. She was in bed with me at 10 o'clock.",  "textStyle":"italic"},
-              {"text": "Bill: Well I got up at midnight and looked out the window and saw a golden retriever digging like a Texan who struck oil.", "textStyle": "italic" },
-              {"text": "Bob: Ah that explains the dirt in my bed. Here take this money.", "textStyle": "italic" },
-              {"text": "Bob explains that", "textStyle": "default" }
-            ],
+              {"text": "Look at the top of the picture above. ", "textStyle": "italic"},
+              
+              {"text": "Close " , "textStyle": "bold", "newLine":true },
+              {"text": "adj. ",  "textStyle": "italic"},
+              {"text": "[klous] ",  "textStyle": "text"},
+              {"text": "Close " , "textStyle": "bold", "newLine":true },
+              {"text": "verb ",  "textStyle": "italic"},
+              {"text": "[klouz] ",  "textStyle": "text"},
+              {"text": "is an action to block.", "textStyle": "text", "newLine":true },
+              {"text": "close (adj.) is pronounced with a clear /s/ sound",  "textStyle": "text", "newLine":true},
+              {"text": "Imagine the men's conversation.", "textStyle": "text",  "newParagraph":true},
+              {"text": "Bill: ", "textStyle": "text", "newLine":true},
+              {"text": "Hey Bob, was your dog digging a hole in my garden last night?", "textStyle": "Italic"}, 
+              {"text": "Bob: ", "textStyle": "text", "newLine":true},
+              {"text": "Martha? No, it couldn't have beem her. She was in bed with me close to 10 o'clock.",  "textStyle":"italic"},
+              {"text": "Bill: ", "textStyle": "text", "newLine":true},
+              {"text": "Well I got up and looked out the window last night and saw a pit bull that looked like it struck oil.", "textStyle": "italic"},
+              {"text": "Bob: ", "textStyle": "text", "newLine":true},
+              {"text": "Ah that explains the dirt in my bed. Alright I'll remember to close the gate.", "textStyle": "italic"}
+             ],
           "words": ["his wife's name is Martha,", "his bed was dirty in the morning", "he's planting a garden", "his dog ran away to Texas"],
           "keyWords": ["his bed was dirty in the morning"]
         }
@@ -128,12 +135,12 @@
         {
           "type": "GapFill",
           "template": "___ shoes fit me.",
-          "correctAnswer": "These"
+          "correctAnswer": ["These"]
         },
         {
           "type": "GapFill",
           "template": "_____ guys are my friends.",
-          "correctAnswer": "These"
+          "correctAnswer": ["These"]
         }
       ]
     },
@@ -147,12 +154,12 @@
         {
           "type": "GapFill",
           "template": "I want that shirt that _____ lady is wearing.",
-          "correctAnswer": "that"
+          "correctAnswer": ["that"]
         },
         {
           "type": "GapFill",
           "template": "Look at _____ building over there. It's huge!",
-          "correctAnswer": "that"
+          "correctAnswer": ["that"]
         }
       ]
     },
