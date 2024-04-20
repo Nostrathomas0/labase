@@ -9,25 +9,31 @@ const Instructions = ({ instructions = [] }) => {
   return (
     <div className='instructions'>
       {instructions.map((instruction, index) => {
-        // Logging each instruction object to see what is received
-        console.log('Instruction:', instruction);
+        // Decide on the wrapper component based on the instruction properties
+        const Component = instruction.newParagraph ? 'p' : 'span';
 
+        // Apply a line break if needed, before the actual text
         return (
-          <span key={index} className={instruction.textStyle || 'default'}>
-            {instruction.text}
-          </span>
+          <React.Fragment key={index}>
+            {instruction.newLine && <br />}
+            <Component className={instruction.textStyle || 'default'}>
+              {instruction.text}
+            </Component>
+            {instruction.newParagraph && <br />} 
+          </React.Fragment>
         );
       })}
     </div>
   );
 };
 
-// Define propTypes for the component after the component definition
 Instructions.propTypes = {
   instructions: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
-      textStyle: PropTypes.string
+      textStyle: PropTypes.string,
+      newLine: PropTypes.bool,
+      newParagraph: PropTypes.bool
     })
   ),
 };

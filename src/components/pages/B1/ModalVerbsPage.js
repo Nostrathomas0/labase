@@ -22,7 +22,7 @@ const ModalVerbsPage = () => {
     <div>
       <h1>Modal Verbs</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+    
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={ModalVerbsData.pages.length}

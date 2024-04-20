@@ -22,7 +22,7 @@ const GoingToPage = () => {
     <div>
       <h1>Going To</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+    
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={GoingToData.pages.length}

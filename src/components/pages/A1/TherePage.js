@@ -21,7 +21,7 @@ const TherePage = () => {
     <div>
       <h1>Here and There</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+      
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={ThereData.pages.length}

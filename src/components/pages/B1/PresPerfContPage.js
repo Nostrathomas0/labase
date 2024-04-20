@@ -22,7 +22,7 @@ const PresPerfContPage = () => {
     <div>
       <h1>Present Perfect Continuous</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+   
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={PresPerfContData.pages.length}

@@ -21,7 +21,7 @@ const CausitivePage = () => {
     <div>
       <h1>Causitive</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('rendered')
+   
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={CausitiveData.pages.length}

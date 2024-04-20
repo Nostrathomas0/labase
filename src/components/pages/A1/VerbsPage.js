@@ -21,7 +21,7 @@ const VerbsPage = () => {
     <div>
       <h1>Verbs</h1>
       <GrammarTopic contentData={currentQuestions || []} />
-      console.log('verbs data')
+    
       <PageTurner
         currentPage={currentPage + 1}
         totalPages={VerbsData.pages.length}
