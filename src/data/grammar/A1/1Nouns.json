@@ -55,14 +55,22 @@
         {
           "type": "click",
           "instructions": [
-            {"text": " Nouns are single words but they fit into noun phrases to be used in a sentence.", "textStyle": "text"},
-            {"text": "a potato, a lot of chips, some coffee", "textStyle": "italic", "newLine":true},
+            {"text": " Nouns are single words, but noun phrases include an article or other determiner:", "textStyle": "text"},
+            {"text": " a ", "textStyle":"bold"},
+            {"text": "potato,", "textStyle":"text"},
+            {"text": " a lot of ", "textStyle":"bold"},
+            {"text": "chips", "textStyle":"text"},
+            {"text": ", some ", "textStyle":"bold"}, 
+            {"text": "coffee", "textStyle": "italic"},
             {"text": "Many noun phrases start with articles: ", "textStyle":"text", "newLine":true},
             {"text": " a / an ", "textStyle":"bold"},
             {"text": " for anything, and ", "textStyle": "text"},
             {"text": " the ", "textStyle": "bold"},
-            {"text": " for one thing.", "textStyle":"text"}
-          ]
+            {"text": " for one thing.", "textStyle":"text"},
+            {"text": "Click on the articles", "textStyle":"italic"}
+          ],
+          "words":["There ", "was ", "a ", "knock ", "at ", "the ", "door."],
+          "keyWords":[ "a", "the"]
         },
         {
           "type": "multipleChoice",
@@ -84,7 +92,7 @@
         },
         {
           "type":"multipleChoice",
-          "question": "someone asked me for _____ euro",
+          "question": "Someone asked me for _____ euro.",
           "options": ["a", "an", "the"],
           "correctAnswer": "a"
         },
@@ -110,16 +118,17 @@
           "instructions": [
               {"text": " Some nouns are easier to count than others. For example, we can't say ", "textStyle": "text"},
               {"text": " two moneies. ", "textStyle": "italic"},
-              {"text": " Money only has a singular form. And so has ", "textStyle": "text"},
-              {"text": " information . ", "textStyle": "bold"},
-              {"text": " Countable nouns are literally nouns that you can count.  ", "textStyle": "text"},
+              {"text": " Money is singular. It doesn't have a plural form. And neither has ", "textStyle": "text"},
+              {"text": " information. ", "textStyle": "bold"},
+              {"text": " Countable nouns are words that you can count.  ", "textStyle": "text"},
               {"text": " 1 drink ", "textStyle": "italic"},
               {"text": " is fine to say. You can even say ", "textStyle": "text"},
               {"text": " one water ", "textStyle": "italic"},
               {"text": " if you're making an order at a bar, but water is a liquid so it's uncountable.", "textStyle": "text"},
-              {"text": " Most materials are uncountable", "textStyle": "text"},
+              {"text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water.", "textStyle": "text"},
               {"text": " coffee, gasoline, wood, steel, carbon", "textStyle": "bold"},
-              {"text": " Click on the plural nouns?", "textStyle": "text"}
+              {"text": " are all uncountable substances.", "textStyle":"text"},
+              {"text": " Click on the plural nouns", "textStyle": "italic", "newLine":true}
             ],
           "words": ["a camera,", "a skateboard,", "shoes,", "a hat,", "a camera lens,", "wheels,", "glasses,", "a phone,", "an apple,", "shoelaces"],
           "keyWords": ["shoes", "glasses", "shoelaces", "wheels"]
