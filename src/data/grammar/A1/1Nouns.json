@@ -128,7 +128,7 @@
               {"text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water.", "textStyle": "text"},
               {"text": " coffee, gasoline, wood, steel, carbon", "textStyle": "bold"},
               {"text": " are all uncountable substances.", "textStyle":"text"},
-              {"text": " Click on the plural nouns", "textStyle": "italic", "newLine":true}
+              {"text": " Click on the plural nouns", "textStyle": "italic", "newParagraph":true}
             ],
           "words": ["a camera,", "a skateboard,", "shoes,", "a hat,", "a camera lens,", "wheels,", "glasses,", "a phone,", "an apple,", "shoelaces"],
           "keyWords": ["shoes", "glasses", "shoelaces", "wheels"]
@@ -164,12 +164,12 @@
         {
           "type": "gapFill",
           "template": " There are four _____ (person) playing in the park.",
-          "correctAnswer": ["person"]
+          "correctAnswers": ["people"]
         },
         {
           "type": "gapFill",
           "template": "Put up some _____(shelf) on the wall for the home phone and wifi router.",
-          "correctAnswer": ["shelves"]
+          "correctAnswers": ["shelves"]
         }
       ]
     },
@@ -237,32 +237,32 @@
         {
           "type": "gapFill",
           "template": "Maria is talking to _____ about the new project.",
-          "correctAnswer": ["him"]
+          "correctAnswers": ["him"]
         },
         {
           "type": "gapFill",
           "template": "This is the book that belongs to _____ . We left it here yesterday.",
-          "correctAnswer": ["us"]
+          "correctAnswers": ["us"]
         },
         {
           "type": "gapFill",
           "template": "Can _____ email the documents to me by tomorrow?",
-          "correctAnswer": ["she", "me"]
+          "correctAnswers": ["she", "me"]
         },
         {
           "type": "gapFill",
           "template": "My parents bought a gift for _____ . It's a surprise!",
-          "correctAnswer": ["you"]
+          "correctAnswers": ["you"]
         },
         {
           "type": "gapFill",
           "template": "The story didn't make sense to _____ , so they asked for clarification.",
-          "correctAnswer": ["them"]
+          "correctAnswers": ["them"]
         },
         {
           "type": "gapFill",
           "template": "During the trip, we took many photos of _____ at the beach.",
-          "correctAnswer": ["us"]
+          "correctAnswers": ["us"]
         }
       ]
     }

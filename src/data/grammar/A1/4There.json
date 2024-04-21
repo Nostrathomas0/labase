@@ -20,7 +20,7 @@
         {
           "type": "gapFill",
           "template": "Here and there both end with _____",
-          "correctAnswer": "e"
+          "correctAnswers": "e"
         }
       ]
     },
@@ -43,7 +43,7 @@
         {
           "type": "gapFill",
           "template": "Here and there both end with _____",
-          "correctAnswer": ""
+          "correctAnswers": ""
         }
       ]
     },
@@ -57,7 +57,7 @@
         {  
           "type": "gapFill",
           "template": "Here and there both end with _____",
-          "correctAnswer": ""},
+          "correctAnswers": ""},
         {
           "type": "multipleChoice",
           "question": "Nouns are ______ .",

@@ -48,7 +48,7 @@ function GrammarTopic({ contentData }) {
           <GapFill 
             key={`gap-${questionIndex}`} 
             template={question.template} 
-            correctAnswer={question.correctAnswer} 
+            correctAnswers={question.correctAnswers} 
             onAnswer={handleAnswer} 
           />
         );

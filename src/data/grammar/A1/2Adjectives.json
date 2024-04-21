@@ -62,12 +62,12 @@
         {
           "type": "GapFill",
           "template": "There _____ some milk and bread.",
-          "correctAnswer": ["is"]
+          "correctAnswers": ["is"]
         },
         {
           "type": "GapFill",
           "template": "_____ are bags and bowls.",
-          "correctAnswer": ["There"]
+          "correctAnswers": ["There"]
         }
       ]
     },
@@ -135,12 +135,12 @@
         {
           "type": "GapFill",
           "template": "___ shoes fit me.",
-          "correctAnswer": ["These"]
+          "correctAnswers": ["These"]
         },
         {
           "type": "GapFill",
           "template": "_____ guys are my friends.",
-          "correctAnswer": ["These"]
+          "correctAnswers": ["These"]
         }
       ]
     },
@@ -154,12 +154,12 @@
         {
           "type": "GapFill",
           "template": "I want that shirt that _____ lady is wearing.",
-          "correctAnswer": ["that"]
+          "correctAnswers": ["that"]
         },
         {
           "type": "GapFill",
           "template": "Look at _____ building over there. It's huge!",
-          "correctAnswer": ["that"]
+          "correctAnswers": ["that"]
         }
       ]
     },
