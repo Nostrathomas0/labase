@@ -53,6 +53,18 @@
           "altText": "Image description for accessibility"
         },
         {
+          "type": "click",
+          "instructions": [
+            {"text": " Nouns are single words but they fit into noun phrases to be used in a sentence.", "textStyle": "text"},
+            {"text": "a potato, a lot of chips, some coffee", "textStyle": "italic", "newLine":true},
+            {"text": "Many noun phrases start with articles: ", "textStyle":"text", "newLine":true},
+            {"text": " a / an ", "textStyle":"bold"},
+            {"text": " for anything, and ", "textStyle": "text"},
+            {"text": " the ", "textStyle": "bold"},
+            {"text": " for one thing.", "textStyle":"text"}
+          ]
+        },
+        {
           "type": "multipleChoice",
           "question": "_____ apple.",
           "options": ["a", "an"],
@@ -66,10 +78,23 @@
         },
         {
           "type": "multipleChoice",
-          "question": "My shoes are on _____ floor.",
-          "options": ["the", "a", "an"],
+          "question": "_____ opportunity",
+          "options": ["a", "an"],
+          "correctAnswer": "an"
+        },
+        {
+          "type":"multipleChoice",
+          "question": "someone asked me for _____ euro",
+          "options": ["a", "an", "the"],
+          "correctAnswer": "a"
+        },
+        {
+          "type":"multipleChoice",
+          "question": "My shoes are on _____ floor",
+          "options": ["a", "an", "the"],
           "correctAnswer": "the"
         }
+
       ]
     },
     {
@@ -104,15 +129,11 @@
   },
   {
     "questions": [
-      {
-        "type": "imageDisplay",
-        "imagePath": "A1/1Nouns/2.png",
-        "altText": "Image description for accessibility"
-      },
-        
-        
-        
-        
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/1Nouns/4.png",
+          "altText": "Image description for accessibility"
+        },
         {
           "type": "multipleChoice",
           "question": "Choose the correct plural form of 'city':",
@@ -147,7 +168,7 @@
       "questions": [
         {
           "type": "imageDisplay",
-          "imagePath": "A1/1Nouns/4.png",
+          "imagePath": "A1/1Nouns/5.png",
           "altText": "Description for Image 4"
         },
         {
@@ -162,7 +183,7 @@
       "questions": [
         {
           "type": "imageDisplay",
-          "imagePath": "A1/1Nouns/5.png",
+          "imagePath": "A1/1Nouns/6.png",
           "altText": "Description for Image 5"
         },
         {
@@ -201,7 +222,7 @@
       "questions": [
         {
           "type": "imageDisplay",
-          "imagePath": "A1/1Nouns/6.png",
+          "imagePath": "A1/1Nouns/7.png",
           "altText": "Description for Image 6"
         },
         {
