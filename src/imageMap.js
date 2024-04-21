@@ -21,6 +21,7 @@ import image_A1_3Verbs_5_png from './assets/images/A1/3Verbs/5.png';
 import image_A1_3Verbs_6_png from './assets/images/A1/3Verbs/6.png';
 import image_A1_3Verbs_7_png from './assets/images/A1/3Verbs/7.png';
 import image_A1_3Verbs_8_png from './assets/images/A1/3Verbs/8.png';
+import image_A1_3Verbs_9_png from './assets/images/A1/3Verbs/9.png';
 import image_A1_4There_1_png from './assets/images/A1/4There/1.png';
 import image_A1_4There_2_png from './assets/images/A1/4There/2.png';
 import image_A1_4There_3_png from './assets/images/A1/4There/3.png';
@@ -57,6 +58,7 @@ const imageMap = {
   'A1/3Verbs/6.png': image_A1_3Verbs_6_png,
   'A1/3Verbs/7.png': image_A1_3Verbs_7_png,
   'A1/3Verbs/8.png': image_A1_3Verbs_8_png,
+  'A1/3Verbs/9.png': image_A1_3Verbs_9_png,
   'A1/4There/1.png': image_A1_4There_1_png,
   'A1/4There/2.png': image_A1_4There_2_png,
   'A1/4There/3.png': image_A1_4There_3_png,

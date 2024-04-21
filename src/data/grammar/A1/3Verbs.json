@@ -14,7 +14,7 @@
             {"text": "Action Verbs ", "textStyle": "bold"},
             {"text": "I'm learning.", "textStyle":"italic"},
             {"text": "The event happens progressively, usually starting at a known time and continuing.", "textStyle": "text", "newLine":true},
-            {"text": "In a sentence you may see more than one verb side by side. The preceeding verb", "textStyle": "text", "newLine":true},
+            {"text": "Use two verbs side by side. The preceeding verb", "textStyle": "text", "newLine":true},
             {"text": " are ", "textStyle": "bold"},
             {"text": "is the auxilliary verb (aux.), ", "textStyle": "text"},
             {"text": "followed by a main verb, ", "textStyle":"text"},
@@ -130,7 +130,7 @@
         },
         {
           "type": "multipleChoice",
-          "questions": "Which is the verb2 form used in past simple?",
+          "question": "Which is the verb2 form used in past simple?",
           "options": ["drink", "drank", "drunk"],
           "correctAnswer": "drank"
         }
@@ -150,8 +150,8 @@
             {"text": "are irregular verb2s", "textStyle":"text"},
             {"text": "click the verb 2s", "textStyle": "text"}
           ],
-          "options": ["come", "became", "eaten", "knew", "began", "find", "saw"],
-          "correctAnswer": ["became", "knew", "began", "saw"]
+          "words": ["come", "became", "eaten", "knew", "began", "find", "saw"],
+          "keyWords": ["became", "knew", "began", "saw"]
         }
       ]
     },
@@ -183,8 +183,23 @@
         },
         {
           "type": "multipleChoice",
-          "questions": "Which is the verb2 form used in past simple?",
-          "optionis": ["is", "was", "been"],
+          "question": "Which is the verb2 form used in past simple?",
+          "options": ["is", "was", "been"],
+          "correctAnswer": "was"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/3Verbs/9.png",
+          "altText": "V. go, stay, play, wait, have, walk, work"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which is the verb2 form used in past simple?",
+          "options": ["is", "was", "been"],
           "correctAnswer": "was"
         }
       ]
