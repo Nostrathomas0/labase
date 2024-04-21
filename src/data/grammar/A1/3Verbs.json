@@ -57,7 +57,7 @@
         {
           "type": "gapFill",
           "template": "She live_____ close to my school.",
-          "correctAnswer": ["s"]
+          "correctAnswers": ["s"]
         },
         {
           "type": "multipleChoice",
@@ -68,7 +68,7 @@
         {
           "type": "gapFill",
           "template": "When Jackie Chan _____ up in the morning, he springs to his feet.",
-          "correctAnswer": ["gets", "wakes", "rises", "is"]
+          "correctAnswers": ["gets", "wakes", "rises", "is"]
         }
       ]
     },
@@ -93,17 +93,17 @@
         {
           "type": "gapFill",
           "template": "I'm learn_____ English.",
-          "correctAnswer": ["ing"]
+          "correctAnswers": ["ing"]
         },
         {
           "type": "gapFill",
           "template": "They_____ taking their boat out today.",
-          "correctAnswer": ["re", "are"]
+          "correctAnswers": ["re", "are"]
         },
         {
           "type": "gapFill",
           "template": "FC Barcelona _____ playing tonight.",
-          "correctAnswer": ["is","'s"]
+          "correctAnswers": ["is","'s"]
 
         }
       ]
