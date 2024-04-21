@@ -34,7 +34,7 @@
         {
           "type":"click",
           "instruction": [
-            {"text": "Click here",  "textStyle": "italic"},
+            {"text": "Here and There are Adverbs of Place. They act like pronouns because they never take determiners and often appear as the subject of a sentence.",  "textStyle": "italic"},
             {"text": "Click there", "textStyle": "bold"}
           ],
           "words": ["here", "there"],
