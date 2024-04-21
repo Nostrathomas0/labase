@@ -5,7 +5,7 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "assets/images/A2/1PastCont/1.png"
+            "imagePath": "A2/1PastCont/1.png"
           },
           {
             "type": "click",
@@ -26,7 +26,7 @@
       "questions":  [
         {
             "type": "imageDisplay",
-            "imagePath": "assets/images/A2/1PastCont/2.png"
+            "imagePath": "A2/1PastCont/2.png"
         },
         {},
         {}
@@ -36,7 +36,7 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "assets/images/A2/1PastCont/3.png"
+            "imagePath": "A2/1PastCont/3.png"
           }
         ]
       },
@@ -44,7 +44,7 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "assets/images/A2/1PastCont/4.png"
+            "imagePath": "A2/1PastCont/4.png"
           }
         ]
       },
@@ -52,7 +52,7 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "assets/images/A1/A2/1PastConts/5.png"
+            "imagePath": "A2/1PastConts/5.png"
           }
         ]
       }
