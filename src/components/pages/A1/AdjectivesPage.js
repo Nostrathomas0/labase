@@ -6,7 +6,7 @@ import PageTurner from '../../common/PageTurner'
 
 const AdjectivesPage = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const { pages } = AdjectivesData; // Deconstruct pages array
+  const { pages } = AdjectivesData; 
   const currentQuestions = pages[currentPage].questions
   console.log('Current Questions:', currentQuestions);
   const nextPage = () => {

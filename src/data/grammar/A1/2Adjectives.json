@@ -54,15 +54,42 @@
           "altText": "'dumb', 'boring', 'lazy', 'frustrating' are adjectives. So are feelings like 'bored', 'tired' and 'angry'"
         },
         {
+          "type": "click",
+          "instructions": [
+           
+            {"text": " Quantifiers are determiners that describe ", "textStyle":"text"},
+            {"text": "how many ", "textStyle":"italic"},
+            {"text": "countables nouns and ", "textStyle":"text"},
+            {"text": "how much ", "textStyle":"italic"},
+            {"text": "uncountable noun there is. ", "textStyle":"text"},
+            {"text": " Plenty of, a lot of, much, many  & tons of ", "textStyle":"bold"},
+            {"text": " describes a high amomunt, ", "textStyle": "text"},
+            {"text": " some & enough ", "textStyle":"bold"},
+            {"text": " describe a medium, acceptable ammount and ", "textStyle":"text"},
+            {"text": " no ", "textStyle":"bold"},
+            {"text": " describes an amount equal to zero. A zero ammount can also be expressed with, ", "textStyle":"text"},
+            {"text": " any*", "textStyle":"bold"},
+            {"text": " which is also used in questions. ", "textStyle":"text"},
+            {"text": " Do you have any cabbage?", "textStyle":"italic"},
+            {"text": "* any", "textStyle":"bold", "newLine":true},
+            {"text": " must use the negative form of the verb, while", "textStyle":"italic"},
+            {"text": " no ", "textStyle":"bold"},
+            {"text": " uses the positive because it's already negative", "textStyle":"italic"},
+            {"text": "Click the quantifiers", "textStyle":"italic", "newParagraph":true}
+          ],
+            "words": ["Get ", "some ", "milk ", "and ", "a few ", "crescent ", "rolls." ],
+            "keyWords":["some ", "a few "]
+          },
+        {
           "type": "multipleChoice",
-          "question": "There isn't ______ coffee.",
-          "options": ["many", "much", "any", "a lot" ],
+          "question": "There isn't _____ coffee.",
+          "options": ["many", "some", "any", "a lot" ],
           "correctAnswer": "any"
         },
         {
           "type": "GapFill",
-          "template": "There _____ some milk and bread.",
-          "correctAnswers": ["is"]
+          "template": "There _____ any milk and bread.",
+          "correctAnswers": ["isn't"]
         },
         {
           "type": "GapFill",
@@ -83,26 +110,39 @@
             "instructions": [
               {"text": "Look at the top of the picture above. ", "textStyle": "italic"},
               
-              {"text": "Close " , "textStyle": "bold", "newLine":true },
+              {"text": "close " , "textStyle": "bold", "newLine":true },
+              {"text": "[klous] ", "textStyle":"text"},
               {"text": "adj. ",  "textStyle": "italic"},
-              {"text": "[klous] ",  "textStyle": "text"},
-              {"text": "Close " , "textStyle": "bold", "newLine":true },
+              {"text": "1. " , "textStyle": "bold"},
+              {"text": " near, in your proximity, not far, ",  "textStyle": "text"},
+              {"text": " We live close to school. I can walk there.", "textStyle": "italic"},
+              {"text": "close " , "textStyle": "bold", "newLine":true },
+              {"text": "[klouz]", "textStyle": "text"},
               {"text": "verb ",  "textStyle": "italic"},
-              {"text": "[klouz] ",  "textStyle": "text"},
-              {"text": "is an action to block.", "textStyle": "text", "newLine":true },
-              {"text": "close (adj.) is pronounced with a clear /s/ sound",  "textStyle": "text", "newLine":true},
-              {"text": "Imagine the men's conversation.", "textStyle": "text",  "newParagraph":true},
+              {"text": "2. ", "textStyle":"bold"},
+              {"text": "an action to block. ", "textStyle": "text"},
+              {"text": " Close the window please, it's cold.", "textStyle":"italic"},
+              {"text": "close (adj.) is pronounced with a clear /s/ sound.",  "textStyle": "text", "newLine":true},
+              {"text": "Imagine the men's conversation.", "textStyle": "italic",  "newParagraph":true},
               {"text": "Bill: ", "textStyle": "text", "newLine":true},
-              {"text": "Hey Bob, was your dog digging a hole in my garden last night?", "textStyle": "Italic"}, 
+              {"text": "Hey Bob, was your dog digging a hole in my garden last night?", "textStyle": "italic"}, 
               {"text": "Bob: ", "textStyle": "text", "newLine":true},
-              {"text": "Martha? No, it couldn't have beem her. She was in bed with me close to 10 o'clock.",  "textStyle":"italic"},
+              {"text": "Martha? No, it couldn't have been her. She was in bed with me close to 10 o'clock.",  "textStyle":"italic"},
               {"text": "Bill: ", "textStyle": "text", "newLine":true},
               {"text": "Well I got up and looked out the window last night and saw a pit bull that looked like it struck oil.", "textStyle": "italic"},
               {"text": "Bob: ", "textStyle": "text", "newLine":true},
-              {"text": "Ah that explains the dirt in my bed. Alright I'll remember to close the gate.", "textStyle": "italic"}
-             ],
-          "words": ["his wife's name is Martha,", "his bed was dirty in the morning", "he's planting a garden", "his dog ran away to Texas"],
-          "keyWords": ["his bed was dirty in the morning"]
+              {"text": "Ah that explains the dirt in my bed. Alright I'll remember to close the gate.", "textStyle": "italic"},
+              {"text": "Click on the adjectives in the sentences below.", "textStyle":"italic", "newParagraph":true}
+            ],
+          "words": ["His ", "bed ", "was ", "dirty ", "in ", "the ", "morning ", "so ", "he ", "had ", "to ", "close ", "the ", " gate" ],
+          "keyWords": ["dirty "]
+        },
+        {
+          "type":"multipleChoice",
+          "question": "What happened?",
+          "options":[ "Martha dug up the flowers", "he's planting a garden", "his dog ran away to Texas"],
+          "correctAnswer": "Martha dug up the flowers"
+
         }
       ]
     },
@@ -121,7 +161,7 @@
               {"text": "click on the phrase that talks about something far.", "textStyle": "underline"}
             ],
           "words": ["This tree right here", "That boat over there"],    
-          "keyWords": ["This tree right here"]
+          "keyWords": ["That boat over there"]
         }
       ]
     },
@@ -133,12 +173,12 @@
           "altText": "fil"
         },
         {
-          "type": "GapFill",
-          "template": "___ shoes fit me.",
-          "correctAnswers": ["These"]
+          "type": "gapFill",
+          "template": "_____ shoes fit me.",
+          "correctAnswers": ["These", "my"]
         },
         {
-          "type": "GapFill",
+          "type": "gapFill",
           "template": "_____ guys are my friends.",
           "correctAnswers": ["These"]
         }

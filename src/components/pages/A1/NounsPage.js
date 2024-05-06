@@ -8,7 +8,7 @@ const NounsPage = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const { pages } = NounsData;
   const currentQuestions = pages[currentPage].questions
-  //console.log('Current Questions:', currentQuestions);
+  console.log('Current Questions:', currentQuestions);
   const nextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, NounsData.pages.length - 1));
 };
