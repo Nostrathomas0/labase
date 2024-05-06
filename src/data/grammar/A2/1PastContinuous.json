@@ -1,108 +1,110 @@
 {
-    "topic": "Past Continuous",
-    "pages": [
-      {
-        "questions":  [
-          {
-            "type": "imageDisplay",
-            "imagePath": "A2/1PastCont/1.png"
-          },
-          {
-            "type": "click",
-              "instructions": [
-                {"text": "Past continuous,", "textStyle":"bold"},
-                {"text": " like all the continuous tenses, uses an auxilliary verb:", "textStyle":"text"},
-                {"text": " be", "textStyle":"underline"},
-                {"text": " before the main verb in the", "textStyle":"text"},
-                {"text": " -ing", "textStyle":"underline"},
-                {"text": " form. It describes past actions in progress, for example ", "textStyle":"text"},
-                {"text": " We were looking at the sea", "textStyle": "italic", "newParagraph":true},
-                {"text": "Click on the aux. verbs", "textStyle": "italic", "newParagraph":true }
-              ],
-              "words": ["The ", "sun ", "was ", "shining, ", "the ", "birds ", "were ", "singing ", "and ", "the ", "air ", "was ", "still."],
-              "keyWords": ["was", "were"]
-          },
-          {
-            "type": "multiple choice",
-            "question": "Click on what setting doesn't describe",
-            "options": ["where", "when", "what happened", "weather"],
-            "correctAnswer": "what happened"
-          }
-        ]
-      },
-      {
+  "topic": "Past Continuous",
+  "pages": [
+    {
       "questions":  [
         {
           "type": "imageDisplay",
-          "imagePath": "A2/1PastCont/2.png"
-        },
-        {
-          "type": "gapFill",
-          "template": "Continuous uses be in verb 2. Write a form of be in form 2 ____",
-          "answers": ["was", "were"]
+          "imagePath": "A2/1PastCont/1.png"
         },
         {
           "type": "click",
-          "instructions": [
-            {"text": "Sets the speaker in place, looking at the sea, for some duration of time in the past. ", "textStyle":"text"},
-            {"text": "Setting describes the scene, in a literary sense.", "textStyle":"text", "newParagraph":true},
-            {"text":  "when, where,  maybe a bit about the weather.", "textStyle":"bold"}
-          ],
-          "words": [],
-          "keyWords": []
-      },
-      {
-        "questions":  [
-          {
-            "type": "imageDisplay",
-            "imagePath": "A2/1PastCont/3.png",
-            "altText": "Past Continuous"
-          },
-          {
-            "type":"click",
             "instructions": [
-              {"text": "Past Continuous can be one or both parts of a complex sentence with 2 parts joined by a connecting word."},
-              {"text":"when ", "textStyle":"bold"},
-              {"text":"interrupts an action in progress and ", "textStyle":"text"},
-              {"text":"while ", "textStyle":"bold"},
-              {"text":" adds another progressive action happening at the same time.", "textStyle":"text"},
+              {"text": "Past continuous,", "textStyle":"bold"},
+              {"text": " like all the continuous tenses, uses an auxilliary verb:", "textStyle":"text"},
+              {"text": " be", "textStyle":"underline"},
+              {"text": " before the main verb in the", "textStyle":"text"},
+              {"text": " -ing", "textStyle":"underline"},
+              {"text": " form. It describes past actions in progress, for example ", "textStyle":"text"},
+              {"text": " We were looking at the sea", "textStyle": "italic", "newParagraph":true},
+              {"text": "Click on the aux. verbs", "textStyle": "italic", "newParagraph":true }
             ],
-            "words":[],
-            "keyWords":[]
-          }
-
-        ]
+            "words": ["The ", "sun ", "was ", "shining, ", "the ", "birds ", "were ", "singing ", "and ", "the ", "air ", "was ", "still."],
+            "keyWords": ["was", "were"]
+        },
+        {
+          "type": "multiple choice",
+          "question": "Click on what setting doesn't describe",
+          "options": ["where", "when", "what happened", "weather"],
+          "correctAnswer": "what happened"
+        }
+      ]
+    },
+    {
+    "questions":  [
+      {
+        "type": "imageDisplay",
+        "imagePath": "A2/1PastCont/2.png"
       },
       {
-        "questions":  [
-          {
-            "type": "imageDisplay",
-            "imagePath": "A2/1PastCont/4.png"
-          }
-        ]
+        "type": "gapFill",
+        "template": "Continuous uses be in verb 2. Write a form of be in form 2 ____",
+        "answers": ["was", "were"]
       },
       {
-        "questions":  [
-          {
-            "type": "imageDisplay",
-            "imagePath": "A2/1PastCont/5.png"
-          }
-        ]
-      },{
-        "questions":  [
-          {
-            "type": "imageDisplay",
-            "imagePath": "A2/1PastCont/6.png"
-          }
-        ]
-      },{
-        "questions":  [
-          {
-            "type": "imageDisplay",
-            "imagePath": "A2/1PastCont/7.png"
-          }
-        ]
+        "type": "click",
+        "instructions": [
+          {"text": "Sets the speaker in place, looking at the sea, for some duration of time in the past. ", "textStyle":"text"},
+          {"text": "Setting describes the scene, in a literary sense.", "textStyle":"text", "newParagraph":true},
+          {"text":  "when, where,  maybe a bit about the weather.", "textStyle":"bold"}
+        ],
+        "words": [],
+        "keyWords": []
       }
     ]
-  }
-  
+    },
+    {
+    "questions":  [
+      {
+        "type": "imageDisplay",
+        "imagePath": "A2/1PastCont/3.png",
+        "altText": "Past Continuous"
+      },
+      {
+        "type":"click",
+        "instructions": [
+          {"text": "Past Continuous can be one or both parts of a complex sentence with 2 parts joined by a connecting word."},
+          {"text":"when ", "textStyle":"bold"},
+          {"text":"interrupts an action in progress and ", "textStyle":"text"},
+          {"text":"while ", "textStyle":"bold"},
+          {"text":" adds another progressive action happening at the same time.", "textStyle":"text"}
+        ],
+        "words":[],
+        "keyWords":[]
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A2/1PastCont/4.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A2/1PastCont/5.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A2/1PastCont/6.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A2/1PastCont/7.png"
+        }
+      ]
+    }
+  ]
+}
