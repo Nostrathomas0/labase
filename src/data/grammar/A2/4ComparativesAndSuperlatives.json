@@ -32,6 +32,22 @@
             "imagePath": "A2/CompSupe/4.png"
           }
         ]
+      },
+      {
+        "questions":  [
+          {
+            "type": "ImageDisplay",
+            "imagePath": "A2/CompSupe/5.png"
+          }
+        ]
+      },
+      {
+        "questions":  [
+          {
+            "type": "ImageDisplay",
+            "imagePath": "A2/CompSupe/6.png"
+          }
+        ]
       }
     ]
   }

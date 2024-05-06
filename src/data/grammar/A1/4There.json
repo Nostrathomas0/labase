@@ -11,11 +11,15 @@
         {
           "type":"click",
           "instruction": [
-            {"text": "Click here", "textStyle": "italic" },
-            {"text": "Click there", "textStyle": "bold"}
+            {"text": "Click there","textStyle": "text"},
+            {"text": " and", "textStyle": "text"},
+            {"text": " There ", "textStyle": "text"},
+            {"text": " are incredibly front pointed. This means they can express from first slot of a sentence (sub), especially with the verbs", "textStyle": "text"},
+            {"text": " come, go, lie, walk, ", "textStyle": "bold" },
+            {"text": "Click the words that can be (sub.) in a sentence.", "textStyle": "italic", "newParagraph":true}
           ],
-          "words": ["here", "there"],
-          "keyWords": ["here", "there"]
+          "words": ["here", "he", "there", "her", "the sidewalk", "him", "us" ],
+          "keyWords": ["here", "there", "her", "us", "the sidewalk"]
         },
         {
           "type": "gapFill",

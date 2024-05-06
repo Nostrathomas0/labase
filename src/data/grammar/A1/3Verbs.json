@@ -14,10 +14,9 @@
             {"text": "Action Verbs ", "textStyle": "bold"},
             {"text": "I'm learning.", "textStyle":"italic"},
             {"text": "The event happens progressively, usually starting at a known time and continuing.", "textStyle": "text", "newLine":true},
-            {"text": "Use two verbs side by side. The preceeding verb", "textStyle": "text", "newLine":true},
+            {"text": "Use two verbs side by side; an auxilliar verb, ", "textStyle": "text", "newLine":true},
             {"text": " are ", "textStyle": "bold"},
-            {"text": "is the auxilliary verb (aux.), ", "textStyle": "text"},
-            {"text": "followed by a main verb, ", "textStyle":"text"},
+            {"text": "followed by an action verb, ", "textStyle":"text"},
             {"text": " filming ", "textStyle": "bold"},
             {"text": "Click on the action verb below", "textStyle": "italic", "newParagraph":true}
           ],
@@ -49,6 +48,19 @@
           "altText": "V. go, stay, play, wait, have, walk, work"
         },
         {
+          "type": "click",
+          "instructions": [
+            {"text": "Present Simple ", "textStyle":"bold"},
+            {"text": "describes everyday activities and how often you do them. ", "textStyle":"text"},
+            {"text": "I drink coffee every morning.", "textStyle": "italic", "newLine":true},
+            {"text": "I go to New York Univesity.", "textStyle": "italic", "newLine":true},
+            {"text": "Use it for actions and events that happen again and again", "textStyle": "text", "newLine":true},
+            {"text": "Click on the present simple verbs. Then type the correct ending on the verb.", "textStyle":"italic", "newParagraph":true}
+          ],
+          "words": ["I", "'m", "going", "to ", "the ", "museum ", "on ", "Saturday. ", "Your ", "girlfriend ", "lives ", "close ", "to ", "there ", "right?", "Do ", "you ", "two ", "want ", "to ", "come?"],
+          "keyWords": ["lives", "want"]
+        },
+        {
           "type": "multipleChoice",
           "question": "What tense has the 3rd person s?",
           "options": ["present continuous", "present simple" ],
@@ -57,7 +69,7 @@
         {
           "type": "gapFill",
           "template": "She live_____ close to my school.",
-          "correctAnswers": ["s"]
+          "correctAnswers": ["s", "d"]
         },
         {
           "type": "multipleChoice",
@@ -79,17 +91,7 @@
           "imagePath": "A1/3Verbs/4.png",
           "altText": "V. go, stay, play, wait, have, walk, work"
         },
-        {
-          "type": "click",
-          "instructions": [
-            {"text": "Action verbs in progress are written with -ing", "textStyle":"underline"},
-            {"text": "You're learing English grammar.", "textStyle":"bold", "newLine":true},
-            {"text": "Present Continuous asks a bit of conjugation.", "textStyle": "underline", "newLine":true},
-            {"text": "Click on the aux. verbs in the sentence, then complete the words in the next activity", "textStyle": "italic", "NewParagraph":true}
-          ],
-          "words": [ "I","'m", " working", " at", " noon.", " When ", "are ", "you", "flying", "out", "?", " The ", "movie", "'s", "starting", "at", "8 o'clock"],
-          "keyWords": ["'m", "are", "'s"]
-        },
+        
         {
           "type": "gapFill",
           "template": "I'm learn_____ English.",
