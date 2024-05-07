@@ -5,7 +5,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "A2/2Future/1.png"
+          "imagePath": "A2/3GoingTo/1.png"
         },
         {
           "type": "wordBank",
@@ -20,7 +20,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "A2/2Future/2.png"
+          "imagePath": "A2/3GoingTo/2.png"
         }
       ]
     },
@@ -28,7 +28,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "A2/2Future/3.png"
+          "imagePath": "A2/3GoingTo/3.png"
         }
       ]
     },
@@ -36,7 +36,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "A2/2Future/4.png"
+          "imagePath": "A2/3GoingTo/4.png"
         }
       ]
     },
@@ -44,7 +44,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "A2/2Future/5.png"
+          "imagePath": "A2/3GoingTo/5.png"
         }
       ]
     },
@@ -52,7 +52,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "A2/2Future/6.png"
+          "imagePath": "A2/3GoingTo/6.png"
         }
       ]
     },
@@ -60,7 +60,7 @@
       "questions":  [
         {
           "type": "ImageDisplay",
-          "imagePath": "A2/2Future/7.png"
+          "imagePath": "A2/3GoingTo/7.png"
         }
       ]
     }
