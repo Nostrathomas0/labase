@@ -1,54 +1,53 @@
 {
-    "topic": "Comparatives & Superlatives",
-    "pages": [
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "A2/CompSupe/1.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "A2/CompSupe/2.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "A2/CompSupe/3.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "A2/CompSupe/4.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "A2/CompSupe/5.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "A2/CompSupe/6.png"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "topic": "Comparatives & Superlatives",
+  "pages": [
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "A2/4CompSupe/1.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "A2/4CompSupe/2.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "A2/4CompSupe/3.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "A2/4CompSupe/4.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "A2/4CompSupe/5.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "ImageDisplay",
+          "imagePath": "A2/4CompSupe/6.png"
+        }
+      ]
+    }
+  ]
+}
