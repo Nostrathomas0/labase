@@ -2,10 +2,17 @@
   "topic": "Future Simple",
   "pages": [
     {
-      "questions":  [
+      "questions": [
         {
           "type": "ImageDisplay",
-          "imagePath": "A2/3GoingTo/1.png"
+          "imagePath": "A2/3GoingTo/1.png",
+          "altText": "Going to"
+        },
+        {
+          "type":"click",
+          "instructions": [
+            {"text": "Future", "textStyle":"text" }
+          ]
         },
         {
           "type": "wordBank",
@@ -37,6 +44,9 @@
         {
           "type": "ImageDisplay",
           "imagePath": "A2/3GoingTo/4.png"
+        },
+        {
+          "type":"click"
         }
       ]
     },
