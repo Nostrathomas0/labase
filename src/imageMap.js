@@ -31,9 +31,29 @@ import image_A2_1PastCont_2_png from './assets/images/A2/1PastCont/2.png';
 import image_A2_1PastCont_3_png from './assets/images/A2/1PastCont/3.png';
 import image_A2_1PastCont_4_png from './assets/images/A2/1PastCont/4.png';
 import image_A2_1PastCont_5_png from './assets/images/A2/1PastCont/5.png';
+import image_A2_1PastCont_6_png from './assets/images/A2/1PastCont/6.png';
+import image_A2_1PastCont_7_png from './assets/images/A2/1PastCont/7.png';
 import image_A2_2Future_1_png from './assets/images/A2/2Future/1.png';
 import image_A2_2Future_2_png from './assets/images/A2/2Future/2.png';
 import image_A2_2Future_3_png from './assets/images/A2/2Future/3.png';
+import image_A2_2Future_4_png from './assets/images/A2/2Future/4.png';
+import image_A2_2Future_5_png from './assets/images/A2/2Future/5.png';
+import image_A2_2Future_6_png from './assets/images/A2/2Future/6.png';
+import image_A2_2Future_7_png from './assets/images/A2/2Future/7.png';
+import image_A2_3GoingTo_1_png from './assets/images/A2/3GoingTo/1.png';
+import image_A2_3GoingTo_2_png from './assets/images/A2/3GoingTo/2.png';
+import image_A2_3GoingTo_3_png from './assets/images/A2/3GoingTo/3.png';
+import image_A2_3GoingTo_4_png from './assets/images/A2/3GoingTo/4.png';
+import image_A2_3GoingTo_5_png from './assets/images/A2/3GoingTo/5.png';
+import image_A2_3GoingTo_6_png from './assets/images/A2/3GoingTo/6.png';
+import image_A2_3GoingTo_7_png from './assets/images/A2/3GoingTo/7.png';
+import image_A2_4CompSupe_1_png from './assets/images/A2/4CompSupe/1.png';
+import image_A2_4CompSupe_2_png from './assets/images/A2/4CompSupe/2.png';
+import image_A2_4CompSupe_3_png from './assets/images/A2/4CompSupe/3.png';
+import image_A2_4CompSupe_4_png from './assets/images/A2/4CompSupe/4.png';
+import image_A2_4CompSupe_5_png from './assets/images/A2/4CompSupe/5.png';
+import image_A2_4CompSupe_6_png from './assets/images/A2/4CompSupe/6.png';
+import image_A2_4CompSupe_7_png from './assets/images/A2/4CompSupe/7.png';
 const imageMap = {
   'A1/1Nouns/1.png': image_A1_1Nouns_1_png,
   'A1/1Nouns/2.png': image_A1_1Nouns_2_png,
@@ -68,9 +88,29 @@ const imageMap = {
   'A2/1PastCont/3.png': image_A2_1PastCont_3_png,
   'A2/1PastCont/4.png': image_A2_1PastCont_4_png,
   'A2/1PastCont/5.png': image_A2_1PastCont_5_png,
+  'A2/1PastCont/6.png': image_A2_1PastCont_6_png,
+  'A2/1PastCont/7.png': image_A2_1PastCont_7_png,
   'A2/2Future/1.png': image_A2_2Future_1_png,
   'A2/2Future/2.png': image_A2_2Future_2_png,
   'A2/2Future/3.png': image_A2_2Future_3_png,
+  'A2/2Future/4.png': image_A2_2Future_4_png,
+  'A2/2Future/5.png': image_A2_2Future_5_png,
+  'A2/2Future/6.png': image_A2_2Future_6_png,
+  'A2/2Future/7.png': image_A2_2Future_7_png,
+  'A2/3GoingTo/1.png': image_A2_3GoingTo_1_png,
+  'A2/3GoingTo/2.png': image_A2_3GoingTo_2_png,
+  'A2/3GoingTo/3.png': image_A2_3GoingTo_3_png,
+  'A2/3GoingTo/4.png': image_A2_3GoingTo_4_png,
+  'A2/3GoingTo/5.png': image_A2_3GoingTo_5_png,
+  'A2/3GoingTo/6.png': image_A2_3GoingTo_6_png,
+  'A2/3GoingTo/7.png': image_A2_3GoingTo_7_png,
+  'A2/4CompSupe/1.png': image_A2_4CompSupe_1_png,
+  'A2/4CompSupe/2.png': image_A2_4CompSupe_2_png,
+  'A2/4CompSupe/3.png': image_A2_4CompSupe_3_png,
+  'A2/4CompSupe/4.png': image_A2_4CompSupe_4_png,
+  'A2/4CompSupe/5.png': image_A2_4CompSupe_5_png,
+  'A2/4CompSupe/6.png': image_A2_4CompSupe_6_png,
+  'A2/4CompSupe/7.png': image_A2_4CompSupe_7_png,
 };
 
 export default imageMap;

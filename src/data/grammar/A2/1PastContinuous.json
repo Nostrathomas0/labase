@@ -11,9 +11,11 @@
           "type": "click",
             "instructions": [
               {"text": "Past continuous,", "textStyle":"bold"},
-              {"text": " like all the continuous tenses, uses an auxilliary verb:", "textStyle":"text"},
-              {"text": " be", "textStyle":"underline"},
-              {"text": " before the main verb in the", "textStyle":"text"},
+              {"text": " uses an auxilliary verb and this is the verb ", "textStyle":"text"},
+              {"text": "be", "textStyle":"underline"},
+              {"text": " in different forms:", "textStyle":"text"},
+              {"text": " was, were", "textStyle":"italic"},
+              {"text": " before the main verb in the ", "textStyle":"text"},
               {"text": " -ing", "textStyle":"underline"},
               {"text": " form. It describes past actions in progress, for example ", "textStyle":"text"},
               {"text": " We were looking at the sea", "textStyle": "italic", "newParagraph":true},
@@ -38,7 +40,7 @@
       },
       {
         "type": "gapFill",
-        "template": "Continuous uses be in verb 2. Write a form of be in form 2 ____",
+        "template": "Continuous uses be in verb 2. Write a form of be in form 2.",
         "answers": ["was", "were"]
       },
       {
