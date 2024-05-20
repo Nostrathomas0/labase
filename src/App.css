@@ -71,6 +71,16 @@
   max-width: 100%;
   height: auto;
 }
+.words-container.horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.words-container.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
 .instructions .text {
   font-family: sans-serif;
 }
@@ -89,8 +99,11 @@
   text-decoration: underline;
 }
 
+.instructions .paragraph {
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
 .instructions .default {
-  /* Define default styles here, similar to .text if needed */
   font-family: sans-serif;
 }
 

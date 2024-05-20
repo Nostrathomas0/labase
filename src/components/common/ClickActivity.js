@@ -1,28 +1,78 @@
-import React from 'react';
-import Instructions from '../GrammarTopic'; // Import the Instructions component
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Instructions from './Instructions'; // Ensure you import Instructions
 
-const ClickActivity = ({ instructions, words, keyWords }) => {
+const ClickActivity = ({ instructions = [], words = [], keyWords = [], onAnswer, layout = 'horizontal' }) => {
+  const [clickedWords, setClickedWords] = useState([]);
+  const [feedback, setFeedback] = useState('');
+
+  useEffect(() => {
+    setClickedWords([]);
+    setFeedback('');
+  }, [words, instructions]);
+
   const handleWordClick = (word) => {
-    if (keyWords.includes(word)) {
-      alert(`Correct! '${word}' is one of the key words.`);
-    } else {
-      alert(`Try again! '${word}' is not one of the key words.`);
+    if (!word || !word.text) {
+      console.error('Invalid word:', word);
+      return;
     }
+
+    const isCorrect = keyWords.includes(word.text);
+    onAnswer(isCorrect);
+
+    setFeedback(word.feedback || 'No feedback available');
+
+    setClickedWords((prevClickedWords) => [...prevClickedWords, word.text]);
   };
 
   return (
     <div>
-      {/* Use the Instructions component to render the instructions array */}
       <Instructions instructions={instructions} />
-      <div className="blockquote">
-        {words.map((word, index) => (
-          <span key={index} onClick={() => handleWordClick(word)} style={{ cursor: 'pointer', marginRight: '5px' }}>
-          {word}
-          </span>
-        ))}
-      </div>
+      <blockquote className={`words-container ${layout}`}>
+        {words.map((word, index) => {
+          if (!word || !word.text) {
+            console.error('Invalid word in words array:', word);
+            return null;
+          }
+
+          return (
+            <span
+              key={index}
+              onClick={() => handleWordClick(word)}
+              style={{
+                cursor: 'pointer',
+                margin: '5px',
+                color: clickedWords.includes(word.text) ? (keyWords.includes(word.text) ? 'green' : 'red') : 'black'
+              }}
+            >
+              {word.text}
+            </span>
+          );
+        })}
+      </blockquote>
+      {feedback && <div className="feedback">{feedback}</div>}
     </div>
   );
+};
+
+ClickActivity.propTypes = {
+  instructions: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      textStyle: PropTypes.string,
+      newLine: PropTypes.bool,
+      newParagraph: PropTypes.bool
+    })
+  ),
+  words: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      feedback: PropTypes.string
+    })
+  ),
+  keyWords: PropTypes.arrayOf(PropTypes.string),
+  onAnswer: PropTypes.func.isRequired,
+  layout: PropTypes.oneOf(['horizontal', 'vertical'])
 };
 
 export default ClickActivity;

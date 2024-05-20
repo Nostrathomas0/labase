@@ -4,21 +4,95 @@
     {
       "questions": [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A2/3GoingTo/1.png",
+          "type": "imageDisplay",
+          "imagePath": "A2/2Future/1.png",
           "altText": "Going to"
         },
         {
           "type":"click",
           "instructions": [
-            {"text": "Future", "textStyle":"text" }
-          ]
+            {"text": "The future isn't certain but we can promise with ", "textStyle":"text" },
+            {"text": "will ", "textStyle":"bold"},
+            {"text": "before the root form of the verb.", "textStyle":"text"}, 
+            {"text": "Click on the root verb below.", "textStyle":"italic", "newParagraph":true}
+          ],
+          "words": ["The ", "sun ", "will ", "come ", "up ", "tomorrow."],
+          "keyWords": ["come "]
         },
         {
           "type": "wordBank",
-          "paragraph": "",
-          "wordBank": [],
-          "correctAnswers": [""]
+          "paragraph": "Put the words in the correct order.",
+          "wordBank": ["a", "bring", "wine", "they", "will", "bottle", "of"],
+          "correctAnswers": ["they", "will", "bring", "a", "bottle", "of", "wine"]
+         }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A2/2Future/2.png"
+        },
+        {
+          "type":"click",
+          "instructions":[
+            {"text": "CONJUNCTIONS", "textStyle":"bold", "newParagraph":true},
+            {"text": "Will and other modals have some special powers to make 1 word out of 2. Use it after a subject pronoun like", "textStyle":"text"},
+            {"text": "I, you, we, he, she, it ", "textStyle":"italic"},
+            {"text": "or", "textStyle":"text"},
+            {"text": " they, ", "textStyle":"italic"},
+            {"text": " and you can drop the ","textStyle":"text"},
+            {"text": " wi", "textStyle":"bold"},
+            {"text": " , add an apostrophie ", "textStyle":"text"},
+            {"text": " ' ", "textStyle":"bold"},
+            {"text": " , and press  the subject pronoun into the, ", "textStyle":"text"},
+            {"text": "ll", "textStyle":"bold"},
+            {"text": "to make 1 word out of 2 ", "textStyle":"text"},
+            {"text": "I'll, you'll, we'll, he'll, she'll, it'll ", "textStyle":"bold"},
+            {"text": "and", "textStyle":"text"},
+            {"text": "they'll", "textStyle":"bold"},
+            {"text": ". To make a negative form, just take the ", "textStyle":"text"},
+            {"text": "w", "textStyle":"bold"},
+            {"text": "and add", "textStyle":"text"},
+            {"text": "on't", "textStyle":"bold"},
+            {"text": " to make ", "textStyle":"text"},
+            {"text": "won't", "textStyle":"bold"},
+            {"text": "Click the conjunctions", "textStyle":"italic"}
+            ],
+          "words":["", ""],
+          "keyWords":[""]
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A2/2Future/3.png"
+        },
+        {
+          "type":"click", 
+          "instructions":[
+            {"text": "You are free to use ", "textStyle":"text"},
+            {"text": "will ", "textStyle":"bold"},
+            {"text": "or ", "textStyle":"text"},
+            {"text": "going to", "textStyle":"bold"},
+            {"text": " when making predictions about the future. ", "textStyle":"text"},
+            {"text": "If there are dark, grey clouds in the sky, you can say either ", "textStyle":"text", "newLine":true},
+            {"text": " It will rain. ", "textStyle":"italic", "newLine":true},
+            {"text": " or ", "textStyle":"text", "newLine":true},
+            {"text": " It's going to rain.", "textStyle":"italic", "newParagraph":true},
+            {"text": "Other uses are hard rules, for example, when offering something like a challenge, it would sound wrong to say,  ", "textStyle":"text"},
+            {"text": "I'm going to race you home", "textStyle":"italic"},
+            {"text": " or ", "textStyle":"text"},
+            {"text": "I'm going to bet* I beat** you to the next town", "textStyle":"italic"},
+            {"text": "bet (verb): to challenge someone, and offer money to the winner", "textStyle":"italic", "newParagraph":true},
+            {"text": "beat (verb): win a race or other contest", "textStyle":"italic"}
+          ],
+          "words": [],
+          "keyWords":[]
+        },
+        {
 
         }
       ]
@@ -26,51 +100,281 @@
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A2/3GoingTo/2.png"
-        }
-      ]
-    },
-    {
-      "questions":  [
-        {
-          "type": "ImageDisplay",
-          "imagePath": "A2/3GoingTo/3.png"
-        }
-      ]
-    },
-    {
-      "questions":  [
-        {
-          "type": "ImageDisplay",
-          "imagePath": "A2/3GoingTo/4.png"
+          "type": "imageDisplay",
+          "imagePath": "A2/2Future/4.png"
         },
         {
-          "type":"click"
+          "type": "multipleChoice",
+          "question": "Which sentence is an example of a bet using 'will'?",
+          "options": ["I will probably win.", "I will definitely win this game.", "He will arrive soon.", "They will have finished by now."],
+          "correctAnswer": "I will definitely win this game."
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which sentence is a prediction based on evidence?",
+          "options": ["I will bet you can't do it.", "It will rain soon; look at those dark clouds.", "I will buy a new car next year.", "They will win the lottery."],
+          "correctAnswer": "It will rain soon; look at those dark clouds."
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which of the following is a bet?",
+          "options": ["She will travel to Paris.", "He will be tired after his workout.", "I will bet they won't come to the party.", "It will be sunny tomorrow."],
+          "correctAnswer": "I will bet they won't come to the party."
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Choose the sentence that shows a prediction based on evidence:",
+          "options": ["The team will win the match.", "You will enjoy this movie.", "The roads are slippery; there will be an accident.", "I will call you tomorrow."],
+          "correctAnswer": "The roads are slippery; there will be an accident."
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "Based on the dark clouds and strong winds, the weather forecast predicts that it ______ soon. The local authorities advise people to stay indoors and to prepare for possible power ______. Many residents are stocking up on ______ and making sure their ______ are charged. Some are also securing loose objects outside to prevent ______. The meteorologist mentioned that the storm ______ the strongest one this year.",
+          "wordBank": ["batteries", "food", "rain", "storm", "outages", "might be"],
+          "correctAnswers": ["rain", "outages", "food", "batteries", "damage", "might be"]
+        },
+        {
+          "type": "gapFill",
+          "template": "Looking at the traffic, I predict it will take us at least an hour to get ______ (home).",
+          "correctAnswers": ["home"]
+        },
+        {
+          "type": "gapFill",
+          "template": "I will bet that team ______ (win) the championship this year.",
+          "correctAnswers": ["wins"]
+        },
+        {
+          "type": "gapFill",
+          "template": "Given the current trends, I believe the prices of houses ______ (increase) by the end of the year.",
+          "correctAnswers": ["will increase"]
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A2/3GoingTo/5.png"
+          "type": "imageDisplay",
+          "imagePath": "A2/2Future/5.png"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "__________",
+          "options": ["__________", "__________", "__________", "__________"],
+          "correctAnswer": "__________"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "__________",
+          "options": ["__________", "__________", "__________", "__________"],
+          "correctAnswer": "__________"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "__________",
+          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
+          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "__________",
+          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
+          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "gapFill",
+          "template": "__________ (__________)",
+          "correctAnswers": ["__________"]
+        },
+        {
+          "type": "gapFill",
+          "template": "__________ (__________)",
+          "correctAnswers": ["__________"]
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": true
+            },
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": false
+            }
+          ],
+          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
+          "keyWords": ["__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": true
+            },
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": false
+            }
+          ],
+          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
+          "keyWords": ["__________", "__________", "__________", "__________"]
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A2/3GoingTo/6.png"
+          "type": "imageDisplay",
+          "imagePath": "A2/2Future/6.png"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "__________",
+          "options": ["__________", "__________", "__________", "__________"],
+          "correctAnswer": "__________"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "__________",
+          "options": ["__________", "__________", "__________", "__________"],
+          "correctAnswer": "__________"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "__________",
+          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
+          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "__________",
+          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
+          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "gapFill",
+          "template": "__________ (__________)",
+          "correctAnswers": ["__________"]
+        },
+        {
+          "type": "gapFill",
+          "template": "__________ (__________)",
+          "correctAnswers": ["__________"]
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": true
+            },
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": false
+            }
+          ],
+          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
+          "keyWords": ["__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": true
+            },
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": false
+            }
+          ],
+          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
+          "keyWords": ["__________", "__________", "__________", "__________"]
         }
       ]
     },
     {
       "questions":  [
         {
-          "type": "ImageDisplay",
-          "imagePath": "A2/3GoingTo/7.png"
+          "type": "imageDisplay",
+          "imagePath": "A2/2Future/7.png"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "__________",
+          "options": ["__________", "__________", "__________", "__________"],
+          "correctAnswer": "__________"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "__________",
+          "options": ["__________", "__________", "__________", "__________"],
+          "correctAnswer": "__________"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "__________",
+          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
+          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "__________",
+          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
+          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "gapFill",
+          "template": "__________ (__________)",
+          "correctAnswers": ["__________"]
+        },
+        {
+          "type": "gapFill",
+          "template": "__________ (__________)",
+          "correctAnswers": ["__________"]
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": true
+            },
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": false
+            }
+          ],
+          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
+          "keyWords": ["__________", "__________", "__________", "__________"]
+        },
+        {
+          "type": "click",
+          "instructions": [
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": true
+            },
+            {
+              "text": "__________",
+              "textStyle": "__________",
+              "newParagraph": false
+            }
+          ],
+          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
+          "keyWords": ["__________", "__________", "__________", "__________"]
         }
       ]
     }
