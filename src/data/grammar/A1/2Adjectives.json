@@ -35,8 +35,22 @@
            
             {"text": "Click on the adjectives in the sentence below.", "textStyle": "italic"}
           ],
-          "words": ["At", "the", "live", "demo,", "the", "engineer", "showcased",  "a", "fast", "new", "software", "that", "could,", "much", "like", "previous", "versions,",  "analyze", "data", "and", "make", "fair", "assessments", "of", "complex", "situations", "for", "curious",  "users."],
-          "keyWords": ["fast", "live", "previous", "curious", "fair"]
+          "words": [
+            { "text": "The", "feedback": "'The' is not an adjective." },
+            { "text": "quick", "feedback": "'quick' is an adjective." },
+            { "text": "brown", "feedback": "'brown' is an adjective." },
+            { "text": "fox", "feedback": "'fox' is not an adjective." },
+            { "text": "jumped", "feedback": "'jumped' is not an adjective." },
+            { "text": "over", "feedback": "'over' is not an adjective." },
+            { "text": "the", "feedback": "'the' is not an adjective." },
+            { "text": "lazy", "feedback": "'lazy' is an adjective." },
+            { "text": "dog", "feedback": "'dog' is not an adjective." }
+          ],
+          "keyWords": [
+            "quick",
+            "brown",
+            "lazy"
+          ]
         },
         {
           "type": "multipleChoice",
@@ -55,6 +69,7 @@
         },
         {
           "type": "click",
+          "layout":"horizontal",
           "instructions": [
            
             {"text": " Quantifiers are determiners that describe ", "textStyle":"text"},
@@ -77,8 +92,36 @@
             {"text": " uses the positive because it's already negative", "textStyle":"italic"},
             {"text": "Click the quantifiers", "textStyle":"italic", "newParagraph":true}
           ],
-            "words": ["Get ", "some ", "milk ", "and ", "a few ", "crescent ", "rolls." ],
-            "keyWords":["some ", "a few "]
+          "words": [
+            { "text": "Do", "feedback": "'Do' is not a quantifier." },
+            { "text": "we", "feedback": "'we' is not a quantifier." },
+            { "text": "have", "feedback": "'have' is not a quantifier." },
+            { "text": "any", "feedback": "'any' is a quantifier." },
+            { "text": "milk?", "feedback": "'milk?' is not a quantifier." },
+            { "text": "There", "feedback": "'There' is not a quantifier." },
+            { "text": "are", "feedback": "'are' is not a quantifier." },
+            { "text": "no", "feedback": "'no' is a quantifier." },
+            { "text": "cookies", "feedback": "'cookies' is not a quantifier." },
+            { "text": "left", "feedback": "'left' is not a quantifier." },
+            { "text": "in", "feedback": "'in' is not a quantifier." },
+            { "text": "the", "feedback": "'the' is not a quantifier." },
+            { "text": "jar.", "feedback": "'jar.' is not a quantifier." },
+            { "text": "I", "feedback": "'I' is not a quantifier." },
+            { "text": "have", "feedback": "'have' is not a quantifier." },
+            { "text": "some", "feedback": "'some' is a quantifier." },
+            { "text": "money,", "feedback": "'money,' is not a quantifier." },
+            { "text": "but", "feedback": "'but' is not a quantifier." },
+            { "text": "only", "feedback": "'only' is not a quantifier." },
+            { "text": "a", "feedback": "'a' is not a quantifier." },
+            { "text": "few", "feedback": "'few' is a quantifier." },
+            { "text": "coins.", "feedback": "'coins.' is not a quantifier." }
+          ],
+          "keyWords": [
+            "any",
+            "no",
+            "some",
+            "few"
+          ]
           },
         {
           "type": "multipleChoice",
@@ -107,6 +150,7 @@
         },
         {
           "type": "click",
+          "layout":"horizontal",
             "instructions": [
               {"text": "Look at the top of the picture above. ", "textStyle": "italic"},
               
@@ -134,8 +178,28 @@
               {"text": "Ah that explains the dirt in my bed. Alright I'll remember to close the gate.", "textStyle": "italic"},
               {"text": "Click on the adjectives in the sentences below.", "textStyle":"italic", "newParagraph":true}
             ],
-          "words": ["His ", "bed ", "was ", "dirty ", "in ", "the ", "morning ", "so ", "he ", "had ", "to ", "close ", "the ", " gate" ],
-          "keyWords": ["dirty "]
+            "words": [
+              { "text": "His", "feedback": "'His' is not an adjective." },
+              { "text": "bed", "feedback": "'bed' is not an adjective." },
+              { "text": "was", "feedback": "'was' is not an adjective." },
+              { "text": "dirty", "feedback": "'dirty' is an adjective." },
+              { "text": "and", "feedback": "'and' is not an adjective." },
+              { "text": "messy", "feedback": "'messy' is an adjective." },
+              { "text": "in", "feedback": "'in' is not an adjective." },
+              { "text": "the", "feedback": "'the' is not an adjective." },
+              { "text": "morning", "feedback": "'morning' is not an adjective." },
+              { "text": "so", "feedback": "'so' is not an adjective." },
+              { "text": "he", "feedback": "'he' is not an adjective." },
+              { "text": "had", "feedback": "'had' is not an adjective." },
+              { "text": "to", "feedback": "'to' is not an adjective." },
+              { "text": "close", "feedback": "'close' is not an adjective." },
+              { "text": "the", "feedback": "'the' is not an adjective." },
+              { "text": "gate", "feedback": "'gate' is not an adjective." }
+            ],
+            "keyWords": [
+              "dirty",
+              "messy"
+            ]
         },
         {
           "type":"multipleChoice",
@@ -155,12 +219,16 @@
         },
         {
           "type": "click",
+          "layout":"horizontal",
             "instructions": [
               {"text": "Far", "textStyle": "bold"},
               {"text": "(adj.) at a great distance", "textStyle": "text"},
               {"text": "click on the phrase that talks about something far.", "textStyle": "underline"}
             ],
-          "words": ["This tree right here", "That boat over there"],    
+          "words": [
+            {"text":"This tree right here", "feedback":"This is proximal"},
+            {"text":"That boat over there", "feedback":"That's distal"}
+          ],    
           "keyWords": ["That boat over there"]
         }
       ]
@@ -212,14 +280,33 @@
         },
         {
           "type": "click", 
+          "layout":"horizontal",
             "instructions": [
               {"text": "Adjectives can be the object of a sentence.", "textStyle": "text"},
               {"text": "Close describes their distance.",  "textStyle": "text"},
               {"text": "/klous/", "textStyle": "italic"},
               {"text": "with a clear /s/ sound", "textStyle": "text"}
           ],
-            "words": ["Which", "McDonalds", "do", "you", "want to go to", "while", "you're", "still", "close", "to", "home."],
-            "keyWords": ["close"]
+          "words": [
+            { "text": "Which", "feedback": "'Which' does not have a clear 's' sound." },
+            { "text": "McDonalds", "feedback": "'McDonalds' does not have a clear 's' sound." },
+            { "text": "do", "feedback": "'do' does not have a clear 's' sound." },
+            { "text": "you", "feedback": "'you' does not have a clear 's' sound." },
+            { "text": "want", "feedback": "'want' does not have a clear 's' sound." },
+            { "text": "to", "feedback": "'to' does not have a clear 's' sound." },
+            { "text": "go", "feedback": "'go' does not have a clear 's' sound." },
+            { "text": "to", "feedback": "'to' does not have a clear 's' sound." },
+            { "text": "while", "feedback": "'while' does not have a clear 's' sound." },
+            { "text": "you're", "feedback": "'you're' does not have a clear 's' sound." },
+            { "text": "still", "feedback": "'still' has a clear 's' sound." },
+            { "text": "close", "feedback": "'close' has a clear 's' sound." },
+            { "text": "to", "feedback": "'to' does not have a clear 's' sound." },
+            { "text": "home.", "feedback": "'home.' does not have a clear 's' sound." }
+          ],
+          "keyWords": [
+            "still",
+            "close"
+          ]
         },
         {
           "type": "multipleChoice",

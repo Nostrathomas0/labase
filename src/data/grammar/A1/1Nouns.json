@@ -10,38 +10,50 @@
         },
         {
           "type": "click",
+          "layout": "horizontal",
           "instructions": [
-            {"text": "A noun is anybody, anything, any place or anyone you can name. ", "textStyle": "text"}, 
-            {"text": "Michael Jordon, a dog, France, your hands ", "textStyle": "italic"},
-            {"text": "You can add articles like", "textStyle": "text", "newLine":true},
-            {"text": " a / an ", "textStyle": "bold"},
+            {"text": "A noun is anyone, anything or any place. ", "textStyle": "text"}, 
+            {"text": " Michael Jordon, dog, France, hands ", "textStyle": "italic"},
+            {"text": " are all nouns. You can add articles like", "textStyle": "text", "newLine":true},
+            {"text": " a ", "textStyle": "bold"},
+            {"text": "or ", "textStyle": "text"},
+            {"text": "an ", "textStyle": "bold"},
             {"text": "to make a noun phrase, but don't add articles to names or pronouns.", "textStyle": "text"},
-            {"text": "There are much fewer pronouns. These are them : ", "textStyle": "text", "newLine": true},   
+            {"text": "There are much fewer pronouns. These are them : ", "textStyle": "text", "newParagraph": true},   
             {"text": "I & me ", "textStyle": "bold", "newLine":true},
-            {"text": " for the person speaking, 1st person singular ", "textStyle": "text" },
-            {"text": "you ", "textStyle": "bold"},
+            {"text": " for the person speaking; 1st person singular. ", "textStyle": "text" },
+            {"text": "you ", "textStyle": "bold", "newLine":true},
             {"text": " for the person or people you're speaking to,  ", "textStyle": "text"},
-            {"text": "he & him ", "textStyle":"bold"},
+            {"text": "he & him ", "textStyle":"bold", "newLine":true},
             {"text": " and ", "textStyle": "text"},
             {"text": "she & her ","textStyle": "bold"},
-            {"text": " are for men and women,  ", "textStyle": "text" },
-            {"text": "it ", "textStyle":"bold"},
-            {"text": " is for things, ", "textStyle": "text"},
-            {"text": "we & us ", "textStyle":"bold"},
-            {"text": " are for you and me together, 1st person plural.", "textStyle":"text"},
-            {"text": " 3rd person plural ", "textStyle": "text"},
-            {"text": "they & them ", "textStyle": "bold"},
-            {"text": " is for 2+ people or things, neutral or otherwise unspecified."},
+            {"text": " are for men and women, respectively  ", "textStyle": "text" },
+            {"text": "it ", "textStyle":"bold", "newLine":true},
+            {"text": " is for objects and other things, ", "textStyle": "text"},
+            {"text": "we & us ", "textStyle":"bold", "newLine":true},
+            {"text": " are for you and I together; 1st person plural.", "textStyle":"text"},
+            {"text": "they & them ", "textStyle": "bold", "newLine":true},
+            {"text": " is for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.", "textStyle":"text"},
             {"text": " Click on the pronouns",  "textStyle":"italic", "newParagraph":true }
         ],
-          "words": ["I ", "love ", "you ", ". ", "You ", "love ", "me ","."],
-          "keyWords": ["I ", "you ", "me "]
+          "words": [
+            {"text":"What ", "feedback":"No, 'what' is a question word."},
+            {"text":"do ", "feedback":"No, 'do' is an aux. verb."},
+            {"text":"you ", "feedback": "Yes, 'you' is a pronoun."},
+            {"text":"think ", "feedback":"No, 'think' is a verb."},
+            {"text":"of ", "feedback":"No, 'of' is a preposition."},
+            {"text":"me ", "feedback": "Yes, 'me' is a pronoun,"},
+            {"text":"and", "feedback": "No, 'and' is a conjunction"},
+            {"text":"my", "feedback": "No, 'my' is a possessive adjective."},
+            {"text":"dog?", "feedback": "No, 'dog' is a noun."}
+          ],
+          "keyWords": ["you ", "me "]
         },
         {
           "type": "multipleChoice",
           "question": "What are nouns?",
           "options": ["people", "places", "things", "all these"],
-          "correctAnswer": "all these"
+          "correctAnswer": ["people", "places", "things", "all these"]
         }
       ]
     },
@@ -54,6 +66,7 @@
         },
         {
           "type": "click",
+          "layout":"horizontal",
           "instructions": [
             {"text": " Noun phrases include an article and/or determiners:", "textStyle": "text", "newLine":true},
             {"text": " a ", "textStyle":"bold"},
@@ -69,7 +82,15 @@
             {"text": " for one, particular thing.", "textStyle":"text"},
             {"text": "Click on the correct articles", "textStyle":"italic", "newParagraph":true}
           ],
-          "words":["There ", "was ", "a ", "knock ", "at ", "the ", "door."],
+          "words":[ 
+          { "text": "There", "feedback": "'There' is not an article." },
+          { "text": "was", "feedback": "'was' is not an article." },
+          { "text": "a", "feedback": "'a' is an article." },
+          { "text": "knock", "feedback": "'knock' is not an article." },
+          { "text": "at", "feedback": "'at' is not an article." },
+          { "text": "the", "feedback": "'the' is an article." },
+          { "text": "door.", "feedback": "'door.' is not an article." }
+        ],
           "keyWords":[ "a", "the"]
         },
         {
@@ -115,6 +136,7 @@
         },
         {
           "type": "click",
+          "layout":"vertical",
           "instructions": [
               {"text": " Some nouns count, some don't. For example, we can say,","textStyle": "text"},
               {"text": " 2 Euros ", "textStyle":"italic"},
@@ -132,7 +154,18 @@
               {"text": " are all uncountable substances.", "textStyle":"text"},
               {"text": " Click on the plural nouns", "textStyle": "italic", "newParagraph":true}
             ],
-          "words": ["a camera,", "a skateboard,", "shoes,", "a hat,", "a camera lens,", "wheels,", "glasses,", "a phone,", "an apple,", "shoelaces"],
+          "words": [
+          { "text": "a camera,", "feedback": "'a camera' is not a plural noun." },
+          { "text": "a skateboard,", "feedback": "'a skateboard' is not a plural noun." },
+          { "text": "shoes,", "feedback": "'shoes' is a plural noun." },
+          { "text": "a hat,", "feedback": "'a hat' is not a plural noun." },
+          { "text": "a camera lens,", "feedback": "'a camera lens' is not a plural noun." },
+          { "text": "wheels,", "feedback": "'wheels' is a plural noun." },
+          { "text": "glasses,", "feedback": "'glasses' is a plural noun." },
+          { "text": "a phone,", "feedback": "'a phone' is not a plural noun." },
+          { "text": "an apple,", "feedback": "'an apple' is not a plural noun." },
+          { "text": "shoelaces", "feedback": "'shoelaces' is a plural noun." }
+        ],
           "keyWords": ["shoes", "glasses", "shoelaces", "wheels"]
         }
       
@@ -238,6 +271,7 @@
         },
         {
           "type": "click",
+          "layout":"vertical",
           "instructions": [
               {"text": " Objects are the pronouns and noun phrases that follow verbs.", "textStyle": "text"},
               {"text": " two moneys. ", "textStyle": "italic"},
@@ -251,10 +285,27 @@
               {"text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water. Materials like,", "textStyle": "text"},
               {"text": " coffee, gasoline, wood, steel, carbon", "textStyle": "bold"},
               {"text": " are all uncountable substances.", "textStyle":"text"},
-              {"text": " Click on the plural nouns", "textStyle": "italic", "newParagraph":true}
+              {"text": " Click on the countable nouns", "textStyle": "italic", "newParagraph":true}
             ],
-          "words": ["a camera,", "a skateboard,", "shoes,", "a hat,", "a camera lens,", "wheels,", "glasses,", "a phone,", "an apple,", "shoelaces"],
-          "keyWords": ["shoes", "glasses", "shoelaces", "wheels"]
+            "words": [
+              { "text": "milk", "feedback": "'milk' is not a countable noun." },
+              { "text": "apple", "feedback": "'apple' is a countable noun." },
+              { "text": "water", "feedback": "'water' is not a countable noun." },
+              { "text": "book", "feedback": "'book' is a countable noun." },
+              { "text": "bread", "feedback": "'bread' is not a countable noun." },
+              { "text": "egg", "feedback": "'egg' is a countable noun." },
+              { "text": "sugar", "feedback": "'sugar' is not a countable noun." },
+              { "text": "car", "feedback": "'car' is a countable noun." },
+              { "text": "rice", "feedback": "'rice' is not a countable noun." },
+              { "text": "pen", "feedback": "'pen' is a countable noun." }
+            ],
+            "keyWords": [
+              "apple",
+              "book",
+              "egg",
+              "car",
+              "pen"
+            ]
         },
         {
           "type": "multipleChoice",

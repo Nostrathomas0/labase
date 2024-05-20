@@ -10,6 +10,7 @@
         },
         {
           "type": "click",
+          "layout":"horizontal",
           "instructions": [
             
             {"text": "Verbs are words that tell us what someone or something is doing. They are ", "textStyle": "text"},
@@ -32,10 +33,17 @@
             {"text": "(am/is/are) ", "textStyle": "italic"},
             {"text": "before the main verb ", "textStyle": "text"},
             {"text": "-ing.", "textStyle": "italic"},
-            {"text": "Click on the action verb below", "textStyle": "italic", "newParagraph":true}
+            {"text": "Click on the main verb below", "textStyle": "italic", "newParagraph":true}
           ],
-          "words": ["We ", "are ", "filming ", "a ", "movie."],
-          "keyWords": ["filming"]
+          "words": [
+            {"text":"We ", "feedback":"Incorrect, 'we' is a pronoun"},
+            {"text":"are ","feedback":"Incorrect, 'are' is an auxilliary verb"},
+            {"text":"filming", "feedback":"Correct, 'filming' is the main verb"},
+            {"text":"a ", "feedback":"Incorrect, 'a' is an indefinite article"},
+            {"text":"movie.", "feedback":"Incorrect, 'movie' is a noun"}
+          ],
+          "keyWords":
+           ["filming"]
         }
       ]
     },
@@ -63,6 +71,7 @@
         },
         {
           "type": "click",
+          "layout":"horizontal",
           "instructions": [
             {"text": "Present Simple ", "textStyle":"bold"},
             {"text": "describes everyday activities and how often you do them. ", "textStyle":"text"},
@@ -71,8 +80,33 @@
             {"text": "Use it for actions and events that happen again and again", "textStyle": "text", "newLine":true},
             {"text": "Click on the present simple verbs. Then type the correct ending on the verb.", "textStyle":"italic", "newParagraph":true}
           ],
-          "words": ["I", "'m", "going", "to ", "the ", "museum ", "on ", "Saturday. ", "Your ", "girlfriend ", "lives ", "close ", "to ", "there ", "right?", "Do ", "you ", "two ", "want ", "to ", "come?"],
-          "keyWords": ["lives", "want"]
+          "words": [
+            { "text": "I", "feedback": "'I' is not a present simple verb." },
+            { "text": "'m", "feedback": "'m' is not a present simple verb." },
+            { "text": "going", "feedback": "'going' is not a present simple verb." },
+            { "text": "to", "feedback": "'to' is not a present simple verb." },
+            { "text": "the", "feedback": "'the' is not a present simple verb." },
+            { "text": "museum", "feedback": "'museum' is not a present simple verb." },
+            { "text": "on", "feedback": "'on' is not a present simple verb." },
+            { "text": "Saturday.", "feedback": "'Saturday.' is not a present simple verb." },
+            { "text": "Your", "feedback": "'Your' is not a present simple verb." },
+            { "text": "girlfriend", "feedback": "'girlfriend' is not a present simple verb." },
+            { "text": "lives", "feedback": "'lives' is a present simple verb." },
+            { "text": "close", "feedback": "'close' is not a present simple verb." },
+            { "text": "to", "feedback": "'to' is not a present simple verb." },
+            { "text": "there", "feedback": "'there' is not a present simple verb." },
+            { "text": "right?", "feedback": "'right?' is not a present simple verb." },
+            { "text": "Do", "feedback": "'Do' is not a present simple verb." },
+            { "text": "you", "feedback": "'you' is not a present simple verb." },
+            { "text": "two", "feedback": "'two' is not a present simple verb." },
+            { "text": "want", "feedback": "'want' is a present simple verb." },
+            { "text": "to", "feedback": "'to' is not a present simple verb." },
+            { "text": "come?", "feedback": "'come?' is not a present simple verb." }
+          ],
+          "keyWords": [
+            "lives",
+            "want"
+          ]
         },
         {
           "type": "multipleChoice",
@@ -133,6 +167,7 @@
         },
         {
           "type": "click",
+          "layout":"horizontal",
           "instructions": [
             {"text": "Verb 2", "textStyle":"underline"},
             {"text": " is the form of past simple tense. The regular form adds ", "textStyle":"text"},
@@ -182,8 +217,28 @@
             {"text": " ate", "textStyle": "bold"},
             {"text": "click the verb2s", "textStyle":"text", "newParagraph":true}
           ],
-          "words": ["This", "morning", "I", "gave", "John", " a", "drink", "and", "he", "drank", "it", "before", " we", "went", "swimming." ],
-          "keyWords": ["gave", "drank", "went"]
+          "words": [
+            { "text": "This", "feedback": "'This' is not a past simple verb." },
+            { "text": "morning", "feedback": "'morning' is not a past simple verb." },
+            { "text": "I", "feedback": "'I' is not a past simple verb." },
+            { "text": "gave", "feedback": "'gave' is a past simple verb." },
+            { "text": "John", "feedback": "'John' is not a past simple verb." },
+            { "text": "a", "feedback": "'a' is not a past simple verb." },
+            { "text": "drink", "feedback": "'drink' is not a past simple verb." },
+            { "text": "and", "feedback": "'and' is not a past simple verb." },
+            { "text": "he", "feedback": "'he' is not a past simple verb." },
+            { "text": "drank", "feedback": "'drank' is a past simple verb." },
+            { "text": "it", "feedback": "'it' is not a past simple verb." },
+            { "text": "before", "feedback": "'before' is not a past simple verb." },
+            { "text": "we", "feedback": "'we' is not a past simple verb." },
+            { "text": "went", "feedback": "'went' is a past simple verb." },
+            { "text": "swimming.", "feedback": "'swimming.' is not a past simple verb." }
+          ],
+          "keyWords": [
+            "gave",
+            "drank",
+            "went"
+          ]
         },
         {
           "type": "multipleChoice",
@@ -199,14 +254,6 @@
           "type": "imageDisplay",
           "imagePath": "A1/3Verbs/6.png",
           "altText": "V. go, stay, play, wait, have, walk, work"
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {"text": "Click the verb 2s below.", "textStyle": "italic"}
-          ],
-          "words": ["come", "became", "eaten", "knew", "began", "find", "saw"],
-          "keyWords": ["became", "knew", "began", "saw"]
         },
         {
           "type": "multipleChoice",
@@ -243,13 +290,17 @@
         },
         {
           "type": "click",
+          "layout":"horizontal",
           "instructions": [
             {"text": "State verbs do not have an 'ing' form. They describe facts, preferences stable truths.", "textStyle":"text"},
             {"text": "Is this grammar right?", "textStyle":"text", "newLine":true},
             {"text": "I'm liking eating MacDonalds?.", "textStyle": "italic", "newLine":true}
           ],
-          "words": ["right", "wrong"],
-          "keyWords": ["wrong"]
+          "words": [
+            {"text":"right",   "feedback": "No, it's not right because like is a state verb. " },
+            {"text":"wrong", "feedback": "Yes, it's wrong because when we say 'liking' or 'loving' we're using these as actions, which sounds like clicking the 'like' button or something else."}
+          ],
+            "keyWords": ["wrong"]
         }
       ]
     },
