@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Instructions from './Instructions'; // Ensure you import Instructions
+import Instructions from './Instructions';
 
 const ClickActivity = ({ instructions = [], words = [], keyWords = [], onAnswer, layout = 'horizontal' }) => {
   const [clickedWords, setClickedWords] = useState([]);
   const [feedback, setFeedback] = useState('');
 
+  // Reset state when words or instructions change
   useEffect(() => {
     setClickedWords([]);
     setFeedback('');
@@ -21,14 +22,13 @@ const ClickActivity = ({ instructions = [], words = [], keyWords = [], onAnswer,
     onAnswer(isCorrect);
 
     setFeedback(word.feedback || 'No feedback available');
-
     setClickedWords((prevClickedWords) => [...prevClickedWords, word.text]);
   };
 
   return (
     <div>
       <Instructions instructions={instructions} />
-      <blockquote className={`words-container ${layout}`}>
+      <blockquote className={`blockquote words-container ${layout}`}>
         {words.map((word, index) => {
           if (!word || !word.text) {
             console.error('Invalid word in words array:', word);
@@ -49,8 +49,8 @@ const ClickActivity = ({ instructions = [], words = [], keyWords = [], onAnswer,
             </span>
           );
         })}
+        {feedback && <div className="feedback">{feedback}</div>}
       </blockquote>
-      {feedback && <div className="feedback">{feedback}</div>}
     </div>
   );
 };

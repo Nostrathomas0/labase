@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const WordBankActivity = ({ paragraph, wordBank, correctAnswers }) => {
   const [userSelections, setUserSelections] = useState([]);
 
+  useEffect(() => {
+    setUserSelections([]);
+  }, [paragraph, wordBank, correctAnswers]);
+
   const handleWordSelect = (word) => {
     if (!userSelections.includes(word)) {
-      setUserSelections(prevSelections => [...prevSelections, word]);
+      setUserSelections((prevSelections) => [...prevSelections, word]);
     }
   };
 
