@@ -5,11 +5,13 @@ import MultipleChoice from './common/MultipleChoice';
 import GapFill from './common/GapFill';
 import ClickActivity from './common/ClickActivity';
 import WordBankActivity from './common/WordBankActivity';
-import Instructions from './common/Instructions';
+
 
 function GrammarTopic({ contentData }) {
+  console.log('Rendering GrammarTopic with contentData:', contentData);
+
   if (!contentData || contentData.length === 0) {
-    return <div>._.</div>;
+    return <div>No content available.</div>;
   }
 
   const handleAnswer = (isCorrect) => {
@@ -19,7 +21,6 @@ function GrammarTopic({ contentData }) {
   return (
     <div className="Grammar">
       {contentData.map((question, questionIndex) => {
-        // Log the question and its index before the switch statement
         console.log(`Processing Question ${questionIndex}:`, question);
 
         const layout = question.layout || 'horizontal'; // Default to horizontal if layout is not specified
@@ -37,7 +38,7 @@ function GrammarTopic({ contentData }) {
           case 'multipleChoice':
             return (
               <MultipleChoice 
-                key={`mc-${questionIndex}`} 
+                key={`mc-${questionIndex}-${question.question}`} // Unique key for multiple choice
                 question={question.question} 
                 options={question.options} 
                 correctAnswer={question.correctAnswer} 
@@ -48,7 +49,7 @@ function GrammarTopic({ contentData }) {
           case 'gapFill':
             return (
               <GapFill 
-                key={`gap-${questionIndex}`} 
+                key={`gap-${questionIndex}-${question.template}`} // Unique key for gap fill
                 template={question.template} 
                 correctAnswers={question.correctAnswers} 
                 onAnswer={handleAnswer} 
@@ -58,13 +59,14 @@ function GrammarTopic({ contentData }) {
           case 'click':
             return (
               <div key={`click-${questionIndex}`}>
-                <Instructions instructions={question.instructions || []} />
+               
                 <ClickActivity 
+                  key={`click-${questionIndex}-${question.instructions[0]?.text}`} // Unique key for click activity
                   instructions={question.instructions || []}
                   words={question.words || []} 
                   keyWords={question.keyWords || []} 
                   onAnswer={handleAnswer} 
-                  layout={layout} // Pass layout prop
+                  layout={layout} 
                 />
               </div>
             );
@@ -72,7 +74,7 @@ function GrammarTopic({ contentData }) {
           case 'wordBank':
             return (
               <WordBankActivity 
-                key={`wordbank-${questionIndex}`} 
+                key={`wordbank-${questionIndex}-${question.paragraph}`} // Unique key for word bank
                 paragraph={question.paragraph} 
                 wordBank={question.wordBank} 
                 correctAnswers={question.correctAnswers} 

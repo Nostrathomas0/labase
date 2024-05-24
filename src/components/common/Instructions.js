@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Instructions = ({ instructions = [] }) => {
+  console.log('Rendering Instructions with instructions:', instructions);
+
   return (
     <div className='instructions'>
       {instructions.map((instruction, index) => {
@@ -12,6 +14,7 @@ const Instructions = ({ instructions = [] }) => {
             <Component className={instruction.textStyle || 'default'}>
               {instruction.text}
             </Component>
+            {instruction.newParagraph && <br />}
           </React.Fragment>
         );
       })}

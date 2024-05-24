@@ -12,48 +12,160 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {"text": "A noun is anyone, anything or any place. ", "textStyle": "text"}, 
-            {"text": " Michael Jordon, dog, France, hands ", "textStyle": "italic"},
-            {"text": " are all nouns. You can add articles like", "textStyle": "text", "newLine":true},
-            {"text": " a ", "textStyle": "bold"},
-            {"text": "or ", "textStyle": "text"},
-            {"text": "an ", "textStyle": "bold"},
-            {"text": "to make a noun phrase, but don't add articles to names or pronouns.", "textStyle": "text"},
-            {"text": "There are much fewer pronouns. These are them : ", "textStyle": "text", "newParagraph": true},   
-            {"text": "I & me ", "textStyle": "bold", "newLine":true},
-            {"text": " for the person speaking; 1st person singular. ", "textStyle": "text" },
-            {"text": "you ", "textStyle": "bold", "newLine":true},
-            {"text": " for the person or people you're speaking to,  ", "textStyle": "text"},
-            {"text": "he & him ", "textStyle":"bold", "newLine":true},
-            {"text": " and ", "textStyle": "text"},
-            {"text": "she & her ","textStyle": "bold"},
-            {"text": " are for men and women, respectively  ", "textStyle": "text" },
-            {"text": "it ", "textStyle":"bold", "newLine":true},
-            {"text": " is for objects and other things, ", "textStyle": "text"},
-            {"text": "we & us ", "textStyle":"bold", "newLine":true},
-            {"text": " are for you and I together; 1st person plural.", "textStyle":"text"},
-            {"text": "they & them ", "textStyle": "bold", "newLine":true},
-            {"text": " is for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.", "textStyle":"text"},
-            {"text": " Click on the pronouns",  "textStyle":"italic", "newParagraph":true }
-        ],
-          "words": [
-            {"text":"What ", "feedback":"No, 'what' is a question word."},
-            {"text":"do ", "feedback":"No, 'do' is an aux. verb."},
-            {"text":"you ", "feedback": "Yes, 'you' is a pronoun."},
-            {"text":"think ", "feedback":"No, 'think' is a verb."},
-            {"text":"of ", "feedback":"No, 'of' is a preposition."},
-            {"text":"me ", "feedback": "Yes, 'me' is a pronoun,"},
-            {"text":"and", "feedback": "No, 'and' is a conjunction"},
-            {"text":"my", "feedback": "No, 'my' is a possessive adjective."},
-            {"text":"dog?", "feedback": "No, 'dog' is a noun."}
+            {
+              "text": "A noun is anyone, anything or any place. ",
+              "textStyle": "text"
+            },
+            {
+              "text": " Michael Jordon, dog, France, hands ",
+              "textStyle": "italic"
+            },
+            {
+              "text": " are all nouns. You can add articles like",
+              "textStyle": "text"
+            },
+            {
+              "text": " a ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "or ",
+              "textStyle": "text"
+            },
+            {
+              "text": "an ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "to make a noun phrase, but don't add articles to names or pronouns.",
+              "textStyle": "text"
+            },
+            {
+              "text": "There are much fewer pronouns. There are a few different kinds. These are personal pronouns : ",
+              "textStyle": "text",
+              "newLine": true
+            },
+            {
+              "text": "I & me ",
+              "textStyle": "bold",
+              "newLine": true
+            },
+            {
+              "text": " for the person speaking; 1st person singular. ",
+              "textStyle": "text"
+            },
+            {
+              "text": "you ",
+              "textStyle": "bold",
+              "newLine": true
+            },
+            {
+              "text": " for the person or people you're speaking to,  ",
+              "textStyle": "text"
+            },
+            {
+              "text": "he & him ",
+              "textStyle": "bold",
+              "newLine": true
+            },
+            {
+              "text": " and ",
+              "textStyle": "text"
+            },
+            {
+              "text": "she & her ",
+              "textStyle": "bold"
+            },
+            {
+              "text": " are for men and women, respectively  ",
+              "textStyle": "text"
+            },
+            {
+              "text": "it ",
+              "textStyle": "bold",
+              "newLine": true
+            },
+            {
+              "text": " is for objects and other things, ",
+              "textStyle": "text"
+            },
+            {
+              "text": "we & us ",
+              "textStyle": "bold",
+              "newLine": true
+            },
+            {
+              "text": " are for you and I together; 1st person plural.",
+              "textStyle": "text"
+            },
+            {
+              "text": "they & them ",
+              "textStyle": "bold",
+              "newLine": true
+            },
+            {
+              "text": " is for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.",
+              "textStyle": "text"
+            },
+            {
+              "text": " Click on the pronouns in the sentence below.",
+              "textStyle": "italic",
+              "newParagraph": true
+            }
           ],
-          "keyWords": ["you ", "me "]
+          "words": [
+            {
+              "text": "What ",
+              "feedback": "No, 'what' is a question word."
+            },
+            {
+              "text": "do ",
+              "feedback": "No, 'do' is an aux. verb."
+            },
+            {
+              "text": "you ",
+              "feedback": "Yes, 'you' is a pronoun."
+            },
+            {
+              "text": "think ",
+              "feedback": "No, 'think' is a verb."
+            },
+            {
+              "text": "of ",
+              "feedback": "No, 'of' is a preposition."
+            },
+            {
+              "text": "me ",
+              "feedback": "Yes, 'me' is a pronoun,"
+            },
+            {
+              "text": "and",
+              "feedback": "No, 'and' is a conjunction"
+            },
+            {
+              "text": "my",
+              "feedback": "No, 'my' is a possessive adjective."
+            },
+            {
+              "text": "dog?",
+              "feedback": "No, 'dog' is a noun."
+            }
+          ],
+          "keyWords": [
+            "you ",
+            "me "
+          ]
         },
         {
           "type": "multipleChoice",
           "question": "What are nouns?",
-          "options": ["people", "places", "things", "all these"],
-          "correctAnswer": ["people", "places", "things", "all these"]
+          "options": [
+            "just people",
+            "only places",
+            "some things",
+            "all people, places and things"
+          ],
+          "correctAnswer": "all people, places and things"
         }
       ]
     },
@@ -66,69 +178,154 @@
         },
         {
           "type": "click",
-          "layout":"horizontal",
+          "layout": "horizontal",
           "instructions": [
-            {"text": " Noun phrases include an article and/or determiners:", "textStyle": "text", "newLine":true},
-            {"text": " a ", "textStyle":"bold"},
-            {"text": "potato,", "textStyle":"text"},
-            {"text": " a lot of ", "textStyle":"bold"},
-            {"text": "chips", "textStyle":"text"},
-            {"text": ", some ", "textStyle":"bold"}, 
-            {"text": "coffee .", "textStyle": "italic"},
-            {"text": "Many noun phrases start with articles: ", "textStyle":"text", "newLine":true},
-            {"text": " a / an ", "textStyle":"bold"},
-            {"text": " for anything, and ", "textStyle": "text"},
-            {"text": " the ", "textStyle": "bold"},
-            {"text": " for one, particular thing.", "textStyle":"text"},
-            {"text": "Click on the correct articles", "textStyle":"italic", "newParagraph":true}
+            {
+              "text": " Noun phrases include an article and/or determiners:",
+              "textStyle": "text",
+              "newLine": true
+            },
+            {
+              "text": " a ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "potato,",
+              "textStyle": "text"
+            },
+            {
+              "text": " a lot of ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "chips",
+              "textStyle": "text"
+            },
+            {
+              "text": ", some ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "coffee .",
+              "textStyle": "italic"
+            },
+            {
+              "text": "Many noun phrases start with articles: ",
+              "textStyle": "text",
+              "newLine": true
+            },
+            {
+              "text": " a / an ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "or ",
+              "textStyle": "text"
+            },
+            {
+              "text": " the ",
+              "textStyle": "bold"
+            },
+            {
+              "text": ". We generally use",
+              "textStyle": "text"
+            },
+            {
+              "text": ". We generally use",
+              "textStyle": "text"
+            },
+            {
+              "text": "Click on the articles in the sentence below.",
+              "textStyle": "italic",
+              "newParagraph": true
+            }
           ],
-          "words":[ 
-          { "text": "There", "feedback": "'There' is not an article." },
-          { "text": "was", "feedback": "'was' is not an article." },
-          { "text": "a", "feedback": "'a' is an article." },
-          { "text": "knock", "feedback": "'knock' is not an article." },
-          { "text": "at", "feedback": "'at' is not an article." },
-          { "text": "the", "feedback": "'the' is an article." },
-          { "text": "door.", "feedback": "'door.' is not an article." }
-        ],
-          "keyWords":[ "a", "the"]
+          "words": [
+            {
+              "text": "There",
+              "feedback": "'There' is not an article."
+            },
+            {
+              "text": "was",
+              "feedback": "'was' is not an article."
+            },
+            {
+              "text": "a",
+              "feedback": "'a' is an article."
+            },
+            {
+              "text": "knock",
+              "feedback": "'knock' is not an article."
+            },
+            {
+              "text": "at",
+              "feedback": "'at' is not an article."
+            },
+            {
+              "text": "the",
+              "feedback": "'the' is an article."
+            },
+            {
+              "text": "door.",
+              "feedback": "'door.' is not an article."
+            }
+          ],
+          "keyWords": [
+            "a",
+            "the"
+          ]
         },
         {
           "type": "multipleChoice",
           "question": "_____ apple.",
-          "options": ["a", "an"],
+          "options": [
+            "a",
+            "an"
+          ],
           "correctAnswer": "an"
         },
         {
           "type": "multipleChoice",
           "question": "_____ banana.",
-          "options": ["a", "an"],
+          "options": [
+            "a",
+            "an"
+          ],
           "correctAnswer": "a"
         },
         {
           "type": "multipleChoice",
           "question": "_____ opportunity",
-          "options": ["a", "an"],
+          "options": [
+            "a",
+            "an"
+          ],
           "correctAnswer": "an"
         },
         {
-          "type":"multipleChoice",
+          "type": "multipleChoice",
           "question": "Someone asked me for _____ euro.",
-          "options": ["a", "an", "the"],
+          "options": [
+            "a",
+            "an",
+            "the"
+          ],
           "correctAnswer": "a"
         },
         {
-          "type":"multipleChoice",
+          "type": "multipleChoice",
           "question": "My shoes are on _____ floor",
-          "options": ["a", "an", "the"],
+          "options": [
+            "a",
+            "an",
+            "the"
+          ],
           "correctAnswer": "the"
         }
-
       ]
     },
     {
       "questions": [
-        
         {
           "type": "imageDisplay",
           "imagePath": "A1/1Nouns/3.png",
@@ -136,209 +333,493 @@
         },
         {
           "type": "click",
-          "layout":"vertical",
+          "layout": "vertical",
           "instructions": [
-              {"text": " Some nouns count, some don't. For example, we can say,","textStyle": "text"},
-              {"text": " 2 Euros ", "textStyle":"italic"},
-              {"text": " but  can't say ", "textStyle": "text"},
-              {"text": " two moneys. ", "textStyle": "italic"},
-              {"text": " Money doesn't have a plural form. And neither has ", "textStyle": "text"},
-              {"text": " information. ", "textStyle": "bold"},
-              {"text": " Countable nouns are words that you can count.  ", "textStyle": "text"},
-              {"text": " 1 drink ", "textStyle": "italic"},
-              {"text": " is fine to say. You can even say ", "textStyle": "text"},
-              {"text": " one water ", "textStyle": "italic"},
-              {"text": " to order at a bar, but water is a liquid so it's uncountable.", "textStyle": "text"},
-              {"text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water.", "textStyle": "text"},
-              {"text": " coffee, gasoline, wood, steel, carbon", "textStyle": "bold"},
-              {"text": " are all uncountable substances.", "textStyle":"text"},
-              {"text": " Click on the plural nouns", "textStyle": "italic", "newParagraph":true}
-            ],
+            {
+              "text": " Some nouns count, some don't. For example, we can say,",
+              "textStyle": "text"
+            },
+            {
+              "text": " 2 Euros ",
+              "textStyle": "italic"
+            },
+            {
+              "text": " but  can't say ",
+              "textStyle": "text"
+            },
+            {
+              "text": " two moneys. ",
+              "textStyle": "italic"
+            },
+            {
+              "text": " Money doesn't have a plural form. And neither has ",
+              "textStyle": "text"
+            },
+            {
+              "text": " information. ",
+              "textStyle": "bold"
+            },
+            {
+              "text": " Countable nouns are words that you can count.  ",
+              "textStyle": "text"
+            },
+            {
+              "text": " 1 drink ",
+              "textStyle": "italic"
+            },
+            {
+              "text": " is fine to say. You can even say ",
+              "textStyle": "text"
+            },
+            {
+              "text": " one water ",
+              "textStyle": "italic"
+            },
+            {
+              "text": " to order at a bar, but water is a liquid so it's uncountable.",
+              "textStyle": "text"
+            },
+            {
+              "text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water.",
+              "textStyle": "text"
+            },
+            {
+              "text": " coffee, gasoline, wood, steel, carbon",
+              "textStyle": "bold"
+            },
+            {
+              "text": " are all uncountable substances.",
+              "textStyle": "text"
+            },
+            {
+              "text": " Click on the countable nouns",
+              "textStyle": "italic",
+              "newParagraph": true
+            }
+          ],
           "words": [
-          { "text": "a camera,", "feedback": "'a camera' is not a plural noun." },
-          { "text": "a skateboard,", "feedback": "'a skateboard' is not a plural noun." },
-          { "text": "shoes,", "feedback": "'shoes' is a plural noun." },
-          { "text": "a hat,", "feedback": "'a hat' is not a plural noun." },
-          { "text": "a camera lens,", "feedback": "'a camera lens' is not a plural noun." },
-          { "text": "wheels,", "feedback": "'wheels' is a plural noun." },
-          { "text": "glasses,", "feedback": "'glasses' is a plural noun." },
-          { "text": "a phone,", "feedback": "'a phone' is not a plural noun." },
-          { "text": "an apple,", "feedback": "'an apple' is not a plural noun." },
-          { "text": "shoelaces", "feedback": "'shoelaces' is a plural noun." }
-        ],
-          "keyWords": ["shoes", "glasses", "shoelaces", "wheels"]
-        }
-      
-    ]
-  },
-  {
-    "questions": [
-        {
-          "type": "imageDisplay",
-          "imagePath": "A1/1Nouns/4.png",
-          "altText": "Image description for accessibility"
+            {
+              "text": "milk",
+              "feedback": "'milk' is a liquid, so it's uncountable."
+            },
+            {
+              "text": "apple",
+              "feedback": "'apple' is a countable noun."
+            },
+            {
+              "text": "water",
+              "feedback": "'water' is not a countable noun."
+            },
+            {
+              "text": "book",
+              "feedback": "'book' is a countable noun."
+            },
+            {
+              "text": "bread",
+              "feedback": "'bread' is not a countable noun. A loaf of bread is countable."
+            },
+            {
+              "text": "egg",
+              "feedback": "'egg' is a countable noun."
+            },
+            {
+              "text": "sugar",
+              "feedback": "'sugar' is not a countable noun."
+            },
+            {
+              "text": "car",
+              "feedback": "'car' is a countable noun."
+            },
+            {
+              "text": "rice",
+              "feedback": "'rice' is not a countable noun. You can count grains of rice."
+            },
+            {
+              "text": "pen",
+              "feedback": "'pen' is a countable noun."
+            }
+          ],
+          "keyWords": [
+            "apple",
+            "book",
+            "egg",
+            "car",
+            "pen"
+          ]
         },
         {
-          "type": "multipleChoice",
-          "question": "Choose the correct plural form of 'city':",
-          "options": ["citys", "cites", "cities"],
-          "correctAnswer": "cities"
+          "questions": [
+            {
+              "type": "imageDisplay",
+              "imagePath": "A1/1Nouns/4.png",
+              "altText": "Image description for accessibility"
+            },
+            {
+              "type": "multipleChoice",
+              "question": "Choose the correct plural form of 'city':",
+              "options": [
+                "citys",
+                "cites",
+                "cities"
+              ],
+              "correctAnswer": "cities"
+            },
+            {
+              "type": "multipleChoice",
+              "question": "What is the correct plural form of 'knife':",
+              "options": [
+                "knifes",
+                "knives",
+                "knifees"
+              ],
+              "correctAnswer": "knives"
+            },
+            {
+              "type": "multipleChoice",
+              "question": "And what about the plural form of 'box'?",
+              "options": [
+                "boxs",
+                "box",
+                "boxes",
+                "boxies"
+              ],
+              "correctAnswer": "boxes"
+            },
+            {
+              "type": "gapFill",
+              "template": " There are four _____ (person) playing in the park.",
+              "correctAnswers": [
+                "people"
+              ]
+            },
+            {
+              "type": "gapFill",
+              "template": "Put up some _____(shelf) on the wall for the home phone and wifi router.",
+              "correctAnswers": [
+                "shelves"
+              ]
+            }
+          ]
         },
         {
-          "type": "multipleChoice",
-          "question": "What is the correct plural form of 'knife':",
-          "options": ["knifes", "knives", "knifees"],
-          "correctAnswer": "knives"
+          "questions": [
+            {
+              "type": "imageDisplay",
+              "imagePath": "A1/1Nouns/5.png",
+              "altText": "Description for Image 4"
+            },
+            {
+              "type": "wordBank",
+              "paragraph": "George says to his sister before the camping trip. 'We need to make sure we have enough ______ for everyone so we can drink.' George's sister suggests bringing ______ because they are easy to pack and won't spoil. Another points out that they will need a lot of ______ to keep the campfire going all night. They decide to check if the camping site provides ______ so they can cook meals easily. They also discuss the need for a good supply of ______ to keep their area clean. Lastly, everyone agrees not to forget ______, as they are crucial for their night hikes.",
+              "wordBank": [
+                "stoves",
+                "flashlights",
+                "water",
+                "apples",
+                "soap",
+                "wood"
+              ],
+              "correctAnswers": [
+                "water",
+                "apples",
+                "wood",
+                "stoves",
+                "soap",
+                "flashlights"
+              ]
+            }
+          ]
         },
         {
-          "type": "multipleChoice",
-          "question": "And what about the plural form of 'box'?",
-          "options": ["boxs", "box", "boxes", "boxies"],
-          "correctAnswer": "boxes"
+          "questions": [
+            {
+              "type": "imageDisplay",
+              "imagePath": "A1/1Nouns/6.png",
+              "altText": "Subject pronouns"
+            },
+            {
+              "type": "multipleChoice",
+              "question": "Which subject pronoun is for talking about yourself?",
+              "options": [
+                "i",
+                "She",
+                "I",
+                "They"
+              ],
+              "correctAnswer": "I"
+            },
+            {
+              "type": "multipleChoice",
+              "question": "Which form of the verb 'be' to use with 'I'?",
+              "options": [
+                "is",
+                "am",
+                "are",
+                "be"
+              ],
+              "correctAnswer": "am"
+            },
+            {
+              "type": "multipleChoice",
+              "question": "Choose the correct sentence.",
+              "options": [
+                "She are a teacher.",
+                "He am a doctor.",
+                "They is students.",
+                "We are friends."
+              ],
+              "correctAnswer": "We are friends."
+            },
+            {
+              "type": "multipleChoice",
+              "question": "Which option completes the sentence correctly? 'The flowers _____ beautiful.'",
+              "options": [
+                "is",
+                "are",
+                "am",
+                "be"
+              ],
+              "correctAnswer": "are"
+            },
+            {
+              "type": "multipleChoice",
+              "question": "Select the correct sentence.",
+              "options": [
+                "You is happy.",
+                "They am sad.",
+                "He are tired.",
+                "She is excited."
+              ],
+              "correctAnswer": "She is excited."
+            }
+          ]
         },
         {
-          "type": "gapFill",
-          "template": " There are four _____ (person) playing in the park.",
-          "correctAnswers": ["people"]
-        },
-        {
-          "type": "gapFill",
-          "template": "Put up some _____(shelf) on the wall for the home phone and wifi router.",
-          "correctAnswers": ["shelves"]
-        }
-      ]
-    },
-    {
-      "questions": [
-        {
-          "type": "imageDisplay",
-          "imagePath": "A1/1Nouns/5.png",
-          "altText": "Description for Image 4"
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "George says to his sister before the camping trip. 'We need to make sure we have enough ______ for everyone so we can drink.' George's sister suggests bringing ______ because they are easy to pack and won't spoil. Another points out that they will need a lot of ______ to keep the campfire going all night. They decide to check if the camping site provides ______ so they can cook meals easily. They also discuss the need for a good supply of ______ to keep their area clean. Lastly, everyone agrees not to forget ______, as they are crucial for their night hikes.",
-          "wordBank": ["stoves", "flashlights", "water", "apples", "soap", "wood"],
-          "correctAnswers": ["water", "apples", "wood", "stoves", "soap", "flashlights"]
-        }
-      ]
-    },
-    {
-      "questions": [
-        {
-          "type": "imageDisplay",
-          "imagePath": "A1/1Nouns/6.png",
-          "altText": "Subject pronouns"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "Which subject pronoun is for talking about yourself?",
-          "options": ["i", "She", "I", "They"],
-          "correctAnswer": "I"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "Which form of the verb 'be' to use with 'I'?",
-          "options": ["is", "am", "are", "be"],
-          "correctAnswer": "am"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "Choose the correct sentence.",
-          "options": ["She are a teacher.", "He am a doctor.", "They is students.", "We are friends."],
-          "correctAnswer": "We are friends."
-        },
-        {
-          "type": "multipleChoice",
-          "question": "Which option completes the sentence correctly? 'The flowers _____ beautiful.'",
-          "options": ["is", "are", "am", "be"],
-          "correctAnswer": "are"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "Select the correct sentence.",
-          "options": ["You is happy.", "They am sad.", "He are tired.", "She is excited."],
-          "correctAnswer": "She is excited."
-        }
-      ]
-    },
-    {
-      "questions": [
-        {
-          "type": "imageDisplay",
-          "imagePath": "A1/1Nouns/7.png",
-          "altText": "Description for Image 6"
-        },
-        {
-          "type": "click",
-          "layout":"vertical",
-          "instructions": [
-              {"text": " Objects are the pronouns and noun phrases that follow verbs.", "textStyle": "text"},
-              {"text": " two moneys. ", "textStyle": "italic"},
-              {"text": " Money is singular. It doesn't have a plural form. And neither has ", "textStyle": "text"},
-              {"text": " information. ", "textStyle": "bold"},
-              {"text": " Countable nouns are words that you can count.  ", "textStyle": "text"},
-              {"text": " 1 drink ", "textStyle": "italic"},
-              {"text": " is fine to say. You can even say ", "textStyle": "text"},
-              {"text": " one water ", "textStyle": "italic"},
-              {"text": " to order at a bar, but water is a liquid so it's uncountable.", "textStyle": "text"},
-              {"text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water. Materials like,", "textStyle": "text"},
-              {"text": " coffee, gasoline, wood, steel, carbon", "textStyle": "bold"},
-              {"text": " are all uncountable substances.", "textStyle":"text"},
-              {"text": " Click on the countable nouns", "textStyle": "italic", "newParagraph":true}
-            ],
-            "words": [
-              { "text": "milk", "feedback": "'milk' is not a countable noun." },
-              { "text": "apple", "feedback": "'apple' is a countable noun." },
-              { "text": "water", "feedback": "'water' is not a countable noun." },
-              { "text": "book", "feedback": "'book' is a countable noun." },
-              { "text": "bread", "feedback": "'bread' is not a countable noun." },
-              { "text": "egg", "feedback": "'egg' is a countable noun." },
-              { "text": "sugar", "feedback": "'sugar' is not a countable noun." },
-              { "text": "car", "feedback": "'car' is a countable noun." },
-              { "text": "rice", "feedback": "'rice' is not a countable noun." },
-              { "text": "pen", "feedback": "'pen' is a countable noun." }
-            ],
-            "keyWords": [
-              "apple",
-              "book",
-              "egg",
-              "car",
-              "pen"
-            ]
+          "questions": [
+            {
+              "type": "imageDisplay",
+              "imagePath": "A1/1Nouns/7.png",
+              "altText": "Description for Image 6"
+            },
+            {
+              "type": "click",
+              "layout": "vertical",
+              "instructions": [
+                {
+                  "text": " Objects are the pronouns and noun phrases that follow verbs.",
+                  "textStyle": "text"
+                },
+                {
+                  "text": " two moneys. ",
+                  "textStyle": "italic"
+                },
+                {
+                  "text": " Money is singular. It doesn't have a plural form. And neither has ",
+                  "textStyle": "text"
+                },
+                {
+                  "text": " information. ",
+                  "textStyle": "bold"
+                },
+                {
+                  "text": " Countable nouns are words that you can count.  ",
+                  "textStyle": "text"
+                },
+                {
+                  "text": " 1 drink ",
+                  "textStyle": "italic"
+                },
+                {
+                  "text": " is fine to say. You can even say ",
+                  "textStyle": "text"
+                },
+                {
+                  "text": " one water ",
+                  "textStyle": "italic"
+                },
+                {
+                  "text": " to order at a bar, but water is a liquid so it's uncountable.",
+                  "textStyle": "text"
+                },
+                {
+                  "text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water. Materials like,",
+                  "textStyle": "text"
+                },
+                {
+                  "text": " coffee, gasoline, wood, steel, carbon",
+                  "textStyle": "bold"
+                },
+                {
+                  "text": " are all uncountable substances.",
+                  "textStyle": "text"
+                },
+                {
+                  "text": " Click on the plural nouns in the list below.",
+                  "textStyle": "italic",
+                  "newParagraph": true
+                }
+              ],
+              "words": [
+                {
+                  "text": "a camera",
+                  "feedback": "'a camera' is not a plural noun."
+                },
+                {
+                  "text": "a skateboard",
+                  "feedback": "'a skateboard' is not a plural noun."
+                },
+                {
+                  "text": "shoes",
+                  "feedback": "'shoes' is a plural noun."
+                },
+                {
+                  "text": "a hat",
+                  "feedback": "'a hat' is not a plural noun."
+                },
+                {
+                  "text": "a camera lens",
+                  "feedback": "'a camera lens' is not a plural noun."
+                },
+                {
+                  "text": "wheels",
+                  "feedback": "'wheels' is a plural noun."
+                },
+                {
+                  "text": "glasses",
+                  "feedback": "'glasses' is a plural noun."
+                },
+                {
+                  "text": "a phone",
+                  "feedback": "'a phone' is not a plural noun."
+                },
+                {
+                  "text": "an apple",
+                  "feedback": "'an apple' is not a plural noun."
+                },
+                {
+                  "text": "shoelaces",
+                  "feedback": "'shoelaces' is a plural noun."
+                }
+              ],
+              "keyWords": [
+                "shoes",
+                "glasses",
+                "shoelaces",
+                "wheels"
+              ]
+            }
+          ]
         },
         {
           "type": "multipleChoice",
           "question": "Which option completes the sentence correctly? 'Do you like _____ ?'",
-          "options": ["you", "I", "she", "them"],
+          "options": [
+            "you",
+            "I",
+            "she",
+            "them"
+          ],
           "correctAnswer": "them"
         },
         {
           "type": "gapFill",
           "template": "Hey, listen to me. Can _____ send me?",
-          "correctAnswers": ["you", "she", "he", "they"]
+          "correctAnswers": [
+            "you",
+            "she",
+            "he",
+            "they"
+          ]
         },
         {
           "type": "wordBank",
           "paragraph": "So there _____ am, pulling into this parking spot at the mall, and another driver is doing the same thing. He's clearly eyeing it too, but I signal to _____ that I spotted it first. As he backs out, he waves at _____, which I appreciate. Meanwhile, you wouldn't believe _____, but a shopping cart rolls in right behind, blocking both of _____. I get out of my car to move it, when five more shopping carts roll over! That's when I see _____. This woman with long red hair, jogging up and shouting to catch my attention because she's been looking for them. Apparently, those carts are part of a new system the mall is testing, and she's responsible for rounding  ______ up. She thanks me for helping her out and even helps me park by guiding me into the tight spot. It turns out, helping her made my day a lot easier too.",
-          "wordBank": ["us", "it", "I", "her", "them", "him", "us", "me"],
-          "correctAnswers": ["I", "him", "me", "us", "it", "us", "her", "them"]
+          "wordBank": [
+            "us",
+            "it",
+            "I",
+            "her",
+            "them",
+            "him",
+            "us",
+            "me"
+          ],
+          "correctAnswers": [
+            "I",
+            "him",
+            "me",
+            "us",
+            "it",
+            "us",
+            "her",
+            "them"
+          ]
         },
         {
           "type": "gapFill",
           "template": "The story didn't make sense to _____ , so they asked for clarification.",
-          "correctAnswers": ["me", "him", "her", "us", "them", "you", "everyone", "anyone", "nobody", "somebody", "the audience", "the readers", "the listeners", "the viewer", "the teacher", "the students", "the children", "the parents", "the group", "the team", "the jury", "the critics", "the class", "the professor", "the public", "the family", "the workers", "the guests", "the tourists", "the experts", "the police", "the crowd", "the committee", "the locals", "the fans", "the voters", "the man", "the woman", "the boy", "the girl", "the artist", "the author", "the scientist", "the director", "the manager", "the leader", "the coach", "the narrator", "the client", "the customer"]
+          "correctAnswers": [
+            "me",
+            "him",
+            "her",
+            "us",
+            "them",
+            "you",
+            "everyone",
+            "anyone",
+            "nobody",
+            "somebody",
+            "the audience",
+            "the readers",
+            "the listeners",
+            "the viewer",
+            "the teacher",
+            "the students",
+            "the children",
+            "the parents",
+            "the group",
+            "the team",
+            "the jury",
+            "the critics",
+            "the class",
+            "the professor",
+            "the public",
+            "the family",
+            "the workers",
+            "the guests",
+            "the tourists",
+            "the experts",
+            "the police",
+            "the crowd",
+            "the committee",
+            "the locals",
+            "the fans",
+            "the voters",
+            "the man",
+            "the woman",
+            "the boy",
+            "the girl",
+            "the artist",
+            "the author",
+            "the scientist",
+            "the director",
+            "the manager",
+            "the leader",
+            "the coach",
+            "the narrator",
+            "the client",
+            "the customer"
+          ]
         },
         {
           "type": "gapFill",
           "template": "Can you give ____ my hat please?",
-          "correctAnswers": ["me", "us"]
+          "correctAnswers": [
+            "me",
+            "us"
+          ]
         }
       ]
     }
   ]
-}   
-
-
-
-  
+}

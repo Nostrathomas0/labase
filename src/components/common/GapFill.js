@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function GapFill({ template, correctAnswers = [], onAnswer }) {
   const [userInput, setUserInput] = useState('');
   const [feedback, setFeedback] = useState('');
+
+  useEffect(() => {
+    setUserInput('');
+    setFeedback('');
+  }, [template, correctAnswers]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
