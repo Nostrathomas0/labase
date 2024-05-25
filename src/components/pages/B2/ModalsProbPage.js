@@ -1,5 +1,5 @@
 // ModalsProbPage.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import ModalsProbData from '../../../data/grammar/B2/3ModalsProbability.json';
 import GrammarTopic from '../../GrammarTopic';
 import PageTurner from '../../common/PageTurner'
