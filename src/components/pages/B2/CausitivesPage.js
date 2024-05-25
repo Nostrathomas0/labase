@@ -9,7 +9,7 @@ const CausitivePage = () => {
   useEffect(() => {
     console.log(`Current Page: ${currentPage}`);
     console.log(`Current Questions:`, pages[currentPage]?.questions);
-  }, [currentPage]);
+  }, [currentPage, pages]);
 
   if (!pages || pages.length === 0) {
     return <div>No content available.</div>;
