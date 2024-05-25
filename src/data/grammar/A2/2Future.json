@@ -36,8 +36,10 @@
         {
           "type":"click",
           "instructions":[
-            {"text": "CONJUNCTIONS", "textStyle":"bold", "newParagraph":true},
-            {"text": "Will and other modals have some special powers to make 1 word out of 2. Use it after a subject pronoun like", "textStyle":"text"},
+            {"text": "conjunctions", "textStyle":"bold"},
+            {"text": "words using an apostrophe to glom two words together"},
+            {"text": "there were nine conjunctions written on the board: I'm, won't, I'll, you'll, he'd, we've, they're, musn't, I've, he'd, shouldn't, I'd've ", "textStyle":"italic"},
+            {"text": "Will and other modals have some special powers to make 1 word out of 2. Use it after a subject pronoun like", "textStyle":"text", "newParagraph":true},
             {"text": "I, you, we, he, she, it ", "textStyle":"italic"},
             {"text": "or", "textStyle":"text"},
             {"text": " they, ", "textStyle":"italic"},

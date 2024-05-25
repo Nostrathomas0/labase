@@ -14,11 +14,11 @@ const TherePage = () => {
 
   const nextPage = useCallback(() => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, pages.length - 1));
-  }, [pages]);
+  }, [pages.length]);
 
   const previousPage = useCallback(() => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
-  }, [pages]);
+  }, []);
 
   if (!pages || pages.length === 0) {
     return <div>No content available.</div>;
