@@ -1,5 +1,5 @@
 // VerbsPage.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import GrammarTopic from '../../GrammarTopic';
 import VerbsData from '../../../data/grammar/A1/3Verbs.json'; // Import the JSON data
 import PageTurner from '../../common/PageTurner'
@@ -18,13 +18,16 @@ const VerbsPage = () => {
 
   const currentQuestions = pages[currentPage]?.questions || [];
 
-  const nextPage = () => {
+  // Memoize the nextPage function to avoid unnecessary re-renders
+  const nextPage = useCallback(() => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, pages.length - 1));
-  };
+  }, [pages]);
 
-  const previousPage = () => {
+  // Memoize the previousPage function to avoid unnecessary re-renders
+  const previousPage = useCallback(() => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
-  };
+  }, [pages]);
+
 
   return (
     <div>
