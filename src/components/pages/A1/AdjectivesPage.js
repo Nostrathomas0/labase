@@ -7,6 +7,7 @@ import PageTurner from '../../common/PageTurner'
 const AdjectivesPage = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const { pages } = AdjectivesData; 
+  
   useEffect(() => {
     console.log(`Current Page: ${currentPage}`);
     console.log(`Current Questions:`, pages[currentPage]?.questions);
@@ -14,14 +15,14 @@ const AdjectivesPage = () => {
 
   const nextPage = useCallback(() => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, pages.length - 1));
-  }, [pages]);
+  }, [pages.length]);
 
   const previousPage = useCallback(() => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
-  }, [pages]);
+  }, []);
 
   if (!pages || pages.length === 0) {
-    return <div>No content available.</div>;
+    return <div>No Content</div>;
   }
 
   const currentQuestions = pages[currentPage]?.questions || [];
