@@ -138,8 +138,13 @@
             {
               "text":"going to?", "textStyle":"bold"}
           ],
-          "words": ["Giving someone a ", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "words": [
+            {"text":"Asking Permission to Open a Window", "feedback": "No, we use 'can' or 'may' to ask for permission."},
+            {"text":"Asking About Activies someone Plans to Do after Work", "feedback": "Yes, activies people plan on doing are usually said with 'going to'."},
+            {"text":"Saying a Reaction to an Email", "feedback": "No, we probably use, 'will' for an instant reaction to new information."},
+            {"text":"Retelling an Event", "feedback": "No, for this, we'd ue past tenses."}
+          ],
+          "keyWords": ["Asking About Activies someone Plans to Do after Work"]
         },
         {
           "type": "multipleChoice",
