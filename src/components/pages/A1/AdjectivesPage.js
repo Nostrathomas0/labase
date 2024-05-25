@@ -7,10 +7,10 @@ import PageTurner from '../../common/PageTurner'
 const AdjectivesPage = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const { pages } = AdjectivesData; 
+  
   useEffect(() => {
-    console.log('Current Page: ${currentPage}');
-    console.log('Current Question:', pages[currentPage]?.questions);
-
+    console.log(`Current Page: ${currentPage}`);
+    console.log(`Current Questions:`, pages[currentPage]?.questions);
   }, [currentPage]);
 
   if (!pages || pages.length === 0) {

@@ -14,7 +14,7 @@ const NounsPage = () => {
   }, [currentPage]);
 
   if (!pages || pages.length === 0) {
-    return <div>No content available.</div>;
+    return <div>No Content</div>;
   }
 
   const currentQuestions = pages[currentPage]?.questions || [];
