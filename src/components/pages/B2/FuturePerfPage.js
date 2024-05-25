@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FuturePerfData from '../../../data/grammar/B2/4FuturePerfect.json';
 import GrammarTopic from '../../GrammarTopic';
 import PageTurner from '../../common/PageTurner'
@@ -6,17 +6,25 @@ import PageTurner from '../../common/PageTurner'
 const FuturePerfPage = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const { pages } = FuturePerfData;
-  const currentQuestions = pages[currentPage].questions
-  console.log('Current Questions:', currentQuestions);
+  useEffect(() => {
+    console.log(`Current Page: ${currentPage}`);
+    console.log(`Current Questions:`, pages[currentPage]?.questions);
+  }, [currentPage]);
+
+  if (!pages || pages.length === 0) {
+    return <div>No content available.</div>;
+  }
+
+  const currentQuestions = pages[currentPage]?.questions || [];
+
   const nextPage = () => {
-    setCurrentPage((prevPage) => Math.min(prevPage + 1, FuturePerfData.pages.length - 1));
-};
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, pages.length - 1));
+  };
 
   const previousPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
   };
 
-   
   return (
     <div>
       <h1>Future Perfect</h1>
@@ -24,7 +32,7 @@ const FuturePerfPage = () => {
     
       <PageTurner
         currentPage={currentPage + 1}
-        totalPages={FuturePerfData.pages.length}
+        totalPages={pages.length}
         onNext={nextPage}
         onPrevious={previousPage}
         />
