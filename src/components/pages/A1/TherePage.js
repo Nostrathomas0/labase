@@ -34,7 +34,7 @@ const TherePage = () => {
       
       <PageTurner
         currentPage={currentPage + 1}
-        totalPages={ThereData.pages.length}
+        totalPages={pages.length}
         onNext={nextPage}
         onPrevious={previousPage}
         />
