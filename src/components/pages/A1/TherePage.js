@@ -19,7 +19,7 @@ const TherePage = () => {
   const currentQuestions = pages[currentPage]?.questions || [];
 
   const nextPage = () => {
-    setCurrentPage((prevPage) => Math.min(prevPage + 1, pages,length - 1));
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, pages.length - 1));
   };
 
   const previousPage = () => {
