@@ -1,3 +1,4 @@
+//NounsPage.js
 import React, { useState, useEffect } from 'react';
 import GrammarTopic from '../../GrammarTopic';
 import NounsData from '../../../data/grammar/A1/1Nouns.json';
