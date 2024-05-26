@@ -10,25 +10,40 @@
         },
         {
           "type":"click",
-          "layout":"horizontal",
-          "instruction": [
-            {"text": "Click there","textStyle": "text"},
+          "layout":"vertical",
+          "instructions": [
+            {"text": "There","textStyle": "bold"},
             {"text": " and", "textStyle": "text"},
-            {"text": " There ", "textStyle": "text"},
-            {"text": " are incredibly front pointed. This means they can express from first slot of a sentence (sub), especially with the verbs", "textStyle": "text"},
-            {"text": " come, go, lie, walk, ", "textStyle": "bold" },
-            {"text": "Click the words that can be (sub.) in a sentence.", "textStyle": "italic", "newParagraph":true}
+            {"text": " Here ", "textStyle": "bold"},
+            {"text": " are places far and near, respectively and they're often used as a subject to describe places.  These words, like pronouns and noun phrases, like to be in the first slot of a sentence (sub), especially with the verbs", "textStyle": "text"},
+            {"text": " be, come, go, lie* ", "textStyle":"italic"},
+            {"text": "and", "textStyle":"text"},
+            {"text": " rest*.", "textStyle": "italic" },
+            {"text": "1 & 2) Click the words that can be (sub.) in a sentence, then put the events in order according to paragraph 2.", "textStyle": "italic", "newParagraph":true}
           ],
           "words": [
             {"text":"here", "feedback":"Yes, here is often fronted as a subject before verbs like 'come' and 'go'"},
             {"text":"he", "feedback": "Yes, 'he' is a regular subject in English sentences."},
             {"text":"there", "feedback": "Yes, there is often fronted as a subject before verbs like 'come' and 'go'"},
-            {"text":"her", "feedback": "Not really, 'her' might be said like 'Me and her went to the park' but it's usually an object pronoun."},
+            {"text":"her", "feedback": "Not really, 'her' might be said like 'Me and her went to the park' but it's an object pronoun."},
             {"text":"the road", "feedback": "Yes, 'the road' is a regular subject in English sentences."},
-            {"text":"him", "feedback": " Not really, 'her' might be said like 'Me and her went to the park' but it's usually an object pronoun."},
-            {"text":"us", "feedback": "Nope 'us' is an object pronoun"}
+            {"text":"him", "feedback": " Not really, 'her' might be said like 'Him and I went to the park' but it's usually an object pronoun."},
+            {"text":"us", "feedback": "Nope 'us' is an object pronoun"},
+            {"text": "*lie **rest", "feedback": "lie and rest are used like this on tombstones for people who've died."}
           ],
-          "keyWords": ["here", "there", "her", "us", "the road"]
+          "keyWords": ["here", "there", "he", "the road"]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "2) So, I'm sitting there cracking walnuts and the shells were just blasting everywhere when Mike arrived and said, 'The tour group is here.'  as a few dozen people came through and crunched all those shells into fine ground dust on the ground. I am sorry for the damages to the floor.   ",
+          "wordBank": ["Mike arrived", "walnut shells fly everywhere", "many people stomp the shells", "the story teller explains the damage to the floor"],
+          "correctAnswers": ["walnut shells fly everywhere", "Mike arrived", "many people stomp the shells", "the story teller explains the damage to the floor"]
+        },
+        {
+          "type":"multipleChoice",
+          "question": "3) Which is correct according to paragraph 2?",
+          "options": [" Mike is walking on eggshells "," There are a few guests ", " The floor is damaged ", " The storyteller isn't sorry"],
+          "correctAnswers": "The floor is damaged"
         }
       ]
     },
@@ -42,20 +57,49 @@
         {
           "type":"click",
           "layout":"horizontal",
-          "instruction": [
-            {"text": "Here and There are Adverbs of Place. They act like pronouns because they never take determiners and often appear as the subject of a sentence.",  "textStyle": "italic"},
-            {"text": "Click there", "textStyle": "bold"}
+          "instructions": [
+            {"text": "Here and There are Adverbs of Place. They act like pronouns because they never take determiners and often appear as the subject of a sentence.",  "textStyle": "text"},
+            {"text": " There ", "textStyle": "bold"},
+            {"text": " describes pictures, other rooms and places. Read the dialogue between the two women sitting on the couch. ", "textStyle": "text"},
+            {"text": " Janice:", "textStyle": "underline", "newLine":true},
+            {"text": "The climate control down here both heats and does air conditioning so we close the windows at night to keep the mosquitos out, and we hunt them in the evenings with zap rackets.", "textStyle": "text"},
+            {"text": " Megan:", "textStyle": "underline", "newLine":true},
+            {"text": "Oh that's so fun. I noticed you have a ladder in the attic.", "textStyle": "text"},
+            {"text": " Janice:", "textStyle": "underline", "newLine":true},
+            {"text": "Yea we have all sorts of things up there. Some paint and supplies. Another radiator.", "textStyle": "text"},
+            {"text": " Megan:", "textStyle":"underline", "newLine":true},
+            {"text": "I love the light and color up there", "textStyle":"text"},
+            {"text": " Janice:", "textStyle": "underline", "newLine":true},
+            {"text": "But down here is nice too.", "textStyle": "text"},
+            {"text": " Megan:", "textStyle":"underline", "newLine":true},
+            {"text": "What do you think of the color down here?", "textStyle":"text"},
+            {"text": " Janice:", "textStyle": "underline", "newLine":true},
+            {"text": "Oh, it's fine too. Much more muted.", "textStyle":"text"},
+            {"text": "1) Where would Janice say the ladder is? Here or there.", "textStyle":"italic", "newParagraph":true}
+
           ],
           "words": [
-           {"text":"here", "feedback": "ok"},
-           {"text":"there","feedback":"ok"}
+           {"text":"here", "feedback": "No"},
+           {"text":"there","feedback":"Yes"}
           ],
-          "keyWords": ["here", "there"]
+          "keyWords": ["there"]
         },
         {
           "type": "gapFill",
-          "template": "Here and there both end with _____",
-          "correctAnswers": ""
+          "template": "2) Here and there are adverbs of _____",
+          "correctAnswers":[ "place" ]
+        }, 
+        {
+          "type": "multipleChoice",
+          "question": "3) What does Janice have up there?",
+          "options": [" a couch", " big windows ", " air conditioning"],
+          "correctAnswers": " big windows "
+        },
+        {
+          "type":"multipleChoice",
+          "question":"4) Who lives there?",
+          "options":["Janice", "Megan"],
+          "correctAnswers": "Janice"
         }
       ]
     },
@@ -66,15 +110,50 @@
           "imagePath": "A1/4There/3.png",
           "altText": "Here and There are Adverbs of Place, Adverbs of place. Here and There can also be considered pronouns because they are extremly Front Headed"
         },
-        {  
+        {
           "type": "gapFill",
-          "template": "Here and there both end with _____",
-          "correctAnswers": ""},
+          "template": "1) They are having a picnic _____ the grass.",
+          "correctAnswers": ["on", "in"]
+        },
+        {
+          "type": "gapFill",
+          "template": "2) I bought _____ oranges.",
+          "correctAnswers": ["some", "a few", "many"]
+        },        
         {
           "type": "multipleChoice",
-          "question": "Nouns are ______ .",
-          "options": ["people", "places", "things", "all of the above"],
+          "question": "3) They need _____ umbrella.",
+          "options": ["a", "an", "some", "none"],
+          "correctAnswer": "an"
+        },
+        {
+          "type": "gapFill",
+          "template": "4) Can I have _____ information about the event?",
+          "correctAnswers": ["some"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "5) Which sentence uses 'there' correctly?",
+          "options": [
+            "Let's meet there at 5 PM.",
+            "I will stay there.",
+            "Can you see the stars from there?",
+            "all of the above"
+          ],
           "correctAnswer": "all of the above"
+        },
+        
+        {
+          "type": "multipleChoice",
+          "question": " ______ .",
+          "options": ["", "", "", "all of the above"],
+          "correctAnswer": "all of the above"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "",
+          "workBank": [],
+          "correctAnswer": []
         }
       ]
     },
