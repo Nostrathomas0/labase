@@ -15,10 +15,8 @@
             {"text": "There","textStyle": "bold"},
             {"text": " and", "textStyle": "text"},
             {"text": " Here ", "textStyle": "bold"},
-            {"text": " are places far and near, respectively and they're often used as a subject to describe places.  These words, like pronouns and noun phrases, like to be in the first slot of a sentence (sub), especially with the verbs", "textStyle": "text"},
-            {"text": " be, come, go, lie* ", "textStyle":"italic"},
-            {"text": "and", "textStyle":"text"},
-            {"text": " rest*.", "textStyle": "italic" },
+            {"text": " are far places and near places, respectively. They can be used as a subject to describe the things at a place, like pronouns and noun phrases.", "textStyle": "text"},
+     
             {"text": "1 & 2) Click the words that can be (sub.) in a sentence, then put the events in order according to paragraph 2.", "textStyle": "italic", "newParagraph":true}
           ],
           "words": [
@@ -28,22 +26,21 @@
             {"text":"her", "feedback": "Not really, 'her' might be said like 'Me and her went to the park' but it's an object pronoun."},
             {"text":"the road", "feedback": "Yes, 'the road' is a regular subject in English sentences."},
             {"text":"him", "feedback": " Not really, 'her' might be said like 'Him and I went to the park' but it's usually an object pronoun."},
-            {"text":"us", "feedback": "Nope 'us' is an object pronoun"},
-            {"text": "*lie **rest", "feedback": "lie and rest are used like this on tombstones for people who've died."}
+            {"text":"us", "feedback": "Nope 'us' is an object pronoun"}
           ],
           "keyWords": ["here", "there", "he", "the road"]
         },
         {
           "type": "wordBank",
-          "paragraph": "2) So, I'm sitting there cracking walnuts and the shells were just blasting everywhere when Mike arrived and said, 'The tour group is here.'  as a few dozen people came through and crunched all those shells into fine ground dust on the ground. I am sorry for the damages to the floor.   ",
-          "wordBank": ["Mike arrived", "walnut shells fly everywhere", "many people stomp the shells", "the story teller explains the damage to the floor"],
-          "correctAnswers": ["walnut shells fly everywhere", "Mike arrived", "many people stomp the shells", "the story teller explains the damage to the floor"]
+          "paragraph": "2) So, I'm sitting there cracking walnuts and the shells were just blasting everywhere when Mike arrived and said, 'The tour group is here.'  as a few dozen people came through and crunched all those shells into fine ground dust on the ground. That's why I'm sweeping.   ",
+          "wordBank": ["Mike arrived", "shells flew everywhere", "people stomp the shells", "the storyteller sweeps"],
+          "correctAnswers": ["shells flew everywhere", "Mike arrived", "people stomp the shells", "the storyteller sweeps"]
         },
         {
           "type":"multipleChoice",
           "question": "3) Which is correct according to paragraph 2?",
-          "options": [" Mike is walking on eggshells "," There are a few guests ", " The floor is damaged ", " The storyteller isn't sorry"],
-          "correctAnswers": "The floor is damaged"
+          "options": [" Mike is walking on eggshells "," There are a few guests ", " The floor is damaged ", " There was a tour "],
+          "correctAnswers": " There was a tour "
         }
       ]
     },
@@ -61,20 +58,20 @@
             {"text": "Here and There are Adverbs of Place. They act like pronouns because they never take determiners and often appear as the subject of a sentence.",  "textStyle": "text"},
             {"text": " There ", "textStyle": "bold"},
             {"text": " describes pictures, other rooms and places. Read the dialogue between the two women sitting on the couch. ", "textStyle": "text"},
-            {"text": " Janice:", "textStyle": "underline", "newLine":true},
-            {"text": "The climate control down here both heats and does air conditioning so we close the windows at night to keep the mosquitos out, and we hunt them in the evenings with zap rackets.", "textStyle": "text"},
-            {"text": " Megan:", "textStyle": "underline", "newLine":true},
-            {"text": "Oh that's so fun. I noticed you have a ladder in the attic.", "textStyle": "text"},
-            {"text": " Janice:", "textStyle": "underline", "newLine":true},
-            {"text": "Yea we have all sorts of things up there. Some paint and supplies. Another radiator.", "textStyle": "text"},
-            {"text": " Megan:", "textStyle":"underline", "newLine":true},
-            {"text": "I love the light and color up there", "textStyle":"text"},
-            {"text": " Janice:", "textStyle": "underline", "newLine":true},
-            {"text": "But down here is nice too.", "textStyle": "text"},
-            {"text": " Megan:", "textStyle":"underline", "newLine":true},
-            {"text": "What do you think of the color down here?", "textStyle":"text"},
-            {"text": " Janice:", "textStyle": "underline", "newLine":true},
-            {"text": "Oh, it's fine too. Much more muted.", "textStyle":"text"},
+            {"text": " Janice: ", "textStyle": "underline", "newLine":true},
+            {"text": " The climate control down here both heats and does air conditioning, so we close the windows at night to keep the mosquitos out, and we hunt them in the evenings with zap rackets.", "textStyle": "text"},
+            {"text": "Megan: ", "textStyle": "underline", "newLine":true},
+            {"text": " Oh that's so fun. I noticed you have a ladder in the attic.", "textStyle": "text"},
+            {"text": "Janice: ", "textStyle": "underline", "newLine":true},
+            {"text": " Yea we have all sorts of things up there. Some paint and supplies. Another radiator.", "textStyle": "text"},
+            {"text": " Megan: ", "textStyle":"underline", "newLine":true},
+            {"text": " I love the light and color up there", "textStyle":"text"},
+            {"text": " Janice: ", "textStyle": "underline", "newLine":true},
+            {"text": " But down here is nice too.", "textStyle": "text"},
+            {"text": " Megan: ", "textStyle":"underline", "newLine":true},
+            {"text": " What do you think of the color down here?", "textStyle":"text"},
+            {"text": " Janice: ", "textStyle": "underline", "newLine":true},
+            {"text": " Oh, it's fine too. Much more muted.", "textStyle":"text"},
             {"text": "1) Where would Janice say the ladder is? Here or there.", "textStyle":"italic", "newParagraph":true}
 
           ],
@@ -142,7 +139,6 @@
           ],
           "correctAnswer": "all of the above"
         },
-        
         {
           "type": "multipleChoice",
           "question": " ______ .",
@@ -151,10 +147,11 @@
         },
         {
           "type": "wordBank",
-          "paragraph": "",
-          "workBank": [],
-          "correctAnswer": []
+          "paragraph": "_____ are many places to visit. I hope we can go _____ soon.",
+          "wordBank": ["There", "there"],
+          "correctAnswers": ["There", "there"]
         }
+        
       ]
     },
     {
@@ -163,16 +160,50 @@
           "type": "imageDisplay",
           "imagePath": "A1/4There/4.png"
         },
-        {"type": "multipleChoice",
-        "question": "Nouns are ______ .",
-        "options": ["people", "places", "things", "all of the above"],
-        "correctAnswer": "all of the above"},
         {
-          "type": "multipleChoice",
-          "question": "Nouns are ______ .",
-          "options": ["people", "places", "things", "all of the above"],
-          "correctAnswer": "all of the above"
-        }
+          "type": "click",
+          "instructions": [
+            {"text": "Front ", "textStyle":"bold"},
+            {"text": " /frʌnt/ (noun) ", "textStyle":"text"},
+            {"text": " 1. ", "textStyle":"bold"},
+            {"text": " the first position", "textStyle":"text" },
+            {"text": " I waited an hour until the front of the line.", "textStyle":"italic"},
+            {"text": " 2. ", "textStyle":"bold" },
+            {"text": " /frʌnt/ (verb) ", "textStyle": "text"},
+            {"text": "attract to the first syntactical slot in a sentence", "textStyle":"text"  },
+            {"text": " Question words front in a sentence.", "textStyle":"italic"},
+            {"text": "Some words enjoy the front of a sentence more often than others. The question words", "textStyle":"text", "newLine":true },
+            {"text": "Who, What, Where, Why, When and How", "textStyle":"bold"},
+            {"text": " are the most fronted words in English, meaning they're only rarely found in rear or object positions in sentences.", "textStyle":"text"}
+          ],
+          "words": [
+            {"text":"", "feedback": ""},
+            {"text":"", "feedback": ""},
+            {"text":"", "feedback": ""},
+            {"text":"", "feedback": ""},
+            {"text":"", "feedback": ""}
+          ],
+          "keyWords":[
+            "","",""
+          ]
+        },
+        {
+            "type": "multipleChoice",
+            "question": "Which sentence uses 'there' correctly?",
+            "options": [
+              "Let's meet there at 5 PM.",
+              "I will stay there.",
+              "Can you see the stars from there?",
+              "all of the above"
+            ],
+            "correctAnswer": "all of the above"
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Nouns are ______ .",
+            "options": ["people", "places", "things", "all of the above"],
+            "correctAnswer": "all of the above"
+          }
       ]
     }
   ]
