@@ -13,25 +13,25 @@
             {"text": "Be Going To", "textStyle": "bold", "newParagraph":true},
             {"text": " is a ", "textStyle": "text"},
             {"text": "semi-auxiliary", "textStyle": "italic"},
-            {"text": ". The", "textStyle": "text"},
+            {"text": " meaning part of it beeds conjugation. The ", "textStyle": "text"},
             {"text": " be ", "textStyle": "bold"},
-            {"text": " needs to conjugated according to the person and tense. It can conjugate to ", "textStyle": "text"},
+            {"text": " changes form according to the person and tense. It can conjugate to ", "textStyle": "text"},
             {"text": "verb1", "textStyle":"bold", "newLine":true},
             {"text": " am is are ", "textStyle":"italic"},
             {"text": " for future plans."},
             {"text": " I'm going to ask if Cindy wants to go to the movies with us. ", "textStyle": "italic", "newLine": true },
-            {"text": " It can also conjugate to verb 2"},
+            {"text": " It can also conjugate to verb 2", "textStyle":"text"},
             {"text": " was were ", "textStyle":"italic"},
-            {"text": " to talk about past plans that didn't happen", "textStyle":"italic", "newLine":true},
-            {"text": " I was going to finish the report yesterday but there was a family emergency. ", "textStyle": "italic", "newLine": true},
-            {"text": " Click on conjugated verbs in the sentence below. ", "textStyle": "__________", "newParagraph": true}
+            {"text": " to talk about past plans, that didn't happen as planned;", "textStyle":"text", "newLine":true},
+            {"text": " I was going to finish the report yesterday but there was an urgent meeting. ", "textStyle": "italic", "newLine": true},
+            {"text": "1) Click on conjugated verbs in the sentence below. ", "textStyle": "italic", "newParagraph": true}
           ],
           "words": ["I", "was", "going", "to", "ask", "my", "teacher", "but", "he", "left", "right", "after", "class.", "I", "am", "going", "to", "look", "up", "the", "answer", "online."],
           "keyWords": ["was", "am"]
         },
         {
           "type": "multipleChoice",
-          "question": "You____ going to remember when I'm famous right?",
+          "question": "2) You____ going to remember when I'm famous right?",
           "options": ["is", "was", "'re'", "will"],
           "correctAnswer": "'re'"
         }
@@ -45,49 +45,20 @@
         },
         {
           "type": "multipleChoice",
-          "question": "What part changes?",
+          "question": "1) What part changes?",
           "options": ["be", "going", "to", "main verb"],
           "correctAnswer": "be"
         },
         {
           "type": "gapFill",
-          "template": "Who _____ going to watch your dog while you're away?",
+          "template": "2)Who _____ going to watch your dog while you're away?",
           "correctAnswers": ["is", "'s"]
         },
         {
           "type": "wordBank",
-          "paragraph": "Last weekend, we ________ visit the new museum, but it started raining. So instead, we ________ stay home and watch a movie. This Saturday, I ________ meet my friends at the cafe. We ________ have lunch together and then we ________ go shopping. In the evening, my sister and I ________ cook dinner for the family. It's ________ be a busy day, but I'm excited!",
+          "paragraph": "3) Last weekend, we ________ visit the new museum, but it started raining. So instead, we ________ stay home and watch a movie. This Saturday, I ________ meet my friends at the cafe. We ________ have lunch together and then we ________ go shopping. In the evening, my sister and I ________ cook dinner for the family. It's ________ be a busy day, but I'm excited!",
           "wordBank": ["was going to", "were going to", "am going to", "are going to", "are going to", "are going to", "going to"],
           "correctAnswers": ["were going to", "were going to", "am going to", "are going to", "are going to", "are going to", "going to"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
         }
       ]
     },
@@ -223,40 +194,6 @@
           "imagePath": "A2/3GoingTo/4.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
           "type": "click",
           "instructions": [
             {
@@ -274,21 +211,16 @@
           "keyWords": ["__________", "__________", "__________", "__________"]
         },
         {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "type": "wordBank",
+          "paragraph": "__________",
+          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
+          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+        },
+        
+        {
+          "type": "gapFill",
+          "template": "__________ (__________)",
+          "correctAnswers": ["__________"]
         }
       ]
     },
