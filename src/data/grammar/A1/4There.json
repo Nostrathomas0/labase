@@ -33,8 +33,8 @@
         {
           "type": "wordBank",
           "paragraph": "2) So, I'm sitting there cracking walnuts and the shells were just blasting everywhere when Mike arrived and said, 'The tour group is here.'  as a few dozen people came through and crunched all those shells into fine ground dust on the ground. That's why I'm sweeping.   ",
-          "wordBank": ["Mike arrived", "shells flew everywhere", "people stomp the shells", "the storyteller sweeps"],
-          "correctAnswers": ["shells flew everywhere", "Mike arrived", "people stomp the shells", "the storyteller sweeps"]
+          "wordBank": ["shells flew everywhere", "Mike arrived", "people stomp the shells", "the storyteller sweeps"],
+          "correctAnswers": ["Mike arrived", "shells flew everywhere", "people stomp the shells", "the storyteller sweeps"]
         },
         {
           "type":"multipleChoice",
@@ -82,10 +82,11 @@
           "keyWords": ["there"]
         },
         {
-          "type": "gapFill",
-          "template": "2) Here and there are adverbs of _____",
-          "correctAnswers":[ "place" ]
-        }, 
+          "type":"multipleChoice",
+          "question":"2) Who lives there?",
+          "options":["Janice", "Megan"],
+          "correctAnswers": "Janice"
+        },
         {
           "type": "multipleChoice",
           "question": "3) What does Janice have up there?",
@@ -93,10 +94,9 @@
           "correctAnswers": " big windows "
         },
         {
-          "type":"multipleChoice",
-          "question":"4) Who lives there?",
-          "options":["Janice", "Megan"],
-          "correctAnswers": "Janice"
+          "type": "gapFill",
+          "template": "4) Here and there are adverbs of _____",
+          "correctAnswers":[ "place" ]
         }
       ]
     },
@@ -126,7 +126,7 @@
         {
           "type": "gapFill",
           "template": "4) Can I have _____ information about the event?",
-          "correctAnswers": ["some"]
+          "correctAnswers": ["some", "some more", "a bit of"]
         },
         {
           "type": "multipleChoice",
@@ -137,12 +137,6 @@
             "Can you see the stars from there?",
             "all of the above"
           ],
-          "correctAnswer": "all of the above"
-        },
-        {
-          "type": "multipleChoice",
-          "question": " ______ .",
-          "options": ["", "", "", "all of the above"],
           "correctAnswer": "all of the above"
         },
         {
@@ -162,6 +156,7 @@
         },
         {
           "type": "click",
+          "layout": "horizontal",
           "instructions": [
             {"text": "Front ", "textStyle":"bold"},
             {"text": " /frʌnt/ (noun) ", "textStyle":"text"},
@@ -174,17 +169,20 @@
             {"text": " Question words front in a sentence.", "textStyle":"italic"},
             {"text": "Some words enjoy the front of a sentence more often than others. The question words", "textStyle":"text", "newLine":true },
             {"text": "Who, What, Where, Why, When and How", "textStyle":"bold"},
-            {"text": " are the most fronted words in English, meaning they're only rarely found in rear or object positions in sentences.", "textStyle":"text"}
+            {"text": " are the most fronted words in English, meaning they're only rarely found in rear or object positions in sentences.", "textStyle":"text"},
+            {"text": "Hit the front of the sentence.", "textStyle":"italic", "newLine":true}
           ],
           "words": [
-            {"text":"", "feedback": ""},
-            {"text":"", "feedback": ""},
-            {"text":"", "feedback": ""},
-            {"text":"", "feedback": ""},
-            {"text":"", "feedback": ""}
+            {"text":"Whose", "feedback": "That's it, that' the front. It's an interrogative pronoun there, that."},
+            {"text":"child", "feedback": "Not quite, we're looking for the proprieter of the child."},
+            {"text":"is", "feedback": "incorrect, that's verb1 to be, 3rd person singular"},
+            {"text":"riding", "feedback": "not it, that's the main verb-ing"},
+            {"text":"the", "feedback": "far definite article"},
+            {"text":"escalator", "feedback":"further, moving staircases"},
+            {"text":"alone?", "feedback":"furthest away, it's an adverb"}
           ],
           "keyWords":[
-            "","",""
+            "whose"
           ]
         },
         {
@@ -203,6 +201,17 @@
             "question": "Nouns are ______ .",
             "options": ["people", "places", "things", "all of the above"],
             "correctAnswer": "all of the above"
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "_____ is a beautiful park. I love coming _____ in the evenings.",
+            "wordBank": ["There", "here"],
+            "correctAnswers": ["There", "here"]
+          },
+          {
+            "type": "gapFill",
+            "template": "_____ are many books on the shelf.",
+            "correctAnswers": ["There"]
           }
       ]
     }
