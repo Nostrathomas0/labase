@@ -90,6 +90,10 @@
   text-decoration: underline;
 }
 
+.instructions .strike {
+  text-decoration: line-through;
+}
+
 .instructions .paragraph {
   margin-bottom: 10px; /* Adjust as needed */
 }

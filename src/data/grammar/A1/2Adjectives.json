@@ -152,20 +152,20 @@
           "type": "click",
           "layout":"horizontal",
             "instructions": [
-              {"text": "Look at the top of the picture above. ", "textStyle": "italic"},
-              {"text": "close " , "textStyle": "bold", "newLine":true },
-              {"text": "[klous] ", "textStyle":"text"},
-              {"text": "adj. ",  "textStyle": "italic"},
-              {"text": "1. " , "textStyle": "bold"},
-              {"text": " near, in your proximity, not far, ",  "textStyle": "text"},
+              {"text": "Look at the top of the picture above. Then look at the dictionary listing below. ", "textStyle": "italic"},
+              {"text": " close " , "textStyle": "bold", "newLine":true },
+              {"text": " [klous] ", "textStyle":"text"},
+              {"text": " adj. ",  "textStyle": "italic"},
+              {"text": " 1. " , "textStyle": "bold"},
+              {"text": " nearby, in your proximity, not far off ",  "textStyle": "text"},
               {"text": " We live close to school. I can walk there.", "textStyle": "italic"},
               {"text": "close " , "textStyle": "bold", "newLine":true },
-              {"text": "[klouz]", "textStyle": "text"},
-              {"text": "verb ",  "textStyle": "italic"},
-              {"text": "2. ", "textStyle":"bold"},
-              {"text": "an action to block. ", "textStyle": "text"},
+              {"text": " [klouz] ", "textStyle": "text"},
+              {"text": " verb ",  "textStyle": "italic"},
+              {"text": " 2. ", "textStyle":"bold"},
+              {"text": " an action to block. ", "textStyle": "text"},
               {"text": " Close the window please, it's cold.", "textStyle":"italic"},
-              {"text": "close (adj.) is pronounced with a clear /s/ sound.",  "textStyle": "text", "newLine":true},
+              {"text": "close (adj.) is pronounced with a clear /s/ sound. They're spelled the same so they're homonyms but they are not homophones.",  "textStyle": "text", "newLine":true},
               {"text": "Imagine the men's conversation.", "textStyle": "italic",  "newParagraph":true},
               {"text": "Bill: ", "textStyle": "text", "newLine":true},
               {"text": "Hey Bob, was your dog digging a hole in my garden last night?", "textStyle": "italic"}, 
@@ -179,25 +179,27 @@
             ],
             "words": [
               { "text": "His", "feedback": "'His' is not an adjective." },
-              { "text": "bed", "feedback": "'bed' is not an adjective." },
-              { "text": "was", "feedback": "'was' is not an adjective." },
-              { "text": "dirty", "feedback": "'dirty' is an adjective." },
+              { "text": "naughty", "feedback": "Yes! 'naughty' is an adjective." },
+              { "text": "dog", "feedback": "No 'dog' is not an adjective." },
+              { "text": "was ", "feedback": "'was' is an adjective." },
+              { "text": "out", "feedback": "'out' is not an adjective." },
+              { "text": "last", "feedback": "Yes 'last' is an adjective." },
+              { "text": "night", "feedback": "'night' is not an adjective." },
               { "text": "and", "feedback": "'and' is not an adjective." },
-              { "text": "messy", "feedback": "'messy' is an adjective." },
-              { "text": "in", "feedback": "'in' is not an adjective." },
-              { "text": "the", "feedback": "'the' is not an adjective." },
-              { "text": "morning", "feedback": "'morning' is not an adjective." },
-              { "text": "so", "feedback": "'so' is not an adjective." },
               { "text": "he", "feedback": "'he' is not an adjective." },
-              { "text": "had", "feedback": "'had' is not an adjective." },
-              { "text": "to", "feedback": "'to' is not an adjective." },
-              { "text": "close", "feedback": "'close' is not an adjective." },
-              { "text": "the", "feedback": "'the' is not an adjective." },
-              { "text": "gate", "feedback": "'gate' is not an adjective." }
+              { "text": "dug", "feedback": "No 'dug' is not an adjective." },
+              { "text": "a", "feedback": "Nope 'a' is not an adjective." },
+              { "text": "big ", "feedback": "Yes! 'big' is an adjective." },
+              { "text": "hole", "feedback": "No 'hole' is not an adjective." },
+              { "text": "in", "feedback": "Nope 'in' is not an adjective." },
+              { "text": "Bill's", "feedback": "Not really, it's a possessive noun." },
+              { "text": "flower", "feedback": "More or less true, 'flower' is the former of a compound noun and acts as adj." },
+              { "text": "garden.", "feedback": "'garden"}
             ],
             "keyWords": [
-              "dirty",
-              "messy"
+              "naughty",
+              "last",
+              "big"
             ]
         },
         {
@@ -220,9 +222,9 @@
           "type": "click",
           "layout":"horizontal",
             "instructions": [
-              {"text": "Far", "textStyle": "bold"},
-              {"text": "(adj.) at a great distance", "textStyle": "text"},
-              {"text": "click on the phrase that talks about something far.", "textStyle": "underline"}
+              {"text": " Far ", "textStyle": "bold"},
+              {"text": " (adj.) at a great distance ", "textStyle": "text"},
+              {"text":  "click on the phrase that talks about something far.", "textStyle": "underline", "newLine":true}
             ],
           "words": [
             {"text":"This tree right here", "feedback":"This is proximal"},
@@ -241,13 +243,13 @@
         },
         {
           "type": "gapFill",
-          "template": "_____ shoes fit me.",
-          "correctAnswers": ["These", "my"]
+          "template": "_____ shoes right here fit me well.",
+          "correctAnswers": ["These", "my", "those", "your", "his", "her", "their", "our"]
         },
         {
           "type": "gapFill",
-          "template": "_____ guys are my friends.",
-          "correctAnswers": ["These"]
+          "template": "_____ guy right here, is my friends.",
+          "correctAnswers": ["This", "my"]
         }
       ]
     },
@@ -257,6 +259,41 @@
           "type": "imageDisplay",
           "imagePath": "A1/2Adjectives/7.png",
           "altText": "fil"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions":[
+            {"text": "That", "textStyle":"bold"},
+            {"text": " is a far-out word. It points at things and it' called a demonstrative. It's also used in relative clauses to give extra information in a noun phrase.", "textStyle":"text"},
+            {"text": " I dress for the job ", "textStyle":"italic", "newLine":true},
+            {"text": " that", "textStyle":"underline"},
+            {"text": " I ", "textStyle":"italic"},
+            {"text": " want ", "textStyle":"text"},
+            {"text": " That ", "textStyle":"bold", "newLine":true},
+            {"text": " is also useful with a finger. ", "textStyle":"text"},
+            {"text": " That bird's got something wrapped around its leg. ", "textStyle":"italic"},
+            {"text": " And finally that is used with there to refer to things apart. ", "textStyle":"text"},
+            {"text": " That heater upstairs doesn't have air conditioning. ", "textStyle":"italic"},
+            {"text": " In the sentence below, identify the demonstrative pronouns and the relative pronoun 'that'. "}
+        ],
+        "words": [
+          { "text": "This", "feedback": "'This' is a demonstrative pronoun used to refer to something near." },
+          { "text": "rowboat", "feedback": "'rowboat' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "is", "feedback": "'is' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "better", "feedback": "'better' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "than", "feedback": "'than' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "that", "feedback": "'that' is a demonstrative pronoun used to refer to something farther away." },
+          { "text": "ship", "feedback": "'ship' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "that", "feedback": "'that' is a relative pronoun used to introduce a relative clause." },
+          { "text": "we", "feedback": "'we' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "saw", "feedback": "'saw' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "yesterday", "feedback": "'yesterday' is not a demonstrative pronoun or relative pronoun." }
+        ],
+        "keyWords": [
+          "This",
+          "that"
+          ]
         },
         {
           "type": "GapFill",

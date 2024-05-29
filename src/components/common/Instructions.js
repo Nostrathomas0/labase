@@ -4,20 +4,40 @@ import PropTypes from 'prop-types';
 const Instructions = ({ instructions = [] }) => {
   console.log('Rendering Instructions with instructions:', instructions);
 
+  const paragraphs = [];
+  let currentParagraph = [];
+
+  instructions.forEach((instruction, index) => {
+    // If newParagraph is true, push current paragraph to paragraphs array and start a new paragraph
+    if (instruction.newParagraph) {
+      if (currentParagraph.length > 0) {
+        paragraphs.push(currentParagraph);
+        currentParagraph = [];
+      }
+    }
+
+    currentParagraph.push(
+      <React.Fragment key={index}>
+        {instruction.newLine && <br />}
+        <span className={instruction.textStyle || 'default'}>
+          {instruction.text}
+        </span>
+      </React.Fragment>
+    );
+  });
+
+  // Push any remaining lines to paragraphs
+  if (currentParagraph.length > 0) {
+    paragraphs.push(currentParagraph);
+  }
+
   return (
     <div className='instructions'>
-      {instructions.map((instruction, index) => {
-        const Component = instruction.newParagraph ? 'p' : 'span';
-        return (
-          <React.Fragment key={index}>
-            {instruction.newLine && <br />}
-            <Component className={instruction.textStyle || 'default'}>
-              {instruction.text}
-            </Component>
-            {instruction.newParagraph && <br />}
-          </React.Fragment>
-        );
-      })}
+      {paragraphs.map((paragraph, index) => (
+        <p key={index} className="paragraph">
+          {paragraph}
+        </p>
+      ))}
     </div>
   );
 };
