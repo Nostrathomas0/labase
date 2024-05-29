@@ -112,9 +112,8 @@
           "layout": "horizontal",
           "instructions": [
             {
-              "text": " Noun phrases include an article and/or determiners:",
-              "textStyle": "text",
-              "newLine": true
+              "text": " Noun phrases have an article and/or determiners:",
+              "textStyle": "text"
             },
             {
               "text": " a ",
@@ -240,36 +239,55 @@
           "layout": "vertical",
           "instructions": [
             {
-              "text": " Some nouns count, some don't. For example, we can say,",
-              "textStyle": "text"
+              "text": " Some nouns count, some don't. For example, ",
+              "newParagraph":true
             },
             {
               "text": " 2 Euros ",
               "textStyle": "italic"
             },
             {
-              "text": " but  can't say ",
+              "text": " but  ",
               "textStyle": "text"
             },
             {
               "text": " two moneys. ",
-              "textStyle": "italic"
+              "textStyle": "strike"
             },
             {
               "text": " Money doesn't have a plural form. And neither has ",
               "textStyle": "text"
             },
             {
-              "text": " information. ",
+              "text": " information ",
               "textStyle": "bold"
             },
             {
-              "text": " Countable nouns are words that you can count.  ",
+              "text": " nor ",
               "textStyle": "text"
             },
             {
+              "text": " punctuation. ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "and that mean we shouldn't use the indefinite article.",
+              "textStyle": "text" 
+            },
+            {
+              "text": " an information. ",
+              "textStyle": "strike"
+            },
+            {
+              "text": " Countable nouns are words that you can count.  ",
+              "textStyle": "text",
+              "newParagraph":true
+            },
+            {
               "text": " 1 drink ",
-              "textStyle": "italic"
+              "textStyle": "italic",
+              "newParagraph":false
+              
             },
             {
               "text": " is fine to say. You can even say ",
@@ -284,7 +302,7 @@
               "textStyle": "text"
             },
             {
-              "text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water.",
+              "text": " Most materials are uncountable;",
               "textStyle": "text"
             },
             {
@@ -311,10 +329,6 @@
               "feedback": "'apple' is a countable noun."
             },
             {
-              "text": "water",
-              "feedback": "'water' is not a countable noun."
-            },
-            {
               "text": "book",
               "feedback": "'book' is a countable noun."
             },
@@ -327,20 +341,12 @@
               "feedback": "'egg' is a countable noun."
             },
             {
-              "text": "sugar",
-              "feedback": "'sugar' is not a countable noun."
-            },
-            {
               "text": "car",
               "feedback": "'car' is a countable noun."
             },
             {
               "text": "rice",
               "feedback": "'rice' is not a countable noun. You can count grains of rice."
-            },
-            {
-              "text": "pen",
-              "feedback": "'pen' is a countable noun."
             }
           ],
           "keyWords": [
@@ -367,7 +373,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Choose the correct plural form of 'city':",
+          "question": "1) Choose the correct plural form of 'city':",
           "options": [
             "citys",
             "cites",
@@ -377,7 +383,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "What is the correct plural form of 'knife':",
+          "question": "2) What is the correct plural form of 'knife':",
           "options": [
             "knifes",
             "knives",
@@ -387,7 +393,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "And what about the plural form of 'box'?",
+          "question": "3) And what about the plural form of 'box'?",
           "options": [
             "boxs",
             "box",
@@ -398,14 +404,14 @@
         },
         {
           "type": "gapFill",
-          "template": " There are four _____ (person) playing in the park.",
+          "template": "4) There are four _____ (person) playing in the park.",
           "correctAnswers": [
             "people"
           ]
         },
         {
           "type": "gapFill",
-          "template": "Put up some _____(shelf) on the wall for the home phone and wifi router.",
+          "template": "5) Put up some _____(shelf) on the wall for the home phone and wifi router.",
           "correctAnswers": [
             "shelves"
           ]
@@ -421,7 +427,7 @@
         },
         {
           "type": "wordBank",
-          "paragraph": "George says to his sister before the camping trip. 'We need to make sure we have enough ______ for everyone so we can drink.' George's sister suggests bringing ______ because they are easy to pack and won't spoil. Another points out that they will need a lot of ______ to keep the campfire going all night. They decide to check if the camping site provides ______ so they can cook meals easily. They also discuss the need for a good supply of ______ to keep their area clean. Lastly, everyone agrees not to forget ______, as they are crucial for their night hikes.",
+          "paragraph": "Paragraph, 1-6 in order)°_° George says to his sister before the camping trip. 'We need to make sure we have enough 1)______ to drink.' George's sister suggests bringing 2)______ because they are easy to pack and won't spoil. Another points out that they will need a lot of 3)______ to keep the campfire going all night. They decide to check if the camping site provides 4)______ so they can cook meals easily. They also discuss the need for a good supply of 5_______ to keep their area clean. Lastly, everyone agrees not to forget 6)______, as they are crucial for their night hikes.",
           "wordBank": [
             "stoves",
             "flashlights",
@@ -450,7 +456,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Which subject pronoun is for talking about yourself?",
+          "question": "1) Which subject pronoun is for talking about yourself?",
           "options": [
             "i",
             "She",
@@ -461,7 +467,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Which form of the verb 'be' to use with 'I'?",
+          "question": "2) Which form of the verb 'be' to use with 'I'?",
           "options": [
             "is",
             "am",
@@ -472,7 +478,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Choose the correct sentence.",
+          "question": "3) Choose the correct sentence.",
           "options": [
             "She are a teacher.",
             "He am a doctor.",
@@ -483,7 +489,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Which option completes the sentence correctly? 'The flowers _____ beautiful.'",
+          "question": "4) Which option completes the sentence correctly? 'The flowers _____ beautiful.'",
           "options": [
             "is",
             "are",
@@ -494,7 +500,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Select the correct sentence.",
+          "question": "5) Select the correct sentence.",
           "options": [
             "You is happy.",
             "They am sad.",
@@ -514,220 +520,159 @@
         },
         {
           "type": "click",
-          "layout": "vertical",
+          "layout": "horizontal",
           "instructions": [
             {
-              "text": " Objects are the pronouns and noun phrases that follow verbs.",
+              "text": " Objects are the pronouns and noun phrases that follow verbs. Don't get used to hearing this but",
               "textStyle": "text"
             },
             {
-              "text": " two moneys. ",
-              "textStyle": "italic"
-            },
-            {
-              "text": " Money is singular. It doesn't have a plural form. And neither has ",
-              "textStyle": "text"
-            },
-            {
-              "text": " information. ",
+              "text": " you ",
               "textStyle": "bold"
             },
             {
-              "text": " Countable nouns are words that you can count.  ",
-              "textStyle": "text"
+              "text":" is very useful.",
+              "textStyle":"underline"
             },
+            {"text":"'You' is object and subject, singular and plural. Other pronouns have separate object forms.", "textStyle":"text"},
             {
-              "text": " 1 drink ",
-              "textStyle": "italic"
-            },
-            {
-              "text": " is fine to say. You can even say ",
-              "textStyle": "text"
-            },
-            {
-              "text": " one water ",
-              "textStyle": "italic"
-            },
-            {
-              "text": " to order at a bar, but water is a liquid so it's uncountable.",
-              "textStyle": "text"
-            },
-            {
-              "text": " Most materials are uncountable and when you ask for a water, you're really asking for a glass of water. Materials like,",
-              "textStyle": "text"
-            },
-            {
-              "text": " coffee, gasoline, wood, steel, carbon",
+              "text": " them  ",
               "textStyle": "bold"
             },
             {
-              "text": " are all uncountable substances.",
+              "text": " and   ",
               "textStyle": "text"
             },
-            {
-              "text": " Click on the plural nouns in the list below.",
-              "textStyle": "italic",
-              "newParagraph": true
+            {"text":"him ", "textStyle":"bold"},
+            {"text":" and ", "textStyle":"bold"},
+            {"text":" her ", "textStyle":"bold"},
+            {"text": " at ","textStyle":"text"},
+            {"text": "yourself" , "textStyle":"underline"},
+            {"text":" in the mirror.", "textStyle":"text"},
+            {"text": "Click on the object pronoun in the sentence below:",
+            "textStyle": "italic",
+            "newParagraph":true
             }
+            ],
+            "words": [
+              { "text": "She", "feedback": "No, 'She' is a subject pronoun." },
+              { "text": "gave", "feedback": "No, 'gave' is a verb." },
+              { "text": "him", "feedback": "Yes, 'him' is an object pronoun." },
+              { "text": "a", "feedback": "No, 'a' is an article." },
+              { "text": "gift.", "feedback": "No, 'gift' is a noun." }
+            ],
+            "keyWords": ["him"]          
+            
+        },
+        {
+          "type": "multipleChoice",
+          "question": "2) Which option completes the sentence correctly? 'Do you like _____ ?'",
+          "options": [
+            "you",
+            "I",
+            "she",
+            "me"
           ],
-          "words": [
-            {
-              "text": "a camera",
-              "feedback": "'a camera' is not a plural noun."
-            },
-            {
-              "text": "a skateboard",
-              "feedback": "'a skateboard' is not a plural noun."
-            },
-            {
-              "text": "shoes",
-              "feedback": "'shoes' is a plural noun."
-            },
-            {
-              "text": "a hat",
-              "feedback": "'a hat' is not a plural noun."
-            },
-            {
-              "text": "a camera lens",
-              "feedback": "'a camera lens' is not a plural noun."
-            },
-            {
-              "text": "wheels",
-              "feedback": "'wheels' is a plural noun."
-            },
-            {
-              "text": "glasses",
-              "feedback": "'glasses' is a plural noun."
-            },
-            {
-              "text": "a phone",
-              "feedback": "'a phone' is not a plural noun."
-            },
-            {
-              "text": "an apple",
-              "feedback": "'an apple' is not a plural noun."
-            },
-            {
-              "text": "shoelaces",
-              "feedback": "'shoelaces' is a plural noun."
-            }
+          "correctAnswer": "me"
+        },
+        {
+          "type": "gapFill",
+          "template": "3) Hey, lets go talk to them. Can _____ come with me and back me up?",
+          "correctAnswers": [
+            "you",
+            "she",
+            "he",
+            "they"
+          ]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "4-11) So there _____ am, pulling into this parking spot at the mall, and another driver is doing the same thing. He's clearly eyeing it too, but I signal to _____ that I spotted it first. As he backs out, he waves at _____, which I appreciate. Meanwhile, you wouldn't believe _____, but a shopping cart rolls in right behind, blocking both of _____. I get out of my car to move it, when five more shopping carts roll over! That's when I see _____. This woman with long red hair, jogging up and shouting to catch my attention because she's been looking for them. Apparently, those carts are part of a new system the mall is testing, and she's responsible for rounding  ______ up. She thanks me for helping her out and even helps me park by guiding me into the tight spot. It turns out, helping her made my day a lot easier too.",
+          "wordBank": [
+            "us",
+            "it",
+            "I",
+            "her",
+            "them",
+            "him",
+            "us",
+            "me"
           ],
-          "keyWords": [
-            "shoes",
-            "glasses",
-            "shoelaces",
-            "wheels"
+          "correctAnswers": [
+            "I",
+            "him",
+            "me",
+            "us",
+            "it",
+            "us",
+            "her",
+            "them"
+          ]
+        },
+        {
+          "type": "gapFill",
+          "template": "12) The story didn't make sense to _____ , so they asked for clarification.",
+          "correctAnswers": [
+            "me",
+            "him",
+            "her",
+            "us",
+            "them",
+            "you",
+            "everyone",
+            "anyone",
+            "nobody",
+            "somebody",
+            "the audience",
+            "the readers",
+            "the listeners",
+            "the viewer",
+            "the teacher",
+            "the students",
+            "the children",
+            "the parents",
+            "the group",
+            "the team",
+            "the jury",
+            "the critics",
+            "the class",
+            "the professor",
+            "the public",
+            "the family",
+            "the workers",
+            "the guests",
+            "the tourists",
+            "the experts",
+            "the police",
+            "the crowd",
+            "the committee",
+            "the locals",
+            "the fans",
+            "the voters",
+            "the man",
+            "the woman",
+            "the boy",
+            "the girl",
+            "the artist",
+            "the author",
+            "the scientist",
+            "the director",
+            "the manager",
+            "the leader",
+            "the coach",
+            "the narrator",
+            "the client",
+            "the customer"
+          ]
+        },
+        {
+          "type": "gapFill",
+          "template": "14) Can you give ____ my hat please?",
+          "correctAnswers": [
+            "me",
+            "us"
           ]
         }
-      ]
-    },
-    {
-      "type": "multipleChoice",
-      "question": "Which option completes the sentence correctly? 'Do you like _____ ?'",
-      "options": [
-        "you",
-        "I",
-        "she",
-        "them"
-      ],
-      "correctAnswer": "them"
-    },
-    {
-      "type": "gapFill",
-      "template": "Hey, listen to me. Can _____ send me?",
-      "correctAnswers": [
-        "you",
-        "she",
-        "he",
-        "they"
-      ]
-    },
-    {
-      "type": "wordBank",
-      "paragraph": "So there _____ am, pulling into this parking spot at the mall, and another driver is doing the same thing. He's clearly eyeing it too, but I signal to _____ that I spotted it first. As he backs out, he waves at _____, which I appreciate. Meanwhile, you wouldn't believe _____, but a shopping cart rolls in right behind, blocking both of _____. I get out of my car to move it, when five more shopping carts roll over! That's when I see _____. This woman with long red hair, jogging up and shouting to catch my attention because she's been looking for them. Apparently, those carts are part of a new system the mall is testing, and she's responsible for rounding  ______ up. She thanks me for helping her out and even helps me park by guiding me into the tight spot. It turns out, helping her made my day a lot easier too.",
-      "wordBank": [
-        "us",
-        "it",
-        "I",
-        "her",
-        "them",
-        "him",
-        "us",
-        "me"
-      ],
-      "correctAnswers": [
-        "I",
-        "him",
-        "me",
-        "us",
-        "it",
-        "us",
-        "her",
-        "them"
-      ]
-    },
-    {
-      "type": "gapFill",
-      "template": "The story didn't make sense to _____ , so they asked for clarification.",
-      "correctAnswers": [
-        "me",
-        "him",
-        "her",
-        "us",
-        "them",
-        "you",
-        "everyone",
-        "anyone",
-        "nobody",
-        "somebody",
-        "the audience",
-        "the readers",
-        "the listeners",
-        "the viewer",
-        "the teacher",
-        "the students",
-        "the children",
-        "the parents",
-        "the group",
-        "the team",
-        "the jury",
-        "the critics",
-        "the class",
-        "the professor",
-        "the public",
-        "the family",
-        "the workers",
-        "the guests",
-        "the tourists",
-        "the experts",
-        "the police",
-        "the crowd",
-        "the committee",
-        "the locals",
-        "the fans",
-        "the voters",
-        "the man",
-        "the woman",
-        "the boy",
-        "the girl",
-        "the artist",
-        "the author",
-        "the scientist",
-        "the director",
-        "the manager",
-        "the leader",
-        "the coach",
-        "the narrator",
-        "the client",
-        "the customer"
-      ]
-    },
-    {
-      "type": "gapFill",
-      "template": "Can you give ____ my hat please?",
-      "correctAnswers": [
-        "me",
-        "us"
       ]
     }
   ]

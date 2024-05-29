@@ -13,24 +13,24 @@
           "layout":"horizontal",
           "instructions": [
             
-            {"text": "Verbs are words that tell us what someone or something is doing. They are ", "textStyle": "text"},
+            {"text": "Verbs tell us what's happening and what people do, ", "textStyle": "text"},
             {"text": " action words ", "textStyle":"underline"},
             {"text": "like ", "textStyle": "text"},
-            {"text": " run, jump  ", "textStyle": "italic"},
+            {"text": " run, jump  ", "textStyle": "bold"},
             {"text": "and", "textStyle": "text"},
-            {"text": " eat ", "textStyle": "italic"},
-            {"text": "or ", "textStyle": "text"},
+            {"text": " eat", "textStyle": "bold"},
+            {"text": ", or ", "textStyle": "text"},
             {"text": "states ", "textStyle":"underline"},
             {"text": "like", "textStyle": "text"},
-            {"text": " am, is, are, love  ", "textStyle": "italic"},
+            {"text": " am, is, are, love  ", "textStyle": "bold"},
             {"text": " and ", "textStyle": "text"},
-            {"text": " have. ", "textStyle": "italic"},
+            {"text": " have. ", "textStyle": "bold"},
             {"text": "All sentences have a ", "textStyle":"text", "newLine":true},
             {"text": " main  ", "textStyle":"bold"},
-            {"text": " verb, the action or state. Often an auxilliary verb ",  "textStyle":"text"},
+            {"text": " verb, which is the action or state. Many verb tenses require one or more auxilliary verbs ",  "textStyle":"text"},
             {"text": "(aux.) ", "textStyle": "bold"},
             {"text": "is placed before the main verb to change the tense or aspect. For example, present continuous has an aux. verb", "textStyle":"text"},
-            {"text": "(am/is/are) ", "textStyle": "italic"},
+            {"text": "  (am/is/are) ", "textStyle": "italic"},
             {"text": "before the main verb ", "textStyle": "text"},
             {"text": "-ing.", "textStyle": "italic"},
             {"text": "Click on the main verb below", "textStyle": "italic", "newParagraph":true}
@@ -120,12 +120,6 @@
           "correctAnswers": ["s", "d"]
         },
         {
-          "type": "multipleChoice",
-          "question": "We ______ out on weekends when we can.",
-          "options": ["go", "goes", "going", "went"],
-          "correctAnswer": "go"
-        },
-        {
           "type": "gapFill",
           "template": "When Jackie Chan _____ up in the morning, he springs to his feet.",
           "correctAnswers": ["gets", "wakes", "rises", "is"]
@@ -139,7 +133,13 @@
           "imagePath": "A1/3Verbs/4.png",
           "altText": "V. go, stay, play, wait, have, walk, work"
         },
-        
+        {
+          "type":"click",
+          "layout":"horizontal",
+          "instructions": [
+            {"text":" ", "textStyle":"text"}
+          ]
+        },
         {
           "type": "gapFill",
           "template": "I'm learn_____ English.",
