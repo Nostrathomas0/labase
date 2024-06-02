@@ -54,6 +54,12 @@ import image_A2_4CompSupe_4_png from './assets/images/A2/4CompSupe/4.png';
 import image_A2_4CompSupe_5_png from './assets/images/A2/4CompSupe/5.png';
 import image_A2_4CompSupe_6_png from './assets/images/A2/4CompSupe/6.png';
 import image_A2_4CompSupe_7_png from './assets/images/A2/4CompSupe/7.png';
+import image_B1_1PresPerfCont_1_png from './assets/images/B1/1PresPerfCont/1.png';
+import image_B1_1PresPerfCont_2_png from './assets/images/B1/1PresPerfCont/2.png';
+import image_B1_1PresPerfCont_3_png from './assets/images/B1/1PresPerfCont/3.png';
+import image_B1_2PastPerfCont_1_png from './assets/images/B1/2PastPerfCont/1.png';
+import image_B1_2PastPerfCont_2_png from './assets/images/B1/2PastPerfCont/2.png';
+import image_B1_2PastPerfCont_3_png from './assets/images/B1/2PastPerfCont/3.png';
 const imageMap = {
   'A1/1Nouns/1.png': image_A1_1Nouns_1_png,
   'A1/1Nouns/2.png': image_A1_1Nouns_2_png,
@@ -111,6 +117,12 @@ const imageMap = {
   'A2/4CompSupe/5.png': image_A2_4CompSupe_5_png,
   'A2/4CompSupe/6.png': image_A2_4CompSupe_6_png,
   'A2/4CompSupe/7.png': image_A2_4CompSupe_7_png,
+  'B1/1PresPerfCont/1.png': image_B1_1PresPerfCont_1_png,
+  'B1/1PresPerfCont/2.png': image_B1_1PresPerfCont_2_png,
+  'B1/1PresPerfCont/3.png': image_B1_1PresPerfCont_3_png,
+  'B1/2PastPerfCont/1.png': image_B1_2PastPerfCont_1_png,
+  'B1/2PastPerfCont/2.png': image_B1_2PastPerfCont_2_png,
+  'B1/2PastPerfCont/3.png': image_B1_2PastPerfCont_3_png,
 };
 
 export default imageMap;

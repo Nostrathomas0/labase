@@ -8,72 +8,176 @@
           "imagePath": "A2/4CompSupe/1.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
+        "type":"click",
+        "layout":"horizontal", 
+        "instructions":[
+              
+          {
+            "text": "Comparatives are used to compare two things. For example, we say ",
+            "textStyle": "text"
+          },
+          {
+            "text": " 'taller' ",
+            "textStyle": "bold"
+          },
+          {
+            "text": " to compare two heights.",
+            "textStyle": "text",
+            "newLine": true
+          },
+          {
+            "text": "We add ",
+            "textStyle": "text"
+          },
+          {
+            "text": "-er",
+            "textStyle": "bold"
+          },
+          {
+            "text": " to short adjectives like ",
+            "textStyle": "text"
+          },
+          {
+            "text": "'tall'.",
+            "textStyle": "italic"
+          },
+          {
+            "text": " If the adjective is long, like ",
+            "textStyle": "text",
+            "newLine": true
+          },
+          {
+            "text": "'beautiful',",
+            "textStyle": "italic"
+          },
+          {
+            "text": " we use ",
+            "textStyle": "text"
+          },
+          {
+            "text": " 'more' ",
+            "textStyle": "bold"
+          },
+          {
+            "text": "before the adjective: ",
+            "textStyle": "text"
+          },
+          {
+            "text": "'more beautiful'.",
+            "textStyle": "italic"
+          },
+          {
+            "text": " Superlatives are used to compare one thing with all the others in a group.",
+            "textStyle": "text",
+            "newParagraph": true
+          },
+          {
+            "text": "We add ",
+            "textStyle": "text"
+          },
+          {
+            "text": "-est",
+            "textStyle": "bold"
+          },
+          {
+            "text": " to short adjectives: ",
+            "textStyle": "text"
+          },
+          {
+            "text": "'tallest'.",
+            "textStyle": "italic"
+          },
+          {
+            "text": " For long adjectives, we use ",
+            "textStyle": "text",
+            "newLine": true
+          },
+          {
+            "text": " 'the most' ",
+            "textStyle": "bold"
+          },
+          {
+            "text": " before the adjective: ",
+            "textStyle": "text"
+          },
+          {
+            "text": "'the most beautiful'.",
+            "textStyle": "italic"
+          },
+          {
+            "text": "Here are some examples:",
+            "textStyle": "text",
+            "newParagraph": true
+          },
+          {
+            "text": "Comparative: My brother is ",
+            "textStyle": "text"
+          },
+          {
+            "text": "taller",
+            "textStyle": "bold"
+          },
+          {
+            "text": " than me.",
+            "textStyle": "text"
+          },
+          {
+            "text": "Superlative: She is the ",
+            "textStyle": "text",
+            "newLine": true
+          },
+          {
+            "text": "most beautiful",
+            "textStyle": "bold"
+          },
+          {
+            "text": " girl in the class.",
+            "textStyle": "text"
+          },
+          {"text": "1) Click on the comparative words in the sentence below.", "textStyle": "italic", "newParagraph": true}
+        ],
+        "words": [
+          {"text": "Mountains ", "feedback": "No, 'Mountains' is a noun."},
+          {"text": "are ", "feedback": "No, 'are' is a verb."},
+          {"text": "higher ", "feedback": "yes, 'higher' is the comparative adjective."},
+          {"text": "than ", "feedback": "Yes, 'than' is used to compare 2 things."},
+          {"text": "hills.", "feedback": "No, 'hills' is a noun."}
+        ],
+        "keyWords": ["than"]
         },
         {
           "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+          "question": "2) Which word is a comparative adjective?",
+          "options": ["tall", "taller", "tallest", "most tall"],
+          "correctAnswer": "taller"
         },
         {
           "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
+          "template": "3) My house is bigger _____ yours because I have a bigger family _____ you.",
+          "correctAnswers": ["than"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "4) Which word is a superlative adjective?",
+          "options": ["fast", "faster", "fastest", "more fast"],
+          "correctAnswer": "fastest"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "5)He is the ______ player in the team. She is ______ than him.",
+          "wordBank": ["best", "better"],
+          "correctAnswers": ["best", "better"]
         },
         {
           "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
+          "template": "6) This road is ______ than the highway.",
+          "correctAnswers": ["narrower"]
         },
         {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "type": "multipleChoice",
+          "question": "7) Which is the correct form to complete the sentence: 'She is _____ than her sister.'?",
+          "options": ["smart", "smarter", "smartest", "more smart"],
+          "correctAnswer": "smarter"
         }
       ]
     },
@@ -82,6 +186,24 @@
         {
           "type": "imageDisplay",
           "imagePath": "A2/4CompSupe/2.png"
+        },
+        {
+          "type":"click",
+          "layout": "horizontal",
+          "instructions":[
+            {"text": " Comparing things is a natural way to join a conversation. Furthermore, our opinions are both our strength and our vulerability, nonetheless we share our experience of wanting to be the best through our ability to discern and take advantage.", "textStyle":"text" },
+            {"text": "Read above and below and choose the correct  "},
+            {"text": "than " }
+          ],
+          "words":[
+            {"text": "", "feedback": ""},
+            {"text": "", "feedback": ""},
+            {"text": "", "feedback": ""},
+            {"text": "", "feedback": ""},
+            {"text": "", "feedback": ""},
+            {"text": "", "feedback": ""}
+          ],
+          "keyWords":[""]
         },
         {
           "type": "multipleChoice",
@@ -454,6 +576,35 @@
           ],
           "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
           "keyWords": ["__________", "__________", "__________", "__________"]
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A2/4CompSupe/7.png"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "__________",
+          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
+          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+        },
+        {
+          "type":"click",
+          "layout":"horizontal", 
+          "instructions":[
+            {"text": "", "textStyle":""}
+
+          ],
+          "words":[
+            {"text": "", "feedback": ""}
+
+          ],
+          "wordBank":[
+            ""
+          ]
         }
       ]
     }

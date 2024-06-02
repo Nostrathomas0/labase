@@ -1,14 +1,70 @@
 {
-    "topic": "Causitive",
-    "pages": [
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B2/2Causitives/1.png"
-          }
-        ]
-      },
+  "topic": "Causatives",
+  "pages": [
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "B1/Causatives/1.png",
+          "altText": "Image showing a person having their hair cut, caption: 'She had her hair cut.'"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Causatives are used to indicate that one person causes another person to do something.", "textStyle": "text", "newParagraph": true },
+            { "text": "Examples: 'have/get something done'.", "textStyle": "italic" },
+            { "text": "Click on the causative form in the sentence below.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "She ", "feedback": "No, 'She' is a subject pronoun." },
+            { "text": "had ", "feedback": "Yes, 'had' is part of the causative form." },
+            { "text": "her ", "feedback": "No, 'her' is a possessive pronoun." },
+            { "text": "car ", "feedback": "No, 'car' is a noun." },
+            { "text": "repaired.", "feedback": "Yes, 'repaired' is part of the causative form." }
+          ],
+          "keyWords": ["had", "repaired"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which sentence uses a causative correctly?",
+          "options": [
+            "She did her homework.",
+            "She had her homework done.",
+            "She got her homework to do.",
+            "She has been doing her homework."
+          ],
+          "correctAnswer": "She had her homework done."
+        },
+        {
+          "type": "gapFill",
+          "template": "They ______ (get) their house painted last summer.",
+          "correctAnswers": ["got"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "How would you complete this sentence? 'He ______ (have) his car washed.'",
+          "options": [
+            "has",
+            "had",
+            "get",
+            "getting"
+          ],
+          "correctAnswer": "had"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "We ______ our ______ fixed.",
+          "wordBank": ["had", "roof"],
+          "correctAnswers": ["had", "roof"]
+        },
+        {
+          "type": "gapFill",
+          "template": "She ______ (get) her nails done every month.",
+          "correctAnswers": ["gets"]
+        }
+      ]
+    },
       {
         "questions":  [
           {

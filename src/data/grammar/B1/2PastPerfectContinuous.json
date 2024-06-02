@@ -1,26 +1,100 @@
 {
-    "topic": "Past Perfect Continuous",
-    "pages": [
+  "topic": "Past Perfect Continuous",
+  "pages": [
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "B1/2PastPerfCont/1.png",
+          "altText": "Image showing a person looking tired, caption: 'He had been working for 10 hours.'"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Past Perfect Continuous ", "textStyle": "bold"}, 
+            { "text": "is used to describe actions that were ongoing in the past before another past action.", "textStyle": "text", "newParagraph": true },
+            { "text": "It is formed using 'had been' + 'verb-ing'.", "textStyle": "text" },
+            { "text": "Example: 'She had been studying.'", "textStyle": "italic" },
+            { "text": "Click on the past perfect continuous form in the sentence below.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "They ", "feedback": "No, 'They' is a subject pronoun." },
+            { "text": "had ", "feedback": "No, 'had' is an auxiliary verb." },
+            { "text": "been ", "feedback": "Yes, 'been' is part of the past perfect continuous form." },
+            { "text": "playing ", "feedback": "Yes, 'playing' is part of the past perfect continuous form." },
+            { "text": "before ", "feedback": "No, 'before' is a conjunction." },
+            { "text": "dinner.", "feedback": "No, 'dinner' is a noun." }
+          ],
+          "keyWords": ["been", "playing"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which sentence is in the past perfect continuous tense?",
+          "options": [
+            "She worked here.",
+            "She had worked here.",
+            "She was working here.",
+            "She had been working here."
+          ],
+          "correctAnswer": "She had been working here."
+        },
+        {
+          "type": "gapFill",
+          "template": "They ______ (live) there for many years before they moved.",
+          "correctAnswers": ["had been living"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "How long ______ (you/wait) before the bus arrived?",
+          "options": [
+            "had you been waiting",
+            "were you waiting",
+            "did you wait",
+            "have you been waiting"
+          ],
+          "correctAnswer": "had you been waiting"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "She ______ been ______ all day before the guests arrived.",
+          "wordBank": ["had", "been", "cooking"],
+          "correctAnswers": ["had", "been", "cooking"]
+        },
+        {
+          "type": "gapFill",
+          "template": "We ______ (travel) for hours before we reached the hotel.",
+          "correctAnswers": ["had been traveling"]
+        }
+      ]
+    },
+ 
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
-            "imagePath": "B1/2PastPerfCont/1.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B1/2PastPerfCont/2.png"
+          },
+          {
+            "type":"click",
+            "instructions":[
+              {"text":"", "textStyle": ""},
+              {"text":"", "textStyle": ""},
+              {"text":"", "textStyle": ""},
+              {"text":"", "textStyle": ""},
+              {"text":"", "textStyle": ""},
+              {"text":"", "textStyle": ""},
+              {"text":"", "textStyle": ""}
+            ],
+            "words":[],
+            "keyWords":[]
           }
         ]
       },
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B1/2PastPerfCont/3.png"
           }
         ]
@@ -28,8 +102,39 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
+            "layout": "vertical",
             "imagePath": "B1/2PastPerfCont/4.png"
+          },
+          {
+            "type":"click",
+            "instructions":[
+              {"text": "To decode it's behaviour, use the same formula as any tense, which starts with a time", "textStyle":"text"},
+              {"text": " past ", "textStyle":"bold"},
+              {"text": " which has a form, but not a verb. It gives that form to the next part, an aspect; ", "textStyle":"text"},
+              {"text": " perfect ", "textStyle":"bold"},
+              {"text": " which has both a verb, ", "textStyle":"text"},
+              {"text": " have ", "textStyle":"underline"},
+              {"text": " and a form, (3).", "textStyle":"text"},
+              {"text": " Have ", "textStyle":"bold"},
+              {"text": "is formed in the past form ", "textStyle":"text"},
+              {"text": " had ", "textStyle":"underline"},
+              {"text": " and the form moves on to modify the next verb, ", "textStyle":"text"},
+              {"text": " be ", "textStyle":"underline"},
+              {"text": " which changes to form 3 ", "textStyle":"text"},
+              {"text": " What's ", "textStyle":"italic", "newParagraph":true},
+              {"text": " be ", "textStyle":"bold"},
+              {"text": " in form 3?", "textStyle":"italic"}
+            ],
+            "words": [ 
+              {"text": "am", "feedback": "No, that's form 1, 1st person singular"},
+              {"text": "is", "feedback": "No, that's form 1, 3rd person singular"},
+              {"text": "are", "feedback": "No that's form 1"},
+              {"text": "was", "feedback": "No that's form 2"},
+              {"text": "were", "feedback": "No that's form 2"},
+              {"text": "been", "feedback": "Yes that's form 3"}
+          ],
+            "keyWords":["been"]
           }
         ]
       }

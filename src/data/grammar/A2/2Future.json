@@ -11,20 +11,40 @@
         {
           "type":"click",
           "instructions": [
-            {"text": "The future isn't certain but we can promise with ", "textStyle":"text" },
+            {"text": "The future isn't certain but we can make promises with ", "textStyle":"text" },
             {"text": "will ", "textStyle":"bold"},
             {"text": "before the root form of the verb.", "textStyle":"text"}, 
-            {"text": "Click on the root verb below.", "textStyle":"italic", "newParagraph":true}
+            
+            {"text": "1) Click on the root verb below.", "textStyle":"italic", "newParagraph":true}
           ],
-          "words": ["The ", "sun ", "will ", "come ", "up ", "tomorrow."],
+          "words": [
+          {"text": "The ", "feedback": "Nope that's the 'definite article'"},
+          {"text": "sun ", "feedback":  " Nope that's a 'noun'"},
+          {"text": "will ", "feedback": "Nope that's the 'modal verb'"},
+          {"text": "come ", "feedback":  "Yup, that's the main verb in its root form."},
+          {"text": "up ", "feedback": "Sure that's part of the 'verb '"},
+          {"text": "tomorrow.", "feedback":"Nope that's the 'adverb of time'"}
+        ],
+     
           "keyWords": ["come "]
         },
         {
+          "type": "multipleChoice",
+          "question": "To make a promise, use 'will' like in the sentence 'I will always be your friend.' For offers, say something like 'I will give you a ride home.' When making a bet, you might say, 'I will bet $5 on that game.' For challenges, you could say, 'I will race you to the end of the street.' 2) Why do we use will? Make one choice below.",
+          "options": ["promises", "offers", "impulsive bets", "challenges", "all these beside right", "hour"],
+          "correctAnswer": "all these beside right" 
+        },
+        {
           "type": "wordBank",
-          "paragraph": "Put the words in the correct order.",
-          "wordBank": ["a", "bring", "wine", "they", "will", "bottle", "of"],
-          "correctAnswers": ["they", "will", "bring", "a", "bottle", "of", "wine"]
-         }
+          "paragraph": "3) Put the sentence in the correct order.",
+          "wordBank": ["a", "bring", "wine", ".", "They", "will", "bottle", "of"],
+          "correctAnswers": ["They", "will", "bring", "a", "bottle", "of", "wine", "."]
+         },
+         {
+          "type": "gapFill",
+          "template": "4) I _____ help you with that project tomorrow.",
+          "correctAnswers": ["will", "'ll", "can", "can't", "should", "might", "might be able to", "might not be able to", "won't", "shouldn't", "won't be able to", "will not be able to", "shall"]
+        }
       ]
     },
     {
@@ -36,33 +56,43 @@
         {
           "type":"click",
           "instructions":[
-            {"text": "conjunctions", "textStyle":"bold"},
-            {"text": "words using an apostrophe to glom two words together"},
-            {"text": "there were nine conjunctions written on the board: I'm, won't, I'll, you'll, he'd, we've, they're, musn't, I've, he'd, shouldn't, I'd've ", "textStyle":"italic"},
-            {"text": "Will and other modals have some special powers to make 1 word out of 2. Use it after a subject pronoun like", "textStyle":"text", "newParagraph":true},
-            {"text": "I, you, we, he, she, it ", "textStyle":"italic"},
-            {"text": "or", "textStyle":"text"},
-            {"text": " they, ", "textStyle":"italic"},
-            {"text": " and you can drop the ","textStyle":"text"},
-            {"text": " wi", "textStyle":"bold"},
+            {"text": " Conjunctions ", "textStyle":"bold"},
+            {"text": " use an apostrophe to put two words together.", "textStyle":"text"},
+            {"text": " There are nine conjunctions written on the board above: I'm, won't, I'll, you'll, he'd, we've, they're, musn't, I've, he'd, shouldn't, ", "textStyle":"italic", "newLine":true},
+            {"text": " Will and other modals have some special powers to make one word out of two. Use it after a subject pronoun like", "textStyle":"text", "newParagraph":true},
+            {"text": " I, you, we, he, she, it ", "textStyle":"italic"},
+            {"text": " or ", "textStyle":"text"},
+            {"text": " they. ", "textStyle":"italic"},
+            {"text": " - ","textStyle":"text"},
+            {"text": " wi", "textStyle":"strike"},
             {"text": " , add an apostrophie ", "textStyle":"text"},
             {"text": " ' ", "textStyle":"bold"},
-            {"text": " , and press  the subject pronoun into the, ", "textStyle":"text"},
-            {"text": "ll", "textStyle":"bold"},
-            {"text": "to make 1 word out of 2 ", "textStyle":"text"},
-            {"text": "I'll, you'll, we'll, he'll, she'll, it'll ", "textStyle":"bold"},
-            {"text": "and", "textStyle":"text"},
-            {"text": "they'll", "textStyle":"bold"},
-            {"text": ". To make a negative form, just take the ", "textStyle":"text"},
-            {"text": "w", "textStyle":"bold"},
-            {"text": "and add", "textStyle":"text"},
-            {"text": "on't", "textStyle":"bold"},
-            {"text": " to make ", "textStyle":"text"},
-            {"text": "won't", "textStyle":"bold"},
-            {"text": "Click the conjunctions", "textStyle":"italic"}
+            {"text": " , and add ", "textStyle":"text"},
+            {"text": "'ll", "textStyle":"bold"},
+            {"text": " on the subject, to make one word out of two. ", "textStyle":"text"},
+            {"text": "I'll, you'll, we'll, he'll, she'll, it'll ", "textStyle":"bold", "newParagraph":true},
+            {"text": "and ", "textStyle":"text"},
+            {"text": " they'll.", "textStyle":"bold"},
+            {"text": " The negative form is ", "textStyle":"text", "newParagraph":true},
+            {"text": " won't ", "textStyle":"bold"},
+            {"text": " which uses the morpheme ", "textStyle":"text"},
+            {"text": " n't", "textStyle":"bold"},
+            {"text": " at the end of most negative modals. ", "textStyle":"text"},
+            {"text": "1) Click the conjunctions", "textStyle":"italic", "newParagraph":true}
             ],
-          "words":["", ""],
-          "keyWords":[""]
+            "words": [
+              {"text": "The", "feedback":"No, the is not a conjunction"},
+              {"text": "guy ", "feedback":"No, guy is not a conjunction"},
+              {"text": "can't", "feedback": "Yes, can't is a conjunction of can not."},
+              {"text": "even", "feedback": "Nope, not even"}
+            ],
+            "keyWords":["can't"]       
+        },
+        {
+          "type":"multipleChoice",
+          "question": "2) What are conjunctions usually made of?",
+          "options":["plural nouns and action verbs", "not, modal verbs and pronouns", "articles and adjectives"],
+          "correctAnswer": "not, modal verbs and pronouns"
         }
       ]
     },
@@ -76,26 +106,38 @@
           "type":"click", 
           "instructions":[
             {"text": "You are free to use ", "textStyle":"text"},
-            {"text": "will ", "textStyle":"bold"},
-            {"text": "or ", "textStyle":"text"},
-            {"text": "going to", "textStyle":"bold"},
+            {"text": " will ", "textStyle":"bold"},
+            {"text": " or ", "textStyle":"text"},
+            {"text": " going to", "textStyle":"bold"},
             {"text": " when making predictions about the future. ", "textStyle":"text"},
             {"text": "If there are dark, grey clouds in the sky, you can say either ", "textStyle":"text", "newLine":true},
             {"text": " It will rain. ", "textStyle":"italic", "newLine":true},
             {"text": " or ", "textStyle":"text", "newLine":true},
-            {"text": " It's going to rain.", "textStyle":"italic", "newParagraph":true},
-            {"text": "Other uses are hard rules, for example, when offering something like a challenge, it would sound wrong to say,  ", "textStyle":"text"},
-            {"text": "I'm going to race you home", "textStyle":"italic"},
-            {"text": " or ", "textStyle":"text"},
-            {"text": "I'm going to bet* I beat** you to the next town", "textStyle":"italic"},
+            {"text": " It's going to rain.", "textStyle":"italic", "newLine":true},
+            {"text": " Other rules are harder, for example, when offering a challenge, it sounds wrong to say,  ", "textStyle":"text", "newLine":true},
+            {"text": " I'm going to be bet you the next card is higher than an 8", "textStyle":"italic"},
+            {"text": " or it would be weird for a cyclist to say to another cyclist, ", "textStyle":"text"},
+            {"text": "I'm going to bet* I beat** you to the next town.", "textStyle":"italic", "newLine":true},
+       
             {"text": "bet (verb): to challenge someone, and offer money to the winner", "textStyle":"italic", "newParagraph":true},
-            {"text": "beat (verb): win a race or other contest", "textStyle":"italic"}
+            {"text": "beat (verb): win a race or other contest", "textStyle":"italic"},
+            {"text": "Here we have a pair of words that contain the same sounds save the vowel sound. This is a useful minimal pair and we should listen and repeat minimal pairs to hone our vowel sounds learning language.", "newLine":true},
+            {"text": "Click on the promise", "textStyle":"italic", "newParagraph":true}
           ],
-          "words": [],
-          "keyWords":[]
+          "words":[
+            {"text": "I will help you with your homework.", "feedback": "Yes, this is a promise."},
+            {"text": "Will you marry me?", "feedback": "No, this is a question."},
+            {"text": "I will bet you $10 that it will rain tomorrow.", "feedback": "No, this is a bet."},
+            {"text": "I will definitely call you tonight.", "feedback": "Yes, this is a promise."}
+          ],
+          "keyWords": [
+            "I will help you with your homework.",
+            "I will definitely call you tonight."
+          ]
         },
         {
-
+          "type":"gapFill",
+          "template": "He __"
         }
       ]
     },

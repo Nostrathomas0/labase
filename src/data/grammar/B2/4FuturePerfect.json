@@ -1,14 +1,70 @@
 {
-    "topic": "Future Perfect",
-    "pages": [
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B2/4FuturePerf/1.png"
-          }
-        ]
-      },
+  "topic": "Modals of Probability",
+  "pages": [
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "B1/ModalsOfProbability/1.png",
+          "altText": "Image showing a person thinking, caption: 'He might be at the library.'"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Modals of probability are used to show how certain we are about something.", "textStyle": "text", "newParagraph": true },
+            { "text": "Examples: must, might, could, may, can't.", "textStyle": "italic" },
+            { "text": "Click on the modal verb in the sentence below.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "She ", "feedback": "No, 'She' is a subject pronoun." },
+            { "text": "must ", "feedback": "Yes, 'must' is a modal verb." },
+            { "text": "be ", "feedback": "No, 'be' is a verb." },
+            { "text": "very ", "feedback": "No, 'very' is an adverb." },
+            { "text": "tired.", "feedback": "No, 'tired' is an adjective." }
+          ],
+          "keyWords": ["must"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which sentence uses a modal of probability?",
+          "options": [
+            "She can swim.",
+            "She must be at work.",
+            "She is swimming.",
+            "She was swimming."
+          ],
+          "correctAnswer": "She must be at work."
+        },
+        {
+          "type": "gapFill",
+          "template": "They ______ (might/could) come to the party.",
+          "correctAnswers": ["might"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "How would you complete this sentence? 'He ______ (must/might) be the new teacher.'",
+          "options": [
+            "must",
+            "might",
+            "is",
+            "can"
+          ],
+          "correctAnswer": "must"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "She ______ be ______ home.",
+          "wordBank": ["must", "at"],
+          "correctAnswers": ["must", "at"]
+        },
+        {
+          "type": "gapFill",
+          "template": "They ______ (could/must) be waiting outside.",
+          "correctAnswers": ["could"]
+        }
+      ]
+    },
       {
         "questions":  [
           {
