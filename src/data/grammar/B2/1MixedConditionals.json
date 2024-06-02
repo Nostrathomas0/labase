@@ -1,14 +1,76 @@
 {
-    "topic": "Mixed Conditionals",
-    "pages": [
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B2/1MixedCond/1.png"
-          }
-        ]
-      },
+  "topic": "Mixed Conditionals",
+  "pages": [
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "B1/MixedConditionals/1.png",
+          "altText": "Image showing a person regretting a past action, caption: 'If I hadn't made that mistake, I would be happy now.'"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Mixed conditionals are used to talk about a past condition with a present result or a present condition with a past result.", "textStyle": "text", "newParagraph": true },
+            { "text": "Examples: 'If I had studied, I would have a good job now.'", "textStyle": "italic" },
+            { "text": "Click on the mixed conditional form in the sentence below.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "If ", "feedback": "No, 'If' is a conjunction." },
+            { "text": "I ", "feedback": "No, 'I' is a subject pronoun." },
+            { "text": "had ", "feedback": "Yes, 'had' is part of the mixed conditional form." },
+            { "text": "taken ", "feedback": "Yes, 'taken' is part of the mixed conditional form." },
+            { "text": "the ", "feedback": "No, 'the' is a definite article." },
+            { "text": "job,", "feedback": "No, 'job' is a noun." },
+            { "text": "I ", "feedback": "No, 'I' is a subject pronoun." },
+            { "text": "would ", "feedback": "Yes, 'would' is part of the mixed conditional form." },
+            { "text": "be ", "feedback": "Yes, 'be' is part of the mixed conditional form." },
+            { "text": "rich ", "feedback": "No, 'rich' is an adjective." },
+            { "text": "now.", "feedback": "No, 'now' is an adverb." }
+          ],
+          "keyWords": ["had", "taken", "would", "be"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which sentence is a mixed conditional?",
+          "options": [
+            "If it rains, we will stay inside.",
+            "If I had known, I would have told you.",
+            "If I were rich, I would travel the world.",
+            "If she had studied, she would be successful now."
+          ],
+          "correctAnswer": "If she had studied, she would be successful now."
+        },
+        {
+          "type": "gapFill",
+          "template": "If he ______ (be) more careful, he would have avoided the accident.",
+          "correctAnswers": ["had been"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "How would you complete this sentence? 'If I ______ (know) about the meeting, I would be there now.'",
+          "options": [
+            "had known",
+            "knew",
+            "know",
+            "have known"
+          ],
+          "correctAnswer": "had known"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "If they ______ known, they ______ have helped.",
+          "wordBank": ["had", "would"],
+          "correctAnswers": ["had", "would"]
+        },
+        {
+          "type": "gapFill",
+          "template": "She would be more successful if she ______ (study) harder in school.",
+          "correctAnswers": ["had studied"]
+        }
+      ]
+    },
       {
         "questions":  [
           {

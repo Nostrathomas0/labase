@@ -1,38 +1,143 @@
 {
-    "topic": "Present Perfect Continuous",
-    "pages": [
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B1/1PresPerfCont/1.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B1/1PresPerfCont/2.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B1/1PresPerfCont/3.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B1/1PresPerfCont/4.png"
-          }
-        ]
-      }
+  "topic": "Present Perfect Continuous",
+  "pages": [
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "B1/1PresPerfCont/1.png",
+          "altText": "Image showing people exercising, caption: 'They have been running for 30 minutes.'"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Present Perfect Continuous ", "textStyle": "bold"}, 
+            { "text": " is used to describe actions that started in the past and are still continuing or have recently stopped.", "textStyle": "text"},
+            { "text": "It is formed using 'have/has been' + 'verb-ing'.", "textStyle": "text" },
+            { "text": "She has been reading all morning and she's ready for a break.", "textStyle": "italic", "newLine":true },
+            { "text": "1) Click on the present perfect continuous form in the sentence below.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "He ", "feedback": "No, 'He' is a subject pronoun." },
+            { "text": "has ", "feedback": "No, 'has' is an auxiliary verb." },
+            { "text": "been ", "feedback": "Yes, 'been' is part of the present perfect continuous form." },
+            { "text": "studying ", "feedback": "Yes, 'studying' is part of the present perfect continuous form." },
+            { "text": "since ", "feedback": "No, 'since' is a preposition." },
+            { "text": "morning.", "feedback": "No, 'morning' is a noun." }
+          ],
+          "keyWords": ["been", "studying"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "2) Which sentence is in the present perfect continuous tense?",
+          "options": [
+            "I read a book.",
+            "I have read a book.",
+            "I am reading a book.",
+            "I have been reading a book."
+          ],
+          "correctAnswer": "I have been reading a book."
+        },
+        {
+          "type": "gapFill",
+          "template": "3) She ______ (work) here for five years.",
+          "correctAnswers": ["has been working"]
+        },
+        
+        {
+          "type": "gapFill",
+          "template": "4) We ______ (study) for hours.",
+          "correctAnswers": ["have been studying"]
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "B1/1PresPerfCont/2.png",
+          "altText": "Image showing people exercising, caption: 'They have been running for 30 minutes.'"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": " Perfect + Continuous (Progressiven) tenses have a mixture of time, and both of the aspects, ", "textStyle": "text"},
+            { "text": " perfect", "textStyle": "bold" },
+            { "text": " and ", "textStyle": "text" },
+            { "text": " progressive", "textStyle": "bold" },
+            { "text": ". In these cases we can decode their behaviour by reading their name from left to right.", "textStyle": "text" },
+            { "text": " Present  ", "textStyle": "underline" },
+            { "text": " + Perfect; The Present tense, ", "textStyle": "text" },
+            { "text": " verb 1 ", "textStyle": "underline" },
+            { "text": " as the perfect verb, always use have", "textStyle": "text" },
+            { "text": " has ", "textStyle": "bold" },
+            { "text": " for  ", "textStyle": "text" },
+            { "text": " he, she, it ", "textStyle": "italic" },
+            { "text": " and  ", "textStyle": "text" },
+            { "text": " have", "textStyle": "bold" },
+            { "text": " for other subject. ", "textStyle": "text" },
+            { "text": " Next let's look at", "textStyle": "text", "newParagraph":true },
+            { "text": " perfect + continuous. ", "textStyle": "underline" },
+            { "text": " Here we go left to right again. We must now couple the perfect form to the progressive verb ", "textStyle": "text" },
+            { "text": " be ", "textStyle": "underline" },
+            { "text": " in form ", "textStyle": "text" },
+            { "text": " verb 3 ", "textStyle": "italic" },
+            { "text": " hence ", "textStyle": "text" },
+            { "text": " being", "textStyle": "bold" },
+            { "text": ". Remember that in question form, the syntax chain changes from {Sub +Perf +Prog Main} to {+Perf Sub +Prog Main}, because English syntax is rigid, but conjugation ", "textStyle": "text" },
+            { "text": " slots ", "textStyle": "italic" },
+            { "text": " coupling with times and aspects offers a narrowly repeatable phrase; ", "textStyle": "text" },
+            { "text": " have been.", "textStyle": "italic" },
+            { "text": "1) Click on the parts of the Present Perfect Continuous form. ", "textStyle": "text", "newParagraph":true }
+          ],
+          "words": [
+            { "text": "They ", "feedback": "No, 'They' is a subject pronoun." },
+            { "text": "have ", "feedback": "No, 'have' is an auxiliary verb." },
+            { "text": "been ", "feedback": "Yes, 'been' is part of the past perfect continuous form." },
+            { "text": "practicing ", "feedback": "Yes, 'practicing' is part of the past perfect continuous form." },
+            { "text": "a lot ", "feedback": "No, 'a lot' is a partitive determiner." },
+            { "text": "lately.", "feedback": "No, 'lately' is a noun." }
+          ],
+            "keyWords": ["been"]
+          
+        },
+        {
+          "type": "multipleChoice",
+          "question": "2) How long ______ (you/live) here?",
+          "options": [
+            "have you been living",
+            "are you living",
+            "did you live",
+            "do you live"
+          ],
+          "correctAnswer": "have you been living"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "3) They ______ been ______ in the garden all afternoon.",
+          "wordBank": ["have", "been", "working"],
+          "correctAnswers": ["have", "been", "working"]
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "B1/1PresPerfCont/3.png"
+        }
+      ]
+    },
+    {
+      "questions":  [
+        {
+          "type": "imageDisplay",
+          "imagePath": "B1/1PresPerfCont/4.png"
+        }
+      ]
+    }
     ]
   }
   
