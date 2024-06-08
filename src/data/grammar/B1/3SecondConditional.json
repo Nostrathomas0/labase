@@ -5,7 +5,7 @@
         "questions": [
           {
             "type": "imageDisplay",
-            "imagePath": "B1/SecondConditional/1.png",
+            "imagePath": "B1/3SecCond/1.png",
             "altText": "Image illustrating the second conditional."
           },
           {
@@ -123,7 +123,8 @@
         "questions":  [
           {
             "type": "ImageDisplay",
-            "imagePath": "B1/3SecCond/2.png"
+            "imagePath": "B1/3SecCond/2.png",
+            "altText": "Image illustrating the second conditional."
           },
           {
             "type": "click",

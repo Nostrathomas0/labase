@@ -104,11 +104,13 @@
             "instructions":[
               {"text":"Past Perfect Continuous ", "textStyle": "bold"},
               {"text":" is mostly used in complex sentences with  ", "textStyle": "text"},
-              {"text":" past perfect continuous ", "textStyle": "bold"},
+              {"text":" past simple ", "textStyle": "bold"},
               {"text":" and ", "textStyle": "text"},
               {"text":" an adverb phrase ", "textStyle": "text"},
               {"text": "to show time, for example ", "textStyle": "text"},
-              {"text":" before, for a year, as a child or last summer. ", "textStyle": "underline"},
+              {"text":" before, for a year, as a child", "textStyle": "underline"},
+              {"text":" or ", "textStyle": "text"},
+              {"text":" last summer. ", "textStyle": "underline"},
               {"text":" Click the clause that completes the sentence. ", "textStyle": "italic", "newParagraph":true},
               {"text":" More than three generations had been fighting in the hundred years war before ", "textStyle": ""}
             ],

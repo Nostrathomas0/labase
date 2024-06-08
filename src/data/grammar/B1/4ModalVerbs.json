@@ -5,7 +5,7 @@
       "questions": [
         {
           "type": "imageDisplay",
-          "imagePath": "B1/ModalVerbs/1.png",
+          "imagePath": "B1/4ModalVerbs/1.png",
           "altText": "Image showing various road signs, caption: 'You must stop at a stop sign.'"
         },
         {

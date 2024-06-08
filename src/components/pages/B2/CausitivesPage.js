@@ -1,12 +1,12 @@
 //Causitives.js 
 import React, { useState, useEffect, useCallback } from 'react';
-import CausitiveData from '../../../data/grammar/B2/2Causitive.json';
+import CausitivesData from '../../../data/grammar/B2/2Causitives.json';
 import GrammarTopic from '../../GrammarTopic';
 import PageTurner from '../../common/PageTurner'
 
-const CausitivePage = () => {
+const CausitivesPage = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const { pages } = CausitiveData;
+  const { pages } = CausitivesData;
   useEffect(() => {
     console.log(`Current Page: ${currentPage}`);
     console.log(`Current Questions:`, pages[currentPage]?.questions);
@@ -28,7 +28,7 @@ const CausitivePage = () => {
 
   return (
     <div>
-      <h1>Causitive</h1>
+      <h1>Causitives</h1>
       <GrammarTopic contentData={currentQuestions || []} />
       <PageTurner
         currentPage={currentPage + 1}
@@ -40,4 +40,4 @@ const CausitivePage = () => {
   );
 };
 
-export default CausitivePage;
+export default CausitivesPage;

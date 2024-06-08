@@ -1,33 +1,33 @@
 {
-  "topic": "Causatives",
+  "topic": "Causitives",
   "pages": [
     {
       "questions": [
         {
           "type": "imageDisplay",
-          "imagePath": "B2/2Causatives/1.png",
+          "imagePath": "B2/2Causitives/1.png",
           "altText": "Image showing a person having their hair cut, caption: 'She had her hair cut.'"
         },
         {
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            { "text": "Causatives are used to indicate that one person causes another person to do something.", "textStyle": "text", "newParagraph": true },
+            { "text": "causitives are used to indicate that one person causes another person to do something.", "textStyle": "text", "newParagraph": true },
             { "text": "Examples: 'have/get something done'.", "textStyle": "italic" },
-            { "text": "Click on the causative form in the sentence below.", "textStyle": "italic", "newParagraph": true }
+            { "text": "Click on the causitive form in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
           "words": [
             { "text": "She ", "feedback": "No, 'She' is a subject pronoun." },
-            { "text": "had ", "feedback": "Yes, 'had' is part of the causative form." },
+            { "text": "had ", "feedback": "Yes, 'had' is part of the causitive form." },
             { "text": "her ", "feedback": "No, 'her' is a possessive pronoun." },
             { "text": "car ", "feedback": "No, 'car' is a noun." },
-            { "text": "repaired.", "feedback": "Yes, 'repaired' is part of the causative form." }
+            { "text": "repaired.", "feedback": "Yes, 'repaired' is part of the causitive form." }
           ],
           "keyWords": ["had", "repaired"]
         },
         {
           "type": "multipleChoice",
-          "question": "Which sentence uses a causative correctly?",
+          "question": "Which sentence uses a causitive correctly?",
           "options": [
             "She did her homework.",
             "She had her homework done.",
@@ -68,7 +68,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B2/2Causitives/2.png"
           }
         ]
@@ -76,7 +76,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B2/2Causitives/3.png"
           }
         ]
@@ -84,7 +84,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B2/2Causitives/4.png"
           }
         ]
