@@ -2,18 +2,162 @@
     "topic": "2nd Conditional",
     "pages": [
       {
-        "questions":  [
+        "questions": [
           {
-            "type": "ImageDisplay",
-            "imagePath": "B1/3SecCond/1.png"
+            "type": "imageDisplay",
+            "imagePath": "B1/SecondConditional/1.png",
+            "altText": "Image illustrating the second conditional."
+          },
+          {
+            "type": "click",
+            "layout": "horizontal",
+            "instructions": [
+              {"text": "The second conditional is used to talk about hypothetical situations. For example:", "textStyle": "text"},
+              {"text": " If I won the lottery, I would travel the world.", "textStyle": "italic", "newParagraph": true},
+              {"text": " Click on the verbs in the second conditional sentence.", "textStyle": "italic", "newParagraph": true}
+            ],
+            "words": [
+              {"text": "If", "feedback": "No, 'If' is a conjunction."},
+              {"text": "I", "feedback": "No, 'I' is a pronoun."},
+              {"text": "won", "feedback": "Yes, 'won' is a verb."},
+              {"text": "the", "feedback": "No, 'the' is an article."},
+              {"text": "lottery,", "feedback": "No, 'lottery' is a noun."},
+              {"text": "I", "feedback": "No, 'I' is a pronoun."},
+              {"text": "would", "feedback": "Yes, 'would' is part of the verb phrase."},
+              {"text": "travel", "feedback": "Yes, 'travel' is a verb."},
+              {"text": "the", "feedback": "No, 'the' is an article."},
+              {"text": "world.", "feedback": "No, 'world' is a noun."}
+            ],
+            "keyWords": ["won", "would", "travel"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which sentence is in the second conditional?",
+            "options": [
+              "If I see him, I will tell him.",
+              "If I were you, I would apologize.",
+              "If she had studied, she would have passed.",
+              "If it rains, we will cancel the trip."
+            ],
+            "correctAnswer": "If I were you, I would apologize."
+          },
+          {
+            "type": "gapFill",
+            "template": "If I _____ (have) a million dollars, I would travel the world.",
+            "correctAnswers": ["had"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Identify the second conditional sentence.",
+            "options": [
+              "If he called, I would answer.",
+              "If he calls, I will answer.",
+              "If he had called, I would have answered.",
+              "If he calls, I answer."
+            ],
+            "correctAnswer": "If he called, I would answer."
+          },
+          {
+            "type": "gapFill",
+            "template": "She would be happier if she _____ (get) a new job.",
+            "correctAnswers": ["got"]
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "If I _____ (be) you, I would take that opportunity. If they _____ (know) about the problem, they would help.",
+            "wordBank": ["were", "knew"],
+            "correctAnswers": ["were", "knew"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which of these sentences is correct?",
+            "options": [
+              "If I won the lottery, I will buy a car.",
+              "If I win the lottery, I would buy a car.",
+              "If I won the lottery, I would buy a car.",
+              "If I would win the lottery, I would buy a car."
+            ],
+            "correctAnswer": "If I won the lottery, I would buy a car."
+          },
+          {
+            "type": "gapFill",
+            "template": "If we _____ (have) more time, we would visit the museum.",
+            "correctAnswers": ["had"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Choose the correct second conditional sentence:",
+            "options": [
+              "If she were here, she will help us.",
+              "If she is here, she would help us.",
+              "If she were here, she would help us.",
+              "If she was here, she will help us."
+            ],
+            "correctAnswer": "If she were here, she would help us."
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "If he _____ (be) more careful, he wouldn't have so many accidents. If I _____ (have) a car, I would drive to work.",
+            "wordBank": ["were", "had"],
+            "correctAnswers": ["were", "had"]
+          },
+          {
+            "type": "gapFill",
+            "template": "They _____ (not/make) so many mistakes if they were more focused.",
+            "correctAnswers": ["wouldn't make"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which sentence correctly uses the second conditional?",
+            "options": [
+              "If she was here, she will help.",
+              "If she were here, she would help.",
+              "If she is here, she would help.",
+              "If she were here, she will help."
+            ],
+            "correctAnswer": "If she were here, she would help."
           }
         ]
-      },
+      },  
       {
         "questions":  [
           {
             "type": "ImageDisplay",
             "imagePath": "B1/3SecCond/2.png"
+          },
+          {
+            "type": "click",
+            "layout": "horizontal",
+            "instructions": [
+              {"text": "The second conditional is used to talk about hypothetical situations. ", "textStyle": "text"},
+              {"text": " Click on the part of the sentence that shows the hypothetical condition. ", "textStyle": "italic"}
+            ],
+            "words": [
+              {"text": "If I won the lottery,", "feedback": "Correct! This is the hypothetical condition."},
+              {"text": "I would buy a house.", "feedback": "Incorrect. This shows the result of the condition."}
+            ],
+            "keyWords": ["If I won the lottery,"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which sentence is in the second conditional?",
+            "options": [
+              "If I win the lottery, I will buy a house.",
+              "If I won the lottery, I would buy a house.",
+              "If I had won the lottery, I would have bought a house."
+            ],
+            "correctAnswer": "If I won the lottery, I would buy a house."
+          },
+          {
+            "type": "gapFill",
+            "template": "If I _____ (be) you, I would take that job.",
+            "correctAnswers": ["were"]
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "If it _____ (rain) tomorrow, we would cancel the picnic.",
+            "wordBank": ["rains", "rained", "will rain", "rain"],
+            "correctAnswers": ["rained"]
           }
         ]
       },

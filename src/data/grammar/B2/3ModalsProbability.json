@@ -2,10 +2,99 @@
     "topic": "Modals of Probability",
     "pages": [
       {
-        "questions":  [
+        "questions": [
           {
-            "type": "ImageDisplay",
-            "imagePath": "B2/3ModalsProb/1.png"
+            "type": "imageDisplay",
+            "imagePath": "B2/3ModalVerbs/1.png",
+            "altText": "Image illustrating modal verbs."
+          },
+          
+          {
+            "type": "multipleChoice",
+            "question": "Which sentence uses a modal verb?",
+            "options": [
+              "She is going to the store.",
+              "She will go to the store.",
+              "She goes to the store.",
+              "She went to the store."
+            ],
+            "correctAnswer": "She will go to the store."
+          },
+          {
+            "type": "gapFill",
+            "template": "You _____ (should/must) see a doctor if you're feeling sick.",
+            "correctAnswers": ["should"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Identify the sentence with a modal verb.",
+            "options": [
+              "He can play the guitar.",
+              "He plays the guitar.",
+              "He played the guitar.",
+              "He is playing the guitar."
+            ],
+            "correctAnswer": "He can play the guitar."
+          },
+          {
+            "type": "gapFill",
+            "template": "She _____ (could/will) arrive late due to traffic.",
+            "correctAnswers": ["could"]
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "You _____ (should) finish your homework before you go out. He _____ (might) be the best player on the team.",
+            "wordBank": ["should", "might"],
+            "correctAnswers": ["should", "might"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which of these sentences is correct?",
+            "options": [
+              "I can to swim.",
+              "I can swim.",
+              "I can swimming.",
+              "I can swam."
+            ],
+            "correctAnswer": "I can swim."
+          },
+          {
+            "type": "gapFill",
+            "template": "We _____ (must/can) be quiet in the library.",
+            "correctAnswers": ["must"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Choose the correct sentence with a modal verb:",
+            "options": [
+              "She will to visit us.",
+              "She will visit us.",
+              "She will visiting us.",
+              "She will visited us."
+            ],
+            "correctAnswer": "She will visit us."
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "They _____ (should) practice more if they want to win. You _____ (must) wear a helmet when riding a bike.",
+            "wordBank": ["should", "must"],
+            "correctAnswers": ["should", "must"]
+          },
+          {
+            "type": "gapFill",
+            "template": "He _____ (might/should) be late due to the meeting.",
+            "correctAnswers": ["might"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which sentence correctly uses a modal verb?",
+            "options": [
+              "We must to leave now.",
+              "We must leave now.",
+              "We must leaving now.",
+              "We must leaves now."
+            ],
+            "correctAnswer": "We must leave now."
           }
         ]
       },
@@ -14,6 +103,37 @@
           {
             "type": "ImageDisplay",
             "imagePath": "B2/3ModalsProb/2.png"
+          },
+          {
+            "type": "click",
+            "layout": "horizontal",
+            "instructions": [
+              {"text": "Modal verbs express different degrees of probability. ", "textStyle": "text"},
+              {"text": " Click on the modal verb that indicates the highest degree of certainty. ", "textStyle": "italic"}
+            ],
+            "words": [
+              {"text": "will", "feedback": "Correct! 'Will' indicates the highest degree of certainty."},
+              {"text": "might", "feedback": "Incorrect. 'Might' indicates a lower degree of certainty."},
+              {"text": "could", "feedback": "Incorrect. 'Could' indicates a lower degree of certainty."}
+            ],
+            "keyWords": ["will"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which modal verb shows the lowest degree of certainty?",
+            "options": ["will", "might", "can", "could"],
+            "correctAnswer": "could"
+          },
+          {
+            "type": "gapFill",
+            "template": "It _____ rain tomorrow.",
+            "correctAnswers": ["might", "could"]
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "Sarah _____ come to the party. She is not sure yet.",
+            "wordBank": ["might", "will", "can", "would"],
+            "correctAnswers": ["might"]
           }
         ]
       },
