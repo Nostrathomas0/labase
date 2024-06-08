@@ -57,9 +57,33 @@ import image_A2_4CompSupe_7_png from './assets/images/A2/4CompSupe/7.png';
 import image_B1_1PresPerfCont_1_png from './assets/images/B1/1PresPerfCont/1.png';
 import image_B1_1PresPerfCont_2_png from './assets/images/B1/1PresPerfCont/2.png';
 import image_B1_1PresPerfCont_3_png from './assets/images/B1/1PresPerfCont/3.png';
+import image_B1_1PresPerfCont_4_png from './assets/images/B1/1PresPerfCont/4.png';
+import image_B1_1PresPerfCont_5_png from './assets/images/B1/1PresPerfCont/5.png';
+import image_B1_1PresPerfCont_6_png from './assets/images/B1/1PresPerfCont/6.png';
 import image_B1_2PastPerfCont_1_png from './assets/images/B1/2PastPerfCont/1.png';
 import image_B1_2PastPerfCont_2_png from './assets/images/B1/2PastPerfCont/2.png';
 import image_B1_2PastPerfCont_3_png from './assets/images/B1/2PastPerfCont/3.png';
+import image_B1_2PastPerfCont_4_png from './assets/images/B1/2PastPerfCont/4.png';
+import image_B1_2PastPerfCont_5_png from './assets/images/B1/2PastPerfCont/5.png';
+import image_B1_2PastPerfCont_6_png from './assets/images/B1/2PastPerfCont/6.png';
+import image_B1_2PastPerfCont_7_png from './assets/images/B1/2PastPerfCont/7.png';
+import image_B1_2PastPerfCont_8_png from './assets/images/B1/2PastPerfCont/8.png';
+import image_B1_3SecCond_1_png from './assets/images/B1/3SecCond/1.png';
+import image_B1_3SecCond_2_png from './assets/images/B1/3SecCond/2.png';
+import image_B1_3SecCond_3_png from './assets/images/B1/3SecCond/3.png';
+import image_B1_4ModalVerbs_1_png from './assets/images/B1/4ModalVerbs/1.png';
+import image_B1_4ModalVerbs_2_png from './assets/images/B1/4ModalVerbs/2.png';
+import image_B2_1MixedCond_1_png from './assets/images/B2/1MixedCond/1.png';
+import image_B2_1MixedCond_2_png from './assets/images/B2/1MixedCond/2.png';
+import image_B2_1MixedCond_3_png from './assets/images/B2/1MixedCond/3.png';
+import image_B2_2Causitives_1_png from './assets/images/B2/2Causitives/1.png';
+import image_B2_3ModalsProb_1_png from './assets/images/B2/3ModalsProb/1.png';
+import image_B2_3ModalsProb_2_png from './assets/images/B2/3ModalsProb/2.png';
+import image_B2_4FuturePerf_1_png from './assets/images/B2/4FuturePerf/1.png';
+import image_B2_4FuturePerf_2_png from './assets/images/B2/4FuturePerf/2.png';
+import image_B2_4FuturePerf_3_png from './assets/images/B2/4FuturePerf/3.png';
+import image_B2_4FuturePerf_4_png from './assets/images/B2/4FuturePerf/4.png';
+import image_B2_4FuturePerf_5_png from './assets/images/B2/4FuturePerf/5.png';
 const imageMap = {
   'A1/1Nouns/1.png': image_A1_1Nouns_1_png,
   'A1/1Nouns/2.png': image_A1_1Nouns_2_png,
@@ -120,9 +144,33 @@ const imageMap = {
   'B1/1PresPerfCont/1.png': image_B1_1PresPerfCont_1_png,
   'B1/1PresPerfCont/2.png': image_B1_1PresPerfCont_2_png,
   'B1/1PresPerfCont/3.png': image_B1_1PresPerfCont_3_png,
+  'B1/1PresPerfCont/4.png': image_B1_1PresPerfCont_4_png,
+  'B1/1PresPerfCont/5.png': image_B1_1PresPerfCont_5_png,
+  'B1/1PresPerfCont/6.png': image_B1_1PresPerfCont_6_png,
   'B1/2PastPerfCont/1.png': image_B1_2PastPerfCont_1_png,
   'B1/2PastPerfCont/2.png': image_B1_2PastPerfCont_2_png,
   'B1/2PastPerfCont/3.png': image_B1_2PastPerfCont_3_png,
+  'B1/2PastPerfCont/4.png': image_B1_2PastPerfCont_4_png,
+  'B1/2PastPerfCont/5.png': image_B1_2PastPerfCont_5_png,
+  'B1/2PastPerfCont/6.png': image_B1_2PastPerfCont_6_png,
+  'B1/2PastPerfCont/7.png': image_B1_2PastPerfCont_7_png,
+  'B1/2PastPerfCont/8.png': image_B1_2PastPerfCont_8_png,
+  'B1/3SecCond/1.png': image_B1_3SecCond_1_png,
+  'B1/3SecCond/2.png': image_B1_3SecCond_2_png,
+  'B1/3SecCond/3.png': image_B1_3SecCond_3_png,
+  'B1/4ModalVerbs/1.png': image_B1_4ModalVerbs_1_png,
+  'B1/4ModalVerbs/2.png': image_B1_4ModalVerbs_2_png,
+  'B2/1MixedCond/1.png': image_B2_1MixedCond_1_png,
+  'B2/1MixedCond/2.png': image_B2_1MixedCond_2_png,
+  'B2/1MixedCond/3.png': image_B2_1MixedCond_3_png,
+  'B2/2Causitives/1.png': image_B2_2Causitives_1_png,
+  'B2/3ModalsProb/1.png': image_B2_3ModalsProb_1_png,
+  'B2/3ModalsProb/2.png': image_B2_3ModalsProb_2_png,
+  'B2/4FuturePerf/1.png': image_B2_4FuturePerf_1_png,
+  'B2/4FuturePerf/2.png': image_B2_4FuturePerf_2_png,
+  'B2/4FuturePerf/3.png': image_B2_4FuturePerf_3_png,
+  'B2/4FuturePerf/4.png': image_B2_4FuturePerf_4_png,
+  'B2/4FuturePerf/5.png': image_B2_4FuturePerf_5_png,
 };
 
 export default imageMap;

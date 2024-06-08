@@ -5,7 +5,7 @@
       "questions": [
         {
           "type": "imageDisplay",
-          "imagePath": "B2/1MixedConditionals/1.png",
+          "imagePath": "B2/1MixedCond/1.png",
           "altText": "Image showing a person regretting a past action, caption: 'If I hadn't made that mistake, I would be happy now.'"
         },
         {
