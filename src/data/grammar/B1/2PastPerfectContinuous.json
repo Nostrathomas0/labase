@@ -15,7 +15,7 @@
             { "text": "Past Perfect Continuous ", "textStyle": "bold"}, 
             { "text": "is used to describe actions that were ongoing in the past before another past action.", "textStyle": "text", "newParagraph": true },
             { "text": "It is formed using 'had been' + 'verb-ing'.", "textStyle": "text" },
-            { "text": "Example: 'She had been studying.'", "textStyle": "italic" },
+            { "text": "Example: 'She had been studying.'", "textStyle": "italic", "newLine":true },
             { "text": "Click on the past perfect continuous form in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
           "words": [
@@ -41,12 +41,12 @@
         },
         {
           "type": "gapFill",
-          "template": "They ______ (live) there for many years before they moved.",
-          "correctAnswers": ["had been living"]
+          "template": "They _____  there for many years before they moved.",
+          "correctAnswers": ["had"]
         },
         {
           "type": "multipleChoice",
-          "question": "How long ______ (you/wait) before the bus arrived?",
+          "question": "How long _____ (you/wait) before the bus arrived?",
           "options": [
             "had you been waiting",
             "were you waiting",
@@ -77,6 +77,7 @@
           },
           {
             "type":"click",
+            "layout": "horizontal",
             "instructions":[
               {"text":"", "textStyle": ""},
               {"text":"", "textStyle": ""},
@@ -96,6 +97,37 @@
           {
             "type": "imageDisplay",
             "imagePath": "B1/2PastPerfCont/3.png"
+          },
+          {
+            "type":"click",
+            "layout": "vertical",
+            "instructions":[
+              {"text":"Past Perfect Continuous ", "textStyle": "bold"},
+              {"text":" is mostly used in complex sentences with  ", "textStyle": "text"},
+              {"text":" past perfect continuous ", "textStyle": "bold"},
+              {"text":" and ", "textStyle": "text"},
+              {"text":" an adverb phrase ", "textStyle": "text"},
+              {"text": "to show time, for example ", "textStyle": "text"},
+              {"text":" before, for a year, as a child or last summer. ", "textStyle": "underline"},
+              {"text":" Click the clause that completes the sentence. ", "textStyle": "italic", "newParagraph":true},
+              {"text":" More than three generations had been fighting in the hundred years war before ", "textStyle": ""}
+            ],
+            "words":[
+              {"text":"it finishes", "feedback": "No, not present simple"},
+              {"text":"it finished", "feedback": "Yes, it's usually used with Past Simple"},
+              {"text":"it will finish", "feedback": "No, maybe with past modals, but not 'will'"}
+            ],
+            "keyWords":["it finished"]
+          },
+          {
+            "type": "gapFill",
+            "template": "Form: Subject + _____ + been + verb-ing",
+            "correctAnswers": ["had"]
+          },
+          {
+            "type": "gapFill",
+            "template": "Example: They _____ (work) all day.",
+            "correctAnswers": ["had been working"]
           }
         ]
       },
@@ -108,6 +140,7 @@
           },
           {
             "type":"click",
+            "layout": "horizontal",
             "instructions":[
               {"text": "To decode it's behaviour, use the same formula as any tense, which starts with a time", "textStyle":"text"},
               {"text": " past ", "textStyle":"bold"},
@@ -125,6 +158,47 @@
               {"text": " What's ", "textStyle":"italic", "newParagraph":true},
               {"text": " be ", "textStyle":"bold"},
               {"text": " in form 3?", "textStyle":"italic"}
+            ],
+            "words": [ 
+              {"text": "am", "feedback": "No, that's form 1, 1st person singular"},
+              {"text": "is", "feedback": "No, that's form 1, 3rd person singular"},
+              {"text": "are", "feedback": "No that's form 1"},
+              {"text": "was", "feedback": "No that's form 2"},
+              {"text": "were", "feedback": "No that's form 2"},
+              {"text": "been", "feedback": "Yes that's form 3"}
+          ],
+            "keyWords":["been"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which sentence is in the past perfect continuous?",
+            "options": [
+              "She had been reading for an hour when he arrived.",
+              "She read for an hour when he arrived.",
+              "She reads for an hour when he arrived."
+            ],
+            "correctAnswer": "She had been reading for an hour when he arrived."
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "By the time we got there, they _____ (run) for an hour.",
+            "wordBank": ["had been running", "ran", "have run"],
+            "correctAnswers": ["had been running"]
+          }
+        ]
+      },
+      {
+        "questions":  [
+          {
+            "type": "imageDisplay",
+            "layout": "vertical",
+            "imagePath": "B1/2PastPerfCont/4.png"
+          },
+          {
+            "type":"click",
+            "layout": "horizontal",
+            "instructions":[
+              {"text": "", "textStyle": ""}
             ],
             "words": [ 
               {"text": "am", "feedback": "No, that's form 1, 1st person singular"},
