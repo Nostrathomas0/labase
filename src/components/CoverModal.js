@@ -10,6 +10,10 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    padding: '0',
+    border: 'none',
+    borderRadius: '10px',
+    overflow: 'hidden',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
@@ -22,14 +26,17 @@ const CoverModal = ({ isOpen, onRequestClose }) => {
   return (
     <Modal
       isOpen={isOpen}
-      onRequestClose={onRequestClose}
+      onRequestClose={onRequestClose} // This will close the modal on outside click or ESC key press
       style={customStyles}
       contentLabel="Cover Modal"
+      shouldCloseOnOverlayClick={true} // Ensures that clicking on the overlay closes the modal
     >
-      <div className="modal-content">
-        <img src={coverImage} alt="Cover" className="cover-image" />
-        <p>This app is dedicated to ...</p>
-        <button onClick={onRequestClose} className="close-button">Close</button>
+      <div className="modal-content" onClick={onRequestClose} style={{ cursor: 'pointer' }}>
+        <img src={coverImage} alt="Cover" className="cover-image" style={{ width: '100%', height: 'auto' }} />
+        <div style={{ padding: '20px', textAlign: 'center', backgroundColor: '#fff' }}>
+          <p>This app is dedicated to the Giordan Family and everyone who learns to learn</p>
+          <button onClick={onRequestClose} className="close-button">Close</button>
+        </div>
       </div>
     </Modal>
   );
