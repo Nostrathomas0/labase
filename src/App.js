@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { auth } from './firebaseConfig';
+import { auth } from './firebaseInit';
 import CoverModal from './components/CoverModal'; // Adjust the import path as necessary
 import A1 from './components/pages/A1';
 import A2 from './components/pages/A2';
