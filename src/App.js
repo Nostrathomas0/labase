@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { auth } from './firebaseConfig';
 import CoverModal from './components/CoverModal'; // Adjust the import path as necessary
 import A1 from './components/pages/A1';
 import A2 from './components/pages/A2';
@@ -28,7 +29,27 @@ import CausitivesPage from './components/pages/B2/CausitivesPage';
 import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
+
+
+
 function App() {
+  useEffect(() => {
+    const cookie = document.cookie.split('; ').find(row => row.startsWith('authToken='));
+    const authToken = cookie ? cookie.split('=')[1] : null;
+
+    if (authToken) {
+      auth.signInWithCustomToken(authToken)
+        .then(() => {
+          console.log("User is authenticated, allow access");
+        })
+        .catch(error => {
+          console.error("Authentication failed, redirecting to login:", error);
+          window.location.href = "https://languapps.com/login";
+        });
+    } else {
+      window.location.href = "https://languapps.com/login";
+    }
+  }, []);
   const [isModalOpen, setIsModalOpen] = useState(true);
 
   const closeModal = () => {
