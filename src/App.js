@@ -1,63 +1,61 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { auth } from './firebaseInit';
+import { Routes, Route, Link, useLocation} from 'react-router-dom';
+import { AuthProvider } from './AuthContext';
+import { auth } from './firebaseInit'; 
+import ProtectedRoute from './ProtectedRoute';
+
 import CoverModal from './components/CoverModal'; // Adjust the import path as necessary
 import A1 from './components/pages/A1';
 import A2 from './components/pages/A2';
 import B1 from './components/pages/B1';
 import B2 from './components/pages/B2';
-// Import A1 components here
 import NounsPage from './components/pages/A1/NounsPage';
 import AdjectivesPage from './components/pages/A1/AdjectivesPage';
 import VerbsPage from './components/pages/A1/VerbsPage';
 import TherePage from './components/pages/A1/TherePage';
-// Imports for A2 level topic pages
 import PastContPage from './components/pages/A2/PastContPage';
 import FuturePage from './components/pages/A2/FuturePage';
 import GoingToPage from './components/pages/A2/GoingToPage';
 import CompSupePage from './components/pages/A2/CompSupePage';
-
-// Imports for B1 level topic pages
 import PresPerfCont from './components/pages/B1/PresPerfContPage';
 import PastPerfContPage from './components/pages/B1/PastPerfContPage';
 import SecCondPage from './components/pages/B1/SecCondPage';
 import ModalVerbsPage from './components/pages/B1/ModalVerbsPage';
-
-// Imports for B2 level topic pages
 import MixedCondPage from './components/pages/B2/MixedCondPage';
 import CausitivesPage from './components/pages/B2/CausitivesPage';
 import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
 
-
-
 function App() {
+  const location = useLocation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+
   useEffect(() => {
-    const cookie = document.cookie.split('; ').find(row => row.startsWith('authToken='));
-    const authToken = cookie ? cookie.split('=')[1] : null;
-
+    const queryParams = new URLSearchParams(location.search);
+    const shouldOpenModal = queryParams.get('openModal') === 'true';
+    // Extract the authToken from cookies
+    const authToken = document.cookie.split(';').find(row => row.trim().startsWith('authToken='));
+       
     if (authToken) {
-      auth.signInWithCustomToken(authToken)
-        .then(() => {
-          console.log("User is authenticated, allow access");
-        })
-        .catch(error => {
-          console.error("Authentication failed, redirecting to login:", error);
-          window.location.href = "https://languapps.com/login";
-        });
+      const tokenValue = authToken.split('=')[1];
+      auth.signInWithCustomToken(tokenValue).then(() => {
+        console.log("User is authenticated, allow access");
+        setIsModalOpen(shouldOpenModal);
+      }).catch(error => {
+        console.error("Authentication failed:", error);
+        window.location.href = "https://languapps.com";
+      });
     } else {
-      window.location.href = "https://languapps.com/login";
+      window.location.href = "https://languapps.com";
     }
-  }, []);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  }, [location]);
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const closeModal = () => setIsModalOpen(false);
 
   return (
-    <Router>
+    <AuthProvider>
       <div>
         <nav>
           <ul>
@@ -65,19 +63,16 @@ function App() {
             <li><Link to="/A2">Elementary (A2)</Link></li>
             <li><Link to="/B1">Pre-Intermediate (B1)</Link></li>
             <li><Link to="/B2">Intermediate (B2)</Link></li>
-            {/* Add more levels as necessary */}
           </ul>
         </nav>
-
         <Routes>
-          {/* Level Routes */}
           <Route path="/A1" element={<A1 />} />
           <Route path="/A2" element={<A2 />} />
           <Route path="/B1" element={<B1 />} />
           <Route path="/B2" element={<B2 />} />
-          {/* Add more level routes as necessary */}
 
-          {/* Topic Routes within each Level */}
+          {/* Protected Routes */}
+          <Route element={<ProtectedRoute />}>
           <Route path="/A1/nouns" element={<NounsPage />} />
           <Route path="/A1/adjectives" element={<AdjectivesPage />} />
           <Route path="/A1/verbs" element={<VerbsPage />} />
@@ -98,13 +93,13 @@ function App() {
           <Route path="/B2/modalsProb" element={<ModalsProbPage />} />
           <Route path="/B2/futurePerf" element={<FuturePerfPage />} />
           {/* Add more topic routes for each level in a similar manner */}
-          {/* Repeat for A2, B1, B2, etc. */}
+          </Route>
         </Routes>
 
         <CoverModal isOpen={isModalOpen} onRequestClose={closeModal} />
       </div>
-    </Router>
-  );
+    </AuthProvider>
+ );
 }
 
 export default App;
