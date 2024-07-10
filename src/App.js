@@ -2,15 +2,36 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
 import { auth } from './firebaseInit'; 
-import ProtectedRoute from './ProtectedRoute';
+import ProtectedRoute from './components/ProtectedRoute';
 import CoverModal from './components/CoverModal'; // Adjust the import path as necessary
-import {
-  A1, A2, B1, B2,
-  NounsPage, AdjectivesPage, VerbsPage, TherePage,
-  PastContPage, FuturePage, GoingToPage, CompSupePage,
-  PresPerfCont, PastPerfContPage, SecCondPage, ModalVerbsPage,
-  MixedCondPage, CausitivesPage, ModalsProbPage, FuturePerfPage
-} from './components/pages';
+import A1 from './components/pages/A1';
+import A2 from './components/pages/A2';
+import B1 from './components/pages/B1';
+import B2 from './components/pages/B2';
+
+// Import A1 components
+import NounsPage from './components/pages/A1/NounsPage';
+import AdjectivesPage from './components/pages/A1/AdjectivesPage';
+import VerbsPage from './components/pages/A1/VerbsPage';
+import TherePage from './components/pages/A1/TherePage';
+
+// Import A2 components
+import PastContPage from './components/pages/A2/PastContPage';
+import FuturePage from './components/pages/A2/FuturePage';
+import GoingToPage from './components/pages/A2/GoingToPage';
+import CompSupePage from './components/pages/A2/CompSupePage';
+
+// Import B1 components
+import PresPerfContPage from './components/pages/B1/PresPerfContPage';
+import PastPerfContPage from './components/pages/B1/PastPerfContPage';
+import SecCondPage from './components/pages/B1/SecCondPage';
+import ModalVerbsPage from './components/pages/B1/ModalVerbsPage';
+
+// Import B2 components
+import MixedCondPage from './components/pages/B2/MixedCondPage';
+import CausitivesPage from './components/pages/B2/CausitivesPage';
+import ModalsProbPage from './components/pages/B2/ModalsProbPage';
+import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
 function App() {
   const location = useLocation();
@@ -75,7 +96,7 @@ function App() {
             <Route path="/A2/goingTo" element={<GoingToPage />} />
             <Route path="/A2/compSupe" element={<CompSupePage />} />
 
-            <Route path="/B1/presPerfCont" element={<PresPerfCont />} />
+            <Route path="/B1/presPerfCont" element={<PresPerfContPage />} />
             <Route path="/B1/pastPerfCont" element={<PastPerfContPage />} />
             <Route path="/B1/2ndCond" element={<SecCondPage />} />
             <Route path="/B1/modalVerbs" element={<ModalVerbsPage />} />
