@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 import jwt from 'jsonwebtoken';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { useAuth } from './AuthContext'; // Assuming you have an AuthContext to provide the current user
