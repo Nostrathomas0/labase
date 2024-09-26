@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
 import { auth } from './firebaseInit'; 
-import ProtectedRoute from './components/ProtectedRoute';
+
 import CoverModal from './components/CoverModal'; // Adjust the import path as necessary
 import A1 from './components/pages/A1';
 import A2 from './components/pages/A2';
@@ -85,7 +85,7 @@ function App() {
           <Route path="/B2" element={<B2 />} />
 
           {/* Protected Routes */}
-          <Route element={<ProtectedRoute />}>
+         {/* <Route element={<ProtectedRoute />}> */}
             <Route path="/A1/nouns" element={<NounsPage />} />
             <Route path="/A1/adjectives" element={<AdjectivesPage />} />
             <Route path="/A1/verbs" element={<VerbsPage />} />
@@ -105,7 +105,7 @@ function App() {
             <Route path="/B2/causitives" element={<CausitivesPage />} />
             <Route path="/B2/modalsProb" element={<ModalsProbPage />} />
             <Route path="/B2/futurePerf" element={<FuturePerfPage />} />
-          </Route>
+          {/*</Route>*/}
         </Routes>
 
         <CoverModal isOpen={isModalOpen} onRequestClose={closeModal} />
