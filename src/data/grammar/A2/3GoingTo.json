@@ -64,7 +64,7 @@
           "type": "multipleChoice",
           "question": "2) You____ going to remember when I'm famous right?",
           "options": ["is", "was", "are", "will"],
-          "correctAnswer": "re"
+          "correctAnswer": "are"
         }
       ]
     },
@@ -118,7 +118,6 @@
             "going"
           ]
         },
-        
         {
           "type": "click",
           "instructions": [
@@ -155,51 +154,6 @@
           "correctAnswer": "__________"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
-        },
-        {
           "type": "click",
           "instructions": [
             {
@@ -227,19 +181,20 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+            { "text": "Click on the sentences that use ", "textStyle": "text" },
+            { "text": "be going to", "textStyle": "bold" },
+            { "text": " for planned vacation activities.", "textStyle": "text" }
           ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "words": [
+            { "text": "I am going to book the tickets tomorrow.", "feedback": "Correct! 'Going to' is used for planned actions." },
+            { "text": "We will have a great time in Spain.", "feedback": "Incorrect. 'Will' is used here, not 'going to'." },
+            { "text": "She is going to pack her bags tonight.", "feedback": "Correct! 'Going to' is used for planned actions." },
+            { "text": "They will decide where to go soon.", "feedback": "Incorrect. 'Will' is used here, not 'going to'." },
+            { "text": "He is going to rent a car for the trip.", "feedback": "Correct! 'Going to' is used for planned actions." }
+          ],
+          "keyWords": [
+            "going"
+          ]
         },
         {
           "type": "wordBank",
@@ -262,11 +217,41 @@
           "imagePath": "A2/3GoingTo/5.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
+          "type": "click",
+          "instructions": [
+            { "text": "Click on the sentences that express future intentions using ", "textStyle": "text" },
+            { "text": "be going to", "textStyle": "bold" },
+            { "text": " for career goals.", "textStyle": "text" }
+          ],
+          "words": [
+            { "text": "I am going to apply for the manager position.", "feedback": "Correct! 'Going to' is used for intended actions." },
+            { "text": "He will work in finance.", "feedback": "Incorrect. 'Will' is used here, not 'going to'." },
+            { "text": "She is going to start her own business next year.", "feedback": "Correct! 'Going to' is used for intended actions." },
+            { "text": "They will change their jobs soon.", "feedback": "Incorrect. 'Will' is used here, not 'going to'." },
+            { "text": "We are going to take additional training courses.", "feedback": "Correct! 'Going to' is used for intended actions." }
+          ],
+          "keyWords": [
+            "going"
+          ]
         },
+        {
+          "type": "click",
+          "instructions": [
+            { "text": "Click on the sentences that use ", "textStyle": "text" },
+            { "text": "be going to", "textStyle": "bold" },
+            { "text": " for predictions based on current evidence.", "textStyle": "text" }
+          ],
+          "words": [
+            { "text": "The sky is dark; it's going to rain soon.", "feedback": "Correct! 'Going to' is used for predictions based on evidence." },
+            { "text": "She will pass the test.", "feedback": "Incorrect. 'Will' is used here, not 'going to'." },
+            { "text": "Look at the clouds; it’s going to snow.", "feedback": "Correct! 'Going to' is used for predictions based on evidence." },
+            { "text": "They are going to lose the game; they haven’t trained enough.", "feedback": "Correct! 'Going to' is used for predictions based on evidence." },
+            { "text": "He will win the lottery.", "feedback": "Incorrect. 'Will' is used here, not 'going to'." }
+          ],
+          "keyWords": [
+            "going"
+          ]
+        },        
         {
           "type": "multipleChoice",
           "question": "__________",
