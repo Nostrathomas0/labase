@@ -13,34 +13,122 @@
         "instructions":[
               
           {
-            "text": "Comparatives are used to compare two things. For example, we say ",
+            "text": "Compare two or many things. Which one is",
             "textStyle": "text"
           },
           {
-            "text": " 'taller' ",
+            "text": " 'heavier' ",
             "textStyle": "bold"
-          },
+          }, 
           {
-            "text": " to compare two heights.",
-            "textStyle": "text",
+            "text": " or  ",
+            "textStyle": "text"
+          }, 
+          {
+            "text": " 'lighter' ",
+            "textStyle": "bold",
             "newLine": true
           },
           {
-            "text": "We add ",
+            "text": "We should add ",
             "textStyle": "text"
           },
           {
-            "text": "-er",
+            "text": "more",
             "textStyle": "bold"
           },
           {
-            "text": " to short adjectives like ",
+            "text": "before any nouns and also any adjecteves longer than 2 syllables like ",
             "textStyle": "text"
           },
           {
-            "text": "'tall'.",
+            "text": " ellegent ; ",
             "textStyle": "italic"
           },
+          {
+            "text": " short adjectives like",
+            "textStyle": "text"
+          },
+          {
+            "text": " 'light' ",
+            "textStyle": "italic"
+          },
+          {
+            "text": "become ",
+            "textStyle": "text"
+          },
+          {
+            "text": " 'lighter' ",
+           "textStyle": "bold, underline"
+          },
+          {
+            "text": "and",
+            "textStyle": "text"
+          },
+          {
+            "text": "darker ",
+            "textStyle": "bold"
+          },
+          {
+            "text": " but it's not just one syllable words that get ",
+            "textStyle": "text"
+          },
+          {
+            "text":  " er ",
+            "textStyle": "italic"
+          },
+          {
+            "text": " to compare but also 2 syllable adjectives that end in  ",
+            "textStyle":"text"
+          },
+          { 
+            "text": "y",
+            "textStyle": "bold, underline"
+          },
+          {
+            "text": "which are rather common.",
+            "textStyle": "text"
+          },
+          {
+            "text": " Long adjectives ending in ",
+            "textStyle": "text"
+          },
+          { 
+          "text": "y",
+          "textStyle": "bold, underline"
+          },
+          { 
+          "text": " are rarer than anything in English. Common words like",
+          "textStyle": "text"
+          },
+          {
+            "text": " 'deep'",
+            "textStyle": "italic"
+          },
+          {
+            "text": " and ",
+            "textStyle": "text"
+          },
+          { 
+          "text": " 'lite' ",
+          "textStyle": "bold, underline"
+          },
+          {
+            "text": "easily become",
+            "textStyle": "text"
+          },
+          {
+            "text": " 'deeper' .",
+            "textStyle": "italic"
+          },  
+          {
+            "text": "and",
+            "textStyle": "text"
+          },
+          {
+            "text": " 'lighter' .",
+            "textStyle": "italic"
+          },         
           {
             "text": " If the adjective is long, like ",
             "textStyle": "text",
@@ -64,10 +152,10 @@
           },
           {
             "text": "'more beautiful'.",
-            "textStyle": "italic"
+            "textStyle": "text"
           },
           {
-            "text": " Superlatives are used to compare one thing with all the others in a group.",
+            "text": " Superlatives are the most in ammount or quality one thing amongst another thing entirely or any number.",
             "textStyle": "text",
             "newParagraph": true
           },
@@ -110,8 +198,9 @@
             "newParagraph": true
           },
           {
-            "text": "Comparative: My brother is ",
-            "textStyle": "text"
+            "text": " My brother is ",
+            "textStyle": "text",
+            "newLine": true
           },
           {
             "text": "taller",
@@ -122,7 +211,7 @@
             "textStyle": "text"
           },
           {
-            "text": "Superlative: She is the ",
+            "text": "She is the ",
             "textStyle": "text",
             "newLine": true
           },
@@ -137,17 +226,17 @@
           {"text": "1) Click on the comparative words in the sentence below.", "textStyle": "italic", "newParagraph": true}
         ],
         "words": [
-          {"text": "Mountains ", "feedback": "No, 'Mountains' is a noun."},
+          {"text": "Mountains ", "feedback": "Mountains are nouns, the things we're comparing, not"},
           {"text": "are ", "feedback": "No, 'are' is a verb."},
           {"text": "higher ", "feedback": "yes, 'higher' is the comparative adjective."},
           {"text": "than ", "feedback": "Yes, 'than' is used to compare 2 things."},
-          {"text": "hills.", "feedback": "No, 'hills' is a noun."}
+          {"text": "hills.", "feedback": "no 'hills' is a noun."}
         ],
-        "keyWords": ["than"]
+        "keyWords": ["than", "higher"]
         },
         {
           "type": "multipleChoice",
-          "question": "2) Which word is a comparative adjective?",
+          "question": "2) Which  adjective would I use to compare another person and myself.?",
           "options": ["tall", "taller", "tallest", "most tall"],
           "correctAnswer": "taller"
         },
@@ -170,13 +259,13 @@
         },
         {
           "type": "gapFill",
-          "template": "6) This road is ______ than the highway.",
-          "correctAnswers": ["narrower"]
+          "template": "6) This road has ______ traffic than the highway.",
+          "correctAnswers": ["more", "less"]
         },
         {
           "type": "multipleChoice",
           "question": "7) Which is the correct form to complete the sentence: 'She is _____ than her sister.'?",
-          "options": ["smart", "smarter", "smartest", "more smart"],
+          "options": ["smart", "smarter", "smartest", "more smart", "more smarter"],
           "correctAnswer": "smarter"
         }
       ]
@@ -206,72 +295,21 @@
           "keyWords":[""]
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
+          "type": "gapFill",
+          "template": "She is ______ (busy) than she was last week.",
+          "correctAnswers": ["busier"]
         },
         {
           "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
+          "question": "Which word is the correct comparative form of 'big'?",
+          "options": ["bigger", "more big", "biggest", "big"],
+          "correctAnswer": "bigger"
         },
         {
           "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "paragraph": "John's apartment is ______ than his friend's, but it’s ______ than mine.",
+          "wordBank": ["bigger", "smaller"],
+          "correctAnswers": ["bigger", "smaller"]
         }
       ]
     },
@@ -282,72 +320,31 @@
           "imagePath": "A2/4CompSupe/3.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
+          "type": "gapFill",
+          "template": "TikTok has ______ (many) followers than Twitter.",
+          "correctAnswers": ["more"]
         },
         {
           "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+          "paragraph": "Twitter posts are ______ than Instagram stories, but Instagram stories are ______.",
+          "wordBank": ["shorter", "longer"],
+          "correctAnswers": ["shorter", "longer"]
         },
         {
           "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
+          "template": "YouTube videos are ______ (long) than TikTok videos.",
+          "correctAnswers": ["longer"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which platform is known for ______ videos?",
+          "options": ["shorter", "shortest", "long", "more short"],
+          "correctAnswer": "shorter"
         },
         {
           "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "template": "Snapchat messages disappear ______ (fast) than Facebook messages.",
+          "correctAnswers": ["faster"]
         }
       ]
     },
@@ -358,72 +355,30 @@
           "imagePath": "A2/4CompSupe/4.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
+          "type": "gapFill",
+          "template": "Canada has ______ (few) people than the United States.",
+          "correctAnswers": ["fewer"]
+        },{
+          "type": "gapFill",
+          "template": "The United States uses ______ (much) energy than Canada.",
+          "correctAnswers": ["more"]
         },
         {
           "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+          "paragraph": "Canada has ______ natural lakes, but the US has ______ desert regions.",
+          "wordBank": ["more", "fewer"],
+          "correctAnswers": ["more", "fewer"]
         },
         {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
+          "type": "multipleChoice",
+          "question": "The US has ______ (more/less) national parks than Canada?",
+          "options": ["more", "less", "fewer", "most"],
+          "correctAnswer": "more"
         },
         {
           "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "template": "Canada has ______ (fewer) sunny days than the US.",
+          "correctAnswers": ["fewer"]
         }
       ]
     },
@@ -434,22 +389,16 @@
           "imagePath": "A2/4CompSupe/5.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
           "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+          "paragraph": "The giraffe is the ______ animal, and the cheetah is the ______.",
+          "wordBank": ["tallest", "fastest"],
+          "correctAnswers": ["tallest", "fastest"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which bird can fly the ______ distance?",
+          "options": ["long", "longer", "longest", "most long"],
+          "correctAnswer": "longest"
         },
         {
           "type": "wordBank",
@@ -461,28 +410,6 @@
           "type": "gapFill",
           "template": "__________ (__________)",
           "correctAnswers": ["__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
         },
         {
           "type": "click",
@@ -511,71 +438,14 @@
         },
         {
           "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+          "question": "Which sentence uses the correct personal adjective?",
+          "options": [
+            "They is at school.",
+            "She are playing soccer.",
+            "We are having lunch.",
+            "I is going home."
           ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "correctAnswer": "We are having lunch."
         }
       ]
     },
@@ -586,24 +456,30 @@
           "imagePath": "A2/4CompSupe/7.png"
         },
         {
+          "type": "multipleChoice",
+          "question": "______  is my house over there.",
+          "options": ["That", "This"],
+          "correctAnswer": "That"
+        },
+        {
           "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+          "paragraph": "______ is my pencil, and ______ is your notebook.",
+          "wordBank": ["This", "That"],
+          "correctAnswers": ["This", "That"]
         },
         {
           "type":"click",
           "layout":"horizontal", 
           "instructions":[
-            {"text": "", "textStyle":""}
+            {"text": "wow", "textStyle":"bold"}
 
           ],
           "words":[
-            {"text": "", "feedback": ""}
+            {"text": "wow", "feedback": "You're amazing!"}
 
           ],
           "wordBank":[
-            ""
+            "wow"
           ]
         }
       ]

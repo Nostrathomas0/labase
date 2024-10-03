@@ -13,26 +13,29 @@
             {"text": "Be Going To", "textStyle": "bold", "newParagraph":true},
             {"text": " is a ", "textStyle": "text"},
             {"text": "semi-auxiliary", "textStyle": "italic"},
-            {"text": " meaning part of it needs conjugation. To change form according to person and tense. The ", "textStyle": "text"},
+            {"text": " so it needs to change form by person and tense. The ", "textStyle": "text"},
             {"text": " be ", "textStyle": "bold"},
-            {"text": " changes form according to the person and tense. It can conjugate to ", "textStyle": "text"},
-            {"text": " verb 1,", "textStyle":"bold", "newLine":true},
-            {"text": " am is are ", "textStyle":"italic"},
-            {"text": " for future plans, not unlike ", "textStyle":"text"},
+            {"text": " changes. Presently it conjugates to ", "textStyle": "text"},
+            {"text": " verb 1,", "textStyle":"italic"},
+            {"text": " am is are ", "textStyle":"bold"},
+            {"text": " for all continuous tenses. It conjugates because continuous alwauys uses forms of","textStyle":"text"},
+            {"text": " to be .", "textStyle":"bold"},
+            {"text": " This is unlike ", "textStyle":"text"},
             {"text": " will ", "textStyle":"underline"}, 
-            {"text": " which is probably used more for decision that you haven't given much thought to. ", "textStyle":"text"},
-            {"text": " Going To", "textStyle":"bold"},
+            {"text": " which is used more decisively, or to give it a quick thought first; it's not like will. ", "textStyle":"text"},
+            {"text": " Going To", "textStyle":"bold", "newLine":true},
             {"text": " is for situations where you've given the future some thought and made up your mind."},
             {"text": " I'm going to ask if Cindy wants to go to the movies with us. ", "textStyle": "italic", "newLine": true },
-            {"text": " Going To can also conjugate to verb 2", "textStyle":"text", "newLine":true},
-            {"text": " was were ", "textStyle":"italic"},
-            {"text": " to talk about past intensions, that didn't happen as planned;", "textStyle":"text"},
-            {"text": " I was going to finish the report yesterday but there was an urgent meeting. ", "textStyle": "italic", "newLine": true},
-            {"text": "1) Click on conjugated verbs in the sentence below. ", "textStyle": "italic", "newParagraph": true}
+            {"text": " Going To", "textStyle": "bold", "newLine": true},
+            {"text": " denotes plan or intention, and it can also conjugate to the past", "textStyle":"text"},
+            {"text": " was / were ", "textStyle":"italic, bold"},
+            {"text": " to talk about past intensions, that likely didn't go as planned;", "textStyle":"text"},
+            {"text": " I was going to finish the report yesterday but there was an urgent meeting, called at the last minute. ", "textStyle": "italic", "newLine": true},
+            {"text": " 1) Click on conjugated verbs in the sentence below. ", "textStyle": "italic", "newParagraph": true}
           ],
           "words": [
-          {"text": "I", "feedback": "No,  isn't conjucated."},
-          {"text": "was", "feedback": "Yes, was conjucated from be."},
+          {"text": "I", "feedback": "Not conjucated."},
+          {"text": "was", "feedback": "Yes! Conjucated from be."},
           {"text": "going",  "feedback": "Not really, verb-ing is a form change but not by person or time."},
           {"text": "to",  "feedback": "No, to isn't conjucated."},
           {"text": "ask",  "feedback": "No, ask is the root form."},
@@ -41,26 +44,27 @@
           {"text": "but",  "feedback": "No, but isn't conjucated."},
           {"text": "he",  "feedback": "No, he isn't conjucated."},
           {"text": "left",  "feedback": "No, left isn't conjucated."},
-          {"text": "right",  "feedback": "No, right isn't conjucated."},
-          {"text": "after",  "feedback": "No, after isn't conjucated."},
-          {"text": "class.",  "feedback": "No, class isn't conjucated."},
+          {"text": ".",  "feedback": "No, right isn't conjucated."},
+          {"text": "I",  "feedback": "No, after isn't conjucated."},
+          {"text": "guess.",  "feedback": "No, class isn't conjucated."},
           {"text": "I",  "feedback": "No, I isn't conjucated."},
           {"text": "am",  "feedback": "Yes, am is conjucated from be."},
           {"text": "going",  "feedback": "No,  isn't conjucated."},
-          {"text": "to",  "feedback": "No, to isn't conjucated."},
+          {"text": "to",  "feedback": "No,  isn't conjucated."},
+          {"text": "have",  "feedback": "No,  isn't conjucated."},
+          {"text": "to", "feedback": "No, to isn't conjucated."},
           {"text": "look",  "feedback": "No, look is the root form."},
+          {"text": "it",  "feedback": "No, up isn't conjucated."},
           {"text": "up",  "feedback": "No, up isn't conjucated."},
-          {"text": "the",  "feedback": "No, the isn't conjucated."},
-          {"text": "answer",  "feedback": "No, answer isn't conjucated."},
           {"text": "online.", "feedback": "No, online isn't conjucated."}
         ],
-          "keyWords": ["was", "am"]
+          "keyWords": ["was", "going", "am"]
         },
         {
           "type": "multipleChoice",
           "question": "2) You____ going to remember when I'm famous right?",
-          "options": ["is", "was", "'re", "will"],
-          "correctAnswer": "'re'"
+          "options": ["is", "was", "are", "will"],
+          "correctAnswer": "re"
         }
       ]
     },
@@ -78,14 +82,14 @@
         },
         {
           "type": "gapFill",
-          "template": "2)Who _____ going to watch your dog while you're away?",
+          "template": "2) Who _____ going to watch your dog while you're away?",
           "correctAnswers": ["is", "'s"]
         },
         {
           "type": "wordBank",
           "paragraph": "3) Last weekend, we ________ visit the new museum, but it started raining. So instead, we ________ stay home and watch a movie. This Saturday, I ________ meet my friends at the cafe. We ________ have lunch together and then we ________ go shopping. In the evening, my sister and I ________ cook dinner for the family. It's ________ be a busy day, but I'm excited!",
-          "wordBank": ["was going to", "were going to", "am going to", "are going to", "are going to", "are going to", "going to"],
-          "correctAnswers": ["were going to", "were going to", "am going to", "are going to", "are going to", "are going to", "going to"]
+          "wordBank": ["decided to", "were going to", "am going to", "are going to", "are going to", "are going to", "going to"],
+          "correctAnswers": ["were going to", "decided to", "am going to", "are going to", "are going to", "are going to", "going to"]
         }
       ]
     },
