@@ -13,9 +13,9 @@
           "instructions": [
             {"text": "The future isn't certain but we can make promises with ", "textStyle":"text" },
             {"text": "will ", "textStyle":"bold"},
-            {"text": "before the root form of the verb.", "textStyle":"text"}, 
+            {"text": "before the main verb root form.", "textStyle":"text"}, 
             
-            {"text": "1) Click on the root verb below.", "textStyle":"italic", "newParagraph":true}
+            {"text": "1) Click on the main verb below.", "textStyle":"italic", "newParagraph":true}
           ],
           "words": [
           {"text": "The ", "feedback": "Nope that's the 'definite article'"},
