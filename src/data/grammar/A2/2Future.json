@@ -56,13 +56,16 @@
         {
           "type":"click",
           "instructions":[
-            {"text": " Conjunctions ", "textStyle":"bold"},
-            {"text": " use an apostrophe to put two words together.", "textStyle":"text"},
-            {"text": " There are nine conjunctions written on the board above: I'm, won't, I'll, you'll, he'd, we've, they're, musn't, I've, he'd, shouldn't, ", "textStyle":"italic", "newLine":true},
-            {"text": " Will and other modals have some special powers to make one word out of two. Use it after a subject pronoun like", "textStyle":"text", "newParagraph":true},
-            {"text": " I, you, we, he, she, it ", "textStyle":"italic"},
+            {"text": " Will & Won't ", "textStyle":"bold"},
+            {"text": " are known as modal verbs so they shorten and take the morphemes ", "textStyle":"text"},
+            {"text": " 'll &  n't ", "textStyle":"text"},
+            {"text": "unto themselves.", "textStyle":"text"},
+            {"text": " There are nine conjunctions written on the board above: ", "textStyle":"text", "newParagraph":true},
+            {"text": "I'm, won't, I'll, you'll, he'd, we've, they're, musn't, I've, he'd & shouldn't ", "textStyle": "italic"},
+            {"text": " Will and other modals can make one word out of two after a subject pronoun like", "textStyle":"text", "newParagraph":true},
+            {"text": " I'll, you'll, we'll, he'll, she'll & it'll ", "textStyle":"italic"},
             {"text": " or ", "textStyle":"text"},
-            {"text": " they. ", "textStyle":"italic"},
+            {"text": " y'all'll. ", "textStyle":"italic"},
             {"text": " - ","textStyle":"text"},
             {"text": " wi", "textStyle":"strike"},
             {"text": " , add an apostrophie ", "textStyle":"text"},
@@ -71,28 +74,68 @@
             {"text": "'ll", "textStyle":"bold"},
             {"text": " on the subject, to make one word out of two. ", "textStyle":"text"},
             {"text": "I'll, you'll, we'll, he'll, she'll, it'll ", "textStyle":"bold", "newParagraph":true},
-            {"text": "and ", "textStyle":"text"},
-            {"text": " they'll.", "textStyle":"bold"},
-            {"text": " The negative form is ", "textStyle":"text", "newParagraph":true},
+            {"text": "of ", "textStyle":"text"},
+            {"text": " will.", "textStyle":"bold"},
+            {"text": " The negative form of ", "textStyle":"text"},
+            {"text": " will.", "textStyle":"bold"},
+            {"text": " is ", "textStyle":"text"},
             {"text": " won't ", "textStyle":"bold"},
             {"text": " which uses the morpheme ", "textStyle":"text"},
             {"text": " n't", "textStyle":"bold"},
-            {"text": " at the end of most negative modals. ", "textStyle":"text"},
-            {"text": "1) Click the conjunctions", "textStyle":"italic", "newParagraph":true}
+            {"text": " at the end. ", "textStyle":"text"},
+            {"text": "1) Click the forms of will in the sentence below", "textStyle":"italic", "newParagraph":true}
             ],
             "words": [
-              {"text": "The", "feedback":"No, the is not a conjunction"},
-              {"text": "guy ", "feedback":"No, guy is not a conjunction"},
-              {"text": "can't", "feedback": "Yes, can't is a conjunction of can not."},
-              {"text": "even", "feedback": "Nope, not even"}
+              {"text": "I", "feedback":"No, the is not will"},
+              {"text": "'ll", "feedback":"Yes, will as a conjunction"},
+              {"text": "call", "feedback": "No."},
+              {"text": "you", "feedback": "Nope, not even"},
+              {"text": "tomorrow", "feedback": "No"},
+              {"text": "but", "feedback": "Nope, not even"},
+              {"text": "I ", "feedback": "Nope, not even"},
+              {"text": "won't ", "feedback": "yes, won't is will's negative form"},
+              {"text": "stay", "feedback":"No, that's the main verb"},
+              {"text": "on", "feedback": "No."},
+              {"text": "the", "feedback": "Nope, not even"},
+              {"text": "phone", "feedback": "No"},
+              {"text": "for ", "feedback": "Nope, not even"},
+              {"text": "long.", "feedback": "Nope, not even"}
             ],
-            "keyWords":["can't"]       
+            "keyWords":["'ll", "won't"]       
         },
         {
-          "type":"multipleChoice",
-          "question": "2) What are conjunctions usually made of?",
-          "options":["plural nouns and action verbs", "not, modal verbs and pronouns", "articles and adjectives"],
-          "correctAnswer": "not, modal verbs and pronouns"
+          "type": "multipleChoice",
+          "question": "Will you attend the meeting tomorrow?",
+          "options": ["Yes, I will.", "No, I won't.", "Maybe.", "I'm not sure."],
+          "correctAnswer": "Yes, I will."
+        },
+        {
+          "type": "multipleChoice",
+          "question": "She won’t be able to come because __________.",
+          "options": ["she is sick", "she will be late", "she is busy", "she will travel"],
+          "correctAnswer": "she is busy"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "I _____ (will) probably _____ to Paris next month.",
+          "wordBank": ["travel", "will", "go", "come", "visit", "leave"],
+          "correctAnswers": ["will", "travel"]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "They _____ (will) finish the project by Friday.",
+          "wordBank": ["start", "will", "finish", "complete", "decide", "wait"],
+          "correctAnswers": ["will", "finish"]
+        },
+        {
+          "type": "gapFill",
+          "template": "She __________ (will) call me later.",
+          "correctAnswers": ["will"]
+        },
+        {
+          "type": "gapFill",
+          "template": "I __________ (won’t) be available tomorrow.",
+          "correctAnswers": ["won’t"]
         }
       ]
     },
@@ -137,7 +180,24 @@
         },
         {
           "type":"gapFill",
-          "template": "He __"
+          "template": "He __ do it",
+          "correctAnswers": ["'ll", "will"]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "They _____ (will) finish the project by Friday.",
+          "wordBank": ["start", "will", "finish", "complete", "decide", "wait"],
+          "correctAnswers": ["will", "finish"]
+        },
+        {
+          "type": "gapFill",
+          "template": "She __________ (will) call me later.",
+          "correctAnswers": ["will"]
+        },
+        {
+          "type": "gapFill",
+          "template": "I __________ (won’t) be available tomorrow.",
+          "correctAnswers": ["won’t"]
         }
       ]
     },
@@ -202,71 +262,37 @@
         },
         {
           "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
+          "question": "Will they help with the project?",
+          "options": ["Yes, they will.", "No, they won’t.", "I don’t know.", "Maybe."],
+          "correctAnswer": "Yes, they will."
         },
         {
           "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
+          "question": "She won’t come if __________.",
+          "options": ["it rains", "she finishes work early", "she is tired", "she has time"],
+          "correctAnswer": "it rains"
         },
         {
           "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+          "paragraph": "We __________ (will) leave for the airport at 6 pm.",
+          "wordBank": ["go", "will", "leave", "wait", "depart", "return"],
+          "correctAnswers": ["will", "leave"]
         },
         {
           "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
+          "paragraph": "He __________ (will) finish the book this weekend.",
+          "wordBank": ["read", "will", "finish", "complete", "write", "start"],
+          "correctAnswers": ["will", "finish"]
         },
         {
           "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
+          "template": "They __________ (will) attend the concert next week.",
+          "correctAnswers": ["will"]
         },
         {
           "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "template": "I __________ (won’t) be able to come.",
+          "correctAnswers": ["won’t"]
         }
       ]
     },
@@ -277,72 +303,55 @@
           "imagePath": "A2/2Future/6.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
           "type": "click",
           "instructions": [
             {
-              "text": "__________",
-              "textStyle": "__________",
+              "text": "Click on the words to complete the sentence:",
+              "textStyle": "bold",
               "newParagraph": true
             },
             {
-              "text": "__________",
-              "textStyle": "__________",
+              "text": "They __________ finish the project by Friday.",
+              "textStyle": "normal",
               "newParagraph": false
             }
           ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "words": ["will", "won't", "might", "may"],
+          "keyWords": ["will"]
         },
         {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "type": "multipleChoice",
+          "question": "Will you be available tomorrow?",
+          "options": ["Yes, I will.", "No, I won’t.", "Maybe.", "I’m not sure."],
+          "correctAnswer": "Yes, I will."
+        },
+        {
+          "type": "multipleChoice",
+          "question": "They won’t be able to finish the project because __________.",
+          "options": ["they are tired", "they will be late", "they are busy", "they will leave early"],
+          "correctAnswer": "they are busy"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "I __________ (will) decide later about the trip.",
+          "wordBank": ["think", "will", "decide", "consider", "plan", "choose"],
+          "correctAnswers": ["will", "decide"]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "We __________ (will) wait for the bus here.",
+          "wordBank": ["sit", "will", "wait", "stand", "leave", "stay"],
+          "correctAnswers": ["will", "wait"]
+        },
+        {
+          "type": "gapFill",
+          "template": "He __________ (will) call me later.",
+          "correctAnswers": ["will"]
+        },
+        {
+          "type": "gapFill",
+          "template": "They __________ (won’t) be here tomorrow.",
+          "correctAnswers": ["won’t"]
         }
       ]
     },
@@ -353,72 +362,21 @@
           "imagePath": "A2/2Future/7.png"
         },
         {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "__________",
-          "options": ["__________", "__________", "__________", "__________"],
-          "correctAnswer": "__________"
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "__________",
-          "wordBank": ["__________", "__________", "__________", "__________", "__________", "__________"],
-          "correctAnswers": ["__________", "__________", "__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
-          "type": "gapFill",
-          "template": "__________ (__________)",
-          "correctAnswers": ["__________"]
-        },
-        {
           "type": "click",
           "instructions": [
             {
-              "text": "__________",
-              "textStyle": "__________",
+              "text": "Click on the words to complete the sentence:",
+              "textStyle": "bold",
               "newParagraph": true
             },
             {
-              "text": "__________",
-              "textStyle": "__________",
+              "text": "They __________ finish the project by Friday.",
+              "textStyle": "normal",
               "newParagraph": false
             }
           ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
-        },
-        {
-          "type": "click",
-          "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
-          ],
-          "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
-          "keyWords": ["__________", "__________", "__________", "__________"]
+          "words": ["will", "won't", "might", "may"],
+          "keyWords": ["will"]
         }
       ]
     }
