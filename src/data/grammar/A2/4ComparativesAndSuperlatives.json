@@ -26,27 +26,31 @@
           }, 
           {
             "text": " 'lighter' ",
-            "textStyle": "bold",
-            "newLine": true
-          },
-          {
-            "text": "We should add ",
-            "textStyle": "text"
-          },
-          {
-            "text": "more",
             "textStyle": "bold"
           },
           {
-            "text": "before any nouns and also any adjecteves longer than 2 syllables like ",
+            "text": "Use ",
             "textStyle": "text"
           },
           {
-            "text": " ellegent ; ",
+            "text": " more",
+            "textStyle": "bold"
+          },
+          {
+            "text": " before any nouns and also any adjecteves longer than 2 syllables like ",
+            "textStyle": "text"
+          },
+          {
+            "text": " ellegent ;  ",
             "textStyle": "italic"
           },
           {
-            "text": " short adjectives like",
+            "text": " more ellegent .",
+            "textStyle": "bold"
+          },
+
+          {
+            "text": " Short adjectives like",
             "textStyle": "text"
           },
           {

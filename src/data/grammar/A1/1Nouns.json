@@ -12,35 +12,35 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {"text": "A noun is anyone, anything or any place. ","textStyle": "text"},
+            {"text": "Anyone, anything or any place-- ","textStyle": "text"},
             {"text": " Michael Jordon, dog, France, hands ", "textStyle": "italic"   },
-            {"text": " are all nouns. You can add articles like", "textStyle": "text" },
+            {"text": " --are all nouns. ","textStyle": "text"},
+            {"text": "You can add articles like", "textStyle": "text", "newLine":true },
             {"text": " a ", "textStyle": "bold" },
-            { "text": "or ","textStyle": "text"},
-            { "text": "an ", "textStyle": "bold" },
-            { "text": "to make a noun phrase. Add ", "textStyle": "text"}, 
-            { "text": " the ", "textStyle": "bold" },
-            {"text": " to a specific noun to make a noun phrase. Add", "textStyle": "text" },
-            { "text": " a ", "textStyle": "bold" },
-            { "text": " or ", "textStyle": "text"},
-            {  "text": " an ",  "textStyle": "bold" },
-            {  "text": "to an unspecified noun based on if it starts with a vowel sound, but don't add articles to names or pronouns." },
-            { "text": "There are much fewer pronouns, and a few different kinds. These are the 12 personal pronouns : ", "textStyle": "text", "newParagraph": true },
-            { "text": "I & me ", "textStyle": "bold","newLine": true },
+            {"text": "or ","textStyle": "text"},
+            {"text": "an ", "textStyle": "bold" },
+            {"text": "to a thing to make a noun phrase--", "textStyle": "text"},
+            {"text": " a dog, a hand.", "textStyle": "italic"},
+            {"text": " Add ", "textStyle": "text", "newLine":true}, 
+            {"text": " the ", "textStyle": "bold" },
+            {"text": " to a specific thing to make the noun phrase with the definite article.", "textStyle": "text" },
+            {"text": " Don't add articles to names or pronouns, only things.", "textStyle": "text", "newLine":true },
+            {"text": "There are some pronouns of different kinds. 12 personal pronouns : ", "textStyle": "text", "newParagraph": true },
+            {"text": "I & me ", "textStyle": "bold","newLine": true },
             {"text": " for the person speaking; 1st person singular. ", "textStyle": "text"  },
             {"text": "you ", "textStyle": "bold", "newLine": true },
             {"text": " for the person or people you're speaking to,  ","textStyle": "text"  },
             {"text": "he & him ","textStyle": "bold","newLine": true },
-            {  "text": " and ","textStyle": "text"      },
-            {  "text": "she & her ", "textStyle": "bold"   },
-            {   "text": " are for men and women, respectively  ", "textStyle": "text"  },
-            { "text": "it ","textStyle": "bold",  "newLine": true  },
-            { "text": " is for objects and other things, ", "textStyle": "text"},
-            { "text": "we & us ",  "textStyle": "bold", "newLine": true },
-            {   "text": " are for you and I together; 1st person plural.", "textStyle": "text" },
-            { "text": "they & them ", "textStyle": "bold",  "newLine": true   },
-            { "text": " is for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.",  "textStyle": "text"   },
-            {  "text": "1) Click on the pronouns in the sentence below.", "textStyle": "italic",  "newParagraph": true }
+            {"text": " and ","textStyle": "text" },
+            {"text": "she & her ", "textStyle": "bold"   },
+            {"text": " are for men and women, respectively and ", "textStyle": "text"  },
+            {"text": "it ","textStyle": "bold",  "newLine": true  },
+            {"text": " is for objects and other things, ", "textStyle": "text"},
+            {"text": "we & us ",  "textStyle": "bold", "newLine": true },
+            {"text": " are for you and I, together. It's known as the 1st person plural.", "textStyle": "text" },
+            {"text": "they & them ", "textStyle": "bold",  "newLine": true   },
+            {"text": " is for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.",  "textStyle": "text"   },
+            {"text": "1) Click on the pronouns in the sentence below.", "textStyle": "italic",  "newParagraph": true }
           ],
           "words": [
             {"text": "What ",   "feedback": "No, 'what' is a question word." },
@@ -71,7 +71,18 @@
         },
         {
           "type": "multipleChoice",
-          "question": "3) _____ apple.",
+          "question": "3) Which is a noun?",
+          "options": [
+            "to do",
+            "a marker",
+            "cool",
+            "fast"
+          ],
+          "correctAnswer": "a marker"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "4) _____ apple.",
           "options": [
             "a",
             "an"
@@ -80,17 +91,21 @@
         },
         {
           "type": "multipleChoice",
-          "question": "4) _____ banana.",
+          "question": "5) _____ banana.",
           "options": [
             "a",
             "an"
           ],
           "correctAnswer": "a"
         },
-      
+        {
+          "type": "gapFill",
+          "template": "6) Add an article to the noun. _____ elephant",
+          "correctAnswer": ["an", "the"]
+        },
         {
           "type": "multipleChoice",
-          "question": "5) Someone asked me for _____ euro.",
+          "question": "7) Someone asked me for _____ euro.",
           "options": [
             "a",
             "an",
@@ -112,8 +127,38 @@
           "layout": "horizontal",
           "instructions": [
             {
-              "text": " Noun phrases have an article and/or determiners:",
+              "text": " The things on the floor are common nouns. Plural nouns count ",
               "textStyle": "text"
+            },
+            {
+              "text": "  2 +",
+              "textStyle": "bold"
+            },
+            {
+              "text": "and they usually end with ",
+              "textStyle": "text"
+            },
+            {
+              "text": "s ",
+              "textStyle": "bold"
+            },  
+            {
+              "text": " . We use plural nouns for the things that we like, especially",
+              "textStyle": "text"
+            }, 
+            {
+              "text": "   things we like to eat.",
+              "textStyle": "italic"
+            },
+            {
+              "text": "My favorite snack is chips.",
+              "textStyle":"italic",
+              "newLine":true
+            },
+            {
+              "text": "   Singular nouns usually have an article and sometimes another determiners:",
+              "textStyle": "text",
+              "newLine":true
             },
             {
               "text": " a ",
@@ -136,11 +181,15 @@
               "textStyle": "bold"
             },
             {
-              "text": "onions.",
-              "textStyle": "italic"
+              "text": "onion",
+              "textStyle": "text"
             },
             {
-              "text": "The most common determiners are the indefinite articles ",
+              "text": "s.",
+              "textStyle": "bold"
+            },
+            {
+              "text": "The indefinite ",
               "textStyle": "text",
               "newLine": true
             },
@@ -149,12 +198,16 @@
               "textStyle": "bold"
             },
             {
-              "text": " or the definite article ",
+              "text": " and the definite ",
               "textStyle": "text"
             },
             {
               "text": " the ",
               "textStyle": "bold"
+            },
+            {
+              "text":" are articles and more broadly, determiners.",
+              "textStyle":"text"
             },
             {
               "text": "1) Click on the articles in the sentence below.",
@@ -199,12 +252,14 @@
         },
         {
           "type": "multipleChoice",
-          "question": "2) _____ opportunity",
+          "question": "2) My favorite lean protein is _____ ",
           "options": [
-            "a",
-            "an"
+            "a fish",
+            "fishes",
+            "the fish",
+            "fish"
           ],
-          "correctAnswer": "an"
+          "correctAnswer": "fish"
         },
         {
           "type": "multipleChoice",
@@ -217,12 +272,30 @@
           "correctAnswer": "the"
         },
         {
-          "type":"gapFill",
-          "template": "4) ____ euro",
-          "correctAnswers": [  
+          "type": "multipleChoice",
+          "question": "4) There are _____ people at the party.",
+          "options": [
             "a",
-            "one",
-            "two"
+            "a lot",
+            "the",
+            "a lot of"
+          ],
+          "correctAnswer": "a lot of"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "5) We don't have _____ apples, and we only have _____ oranges. There's a _____ bread left for sandwiches, and we have _____ milk in the fridge.",
+          "wordBank": [
+            "a few",
+            "a loaf of",
+            "some",
+            "any"
+          ],
+          "correctAnswers": [
+            "any",
+            "a few",
+            "a loaf of",
+            "some"
           ]
         }        
       ]
@@ -239,19 +312,19 @@
           "layout": "vertical",
           "instructions": [
             {
-              "text": " Some nouns count, some don't. For example, ",
+              "text": " Some nouns count, some don't. For example we count, ",
               "newParagraph":true
             },
             {
-              "text": " 2 Euros ",
+              "text": "1 Euro, 2 Euros ",
               "textStyle": "italic"
             },
             {
-              "text": " but  ",
+              "text": " but not ",
               "textStyle": "text"
             },
             {
-              "text": " two moneys. ",
+              "text": "one money, two moneies. ",
               "textStyle": "strike"
             },
             {
@@ -259,7 +332,7 @@
               "textStyle": "text"
             },
             {
-              "text": " information ",
+              "text": " information, data ",
               "textStyle": "bold"
             },
             {
@@ -271,12 +344,13 @@
               "textStyle": "bold"
             },
             {
-              "text": "and that mean we shouldn't use the indefinite article.",
+              "text": "These are collective nouns and are used globally. Avoid the indefinite article.",
               "textStyle": "text" 
             },
             {
-              "text": " an information. ",
-              "textStyle": "strike"
+              "text": " an information, an air, a humanity, a trash, a chess, a poetry, a furniture, a homework, a wisdom. ",
+              "textStyle": "strike",
+              "newLine":true
             },
             {
               "text": " Countable nouns are words that you can count.  ",
@@ -358,9 +432,37 @@
           ]
         },
         {
+          "type":"multipleChoice",
+          "question": "2) Only 1 noun phrase is correct. Choose it.",
+          "options": [
+            "a lot bananas", "a gasoline", "a dogs", "a pineapple"
+          ],
+          "correctAnswer":"a pineapple"
+        },
+        {
+          "type": "gapFill",
+          "template": "2) There aren't _____ cookies left in the jar. We need to buy more.",
+          "correctAnswers": 
+            ["many", "any", "no"]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "3-5) I don't have _____ friends but I have _____ money to help them. However, I don't have _____ time.",
+          "wordBank": [
+            "some",
+            "many",
+            "much"
+          ],
+          "correctAnswers": [
+            "many",
+            "some",
+            "much"
+          ]
+        },
+        {
           "type":"gapFill",
-          "template":"",
-          "correctAnswers":[]
+          "template":" 6)  Make a noun phrase from the word. _____ sheep",
+          "correctAnswers":["the", "a", "some", "a lot of", "many", "much", "a few", "any","his", "her", "their", "our", "no", "a few", "loads of", "quite a few"]
         }
       ]
     },  
@@ -404,16 +506,27 @@
         },
         {
           "type": "gapFill",
-          "template": "4) There are four _____ (person) playing in the park.",
+          "template": "4) Four fox_____ ",
           "correctAnswers": [
-            "people"
+            "es"
           ]
         },
         {
+          "type": "multipleChoice",
+          "question": "1) Which option correctly completes the sentence? 'There is _____ water left in the glass.'",
+          "options": [
+            "a lot of",
+            "many",
+            "some",
+            "few"
+          ],
+          "correctAnswer": "a lot of"
+        },
+        {
           "type": "gapFill",
-          "template": "5) Put up some _____(shelf) on the wall for the home phone and wifi router.",
+          "template": "5) _____ time left to finish my assignment.",
           "correctAnswers": [
-            "shelves"
+            "much", "a lot of", "any", "no", "", " "
           ]
         }
       ]
