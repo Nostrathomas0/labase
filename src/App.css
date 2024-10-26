@@ -148,6 +148,109 @@
 .instructions .default {
   font-family: sans-serif; 
 }
+.main-nav {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #f0f0f0; /* Light gray background for the frame */
+  border-right: 2px solid #ccc; /* Border to the right of the frame */
+  padding-top: 20px; /* Padding at the top */
+}
+/* Styling for the menu list */
+.menu-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+}
+
+/* Styling for each menu item */
+.menu-list li {
+  margin: 20px 0; /* Space between menu items */
+}
+
+/* Styling for the links */
+.menu-list li a {
+  font-size: 24px; /* Font size for the menu items */
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.menu-list li a:hover {
+  color: #007BFF; /* Change color on hover */
+}
+/* Container for page turners */
+.page-turner-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  align-items: center;
+  justify-content: space-between; /* Space out page info and buttons */
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Styling for the page info */
+.page-info {
+  font-size: 18px;
+  font-weight: bold;
+  flex: 1; /* Allow the page info to take up available space */
+}
+/* Container for the buttons */
+.page-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+/* Styling for Previous and Next buttons */
+.prev-button, .next-button {
+  font-size: 16px; /* Font size for the buttons */
+  padding: 8px 16px; /* Padding for a larger click area */
+  background-color: #007BFF; /* Primary color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  margin: 0 5px; /* Space between the buttons */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Styling for disabled buttons */
+.prev-button:disabled, .next-button:disabled {
+  background-color: #ccc; /* Grey color for disabled state */
+  cursor: not-allowed;
+}
+
+/* Styling for hover effect */
+.prev-button:hover:not(:disabled), .next-button:hover:not(:disabled) {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+/* Responsive styling */
+@media (max-width: 768px) {
+  .page-turner-container {
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: stretch; /* Make items fill the width */
+  }
+
+  .page-info {
+    text-align: center; /* Center align the text on mobile */
+    margin-bottom: 10px;
+  }
+
+  .page-buttons {
+    justify-content: center; /* Center the buttons on mobile */
+  }
+}
+
+/* Styling for level and page links */
+nav ul li a, .page-info {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover, .page-info:hover {
+  color: #007BFF; /* Same hover color as buttons */
+}
 .blockquote {
   padding: 10px 100px;
   margin: 20px 0;

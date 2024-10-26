@@ -13,21 +13,22 @@
           "layout":"horizontal",
           "instructions": [
             
-            {"text": "Verbs tell us what's happening and what people do, ", "textStyle": "text"},
+            {"text": "Verbs tell us what's happening and what people do; they're", "textStyle":"text"},
             {"text": " action words ", "textStyle":"underline"},
             {"text": "like ", "textStyle": "text"},
             {"text": " run, jump  ", "textStyle": "bold"},
             {"text": "and", "textStyle": "text"},
             {"text": " eat", "textStyle": "bold"},
-            {"text": ", or ", "textStyle": "text"},
-            {"text": "states ", "textStyle":"underline"},
-            {"text": "like", "textStyle": "text"},
+            {"text": ", or they're ", "textStyle": "text"},
+            {"text": " states ", "textStyle":"underline"},
+            {"text": " like", "textStyle": "text"},
             {"text": " am, is, are, love  ", "textStyle": "bold"},
             {"text": " and ", "textStyle": "text"},
             {"text": " have. ", "textStyle": "bold"},
-            {"text": "All sentences have a ", "textStyle":"text", "newLine":true},
+            {"text": "These  are two different classes of verbs", "textStyle":"text"},
+            {"text": "Sentences have a ", "textStyle":"text", "newLine":true},
             {"text": " main  ", "textStyle":"bold"},
-            {"text": " verb, which is the action or state. Many verb tenses require one or more auxilliary verbs ",  "textStyle":"text"},
+            {"text": " verb, the action or state. Verbs can also take different tenses, require one or more auxilliary verbs and usually follow strict syntactic grammar. ",  "textStyle":"text"},
             {"text": "(aux.) ", "textStyle": "bold"},
             {"text": "is placed before the main verb to change the tense or aspect. For example, present continuous has an aux. verb", "textStyle":"text"},
             {"text": "  (am/is/are) ", "textStyle": "italic"},
@@ -81,9 +82,9 @@
             {"text": "Click on the present simple verbs. Then type the correct ending on the verb.", "textStyle":"italic", "newParagraph":true}
           ],
           "words": [
-            { "text": "I", "feedback": "'I' is not a present simple verb." },
-            { "text": "'m", "feedback": "'m' is not a present simple verb." },
-            { "text": "going", "feedback": "'going' is not a present simple verb." },
+            { "text": "I", "feedback": "Nope, that's a pronoun." },
+            { "text": "'m", "feedback": "m's good enough but it's aux. verb." },
+            { "text": "going", "feedback": "'going' is a gerund verb." },
             { "text": "to", "feedback": "'to' is not a present simple verb." },
             { "text": "the", "feedback": "'the' is not a present simple verb." },
             { "text": "museum", "feedback": "'museum' is not a present simple verb." },
@@ -96,14 +97,16 @@
             { "text": "to", "feedback": "'to' is not a present simple verb." },
             { "text": "there", "feedback": "'there' is not a present simple verb." },
             { "text": "right?", "feedback": "'right?' is not a present simple verb." },
-            { "text": "Do", "feedback": "'Do' is not a present simple verb." },
-            { "text": "you", "feedback": "'you' is not a present simple verb." },
-            { "text": "two", "feedback": "'two' is not a present simple verb." },
+            { "text": "Does", "feedback": "'Does' is an aux. verb providing do support" },
+            { "text": "your", "feedback": "'you' is not a present simple verb." },
+            { "text": "friend", "feedback": "'two' is not a present simple verb." },
             { "text": "want", "feedback": "'want' is a present simple verb." },
             { "text": "to", "feedback": "'to' is not a present simple verb." },
-            { "text": "come?", "feedback": "'come?' is not a present simple verb." }
+            { "text": "come?", "feedback": "come's not present simple, it's to + inf ." }
           ],
           "keyWords": [
+            "Does",
+            "'m",
             "lives",
             "want"
           ]

@@ -68,8 +68,8 @@ function App() {
             {authError}
           </div>
         )}
-        <nav>
-          <ul>
+        <nav className="main-nav">
+          <ul className="menu-list">
             <li><Link to="/A1">Beginner (A1)</Link></li>
             <li><Link to="/A2">Elementary (A2)</Link></li>
             <li><Link to="/B1">Pre-Intermediate (B1)</Link></li>

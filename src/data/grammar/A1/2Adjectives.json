@@ -10,11 +10,23 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Adjectives can be abbreviated (abb.) as",
+          "question": "1) What's the abb. for adjectives?",
           "options": ["adj.", "adv.", "n.", "v."],
           "correctAnswer": "adj."
-        }
-      ]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "2)  _____  _____ ",
+          "wordBank": [
+            "blocks",
+            "colorful"
+          ],
+          "correctAnswers": [
+            "colorful",
+            "blocks"
+          ]
+        }   
+      ] 
     },
     {
       "questions":  [
@@ -25,7 +37,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Adjectives go _______ the noun the describe?",
+          "question": "1) Adjectives go _______ the noun the describe?",
           "options": ["before", "after", "either before or after"],
           "correctAnswer": "before"
         },
@@ -33,7 +45,7 @@
           "type":"click",
           "instructions": [
            
-            {"text": "Click on the adjectives in the sentence below.", "textStyle": "italic"}
+            {"text": "2) Click on the adjectives in the sentence below.", "textStyle": "italic"}
           ],
           "words": [
             { "text": "The", "feedback": "'The' is not an adjective." },
@@ -54,7 +66,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Choose the correct phrase.",
+          "question": "3) Choose the correct phrase.",
           "options": ["a day sunny", "sunny a day", "a sunny day", "sunny day a"],
           "correctAnswer": "a sunny day"
         }
@@ -72,25 +84,33 @@
           "layout":"horizontal",
           "instructions": [
            
-            {"text": " Quantifiers are determiners that describe ", "textStyle":"text"},
-            {"text": "how many ", "textStyle":"italic"},
+            {"text": " Quantifiers determine ", "textStyle":"text"},
+            {"text": "how many ", "textStyle":"underline"},
             {"text": "countables nouns and ", "textStyle":"text"},
-            {"text": "how much ", "textStyle":"italic"},
-            {"text": "uncountable noun there is. ", "textStyle":"text"},
-            {"text": " Plenty of, a lot of, much, many  & tons of ", "textStyle":"bold"},
-            {"text": " describes a high amomunt, ", "textStyle": "text"},
+            {"text": "how much ", "textStyle":"underline"},
+            {"text": "uncountable noun there is, ", "textStyle":"text"},
+            {"text": " plenty of, a lot of, much, many  & tons of ", "textStyle":"bold"},
+            {"text": " describes a high amount, ", "textStyle": "text"},
             {"text": " some & enough ", "textStyle":"bold"},
             {"text": " describe a medium, acceptable ammount and ", "textStyle":"text"},
             {"text": " no ", "textStyle":"bold"},
-            {"text": " describes an amount equal to zero. A zero ammount can also be expressed with, ", "textStyle":"text"},
+            {"text": " describes an amount equal to zero. ", "textStyle":"text"},
+            {"text": "A zero ammount can also be expressed with, ", "textStyle":"text", "newLine":true},
             {"text": " any*", "textStyle":"bold"},
-            {"text": " which is also used in questions. ", "textStyle":"text"},
-            {"text": " Do you have any cabbage?", "textStyle":"italic"},
-            {"text": "* any", "textStyle":"bold", "newLine":true},
-            {"text": " must use the negative form of the verb, while", "textStyle":"italic"},
-            {"text": " no ", "textStyle":"bold"},
-            {"text": " uses the positive because it's already negative", "textStyle":"italic"},
-            {"text": "Click the quantifiers", "textStyle":"italic", "newParagraph":true}
+            {"text": " which is also used in questions.  ", "textStyle":"text"},
+            {"text": " Do you have any cabbage?", "textStyle":"italic", "newLine":true},
+            {"text": "* any", "textStyle":"bold", "newParagraph":true},
+            {"text": " makes a zero amount with the", "textStyle":"text"},
+            {"text": "  negative ", "textStyle":"underline"},
+            {"text": " form of a verb.", "textStyle":"text"},
+            {"text": "I ", "textStyle":"italic", "newLine":true},
+            {"text": "don't", "textStyle":"underline" },
+            {"text": " see any surfers.", "textStyle":"italic"},
+            {"text": "That's because there are no waves.", "textStyle":"italic", "newLine":true},
+            {"text": " Any ", "textStyle":"bold", "newParagraph":true},
+            {"text": " asks for something that you're not sure they have.", "textStyle":"text"},
+            {"text": "Do you have any medecine?", "textStyle":"italic", "newLine":true},
+            {"text": "1) Click the quantifiers", "textStyle":"italic", "newParagraph":true}
           ],
           "words": [
             { "text": "Do", "feedback": "'Do' is not a quantifier." },
@@ -125,19 +145,19 @@
           },
         {
           "type": "multipleChoice",
-          "question": "There isn't _____ coffee.",
+          "question": "2) There isn't _____ coffee.",
           "options": ["many", "some", "any", "a lot" ],
           "correctAnswer": "any"
         },
         {
-          "type": "GapFill",
-          "template": "There _____ any milk and bread.",
-          "correctAnswers": ["isn't"]
+          "type": "gapFill",
+          "template": "3) Do you have _____ milk and bread.",
+          "correctAnswers": ["any", "some", " "]
         },
         {
-          "type": "GapFill",
-          "template": "_____ are bags and bowls.",
-          "correctAnswers": ["There"]
+          "type": "gapFill",
+          "template": "4) There _____ no bags or bowls.",
+          "correctAnswers": ["are"]
         }
       ]
     },
@@ -165,7 +185,10 @@
               {"text": " 2. ", "textStyle":"bold"},
               {"text": " an action to block. ", "textStyle": "text"},
               {"text": " Close the window please, it's cold.", "textStyle":"italic"},
-              {"text": "close (adj.) is pronounced with a clear /s/ sound. They're spelled the same so they're homonyms but they are not homophones.",  "textStyle": "text", "newLine":true},
+              {"text": " They're spelled the same so they're homo", "textStyle":"text"},
+              {"text": "nyms", "textStyle":"italic"},
+              {"text": " but they aren't homo", "textStyle":"text"},
+              {"text": "phones.",  "textStyle": "italic", "newLine":false},
               {"text": "Imagine the men's conversation.", "textStyle": "italic",  "newParagraph":true},
               {"text": "Bill: ", "textStyle": "text", "newLine":true},
               {"text": "Hey Bob, was your dog digging a hole in my garden last night?", "textStyle": "italic"}, 
@@ -265,40 +288,34 @@
           "layout": "horizontal",
           "instructions":[
             {"text": "That", "textStyle":"bold"},
-            {"text": " is a far-out word. It points at things and it' called a demonstrative. It's also used in relative clauses to give extra information in a noun phrase.", "textStyle":"text"},
+            {"text": " is a far-out word. It points at things and it calls them demonstratively. It's also used in relative clauses to give extra information in a noun phrase.", "textStyle":"text"},
             {"text": " I dress for the job ", "textStyle":"italic", "newLine":true},
             {"text": " that", "textStyle":"underline"},
-            {"text": " I ", "textStyle":"italic"},
-            {"text": " want ", "textStyle":"text"},
-            {"text": " That ", "textStyle":"bold", "newLine":true},
-            {"text": " is also useful with a finger. ", "textStyle":"text"},
-            {"text": " That bird's got something wrapped around its leg. ", "textStyle":"italic"},
-            {"text": " And finally that is used with there to refer to things apart. ", "textStyle":"text"},
-            {"text": " That heater upstairs doesn't have air conditioning. ", "textStyle":"italic"},
-            {"text": " In the sentence below, identify the demonstrative pronouns and the relative pronoun 'that'. "}
+            {"text": " I want ", "textStyle":"italic"},
+            {"text": " Those ", "textStyle":"bold", "newLine":true},
+            {"text": " is also useful to point with more than one finger. ", "textStyle":"text"},
+            {"text": "      that tree. ", "textStyle":"italic", "newLine":true},
+            
+            {"text": " In the sentence below, identify and select the demonstrative pronouns ", "newLine":"true"}
         ],
         "words": [
-          { "text": "This", "feedback": "'This' is a demonstrative pronoun used to refer to something near." },
-          { "text": "rowboat", "feedback": "'rowboat' is not a demonstrative pronoun or relative pronoun." },
-          { "text": "is", "feedback": "'is' is not a demonstrative pronoun or relative pronoun." },
-          { "text": "better", "feedback": "'better' is not a demonstrative pronoun or relative pronoun." },
-          { "text": "than", "feedback": "'than' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "Those", "feedback": "Yes." },
+          { "text": "birds", "feedback": "'birds' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "always", "feedback": "'always' is not a demonstrative pronoun or relative pronoun." },
+          { "text": "roost", "feedback": "'roosts' is birds nesting." },
+          { "text": "in", "feedback": "'in' is not a demonstrative pronoun or relative pronoun." },
           { "text": "that", "feedback": "'that' is a demonstrative pronoun used to refer to something farther away." },
-          { "text": "ship", "feedback": "'ship' is not a demonstrative pronoun or relative pronoun." },
-          { "text": "that", "feedback": "'that' is a relative pronoun used to introduce a relative clause." },
-          { "text": "we", "feedback": "'we' is not a demonstrative pronoun or relative pronoun." },
-          { "text": "saw", "feedback": "'saw' is not a demonstrative pronoun or relative pronoun." },
-          { "text": "yesterday", "feedback": "'yesterday' is not a demonstrative pronoun or relative pronoun." }
+          { "text": "tree.", "feedback": "'that' is a relative pronoun used to introduce a relative clause." }
         ],
         "keyWords": [
-          "This",
+          "Those",
           "that"
           ]
         },
         {
           "type": "GapFill",
           "template": "I want that shirt that _____ lady is wearing.",
-          "correctAnswers": ["that"]
+          "correctAnswers": ["that", "this"]
         },
         {
           "type": "GapFill",
@@ -319,7 +336,8 @@
           "layout":"horizontal",
             "instructions": [
               {"text": "Adjectives can be the object of a sentence.", "textStyle": "text"},
-              {"text": "Close describes their distance.",  "textStyle": "text"},
+              {"text": "He lives close.", "textStyle":"italic", "newLine":"true"},
+              {"text": "Close describes their distance.",  "textStyle": "text", "newLine":"true"},
               {"text": "/klous/", "textStyle": "italic"},
               {"text": "with a clear /s/ sound", "textStyle": "text"}
           ],
@@ -346,9 +364,9 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Which possessive pronoun correctly completes the sentence: 'Is this ______ book?'",
+          "question": "In the sentence above, only click the words that have the /s/ sound, then click the possessive  pronoun correctly completes the sentence: 'Is this ______ ?'",
           "options": ["yours", "your", "you're", "their"],
-          "correctAnswer": "your"
+          "correctAnswer": "yours"
         },
         {
           "type": "multipleChoice",
