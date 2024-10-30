@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const shouldOpenModal = queryParams.get('openModal') === 'true';
-    const authToken = document.cookie.split('; ').find(row => row.startsWith('authToken='))?.split('=')[1];
+    const authToken = document.cookie.split('; ').find(row => row.startsWith('backendJwtToken='))?.split('=')[1];
 
     if (authToken) {
       auth.signInWithCustomToken(authToken)
@@ -62,20 +62,36 @@ function App() {
 
   return (
     <AuthProvider>
-      <div>
+      <div >
         {authError && (
           <div className="auth-error">
             {authError}
           </div>
         )}
-        <nav className="main-nav">
-          <ul className="menu-list">
-            <li><Link to="/A1">Beginner (A1)</Link></li>
-            <li><Link to="/A2">Elementary (A2)</Link></li>
-            <li><Link to="/B1">Pre-Intermediate (B1)</Link></li>
-            <li><Link to="/B2">Intermediate (B2)</Link></li>
-          </ul>
-        </nav>
+         <div className="levels-topics-wrapper">
+          <div className="levels-and-topics-container">
+            {/* Levels Navigation */}
+            <div className="levels-container">
+              <h2>Levels</h2>
+              <nav>
+                <ul className="menu-list">
+                  <li><Link to="/A1">Beginner (A1)</Link></li>
+                  <li><Link to="/A2">Elementary (A2)</Link></li>
+                  <li><Link to="/B1">Pre-Intermediate (B1)</Link></li>
+                  <li><Link to="/B2">Intermediate (B2)</Link></li>
+                </ul>
+              </nav>
+            </div>
+
+            {/* Frame for level topics */}
+            <div className="topics-container">
+              <h2>Level Topics</h2>
+              <div className="topics-list">
+                {/* Topic links will be dynamically updated based on the selected level */}
+              </div>
+            </div>
+          </div>
+        </div>
 
         <Routes>
           {/* Level Routes */}
