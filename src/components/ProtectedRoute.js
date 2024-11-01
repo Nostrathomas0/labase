@@ -1,23 +1,28 @@
+// assets/js/ProtectedRoute.js
 
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { jwtDecode } from 'jwt-decode';
-
+import jwtDecode from 'jwt-decode';
+import { useAuth } from './AuthContext';
 
 const ProtectedRoute = ({ children }) => {
+  const { jwtToken, isLoading } = useAuth();
   const location = useLocation();
-  const authToken = document.cookie.split(';').find(row => row.trim().startsWith('authToken='))?.split('=')[1];
 
-  if (!authToken) {
+  // Wait until loading is complete to proceed
+  if (isLoading) return <div>Loading...</div>;
+
+  if (!jwtToken) {
+    // Redirect if no token is found
     return <Navigate to="/login" state={{ from: location }} />;
   }
 
   try {
-    const decodedToken = jwtDecode(authToken);
+    const decodedToken = jwtDecode(jwtToken);
     const currentTime = Date.now() / 1000;
 
     if (decodedToken.exp < currentTime) {
-      // Token expired
+      // Token expired, redirect to login
       return <Navigate to="/login" state={{ from: location }} />;
     }
 

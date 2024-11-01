@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
-import { auth } from './firebaseInit'; 
+import Cookies from 'js-cookie';
+import { jwtDecode } from 'jwt-decode';
 
 import CoverModal from './components/CoverModal'; // Adjust the import path as necessary
 import A1 from './components/pages/A1';
@@ -34,27 +35,38 @@ import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
 function App() {
-  const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [authError, setAuthError] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const authToken = Cookies.get('authToken');
+    if (!authToken) {
+      setAuthError('No authentication token found. Please sign in.');
+      navigate('/login');  // Redirect if no token
+      return;
+    }
+
+    try {
+      const decodedToken = jwtDecode(authToken);
+      if (decodedToken.exp < Date.now() / 1000) {
+        setAuthError('Session expired. Please sign in again.');
+        navigate('/login');  // Redirect if token expired
+      }
+    } catch (error) {
+      console.error("Invalid token:", error);
+      setAuthError('Invalid authentication. Please sign in.');
+      navigate('/login');
+    }
+  }, [navigate]);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const shouldOpenModal = queryParams.get('openModal') === 'true';
-    const authToken = document.cookie.split('; ').find(row => row.startsWith('backendJwtToken='))?.split('=')[1];
 
-    if (authToken) {
-      auth.signInWithCustomToken(authToken)
-        .then(() => {
-          console.log("User is authenticated, allow access");
-          setIsModalOpen(shouldOpenModal);
-        })
-        .catch(error => {
-          console.error("Authentication failed:", error);
-          setAuthError('Authentication failed. Please try again.');
-        });
-    } else {
-      setAuthError('No authentication token found. Please sign in.');
+    if (Cookies.get('authToken')) {
+      setIsModalOpen(shouldOpenModal);
     }
   }, [location]);
 
@@ -62,15 +74,14 @@ function App() {
 
   return (
     <AuthProvider>
-      <div >
+      <div>
         {authError && (
           <div className="auth-error">
             {authError}
           </div>
         )}
-         <div className="levels-topics-wrapper">
+        <div className="levels-topics-wrapper">
           <div className="levels-and-topics-container">
-            {/* Levels Navigation */}
             <div className="levels-container">
               <h2>Levels</h2>
               <nav>
@@ -82,46 +93,34 @@ function App() {
                 </ul>
               </nav>
             </div>
-
-            {/* Frame for level topics */}
             <div className="topics-container">
               <h2>Level Topics</h2>
-              <div className="topics-list">
-                {/* Topic links will be dynamically updated based on the selected level */}
-              </div>
+              <div className="topics-list"></div>
             </div>
           </div>
         </div>
 
         <Routes>
-          {/* Level Routes */}
           <Route path="/A1" element={<A1 />} />
           <Route path="/A2" element={<A2 />} />
           <Route path="/B1" element={<B1 />} />
           <Route path="/B2" element={<B2 />} />
-
-          {/* Protected Routes */}
-         {/* <Route element={<ProtectedRoute />}> */}
-            <Route path="/A1/nouns" element={<NounsPage />} />
-            <Route path="/A1/adjectives" element={<AdjectivesPage />} />
-            <Route path="/A1/verbs" element={<VerbsPage />} />
-            <Route path="/A1/there" element={<TherePage />} />
-
-            <Route path="/A2/pastCont" element={<PastContPage />} />
-            <Route path="/A2/future" element={<FuturePage />} />
-            <Route path="/A2/goingTo" element={<GoingToPage />} />
-            <Route path="/A2/compSupe" element={<CompSupePage />} />
-
-            <Route path="/B1/presPerfCont" element={<PresPerfContPage />} />
-            <Route path="/B1/pastPerfCont" element={<PastPerfContPage />} />
-            <Route path="/B1/2ndCond" element={<SecCondPage />} />
-            <Route path="/B1/modalVerbs" element={<ModalVerbsPage />} />
-
-            <Route path="/B2/mixedCond" element={<MixedCondPage />} />
-            <Route path="/B2/causitives" element={<CausitivesPage />} />
-            <Route path="/B2/modalsProb" element={<ModalsProbPage />} />
-            <Route path="/B2/futurePerf" element={<FuturePerfPage />} />
-          {/*</Route>*/}
+          <Route path="/A1/nouns" element={<NounsPage />} />
+          <Route path="/A1/adjectives" element={<AdjectivesPage />} />
+          <Route path="/A1/verbs" element={<VerbsPage />} />
+          <Route path="/A1/there" element={<TherePage />} />
+          <Route path="/A2/pastCont" element={<PastContPage />} />
+          <Route path="/A2/future" element={<FuturePage />} />
+          <Route path="/A2/goingTo" element={<GoingToPage />} />
+          <Route path="/A2/compSupe" element={<CompSupePage />} />
+          <Route path="/B1/presPerfCont" element={<PresPerfContPage />} />
+          <Route path="/B1/pastPerfCont" element={<PastPerfContPage />} />
+          <Route path="/B1/2ndCond" element={<SecCondPage />} />
+          <Route path="/B1/modalVerbs" element={<ModalVerbsPage />} />
+          <Route path="/B2/mixedCond" element={<MixedCondPage />} />
+          <Route path="/B2/causitives" element={<CausitivesPage />} />
+          <Route path="/B2/modalsProb" element={<ModalsProbPage />} />
+          <Route path="/B2/futurePerf" element={<FuturePerfPage />} />
         </Routes>
 
         <CoverModal isOpen={isModalOpen} onRequestClose={closeModal} />
@@ -131,3 +130,4 @@ function App() {
 }
 
 export default App;
+
