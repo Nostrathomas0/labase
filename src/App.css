@@ -275,3 +275,72 @@ nav ul li a:hover, .page-info:hover {
   font-style: italic;
   color: #333;
 }
+/* Wrapper for levels and topics */
+/* Wrapper for levels and topics */
+.levels-topics-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1200px; /* Optional: Set a max-width */
+  border: 2px solid #ccc; /* Frame around the whole section */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Background color for the frame */
+  padding: 20px;
+}
+
+/* Container for levels and topics inside the wrapper */
+.levels-and-topics-container {
+  display: flex;
+  flex: 1;
+  gap: 20px; /* Space between levels and topics */
+}
+
+/* Styling for levels container */
+.levels-container {
+  flex: 1;
+}
+
+/* Styling for topics container */
+.topics-container {
+  flex: 1;
+}
+
+/* Styling for headings */
+.levels-container h2,
+.topics-container h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Styling for levels navigation */
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-list li {
+  margin: 10px 0;
+}
+
+.menu-list li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #007BFF;
+}
+
+/* Styling for topics list */
+.topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .levels-and-topics-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
