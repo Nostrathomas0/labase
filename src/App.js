@@ -41,15 +41,15 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const authToken = Cookies.get('authToken');
-    if (!authToken) {
+    const backendJwtToken = Cookies.get('backendJwtToken');  // Check for the correct cookie
+    if (!backendJwtToken) {
       setAuthError('No authentication token found. Please sign in.');
       navigate('/login');  // Redirect if no token
       return;
     }
 
     try {
-      const decodedToken = jwtDecode(authToken);
+      const decodedToken = jwtDecode(backendJwtToken);
       if (decodedToken.exp < Date.now() / 1000) {
         setAuthError('Session expired. Please sign in again.');
         navigate('/login');  // Redirect if token expired
@@ -65,7 +65,7 @@ function App() {
     const queryParams = new URLSearchParams(location.search);
     const shouldOpenModal = queryParams.get('openModal') === 'true';
 
-    if (Cookies.get('authToken')) {
+    if (Cookies.get('backendJwtToken')) {
       setIsModalOpen(shouldOpenModal);
     }
   }, [location]);
@@ -77,8 +77,9 @@ function App() {
       <div>
         {authError && (
           <div className="auth-error">
-            {authError}
-          </div>
+          {authError} 
+          <a href="https://languapps.com">languapps.com</a>
+        </div>
         )}
         <div className="levels-topics-wrapper">
           <div className="levels-and-topics-container">
