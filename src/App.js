@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
 import Cookies from 'js-cookie';
-import { decode as jwtDecode } from 'jwt-decode';
-
+import { jwtDecode } from 'jwt-decode';
 
 import CoverModal from './components/CoverModal'; 
 import A1 from './components/pages/A1';
