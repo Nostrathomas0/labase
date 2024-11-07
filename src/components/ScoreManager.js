@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { jwtDecode } from 'jwt-decode';
-import jwt from 'jsonwebtoken';
+import jwtDecode from 'jwt-decode';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
-import { useAuth } from './AuthContext'; // Assuming you have an AuthContext to provide the current user
+import { useAuth } from './AuthContext';
 
 const firestore = getFirestore();
 
@@ -11,29 +10,25 @@ const ScoreManager = ({ children }) => {
   const { currentUser } = useAuth();
 
   const incrementScore = (points) => {
-    const newScore = score + points;
-    setScore(newScore);
+    setScore(score + points);
   };
 
   const saveScore = async () => {
-    const authToken = document.cookie.split(';').find(row => row.trim().startsWith('authToken='))?.split('=')[1];
-    if (authToken) {
-      const decodedToken = jwtDecode(authToken);
-      const newTokenPayload = { ...decodedToken, score: score };
-      const newAuthToken = jwt.sign(newTokenPayload, process.env.REACT_APP_JWT_SECRET);
-
-      document.cookie = `authToken=${newAuthToken}; max-age=3600; path=/; domain=.languapps.com; secure; samesite=none; httponly`;
-      console.log('Auth token updated with new score:', newAuthToken);
+    const backendJwtToken = document.cookie.split(';').find(row => row.trim().startsWith('backendJwtToken='))?.split('=')[1];
+    
+    if (backendJwtToken) {
+      const decodedToken = jwtDecode(backendJwtToken);
+      console.log('Token decoded with current payload:', decodedToken);
 
       // Save the score to Firestore
       try {
-        await setDoc(doc(firestore, 'users', currentUser.uid), { score: newScore }, { merge: true });
+        await setDoc(doc(firestore, 'users', currentUser.uid), { score: score }, { merge: true });
         console.log('Score saved to Firestore');
       } catch (error) {
         console.error('Error saving score to Firestore:', error);
       }
     } else {
-      console.error('No auth token found.');
+      console.error('No backend JWT token found.');
     }
   };
 
