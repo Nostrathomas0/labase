@@ -35,7 +35,7 @@ import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [authError, setAuthError] = useState('');
+  // const [authError, setAuthError] = useState('');
   const location = useLocation();
 
   useEffect(() => {
