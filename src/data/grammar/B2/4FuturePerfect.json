@@ -6,8 +6,90 @@
         {
           "type": "imageDisplay",
           "imagePath": "B2/4FuturePerf/1.png",
-          "altText": "Image showing a person thinking, caption: 'He might be at the library.'"
+          "altText": "Image showing a highway to the future, caption: 'He links to future with a possibility.'"
         },
+        {
+          "type": "click",
+          "instructions": [
+            { "text": "1) Look at the sentences below and click on the verbs that correctly use ", "textStyle": "text" },
+            { "text": "will have + past participle", "textStyle": "bold" },
+            { "text": " to show an action completed before another future event.", "textStyle": "text" }
+          ],
+          "words": [
+            { "text": "By this time next year, I ", "feedback": "No, the action isn’t complete yet." },
+            { "text": "will have finished", "feedback": "Correct! 'Will have finished' shows an action completed in the future." },
+            { "text": " my degree.", "feedback": "No, this is part of the object of the sentence." },
+            { "text": "He ", "feedback": "No, 'He' is just the subject." },
+            { "text": "will have saved", "feedback": "Correct! 'Will have saved' shows future perfect for a completed action." },
+            { "text": " enough money by the end of the month.", "feedback": "No, this is the timeframe for the future action." },
+            { "text": "They ", "feedback": "No, 'They' is the subject." },
+            { "text": "will start", "feedback": "No, 'will start' does not indicate completion of an action in the future." },
+            { "text": " the project tomorrow.", "feedback": "No, this is part of the action’s timeframe." },
+            { "text": "By 2025, our team ", "feedback": "No, 'By 2025' just sets the future timeframe." },
+            { "text": "will have launched", "feedback": "Correct! 'Will have launched' shows completion of an action by a future time." },
+            { "text": " three new products.", "feedback": "No, this describes the object of the action." }
+          ],
+          "keyWords": [
+            "will have finished",
+            "will have saved",
+            "will have launched"
+          ]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "2) By next year, she _____ the course.",
+          "options": ["will complete", "would complete", "will have completed", "is completing"],
+          "correctAnswer": "will have completed"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "3) They will _____ moved to a new house by the end of the month.",
+          "options": ["be", "have", "are", "already"],
+          "correctAnswer": "have"
+        },
+                
+        {
+          "type": "multipleChoice",
+          "question": "Which sentence uses a modal?",
+          "options": [
+            "She will swim.",
+            "She swam.",
+            "She is swimming.",
+            "She has swum across the river."
+          ],
+          "correctAnswer": "She will swim."
+        },
+        {
+          "type": "gapFill",
+          "template": "2) By this time tomorrow, I _____ (finish) all my assignments.",
+          "correctAnswers": ["will have finished"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "3) They will _____ moved to a new house by the end of the month.",
+          "options": ["be", "have", "are", "already"],
+          "correctAnswer": "have"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "4) She ______ be ______ home.",
+          "wordBank": ["must", "at"],
+          "correctAnswers": ["must", "at"]
+        },
+        {
+          "type": "gapFill",
+          "template": "They ______ (could/must) be waiting outside.",
+          "correctAnswers": ["could"]
+        }
+      ]
+    },
+      {
+        "questions":  [
+          {
+            "type": "ImageDisplay",
+            "imagePath": "B2/4FuturePerf/2.png"
+          },
+          
         {
           "type": "click",
           "layout": "horizontal",
@@ -26,51 +108,18 @@
           "keyWords": ["must"]
         },
         {
-          "type": "multipleChoice",
-          "question": "Which sentence uses a modal of probability?",
-          "options": [
-            "She can swim.",
-            "She must be at work.",
-            "She is swimming.",
-            "She was swimming."
-          ],
-          "correctAnswer": "She must be at work."
-        },
-        {
-          "type": "gapFill",
-          "template": "They ______ (might/could) come to the party.",
-          "correctAnswers": ["might"]
+          "type":"multipleChoice",
+          "question": "2) What's the Perfect Aux. verb in Future Perfect?",
+          "options": ["have", "might", "be", "should"],
+          "correctAnswer": "have"
         },
         {
           "type": "multipleChoice",
-          "question": "How would you complete this sentence? 'He ______ (must/might) be the new teacher.'",
-          "options": [
-            "must",
-            "might",
-            "is",
-            "can"
-          ],
-          "correctAnswer": "must"
-        },
-        {
-          "type": "wordBank",
-          "paragraph": "She ______ be ______ home.",
-          "wordBank": ["must", "at"],
-          "correctAnswers": ["must", "at"]
-        },
-        {
-          "type": "gapFill",
-          "template": "They ______ (could/must) be waiting outside.",
-          "correctAnswers": ["could"]
+          "question": "3) By the time the guests arrive, the team _____ all the preparations.",
+          "options": ["has finished", "will finish", "will have finished", "finishes"],
+          "correctAnswer": "will have finished"
         }
-      ]
-    },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B2/4FuturePerf/2.png"
-          }
+        
         ]
       },
       {
@@ -78,6 +127,48 @@
           {
             "type": "ImageDisplay",
             "imagePath": "B2/4FuturePerf/3.png"
+          },
+          {
+            "type": "click",
+            "instructions": [
+              { "text": "The Present Perfect tense often uses ", "textStyle": "text" },
+              { "text": "modal verbs", "textStyle": "bold" },
+              { "text": " to predict or plan actions that are already complete or have lasting effects.", "textStyle": "text" },
+              { "text": " Click on the verbs that correctly show the Present Perfect form.", "textStyle": "italic", "newParagraph": true }
+            ],
+            "words": [
+              { "text": "They ", "feedback": "No, this is just the subject." },
+              { "text": "have ", "feedback": "Correct! 'Have' is part of the Present Perfect form when followed by a past participle." },
+              { "text": "finished ", "feedback": "Correct! 'Finished' works with 'have' to complete the Present Perfect form." },
+              { "text": "the project.", "feedback": "No, this is part of the object of the sentence." },
+              { "text": "We ", "feedback": "No, 'We' is the subject." },
+              { "text": "will ", "feedback": "No, 'will' indicates a simple future form, not Present Perfect." },
+              { "text": "have ", "feedback": "Yes, 'have' can serve as an auxiliary in Present Perfect if followed by a participle." },
+              { "text": "completed", "feedback": "Yes! 'Completed' works with 'have' in Present Perfect." },
+              { "text": "our plans.", "feedback": "No, this is part of the object of the sentence." }
+            ],
+            "keyWords": [
+              "have",
+              "finished",
+              "completed"
+            ]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "1) By the time the guests arrive, the team _____ all the preparations.",
+            "options": ["has finished", "will finish", "will have finished", "finishes"],
+            "correctAnswer": "will have finished"
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "2) By this time next week, they will have _____, _____ the final report, and _____ their presentation.",
+            "wordBank": ["completed", "prepared", "written", "planned"],
+            "correctAnswers": ["completed", "written", "planned"]
+          },          
+          {
+            "type": "gapFill",
+            "template": "3) They _____ (move) out of their apartment before the new tenants arrive.",
+            "correctAnswers": ["will have moved"]
           }
         ]
       },
