@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 // import { jwtDecode } from 'jwt-decode';
 
 import CoverModal from './components/CoverModal'; 
@@ -33,12 +33,16 @@ import MixedCondPage from './components/pages/B2/MixedCondPage';
 import CausitivesPage from './components/pages/B2/CausitivesPage';
 import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
+
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   // const [authError, setAuthError] = useState('');
   const location = useLocation();
 
   useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const shouldOpenModal = queryParams.get('openModal') === 'true';
+    setIsModalOpen(shouldOpenModal);
     // Temporary bypass for access - commenting out token verification
     /*
     const backendJwtToken = Cookies.get('backendJwtToken');  // Check for the correct cookie
@@ -59,81 +63,66 @@ function App() {
       setAuthError('Invalid authentication. Please sign in at ');
     }
     */
-  }, []);
-
-  useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
-    const shouldOpenModal = queryParams.get('openModal') === 'true';
+  
 
     // Keep modal open check unaffected
-    if (Cookies.get('backendJwtToken')) {
-      setIsModalOpen(shouldOpenModal);
-    }
+    // if (Cookies.get('backendJwtToken')) {
+    //   setIsModalOpen(shouldOpenModal);
+    // }
   }, [location]);
-
+  
   const closeModal = () => setIsModalOpen(false);
-
+  
   return (
     <AuthProvider>
       <div>
-        {/* Temporarily skip auth error message display */}
-        {false ? (
-          <div className="auth-error">
-            {authError}
-            <a href="https://languapps.com">languapps.com</a>
-          </div>
-        ) : (
-          <>
-            <div className="levels-topics-wrapper">
-              <div className="levels-and-topics-container">
-                <div className="levels-container">
-                  <h2>Levels</h2>
-                  <nav>
-                    <ul className="menu-list">
-                      <li><Link to="/A1">Beginner (A1)</Link></li>
-                      <li><Link to="/A2">Elementary (A2)</Link></li>
-                      <li><Link to="/B1">Pre-Intermediate (B1)</Link></li>
-                      <li><Link to="/B2">Intermediate (B2)</Link></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div className="topics-container">
-                  <h2>Level Topics</h2>
-                  <div className="topics-list"></div>
-                </div>
-              </div>
+        {/* Skip auth error message for now */}
+        <div className="levels-topics-wrapper">
+          <div className="levels-and-topics-container">
+            <div className="levels-container">
+              <h2>Levels</h2>
+              <nav>
+                <ul className="menu-list">
+                  <li><Link to="/A1">Beginner (A1)</Link></li>
+                  <li><Link to="/A2">Elementary (A2)</Link></li>
+                  <li><Link to="/B1">Pre-Intermediate (B1)</Link></li>
+                  <li><Link to="/B2">Intermediate (B2)</Link></li>
+                </ul>
+              </nav>
             </div>
-
-            <Routes>
-              <Route path="/A1" element={<A1 />} />
-              <Route path="/A2" element={<A2 />} />
-              <Route path="/B1" element={<B1 />} />
-              <Route path="/B2" element={<B2 />} />
-              <Route path="/A1/nouns" element={<NounsPage />} />
-              <Route path="/A1/adjectives" element={<AdjectivesPage />} />
-              <Route path="/A1/verbs" element={<VerbsPage />} />
-              <Route path="/A1/there" element={<TherePage />} />
-              <Route path="/A2/pastCont" element={<PastContPage />} />
-              <Route path="/A2/future" element={<FuturePage />} />
-              <Route path="/A2/goingTo" element={<GoingToPage />} />
-              <Route path="/A2/compSupe" element={<CompSupePage />} />
-              <Route path="/B1/presPerfCont" element={<PresPerfContPage />} />
-              <Route path="/B1/pastPerfCont" element={<PastPerfContPage />} />
-              <Route path="/B1/2ndCond" element={<SecCondPage />} />
-              <Route path="/B1/modalVerbs" element={<ModalVerbsPage />} />
-              <Route path="/B2/mixedCond" element={<MixedCondPage />} />
-              <Route path="/B2/causitives" element={<CausitivesPage />} />
-              <Route path="/B2/modalsProb" element={<ModalsProbPage />} />
-              <Route path="/B2/futurePerf" element={<FuturePerfPage />} />
-            </Routes>
-
-            <CoverModal isOpen={isModalOpen} onRequestClose={closeModal} />
-          </>
-        )}
+            <div className="topics-container">
+              <h2>Level Topics</h2>
+              <div className="topics-list"></div>
+            </div>
+          </div>
+        </div>
+  
+        <Routes>
+          <Route path="/A1" element={<A1 />} />
+          <Route path="/A2" element={<A2 />} />
+          <Route path="/B1" element={<B1 />} />
+          <Route path="/B2" element={<B2 />} />
+          <Route path="/A1/nouns" element={<NounsPage />} />
+          <Route path="/A1/adjectives" element={<AdjectivesPage />} />
+          <Route path="/A1/verbs" element={<VerbsPage />} />
+          <Route path="/A1/there" element={<TherePage />} />
+          <Route path="/A2/pastCont" element={<PastContPage />} />
+          <Route path="/A2/future" element={<FuturePage />} />
+          <Route path="/A2/goingTo" element={<GoingToPage />} />
+          <Route path="/A2/compSupe" element={<CompSupePage />} />
+          <Route path="/B1/presPerfCont" element={<PresPerfContPage />} />
+          <Route path="/B1/pastPerfCont" element={<PastPerfContPage />} />
+          <Route path="/B1/2ndCond" element={<SecCondPage />} />
+          <Route path="/B1/modalVerbs" element={<ModalVerbsPage />} />
+          <Route path="/B2/mixedCond" element={<MixedCondPage />} />
+          <Route path="/B2/causitives" element={<CausitivesPage />} />
+          <Route path="/B2/modalsProb" element={<ModalsProbPage />} />
+          <Route path="/B2/futurePerf" element={<FuturePerfPage />} />
+        </Routes>
+  
+        <CoverModal isOpen={isModalOpen} onRequestClose={closeModal} />
       </div>
     </AuthProvider>
   );
-}
-
+}  
 export default App;
-
