@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
 import Cookies from 'js-cookie';
-import { jwtDecode } from 'jwt-decode';
+// import { jwtDecode } from 'jwt-decode';
 
 import CoverModal from './components/CoverModal'; 
 import A1 from './components/pages/A1';
@@ -33,13 +33,14 @@ import MixedCondPage from './components/pages/B2/MixedCondPage';
 import CausitivesPage from './components/pages/B2/CausitivesPage';
 import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
-
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [authError, setAuthError] = useState('');
   const location = useLocation();
 
   useEffect(() => {
+    // Temporary bypass for access - commenting out token verification
+    /*
     const backendJwtToken = Cookies.get('backendJwtToken');  // Check for the correct cookie
     console.log("Retrieved backendJwtToken from cookies:", backendJwtToken); // Debugging
 
@@ -57,12 +58,14 @@ function App() {
       console.error("Invalid token:", error);
       setAuthError('Invalid authentication. Please sign in at ');
     }
+    */
   }, []);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const shouldOpenModal = queryParams.get('openModal') === 'true';
 
+    // Keep modal open check unaffected
     if (Cookies.get('backendJwtToken')) {
       setIsModalOpen(shouldOpenModal);
     }
@@ -73,7 +76,8 @@ function App() {
   return (
     <AuthProvider>
       <div>
-        {authError ? (
+        {/* Temporarily skip auth error message display */}
+        {false ? (
           <div className="auth-error">
             {authError}
             <a href="https://languapps.com">languapps.com</a>
@@ -132,3 +136,4 @@ function App() {
 }
 
 export default App;
+
