@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
           const token = await user.getIdToken();
           
           // Set the JWT token as a cookie for cross-domain access
-          Cookies.set('authToken', token, {
+          Cookies.set('backendJwtToken', token, {
             domain: '.languapps.com',
             path: '/',
             secure: true,
@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
         }
       } else {
         // Clear JWT token if user signs out
-        Cookies.remove('authToken', { domain: '.languapps.com', path: '/' });
+        Cookies.remove('backendJwtToken', { domain: '.languapps.com', path: '/' });
         setJwtToken(null);
       }
       setIsLoading(false);
