@@ -6,7 +6,7 @@
         {
           "type": "imageDisplay",
           "imagePath": "A2/2Future/1.png",
-          "altText": "Going to"
+          "altText": "promises, offers, impulsive bets, challenges, all these beside right, hour"
         },
         {
           "type":"click",
@@ -14,7 +14,14 @@
             {"text": "The future isn't certain but we can make promises with ", "textStyle":"text" },
             {"text": "will ", "textStyle":"bold"},
             {"text": "before the main verb root form.", "textStyle":"text"}, 
-            
+            {"text": "To make a promise, use 'will' like in the sentence ,", "textStyle":"text", "newLine":true},
+            {"text": "'I will always be your friend.'", "textStyle": "italic"},
+            {"text": " For offers, say something like ", "textStyle":"text"}, 
+            {"text": " 'I will give you a ride home.' ", "textStyle": "italic"},
+            {"text": " When making a bet, you might say, ", "textStyle":"text"}, 
+            {"text": " 'I will bet $5 on that game.'" , "textStyle": "italic"},
+            {"text": " For challenges, you could say, ", "textStyle":"text"}, 
+            {"text": " 'I will race you to the end of the street.' ", "textStyle":"italic"},
             {"text": "1) Click on the main verb below.", "textStyle":"italic", "newParagraph":true}
           ],
           "words": [
@@ -30,9 +37,9 @@
         },
         {
           "type": "multipleChoice",
-          "question": "To make a promise, use 'will' like in the sentence 'I will always be your friend.' For offers, say something like 'I will give you a ride home.' When making a bet, you might say, 'I will bet $5 on that game.' For challenges, you could say, 'I will race you to the end of the street.' 2) Why do we use will? Make one choice below.",
-          "options": ["promises", "offers", "impulsive bets", "challenges", "all these beside right", "hour"],
-          "correctAnswer": "all these beside right" 
+          "question": "2) Why do we use will? Choose one to make all the choices below.",
+          "options": ["promises", "bets", "challenges", "all these"],
+          "correctAnswer": "all these" 
         },
         {
           "type": "wordBank",
@@ -153,18 +160,22 @@
             {"text": " or ", "textStyle":"text"},
             {"text": " going to", "textStyle":"bold"},
             {"text": " when making predictions about the future. ", "textStyle":"text"},
-            {"text": "If there are dark, grey clouds in the sky, you can say either ", "textStyle":"text", "newLine":true},
+            {"text": "If there are dark, grey clouds approaching, you can say either ", "textStyle":"text"},
             {"text": " It will rain. ", "textStyle":"italic", "newLine":true},
-            {"text": " or ", "textStyle":"text", "newLine":true},
-            {"text": " It's going to rain.", "textStyle":"italic", "newLine":true},
-            {"text": " Other rules are harder, for example, when offering a challenge, it sounds wrong to say,  ", "textStyle":"text", "newLine":true},
-            {"text": " I'm going to be bet you the next card is higher than an 8", "textStyle":"italic"},
-            {"text": " or it would be weird for a cyclist to say to another cyclist, ", "textStyle":"text"},
-            {"text": "I'm going to bet* I beat** you to the next town.", "textStyle":"italic", "newLine":true},
-       
+            {"text": " or ", "textStyle":"text"},
+            {"text": " It's going to rain.", "textStyle":"italic"},
+            {"text": " Other rules are harder, for example ", "textStyle":"text", "newParagraph":true},
+            {"text": " I'm going to bet", "textStyle":"strike"},
+            {"text": " they get married,", "textStyle":"italic"},
+            {"text": " may imply you've made arrangements with a bookie. It would also be unsual for a cyclist to say to another cyclist, ", "textStyle":"text"},
+            {"text": " I'm going to", "textStyle":"strike"},
+            {"text": " bet you I beat you to the next town,", "textStyle":"italic"},
+            {"text": " when ", "textStyle":"text"},
+            {"text": " I'll beat you to the next town.", "textStyle":"italic"},
+            {"text": " fits the situation better. Now in the dictionary...", "textStyle":"text"},
             {"text": "bet (verb): to challenge someone, and offer money to the winner", "textStyle":"italic", "newParagraph":true},
-            {"text": "beat (verb): win a race or other contest", "textStyle":"italic"},
-            {"text": "Here we have a pair of words that contain the same sounds save the vowel sound. This is a useful minimal pair and we should listen and repeat minimal pairs to hone our vowel sounds learning language.", "newLine":true},
+            {"text": "beat (verb): win a race or other contest", "textStyle":"italic", "newLine":true},
+            {"text": "This pair of words have the same first and last sounds but their vowel sound is different. This is a useful minimal pair to hone pronunciaiton", "newLine":true},
             {"text": "Click on the promise", "textStyle":"italic", "newParagraph":true}
           ],
           "words":[
@@ -184,20 +195,20 @@
           "correctAnswers": ["'ll", "will"]
         },
         {
-          "type": "wordBank",
-          "paragraph": "They _____ (will) finish the project by Friday.",
-          "wordBank": ["start", "will", "finish", "complete", "decide", "wait"],
-          "correctAnswers": ["will", "finish"]
+          "type": "multipleChoice",
+          "question": "3) They _____  finish the project by Friday.",
+          "options": ["start", "will", "finish", "complete", "decide", "wait"],
+          "correctAnswer": "will"
         },
         {
           "type": "gapFill",
-          "template": "She __________ (will) call me later.",
-          "correctAnswers": ["will"]
+          "template": "4) She _____ (will) call me later.",
+          "correctAnswers": ["will", "'ll", "won’t"]
         },
         {
           "type": "gapFill",
-          "template": "I __________ (won’t) be available tomorrow.",
-          "correctAnswers": ["won’t"]
+          "template": "5) I _____ be available tomorrow.",
+          "correctAnswers": ["will", "'ll", "won’t"]
         }
       ]
     },

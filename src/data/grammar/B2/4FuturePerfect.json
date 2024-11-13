@@ -177,7 +177,14 @@
           {
             "type": "ImageDisplay",
             "imagePath": "B2/4FuturePerf/4.png"
+          },
+          {
+            "type": "wordBank",
+            "paragraph": "He will have _____ the project, _____ the feedback, and _____ the improvements by the end of the month.",
+            "wordBank": ["submitted", "received", "implemented"],
+            "correctAnswers": ["submitted", "received", "implemented"]
           }
+          
         ]
       }
     ]
