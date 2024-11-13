@@ -10,18 +10,32 @@
         {
           "type": "click",
             "instructions": [
-              {"text": "Past continuous,", "textStyle":"bold"},
-              {"text": " is a verb tense used for past actions in progress. To tell stories or events that happened, we use past tenses. Past continuous, like it's younger brother present continuous, uses the auxilliary verb ", "textStyle":"text"},
+              {"text": "We use words like ", "textStyle":"text"},
+              {"text": "tense", "textStyle":"underline"},
+              {"text": " but we could also say ", "textStyle":"text"},
+              {"text": "time","textStyle":"underline"},
+              {"text": " to denote when something happens.", "textStyle":"text"},
+              {"text": "Past continuous,", "textStyle":"bold", "newParagraph":true},
+              {"text": " is a verb tense used for past actions in progress.", "textStyle":"text", "newLine":false},
+              {"text": "Like present continuous, it uses the auxilliary verb ", "textStyle":"text", "newLine":true},
               {"text": " be", "textStyle":"underline"},
-              {"text": " except past continuous uses, form 2", "textStyle":"text"},
-              {"text": " was, were", "textStyle":"italic"},
-              {"text": " before the main verb in the ", "textStyle":"text"},
+              {"text": " ahead of the main verb but in form 2:", "textStyle":"text"},
+              {"text": " was/were.", "textStyle":"italic"},
+              {"text": " The main verb is used in ", "textStyle":"text"},
               {"text": " -ing", "textStyle":"underline"},
-              {"text": " form. It describes past actions to frame another even that happened, for example ", "textStyle":"text"},
+              {"text": " form.", "textStyle":"text"},
+              {"text": " Tell stories and events that were happening by using ", "textStyle":"text"},
+              {"text": " be,", "textStyle":"underline"},
+              {"text": " in the past tense. ", "textStyle":"text"},
+              {"text": "  It describes past actions to frame another even that happened.", "textStyle":"text"},
               {"text": " I was wondering if you went to class yesterday.", "textStyle": "italic", "newLine":true},
-              {"text": "or to describe an event that happened while another even was going on ", "textStyle":"text", "newLine":true},
-              {"text": " We were having dinner when we heard the message.","textStyle":"italic", "newLine":true},
-              {"text": "Click on the aux. verbs", "textStyle": "italic", "newParagraph":true }
+              {"text": "An event happening ", "textStyle":"text", "newLine":true},
+              {"text": "while", "textStyle":"underline"},
+              {"text": " another was going on. ", "textStyle":"text"},
+              {"text": " We were having dinner ", "textStyle":"italic", "newLine":true},
+              {"text": "when", "textStyle":"underline"},
+              {"text": " we heard the message.","textStyle":"italic"},
+              {"text": "1 ) Click on the aux. verbs", "textStyle": "italic", "newParagraph":true }
             ],
             "words": [
             {"text":"The ", "feedback":"'The''s the article; The The's Sweet Bird of Truth"},
@@ -36,15 +50,32 @@
             {"text":"and ", "feedback":"No that's a conjunction"},
             {"text":"the ", "feedback":"No that's the"},
             {"text":"air ", "feedback":"noun"},
-            {"text":"was ", "feedback":"Correct!"},
+            {"text":"was ", "feedback":"not this was "},
             {"text":"still.","feedback":"Nope, that's an adverb"}],
             "keyWords": ["was", "were"]
         },
         {
-          "type": "multiple choice",
-          "question": "Click on what setting doesn't describe",
-          "options": ["where", "when", "what happened", "weather"],
-          "correctAnswer": "what happened"
+          "type":"multipleChoice",
+          "question": "2) I _____ going to the store yesterday.",
+          "options":["am", "are", "was", "were"],
+          "correctAnswers": "was"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "3) They _____ TV when I called them.",
+          "options": ["watch", "watched", "were watching", "watches"],
+          "correctAnswer": "were watching"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "4) She _____ (study) at 8 o'clock last night.",
+          "options": ["is studying", "was studying", "studies", "studied"],
+          "correctAnswer": "was studying"
+        },                
+        {
+          "type": "gapFill",
+          "template": "5) I _____ (read) a book when the lights went out.",
+          "correctAnswers": ["was reading"]
         }
       ]
     },
@@ -55,11 +86,6 @@
         "imagePath": "A2/1PastCont/2.png"
       },
       {
-        "type": "gapFill",
-        "template": "Continuous uses be in verb 2. Write a form of be in form 2.",
-        "answers": ["was", "were"]
-      },
-      {
         "type": "click",
         "instructions": [
           {"text": "Sets the speaker in place, looking at the sea, for some duration of time in the past. ", "textStyle":"text"},
@@ -68,6 +94,11 @@
         ],
         "words": [],
         "keyWords": []
+      },
+      {
+        "type": "gapFill",
+        "template": "Continuous uses be in verb 2. Write a form of be in form 2.",
+        "answers": ["was", "were"]
       }
     ]
     },
@@ -80,18 +111,23 @@
       },
       {
         "type":"click",
+        "layout": "vertical",
         "instructions": [
-          {"text": "Past Continuous can be one or both parts of a complex sentence with 2 parts joined by a connecting word."},
-          {"text":"when ", "textStyle":"bold"},
-          {"text":"interrupts an action in progress and ", "textStyle":"text"},
+          {"text": "Past Continuous can be one or both parts of a complex sentence. Join 2 phrases with a connecting word like "},
+          {"text":"when, ", "textStyle":"bold"},
+          {"text":" which interrupts an action in progress and ", "textStyle":"text"},
           {"text":"while ", "textStyle":"bold"},
-          {"text":" adds another progressive action happening at the same time, so you can use one ot the other in a sentence but not both", "textStyle":"text"},
+          {"text":" adds another progressive action happening at the same time.", "textStyle":"text"},
+          {"text":" The interrupting action is usually past simple so ", "textStyle":"text"},
+          {"text":" when ", "textStyle":"bold"},
+          {"text": " usually joins a phrase in past simple with another in past continous.", "textStyle":"text"},
+          {"text": "  not both", "textStyle":"text"},
           {"text":" so", "textStyle":"text"},
           {"text": " We were eating when they arrived.", "textStyle":"italic"},
           {"text": "or", "textStyle":"text"} ,
           {"text":"While we were eating when they arrived", "textStyle":"italic"},
           {"text": "but", "textStyle":"text"},
-          {"text":"While we were eating when they arrived", "textStyle":"strike"}
+          {"text":"While we were eating they were arrived", "textStyle":"strike"}
 
         ],
         "words":[],
@@ -104,6 +140,19 @@
         {
           "type": "imageDisplay",
           "imagePath": "A2/1PastCont/4.png"
+        },
+        {
+          "type":"click",
+          "layout": "horizontal",
+          "instructions":[
+
+          ]
+        },
+        {
+          "type": "multiple choice",
+          "question": "Click on what setting doesn't describe",
+          "options": ["where", "when", "what happened", "weather"],
+          "correctAnswer": "what happened"
         }
       ]
     },

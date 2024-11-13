@@ -24,7 +24,7 @@
             {"text": " Add ", "textStyle": "text", "newLine":true}, 
             {"text": " the ", "textStyle": "bold" },
             {"text": " to a specific thing to make the noun phrase with the definite article.", "textStyle": "text" },
-            {"text": " Don't add articles to names or pronouns, only things.", "textStyle": "text", "newLine":true },
+            {"text": " Don't add articles to names or pronouns, only common nouns, i.e. things.", "textStyle": "text", "newLine":true },
             {"text": "There are some pronouns of different kinds. 12 personal pronouns : ", "textStyle": "text", "newParagraph": true },
             {"text": "I & me ", "textStyle": "bold","newLine": true },
             {"text": " for the person speaking; 1st person singular. ", "textStyle": "text"  },
@@ -131,27 +131,28 @@
               "textStyle": "text"
             },
             {
-              "text": "  2 +",
+              "text": "  2+ ",
               "textStyle": "bold"
             },
             {
-              "text": "and they usually end with ",
+              "text": " and they usually end ",
               "textStyle": "text"
             },
             {
-              "text": "s ",
+              "text": "-s ",
               "textStyle": "bold"
             },  
             {
-              "text": " . We use plural nouns for the things that we like, especially",
-              "textStyle": "text"
+              "text": "  We pluralize most common nouns for the things that we like, especially",
+              "textStyle": "text",
+              "newLine":true
             }, 
             {
               "text": "   things we like to eat.",
               "textStyle": "italic"
             },
             {
-              "text": "My favorite snack is chips.",
+              "text": "My favorite snack is chips. Sure, I like eggs, ",
               "textStyle":"italic",
               "newLine":true
             },
@@ -320,7 +321,7 @@
               "textStyle": "italic"
             },
             {
-              "text": " but not ",
+              "text": " but ",
               "textStyle": "text"
             },
             {
@@ -580,14 +581,14 @@
         },
         {
           "type": "multipleChoice",
-          "question": "2) Which form of the verb 'be' to use with 'I'?",
+          "question": "2) Which forms of  'to be' AREN'T used in present tense?",
           "options": [
             "is",
             "am",
             "are",
-            "be"
+            "was"
           ],
-          "correctAnswer": "am"
+          "correctAnswer": "was"
         },
         {
           "type": "multipleChoice",

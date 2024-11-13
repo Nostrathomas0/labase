@@ -92,7 +92,7 @@
             {"text": " plenty of, a lot of, much, many  & tons of ", "textStyle":"bold"},
             {"text": " describes a high amount, ", "textStyle": "text"},
             {"text": " some & enough ", "textStyle":"bold"},
-            {"text": " describe a medium, acceptable ammount and ", "textStyle":"text"},
+            {"text": " describe a medium or acceptable ammount and ", "textStyle":"text"},
             {"text": " no ", "textStyle":"bold"},
             {"text": " describes an amount equal to zero. ", "textStyle":"text"},
             {"text": "A zero ammount can also be expressed with, ", "textStyle":"text", "newLine":true},

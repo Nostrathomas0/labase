@@ -1,47 +1,141 @@
-// src/components/Auth.js
-import React, { useState } from 'react';
-import { auth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from '../firebase-config';
+// Auth.js - Comprehensive Update for Managing Authentication and State
 
-function Auth() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+import { jwtDecode } from 'jwt-decode';
+import { getAuth, signInWithCustomToken, onAuthStateChanged } from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import axios from 'axios'; // For backend requests to update JWT
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                console.log('Logged in:', userCredential.user);
-            })
-            .catch((error) => {
-                console.error('Error logging in:', error);
-            });
-    };
+const auth = getAuth();
 
-    const handleSignup = (e) => {
-        e.preventDefault();
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                console.log('User signed up:', userCredential.user);
-            })
-            .catch((error) => {
-                console.error('Error signing up:', error);
-            });
-    };
+/**
+ * Hook to monitor authentication state changes and provide user state.
+ * @returns {Object} - The current authenticated user or null if not authenticated.
+ */
+export const useAuthState = () => {
+  const [user, setUser] = useState(null);
 
-    return (
-        <div>
-            <form onSubmit={handleLogin}>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-                <button type="submit">Login</button>
-            </form>
-            <form onSubmit={handleSignup}>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-                <button type="submit">Signup</button>
-            </form>
-        </div>
-    );
-}
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  return user;
+};
+
+/**
+ * Function to authenticate a user using a backend JWT token.
+ * @param {string} backendJwtToken - The JWT token provided by the backend.
+ * @returns {Promise<void>} - Resolves if the user is authenticated successfully.
+ */
+export const authenticateWithJwt = async (backendJwtToken) => {
+  try {
+    // Decode the JWT token to extract payload data (optional)
+    const decodedToken = jwtDecode(backendJwtToken);
+    console.log('Decoded JWT:', decodedToken);
+
+    // Sign in the user with the provided JWT token using Firebase's custom token method
+    await signInWithCustomToken(auth, backendJwtToken);
+    console.log('User signed in successfully');
+  } catch (error) {
+    console.error('Error authenticating with JWT:', error);
+    throw new Error('Unable to authenticate with the provided JWT token');
+  }
+};
+
+/**
+ * Function to check if the current user is authenticated.
+ * @returns {boolean} - True if the user is authenticated, false otherwise.
+ */
+export const isAuthenticated = () => {
+  const user = auth.currentUser;
+  return !!user;
+};
+
+/**
+ * Function to get the authenticated user's token.
+ * @returns {Promise<string>} - Resolves to the user's ID token.
+ */
+export const getUserToken = async () => {
+  const user = auth.currentUser;
+  if (!user) {
+    throw new Error('No authenticated user found');
+  }
+
+  try {
+    const token = await user.getIdToken();
+    return token;
+  } catch (error) {
+    console.error('Error fetching user token:', error);
+    throw new Error('Unable to get user token');
+  }
+};
+
+/**
+ * Function to refresh the user's JWT token. This may be necessary when the server issues new claims.
+ * @returns {Promise<void>} - Resolves if the refresh is successful.
+ */
+export const refreshUserToken = async () => {
+  try {
+    const user = auth.currentUser;
+    if (user) {
+      await user.getIdToken(true); // Force refresh the token
+      console.log('User token refreshed successfully');
+    } else {
+      throw new Error('No authenticated user found to refresh token');
+    }
+  } catch (error) {
+    console.error('Error refreshing user token:', error);
+    throw new Error('Unable to refresh user token');
+  }
+};
+
+/**
+ * Function to update the JWT progress by calling a backend API.
+ * @param {Object} progress - The progress data to embed in the JWT.
+ * @returns {Promise<void>} - Resolves if the backend JWT is updated successfully.
+ */
+export const updateJwtProgress = async (progress) => {
+  try {
+    const user = auth.currentUser;
+    if (!user) {
+      throw new Error('No authenticated user found to update JWT progress');
+    }
+    const token = await user.getIdToken();
+
+    // Make a backend request to update JWT, including progress data
+    const response = await axios.post('https://your-backend-api.com/update-jwt', {
+      userId: user.uid,
+      progress,
+    }, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (response.status === 200) {
+      console.log('JWT updated successfully with progress');
+    } else {
+      console.error('Failed to update JWT progress:', response.status);
+    }
+  } catch (error) {
+    console.error('Error updating JWT with progress:', error);
+    throw new Error('Unable to update JWT with progress');
+  }
+};
+
+/**
+ * Exporting Auth object for managing authentication state.
+ */
+const Auth = {
+  authenticateWithJwt,
+  isAuthenticated,
+  getUserToken,
+  refreshUserToken,
+  useAuthState,
+  updateJwtProgress,
+};
 
 export default Auth;

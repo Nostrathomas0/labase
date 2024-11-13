@@ -252,7 +252,7 @@ nav ul li a:hover, .page-info:hover {
   color: #007BFF; /* Same hover color as buttons */
 }
 .blockquote {
-  padding: 10px 100px;
+  padding: 10px ;
   margin: 20px 0;
   border-left: 5px solid #000000;
   background-color: #f9f9f9;
@@ -261,8 +261,26 @@ nav ul li a:hover, .page-info:hover {
   color: blue; /* Optional: Add color for visibility */
 }
 
+.blockquote.horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0; /* Adjusted to reduce margin between words */
+}
 .words-container.horizontal {
   display: flex;
+}
+.words-container.horizontal span {
+  margin: 2px 5px; /* Reduced margin to bring words closer together */
+}
+
+/* Styling for vertical layout */
+.blockquote.vertical {
+  display: block;
+}
+
+.words-container.vertical span {
+  margin: 10px 0; /* Keeps ample spacing for readability in vertical layout */
 }
 
 .words-container.vertical {
@@ -271,9 +289,10 @@ nav ul li a:hover, .page-info:hover {
 }
 
 .feedback {
-  margin-top: 10px;
+  font-size: 15pt;
+  margin-top: 15px;
   font-style: italic;
-  color: #333;
+  color: #000000;
 }
 /* Wrapper for levels and topics */
 /* Wrapper for levels and topics */
