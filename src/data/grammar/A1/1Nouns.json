@@ -12,34 +12,40 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {"text": "Anyone, anything or any place-- ","textStyle": "text"},
-            {"text": " Michael Jordon, dog, France, hands ", "textStyle": "italic"   },
-            {"text": " --are all nouns. ","textStyle": "text"},
-            {"text": "You can add articles like", "textStyle": "text", "newLine":true },
-            {"text": " a ", "textStyle": "bold" },
-            {"text": "or ","textStyle": "text"},
+            {"text": "Anyone, anything or any place: ","textStyle": "text"},
+            {"text": " cat, hand, ocean ", "textStyle": "italic" , "newLine":true  },
+            {"text": " are nouns. ","textStyle": "text", "newLine":true},
+            {"text": "Add articles", "textStyle": "text", "newLine":true },
+            {"text": " a", "textStyle": "bold" },
+            {"text": " / ","textStyle": "text"},
             {"text": "an ", "textStyle": "bold" },
-            {"text": "to a thing to make a noun phrase--", "textStyle": "text"},
-            {"text": " a dog, a hand.", "textStyle": "italic"},
+            {"text": "to make a noun phrase", "textStyle": "text"},
+            {"text": " a", "textStyle": "underline", "newLine":true},
+            {"text": " dog, ", "textStyle": "italic"},
+            {"text": " an", "textStyle": "underline"},
+            {"text": "  ear.", "textStyle": "italic"},
             {"text": " Add ", "textStyle": "text", "newLine":true}, 
             {"text": " the ", "textStyle": "bold" },
             {"text": " to a specific thing to make the noun phrase with the definite article.", "textStyle": "text" },
+            {"text": " The", "textStyle":"underline", "newLine":true},
+            {"text": " Atlantic Ocean", "textStyle":"italic"},
             {"text": " Don't add articles to names or pronouns, only common nouns, i.e. things.", "textStyle": "text", "newLine":true },
-            {"text": "There are some pronouns of different kinds. 12 personal pronouns : ", "textStyle": "text", "newParagraph": true },
+            {"text": " Pronouns", "textStyle":"bold", "newParagraph":true},
+            {"text": " There are some pronouns of different kinds. 12 personal pronouns : ", "textStyle": "text", "newParagraph": true },
             {"text": "I & me ", "textStyle": "bold","newLine": true },
-            {"text": " for the person speaking; 1st person singular. ", "textStyle": "text"  },
+            {"text": " for the person speaking, ", "textStyle": "text"  },
             {"text": "you ", "textStyle": "bold", "newLine": true },
-            {"text": " for the person or people you're speaking to,  ","textStyle": "text"  },
-            {"text": "he & him ","textStyle": "bold","newLine": true },
-            {"text": " and ","textStyle": "text" },
-            {"text": "she & her ", "textStyle": "bold"   },
-            {"text": " are for men and women, respectively and ", "textStyle": "text"  },
-            {"text": "it ","textStyle": "bold",  "newLine": true  },
-            {"text": " is for objects and other things, ", "textStyle": "text"},
-            {"text": "we & us ",  "textStyle": "bold", "newLine": true },
-            {"text": " are for you and I, together. It's known as the 1st person plural.", "textStyle": "text" },
-            {"text": "they & them ", "textStyle": "bold",  "newLine": true   },
-            {"text": " is for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.",  "textStyle": "text"   },
+            {"text": " for people you're talking to.  ","textStyle": "text"  },
+            {"text": "He & him ","textStyle": "bold","newLine": true },
+            {"text": " masc. ","textStyle": "text" },
+            {"text": "She & her ", "textStyle": "bold"   },
+            {"text": " fem. and ", "textStyle": "text"  },
+            {"text": "It and it ","textStyle": "bold",  "newLine": true  },
+            {"text": " is for objects and other things. ", "textStyle": "text"},
+            {"text": "We & us ",  "textStyle": "bold", "newLine": true },
+            {"text": " are for you and I, together. It's the 1st person, plural.", "textStyle": "text" },
+            {"text": "They & them ", "textStyle": "bold",  "newLine": true   },
+            {"text": " are for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.",  "textStyle": "text"   },
             {"text": "1) Click on the pronouns in the sentence below.", "textStyle": "italic",  "newParagraph": true }
           ],
           "words": [
@@ -62,10 +68,11 @@
           "type": "multipleChoice",
           "question": "2) What are nouns?",
           "options": [
-            "just people",
-            "only places",
+          
             "some things",
-            "all people, places and things"
+            "all people, places and things",
+            "just people",
+            "only places"
           ],
           "correctAnswer": "all people, places and things"
         },
@@ -127,75 +134,37 @@
           "layout": "horizontal",
           "instructions": [
             {
-              "text": " The things on the floor are common nouns. Plural nouns count ",
-              "textStyle": "text"
-            },
-            {
-              "text": "  2+ ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " and they usually end ",
-              "textStyle": "text"
-            },
-            {
-              "text": "-s ",
-              "textStyle": "bold"
-            },  
-            {
-              "text": "  We pluralize most common nouns for the things that we like, especially",
-              "textStyle": "text",
-              "newLine":true
+              "text": " Common nouns are any things like objects, thoughts or ideas and they are numerous. They become ", 
+              "textStyle":"text"
             }, 
             {
-              "text": "   things we like to eat.",
-              "textStyle": "italic"
+              "text": "plural nouns ",
+                "textStyle": "bold"
             },
             {
-              "text": "My favorite snack is chips. Sure, I like eggs, ",
-              "textStyle":"italic",
-              "newLine":true
-            },
-            {
-              "text": "   Singular nouns usually have an article and sometimes another determiners:",
-              "textStyle": "text",
-              "newLine":true
-            },
-            {
-              "text": " a ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "potato,",
+              "text": "count ", 
               "textStyle": "text"
             },
             {
-              "text": " a lot of ",
+              "text": "  two, three, a few more... ",
               "textStyle": "bold"
             },
             {
-              "text": "cheese",
+              "text": " And they usually end ",
               "textStyle": "text"
             },
             {
-              "text": ", some ",
+              "text": "s .",
               "textStyle": "bold"
-            },
+            },  
+            
             {
-              "text": "onion",
-              "textStyle": "text"
-            },
-            {
-              "text": "s.",
-              "textStyle": "bold"
-            },
-            {
-              "text": "The indefinite ",
+              "text": "The indefinite articles",
               "textStyle": "text",
               "newLine": true
             },
             {
-              "text": " a / an ",
+              "text": " A / An ",
               "textStyle": "bold"
             },
             {
@@ -312,6 +281,8 @@
           "type": "click",
           "layout": "vertical",
           "instructions": [
+            
+            
             {
               "text": " Some nouns count, some don't. For example we count, ",
               "newParagraph":true
@@ -369,23 +340,27 @@
               "textStyle": "text"
             },
             {
-              "text": " one water ",
+              "text": " a water ",
               "textStyle": "italic"
             },
             {
-              "text": " to order at a bar, but water is a liquid so it's uncountable.",
+              "text": " to order at a bar, but it's more correct to say",  
               "textStyle": "text"
             },
-            {
-              "text": " Most materials are uncountable;",
-              "textStyle": "text"
-            },
-            {
-              "text": " coffee, gasoline, wood, steel, carbon",
+            { 
+              "text": " a glass of water.",
               "textStyle": "bold"
             },
             {
-              "text": " are all uncountable substances.",
+              "text": " Materials are uncountable;",
+              "textStyle": "text"
+            },
+            {
+              "text": " fabric, coffee, gasoline, wood, steel, carbon",
+              "textStyle": "italic"
+            },
+            {
+              "text": " are all uncountable.",
               "textStyle": "text"
             },
             {
@@ -434,9 +409,9 @@
         },
         {
           "type":"multipleChoice",
-          "question": "2) Only 1 noun phrase is correct. Choose it.",
+          "question": "2) Choose one correct noun phrase.",
           "options": [
-            "a lot bananas", "a gasoline", "a dogs", "a pineapple"
+           "a gasoline", "a dogs", "a pineapple"
           ],
           "correctAnswer":"a pineapple"
         },
@@ -473,6 +448,134 @@
           "type": "imageDisplay",
           "imagePath": "A1/1Nouns/4.png",
           "altText": "Image description for accessibility"
+        },
+        {
+          "type":"click",
+          "layout":"horizontal",
+          "instructions":[ 
+            {
+              "text": "  Nouns in general, are pluralized simply by adding a suffix to the base noun and generally speaking of things, we use plural nouns to say what we like, especially things we like, but often not things we like",
+              "textStyle": "text",
+              "newLine":true
+            }, 
+            {
+              "text": " to eat.",
+              "textStyle": "underline"
+            },
+            {
+              "text": "My favorite snack is chips. I like eggs. ",
+              "textStyle":"italic",
+              "newLine":true
+            },  
+            {
+              "text": "I like dog.",
+              "textStyle": "strike"
+            },
+            {
+              "text": " Nouns phrases sometimes have other determiners: ",
+              "textStyle": "text"
+            },
+            {
+              "text": " a sack of ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "potatos,",
+              "textStyle": "text"
+            },
+            {
+              "text": " a lot of ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "cheese",
+              "textStyle": "text"
+            },
+            {
+              "text": ", some ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "onions.",
+              "textStyle": "text"
+            },
+            {
+              "text":"1) Click on the plural nouns",
+              "textStyle":"text",
+              "newParagraph":true
+            }
+          ],
+          "words": [
+            {
+              "text": "That",
+              "feedback": "'That' is not."
+            },
+            {
+              "text": "bookstore",
+              "feedback": "that could be right, "
+            },
+            {
+              "text": "has",
+              "feedback": "a"
+            },
+            {
+              "text": "a",
+              "feedback": "a"
+            },
+            {
+              "text": "lot",
+              "feedback": "This is a determiner, close enough"
+            },
+            {
+              "text": "of ",
+              "feedback": "this is a preposition"
+            },
+            {
+              "text": "books",
+              "feedback": "BINGO"
+            },
+            {
+              "text": "but",
+              "feedback": "nay"
+            },
+            {
+              "text": "there's",
+              "feedback": "Adverb of place + Copulate"
+            }
+            ,{
+              "text": "a",
+              "feedback": "a"
+            },
+            {
+              "text": "bigger",
+              "feedback": "no"
+            },
+            {
+              "text": "one",
+              "feedback": "a"
+            },
+            {
+              "text": "a",
+              "feedback": "a"
+            },
+            {
+              "text": "few",
+              "feedback": "nope"
+            },
+            {
+              "text": "streets",
+              "feedback": "BINGO"
+            },
+            {
+              "text": "over.",
+              "feedback": "preposition"
+            }
+          ],
+          "keyWords": [
+            "lot",
+            "books",
+            "streets"
+          ]
         },
         {
           "type": "multipleChoice",
@@ -539,6 +642,75 @@
           "imagePath": "A1/1Nouns/5.png",
           "altText": "Description for Image 4"
         },
+        {
+          "type":"click",
+          "layout": "horizontal",
+          "instructions":[
+            {
+              "text": "sheet",
+              "textStyle": "text"},
+            {
+              "text": " Singular nouns usually have an article and sometimes another determiners:",
+              "textStyle": "text",
+              "newLine":true
+            },
+            {
+              "text": " a ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "potato,",
+              "textStyle": "text"
+            },
+            {
+              "text": " a lot of ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "cheese",
+              "textStyle": "text"
+            },
+            {
+              "text": ", some ",
+              "textStyle": "bold"
+            },
+            {
+              "text": "onion",
+              "textStyle": "text"
+            },
+            {
+              "text": "s.",
+              "textStyle": "bold"
+            },
+            {
+              "text": " 1) Click on the singular nouns"
+            }
+          ],
+          "words": [
+            {
+              "text": "Remind",
+              "feedback": " them"
+            },
+            {
+              "text": "Remind",
+              "feedback": " them"
+            },
+            {
+              "text": "Remind",
+              "feedback": " them"
+            },
+            {
+              "text": "Remind",
+              "feedback": " them"
+            },
+            {
+              "text": ""
+            }
+          ],
+          "keyWords": [
+
+          ]
+          },
         {
           "type": "wordBank",
           "paragraph": "Paragraph, 1-6 in order)°_° George says to his sister before the camping trip. 'We need to make sure we have enough 1)______ to drink.' George's sister suggests bringing 2)______ because they are easy to pack and won't spoil. Another points out that they will need a lot of 3)______ to keep the campfire going all night. They decide to check if the camping site provides 4)______ so they can cook meals easily. They also discuss the need for a good supply of 5_______ to keep their area clean. Lastly, everyone agrees not to forget 6)______, as they are crucial for their night hikes.",

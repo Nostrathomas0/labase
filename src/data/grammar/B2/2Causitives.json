@@ -12,7 +12,7 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            { "text": "causitives are used to indicate that one person causes another person to do something.", "textStyle": "text", "newParagraph": true },
+            { "text": "Causitives are used to indicate that one person causes another person to do something.", "textStyle": "text", "newParagraph": true },
             { "text": "Examples: 'have/get something done'.", "textStyle": "italic" },
             { "text": "Click on the causitive form in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
@@ -70,6 +70,22 @@
           {
             "type": "imageDisplay",
             "imagePath": "B2/2Causitives/2.png"
+          },
+          {
+            "type":"click",
+            "layout":"horizontal",
+            "instructions":[
+              {
+                "text": "d", "textStyle":"text" 
+              },
+              {"text": "d", "textStyle":"text"}
+            ],
+            "words":[
+              {"text": "d", "feedback": "q" },
+              {"text": "d", "feedback": "q"}
+            ],
+            "keyWords":[ "d"]
+
           }
         ]
       },
@@ -78,6 +94,22 @@
           {
             "type": "imageDisplay",
             "imagePath": "B2/2Causitives/3.png"
+          },
+          {
+            "type":"click",
+            "layout":"horizontal",
+            "instructions":[
+              {
+                "text": "d", "textStyle":"text" 
+              },
+              {"text": "d", "textStyle":"text"}
+            ],
+            "words":[
+              {"text": "d", "feedback": "q" },
+              {"text": "d", "feedback": "q"}
+            ],
+            "keyWords":[ "d"]
+
           }
         ]
       },
@@ -86,6 +118,22 @@
           {
             "type": "imageDisplay",
             "imagePath": "B2/2Causitives/4.png"
+          },
+          {
+            "type":"click",
+            "layout":"horizontal",
+            "instructions":[
+              {
+                "text": "d", "textStyle":"text" 
+              },
+              {"text": "d", "textStyle":"text"}
+            ],
+            "words":[
+              {"text": "d", "feedback": "q" },
+              {"text": "d", "feedback": "q"}
+            ],
+            "keyWords":[ "d"]
+
           }
         ]
       }

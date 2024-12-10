@@ -1,0 +1,33 @@
+{
+    "title": "Introduction to Parts of Speech",
+    "content": [
+      {
+        "type": "description",
+        "text": "Parts of speech explain how words function in a sentence. Start with nouns, verbs, and adjectives."
+      },
+      {
+        "type": "activity",
+        "instructions": "Click the correct part of speech in the following sentences.",
+        "questions": [
+          {
+            "sentence": "The cat sleeps on the mat.",
+            "options": ["cat", "sleeps", "on"],
+            "answer": "sleeps"
+          }
+        ]
+      },
+      {
+        "type": "grid",
+        "instructions": "Classify the words into the correct parts of speech by typing into the grid.",
+        "columns": ["Nouns", "Verbs", "Adjectives", "Adverbs"],
+        "rows": 4,
+        "gridData": [
+          ["", "", "", ""],
+          ["", "", "", ""],
+          ["", "", "", ""],
+          ["", "", "", ""]
+        ]
+      }
+    ]
+  }
+  

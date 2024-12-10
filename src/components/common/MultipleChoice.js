@@ -21,27 +21,30 @@ function MultipleChoice({ question, options, correctAnswer, onAnswer }) {
   };
 
   return (
-    <div>
-      <p>{question}</p>
-      {options.map((option, index) => (
-        <button
-          key={index}
-          onClick={() => handleOptionClick(option)}
-          disabled={feedbackGiven} // Disables changing the answer after selection if feedback is given
-          style={{
-            backgroundColor: feedbackGiven
-              ? option === correctAnswer
-                ? 'lightgreen'
-                : option === selected
-                ? 'salmon'
-                : ''
-              : '',
-            borderColor: option === selected ? 'blue' : ''
-          }}
-        >
-          {option}
-        </button>
-      ))}
+    <div className="multiple-choice-container">
+      <p className="multiple-choice-question" style={{ fontSize: '15pt', marginBottom: '15px' }}>{question}</p>
+      <div className="multiple-choice-options">
+        {options.map((option, index) => (
+          <button
+            key={index}
+            onClick={() => handleOptionClick(option)}
+            disabled={feedbackGiven} // Disables changing the answer after selection if feedback is given
+            className="multiple-choice-option"
+            style={{
+              backgroundColor: feedbackGiven
+                ? option === correctAnswer
+                  ? 'lightgreen'
+                  : option === selected
+                  ? 'salmon'
+                  : ''
+                : '',
+              borderColor: option === selected ? 'blue' : ''
+            }}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
