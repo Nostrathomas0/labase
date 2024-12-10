@@ -179,6 +179,92 @@
 .menu-list li a:hover {
   color: #007BFF; /* Change color on hover */
 }
+
+/* Styling for word bank activity paragraphs */
+.wordbank-paragraph {
+  font-family: 'Arial, sans-serif';
+  font-size: 18px; /* Larger size for readability */
+  line-height: 1.6;
+  color: #333; /* Darker color for better contrast */
+}
+
+/* Styling for operation messages in word bank activities, e.g., 'Your Selections' */
+.wordbank-operation-message {
+  font-family: 'Arial, sans-serif';
+  font-size: 16px; /* Smaller font for less emphasis */
+  font-weight: bold; /* Keep it bold to distinguish it from normal text */
+  color: #007bff; /* Blue color for visual distinction */
+  margin-top: 10px; /* Space above the operation message */
+}
+
+/* Styling for Multiple Choice Container */
+.multiple-choice-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional: light background to separate content */
+  border-radius: 8px; /* Rounded corners for a polished look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+/* Styling for Multiple Choice Question */
+.multiple-choice-question {
+  font-size: 22px; /* Increase font size for better readability */
+  font-weight: bold; /* Emphasize the question */
+  color: #333; /* Consistent text color */
+  margin-bottom: 15px;
+}
+
+/* Styling for Multiple Choice Options */
+.multiple-choice-options {
+  display: flex;
+  flex-direction: column; /* Stack options vertically */
+  gap: 10px; /* Space between each option */
+}
+
+/* Styling for Multiple Choice Options Container */
+.multiple-choice-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Center align the options to look better visually */
+}
+
+/* Styling for Individual Option Buttons */
+.multiple-choice-option {
+  font-size: 15pt; /* Slightly larger font for readability */
+  padding: 8px 12px; /* Adjust padding to make the button smaller and more compact */
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: auto; /* Allow the button to fit its content without stretching */
+  max-width: 150px; /* Limit width to ensure buttons stay compact */
+  text-align: center; /* Center the text inside the button */
+}
+
+/* Hover Effect for Buttons */
+.multiple-choice-option:hover {
+  background-color: #f0f0f0;
+  border-color: #007bff;
+}
+
+/* Disabled Button Styling */
+.multiple-choice-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+/* General page content styling */
+.page-content {
+  font-family: 'Verdana, sans-serif';
+  font-size: 16px;
+  color: #444; /* General text color for consistency */
+  line-height: 1.5;
+  margin-bottom: 20px; /* Space between content sections */
+}
+
 /* Container for page turners */
 .page-turner-container {
   display: flex;
@@ -264,7 +350,7 @@ nav ul li a:hover, .page-info:hover {
 .blockquote.horizontal {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 10px 0; /* Adjusted to reduce margin between words */
 }
 .words-container.horizontal {
@@ -273,27 +359,52 @@ nav ul li a:hover, .page-info:hover {
 .words-container.horizontal span {
   margin: 2px 5px; /* Reduced margin to bring words closer together */
 }
-
-/* Styling for vertical layout */
+/* Styling for vertical layout blockquotes */
 .blockquote.vertical {
   display: block;
+  text-align: left; /* Align text for readability */
+  margin: 20px 0;
+  padding: 10px;
+  border-left: 4px solid #000000;
+  background-color: #f9f9f9;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: blue; /* Optional: Add color for visibility */
+  width: 100%; /* Ensures the blockquote takes full width of the container */
+  box-sizing: border-box; /* Include padding and border in the element's width */
 }
 
-.words-container.vertical span {
-  margin: 10px 0; /* Keeps ample spacing for readability in vertical layout */
-}
-
+/* Container for words in vertical layout */
 .words-container.vertical {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap; /* Allows words to wrap into rows */
+  justify-content: space-between; /* Evenly distribute the words across the container */
+  align-items: flex-start;
+  max-width: 100%; /* Fit the container width */
+  gap: 10px; /* Adjust spacing between words */
+  padding: 10px; /* Add padding inside the container for comfort */
+  box-sizing: border-box; /* Make sure padding is included in the width */
 }
 
+/* Individual word styling in vertical layout */
+.words-container.vertical span {
+  padding: 5px 8px; /* Reduce padding to make words more compact */
+  border-radius: 4px; /* Keep rounded corners for a polished look */
+  background-color: #e6e6e6; /* Light gray background to distinguish words visually */
+  margin: 0; /* Remove any default margin to maximize space usage */
+  flex: 1 1 auto; /* Flex-grow and flex-shrink allow the words to grow or shrink to fit */
+  min-width: 80px; /* Set a reasonable minimum width for each word */
+}
+
+
+/* Feedback styling */
 .feedback {
   font-size: 15pt;
   margin-top: 15px;
   font-style: italic;
   color: #000000;
 }
+
 /* Wrapper for levels and topics */
 /* Wrapper for levels and topics */
 .levels-topics-wrapper {

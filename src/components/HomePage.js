@@ -10,9 +10,9 @@ const HomePage = () => {
 
   useEffect(() => {
     if (user) {
-      setWelcomeMessage(`Welcome back, ${user.displayName || 'User'}!`);
+      setWelcomeMessage(`Welcome back to Languapps, ${user.displayName || 'User'}!`);
     } else {
-      setWelcomeMessage('Welcome to our learning platform! Please log in to continue.');
+      setWelcomeMessage('Welcome to the Grammar for ESL Learners Platform. Please log in to continue.');
     }
   }, [user]);
 
@@ -26,7 +26,7 @@ const HomePage = () => {
   };
 
   return (
-    <div style={{
+    <div className="page-content" style={{
       height: '100vh',
       display: 'flex',
       flexDirection: 'column',

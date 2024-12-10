@@ -1,34 +1,25 @@
-import React, { useState, useEffect } from 'react';
 
-const WordBankActivity = ({ paragraph, wordBank, correctAnswers }) => {
+// WordBank.js - Apply Styling for Reduced Visibility Elements
+import React, { useState } from 'react';
+
+const WordBankActivity = ({ paragraph, wordBank, correctAnswers, onAnswer }) => {
   const [userSelections, setUserSelections] = useState([]);
 
-  useEffect(() => {
-    setUserSelections([]);
-  }, [paragraph, wordBank, correctAnswers]);
-
   const handleWordSelect = (word) => {
-    if (!userSelections.includes(word)) {
-      setUserSelections((prevSelections) => [...prevSelections, word]);
-    }
+    setUserSelections([...userSelections, word]);
   };
 
-  const removeWord = (index) => {
-    const newSelections = [...userSelections];
-    newSelections.splice(index, 1);
-    setUserSelections(newSelections);
+  const handleRemoveWord = (index) => {
+    const updatedSelections = [...userSelections];
+    updatedSelections.splice(index, 1);
+    setUserSelections(updatedSelections);
   };
 
   const moveWord = (index, direction) => {
-    const newPosition = index + direction;
-    if (newPosition < 0 || newPosition >= userSelections.length) return;
-
-    const newSelections = [...userSelections];
-    const temp = newSelections[newPosition];
-    newSelections[newPosition] = newSelections[index];
-    newSelections[index] = temp;
-
-    setUserSelections(newSelections);
+    const updatedSelections = [...userSelections];
+    const [movedWord] = updatedSelections.splice(index, 1);
+    updatedSelections.splice(index + direction, 0, movedWord);
+    setUserSelections(updatedSelections);
   };
 
   const handleSubmit = () => {
@@ -41,29 +32,40 @@ const WordBankActivity = ({ paragraph, wordBank, correctAnswers }) => {
   };
 
   return (
-    <div>
-      <p>{paragraph}</p>
-      <div>
+    <div className="wordbank-container">
+      <p className="wordbank-paragraph">{paragraph}</p>
+      <div className="wordbank-options" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
         {wordBank.map((word, index) => (
-          <button key={index} onClick={() => handleWordSelect(word)}>
+          <button
+            key={index}
+            onClick={() => handleWordSelect(word)}
+            className="wordbank-option"
+            style={{
+              fontSize: '8pt', // Reduce font size for word bank options
+              padding: '5px 8px',
+              width: 'fit-content',
+              borderRadius: '5px',
+              cursor: 'pointer'
+            }}
+          >
             {word}
           </button>
         ))}
       </div>
-      <div>
-        <h3>Your selections:</h3>
-        <ul>
-          {userSelections.map((word, index) => (
-            <li key={index}>
-              {word}
-              <button onClick={() => moveWord(index, -1)} disabled={index === 0}>Up</button>
-              <button onClick={() => moveWord(index, 1)} disabled={index === userSelections.length - 1}>Down</button>
-              <button onClick={() => removeWord(index)}>Remove</button>
-            </li>
-          ))}
-        </ul>
+      <div className="wordbank-operation-message" style={{ fontSize: '8pt', fontWeight: 'normal', marginTop: '10px' }}>
+        Your Selections:
       </div>
-      <button onClick={handleSubmit}>Submit</button>
+      <ul className="wordbank-selections" style={{ listStyleType: 'none', padding: 0 }}>
+        {userSelections.map((word, index) => (
+          <li key={index} style={{ marginBottom: '5px' }}>
+            {word}
+            <button onClick={() => moveWord(index, -1)} disabled={index === 0} style={{ fontSize: '8pt', marginLeft: '5px' }}>Up</button>
+            <button onClick={() => moveWord(index, 1)} disabled={index === userSelections.length - 1} style={{ fontSize: '8pt', marginLeft: '5px' }}>Down</button>
+            <button onClick={() => handleRemoveWord(index)} style={{ fontSize: '8pt', marginLeft: '5px' }}>Remove</button>
+          </li>
+        ))}
+      </ul>
+      <button onClick={handleSubmit} style={{ fontSize: '8pt', marginTop: '10px', padding: '5px 10px' }}>Submit</button>
     </div>
   );
 };
