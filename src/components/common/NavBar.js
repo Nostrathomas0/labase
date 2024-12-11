@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Auth from '../Auth';
+import { Link } from 'react-router-dom';
 
 const NavCorner = ({ onLogout }) => {
   // Get the authenticated user state using the useAuthState hook
@@ -27,72 +28,30 @@ const NavCorner = ({ onLogout }) => {
   };
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: '10px',
-        right: '10px',
-        display: 'flex',
-        alignItems: 'center',
-        backgroundColor: '#007bff',
-        padding: '10px',
-        borderRadius: '8px',
-        color: 'white',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      }}
-    >
-      {isLoggedIn ? (
-        <div
-          onClick={handleStatusClick}
-          title="Click to update progress"
-          style={{
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            backgroundColor: '#28a745',
-            cursor: 'pointer',
-            marginRight: '10px',
-          }}
-        />
-      ) : (
-        <div
-          title="Not logged in"
-          style={{
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            backgroundColor: '#ccc',
-            marginRight: '10px',
-          }}
-        />
-      )}
-      {isLoggedIn ? (
-        <button
-          onClick={onLogout}
-          style={{
-            padding: '5px 10px',
-            backgroundColor: '#0056b3',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-          }}
-        >
-          Logout
-        </button>
-      ) : (
-        <a
-          href="/login"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-            fontWeight: 'bold',
-          }}
-        >
-          Login
-        </a>
-      )}
-    </div>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <Link to="/">Languapps</Link>
+      </div>
+      <div className="navbar-links">
+        <Link to="/A1">Beginner (A1)</Link>
+        <Link to="/A2">Elementary (A2)</Link>
+        <Link to="/B1">Pre-Intermediate (B1)</Link>
+        <Link to="/B2">Intermediate (B2)</Link>
+      </div>
+      <div className="navbar-user">
+        {isLoggedIn ? (
+          <>
+            <div className="status-indicator logged-in" onClick={handleStatusClick} title="Click to update progress" />
+            <button className="nav-button logout-button" onClick={onLogout}>Logout</button>
+          </>
+        ) : (
+          <>
+            <div className="status-indicator not-logged-in" title="Not logged in" />
+            <Link className="nav-button login-link" to="/login">Login</Link>
+          </>
+        )}
+      </div>
+    </nav>
   );
 };
 

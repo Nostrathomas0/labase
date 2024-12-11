@@ -1,45 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
+import PropTypes from 'prop-types';
+import { useAuth } from '../AuthContext';
 import coverImage from '../assets/images/Cover.png'; // Adjust the path to your cover image
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    padding: '0',
-    border: 'none',
-    borderRadius: '10px',
-    overflow: 'hidden',
-  },
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-  },
-};
 
 Modal.setAppElement('#root');
 
 const CoverModal = ({ isOpen, onRequestClose }) => {
+  const { user } = useAuth();
+  const [name, setName] = useState('');
+
+  if(!isOpen) return null;
+
+  const handleNameSubmit = () => {
+    console.log("User's name:", name);
+    onRequestClose();
+  };
+
   return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={onRequestClose} // This will close the modal on outside click or ESC key press
-      style={customStyles}
-      contentLabel="Cover Modal"
-      shouldCloseOnOverlayClick={true} // Ensures that clicking on the overlay closes the modal
-    >
-      <div className="modal-content" onClick={onRequestClose} style={{ cursor: 'pointer' }}>
-        <img src={coverImage} alt="Cover" className="cover-image" style={{ width: '100%', height: 'auto' }} />
-        <div style={{ padding: '20px', textAlign: 'center', backgroundColor: '#fff' }}>
-          <p>This app is dedicated to the Giordan Family and everyone who learns to learn</p>
-          <button onClick={onRequestClose} className="close-button">Close</button>
+    <div className="cover-modal-container">
+      <img src={coverImage} alt="Cover" />
+
+      {user ? (
+        <h2>Welcome, {user.email}!</h2>
+      ) : (
+        <div>
+          <h2>Welcome to Languapps</h2>
+          <p>Please enter your name:</p>
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="cover-modal-input"
+          />
+          <button onClick={handleNameSubmit} className="cover-modal-button">
+            Submit
+          </button>
         </div>
-      </div>
-    </Modal>
+      )}
+
+      <button onClick={onRequestClose} className="cover-modal-button close">
+        Close
+      </button>
+    </div>
   );
+};
+
+CoverModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onRequestClose: PropTypes.func.isRequired,
 };
 
 export default CoverModal;
