@@ -474,3 +474,129 @@ nav ul li a:hover, .page-info:hover {
     align-items: center;
   }
 }
+/* CoverModal styles */
+.cover-modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+}
+
+.cover-modal-container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.cover-modal-input {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 300px;
+}
+
+.cover-modal-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cover-modal-button.close {
+  background-color: #DC3545;
+}
+
+.cover-modal-error {
+  color: #FF4D4F;
+  margin-top: 10px;
+}
+
+/* NavBar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-logo a {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navigation links */
+.navbar-links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* User section */
+.navbar-user {
+  display: flex;
+  align-items: center;
+}
+
+/* Status indicators */
+.status-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.status-indicator.logged-in {
+  background-color: #28a745;
+}
+
+.status-indicator.not-logged-in {
+  background-color: #ccc;
+}
+
+/* Navigation buttons */
+.nav-button {
+  padding: 5px 10px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-button.logout-button {
+  background-color: #dc3545;
+}
+
+.nav-button.login-link {
+  background-color: transparent;
+}
