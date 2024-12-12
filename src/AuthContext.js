@@ -1,49 +1,39 @@
+// src/AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { auth } from './firebaseInit';
 import Cookies from 'js-cookie';
-import jwtDecode from 'jwt-decode';
 
-export const AuthContext = createContext();
+const AuthContext = createContext({ user: null, isLoading: true });
 
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [jwtToken, setJwtToken] = useState(null);
+  const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Retrieve the JWT token from cookies
-    const token = Cookies.get('backendJwtToken');
-    console.log('Retrieved token from cookies:', token);
-
-    if (token) {
-      try {
-        const decodedToken = jwtDecode(token);
-        console.log('Decoded token:', decodedToken);
-
-        // Check if the token is expired
-        if (decodedToken.exp < Date.now() / 1000) {
-          console.warn('Token expired');
-          Cookies.remove('backendJwtToken');
-          setCurrentUser(null);
-          setJwtToken(null);
-        } else {
-          setJwtToken(token);
-          setCurrentUser(decodedToken); // Set the user to the decoded token payload
-        }
-      } catch (error) {
-        console.error('Error decoding token:', error);
-        Cookies.remove('backendJwtToken');
+    const unsubscribe = auth.onAuthStateChanged(async (firebaseUser) => {
+      if (firebaseUser) {
+        const token = await firebaseUser.getIdToken();
+        Cookies.set('backendJwtToken', token, {
+          domain: '.languapps.com',
+          path: '/',
+          secure: true,
+          sameSite: 'None',
+        });
+        setUser(firebaseUser);
+      } else {
+        setUser(null);
+        Cookies.remove('backendJwtToken', { domain: '.languapps.com', path: '/' });
       }
-    } else {
-      console.log('No token found in cookies');
-    }
+      setIsLoading(false);
+    });
 
-    setIsLoading(false); // Authentication check complete
+    return () => unsubscribe();
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user: currentUser, jwtToken, isLoading }}>
+    <AuthContext.Provider value={{ user, isLoading }}>
       {children}
     </AuthContext.Provider>
   );
