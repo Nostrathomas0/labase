@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { AuthProvider, useAuth } from './AuthContext';
-
+import Cookies from 'js-cookie';
+import { jwtDecode } from 'jwt-decode';
 
 import HomePage from './components/HomePage';
 import CoverModal from './components/CoverModal'; 
@@ -37,10 +38,29 @@ import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
 function App() {
   const { user, isLoading } = useAuth();
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   console.log('isLoading:', isLoading);
   console.log('user:', user);
 
+  useEffect(() => {
+    // Check for the JWT token in cookies
+    const backendJwtToken = Cookies.get('backendJwtToken');
+    console.log('Retrieved backendJwtToken from cookies:', backendJwtToken);
+
+    if (backendJwtToken) {
+      try {
+        const decodedToken = jwtDecode(backendJwtToken);
+        console.log('Decoded JWT Token:', decodedToken);
+      } catch (error) {
+        console.error('Error decoding token:', error);
+      }
+    } else {
+      setIsModalOpen(true); // Show modal if no token is found
+    }
+  }, []);
+
+  console.log('isLoading:', isLoading);
+  console.log('user:', user);
 
   if (isLoading) {
     return <div>Loading...</div>; // Show a loading state until authentication is complete
@@ -54,7 +74,7 @@ function App() {
             <h2>Welcome, {user.email || 'User'}!</h2>
           </div>
         ) : (
-          <CoverModal isOpen={true} onRequestClose={() => {}} />
+          <CoverModal isOpen={isModalOpen} onRequestClose={() => {}} />
         )}
         
         <div className="levels-topics-wrapper">
