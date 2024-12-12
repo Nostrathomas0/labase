@@ -18,6 +18,7 @@ export const AuthProvider = ({ children }) => {
       console.log("Auth state changed:", user); // Debugging  setCurrentUser(user);
       
       if (user) {
+        setCurrentUser(user);
         try {
           const token = await user.getIdToken();
           
