@@ -1,36 +1,45 @@
 // src/AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
-import { jwtDecode } from 'jwt-decode';
+import Auth from './Auth'; // Import the Auth module
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
-const AuthContext = createContext({ user: null, isLoading: true });
+
+const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const auth = getAuth();
 
   useEffect(() => {
-    const backendJwtToken = Cookies.get('backendJwtToken');
-    console.log('AuthContext - Retrieved backendJwtToken:', backendJwtToken);
+    const authenticate = async () => {
+      const backendJwtToken = Cookies.get('backendJwtToken');
+      console.log('Retrieved backendJwtToken from cookies:', backendJwtToken);
 
-    if (backendJwtToken) {
-      try {
-        const decodedToken = jwtDecode(backendJwtToken);
-        console.log('AuthContext - Decoded JWT Token:', decodedToken);
-        setUser({ email: decodedToken.email });
-      } catch (error) {
-        console.error('AuthContext - Error decoding JWT token:', error);
-        setUser(null);
+      if (backendJwtToken) {
+        try {
+          // Authenticate using the JWT token
+          await Auth.authenticateWithJwt(backendJwtToken);
+          console.log('User authenticated with JWT');
+        } catch (error) {
+          console.error('Authentication failed:', error);
+        }
       }
-    } else {
-      console.warn('AuthContext - No backendJwtToken found.');
-      setUser(null);
-    }
 
-    setIsLoading(false);
-  }, []);
+      // Listen for auth state changes
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
+        setIsLoading(false);
+      });
+
+      return () => unsubscribe();
+    };
+
+    authenticate();
+  }, [auth]);
 
   return (
     <AuthContext.Provider value={{ user, isLoading }}>
