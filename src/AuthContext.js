@@ -1,10 +1,8 @@
-// assets/js/AuthContext.js
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { auth } from './firebaseInit';
 import Cookies from 'js-cookie';
+import jwtDecode from 'jwt-decode';
 
-const AuthContext = createContext({ user: null, jwtToken: null, isLoading: true });
+export const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
@@ -14,39 +12,34 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async (user) => {
-      console.log("Auth state changed:", user); // Debugging  setCurrentUser(user);
-      
-      if (user) {
-        console.log("User is signed in:", user)
-        setCurrentUser(user);
-        try {
-          const token = await user.getIdToken();
-          
-          console.log("Retrueved jwt:", token);
-          // Set the JWT token as a cookie for cross-domain access
-          Cookies.set('backendJwtToken', token, {
-            domain: '.languapps.com',
-            path: '/',
-            secure: true,
-            sameSite: 'lax',
-          });
+    // Retrieve the JWT token from cookies
+    const token = Cookies.get('backendJwtToken');
+    console.log('Retrieved token from cookies:', token);
 
-          setJwtToken(token);
-          console.log("JWT Token set in context and as cookie:", token);
-        } catch (error) {
-          console.error("Error retrieving JWT token:", error);
+    if (token) {
+      try {
+        const decodedToken = jwtDecode(token);
+        console.log('Decoded token:', decodedToken);
+
+        // Check if the token is expired
+        if (decodedToken.exp < Date.now() / 1000) {
+          console.warn('Token expired');
+          Cookies.remove('backendJwtToken');
+          setCurrentUser(null);
           setJwtToken(null);
+        } else {
+          setJwtToken(token);
+          setCurrentUser(decodedToken); // Set the user to the decoded token payload
         }
-      } else {
-        setCurrentUser(null);
-        Cookies.remove('backendJwtToken', { domain: '.languapps.com', path: '/' });
-        setJwtToken(null);
+      } catch (error) {
+        console.error('Error decoding token:', error);
+        Cookies.remove('backendJwtToken');
       }
-      setIsLoading(false);
-    });
+    } else {
+      console.log('No token found in cookies');
+    }
 
-    return () => unsubscribe();
+    setIsLoading(false); // Authentication check complete
   }, []);
 
   return (
