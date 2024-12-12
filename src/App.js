@@ -36,10 +36,15 @@ import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
 
 function App() {
-  const { isLoading } = useAuth();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { user, isLoading } = useAuth();
+  const [ isModalOpen, setIsModalOpen] = useState(false);
   const [authError, setAuthError] = useState('');
   const location = useLocation();
+
+
+  console.log("isLoading:", isLoading);
+  console.log("user:", user);
+
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
@@ -72,6 +77,15 @@ function App() {
   
   if (isLoading) {
     return <div>Loading...</div>; // Show a load state during authentication
+  }
+
+  if (authError) {
+    return (
+      <div className="auth-error">
+        <p>{authError}</p>
+        <Link to="/login">Go to Login</Link>
+      </div>
+    );
   }
 
   return (
