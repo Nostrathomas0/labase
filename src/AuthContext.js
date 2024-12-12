@@ -1,7 +1,7 @@
 // src/AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { auth } from './firebaseInit';
 import Cookies from 'js-cookie';
+import { jwtDecode } from 'jwt-decode';
 
 const AuthContext = createContext({ user: null, isLoading: true });
 
@@ -12,24 +12,24 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async (firebaseUser) => {
-      if (firebaseUser) {
-        const token = await firebaseUser.getIdToken();
-        Cookies.set('backendJwtToken', token, {
-          domain: '.languapps.com',
-          path: '/',
-          secure: true,
-          sameSite: 'None',
-        });
-        setUser(firebaseUser);
-      } else {
-        setUser(null);
-        Cookies.remove('backendJwtToken', { domain: '.languapps.com', path: '/' });
-      }
-      setIsLoading(false);
-    });
+    const backendJwtToken = Cookies.get('backendJwtToken');
+    console.log('AuthContext - Retrieved backendJwtToken:', backendJwtToken);
 
-    return () => unsubscribe();
+    if (backendJwtToken) {
+      try {
+        const decodedToken = jwtDecode(backendJwtToken);
+        console.log('AuthContext - Decoded JWT Token:', decodedToken);
+        setUser({ email: decodedToken.email });
+      } catch (error) {
+        console.error('AuthContext - Error decoding JWT token:', error);
+        setUser(null);
+      }
+    } else {
+      console.warn('AuthContext - No backendJwtToken found.');
+      setUser(null);
+    }
+
+    setIsLoading(false);
   }, []);
 
   return (
