@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
           setJwtToken(null);
         }
       } else {
-        // Clear JWT token if user signs out
+        setCurrentUser(null);
         Cookies.remove('backendJwtToken', { domain: '.languapps.com', path: '/' });
         setJwtToken(null);
       }
