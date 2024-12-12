@@ -18,10 +18,12 @@ export const AuthProvider = ({ children }) => {
       console.log("Auth state changed:", user); // Debugging  setCurrentUser(user);
       
       if (user) {
+        console.log("User is signed in:", user)
         setCurrentUser(user);
         try {
           const token = await user.getIdToken();
           
+          console.log("Retrueved jwt:", token);
           // Set the JWT token as a cookie for cross-domain access
           Cookies.set('backendJwtToken', token, {
             domain: '.languapps.com',
