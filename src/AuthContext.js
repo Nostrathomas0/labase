@@ -1,7 +1,7 @@
 // src/AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
-import Auth from './Auth'; // Import the Auth module
+import Auth from '.Auth'; // Import the Auth module
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 
