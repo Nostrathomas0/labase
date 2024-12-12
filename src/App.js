@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import { AuthProvider, useAuth } from './AuthContext';
-import Cookies from 'js-cookie';
-import { jwtDecode } from 'jwt-decode';
+
+
 import HomePage from './components/HomePage';
 import CoverModal from './components/CoverModal'; 
 import A1 from './components/pages/A1';
@@ -37,61 +37,26 @@ import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
 function App() {
   const { user, isLoading } = useAuth();
-  const [ isModalOpen, setIsModalOpen] = useState(false);
-  const [authError, setAuthError] = useState('');
-  const location = useLocation();
+
+  console.log('isLoading:', isLoading);
+  console.log('user:', user);
 
 
-  console.log("isLoading:", isLoading);
-  console.log("user:", user);
-
-
-  useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
-    const shouldOpenModal = queryParams.get('openModal') === 'true';
-    setIsModalOpen(shouldOpenModal);
-    
-    const backendJwtToken = Cookies.get('backendJwtToken');  // Check for the correct cookie
-    console.log("Retrieved backendJwtToken from cookies:", backendJwtToken); // Debugging
-
-    if (!backendJwtToken) {
-      setAuthError('No authentication token found. Please sign in at ');
-      return;
-    }
-
-    try {
-      const decodedToken = jwtDecode(backendJwtToken);
-      
-      if (decodedToken.exp < Date.now() / 1000) {
-        setAuthError('Session expired. Please sign in again.');
-      } else {
-        setAuthError(''); // Clear any previous error
-      }
-    } catch (error) {
-      console.error("Invalid token:", error);
-      setAuthError('Invalid authentication. Please sign in at ');
-    }
-  }, [location]);
-  
-  const closeModal = () => setIsModalOpen(false);
-  
   if (isLoading) {
-    return <div>Loading...</div>; // Show a load state during authentication
-  }
-
-  if (authError) {
-    return (
-      <div className="auth-error">
-        <p>{authError}</p>
-        <Link to="/login">Go to Login</Link>
-      </div>
-    );
+    return <div>Loading...</div>; // Show a loading state until authentication is complete
   }
 
   return (
     <AuthProvider>
       <div>
-        {authError && <div className="auth-error">{authError}</div>}
+        {user ? (
+          <div>
+            <h2>Welcome, {user.email || 'User'}!</h2>
+          </div>
+        ) : (
+          <CoverModal isOpen={true} onRequestClose={() => {}} />
+        )}
+        
         <div className="levels-topics-wrapper">
           <div className="levels-and-topics-container">
             <div className="levels-container">
@@ -137,8 +102,6 @@ function App() {
             </div>
           </div>
         </div>
-  
-        <CoverModal isOpen={isModalOpen} onRequestClose={closeModal} />
       </div>
     </AuthProvider>
   );
