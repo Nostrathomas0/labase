@@ -1,45 +1,47 @@
 // src/AuthContext.js
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import Cookies from 'js-cookie';
-import Auth from './components/Auth.js'; // Import the Auth module
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getBackendJwtToken, authenticateWithBackendJwt } from './utils/authUtils';
 
-
+// Create the AuthContext
 const AuthContext = createContext();
 
-export const useAuth = () => useContext(AuthContext);
+// Export the useAuth hook at the top level
+export const useAuth = () => {
+  return useContext(AuthContext);  // This hook provides the context's value
+};
 
+// AuthProvider component that provides the auth context
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const auth = getAuth();
 
   useEffect(() => {
     const authenticate = async () => {
-      const backendJwtToken = Cookies.get('backendJwtToken');
-      console.log('Retrieved backendJwtToken from cookies:', backendJwtToken);
+      try {
+        const backendJwtToken = getBackendJwtToken();
 
-      if (backendJwtToken) {
-        try {
-          // Authenticate using the JWT token
-          await Auth.authenticateWithJwt(backendJwtToken);
-          console.log('User authenticated with JWT');
-        } catch (error) {
-          console.error('Authentication failed:', error);
+        if (backendJwtToken) {
+          await authenticateWithBackendJwt(backendJwtToken);
         }
-      }
 
-      // Listen for auth state changes
-      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-        setUser(currentUser);
+        // Initialize auth and listen for auth state changes
+        const auth = getAuth();
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+          setUser(currentUser);
+          setIsLoading(false);
+        });
+
+        return unsubscribe;
+      } catch (error) {
+        console.error('Error during authentication:', error);
         setIsLoading(false);
-      });
-
-      return () => unsubscribe();
+      }
     };
 
     authenticate();
-  }, [auth]);
+  }, []); // Empty dependency array ensures it runs once after component mounts
 
   return (
     <AuthContext.Provider value={{ user, isLoading }}>

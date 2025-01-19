@@ -1,11 +1,11 @@
 // Auth.js - Comprehensive Update for Managing Authentication and State
-
+import { app } from '../api/firebaseInit';
 import { jwtDecode } from 'jwt-decode';
 import { getAuth, signInWithCustomToken, onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import axios from 'axios'; // For backend requests to update JWT
 
-const auth = getAuth();
+const auth = getAuth(app);
 
 /**
  * Hook to monitor authentication state changes and provide user state.
