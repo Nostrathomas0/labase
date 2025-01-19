@@ -1,3 +1,4 @@
+import './AuthContext.js'; // assuming this contains the firebase initialization
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { AuthProvider, useAuth } from './AuthContext';
@@ -67,7 +68,7 @@ function App() {
   }
 
   return (
-    <AuthProvider>
+
       <div>
         {user ? (
           <div>
@@ -123,7 +124,11 @@ function App() {
           </div>
         </div>
       </div>
+    );
+  } 
+    export default () => (       
+    <AuthProvider>
+      <App />
     </AuthProvider>
   );
-}  
-export default App;
+ 
