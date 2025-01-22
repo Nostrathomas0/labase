@@ -1,16 +1,16 @@
-// src/api/checkAccess.js
-
 import admin from 'firebase-admin';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import express from 'express';
 import { decodeToken } from '../utils/authUtils';
 
-admin.initializeApp({
-  credential: admin.credential.applicationDefault(),
-});
+// Initialize Firebase Admin SDK
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.applicationDefault(),
+  });
+}
 
 const app = express();
-const db = getFirestore();
+const db = admin.firestore(); // Use Firestore from Admin SDK
 
 app.use(express.json());
 app.use(require('cookie-parser')());
@@ -37,8 +37,8 @@ async function verifyToken(req, res, next) {
 app.get('/api/check-access', verifyToken, async (req, res) => {
   const { uid } = req;
   try {
-    const userDoc = await getDoc(doc(db, 'users', uid));
-    res.json({ accessGranted: userDoc.exists() && userDoc.data().accessGranted });
+    const userDoc = await db.collection('users').doc(uid).get(); // Use Admin SDK syntax
+    res.json({ accessGranted: userDoc.exists && userDoc.data().accessGranted });
   } catch (error) {
     res.status(500).json({ error: 'Failed to check access' });
   }
