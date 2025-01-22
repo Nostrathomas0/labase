@@ -25,11 +25,10 @@ export const authenticateWithBackendJwt = async () => {
       throw new Error('No backend JWT token found in cookies.');
     }
 
-    // Optionally decode the token to inspect payload
     const decodedToken = jwtDecode(token);
     console.log('Decoded JWT:', decodedToken);
 
-    // Sign in with the backend JWT using Firebase Authentication
+    // Authenticate with Firebase using the backend JWT
     await signInWithCustomToken(auth, token);
     console.log('User authenticated successfully with backend JWT.');
   } catch (error) {
@@ -37,3 +36,47 @@ export const authenticateWithBackendJwt = async () => {
     throw error;
   }
 };
+
+/**
+ * Get the currently authenticated user's ID token.
+ * @returns {Promise<string>} - Resolves to the user's ID token.
+ */
+export const getUserToken = async () => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  if (!user) {
+    throw new Error('No authenticated user found.');
+  }
+
+  try {
+    const token = await user.getIdToken();
+    console.log('Retrieved user ID token:', token);
+    return token;
+  } catch (error) {
+    console.error('Error retrieving user token:', error);
+    throw error;
+  }
+};
+
+/**
+ * Refresh the authenticated user's ID token.
+ * @returns {Promise<void>} - Resolves if the refresh is successful.
+ */
+export const refreshUserToken = async () => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  if (!user) {
+    throw new Error('No authenticated user found to refresh token.');
+  }
+
+  try {
+    await user.getIdToken(true); // Force refresh the token
+    console.log('User token refreshed successfully.');
+  } catch (error) {
+    console.error('Error refreshing user token:', error);
+    throw error;
+  }
+};
+
