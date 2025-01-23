@@ -1,4 +1,5 @@
-import './AuthContext.js'; // assuming this contains the firebase initialization
+// App.js
+import './api/firebaseInit';
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { AuthProvider, useAuth } from './AuthContext';
