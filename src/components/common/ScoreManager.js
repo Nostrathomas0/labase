@@ -1,11 +1,10 @@
 // scoreManager.js - Updated to Read/Write Progress with JWT Support
 
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
-import { getAuth } from 'firebase/auth';
+import { auth } from '../../api/firebaseInit';
 import jwtDecode from 'jwt-decode';
 
 const db = getFirestore();
-const auth = getAuth();
 
 /**
  * Function to get the user's progress for a given grammar page.
@@ -109,4 +108,13 @@ export const trackProgress = async (pageId) => {
   } catch (error) {
     console.error('Error tracking progress:', error);
   }
+};
+
+/**
+ * Exporting the functions as named exports.
+ */
+export default {
+  getProgress,
+  updateProgress,
+  trackProgress,
 };
