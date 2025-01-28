@@ -1,5 +1,6 @@
 import Cookies from 'js-cookie';
-import { getAuth, signInWithCustomToken } from 'firebase/auth';
+import { auth } from '../api/firebaseInit';
+import { signInWithCustomToken } from 'firebase/auth';
 import { jwtDecode } from 'jwt-decode';
 
 /**
@@ -17,7 +18,6 @@ export const getBackendJwtToken = () => {
  * @returns {Promise<void>} - Resolves if authentication succeeds.
  */
 export const authenticateWithBackendJwt = async () => {
-  const auth = getAuth();
 
   try {
     const token = getBackendJwtToken();
@@ -42,7 +42,6 @@ export const authenticateWithBackendJwt = async () => {
  * @returns {Promise<string>} - Resolves to the user's ID token.
  */
 export const getUserToken = async () => {
-  const auth = getAuth();
   const user = auth.currentUser;
 
   if (!user) {
@@ -64,8 +63,7 @@ export const getUserToken = async () => {
  * @returns {Promise<void>} - Resolves if the refresh is successful.
  */
 export const refreshUserToken = async () => {
-  const auth = getAuth();
-  const user = auth.currentUser;
+   const user = auth.currentUser;
 
   if (!user) {
     throw new Error('No authenticated user found to refresh token.');
