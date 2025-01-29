@@ -27,6 +27,7 @@ export const authenticateWithBackendJwt = async () => {
 
     const decodedToken = jwtDecode(token);
     console.log('Decoded JWT:', decodedToken);
+    console.log('🍪 All Cookies:', Cookies.get());
 
     // Authenticate with Firebase using the backend JWT
     await signInWithCustomToken(auth, token);
