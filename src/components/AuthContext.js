@@ -1,8 +1,8 @@
 // src/AuthContext.js
-import { auth } from './firebaseInit';
+import { auth } from '../firebaseInit';
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-import { getBackendJwtToken, authenticateWithBackendJwt } from './utils/authUtils';
+import { getBackendJwtToken, authenticateWithBackendJwt } from '../utils/authUtils';
 
 // Create the AuthContext
 const AuthContext = createContext();

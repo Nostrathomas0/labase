@@ -1,9 +1,8 @@
 // assets/js/ProtectedRoute.js
-import { auth } from '../firebaseInit';
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
-import { useAuth } from './AuthContext';
+import { useAuth } from '.AuthContext';
 
 const ProtectedRoute = ({ children }) => {
   const { jwtToken, isLoading } = useAuth();
