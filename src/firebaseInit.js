@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 
@@ -20,5 +20,9 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 console.log('Firebase App Initialized:', app.name); // Should log '[DEFAULT]'
+// Enable session persistence
+setPersistence(auth, browserLocalPersistence)
+  .then(() => console.log("🔥 Firebase Auth Persistence Set"))
+  .catch((error) => console.error("Auth Persistence Error:", error));
 
 export { app, db, auth };
