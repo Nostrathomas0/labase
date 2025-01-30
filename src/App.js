@@ -1,5 +1,5 @@
 // App.js
-import './api/firebaseInit';
+import './firebaseInit';
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { AuthProvider, useAuth } from './AuthContext';

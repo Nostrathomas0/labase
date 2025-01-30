@@ -1,5 +1,5 @@
 // src/AuthContext.js
-import { auth } from './api/firebaseInit';
+import { auth } from './firebaseInit';
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { getBackendJwtToken, authenticateWithBackendJwt } from './utils/authUtils';
@@ -16,6 +16,8 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let unsubscribe = () => {}; // Default empty function to prevent undefined errors
+  
     const initAuth = async () => {
       try {
         // Step 1: Check for backend JWT token and authenticate
@@ -27,27 +29,25 @@ export const AuthProvider = ({ children }) => {
         } else {
           console.warn('No backend JWT token found');
         }
-
+  
         // Step 2: Set up Firebase auth state listener
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        unsubscribe = onAuthStateChanged(auth, (currentUser) => {
           setUser(currentUser);
           setIsLoading(false);
         });
-
-        return unsubscribe; // Return unsubscribe function for cleanup
+  
       } catch (error) {
         console.error('Error initializing authentication:', error);
         setIsLoading(false);
       }
     };
-
-    const unsubscribePromise = initAuth();
-
-    // Cleanup on component unmount
-    return () => {
-      unsubscribePromise?.then((unsubscribe) => unsubscribe?.());
-    };
+  
+    initAuth();
+  
+    // Cleanup function to unsubscribe when the component unmounts
+    return () => unsubscribe();
   }, []);
+  
 
   return (
     <AuthContext.Provider value={{ user, isLoading }}>
