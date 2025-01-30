@@ -1,8 +1,8 @@
 // App.js
 import './firebaseInit';
+import { AuthProvider, useAuth } from './components/AuthContext';
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import { AuthProvider, useAuth } from './AuthContext';
 import Cookies from 'js-cookie';
 import { jwtDecode } from 'jwt-decode';
 

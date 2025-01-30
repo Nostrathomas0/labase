@@ -1,5 +1,5 @@
 import express from 'express';
-import { db } from './firebaseInit'; // Import centralized admin and db
+import { db } from '../firebaseInit'; // Import centralized admin and db
 import { decodeToken } from '../utils/authUtils';
 
 const app = express();

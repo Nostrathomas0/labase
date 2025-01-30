@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
-import { useAuth } from '../AuthContext';
+import { useAuth } from './AuthContext';
 import coverImage from '../assets/images/Cover.png'; // Adjust the path to your cover image
 
 Modal.setAppElement('#root');
