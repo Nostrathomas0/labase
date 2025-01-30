@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie';
-import { auth } from '../api/firebaseInit';
+import { auth } from '../firebaseInit';
 import { signInWithCustomToken } from 'firebase/auth';
 import { jwtDecode } from 'jwt-decode';
 

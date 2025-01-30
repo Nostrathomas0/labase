@@ -1,5 +1,5 @@
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
-import { auth } from '../../api/firebaseInit'; // Ensure this is initialized before use
+import { auth } from '../../firebaseInit'; // Ensure this is initialized before use
 import jwtDecode from 'jwt-decode';
 
 const db = getFirestore(); // ✅ Use the initialized Firebase app
