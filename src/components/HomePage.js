@@ -1,31 +1,26 @@
-// HomePage.js - Simple HomePage for your React Application
-
-import React, { useEffect, useState } from 'react';
-import { authenticateWithBackendJwt, getUserToken } from '../utils/authUtils';
+import React, { useEffect } from 'react';
+import { useAuth } from './AuthContext';  
+import { getUserToken } from '../utils/authUtils';
 
 const HomePage = () => {
-  const [userToken, setUserToken] = useState(null);
+  const { user } = useAuth();  // ✅ Get user from AuthContext
 
   useEffect(() => {
-    const fetchUserToken = async () => {
+    const authenticateUser = async () => {
       try {
-        await authenticateWithBackendJwt();
-        const token = await getUserToken();
-        setUserToken(token);
+        if (user) {
+          const token = await getUserToken();  // ✅ Uses shared auth instance
+          console.log('User token:', token);
+        }
       } catch (error) {
-        console.error('Authentication error:', error);
+        console.error('Error fetching user token:', error);
       }
     };
 
-    fetchUserToken();
-  }, []);
+    authenticateUser();
+  }, [user]);
 
-  return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
-      {userToken ? <p>Your token: {userToken}</p> : <p>Authenticating...</p>}
-    </div>
-  );
+  return <div>Welcome to HomePage!</div>;
 };
 
 export default HomePage;
