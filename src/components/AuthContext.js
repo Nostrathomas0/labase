@@ -1,57 +1,76 @@
-// src/AuthContext.js
-import { auth } from '../firebaseInit';
+// AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-import { getBackendJwtToken, authenticateWithBackendJwt } from '../utils/authUtils';
-console.log("Firebase Auth:", auth);
-// Create the AuthContext
-const AuthContext = createContext();
+import { auth } from '../firebaseInit';
+import { 
+  getJwtToken, 
+  authenticateWithJwt, 
+  clearJwtToken, 
+  getBackendJwtToken 
+} from '../utils/authUtils';
 
-// Hook to access auth context
-export const useAuth = () => useContext(AuthContext);
+// Create Auth Context
+const AuthContext = createContext(null);
 
-// AuthProvider component
+// Auth Provider Component
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [userEmail, setUserEmail] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let unsubscribe = () => {}; // Default empty function to prevent undefined errors
-  
-    const initAuth = async () => {
-      try {
-        // Step 1: Check for backend JWT token and authenticate
-        const backendJwtToken = getBackendJwtToken();
-        if (backendJwtToken) {
-          console.log('Backend JWT found, attempting authentication...');
-          await authenticateWithBackendJwt(backendJwtToken);
-          console.log('Authentication with backend JWT succeeded');
-        } else {
-          console.warn('No backend JWT token found');
+    // Listen for Firebase auth state changes
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        console.log('User authenticated from Firebase');
+        setCurrentUser(user);
+        setUserEmail(user.email || '');
+      } else {
+        // Try to authenticate with JWT if no Firebase user
+        try {
+          const token = getBackendJwtToken() || getJwtToken();
+          if (token) {
+            console.log('Attempting JWT authentication');
+            await authenticateWithJwt();
+            // If JWT auth is successful, the onAuthStateChanged will trigger again
+          } else {
+            setCurrentUser(null);
+            setUserEmail('');
+          }
+        } catch (error) {
+          console.error('JWT Authentication failed:', error);
+          setCurrentUser(null);
+          setUserEmail('');
+          clearJwtToken();
         }
-  
-        // Step 2: Set up Firebase auth state listener
-        unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-          setUser(currentUser);
-          setIsLoading(false);
-        });
-  
-      } catch (error) {
-        console.error('Error initializing authentication:', error);
-        setIsLoading(false);
       }
-    };
-  
-    initAuth();
-  
-    // Cleanup function to unsubscribe when the component unmounts
+      setLoading(false);
+    });
+
+    // Cleanup subscription
     return () => unsubscribe();
   }, []);
-  
+
+  // Auth context value
+  const value = {
+    currentUser,
+    userEmail,
+    isAuthenticated: !!currentUser,
+    loading
+  };
 
   return (
-    <AuthContext.Provider value={{ user, isLoading }}>
+    <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
   );
+};
+
+// Hook for using Auth Context
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
 };
