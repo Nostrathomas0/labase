@@ -1,41 +1,86 @@
 import Cookies from 'js-cookie';
-import { auth } from '../firebaseInit';  // ✅ Import shared auth instance
+import { auth } from '../firebaseInit';
 import { signInWithCustomToken } from 'firebase/auth';
 import { jwtDecode } from 'jwt-decode';
 
+console.log("Firebase Auth:", auth);
+
 /**
- * Retrieve the backend JWT token from cookies.
+ * Retrieve the JWT token from cookies.
  * @returns {string|null} - The JWT token if found, otherwise null.
  */
-export const getBackendJwtToken = () => {
-  const token = Cookies.get('backendJwtToken');
-  console.log('Retrieved backendJwtToken from cookies:', token);
+export const getJwtToken = () => {
+  // Check both localStorage and cookies (preferring localStorage)
+  const token = localStorage.getItem('JWT') || Cookies.get('backendJwtToken');
+  console.log('Retrieved JWT from storage:', token ? 'Found' : 'Not found');
   return token || null;
 };
 
 /**
- * Authenticate the user using the backend JWT token.
+ * Set the JWT token in both localStorage and cookies for redundancy
+ * @param {string} token - The JWT token to store
+ */
+export const setJwtToken = (token) => {
+  if (token) {
+    localStorage.setItem('JWT', token);
+    // Set cookie with secure attributes
+    Cookies.set('backendJwtToken', token, { 
+      secure: window.location.protocol === 'https:', 
+      sameSite: 'strict' 
+    });
+    console.log('JWT token saved to storage');
+  } else {
+    clearJwtToken();
+  }
+};
+
+/**
+ * Clear the JWT token from storage
+ */
+export const clearJwtToken = () => {
+  localStorage.removeItem('JWT');
+  Cookies.remove('backendJwtToken');
+  console.log('JWT token cleared from storage');
+};
+
+/**
+ * Authenticate the user using the JWT token.
  * @returns {Promise<void>} - Resolves if authentication succeeds.
  */
-export const authenticateWithBackendJwt = async () => {
+export const authenticateWithJwt = async () => {
   try {
-    const token = getBackendJwtToken();
+    const token = getJwtToken();
     if (!token) {
-      throw new Error('No backend JWT token found in cookies.');
+      throw new Error('No JWT token found in storage.');
     }
 
     const decodedToken = jwtDecode(token);
     console.log('Decoded JWT:', decodedToken);
-    console.log('🍪 All Cookies:', Cookies.get());
+    
+    // Check if token is expired
+    const currentTime = Date.now() / 1000;
+    if (decodedToken.exp && decodedToken.exp < currentTime) {
+      console.error('JWT token has expired');
+      clearJwtToken();
+      throw new Error('JWT token has expired');
+    }
 
-    // ✅ Use shared `auth` instance to sign in
+    // Use shared `auth` instance to sign in
     await signInWithCustomToken(auth, token);
-    console.log('User authenticated successfully with backend JWT.');
+    console.log('User authenticated successfully with JWT.');
+    return decodedToken;
   } catch (error) {
-    console.error('Error during backend JWT authentication:', error);
+    console.error('Error during JWT authentication:', error);
+    clearJwtToken(); // Clear invalid token
     throw error;
   }
 };
+
+/**
+ * Backward compatibility functions
+ */
+export const getBackendJwtToken = getJwtToken;
+export const authenticateWithBackendJwt = authenticateWithJwt;
 
 /**
  * Get the currently authenticated user's ID token.
@@ -48,7 +93,7 @@ export const getUserToken = async () => {
 
   try {
     const token = await auth.currentUser.getIdToken();
-    console.log('Retrieved user ID token:', token);
+    console.log('Retrieved user ID token:', token ? 'Found' : 'Not found');
     return token;
   } catch (error) {
     console.error('Error retrieving user token:', error);
@@ -66,8 +111,9 @@ export const refreshUserToken = async () => {
   }
 
   try {
-    await auth.currentUser.getIdToken(true); // Force refresh the token
-    console.log('User token refreshed successfully.');
+    const token = await auth.currentUser.getIdToken(true); // Force refresh the token
+    console.log('User token refreshed successfully');
+    return token;
   } catch (error) {
     console.error('Error refreshing user token:', error);
     throw error;
