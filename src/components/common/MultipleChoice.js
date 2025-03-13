@@ -19,6 +19,23 @@ function MultipleChoice({ question, options, correctAnswer, onAnswer }) {
     }
   };
 
+  const getOptionClassName = (option) => {
+    let className = "multiple-choice-option";
+    
+    if (feedbackGiven) {
+      if (option === correctAnswer) {
+        className += " correct";
+      } else if (option === selected) {
+        className += " incorrect";
+      }
+    }
+    
+    if (option === selected) {
+      className += " selected";
+    }
+    
+    return className;
+  };
   return (
     <div className="multiple-choice-container">
       <p className="multiple-choice-question">{question}</p>
