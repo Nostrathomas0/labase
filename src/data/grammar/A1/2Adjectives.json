@@ -9,6 +9,39 @@
           "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
         },
         {
+          "type": "click",
+          "layout":"horizontal",
+          "instructions": [
+            
+            {"text": "Adjectives  are words that show a noun's quality.", "textStyle":"text"},
+            {"text": " description words ", "textStyle":"underline"},
+            {"text": "like ", "textStyle": "text"},
+            {"text": " fast, empty  ", "textStyle": "bold"},
+            {"text": "and", "textStyle": "text"},
+            {"text": " tired", "textStyle": "bold"},
+            {"text": ", that preceed the noun they're describing.", "textStyle": "text"},
+            {"text": "You can use many adjectives side by side", "textStyle":"text", "newParagraph":true},
+            {"text": "A good old rusty red wagon ", "textStyle":"italic", "newLine":false},
+            {"text": " Adjectives stay the same. You don't need to pluralize them. ",  "textStyle":"text"},
+            {"text": " sunnies ", "textStyle": "strikethrough"},
+            {"text": "days. We", "textStyle":"text"},
+            {"text": " do ", "textStyle": "italic"},
+            {"text": "add suffixes for superlative & comparative forms though. ", "textStyle": "text"},
+            {"text": "Today is", "textStyle": "text", "newLine":true},
+            {"text": "sunnier", "textStyle": "italic"},
+            {"text": " than yesterday.", "textStyle": "text", "newParagraph":false}
+          ],
+          "words": [
+            {"text":"Autumn    ", "feedback":"Incorrect, 'Autumn' is a noun"},
+            {"text":"is ","feedback":"Incorrect, 'is' is a verb"},
+            {"text":"the", "feedback":"Incorrect, 'the' is an article"},
+            {"text":"rainy ", "feedback":"Correct"},
+            {"text":"season.", "feedback":"season, is a noun"}
+          ],
+          "keyWords":
+           ["rainy "]
+        },
+        {
           "type": "multipleChoice",
           "question": "1) What's the abb. for adjectives?",
           "options": ["adj.", "adv.", "n.", "v."],
