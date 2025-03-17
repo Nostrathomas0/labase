@@ -16,7 +16,7 @@
             {"text": " and ", "textStyle": "text"},
             {"text": "there", "textStyle": "bold"},
             {"text": " are places near and far, respectively.", "textStyle": "text", "newParagraph": true},
-            {"text": "They can be used as subjects, like in the sentence ", "textStyle": "text"},
+            {"text": "They can be used like subjects, ", "textStyle": "text"},
             {"text": "'Here are my keys!'", "textStyle": "italic"},
             {"text": ", or as objects, like ", "textStyle": "text"},
             {"text": "'I live there.'", "textStyle": "italic"},

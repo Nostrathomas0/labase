@@ -3,10 +3,10 @@
     {
       "level": "A1",
       "points": [
-        { "name": "Nouns", "path": "/A1/nouns" },
-        { "name": "Adjectives", "path": "/A1/adjectives" },
+        { "name": "Nouns & Pronouns", "path": "/A1/nouns" },
+        { "name": "Adjectives & other Determiners", "path": "/A1/adjectives" },
         { "name": "Verbs", "path": "/A1/verbs" },
-        { "name": "There", "path": "/A1/there" }
+        { "name": "There & Adverbs of Place", "path": "/A1/there" }
       ]
     },
     {
