@@ -58,7 +58,7 @@
           "type":"multipleChoice",
           "question": "2) I _____ going to the store yesterday.",
           "options":["am", "are", "was", "were"],
-          "correctAnswers": "was"
+          "correctAnswer": "was"
         },
         {
           "type": "multipleChoice",
