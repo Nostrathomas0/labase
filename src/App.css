@@ -61,6 +61,8 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
+.modal.hidden { display: none; }
+.modal.visable {_display: block; }
 .modal-content {
   text-align: center;
 }
