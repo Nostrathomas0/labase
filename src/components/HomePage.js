@@ -23,7 +23,6 @@ const HomePage = () => {
 
     if (openModal === 'auth-modal') {
       setShowModal(true);
-      // replace the URl
       const newUrl = new URL(window.location.href);
       newUrl.searchParams.delete('openModal');
       window.history.replaceState({}, '', newUrl);
@@ -63,7 +62,17 @@ const HomePage = () => {
   };
 
   // Modal component
-  const AuthModal = () => {
+  const AuthModal = ({
+    showModal,
+    toggleModal,
+    email,
+    setEmail,
+    password,
+    setPassword,
+    handleSubmit,
+    error,
+    loading,
+  }) => {
   return (
     <div className={`modal ${showModal ? 'visible' : 'hidden'}`} id="auth-modal">
       <div className="modal-content">
@@ -121,7 +130,17 @@ const HomePage = () => {
       <button onClick={toggleModal}>Login</button>
       
       {/* Render the modal */}
-      <AuthModal />
+      <AuthModal 
+        showModal={showModal}
+        toggleModal={toggleModal}
+        email={email}
+        setEmail={setEmail}
+        password={password}
+        setPassword={setPassword}
+        handleSubmit={handleSubmit}
+        error={error}
+        loading={loading}
+      />
     </div>
   );
 };
