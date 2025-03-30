@@ -1,6 +1,6 @@
 // CoverModal.js
 // import React from 'react';
-import { useAuth } from './AuthContext';
+//import { useAuth } from './AuthContext';
 
 const CoverModal = ({ isOpen, onClose }) => {
 //  const { userEmail, currentUser } = useAuth();
