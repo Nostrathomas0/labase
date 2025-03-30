@@ -63,6 +63,12 @@
 
 .modal.hidden { display: none; }
 .modal.visable { display: block; }
+.modal-overlay.hidden {
+  display: none;
+}
+.modal-overlay.visable {
+  display: flex;
+}
 .modal-content {
   text-align: center;
 }
