@@ -1,11 +1,11 @@
 // App.js
 import './firebaseInit';
 import { AuthProvider } from './components/AuthContext';
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import HomePage from './components/HomePage';
-import CoverModal from './components/CoverModal';
+// import CoverModal from './components/CoverModal';
 
 
 // Level components
@@ -39,16 +39,11 @@ import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
 
   return (
     <Router>
       <AuthProvider>
-        <CoverModal isOpen={isModalOpen} onClose={closeModal} />
-        
-        <div className="levels-topics-wrapper">
+         <div className="levels-topics-wrapper">
           <div className="levels-and-topics-container">
             <div className="levels-container">
               <h2>Levels</h2>
@@ -70,7 +65,7 @@ function App() {
                   <Route path="/login" element={<HomePage />} />
                   
                   {/* Landing page - accessible to everyone */}
-                  <Route path="/" element={<HomePage onOpenModal={openModal} />} />
+                  <Route path="/" element={<HomePage />} />
                   
                   {/* Protected level routes */}
                   <Route path="/A1" element={
