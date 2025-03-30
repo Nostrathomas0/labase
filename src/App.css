@@ -62,7 +62,7 @@
 }
 
 .modal.hidden { display: none; }
-.modal.visable {_display: block; }
+.modal.visable { display: block; }
 .modal-content {
   text-align: center;
 }
