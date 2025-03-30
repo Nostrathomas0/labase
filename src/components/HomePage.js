@@ -64,49 +64,55 @@ const HomePage = () => {
 
   // Modal component
   const AuthModal = () => {
-    if (!showModal) return null;
-    
-    return (
-      <div className="modal" id="auth-modal">
-        <div className="modal-content">
-          <span className="close" onClick={toggleModal}>&times;</span>
-          <div className="login-container">
-            <h2>Login</h2>
-            {error && <div className="error-message">{error}</div>}
-            
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </div>
-              
-              <button type="submit" disabled={loading}>
-                {loading ? 'Logging in...' : 'Login'}
-              </button>
-            </form>
-            <p>Don't have an account? <a href="https://languapps.com/?openModal=auth-modal">Sign up here</a></p>
-          </div>
+  return (
+    <div className={`modal ${showModal ? 'visible' : 'hidden'}`} id="auth-modal">
+      <div className="modal-content">
+        <span className="close" onClick={toggleModal}>&times;</span>
+        <div className="login-container">
+          <h2>Login</h2>
+
+          {error && <div className="error-message">{error}</div>}
+
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+
+            <button type="submit" disabled={loading}>
+              {loading ? 'Logging in...' : 'Login'}
+            </button>
+          </form>
+
+          <p className="signup-link">
+            Don’t have an account?{' '}
+            <span onClick={toggleModal} className="link">
+              Sign up here
+            </span>
+          </p>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
+
 
   return (
     <div>
