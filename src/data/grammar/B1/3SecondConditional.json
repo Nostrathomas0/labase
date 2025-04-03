@@ -122,7 +122,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B1/3SecCond/2.png",
             "altText": "Image illustrating the second conditional."
           },
@@ -165,7 +165,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B1/3SecCond/3.png"
           }
         ]
@@ -173,7 +173,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B1/3SecCond/4.png"
           }
         ]
