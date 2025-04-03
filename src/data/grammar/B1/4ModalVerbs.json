@@ -6,15 +6,15 @@
         {
           "type": "imageDisplay",
           "imagePath": "B1/4ModalVerbs/1.png",
-          "altText": "Image showing various road signs, caption: 'You must stop at a stop sign.'"
+          "altText": "Examples: can, could, may, might, must, shall, should, will, would"
         },
         {
           "type": "click",
           "layout": "horizontal",
           "instructions": [
             { "text": "Modal verbs are used to express ability, possibility, permission, or obligation.", "textStyle": "text", "newParagraph": true },
-            { "text": "Examples: can, could, may, might, must, shall, should, will, would.", "textStyle": "text" },
-            { "text": "Click on the modal verb in the sentence below.", "textStyle": "italic", "newParagraph": true }
+            { "text": "Their position is important for syntax and it is first in yes/no questions.", "textStyle": "text" },
+            { "text": "1) Click on the modal verb in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
           "words": [
             { "text": "You ", "feedback": "No, 'You' is a subject pronoun." },
@@ -27,23 +27,7 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Which sentence uses a modal verb correctly?",
-          "options": [
-            "He can to swim.",
-            "She must goes.",
-            "They will arrive soon.",
-            "I shall to help."
-          ],
-          "correctAnswer": "They will arrive soon."
-        },
-        {
-          "type": "gapFill",
-          "template": "You ______ (should/ought) finish your homework before playing.",
-          "correctAnswers": ["should"]
-        },
-        {
-          "type": "multipleChoice",
-          "question": "What modal verb expresses ability?",
+          "question": "2) What modal verb expresses ability?",
           "options": [
             "must",
             "can",
@@ -60,32 +44,71 @@
         },
         {
           "type": "gapFill",
-          "template": "He ______ (must/should) complete the project by Friday.",
-          "correctAnswers": ["must"]
+          "template": "3) He ______ complete the project by Friday.",
+          "correctAnswers": ["Must", "must", "has to", "Has to", "will", "can"]
         }
       ]
     },
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
-            "imagePath": "B1/4ModalVerbs/2.png"
+            "type": "imageDisplay",
+            "imagePath": "B1/4ModalVerbs/2.png",
+            "altText": "Examples: can, could, may, might, must, shall, should, will, would"
+          },
+          {
+            "type": "click",
+            "layout": "vertical",
+              "instructions": [
+                {"text": "Used for probability, conditional phrases, permission and many other conversational functions, modal verbs such as;", "textStyle":"text"},
+                {"text": "would ", "textStyle":"italic"},
+                {"text": "and ", "textStyle":"text"},
+                {"text": "could ", "textStyle":"italic", "newline":true},
+                {"text": "are like alternate forms of other modal verbs; used for past or polite forms.", "textStyle":"text", "newline":true},
+                {"text": "precede the subject", "textStyle":"underline"},
+                {"text": " in questions.", "textStyle":"text"}],
+                "words": [
+                  { "text": "You ", "feedback": "No, 'You' is a subject pronoun." },
+                  { "text": "should ", "feedback": "Yes, 'should' is a modal verb." },
+                  { "text": "eat ", "feedback": "No, 'eat' is a verb." },
+                  { "text": "more ", "feedback": "No, 'more' is an adverb." },
+                  { "text": "vegetables.", "feedback": "No, 'vegetables' is a noun." }
+                ],
+                "keyWords": ["should"]
+              },
+              {
+                "type": "multipleChoice",
+                "question": "Which sentence uses a modal verb correctly?",
+                "options": [
+                  "He can to swim.",
+                  "She must goes.",
+                  "They will arrive soon.",
+                  "I shall to help."
+                ],
+                "correctAnswer": "They will arrive soon."
+              },
+              {
+                "type": "gapFill",
+                "template": "You ______ (should/ought) finish your homework before playing.",
+                "correctAnswers": ["should"]
+              }
+        ]
+      },
+      {
+        "questions":  [
+          {
+            "type": "imageDisplay",
+            "imagePath": "B1/4ModalVerbs/3.png",
+            "altText": "Examples: can, could, may, might, must, shall, should, will, would"
           }
         ]
       },
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
-            "imagePath": "B1/4ModalVerbs/3.png"
-          }
-        ]
-      },
-      {
-        "questions":  [
-          {
-            "type": "ImageDisplay",
-            "imagePath": "B1/4ModalVerbs/4.png"
+            "type": "imageDisplay",
+            "imagePath": "B1/4ModalVerbs/4.png",
+            "altText": "Examples: can, could, may, might, must, shall, should, will, would"
           }
         ]
       }

@@ -8,7 +8,25 @@
             "imagePath": "B2/3ModalsProb/1.png",
             "altText": "Image illustrating modal verbs."
           },
-          
+          {
+            "type": "click",
+              "instructions": [
+                {"text": "Used for probability, conditional phrases, permission and many other conversational functions, modal verbs such as;", "textStyle":"text"},
+                {"text": "would, should ", "textStyle":"italic"},
+                {"text": "and ", "textStyle":"text"},
+                {"text": "could ", "textStyle":"italic", "newline":true},
+                {"text": "are like alternate forms of other modal verbs; used for past or polite forms. Their position is important for syntax because they ", "textStyle":"text", "newline":true},
+                {"text": "precede the subject", "textStyle":"underline"},
+                {"text": " in questions.", "textStyle":"text"},
+                {"text": " or ", "textStyle":"text"},
+                {"text": "Do you think it might rain?", "textStyle":"italic"},
+                {"text": " Might it rain?", "textStyle":"strike"},
+                {"text": " Is said by English speakers with low frequency."},
+                {"text": "1) "}
+              ],
+              "words":[ "pitch", "chips"],
+              "keyWords":[]
+          },
           {
             "type": "multipleChoice",
             "question": "Which sentence uses a modal verb?",
@@ -101,8 +119,9 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
-            "imagePath": "B2/3ModalsProb/2.png"
+            "type": "imageDisplay",
+            "imagePath": "B2/3ModalsProb/2.png",
+            "altText": "Examples: can, could, may, might, must, shall, should, will, would"
           },
           {
             "type": "click",
@@ -140,16 +159,18 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
-            "imagePath": "B2/3ModalsProb/3.png"
+            "type": "imageDisplay",
+            "imagePath": "B2/3ModalsProb/3.png",
+            "altText": "Examples: can, could, may, might, must, shall, should, will, would"
           }
         ]
       },
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
-            "imagePath": "B2/3ModalsProb/4.png"
+            "type": "imageDisplay",
+            "imagePath": "B2/3ModalsProb/4.png",
+            "altText": "Examples: can, could, may, might, must, shall, should, will, would"
           }
         ]
       }

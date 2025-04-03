@@ -86,7 +86,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B2/4FuturePerf/2.png"
           },
           
@@ -125,7 +125,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B2/4FuturePerf/3.png"
           },
           {
@@ -175,7 +175,7 @@
       {
         "questions":  [
           {
-            "type": "ImageDisplay",
+            "type": "imageDisplay",
             "imagePath": "B2/4FuturePerf/4.png"
           },
           {

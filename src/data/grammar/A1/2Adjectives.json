@@ -13,26 +13,30 @@
           "layout":"horizontal",
           "instructions": [
             
-            {"text": "Adjectives  are words that show a noun's quality.", "textStyle":"text"},
-            {"text": " description words ", "textStyle":"underline"},
-            {"text": "like ", "textStyle": "text"},
+            {"text": "Adjectives are words that describe things. They are ", "textStyle":"text"},
+            {"text": "useful", "textStyle":"underline"},
+            {"text": " words. For example", "textStyle": "text"},
             {"text": " fast, empty  ", "textStyle": "bold"},
             {"text": "and", "textStyle": "text"},
             {"text": " tired", "textStyle": "bold"},
-            {"text": ", that preceed the noun they're describing.", "textStyle": "text"},
+            {"text": ", describe people, places and things. They preceed the noun they're describing.", "textStyle": "text"},
             {"text": "You can use many adjectives side by side", "textStyle":"text", "newParagraph":true},
             {"text": "A good old rusty red wagon ", "textStyle":"italic", "newLine":false},
-            {"text": " Adjectives stay the same. You don't need to pluralize them. ",  "textStyle":"text"},
+            {"text": " Adjectives don't have plural forms. ",  "textStyle":"text"},
             {"text": " sunnies ", "textStyle": "strikethrough"},
-            {"text": "days. We", "textStyle":"text"},
-            {"text": " do ", "textStyle": "italic"},
-            {"text": "add suffixes for superlative & comparative forms though. ", "textStyle": "text"},
+            {"text": "days. There ", "textStyle":"text"},
+            {"text": " are ", "textStyle": "italic"},
+            {"text": " superlative & comparative forms though. ", "textStyle": "text"},
             {"text": "Today is", "textStyle": "text", "newLine":true},
-            {"text": "sunnier", "textStyle": "italic"},
-            {"text": " than yesterday.", "textStyle": "text", "newParagraph":false}
+            {"text": " sunnier", "textStyle": "italic"},
+            {"text": " than yesterday.", "textStyle": "text", "newParagraph":false},
+            {"text": " It's the ", "textStyle":"italic"},
+            {"text": "hottest", "textStyle":"italic"},
+            {"text": " day ever", "textStyle":"italic"},
+            {"text": "Click the adjectives in the sentences below."}
           ],
           "words": [
-            {"text":"Autumn    ", "feedback":"Incorrect, 'Autumn' is a noun"},
+            {"text":"Autumn ", "feedback":"Incorrect, 'Autumn' is a noun"},
             {"text":"is ","feedback":"Incorrect, 'is' is a verb"},
             {"text":"the", "feedback":"Incorrect, 'the' is an article"},
             {"text":"rainy ", "feedback":"Correct"},
@@ -49,7 +53,7 @@
         },
         {
           "type": "wordBank",
-          "paragraph": "2)  _____  _____ ",
+          "paragraph": "2) Arrange the words to make an adjective phrase:  _____  _____ ",
           "wordBank": [
             "blocks",
             "colorful"
