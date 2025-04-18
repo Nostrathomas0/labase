@@ -10,11 +10,11 @@
         {
           "type": "click",
           "instructions": [
-            {"text": "Be Going To", "textStyle": "bold", "newParagraph":true},
-        
-            {"text": " is used for a plan, when you've made up your mind.", "textStyle":"bold"},
+            {"text": "Be Going To", "textStyle": "bold"},
+            {"text": " is used ahead of a plan, when you've made up your mind.", "textStyle":"text"},
             {"text": " I'm going to ask if Cindy wants to go to the movies with us. ", "textStyle": "italic", "newLine": true },
-            {"text": " Going to's often shortened to ", "textStyle":"italic", "newLine":true},
+            {"text": " Going to", "textStyle":"italic"},
+            {"text": "'s often shortened to ", "textStyle":"text"},
             {"text": " gonna.", "textStyle":"bold"},
             { "text": "1) Read about the vacation plans below and click the words that are part of the ", "textStyle": "text" },
             { "text": "be going to", "textStyle": "bold" },

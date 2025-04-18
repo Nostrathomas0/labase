@@ -13,11 +13,11 @@
         "instructions":[
               
           {
-            "text": "Compare two or many things. Which one is",
+            "text": "Compare two, or many things. Which is",
             "textStyle": "text"
           },
           {
-            "text": " 'heavier' ",
+            "text": " heavier ",
             "textStyle": "bold"
           }, 
           {
@@ -25,7 +25,7 @@
             "textStyle": "text"
           }, 
           {
-            "text": " 'lighter' ",
+            "text": " lighter ?",
             "textStyle": "bold"
           },
           {
