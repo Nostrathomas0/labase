@@ -13,7 +13,7 @@
           "layout":"horizontal",
           "instructions": [
             
-            {"text": "Verbs tell us what's happening and what people do; they're", "textStyle":"text"},
+            {"text": "Verbs tell us what's happening and what people do. They're", "textStyle":"text"},
             {"text": " action words ", "textStyle":"underline"},
             {"text": "like ", "textStyle": "text"},
             {"text": " run, jump  ", "textStyle": "bold"},
