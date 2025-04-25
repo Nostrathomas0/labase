@@ -13,84 +13,58 @@
         "instructions":[
               
           {
-            "text": "Compare two, or many things. Which is",
+            "text": "Grab two or more things. Which is",
             "textStyle": "text"
-          },
-          {
-            "text": " heavier ",
+          },{
+            "text": " heavier? ",
             "textStyle": "bold"
-          }, 
-          {
-            "text": " or  ",
+          }, {
+            "text": " Which is  ",
             "textStyle": "text"
-          }, 
-          {
-            "text": " lighter ?",
+          }, {
+            "text": "the lightest ?",
             "textStyle": "bold"
           },
-          {
-            "text": "Use ",
-            "textStyle": "text"
-          },
-          {
+          {"text": "Comparative adjectives are formed by adding a suffix to short words:", "textStyle":"text"},
+          {"text": "Use ", "textStyle": "text"
+          },{
             "text": " more",
             "textStyle": "bold"
-          },
-          {
-            "text": " before any nouns and also any adjecteves longer than 2 syllables like ",
+          },{"text": " before nouns, and also any adjecteves longer than 2 syllables* like ",
             "textStyle": "text"
-          },
-          {
-            "text": " ellegent ;  ",
+          },{"text": " ellegent ;  ",
             "textStyle": "italic"
-          },
-          {
-            "text": " more ellegent .",
+          },{"text": " more ellegent.",
             "textStyle": "bold"
-          },
-
-          {
-            "text": " Short adjectives like",
+          },{"text": " Short adjectives like",
             "textStyle": "text"
-          },
-          {
-            "text": " 'light' ",
+          }, {"text": " 'light' ",
             "textStyle": "italic"
-          },
-          {
-            "text": "become ",
+          }, { "text": "become ",
             "textStyle": "text"
           },
-          {
-            "text": " 'lighter' ",
+          {"text": " 'lighter' ",
            "textStyle": "bold, underline"
           },
-          {
-            "text": "and",
+          {"text": "and",
             "textStyle": "text"
           },
-          {
-            "text": "darker ",
+          {"text": "darker ",
             "textStyle": "bold"
           },
-          {
-            "text": " but it's not just one syllable words that get ",
+          {"text": " but it's not just one syllable words that get ",
             "textStyle": "text"
           },
-          {
-            "text":  " er ",
+          {"text":  " er ",
             "textStyle": "italic"
           },
-          {
-            "text": " to compare but also 2 syllable adjectives that end in  ",
+          {"text": " to compare but also 2 syllable adjectives that end in  ",
             "textStyle":"text"
           },
-          { 
-            "text": "y",
+          {"text": "y",
             "textStyle": "bold, underline"
           },
-          {
-            "text": "which are rather common.",
+          {"text": "which are rather common.",
             "textStyle": "text"
           },
           {
@@ -114,7 +88,7 @@
             "textStyle": "text"
           },
           { 
-          "text": " 'lite' ",
+          "text": " 'shallow' ",
           "textStyle": "bold, underline"
           },
           {
@@ -129,8 +103,12 @@
             "text": "and",
             "textStyle": "text"
           },
+          {"text": " more shallow ", "textStyle":"italic"},
           {
-            "text": " 'lighter' .",
+            "text": " and even ",
+            "textStyle": "text"},
+          {
+            "text": " shallower.**",
             "textStyle": "italic"
           },         
           {
@@ -143,7 +121,7 @@
             "textStyle": "italic"
           },
           {
-            "text": " we use ",
+            "text": " we have to use ",
             "textStyle": "text"
           },
           {
@@ -159,7 +137,7 @@
             "textStyle": "text"
           },
           {
-            "text": " Superlatives are the most in ammount or quality one thing amongst another thing entirely or any number.",
+            "text": " Superlatives use most.",
             "textStyle": "text",
             "newParagraph": true
           },
@@ -227,13 +205,15 @@
             "text": " girl in the class.",
             "textStyle": "text"
           },
-          {"text": "1) Click on the comparative words in the sentence below.", "textStyle": "italic", "newParagraph": true}
+          {"text": "* 2 sylable words ending in y are treated as short adjectives.", "textStyle":"text"},
+          {"text": "**  mellow`s another short, 2-sylable adjective", "textStyle":"bold", "newLine":true},
+          {"text": " 1) Click on the comparative words in the sentence below.", "textStyle": "italic", "newParagraph": true}
         ],
         "words": [
-          {"text": "Mountains ", "feedback": "Mountains are nouns, the things we're comparing, not"},
-          {"text": "are ", "feedback": "No, 'are' is a verb."},
-          {"text": "higher ", "feedback": "yes, 'higher' is the comparative adjective."},
-          {"text": "than ", "feedback": "Yes, 'than' is used to compare 2 things."},
+          {"text": "Mountains", "feedback": "Mountains are nouns, the things we're comparing, not"},
+          {"text": "are", "feedback": "No, 'are' is a verb."},
+          {"text": "higher", "feedback": "yes, 'higher' is the comparative adjective."},
+          {"text": "than", "feedback": "Yes, 'than' is used to compare 2 things."},
           {"text": "hills.", "feedback": "no 'hills' is a noun."}
         ],
         "keyWords": ["than", "higher"]

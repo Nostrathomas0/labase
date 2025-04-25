@@ -24,8 +24,8 @@
                 {"text": " Is said by English speakers with low frequency."},
                 {"text": "1) "}
               ],
-              "words":[ "pitch", "chips"],
-              "keyWords":[]
+              "words":["Hey", "can", "you", "pitch", "me", "a", "bag", "of", "chips"],
+              "keyWords":["pitch", "chips"]
           },
           {
             "type": "multipleChoice",

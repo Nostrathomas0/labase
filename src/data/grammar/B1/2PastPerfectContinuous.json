@@ -19,11 +19,11 @@
             { "text": "Click on the past perfect continuous form in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
           "words": [
-            { "text": "They ", "feedback": "No, 'They' is a subject pronoun." },
-            { "text": "had ", "feedback": "No, 'had' is an auxiliary verb." },
-            { "text": "been ", "feedback": "Yes, 'been' is part of the past perfect continuous form." },
-            { "text": "playing ", "feedback": "Yes, 'playing' is part of the past perfect continuous form." },
-            { "text": "before ", "feedback": "No, 'before' is a conjunction." },
+            { "text": "They", "feedback": "No, 'They' is a subject pronoun." },
+            { "text": "had", "feedback": "No, 'had' is an auxiliary verb." },
+            { "text": "been", "feedback": "Yes, 'been' is part of the past perfect continuous form." },
+            { "text": "playing", "feedback": "Yes, 'playing' is part of the past perfect continuous form." },
+            { "text": "before", "feedback": "No, 'before' is a conjunction." },
             { "text": "dinner.", "feedback": "No, 'dinner' is a noun." }
           ],
           "keyWords": ["been", "playing"]

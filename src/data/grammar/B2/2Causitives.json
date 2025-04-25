@@ -17,10 +17,10 @@
             { "text": "Click on the causitive form in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
           "words": [
-            { "text": "She ", "feedback": "No, 'She' is a subject pronoun." },
-            { "text": "had ", "feedback": "Yes, 'had' is part of the causitive form." },
-            { "text": "her ", "feedback": "No, 'her' is a possessive pronoun." },
-            { "text": "car ", "feedback": "No, 'car' is a noun." },
+            { "text": "Sh ", "feedback": "No, 'She' is a subject pronoun." },
+            { "text": "had", "feedback": "Yes, 'had' is part of the causitive form." },
+            { "text": "her", "feedback": "No, 'her' is a possessive pronoun." },
+            { "text": "car", "feedback": "No, 'car' is a noun." },
             { "text": "repaired.", "feedback": "Yes, 'repaired' is part of the causitive form." }
           ],
           "keyWords": ["had", "repaired"]
