@@ -17,10 +17,10 @@
             { "text": "1) Click on the modal verb in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
           "words": [
-            { "text": "You ", "feedback": "No, 'You' is a subject pronoun." },
-            { "text": "should ", "feedback": "Yes, 'should' is a modal verb." },
-            { "text": "eat ", "feedback": "No, 'eat' is a verb." },
-            { "text": "more ", "feedback": "No, 'more' is an adverb." },
+            { "text": "You", "feedback": "No, 'You' is a subject pronoun." },
+            { "text": "should", "feedback": "Yes, 'should' is a modal verb." },
+            { "text": "eat", "feedback": "No, 'eat' is a verb." },
+            { "text": "more", "feedback": "No, 'more' is an adverb." },
             { "text": "vegetables.", "feedback": "No, 'vegetables' is a noun." }
           ],
           "keyWords": ["should"]

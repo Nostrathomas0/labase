@@ -19,11 +19,11 @@
             { "text": "1) Click on the present perfect continuous form in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
           "words": [
-            { "text": "He ", "feedback": "No, 'He' is a subject pronoun." },
-            { "text": "has ", "feedback": "No, 'has' is an auxiliary verb." },
-            { "text": "been ", "feedback": "Yes, 'been' is part of the present perfect continuous form." },
-            { "text": "studying ", "feedback": "Yes, 'studying' is part of the present perfect continuous form." },
-            { "text": "since ", "feedback": "No, 'since' is a preposition." },
+            { "text": "He", "feedback": "No, 'He' is a subject pronoun." },
+            { "text": "has", "feedback": "No, 'has' is an auxiliary verb." },
+            { "text": "been", "feedback": "Yes, 'been' is part of the present perfect continuous form." },
+            { "text": "studying", "feedback": "Yes, 'studying' is part of the present perfect continuous form." },
+            { "text": "since", "feedback": "No, 'since' is a preposition." },
             { "text": "morning.", "feedback": "No, 'morning' is a noun." }
           ],
           "keyWords": ["been", "studying"]
