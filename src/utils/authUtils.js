@@ -10,23 +10,24 @@ console.log("Firebase Auth:", auth);
  * @returns {string|null} - The JWT token if found, otherwise null.
  */
 export const getJwtToken = () => {
-  // Check both localStorage and cookies (preferring localStorage)
-  const token = localStorage.getItem('JWT') || Cookies.get('backendJwtToken');
+  // Check for JWT cookie (our standardized name)
+  const token = Cookies.get('JWT');
   console.log('Retrieved JWT from storage:', token ? 'Found' : 'Not found');
   return token || null;
 };
 
 /**
- * Set the JWT token in both localStorage and cookies for redundancy
+ * Set the JWT token in cookies only (standardized approach)
  * @param {string} token - The JWT token to store
  */
 export const setJwtToken = (token) => {
   if (token) {
-    localStorage.setItem('JWT', token);
-    // Set cookie with secure attributes
-    Cookies.set('backendJwtToken', token, { 
+    // Set only JWT cookie (our standardized name)
+    Cookies.set('JWT', token, { 
       secure: window.location.protocol === 'https:', 
-      sameSite: 'strict' 
+      sameSite: 'strict',
+      expires: 7, // 7 days
+      domain: window.location.hostname.includes('languapps.com') ? '.languapps.com' : undefined
     });
     console.log('JWT token saved to storage');
   } else {
@@ -38,8 +39,11 @@ export const setJwtToken = (token) => {
  * Clear the JWT token from storage
  */
 export const clearJwtToken = () => {
-  localStorage.removeItem('JWT');
-  Cookies.remove('backendJwtToken');
+  // Clear JWT cookie (our standardized name)
+  Cookies.remove('JWT', { 
+    domain: window.location.hostname.includes('languapps.com') ? '.languapps.com' : undefined 
+  });
+  
   console.log('JWT token cleared from storage');
 };
 
