@@ -69,7 +69,8 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "B2/2Causitives/2.png"
+            "imagePath": "B2/2Causitives/2.png",
+             "altText": "Get, Help, Ask, Tell, Make, Have, "
           },
           {
             "type":"click",

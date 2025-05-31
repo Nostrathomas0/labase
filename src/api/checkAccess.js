@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(require('cookie-parser')());
 
 async function verifyToken(req, res, next) {
-  const idToken = req.cookies.authToken;
+  const idToken = req.cookies.authToken || req.cookies.authToken;
 
   if (!idToken) {
     return res.status(401).json({ error: 'Unauthorized' });
