@@ -8,7 +8,8 @@ app.use(express.json());
 app.use(require('cookie-parser')());
 
 async function verifyToken(req, res, next) {
-  const idToken = req.cookies.authToken || req.cookies.authToken;
+  // Look for JWT cookie (our standardized name)
+  const idToken = req.cookies.JWT || req.cookies.authToken; // Fallback for transition period
 
   if (!idToken) {
     return res.status(401).json({ error: 'Unauthorized' });
