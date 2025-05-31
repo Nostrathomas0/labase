@@ -12,7 +12,7 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            { "text": "Mixed conditionals talk about a past condition with a present result or vica versa.", "textStyle": "text", "newParagraph": true },
+            { "text": "If you want to talk about pasts events that didn't happen with unreal results or present .", "textStyle": "text", "newParagraph": true },
             { "text": "Examples: 'If the weather was normal, it would be cold and snowy now.'", "textStyle": "italic" },
             { "text": "Click on the mixed conditional form in the sentence below.", "textStyle": "italic", "newParagraph": true }
           ],
@@ -20,17 +20,17 @@
             { "text": "If", "feedback": "No, 'If' is a conjunction." },
             { "text": "he", "feedback": "No, subject pronoun." },
             { "text": "had", "feedback": "Yes, 'had' is part of the mixed conditional form." },
-            { "text": "lost", "feedback": "Yes, 'lost' is part of the mixed conditional form." },
-            { "text": "the", "feedback": "No, 'the' is a definite article." },
-            { "text": "election,", "feedback": "No, 'job' is a noun." },
+            { "text": "run", "feedback": "Yes, 'lost' is part of the mixed conditional form." },
+            { "text": "his", "feedback": "No, 'the' is a definite article." },
+            { "text": "mouth,", "feedback": "No, 'job' is a noun." },
             { "text": "he", "feedback": "No, 'I' is a subject pronoun." },
             { "text": "would", "feedback": "Yes, 'would' is part of the mixed conditional form." },
             { "text": "be", "feedback": "Yes, 'be' is part of the mixed conditional form." },
             { "text": "in", "feedback": "No, 'rich' is an adjective." },
-            { "text": "jail", "feedback": "No, 'now' is an adverb." },
+            { "text": "mosque", "feedback": "No, 'now' is an adverb." },
             { "text": "now.", "feedback": "No, 'now' is an adverb." }
           ],
-          "keyWords": ["had", "lost", "would", "be"]
+          "keyWords": ["had", "run", "would", "be"]
         },
         {
           "type": "multipleChoice",
