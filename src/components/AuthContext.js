@@ -16,18 +16,22 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     console.log("AuthContext useEffect running");
+    console.log("authAttempted.current:", authAttempted.current);
     
     // Listen for Firebase auth state changes
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       console.log("Auth state changed:", user ? "User logged in" : "No user");
+      console.log("Current authAttempted:", authAttempted.current);
       
       if (user) {
         // Firebase user exists
+        console.log("Setting Firebase user");
         setCurrentUser(user);
         setUserEmail(user.email || '');
         setLoading(false);
       } else if (!authAttempted.current) {
         // Only try JWT auth once to prevent loops
+        console.log("No Firebase user, trying JWT auth");
         authAttempted.current = true;
         
         // Try to authenticate with JWT if no Firebase user
@@ -46,23 +50,27 @@ export const AuthProvider = ({ children }) => {
               isJwtUser: true // Flag to indicate this is from JWT, not Firebase
             };
             
+            console.log("Setting JWT user:", jwtUser);
             setCurrentUser(jwtUser);
             setUserEmail(decodedToken.email || '');
             setLoading(false);
-            console.log("JWT authentication successful, user set");
+            console.log("JWT authentication successful, user set, loading set to false");
           } else {
+            console.log("No JWT token, setting user to null");
             setCurrentUser(null);
             setUserEmail('');
             setLoading(false);
           }
         } catch (error) {
           console.error('JWT Authentication failed:', error);
+          console.log("JWT auth failed, setting user to null");
           setCurrentUser(null);
           setUserEmail('');
           setLoading(false);
         }
       } else {
         // We've already tried JWT auth and still no user
+        console.log("Already tried JWT auth, setting user to null");
         setCurrentUser(null);
         setUserEmail('');
         setLoading(false);
