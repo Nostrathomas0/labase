@@ -1,17 +1,35 @@
 import Cookies from 'js-cookie';
 import { auth } from '../firebaseInit';
-import { signInWithCustomToken } from 'firebase/auth';
 import { jwtDecode } from 'jwt-decode';
 
 console.log("Firebase Auth:", auth);
+
+/**
+ * Manual cookie reading function (bypasses js-cookie library)
+ */
+const getJwtTokenManual = () => {
+  const cookies = document.cookie.split(';');
+  const jwtCookie = cookies.find(cookie => cookie.trim().startsWith('JWT='));
+  return jwtCookie ? decodeURIComponent(jwtCookie.split('=')[1]) : null;
+};
 
 /**
  * Retrieve the JWT token from cookies.
  * @returns {string|null} - The JWT token if found, otherwise null.
  */
 export const getJwtToken = () => {
-  // Check for JWT cookie (our standardized name)
-  const token = Cookies.get('JWT');
+  console.log('All cookies raw:', document.cookie);
+  
+  // Try js-cookie first
+  let token = Cookies.get('JWT');
+  console.log('js-cookie result:', token);
+  
+  // If js-cookie fails, try manual reading
+  if (!token) {
+    token = getJwtTokenManual();
+    console.log('Manual cookie reading result:', token);
+  }
+  
   console.log('Retrieved JWT from storage:', token ? 'Found' : 'Not found');
   return token || null;
 };
@@ -49,7 +67,7 @@ export const clearJwtToken = () => {
 
 /**
  * Authenticate the user using the JWT token.
- * @returns {Promise<void>} - Resolves if authentication succeeds.
+ * @returns {Promise<Object>} - Resolves with decoded token if authentication succeeds.
  */
 export const authenticateWithJwt = async () => {
   try {
@@ -69,8 +87,7 @@ export const authenticateWithJwt = async () => {
       throw new Error('JWT token has expired');
     }
 
-    // Use shared `auth` instance to sign in
-    await signInWithCustomToken(auth, token);
+    // Don't try to sign in with Firebase - your backend JWT IS the authentication
     console.log('User authenticated successfully with JWT.');
     return decodedToken;
   } catch (error) {
