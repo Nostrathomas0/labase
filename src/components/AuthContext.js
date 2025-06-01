@@ -22,6 +22,7 @@ export const AuthProvider = ({ children }) => {
       console.log("Auth state changed:", user ? "User logged in" : "No user");
       
       if (user) {
+        // Firebase user exists
         setCurrentUser(user);
         setUserEmail(user.email || '');
         setLoading(false);
@@ -36,8 +37,19 @@ export const AuthProvider = ({ children }) => {
           
           if (token) {
             console.log("Attempting JWT authentication");
-            await authenticateWithJwt();
-            // onAuthStateChanged will fire again if successful
+            const decodedToken = await authenticateWithJwt();
+            
+            // JWT authentication successful - create a user object
+            const jwtUser = {
+              uid: decodedToken.uid,
+              email: decodedToken.email,
+              isJwtUser: true // Flag to indicate this is from JWT, not Firebase
+            };
+            
+            setCurrentUser(jwtUser);
+            setUserEmail(decodedToken.email || '');
+            setLoading(false);
+            console.log("JWT authentication successful, user set");
           } else {
             setCurrentUser(null);
             setUserEmail('');
