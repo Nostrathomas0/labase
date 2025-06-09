@@ -1,12 +1,9 @@
 // App.js
 import './firebaseInit';
 import { AuthProvider } from './components/AuthContext';
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import HomePage from './components/HomePage';
-// import CoverModal from './components/CoverModal';
-
 
 // Level components
 import A1 from './components/pages/A1';
@@ -38,6 +35,11 @@ import CausitivesPage from './components/pages/B2/CausitivesPage';
 import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
+// Import Exam components
+import ExamsHomePage from './components/pages/exams/ExamsHomePage';
+import FEDEExamPage from './components/pages/exams/FEDEExamPage';
+import TOEICExamPage from './components/pages/exams/TOEICExamPage';
+
 function App() {
 
   return (
@@ -53,6 +55,7 @@ function App() {
                   <li><Link to="/A2">Elementary (A2)</Link></li>
                   <li><Link to="/B1">Pre-Intermediate (B1)</Link></li>
                   <li><Link to="/B2">Intermediate (B2)</Link></li>
+                  <li><Link to="/exams">Practice Exams</Link></li>
                 </ul>
               </nav>
             </div>
@@ -89,6 +92,24 @@ function App() {
                     </ProtectedRoute>
                   } />
                   
+                  {/* Protected Exam routes */}
+                  <Route path="/exams" element={
+                    <ProtectedRoute>
+                      <ExamsHomePage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/exams/fede" element={
+                    <ProtectedRoute>
+                      <FEDEExamPage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/exams/toeic" element={
+                    <ProtectedRoute>
+                      <TOEICExamPage />
+                    </ProtectedRoute>
+                  } />
+
+
                   {/* Protected A1 topic routes */}
                   <Route path="/A1/nouns" element={
                     <ProtectedRoute>

@@ -1,0 +1,348 @@
+{
+  "title": "FEDE Practice Test 1 - UC B4 Anglais écrit",
+  "examType": "fede",
+  "timeLimit": 105,
+  "totalPoints": 150,
+  "instructions": [
+    {
+      "text": "FÉDÉRATION EUROPÉENNE DES ECOLES",
+      "textStyle": "bold",
+      "newParagraph": true
+    },
+    {
+      "text": "UC B4 - Anglais écrit",
+      "textStyle": "default",
+      "newLine": true
+    },
+    {
+      "text": "Aucun dictionnaire autorisé",
+      "textStyle": "italic",
+      "newParagraph": true
+    },
+    {
+      "text": "Durée: 1h45 - QCM et Texte à compléter uniquement",
+      "textStyle": "default",
+      "newLine": true
+    }
+  ],
+  "sections": [
+    {
+      "title": "Text 1: Amazon Returns to Growth",
+      "sectionType": "reading-comprehension",
+      "points": 30,
+      "text": "Amazon Returns to Growth but Signals Slowness Ahead\n\nThe e-commerce giant, which also turned a profit in its latest quarter, indicated sales in the holiday period might rise at their lowest level since 2001. For much of this year, Amazon's growth slowed, and losses mounted as it faced high costs and changes in people's shopping habits with the ebbing of the coronavirus pandemic.\n\nOn Thursday, the e-commerce giant signaled that its business was rebounding. At the same time, Amazon projected that sales might slow to as low as 2 percent in the current quarter, which includes the vital holiday shopping season. Those estimates, which fell far short of Wall Street's expectations, include a forecast that the strong U.S. dollar will continue to depress international sales.\n\nThe results come amid a rocky patch for tech giants. Microsoft, Meta and others have indicated in their earnings this week that tough days may be ahead. Shares of Microsoft and Alphabet, the parent of Google, also have declined this week. \"We are seeing signs all around that people's budgets are tight, inflation is still high, energy costs are an additional layer,\" Brian Olsavsky, Amazon's finance chief, said on a call with reporters. \"We are preparing for what could be a slower growth period.\"\n\nHe added that demand was particularly weakening in Europe, where inflation and rising fuel costs from the war in Ukraine have affected consumers. Prices are rising, but the volume of items selling is falling, said Guru Hariharan, whose company, CommerceIQ, advises large consumer brands that sell products on Amazon. \"That is a very concerning trend,\" he said.\n\nAfter two years of breakneck expansion, Amazon has spent much of this year putting on the brakes. Andy Jassy, who took over as chief executive last year, has moved to swiftly cut costs after the company overbuilt in anticipation of an extended pandemic-fueled boom in e-commerce. Amazon has curtailed plans to open warehouses and worked to improve the efficiency of its fulfillment operations, and it imposed a hiring freeze for corporate and technology roles for its retail division.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "multiple-choice",
+          "question": "What did Amazon, the e-commerce giant, recently announce?",
+          "options": [
+            "that sales have risen",
+            "that the holiday season sales have reached their lowest level",
+            "that sales have peaked",
+            "that the holiday season should boost sales"
+          ],
+          "correctAnswer": "that sales have risen",
+          "points": 3
+        },
+        {
+          "id": "q2",
+          "type": "multiple-choice",
+          "question": "What can \"ebbing\" mean?",
+          "options": [
+            "end",
+            "advent",
+            "renewal",
+            "slow down"
+          ],
+          "correctAnswer": "slow down",
+          "points": 3
+        },
+        {
+          "id": "q3",
+          "type": "multiple-choice",
+          "question": "Were Amazon's results in line with Wall Street's projections?",
+          "options": [
+            "absolutely not",
+            "definitely, yes",
+            "to some extent",
+            "none of the above"
+          ],
+          "correctAnswer": "absolutely not",
+          "points": 3
+        },
+        {
+          "id": "q4",
+          "type": "multiple-choice",
+          "question": "What are the estimates taking into account?",
+          "options": [
+            "the global market",
+            "the inflation",
+            "the exchange rate",
+            "the new habits of customers"
+          ],
+          "correctAnswer": "the exchange rate",
+          "points": 3
+        },
+        {
+          "id": "q5",
+          "type": "multiple-choice",
+          "question": "How have Tech giants been affected by the current context?",
+          "options": [
+            "they are not confident in the future",
+            "their earnings have always been the same",
+            "they are going bankrupt",
+            "their earnings have become extremely scarce"
+          ],
+          "correctAnswer": "they are not confident in the future",
+          "points": 3
+        },
+        {
+          "id": "q6",
+          "type": "multiple-choice",
+          "question": "Which, among the following factors, is not affecting the situation?",
+          "options": [
+            "inflation",
+            "the cost of electricity and fuel",
+            "global warming",
+            "a drop in orders"
+          ],
+          "correctAnswer": "global warming",
+          "points": 3
+        },
+        {
+          "id": "q7",
+          "type": "multiple-choice",
+          "question": "How does the situation manifest itself?",
+          "options": [
+            "customers' shopping carts have reduced in size but increased in value",
+            "customers buy fewer cheaper items because they prefer one-of-a-kind items",
+            "customers express their concerns on online platforms",
+            "sales are sliding"
+          ],
+          "correctAnswer": "sales are sliding",
+          "points": 3
+        },
+        {
+          "id": "q8",
+          "type": "multiple-choice",
+          "question": "What could be a synonym of \"breakneck\"?",
+          "options": [
+            "postponed",
+            "stopped",
+            "relentless",
+            "decreased"
+          ],
+          "correctAnswer": "relentless",
+          "points": 3
+        },
+        {
+          "id": "q9",
+          "type": "multiple-choice",
+          "question": "How are Amazon's warehouses being impacted?",
+          "options": [
+            "the number of warehouses has expanded",
+            "as of date, no additional warehouse will open",
+            "warehouse workers have been infected by the virus",
+            "some warehouses have exploded"
+          ],
+          "correctAnswer": "as of date, no additional warehouse will open",
+          "points": 3
+        },
+        {
+          "id": "q10",
+          "type": "multiple-choice",
+          "question": "The measures that have been implemented are....",
+          "options": [
+            "Ways to cope with the consequences of inflation",
+            "Ways to cut expenditures",
+            "Ways to reduce unnecessary investments",
+            "Ways to lower competition"
+          ],
+          "correctAnswer": "Ways to cut expenditures",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "title": "Text 2: China's Latest Covid Lockdown",
+      "sectionType": "reading-comprehension",
+      "points": 30,
+      "text": "China's Latest Covid Lockdown Affects a Major iPhone Factory\n\nAn outbreak in Zhengzhou has sent an unknown number of workers at the city's Foxconn plant into quarantine. It's a bad time of year for output of iPhones to slow down. Foxconn, a major manufacturer for Apple, confirmed in a statement to The New York Times on Thursday that a \"small number of employees\" had been asked to quarantine, but declined to comment on details of the outbreak.\n\nFoxconn, with headquarters in Taiwan, said efforts to control the outbreak were \"progressing steadily\" and that the quarantined employees were being provided with what they needed, including \"material supplies, psychological comfort and responsive feedback.\"\n\nThe outbreak comes at an inopportune time for Apple and Foxconn, which is now making the new iPhone 14. Foxconn said that production and operations were \"relatively stable,\" and that output estimates for the three-month period from October to December would \"remain unchanged.\"\n\nThis part of the year is typically a critical period for iPhones. Last year, roughly a third of the $192 billion in iPhone sales was generated in the holiday period alone, according to Apple. The phone helped enhance total revenue by 8 percent in the latest quarter, the company reported on Thursday.\n\nApple has moved production of some of its next-generation iPhones to India, a shift in response to growing awareness of heightened risks caused by concentrating manufacturing in a single country.\n\nThe Zhengzhou city government said that neighborhoods in several of the city's 12 districts are under some form of restrictions.\n\nCalled \"iPhone City\" by locals, Zhengzhou is a city of six million people in inland China. It is a central artery in Apple's manufacturing of the iPhone, producing roughly half of Apple's global supply, according to Ming-Chi Kuo, an analyst at TF International Securities, a financial services group.\n\n\"What happens if this hits other Chinese cities where Apple has supply chains?\" he said. \"It's definitely something that Apple needs to consider in the mid-to-long term.\"",
+      "questions": [
+        {
+          "id": "q11",
+          "type": "multiple-choice",
+          "question": "What happened in Zhengzhou?",
+          "options": [
+            "workers disappeared",
+            "a number of workers were made redundant",
+            "an unknown number of workers refused to work",
+            "a new wave of Covid"
+          ],
+          "correctAnswer": "a new wave of Covid",
+          "points": 3
+        },
+        {
+          "id": "q12",
+          "type": "multiple-choice",
+          "question": "How has Apple been impacted by the situation mentioned in the text?",
+          "options": [
+            "the price of the iPhone has become higher",
+            "the new iPhone technology was copied",
+            "factory workers are not as efficient",
+            "the sales have dropped"
+          ],
+          "correctAnswer": "factory workers are not as efficient",
+          "points": 3
+        },
+        {
+          "id": "q13",
+          "type": "multiple-choice",
+          "question": "What is a synonym of \"output\"?",
+          "options": [
+            "production",
+            "assembly",
+            "design",
+            "advertising"
+          ],
+          "correctAnswer": "production",
+          "points": 3
+        },
+        {
+          "id": "q14",
+          "type": "multiple-choice",
+          "question": "How might the situation presented in the text affect Apple's plant?",
+          "options": [
+            "the plant will need to expand",
+            "the plant will increase the value of its business",
+            "it will not affect it",
+            "Apple will leave a deal with Foxconn"
+          ],
+          "correctAnswer": "it will not affect it",
+          "points": 3
+        },
+        {
+          "id": "q15",
+          "type": "multiple-choice",
+          "question": "How did Apple react to the news?",
+          "options": [
+            "they increased the price of the iPhone by 8%",
+            "they decreased the price of the iPhone by 8%",
+            "they chose not to keep their eggs in one basket",
+            "they are waiting for the holiday season to see what should be done"
+          ],
+          "correctAnswer": "they chose not to keep their eggs in one basket",
+          "points": 3
+        },
+        {
+          "id": "q16",
+          "type": "multiple-choice",
+          "question": "Why is the holiday season so significant for Apple?",
+          "options": [
+            "last year, during the holiday, sales reached 192 million dollars",
+            "last year, during that period, sales generated a revenue of 192 millions dollars",
+            "last year, during that same period, iPhone sales amounted to 64 million dollars",
+            "last year, during that same period, iPhone sales increased Apple's revenue by 8%"
+          ],
+          "correctAnswer": "last year, during that same period, iPhone sales amounted to 64 million dollars",
+          "points": 3
+        },
+        {
+          "id": "q17",
+          "type": "multiple-choice",
+          "question": "What would be a synonym of \"enhance\"?",
+          "options": [
+            "dropped",
+            "plunged sharply",
+            "improved",
+            "soared"
+          ],
+          "correctAnswer": "improved",
+          "points": 3
+        },
+        {
+          "id": "q18",
+          "type": "multiple-choice",
+          "question": "How would you define an artery?",
+          "options": [
+            "a vein in your body",
+            "a hub",
+            "a warehouse",
+            "a society"
+          ],
+          "correctAnswer": "a hub",
+          "points": 3
+        },
+        {
+          "id": "q19",
+          "type": "multiple-choice",
+          "question": "According to the text, how could Apple be impacted in the near future?",
+          "options": [
+            "Apple may close its factories in China",
+            "Apple may need to look into new outlets",
+            "Apple may use robots in its supply chains",
+            "Apple needs to hire additional long-term employees"
+          ],
+          "correctAnswer": "Apple may need to look into new outlets",
+          "points": 3
+        },
+        {
+          "id": "q20",
+          "type": "multiple-choice",
+          "question": "What risk did Apple take by choosing to settle plants in Zhengzhou?",
+          "options": [
+            "Apple's technology is not secured",
+            "The iPhone's name is being used by the inhabitants",
+            "Apple cannot ship its phones globally",
+            "Apple relies too heavily on Zhengzhou's factories in the making of its iPhones"
+          ],
+          "correctAnswer": "Apple relies too heavily on Zhengzhou's factories in the making of its iPhones",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "title": "Text 3: Gap Fill Exercise",
+      "sectionType": "gap-fill",
+      "points": 90,
+      "text": "How Biden Uses His 'Car Guy' Persona to Burnish His Everyman Image",
+      "questions": [
+        {
+          "id": "q21",
+          "type": "gap-fill",
+          "template": "Two years _____ his presidency, Mr. Biden is once again embracing a persona that _____ him since his earliest days in _____ almost five decades ago: the car guy.",
+          "correctAnswers": ["into", "has served", "politics"],
+          "options": [
+            { "21": ["to", "Ø", "into", "by"] },
+            { "22": ["has served", "served", "is serving", "serves"] },
+            { "23": ["policy", "politics", "political", "politician"] }
+          ],
+          "points": 9
+        },
+        {
+          "id": "q22",
+          "type": "gap-fill",
+          "template": "In a country of car lovers, the president has long used his affinity for cars to burnish his workaday origins and, more recently, to conjure an aura of vitality despite being the _____ president _____ American history.",
+          "correctAnswers": ["oldest", "in"],
+          "options": [
+            { "24": ["eldest", "most old", "more old", "oldest"] },
+            { "25": ["in", "Ø", "of", "for"] }
+          ],
+          "points": 6
+        },
+        {
+          "id": "q23",
+          "type": "gap-fill",
+          "template": "In the run-up to the midterm elections next month — with control of Congress and the future of his agenda _____ stake — Mr. Biden is _____ his gearhead reputation will appeal to some parts of the Republican base.",
+          "correctAnswers": ["at", "hoping"],
+          "options": [
+            { "26": ["at", "for", "of", "in"] },
+            { "27": ["hoped", "hoping", "hopped", "hopping"] }
+          ],
+          "points": 6
+        }
+      ]
+    }
+  ]
+}

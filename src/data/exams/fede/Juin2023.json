@@ -1,0 +1,434 @@
+{
+  "title": "FEDE Practice Test 2 - UC B4 Anglais écrit",
+  "examType": "fede",
+  "timeLimit": 105,
+  "totalPoints": 150,
+  "instructions": [
+    {
+      "text": "FÉDÉRATION EUROPÉENNE DES ECOLES",
+      "textStyle": "bold",
+      "newParagraph": true
+    },
+    {
+      "text": "UC B4 - Anglais écrit",
+      "textStyle": "default",
+      "newLine": true
+    },
+    {
+      "text": "Aucun dictionnaire autorisé",
+      "textStyle": "italic",
+      "newParagraph": true
+    },
+    {
+      "text": "Durée: 1h45 - QCM et Texte à compléter uniquement",
+      "textStyle": "default",
+      "newLine": true
+    }
+  ],
+  "sections": [
+    {
+      "title": "Text 1: Confronting the Growing Drought Risk",
+      "sectionType": "reading-comprehension",
+      "points": 30,
+      "text": "Confronting the Growing Drought Risk\n\nDrought may be an ancient scourge, but it is getting worse. No region or country today is immune to its effects. Southern Europe is in the grip of a severe drought – the worst in 70 years for Italy. In the western United States, the past two decades have been the driest in 1,200 years. Owing to climate change and land degradation, droughts are becoming more frequent, more severe, and more widespread. In the Horn of Africa, Ethiopia, Kenya, and Somalia are recording their fourth consecutive year without rains, and the situation has grown increasingly dire for people, livestock, and the ecosystems that support them. Owing to a lack of adequate nutrition, children are dying from diseases they would ordinarily survive. Even camels – which typically survive longer than people or other animal species – are dropping dead in large numbers across this region. River discharge in multiple countries is severely affected, with water volumes also depleted. Altogether, this may require extraordinary water and energy management measures to be taken in affected countries.\n\nThe lack of precipitation means soil water content has reduced significantly. This has made it harder for plants to extract water from the soil, leading to widespread stress on vegetation. This lack of water is also reducing or suspending hydroelectric and thermoelectric power production operations across countries. In summary, drought conditions and water scarcity are affecting energy production and reducing crop yield.\n\nThe unfavourable forecasts for the coming months may compromise the water supply and will likely keep the competition for this resource high. While drought mitigation strategies are of the utmost importance now, so is tackling the root cause of the problem: climate change and its disruption of the planet's water cycle. Further efforts are needed also for preventively adapting to the changing weather patterns by climate-proofing energy supply and applying sustainable solutions in agriculture. Building national and regional risk-management systems that can endure what is coming will require political will and significantly more international cooperation.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "multiple-choice",
+          "question": "According to you, what does \"scourge\" mean?",
+          "options": [
+            "plague",
+            "boon",
+            "tradition",
+            "bane"
+          ],
+          "correctAnswer": "plague",
+          "points": 3
+        },
+        {
+          "id": "q2",
+          "type": "multiple-choice",
+          "question": "Where, on the globe, can people be safe from drought?",
+          "options": [
+            "nowhere",
+            "in the horn of Africa",
+            "in the North Pole",
+            "in Southern Europe"
+          ],
+          "correctAnswer": "nowhere",
+          "points": 3
+        },
+        {
+          "id": "q3",
+          "type": "multiple-choice",
+          "question": "Who is being affected by the drought?",
+          "options": [
+            "people",
+            "soils",
+            "animals",
+            "all of the above"
+          ],
+          "correctAnswer": "all of the above",
+          "points": 3
+        },
+        {
+          "id": "q4",
+          "type": "multiple-choice",
+          "question": "What would be the synonym of \"depleted\"?",
+          "options": [
+            "dried",
+            "reduced",
+            "diverted",
+            "discovered"
+          ],
+          "correctAnswer": "reduced",
+          "points": 3
+        },
+        {
+          "id": "q5",
+          "type": "multiple-choice",
+          "question": "How have droughts evolved?",
+          "options": [
+            "they have always existed",
+            "they have always been the same",
+            "they are becoming more disastrous",
+            "they have become scarce"
+          ],
+          "correctAnswer": "they are becoming more disastrous",
+          "points": 3
+        },
+        {
+          "id": "q6",
+          "type": "multiple-choice",
+          "question": "Why is soil water content affected?",
+          "options": [
+            "because the soil evaporates",
+            "because the plants die",
+            "because the vegetation has disappeared",
+            "because plants find it difficult to find the nutrients they need"
+          ],
+          "correctAnswer": "because plants find it difficult to find the nutrients they need",
+          "points": 3
+        },
+        {
+          "id": "q7",
+          "type": "multiple-choice",
+          "question": "What could be further consequences of these droughts?",
+          "options": [
+            "camels may disappear",
+            "we will need to inhabit other planets",
+            "electricity may become scarce",
+            "rivers may turn into lakes"
+          ],
+          "correctAnswer": "electricity may become scarce",
+          "points": 3
+        },
+        {
+          "id": "q8",
+          "type": "multiple-choice",
+          "question": "How can the issue be tackled?",
+          "options": [
+            "by looking for new water supply",
+            "by individual governments",
+            "by finding the root of the problem",
+            "none of the above"
+          ],
+          "correctAnswer": "by finding the root of the problem",
+          "points": 3
+        },
+        {
+          "id": "q9",
+          "type": "multiple-choice",
+          "question": "What may be lacking to deal with this issue?",
+          "options": [
+            "some rain",
+            "a new national management system for resources",
+            "a new national management for energy supplies",
+            "a better international coalition"
+          ],
+          "correctAnswer": "a better international coalition",
+          "points": 3
+        },
+        {
+          "id": "q10",
+          "type": "multiple-choice",
+          "question": "What type of measures should be implemented?",
+          "options": [
+            "ways to manage climate",
+            "ways to manage risks",
+            "ways to reduce crops and water needs",
+            "ways to lower competition for water"
+          ],
+          "correctAnswer": "ways to manage risks",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "title": "Text 2: Elon Musk's Deal to Buy Twitter",
+      "sectionType": "reading-comprehension",
+      "points": 30,
+      "text": "Elon Musk's deal to buy Twitter is in peril\n\nElon Musk's deal to buy Twitter is in serious jeopardy, three people familiar with the matter say, as Musk's camp concluded that Twitter's figures on spam accounts are not verifiable. Musk's team has stopped engaging in certain discussions around funding for the $44 billion deal, including with a party named as a likely backer, one of the people said. The people spoke on the condition of anonymity because of the sensitivity of the ongoing discussions. Talks with investors have cooled in recent weeks as Musk's camp has raised doubts about the recent data \"fire hose\" — a trove of data sold to corporate customers — they received from Twitter. Musk's team's doubts about the spam figures signal they believe they do not have enough information to evaluate Twitter's prospects as a business, the people said.\n\nNow that Musk's team has concluded it cannot verify Twitter's figures on spam accounts, one of the people said, it is expected to take potentially drastic action. The person said it was likely a change in direction from Musk's team would come soon, though they did not say exactly what they thought that change would be.\n\nThe spam accounts are not the only reason Musk might try to wriggle out of the deal. Twitter's share price has fallen dramatically since his takeover bid in April, leading to the impression that he is overpaying. And Musk also runs two other major companies, Tesla and SpaceX, along with some start-ups.\n\nBut the terms of the deal mean it wouldn't be easy for Musk to walk away. Musk has agreed to complete it unless something major happens to Twitter's business, and legal experts doubt the bot issue would qualify. Twitter, which initially fought Musk's takeover bid, would be a weaker company if the deal falls apart than when Musk first bought a stake, and experts expect Twitter to fight to get it done. Twitter itself has said it intends to complete the deal. Even if Musk convinces a judge to let him walk away, he could still be on the hook for the deal's $1 billion breakup fee.",
+      "questions": [
+        {
+          "id": "q11",
+          "type": "multiple-choice",
+          "question": "What effort from Elon Musk is being threatened?",
+          "options": [
+            "his effort to appeal to a judge",
+            "his effort to verify Twitter's accounts",
+            "his effort to take drastic action",
+            "his effort to buy twitter"
+          ],
+          "correctAnswer": "his effort to buy twitter",
+          "points": 3
+        },
+        {
+          "id": "q12",
+          "type": "multiple-choice",
+          "question": "Why have talks with investors been paused?",
+          "options": [
+            "because the price was higher than the original $44 billion deal",
+            "because the price of shares has fallen dramatically",
+            "because Musk fears Twitter may hide fake accounts",
+            "because he will need to pay a $1 billion breakup fee"
+          ],
+          "correctAnswer": "because Musk fears Twitter may hide fake accounts",
+          "points": 3
+        },
+        {
+          "id": "q13",
+          "type": "multiple-choice",
+          "question": "What is the problem with the spam figures?",
+          "options": [
+            "they cannot be verified",
+            "they are the data sold to consumers",
+            "they cannot be found",
+            "they have produced a fire"
+          ],
+          "correctAnswer": "they cannot be verified",
+          "points": 3
+        },
+        {
+          "id": "q14",
+          "type": "multiple-choice",
+          "question": "\"To wiggle out\" of a deal means",
+          "options": [
+            "to sign the deal",
+            "to expand the size of a business",
+            "to increase the value of a business",
+            "to leave a deal"
+          ],
+          "correctAnswer": "to leave a deal",
+          "points": 3
+        },
+        {
+          "id": "q15",
+          "type": "multiple-choice",
+          "question": "How did Elon Musk's team react?",
+          "options": [
+            "they said his decision may take weeks",
+            "they said that his decision may happen too soon",
+            "they said that Twitter may no longer be for sale",
+            "they said that things may change"
+          ],
+          "correctAnswer": "they said that things may change",
+          "points": 3
+        },
+        {
+          "id": "q16",
+          "type": "multiple-choice",
+          "question": "Who is Elon Musk?",
+          "options": [
+            "a business owner",
+            "an inventor",
+            "the richest man on the planet",
+            "a judge"
+          ],
+          "correctAnswer": "a business owner",
+          "points": 3
+        },
+        {
+          "id": "q17",
+          "type": "multiple-choice",
+          "question": "What would be a synonym of \"fallen dramatically\"?",
+          "options": [
+            "increased sharply",
+            "improved sharply",
+            "skyrocketed sharply",
+            "plunged sharply"
+          ],
+          "correctAnswer": "plunged sharply",
+          "points": 3
+        },
+        {
+          "id": "q18",
+          "type": "multiple-choice",
+          "question": "How would you define a breakup fee?",
+          "options": [
+            "a fine that the judge asks you to pay",
+            "a prize you get from Twitter",
+            "a fee you pay because you cancelled a purchase",
+            "a fee that Twitter will pay to complete the deal"
+          ],
+          "correctAnswer": "a fee you pay because you cancelled a purchase",
+          "points": 3
+        },
+        {
+          "id": "q19",
+          "type": "multiple-choice",
+          "question": "How would you define a \"bot\"?",
+          "options": [
+            "a fake Twitter representative",
+            "a robot",
+            "a banker",
+            "a company"
+          ],
+          "correctAnswer": "a robot",
+          "points": 3
+        },
+        {
+          "id": "q20",
+          "type": "multiple-choice",
+          "question": "What will happen to Elon Musk if the judge lets him walk away from the deal?",
+          "options": [
+            "he will earn $1 billion",
+            "he will get $44 billion",
+            "he will remain anonymous",
+            "he will still need to pay a substantial amount of money"
+          ],
+          "correctAnswer": "he will still need to pay a substantial amount of money",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "title": "Text 3: Gap Fill Exercise",
+      "sectionType": "gap-fill",
+      "points": 90,
+      "text": "Europe's Energy Choice",
+      "questions": [
+        {
+          "id": "q21",
+          "type": "gap-fill",
+          "template": "No one doubts that Europe will need _____ increase _____ use of liquefied natural gas, continue _____ coal over the _____ years, and do more _____ help vulnerable communities and some industries manage higher energy costs.",
+          "correctAnswers": ["to", "its", "burning", "next few", "to"],
+          "options": [
+            { "21": ["to", "Ø", "for", "by"] },
+            { "22": ["his", "her", "their", "its"] },
+            { "23": ["burn", "burned", "burning", "burner"] },
+            { "24": ["few next", "next few", "several next", "proximal"] },
+            { "25": ["to", "Ø", "for", "by"] }
+          ],
+          "points": 15
+        },
+        {
+          "id": "q22",
+          "type": "gap-fill",
+          "template": "Russia's war in Ukraine and the disruption of Russian gas exports to Europe has _____ an energy crunch, with price _____ unlike anything seen _____ 1973. And the situation will get worse before it gets _____.",
+          "correctAnswers": ["triggered", "spikes", "since", "better"],
+          "options": [
+            { "26": ["provoked", "conducted to", "lead to", "triggered"] },
+            { "27": ["drop", "drops", "fallen", "spikes"] },
+            { "28": ["from", "until", "to", "since"] },
+            { "29": ["best", "good", "better", "worst"] }
+          ],
+          "points": 12
+        },
+        {
+          "id": "q23",
+          "type": "gap-fill",
+          "template": "The crisis is twofold. The urgency of keeping Europe warm and running through the next few winters must be considered _____ the imperative to accelerate the transition to clean energy. To be sure, the European countries that are most dependent _____ Russian gas and oil will struggle to secure power and heat for the coming winter.",
+          "correctAnswers": ["alongside", "on"],
+          "options": [
+            { "30": ["after", "before", "alongside", "subsequent"] },
+            { "31": ["of", "to", "with", "on"] }
+          ],
+          "points": 6
+        },
+        {
+          "id": "q24",
+          "type": "gap-fill",
+          "template": "The crucial question for major economic powers, then, is _____ they can manage _____ the winter without forcing their big domestic industrial gas consumers to shut _____. The answer is probably yes, _____ that Europeans maximize the use of all other energy sources.",
+          "correctAnswers": ["whether", "through", "down", "provided"],
+          "options": [
+            { "32": ["weather", "whether", "when", "why"] },
+            { "33": ["by", "for", "along", "through"] },
+            { "34": ["away", "down", "up", "on"] },
+            { "35": ["with condition", "conditionally", "conditioned", "provided"] }
+          ],
+          "points": 12
+        },
+        {
+          "id": "q25",
+          "type": "gap-fill",
+          "template": "Contrary to how the situation is often framed in the media, this choice is not between climate change and civil unrest. _____ matters is how policymakers approach these tasks. Crucially, subsidizing fossil-fuel _____ by capping energy prices at the pump or the power meter will only aggravate price inflation, effectively transferring taxpayers' money to gas and oil producers. Handing _____ checks to those most in need is a good idea, whereas eliminating the incentive for everybody to save energy is a terrible one.",
+          "correctAnswers": ["What", "consumption", "out"],
+          "options": [
+            { "36": ["Which", "Why", "Whereby", "What"] },
+            { "37": ["consommation", "consumation", "consume", "consumption"] },
+            { "38": ["off", "on", "in", "out"] }
+          ],
+          "points": 9
+        },
+        {
+          "id": "q26",
+          "type": "gap-fill",
+          "template": "This tension is at the center of the debates now playing out _____ Europe. While some Europeans associate today's energy-price inflation with the war in Ukraine, others think it stems _____ broader efforts to combat climate change.",
+          "correctAnswers": ["across", "from"],
+          "options": [
+            { "39": ["across", "threw", "throw", "along"] },
+            { "40": ["from", "with", "after", "by"] }
+          ],
+          "points": 6
+        },
+        {
+          "id": "q27",
+          "type": "gap-fill",
+          "template": "Europe's choice will hold important implications for whether we can limit _____ warming to 1.5° Celsius. That would position the EU decisively as one of the leading major _____ in the green transition – making it _____ with China and demonstrating that wealth and welfare are not synonymous _____ burning fossil fuel.",
+          "correctAnswers": ["global", "economies", "competitive", "with"],
+          "options": [
+            { "41": ["mondial", "worldwide", "planet", "global"] },
+            { "42": ["economy", "economics", "economies", "economist"] },
+            { "43": ["competition", "competitive", "competent", "efficient"] },
+            { "44": ["from", "of", "with", "by"] }
+          ],
+          "points": 12
+        },
+        {
+          "id": "q28",
+          "type": "gap-fill",
+          "template": "The European Union has _____ the last few months imposing sanctions on Russia, from travel bans to asset freezes, alongside other western nations like the US and the UK. And while these impacted Russia more indirectly, many said the measures didn't go _____ enough - conveniently missing _____ one very important element - gas.",
+          "correctAnswers": ["spent", "far", "out"],
+          "options": [
+            { "45": ["spend", "spended", "spending", "spent"] },
+            { "46": ["further", "better", "far", "more"] },
+            { "47": ["on", "off", "out", "with"] }
+          ],
+          "points": 9
+        },
+        {
+          "id": "q29",
+          "type": "gap-fill",
+          "template": "In late February, the country announced the cancellation of the €9.9 billion Nord Stream 2 gas pipeline from Russia - which is _____ good news environmentally yet may not hurt Russia quickly enough as the pipeline was not operating yet. But now that the price of oil has topped $140 (€129) per barrel for the first time _____ 2008, and gas imports are set to reduce in the coming years, governments are scrambling to find energy alternatives.",
+          "correctAnswers": ["Ø", "since"],
+          "options": [
+            { "48": ["a", "the", "Ø", "less"] },
+            { "49": ["from", "till", "until", "since"] }
+          ],
+          "points": 6
+        },
+        {
+          "id": "q30",
+          "type": "gap-fill",
+          "template": "Brussels is stepping up efforts to rapidly diversify its basket of energy _____ and is reaching out to other gas exporters such as the US, Norway, Qatar, Azerbaijan, Algeria, Egypt, Turkey, Japan and South Korea.",
+          "correctAnswers": ["providers"],
+          "options": [
+            { "50": ["furnishers", "furbishers", "providers", "providees"] }
+          ],
+          "points": 3
+        }
+        ]
+    }
+  ]
+}
