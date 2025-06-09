@@ -1,127 +1,85 @@
-
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebaseInit';
-import { setJwtToken } from '../utils/authUtils';
-
-// Modal component OUTSIDE of HomePage
-const AuthModal = ({
-  showModal,
-  toggleModal,
-  email,
-  setEmail,
-  password,
-  setPassword,
-  handleSubmit,
-  error,
-  loading,
-}) => {
-  return (
-    <div className={`modal ${showModal ? 'visible' : 'hidden'}`} id="auth-modal">
-      <div className="modal-content">
-        <span className="close" onClick={toggleModal}>&times;</span>
-        <div className="login-container">
-          <h2>Login</h2>
-          {error && <div className="error-message">{error}</div>}
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-
-            <button type="submit" disabled={loading}>
-              {loading ? 'Logging in...' : 'Login'}
-            </button>
-          </form>
-
-          <p className="signup-link">
-            Don’t have an account?{' '}
-            <span onClick={toggleModal} className="link">
-              Sign up here
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { useAuth } from './AuthContext';
 
 const HomePage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const { currentUser, loading } = useAuth();
 
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || '/';
+  // Show loading while checking authentication
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <h2>Loading...</h2>
+        <p>Checking your authentication status...</p>
+      </div>
+    );
+  }
 
-  useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
-    const openModal = queryParams.get('openModal');
+  // If not authenticated, show login prompt with redirect
+  if (!currentUser) {
+    return (
+      <div className="auth-prompt-container">
+        <h1>Welcome to Languapps</h1>
+        <p>Please sign in to access the grammar learning app.</p>
+        
+        <div className="auth-actions">
+          <a 
+            href="https://languapps.com/?openModal=auth-modal" 
+            className="auth-button primary"
+          >
+            Sign In
+          </a>
+          
+          <a 
+            href="https://languapps.com/?openModal=auth-modal" 
+            className="auth-button secondary"
+          >
+            Create Account
+          </a>
+        </div>
+        
+        <p className="auth-note">
+          You'll be redirected to our secure login page and then brought back here.
+        </p>
+      </div>
+    );
+  }
 
-    if (openModal === 'auth-modal') {
-      setShowModal(true);
-      const newUrl = new URL(window.location.href);
-      newUrl.searchParams.delete('openModal');
-      window.history.replaceState({}, '', newUrl);
-    }
-  }, [location]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
-
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const token = await userCredential.user.getIdToken();
-      setJwtToken(token);
-      navigate(from, { replace: true });
-    } catch (error) {
-      setError('Failed to log in: ' + error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const toggleModal = () => setShowModal(!showModal);
-
+  // User is authenticated - show the main app
   return (
-    <div>
-      <h1>Welcome to Languapps</h1>
-      <button onClick={toggleModal}>Login</button>
-
-      <AuthModal
-        showModal={showModal}
-        toggleModal={toggleModal}
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        handleSubmit={handleSubmit}
-        error={error}
-        loading={loading}
-      />
+    <div className="app-container">
+      <header className="app-header">
+        <h1>Welcome back to Languapps!</h1>
+        <p>Hello, {currentUser.email} 👋</p>
+      </header>
+      
+      <main className="app-main">
+        <div className="user-dashboard">
+          <h2>Your Learning Dashboard</h2>
+          
+          {/* Your app content goes here */}
+          <div className="learning-modules">
+            <p>Grammar lessons and progress will appear here...</p>
+            {/* Add your actual app components here */}
+          </div>
+          
+          <div className="user-info">
+            <p><strong>User ID:</strong> {currentUser.uid}</p>
+            <p><strong>Auth Type:</strong> {currentUser.isJwtUser ? 'JWT Token' : 'Firebase'}</p>
+          </div>
+        </div>
+      </main>
+      
+      <footer className="app-footer">
+        <button 
+          onClick={() => {
+            // Clear JWT and redirect to main domain for sign out
+            document.cookie = "JWT=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.languapps.com";
+            window.location.href = "https://languapps.com";
+          }}
+          className="sign-out-button"
+        >
+          Sign Out
+        </button>
+      </footer>
     </div>
   );
 };

@@ -76,6 +76,7 @@ import image_B1_4ModalVerbs_2_png from './assets/images/B1/4ModalVerbs/2.png';
 import image_B2_1MixedCond_1_png from './assets/images/B2/1MixedCond/1.png';
 import image_B2_1MixedCond_2_png from './assets/images/B2/1MixedCond/2.png';
 import image_B2_1MixedCond_3_png from './assets/images/B2/1MixedCond/3.png';
+import image_B2_1MixedCond_4_png from './assets/images/B2/1MixedCond/4.png';
 import image_B2_2Causitives_1_png from './assets/images/B2/2Causitives/1.png';
 import image_B2_3ModalsProb_1_png from './assets/images/B2/3ModalsProb/1.png';
 import image_B2_3ModalsProb_2_png from './assets/images/B2/3ModalsProb/2.png';
@@ -164,6 +165,7 @@ const imageMap = {
   'B2/1MixedCond/1.png': image_B2_1MixedCond_1_png,
   'B2/1MixedCond/2.png': image_B2_1MixedCond_2_png,
   'B2/1MixedCond/3.png': image_B2_1MixedCond_3_png,
+  'B2/1MixedCond/4.png': image_B2_1MixedCond_4_png,
   'B2/2Causitives/1.png': image_B2_2Causitives_1_png,
   'B2/3ModalsProb/1.png': image_B2_3ModalsProb_1_png,
   'B2/3ModalsProb/2.png': image_B2_3ModalsProb_2_png,
