@@ -1,8 +1,8 @@
 // AuthContext.js
-import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebaseInit';
-import { getJwtToken, authenticateWithJwt } from '../utils/authUtils';
+import { getJwtToken, authenticateWithJwt, clearJwtToken } from '../utils/authUtils';
 
 // Create Auth Context
 const AuthContext = createContext(null);
@@ -16,71 +16,66 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     console.log("AuthContext useEffect running");
-    console.log("authAttempted.current:", authAttempted.current);
     
-    // Listen for Firebase auth state changes
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      console.log("Auth state changed:", user ? "User logged in" : "No user");
-      console.log("Current authAttempted:", authAttempted.current);
-      
-      if (user) {
-        // Firebase user exists
-        console.log("Setting Firebase user");
-        setCurrentUser(user);
-        setUserEmail(user.email || '');
-        setLoading(false);
-      } else if (!authAttempted.current) {
-        // Only try JWT auth once to prevent loops
-        console.log("No Firebase user, trying JWT auth");
-        authAttempted.current = true;
+    // Check for JWT first, then Firebase as fallback
+    const checkAuthentication = async () => {
+      if (authAttempted.current) return;
+      authAttempted.current = true;
+
+      try {
+        // Priority 1: Check for JWT token
+        const token = getJwtToken();
+        console.log("JWT token found:", !!token);
         
-        // Try to authenticate with JWT if no Firebase user
-        try {
-          const token = getJwtToken();
-          console.log("JWT token found:", !!token);
+        if (token) {
+          console.log("Attempting JWT authentication");
+          const decodedToken = await authenticateWithJwt();
           
-          if (token) {
-            console.log("Attempting JWT authentication");
-            const decodedToken = await authenticateWithJwt();
-            
-            // JWT authentication successful - create a user object
-            const jwtUser = {
-              uid: decodedToken.uid,
-              email: decodedToken.email,
-              isJwtUser: true // Flag to indicate this is from JWT, not Firebase
-            };
-            
-            console.log("Setting JWT user:", jwtUser);
-            setCurrentUser(jwtUser);
-            setUserEmail(decodedToken.email || '');
-            setLoading(false);
-            console.log("JWT authentication successful, user set, loading set to false");
-          } else {
-            console.log("No JWT token, setting user to null");
-            setCurrentUser(null);
-            setUserEmail('');
-            setLoading(false);
-          }
-        } catch (error) {
-          console.error('JWT Authentication failed:', error);
-          console.log("JWT auth failed, setting user to null");
+          // JWT authentication successful
+          const jwtUser = {
+            uid: decodedToken.uid,
+            email: decodedToken.email,
+            isJwtUser: true
+          };
+          
+          console.log("JWT authentication successful:", jwtUser);
+          setCurrentUser(jwtUser);
+          setUserEmail(decodedToken.email || '');
+          setLoading(false);
+          return; // Exit early - we have JWT auth
+        }
+      } catch (error) {
+        console.error('JWT Authentication failed:', error);
+        clearJwtToken(); // Clear invalid JWT
+      }
+
+      // Priority 2: Check Firebase auth (fallback only)
+      const unsubscribe = onAuthStateChanged(auth, async (user) => {
+        console.log("Firebase auth state:", user ? "User logged in" : "No user");
+        
+        if (user) {
+          console.log("Using Firebase user as fallback");
+          setCurrentUser(user);
+          setUserEmail(user.email || '');
+        } else {
+          console.log("No authentication found");
           setCurrentUser(null);
           setUserEmail('');
-          setLoading(false);
         }
-      } else {
-        // We've already tried JWT auth and still no user
-        console.log("Already tried JWT auth, setting user to null");
-        setCurrentUser(null);
-        setUserEmail('');
         setLoading(false);
-      }
-    });
+      });
 
-    // Cleanup subscription
+      // Cleanup function
+      return unsubscribe;
+    };
+
+    const cleanup = checkAuthentication();
+    
+    // Clean up Firebase listener if it was created
     return () => {
-      console.log("Cleaning up auth subscription");
-      unsubscribe();
+      if (cleanup && typeof cleanup === 'function') {
+        cleanup();
+      }
     };
   }, []);
 
