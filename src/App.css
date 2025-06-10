@@ -620,3 +620,288 @@ nav ul li a:hover, .page-info:hover {
 .nav-button.login-link {
   background-color: transparent;
 }
+
+/* Main exam container */
+.exam-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Exam header */
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.exam-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.exam-timer {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.finish-exam-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* FEDE Layout - Desktop Left/Right Split */
+.fede-layout {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+}
+
+.section-navigation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.section-tab {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section-tab.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.section-tab:hover {
+  background-color: #e9ecef;
+}
+
+.section-tab.active:hover {
+  background-color: #0056b3;
+}
+
+/* Main content area - side by side on desktop */
+.fede-content {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Left side - Text panel */
+.text-panel {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.text-panel h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.reading-passage {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.reading-passage p {
+  margin-bottom: 1rem;
+}
+
+/* Right side - Questions panel */
+.questions-panel {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+/* Question navigation numbers */
+.question-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.question-number {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.question-number.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.question-number.answered {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.question-number:hover {
+  background-color: #e9ecef;
+}
+
+/* Current question area */
+.current-question {
+  margin-bottom: 20px;
+}
+
+.question-header {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.question-label {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Question controls */
+.question-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background-color: #007bff;
+  color: white;
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Exam selection pages */
+.exam-card, .test-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.exam-card:hover, .test-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.start-test-btn, .exam-link {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-test-btn:hover, .exam-link:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+  color: white;
+}
+
+.test-details {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .fede-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .text-panel, .questions-panel {
+    flex: none;
+    max-height: 400px;
+  }
+  
+  .section-navigation {
+    flex-wrap: wrap;
+  }
+  
+  .section-tab {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+  
+  .question-navigation {
+    justify-content: center;
+  }
+  
+  .question-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-btn {
+    width: 100%;
+  }
+}
