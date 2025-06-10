@@ -905,3 +905,261 @@ nav ul li a:hover, .page-info:hover {
     width: 100%;
   }
 }
+
+/* ===== NEW LAYOUT SYSTEM CSS ===== */
+
+/* App container */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.header-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-welcome {
+  font-size: 0.9rem;
+}
+
+.logout-btn, .login-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Hamburger Sidebar */
+.hamburger-sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  transition: left 0.3s ease;
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.hamburger-sidebar.open {
+  left: 0;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  margin-top: 40px;
+}
+
+.nav-item {
+  display: block;
+  padding: 12px 15px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  background-color: #f0f8ff;
+  color: #007bff;
+}
+
+.nav-section {
+  margin-bottom: 15px;
+}
+
+.nav-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-section-header:hover {
+  background-color: #f5f5f5;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.expanded {
+  transform: rotate(180deg);
+}
+
+.nav-level-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  color: #666;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.nav-level-overview {
+  display: block;
+  padding: 6px 30px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-topic {
+  display: block;
+  padding: 6px 45px;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-topic:hover, .nav-topic.active {
+  color: #007bff;
+  background-color: #f0f8ff;
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Layout Types */
+.layout-full-width .content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layout-split {
+  display: flex;
+  gap: 30px;
+  height: calc(100vh - 120px);
+}
+
+.split-left, .split-right {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.split-left {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.split-right {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hamburger-sidebar {
+    width: 250px;
+  }
+  
+  .layout-split {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .split-left, .split-right {
+    max-height: 400px;
+  }
+  
+  .main-content {
+    padding: 10px;
+  }
+}
