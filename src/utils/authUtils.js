@@ -4,9 +4,7 @@ import { jwtDecode } from 'jwt-decode';
 
 console.log("Firebase Auth:", auth);
 
-/**
- * Manual cookie reading function (bypasses js-cookie library)
- */
+
 const getJwtTokenManual = () => {
   const cookies = document.cookie.split(';');
   const jwtCookie = cookies.find(cookie => cookie.trim().startsWith('JWT='));
