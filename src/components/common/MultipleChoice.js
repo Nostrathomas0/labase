@@ -1,36 +1,70 @@
 import React, { useState, useEffect } from 'react';
+import { QuestionHandler } from '../../utils/ProgressManager';
 
-function MultipleChoice({ question, options, correctAnswer, onAnswer }) {
+function MultipleChoice({
+  question,
+  options,
+  correctAnswer,
+  questionId,
+  progressManager,
+  onAnswer
+}) {
   const [selected, setSelected] = useState('');
-  const [feedbackGiven, setFeedbackGiven] = useState(false);
-  
-  // Reset state when question or options change
-  useEffect(() => {
-    setSelected('');
-    setFeedbackGiven(false);
-  }, [question, options]);
+  const [feedback, setFeedback] = useState(null);
+  const [answered, setAnswered] = useState(false);
+  const [questionHandler] = useState(() => new QuestionHandler(progressManager));
 
+useEffect(() => {
+  // Start tracking this question
+  if (questionId && progressManager && questionHandler) {
+    questionHandler.startQuestion(questionId, 'multipleChoice');
+  }
+}, [questionId, progressManager, questionHandler]);
   const handleOptionClick = (option) => {
+    if (answered) return;
+
     setSelected(option);
-    if (onAnswer) {
-      const isCorrect = option === correctAnswer;
-      onAnswer(isCorrect);
-      setFeedbackGiven(true); // Enables Visual Feedback
+    const isCorrect = option === correctAnswer; // ← Added this line
+
+    if (progressManager) {
+      // New progress tracking system
+      const result = questionHandler.handleAnswer(option, correctAnswer, isCorrect);
+      setFeedback(result.feedback);
+      
+      if (onAnswer) {
+        onAnswer({
+          questionId,
+          isCorrect,
+          userAnswer: option,
+          correctAnswer,
+          progress: result.progress
+        });
+      }
+    } else {
+      // Backward compatibility - old callback system
+      if (onAnswer) {
+        onAnswer(isCorrect);
+      }
     }
+    
+    setAnswered(true);
   };
 
   const getOptionClassName = (option) => {
     let className = "multiple-choice-option";
-    if (feedbackGiven) {
+    
+    if (answered) {
       if (option === correctAnswer) {
         className += " correct";
       } else if (option === selected) {
         className += " incorrect";
       }
     }
+    
     if (option === selected) {
       className += " selected";
     }
+    
     return className;
   };
 
@@ -42,13 +76,18 @@ function MultipleChoice({ question, options, correctAnswer, onAnswer }) {
           <button
             key={index}
             onClick={() => handleOptionClick(option)}
-            disabled={feedbackGiven}
+            disabled={answered}
             className={getOptionClassName(option)}
           >
             {option}
           </button>
         ))}
       </div>
+      {feedback && (
+        <div className={`feedback ${feedback.class}`}>
+          {feedback.message}
+        </div>
+      )}
     </div>
   );
 }
