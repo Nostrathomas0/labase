@@ -6,16 +6,28 @@ import GapFill from './common/GapFill';
 import ClickActivity from './common/ClickActivity';
 import WordBankActivity from './common/WordBankActivity';
 
-
-function GrammarTopic({ contentData }) {
+function GrammarTopic({ 
+  contentData, 
+  progressManager, 
+  level, 
+  topic, 
+  page 
+}) {
   console.log('Rendering GrammarTopic with contentData:', contentData);
 
   if (!contentData || contentData.length === 0) {
     return <div>No content available.</div>;
   }
 
-  const handleAnswer = (isCorrect) => {
-    console.log(isCorrect ? 'Correct!' : 'Try again!');
+  const handleAnswer = (answerData) => {
+    if (answerData.progress) {
+      // New progress system
+      console.log('Progress update:', answerData.progress);
+      console.log('Question answered:', answerData);
+    } else {
+      // Old system (backward compatibility)
+      console.log(answerData ? 'Correct!' : 'Try again!');
+    }
   };
 
   return (
@@ -23,7 +35,12 @@ function GrammarTopic({ contentData }) {
       {contentData.map((question, questionIndex) => {
         console.log(`Processing Question ${questionIndex}:`, question);
 
-        const layout = question.layout || 'horizontal'; // Default to horizontal if layout is not specified
+        const layout = question.layout || 'horizontal';
+        
+        // Generate unique question ID for progress tracking
+        const questionId = progressManager ? 
+          `${level}-${topic}-p${page}-q${questionIndex + 1}` : 
+          null;
 
         switch (question.type) {
           case 'imageDisplay':
@@ -38,10 +55,12 @@ function GrammarTopic({ contentData }) {
           case 'multipleChoice':
             return (
               <MultipleChoice 
-                key={`mc-${questionIndex}-${question.question}`} // Unique key for multiple choice
+                key={`mc-${questionIndex}-${question.question}`}
                 question={question.question} 
                 options={question.options} 
                 correctAnswer={question.correctAnswer} 
+                questionId={questionId}
+                progressManager={progressManager}
                 onAnswer={handleAnswer} 
               />
             );
@@ -49,9 +68,11 @@ function GrammarTopic({ contentData }) {
           case 'gapFill':
             return (
               <GapFill 
-                key={`gap-${questionIndex}-${question.template}`} // Unique key for gap fill
+                key={`gap-${questionIndex}-${question.template}`}
                 template={question.template} 
                 correctAnswers={question.correctAnswers} 
+                questionId={questionId}
+                progressManager={progressManager}
                 onAnswer={handleAnswer} 
               />
             );
@@ -59,12 +80,13 @@ function GrammarTopic({ contentData }) {
           case 'click':
             return (
               <div key={`click-${questionIndex}`}>
-               
                 <ClickActivity 
-                  key={`click-${questionIndex}-${question.instructions[0]?.text}`} // Unique key for click activity
+                  key={`click-${questionIndex}-${question.instructions[0]?.text}`}
                   instructions={question.instructions || []}
                   words={question.words || []} 
                   keyWords={question.keyWords || []} 
+                  questionId={questionId}
+                  progressManager={progressManager}
                   onAnswer={handleAnswer} 
                   layout={layout} 
                 />
@@ -74,10 +96,12 @@ function GrammarTopic({ contentData }) {
           case 'wordBank':
             return (
               <WordBankActivity 
-                key={`wordbank-${questionIndex}-${question.paragraph}`} // Unique key for word bank
+                key={`wordbank-${questionIndex}-${question.paragraph}`}
                 paragraph={question.paragraph} 
                 wordBank={question.wordBank} 
                 correctAnswers={question.correctAnswers} 
+                questionId={questionId}
+                progressManager={progressManager}
                 onAnswer={handleAnswer} 
               />
             );
