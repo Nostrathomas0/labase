@@ -238,7 +238,7 @@ class ProgressManager {
   // Update JWT cookie
   updateJWTCookie(newJWT) {
     // Set cookie with proper domain and security settings
-    const cookieString = `JWT=${newJWT}; path=/; domain=labase.languapps.com; secure; samesite=strict; max-age=86400`;
+    const cookieString = `JWT=${newJWT}; path=/; domain=.languapps.com; secure; samesite=strict; max-age=86400`;
     document.cookie = cookieString;
     console.log('[ProgressManager] JWT cookie updated');
   }
