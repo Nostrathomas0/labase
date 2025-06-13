@@ -44,6 +44,24 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
           >
             🏠 Home
           </Link>
+            {/* Progress Controls */}
+          <div className="nav-section progress-controls">
+            <div className="nav-section-header">💾 Progress</div>
+            <div className="nav-subsection">
+              <button 
+                className="nav-item progress-btn save-btn"
+                onClick={() => window.saveProgress && window.saveProgress()}
+              >
+                💾 Save Progress
+              </button>
+              <button 
+                className="nav-item progress-btn complete-btn"
+                onClick={() => window.completePage && window.completePage()}
+              >
+                ✅ Complete Page
+              </button>
+            </div>
+          </div>
 
           {/* Grammar Lessons Section */}
           <div className="nav-section">
