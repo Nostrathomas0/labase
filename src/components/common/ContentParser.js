@@ -1,7 +1,7 @@
 // ContentParser.js - Universal content parser for ALL data packet types
 import React from 'react';
 import ImageDisplay from './ImageDisplay';
-import Instructions from './common/Instructions';
+import Instructions from './Instructions';
 
 // Define which content types go where
 const LEFT_PANEL_TYPES = [
