@@ -107,6 +107,12 @@ const MainLayout = (props) => {
         );
 
       default:
+        // Add this just before the return in MainLayout
+        console.log('About to render layout with data:', {
+          hasLeftContent: !!finalLeftContent,
+          hasExerciseData: !!finalExerciseData,
+          layoutType
+        });
         return (
           <div className="layout-default">
             <div className="content-container">
