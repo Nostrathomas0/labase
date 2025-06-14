@@ -6,6 +6,7 @@ import PageTurner from '../../common/PageTurner';
 import { ProgressManager } from '../../../utils/ProgressManager';
 
 const NounsPage = () => {
+  console.log('NEW NOUNS PAGE LOADED - MainLayout version');
   const [currentPage, setCurrentPage] = useState(0);
   const [progressManager] = useState(() => new ProgressManager());
   const [isLoading, setIsLoading] = useState(false);
