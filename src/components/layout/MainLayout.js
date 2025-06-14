@@ -56,20 +56,15 @@ const finalExerciseData = parsedContent.exerciseData || lessonData;
             <div className="split-right grammar-exercises">
               <div className="exercises-container">
                 {rightContent ? (
-                  rightContent
-                ) : finalExerciseData ? (
-                  <ExercisePanel
-                    lessonData={finalExerciseData}
-                    progressManager={progressManager}
-                    onQuestionComplete={onQuestionComplete}
-                    onLessonComplete={onLessonComplete}
-                  />
-                ) : (
-                  <div className="exercises-placeholder">
-                    <h3>Interactive Exercises</h3>
-                    <p>Complete the exercises to practice this grammar topic.</p>
-                  </div>
-                )}
+  rightContent
+) : finalExerciseData ? (
+  <div>EXERCISES WOULD GO HERE</div>
+) : (
+  <div className="exercises-placeholder">
+    <h3>Interactive Exercises</h3>
+    <p>Complete the exercises to practice this grammar topic.</p>
+  </div>
+)}
               </div>
             </div>
           </div>
