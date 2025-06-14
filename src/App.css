@@ -1439,3 +1439,7 @@ nav ul li a:hover, .page-info:hover {
   max-width: 100%;
   height: auto;
 }
+.content-generic {
+  margin: 10px 0;
+  padding: 10px;
+  color: #333;

@@ -251,9 +251,8 @@ const renderLeftPanelItem = (item, index) => {
         // Generic fallback - use safe class name generation
         const content = item.text || item.content;
         if (typeof content === 'string') {
-          const safeClassName = createSafeClassName(itemType || 'unknown');
-          return (
-            <div key={`content-${index}`} className={safeClassName}>
+            return (
+            <div key={`content-${index}`} className="content-generic">
               <p>{content}</p>
             </div>
           );
