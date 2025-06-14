@@ -13,7 +13,7 @@ const LEFT_PANEL_TYPES = [
 const RIGHT_PANEL_TYPES = [
   'multipleChoice', 'clickActivity', 'gapFill', 'wordBank', 'wordBankActivity',
   'question', 'exercise', 'activity', 'quiz', 'test', 'assessment',
-  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks',  'click', 'wordBank', 'miltiplechoice', 'gapfill'
+  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks',  'click', 'wordBank', 'multiplechoice', 'gapfill'
 ];
 
 export const parseContent = (data) => {
