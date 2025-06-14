@@ -84,7 +84,7 @@ const ClickActivity = ({
             <span
               key={index}
               onClick={() => handleWordClick(word)}
-              className={`clickable-word ${getWordClassName(word)}`}
+              className={getWordClassName(word)}
               style={{
                 cursor: answered ? 'default' : 'pointer',
                 margin: '5px',
