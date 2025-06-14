@@ -1,6 +1,6 @@
 // ContentParser.js - Universal content parser for ALL data packet types
 import React from 'react';
-import ImageDisplay from './common/ImageDisplay';
+import ImageDisplay from './ImageDisplay';
 import Instructions from './common/Instructions';
 
 // Define which content types go where
