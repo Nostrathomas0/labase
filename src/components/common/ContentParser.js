@@ -159,73 +159,89 @@ export const parseContent = (data) => {
 const renderLeftPanelItem = (item, index) => {
   const itemType = item.type?.toLowerCase();
 
-  switch (itemType) {
-    case 'image':
-      return (
-        <div key={`image-${index}`} className="content-image">
-          <ImageDisplay
-            imagePath={item.imagePath || item.image || item.src}
-            altText={item.altText || item.alt || 'Lesson image'}
-          />
-          {item.caption && (
-            <p className="image-caption">{item.caption}</p>
-          )}
-        </div>
-      );
-
-    case 'instructions':
-      return (
-        <div key={`instructions-${index}`} className="content-instructions">
-          <Instructions instructions={item.instructions || []} />
-        </div>
-      );
-
-    case 'text':
-    case 'paragraph':
-      return (
-        <div key={`text-${index}`} className="content-text">
-          <p>{item.text || item.content || item.paragraph}</p>
-        </div>
-      );
-
-    case 'heading':
-    case 'title':
-      return (
-        <div key={`heading-${index}`} className="content-heading">
-          <h2>{item.text || item.title || item.heading}</h2>
-        </div>
-      );
-
-    case 'subtitle':
-      return (
-        <div key={`subtitle-${index}`} className="content-subtitle">
-          <h3>{item.text || item.subtitle}</h3>
-        </div>
-      );
-
-    case 'reading':
-    case 'passage':
-      return (
-        <div key={`reading-${index}`} className="content-reading">
-          <div className="reading-title">
-            {item.title && <h3>{item.title}</h3>}
+  try {
+    switch (itemType) {
+      case 'imagedisplay':
+      case 'image':
+        return (
+          <div key={`image-${index}`} className="content-image">
+            <ImageDisplay
+              imagePath={item.imagePath || item.image || item.src}
+              altText={item.altText || item.alt || 'Lesson image'}
+            />
+            {item.caption && (
+              <p className="image-caption">{item.caption}</p>
+            )}
           </div>
-          <div className="reading-text">
-            {Array.isArray(item.paragraphs) 
-              ? item.paragraphs.map((p, i) => <p key={i}>{p}</p>)
-              : <p>{item.text || item.content}</p>
-            }
-          </div>
-        </div>
-      );
+        );
 
-    default:
-      // Generic fallback
-      return (
-        <div key={`content-${index}`} className={`content-${itemType || 'unknown'}`}>
-          {item.text || item.content || JSON.stringify(item)}
-        </div>
-      );
+      case 'instructions':
+        return (
+          <div key={`instructions-${index}`} className="content-instructions">
+            <Instructions instructions={item.instructions || []} />
+          </div>
+        );
+
+      case 'text':
+      case 'paragraph':
+        return (
+          <div key={`text-${index}`} className="content-text">
+            <p>{item.text || item.content || item.paragraph}</p>
+          </div>
+        );
+
+      case 'heading':
+      case 'title':
+        return (
+          <div key={`heading-${index}`} className="content-heading">
+            <h2>{item.text || item.title || item.heading}</h2>
+          </div>
+        );
+
+      case 'subtitle':
+        return (
+          <div key={`subtitle-${index}`} className="content-subtitle">
+            <h3>{item.text || item.subtitle}</h3>
+          </div>
+        );
+
+      case 'reading':
+      case 'passage':
+        return (
+          <div key={`reading-${index}`} className="content-reading">
+            <div className="reading-title">
+              {item.title && <h3>{item.title}</h3>}
+            </div>
+            <div className="reading-text">
+              {Array.isArray(item.paragraphs) 
+                ? item.paragraphs.map((p, i) => <p key={`p-${i}`}>{p}</p>)
+                : <p>{item.text || item.content}</p>
+              }
+            </div>
+          </div>
+        );
+
+      default:
+        // Generic fallback - be more careful with content
+        const content = item.text || item.content;
+        if (typeof content === 'string') {
+          return (
+            <div key={`content-${index}`} className={`content-${itemType || 'unknown'}`}>
+              <p>{content}</p>
+            </div>
+          );
+        } else {
+          console.warn('Could not render item:', item);
+          return null;
+        }
+    }
+  } catch (error) {
+    console.error('Error rendering left panel item:', error, item);
+    return (
+      <div key={`error-${index}`} className="content-error">
+        <p>Error loading content item</p>
+      </div>
+    );
   }
 };
 
