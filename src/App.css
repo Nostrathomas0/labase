@@ -1469,3 +1469,44 @@ nav ul li a:hover, .page-info:hover {
     font-size: 16px;
   }
 }
+/* Fix the split layout */
+.layout-split {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.split-left {
+  width: 50%;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+.split-right {
+  width: 50%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.grammar-images-instructions {
+  width: 100%;
+}
+
+.exercises-container {
+  width: 100%;
+}
+
+/* Ensure no weird flexbox issues */
+.lesson-content {
+  width: 100%;
+}
+
+.content-image {
+  margin-bottom: 20px;
+}
+
+.content-image img {
+  max-width: 100%;
+  height: auto;
+}
