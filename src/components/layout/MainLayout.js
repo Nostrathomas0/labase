@@ -1,26 +1,30 @@
 // MainLayout.js - Universal Layout Controller for ALL data packet types
 import React from 'react';
-import ExercisePanel from './common/ExercisePanel';
-import { parseContent } from './ContentParser';
+import ExercisePanel from '../common/ExercisePanel';
+import { parseContent } from '../common/ContentParser';
 
-const MainLayout = ({ 
-  layoutType, 
-  leftContent = null, 
-  rightContent = null, 
-  children,
-  // Raw data - will be auto-parsed
-  data = null,
-  // For exercise functionality
-  lessonData = null,
-  progressManager = null,
-  onQuestionComplete = null,
-  onLessonComplete = null
-}) => {
+const MainLayout = (props) => {
+  const { 
+    layoutType, 
+    leftContent = null, 
+    rightContent = null, 
+    children,
+    // Raw data - will be auto-parsed
+    data = null,
+    // For exercise functionality
+    lessonData = null,
+    progressManager = null,
+    onQuestionComplete = null,
+    onLessonComplete = null
+  } = props;
 
   // Auto-parse data if provided
   const parsedContent = React.useMemo(() => {
     if (data && !leftContent && !rightContent && !lessonData) {
-      return parseContent(data);
+      console.log('Parsing data:', data); // Simple debug
+      const result = parseContent(data);
+      console.log('Parse result:', result); // Simple debug
+      return result;
     }
     return { leftContent, exerciseData: lessonData };
   }, [data, leftContent, rightContent, lessonData]);
@@ -28,6 +32,8 @@ const MainLayout = ({
   // Use parsed content if available
   const finalLeftContent = parsedContent.leftContent || leftContent;
   const finalExerciseData = parsedContent.exerciseData || lessonData;
+
+  console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData); // Simple debug
 
   const renderLayout = () => {
     switch (layoutType) {
