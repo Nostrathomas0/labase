@@ -19,87 +19,121 @@ const RIGHT_PANEL_TYPES = [
 ];
 
 export const parseContent = (data) => {
+  console.log('=== CONTENT PARSER START ===');
+  console.log('Raw data received:', data);
+  
   // Handle different data structures
   let contentArray = [];
   
   if (!data) {
+    console.log('No data provided');
     return { leftContent: null, exerciseData: null };
   }
 
   // Extract content array from various possible structures
   if (Array.isArray(data)) {
     contentArray = data;
+    console.log('Data is array, using directly');
   } else if (data.content && Array.isArray(data.content)) {
     contentArray = data.content;
+    console.log('Found content array:', contentArray.length, 'items');
   } else if (data.items && Array.isArray(data.items)) {
     contentArray = data.items;
+    console.log('Found items array:', contentArray.length, 'items');
   } else if (data.questions && Array.isArray(data.questions)) {
     // For exam-style data where everything might be questions
     contentArray = data.questions;
+    console.log('Found questions array:', contentArray.length, 'items');
   } else if (data.sections && Array.isArray(data.sections)) {
     // Flatten sections if needed
     contentArray = data.sections.flatMap(section => 
       section.content || section.items || section.questions || [section]
     );
+    console.log('Found sections, flattened to:', contentArray.length, 'items');
   } else {
     // Single item, wrap in array
     contentArray = [data];
+    console.log('Single item, wrapped in array');
   }
+
+  console.log('Content array to process:', contentArray);
 
   const leftItems = [];
   const exerciseItems = [];
 
   // Process each content item
   contentArray.forEach((item, index) => {
-    if (!item || !item.type) {
+    console.log(`Processing item ${index}:`, item);
+    
+    if (!item || typeof item !== 'object') {
+      console.log(`Skipping invalid item ${index}:`, item);
+      return;
+    }
+
+    let itemType = item.type;
+    
+    if (!itemType) {
+      console.log(`No type found for item ${index}, attempting to infer...`);
       // Try to infer type from properties
       if (item.imagePath || item.image) {
-        item.type = 'image';
+        itemType = 'imageDisplay';
+        console.log(`Inferred type: imageDisplay`);
       } else if (item.instructions) {
-        item.type = 'instructions';
+        itemType = 'instructions';
+        console.log(`Inferred type: instructions`);
       } else if (item.question && item.options) {
-        item.type = 'multipleChoice';
+        itemType = 'multipleChoice';
+        console.log(`Inferred type: multipleChoice`);
       } else if (item.words && item.keyWords) {
-        item.type = 'clickActivity';
-      } else if (item.template && item.correctAnswers) {
-        item.type = 'gapFill';
-      } else if (item.template && item.correctAnswer) {
-        item.type = 'gapFill';
+        itemType = 'clickActivity';
+        console.log(`Inferred type: clickActivity`);
+      } else if (item.template && (item.correctAnswers || item.correctAnswer)) {
+        itemType = 'gapFill';
+        console.log(`Inferred type: gapFill`);
       } else if (item.wordBank && item.correctAnswers) {
-        item.type = 'wordBank';
+        itemType = 'wordBank';
+        console.log(`Inferred type: wordBank`);
       } else if (item.text) {
-        item.type = 'text';
+        itemType = 'text';
+        console.log(`Inferred type: text`);
       } else {
         console.warn('Could not determine type for item:', item);
         return;
       }
     }
 
-    const itemType = item.type.toLowerCase();
+    const normalizedType = itemType.toLowerCase();
+    console.log(`Item ${index} type: ${itemType} -> ${normalizedType}`);
 
     // Determine which panel this goes to
-    if (LEFT_PANEL_TYPES.includes(itemType)) {
-      leftItems.push(renderLeftPanelItem(item, index));
-    } else if (RIGHT_PANEL_TYPES.includes(itemType)) {
+    if (LEFT_PANEL_TYPES.includes(normalizedType)) {
+      console.log(`Item ${index} -> LEFT PANEL`);
+      leftItems.push(renderLeftPanelItem({...item, type: itemType}, index));
+    } else if (RIGHT_PANEL_TYPES.includes(normalizedType)) {
+      console.log(`Item ${index} -> RIGHT PANEL`);
       exerciseItems.push({
         id: `exercise-${index}`,
-        ...item
+        ...item,
+        type: itemType
       });
     } else {
+      console.log(`Item ${index} -> UNKNOWN TYPE, making educated guess...`);
       // Unknown type - make an educated guess
       if (item.question || item.options || item.correctAnswer || item.correctAnswers) {
-        // Looks like an exercise
+        console.log(`Item ${index} -> Looks like exercise, adding to RIGHT PANEL`);
         exerciseItems.push({
           id: `exercise-${index}`,
           type: 'unknown-exercise',
           ...item
         });
       } else {
-        // Looks like content
+        console.log(`Item ${index} -> Looks like content, adding to LEFT PANEL`);
         leftItems.push(renderLeftPanelItem(item, index));
       }
     }
   });
+
+  console.log(`Final results: ${leftItems.length} left items, ${exerciseItems.length} exercise items`);
 
   const leftContent = leftItems.length > 0 ? (
     <div className="lesson-content">
@@ -113,6 +147,10 @@ export const parseContent = (data) => {
     title: data.title || data.name || 'Lesson',
     type: data.type || 'lesson'
   } : null;
+
+  console.log('Left content created:', !!leftContent);
+  console.log('Exercise data created:', !!exerciseData);
+  console.log('=== CONTENT PARSER END ===');
 
   return { leftContent, exerciseData };
 };
