@@ -659,12 +659,6 @@ nav ul li a:hover, .page-info:hover {
   cursor: pointer;
 }
 
-/* FEDE Layout - Desktop Left/Right Split */
-.fede-layout {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 200px);
-}
 
 .section-navigation {
   display: flex;
@@ -696,14 +690,6 @@ nav ul li a:hover, .page-info:hover {
 
 .section-tab.active:hover {
   background-color: #0056b3;
-}
-
-/* Main content area - side by side on desktop */
-.fede-content {
-  display: flex;
-  gap: 30px;
-  flex: 1;
-  overflow: hidden;
 }
 
 /* Left side - Text panel */
@@ -872,11 +858,6 @@ nav ul li a:hover, .page-info:hover {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-  .fede-content {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
   .text-panel, .questions-panel {
     flex: none;
     max-height: 400px;
@@ -904,15 +885,6 @@ nav ul li a:hover, .page-info:hover {
   .nav-btn {
     width: 100%;
   }
-}
-
-/* ===== NEW LAYOUT SYSTEM CSS ===== */
-
-/* App container */
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 /* Main Header */
@@ -1120,49 +1092,6 @@ nav ul li a:hover, .page-info:hover {
   margin: 0 auto;
 }
 
-.layout-split {
-  display: flex;
-  gap: 30px;
-  height: calc(100vh - 120px);
-}
-
-.split-left, .split-right {
-  flex: 1;
-  overflow-y: auto;
-}
-
-.split-left {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-.split-right {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .hamburger-sidebar {
-    width: 250px;
-  }
-  
-  .layout-split {
-    flex-direction: column;
-    height: auto;
-  }
-  
-  .split-left, .split-right {
-    max-height: 400px;
-  }
-  
-  .main-content {
-    padding: 10px;
-  }
-}
 /* Exercise Panel Styles */
 .exercise-panel {
   padding: 20px;
