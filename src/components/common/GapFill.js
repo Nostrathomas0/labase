@@ -1,55 +1,106 @@
 import React, { useState, useEffect } from 'react';
+import { QuestionHandler } from '../../utils/ProgressManager';
 
-function GapFill({ template, correctAnswers = [], onAnswer }) {
+function GapFill({ 
+  template, 
+  correctAnswers = [], 
+  onAnswer,
+  questionId,
+  progressManager 
+}) {
   const [userInput, setUserInput] = useState('');
   const [feedback, setFeedback] = useState('');
+  const [answered, setAnswered] = useState(false);
+  const [questionHandler] = useState(() => new QuestionHandler(progressManager));
 
   useEffect(() => {
     setUserInput('');
     setFeedback('');
+    setAnswered(false);
   }, [template, correctAnswers]);
+
+  useEffect(() => {
+    // Start tracking this question
+    if (questionId && progressManager && questionHandler) {
+      questionHandler.startQuestion(questionId, 'gapFill');
+    }
+  }, [questionId, progressManager, questionHandler]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("User Input:", userInput.trim().toLowerCase()); // Log user input
-    console.log("Correct Answers:", correctAnswers); // Log correct answers
+    if (answered) return;
+
+    console.log("User Input:", userInput.trim().toLowerCase());
+    console.log("Correct Answers:", correctAnswers);
 
     const isCorrect = correctAnswers.some(answer => 
       answer.toLowerCase() === userInput.trim().toLowerCase()
     );
 
-    console.log("Is Correct:", isCorrect); // Log the result of the check
+    console.log("Is Correct:", isCorrect);
 
-    if (isCorrect) {
-      setFeedback('Correct! Great job!');
+    if (progressManager) {
+      // New progress tracking system
+      const result = questionHandler.handleAnswer(userInput.trim(), correctAnswers, isCorrect);
+      setFeedback(result.feedback.message);
+      
+      if (onAnswer) {
+        onAnswer({
+          questionId,
+          isCorrect,
+          userAnswer: userInput.trim(),
+          correctAnswer: correctAnswers,
+          progress: result.progress
+        });
+      }
     } else {
-      setFeedback('Incorrect. Try again!');
+      // Backward compatibility - old callback system
+      if (isCorrect) {
+        setFeedback('Correct! Great job!');
+      } else {
+        setFeedback('Incorrect. Try again!');
+      }
+      
+      if (onAnswer) {
+        onAnswer(isCorrect);
+      }
     }
 
-    onAnswer(isCorrect);
-    setUserInput(''); // Clear the input after submission
+    setAnswered(true);
+    // Don't clear input immediately - let user see their answer
   };
 
   // Handle templates that have the placeholder "_____"
   const parts = template.split("_____");
 
   return (
-    <div>
+    <div className="gap-fill-container">
       <form onSubmit={handleSubmit}>
-        <p>
+        <p className="gap-fill-question">
           {parts[0]}
           <input
             type="text"
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
             placeholder="Type your answer"
+            disabled={answered}
+            className={answered ? (feedback.includes('Correct') ? 'correct' : 'incorrect') : ''}
           />
           {parts[1]}
         </p>
-        <button type="submit">Submit</button>
+        <button 
+          type="submit" 
+          disabled={answered || !userInput.trim()}
+          className="gap-fill-submit"
+        >
+          Submit
+        </button>
       </form>
-      {/* Display feedback */}
-      {feedback && <p>{feedback}</p>}
+      {feedback && (
+        <div className={`feedback ${feedback.includes('Correct') ? 'correct' : 'incorrect'}`}>
+          {feedback}
+        </div>
+      )}
     </div>
   );
 }
