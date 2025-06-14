@@ -1,6 +1,6 @@
-//NounsPage.js - Updated with Global Save Functions
+//NounsPage.js - Updated to use MainLayout and ContentParser
 import React, { useState, useEffect, useCallback } from 'react';
-import GrammarTopic from '../../GrammarTopic';
+import MainLayout from '../../layout/MainLayout';
 import NounsData from '../../../data/grammar/A1/1Nouns.json';
 import PageTurner from '../../common/PageTurner';
 import { ProgressManager } from '../../../utils/ProgressManager';
@@ -130,18 +130,31 @@ const NounsPage = () => {
     }
   }, [currentPage, progressManager]);
 
+  const handleQuestionComplete = (answerData) => {
+    console.log('Question completed:', answerData);
+    // This gets called when individual questions are answered
+  };
+
+  const handleLessonComplete = (completionData) => {
+    console.log('Lesson completed:', completionData);
+    // This gets called when all questions are completed
+  };
+
   if (!pages || pages.length === 0) {
     return <div>No content available.</div>;
   }
 
-  const currentQuestions = pages[currentPage]?.questions || [];
+  // Convert the current page questions to the format expected by ContentParser
+  const currentPageData = {
+    title: `Nouns - Page ${currentPage + 1}`,
+    content: pages[currentPage]?.questions || []
+  };
+
   const currentProgress = progressManager.getPageProgress();
   
   return (
     <div>
-      <h1>Nouns</h1>
-      
-      {/* Progress Display */}
+      {/* Progress Display - This will go above the layout */}
       <div className="progress-display" style={{ 
         background: '#f5f5f5', 
         padding: '15px', 
@@ -150,7 +163,7 @@ const NounsPage = () => {
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            <h3>Page {currentPage + 1} Progress</h3>
+            <h3>Nouns - Page {currentPage + 1} Progress</h3>
             <p>
               Score: {currentProgress.score}% 
               ({currentProgress.correctAnswers}/{currentProgress.totalQuestions} correct)
@@ -186,14 +199,14 @@ const NounsPage = () => {
           </div>
         )}
       </div>
-      
-      {/* Grammar Topic Content */}
-      <GrammarTopic 
-        contentData={currentQuestions} 
+
+      {/* Main Layout with parsed content */}
+      <MainLayout
+        layoutType="grammar"
+        data={currentPageData}
         progressManager={progressManager}
-        level="A1"
-        topic="nouns"
-        page={currentPage + 1}
+        onQuestionComplete={handleQuestionComplete}
+        onLessonComplete={handleLessonComplete}
       />
       
       {/* Page Navigation */}

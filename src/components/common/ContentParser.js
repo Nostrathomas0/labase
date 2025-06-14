@@ -13,7 +13,9 @@ const LEFT_PANEL_TYPES = [
 const RIGHT_PANEL_TYPES = [
   'multipleChoice', 'clickActivity', 'gapFill', 'wordBank', 'wordBankActivity',
   'question', 'exercise', 'activity', 'quiz', 'test', 'assessment',
-  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks'
+  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks',
+  // Add your specific types
+  'click', 'wordBank'
 ];
 
 export const parseContent = (data) => {
@@ -60,6 +62,8 @@ export const parseContent = (data) => {
       } else if (item.words && item.keyWords) {
         item.type = 'clickActivity';
       } else if (item.template && item.correctAnswers) {
+        item.type = 'gapFill';
+      } else if (item.template && item.correctAnswer) {
         item.type = 'gapFill';
       } else if (item.wordBank && item.correctAnswers) {
         item.type = 'wordBank';
