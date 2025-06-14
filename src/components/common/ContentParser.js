@@ -154,7 +154,9 @@ export const parseContent = (data) => {
   return { leftContent, exerciseData };
 };
 
-// Render function for left panel items
+/// Replace your entire renderLeftPanelItem function with this version:
+// NO MORE DYNAMIC CSS GENERATION - STATIC CLASSES ONLY
+
 const renderLeftPanelItem = (item, index) => {
   const itemType = item.type?.toLowerCase();
 
@@ -163,7 +165,7 @@ const renderLeftPanelItem = (item, index) => {
       case 'imagedisplay':
       case 'image':
         return (
-          <div key={`image-${index}`} className="content-image">
+          <div key={`image-${index}`} className="lesson-image">
             <ImageDisplay
               imagePath={item.imagePath || item.image || item.src}
               altText={item.altText || item.alt || 'Lesson image'}
@@ -176,7 +178,7 @@ const renderLeftPanelItem = (item, index) => {
 
       case 'instructions':
         return (
-          <div key={`instructions-${index}`} className="content-instructions">
+          <div key={`instructions-${index}`} className="lesson-instructions">
             <Instructions instructions={item.instructions || []} />
           </div>
         );
@@ -184,7 +186,7 @@ const renderLeftPanelItem = (item, index) => {
       case 'text':
       case 'paragraph':
         return (
-          <div key={`text-${index}`} className="content-text">
+          <div key={`text-${index}`} className="lesson-text">
             <p>{item.text || item.content || item.paragraph}</p>
           </div>
         );
@@ -192,14 +194,14 @@ const renderLeftPanelItem = (item, index) => {
       case 'heading':
       case 'title':
         return (
-          <div key={`heading-${index}`} className="content-heading">
+          <div key={`heading-${index}`} className="lesson-heading">
             <h2>{item.text || item.title || item.heading}</h2>
           </div>
         );
 
       case 'subtitle':
         return (
-          <div key={`subtitle-${index}`} className="content-subtitle">
+          <div key={`subtitle-${index}`} className="lesson-subtitle">
             <h3>{item.text || item.subtitle}</h3>
           </div>
         );
@@ -207,7 +209,7 @@ const renderLeftPanelItem = (item, index) => {
       case 'reading':
       case 'passage':
         return (
-          <div key={`reading-${index}`} className="content-reading">
+          <div key={`reading-${index}`} className="lesson-reading">
             <div className="reading-title">
               {item.title && <h3>{item.title}</h3>}
             </div>
@@ -221,23 +223,27 @@ const renderLeftPanelItem = (item, index) => {
         );
 
       default:
-        // Generic fallback - use safe class name generation
+        // NO MORE DYNAMIC CLASSES - JUST USE A SIMPLE STATIC CLASS
         const content = item.text || item.content;
         if (typeof content === 'string') {
-            return (
-            <div key={`content-${index}`} className="content-generic">
+          return (
+            <div key={`content-${index}`} className="lesson-content-item">
               <p>{content}</p>
             </div>
           );
         } else {
           console.warn('Could not render item:', item);
-          return null;
+          return (
+            <div key={`unknown-${index}`} className="lesson-unknown">
+              <p>Content could not be displayed</p>
+            </div>
+          );
         }
     }
   } catch (error) {
     console.error('Error rendering left panel item:', error, item);
     return (
-      <div key={`error-${index}`} className="content-error">
+      <div key={`error-${index}`} className="lesson-error">
         <p>Error loading content item</p>
       </div>
     );

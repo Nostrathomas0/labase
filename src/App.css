@@ -1443,4 +1443,87 @@ nav ul li a:hover, .page-info:hover {
   margin: 10px 0;
   padding: 10px;
   color: #333;
-  }
+}
+/* Add these simple, static CSS classes to your stylesheet */
+/* NO MORE DYNAMIC GENERATION - JUST THESE FIXED CLASSES */
+
+.lesson-image {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.lesson-instructions {
+  margin: 15px 0;
+}
+
+.lesson-text {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.lesson-heading {
+  margin: 25px 0 15px 0;
+}
+
+.lesson-heading h2 {
+  color: #2c3e50;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.lesson-subtitle {
+  margin: 20px 0 10px 0;
+}
+
+.lesson-subtitle h3 {
+  color: #34495e;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.lesson-reading {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.lesson-reading .reading-title h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.lesson-reading .reading-text {
+  line-height: 1.7;
+}
+
+.lesson-content-item {
+  margin: 10px 0;
+  padding: 8px 0;
+}
+
+.lesson-unknown {
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  color: #856404;
+}
+
+.lesson-error {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+}
+
+.image-caption {
+  margin-top: 8px;
+  font-style: italic;
+  color: #6c757d;
+  font-size: 0.9em;
+}
