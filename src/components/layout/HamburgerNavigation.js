@@ -31,7 +31,7 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
       <div className="sidebar-content">
         {/* Close button for mobile */}
         <button className="sidebar-close" onClick={onClose}>
-          ×
+          
         </button>
 
         {/* Navigation Menu */}
@@ -42,23 +42,23 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
             className={`nav-item ${isActiveRoute('/') ? 'active' : ''}`}
             onClick={handleLinkClick}
           >
-            🏠 Home
+             Home
           </Link>
             {/* Progress Controls */}
           <div className="nav-section progress-controls">
-            <div className="nav-section-header">💾 Progress</div>
+            <div className="nav-section-header"> Progress</div>
             <div className="nav-subsection">
               <button 
                 className="nav-item progress-btn save-btn"
                 onClick={() => window.saveProgress && window.saveProgress()}
               >
-                💾 Save Progress
+                 Save Progress
               </button>
               <button 
                 className="nav-item progress-btn complete-btn"
                 onClick={() => window.completePage && window.completePage()}
               >
-                ✅ Complete Page
+                 Complete Page
               </button>
             </div>
           </div>
@@ -69,9 +69,9 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
               className="nav-section-header"
               onClick={() => toggleSection('grammar')}
             >
-              📚 Grammar Lessons
+               Grammar Lessons
               <span className={`chevron ${expandedSections.grammar ? 'expanded' : ''}`}>
-                ▼
+                v
               </span>
             </button>
             
@@ -85,7 +85,7 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
                   >
                     A1 - Beginner
                     <span className={`chevron ${expandedSections.A1 ? 'expanded' : ''}`}>
-                      ▼
+                      v
                     </span>
                   </button>
                   <Link 
@@ -138,7 +138,7 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
                   >
                     A2 - Elementary
                     <span className={`chevron ${expandedSections.A2 ? 'expanded' : ''}`}>
-                      ▼
+                      v
                     </span>
                   </button>
                   <Link 
@@ -191,7 +191,7 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
                   >
                     B1 - Pre-Intermediate
                     <span className={`chevron ${expandedSections.B1 ? 'expanded' : ''}`}>
-                      ▼
+                      v
                     </span>
                   </button>
                   <Link 
@@ -244,7 +244,7 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
                   >
                     B2 - Intermediate
                     <span className={`chevron ${expandedSections.B2 ? 'expanded' : ''}`}>
-                      ▼
+                      v
                     </span>
                   </button>
                   <Link 
@@ -298,9 +298,9 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
               className="nav-section-header"
               onClick={() => toggleSection('exams')}
             >
-              📝 Practice Exams
+               Practice Exams
               <span className={`chevron ${expandedSections.exams ? 'expanded' : ''}`}>
-                ▼
+                v
               </span>
             </button>
             
