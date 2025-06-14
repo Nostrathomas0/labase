@@ -6,7 +6,7 @@
         {
         "type": "imageDisplay",
           "imagePath": "A1/1Nouns/1.png",
-          "altText": "Nouns provide names for people places and things. When you're referring to a person by name you're using their name as a noun."
+          "altText": "Nouns provide names for people places and things. When you refer to a person by name you use their name as a noun."
         },
         {
           "type": "click",
