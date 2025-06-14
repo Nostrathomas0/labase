@@ -16,33 +16,6 @@ const RIGHT_PANEL_TYPES = [
   'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks',  'click', 'wordBank', 'multiplechoice', 'gapfill'
 ];
 
-// Helper function to create safe CSS class names
-const createSafeClassName = (str) => {
-  if (!str) return 'content-unknown';
-  
-  // Convert to lowercase and replace invalid characters with hyphens
-  let className = str.toLowerCase().replace(/[^a-z0-9-]/g, '-');
-  
-  // Remove leading/trailing hyphens and multiple consecutive hyphens
-  className = className.replace(/^-+|-+$/g, '').replace(/-+/g, '-');
-  
-  // Ensure it doesn't start with a digit
-  if (/^[0-9]/.test(className)) {
-    className = 'content-' + className;
-  }
-  
-  // Fallback if empty
-  if (!className) {
-    className = 'content-unknown';
-  }
-  
-  // Always prefix with 'content-' if not already prefixed
-  if (!className.startsWith('content-')) {
-    className = 'content-' + className;
-  }
-  
-  return className;
-};
 
 export const parseContent = (data) => {
   console.log('=== CONTENT PARSER START ===');
