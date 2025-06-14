@@ -16,6 +16,34 @@ const RIGHT_PANEL_TYPES = [
   'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks',  'click', 'wordBank', 'multiplechoice', 'gapfill'
 ];
 
+// Helper function to create safe CSS class names
+const createSafeClassName = (str) => {
+  if (!str) return 'content-unknown';
+  
+  // Convert to lowercase and replace invalid characters with hyphens
+  let className = str.toLowerCase().replace(/[^a-z0-9-]/g, '-');
+  
+  // Remove leading/trailing hyphens and multiple consecutive hyphens
+  className = className.replace(/^-+|-+$/g, '').replace(/-+/g, '-');
+  
+  // Ensure it doesn't start with a digit
+  if (/^[0-9]/.test(className)) {
+    className = 'content-' + className;
+  }
+  
+  // Fallback if empty
+  if (!className) {
+    className = 'content-unknown';
+  }
+  
+  // Always prefix with 'content-' if not already prefixed
+  if (!className.startsWith('content-')) {
+    className = 'content-' + className;
+  }
+  
+  return className;
+};
+
 export const parseContent = (data) => {
   console.log('=== CONTENT PARSER START ===');
   console.log('Raw data received:', data);
@@ -220,11 +248,12 @@ const renderLeftPanelItem = (item, index) => {
         );
 
       default:
-        // Generic fallback - be more careful with content
+        // Generic fallback - use safe class name generation
         const content = item.text || item.content;
         if (typeof content === 'string') {
+          const safeClassName = createSafeClassName(itemType || 'unknown');
           return (
-            <div key={`content-${index}`} className={`content-${(itemType || 'unknown').toLowerCase().replace(/[^a-z0-9-]/g, '-')}`}>
+            <div key={`content-${index}`} className={safeClassName}>
               <p>{content}</p>
             </div>
           );
