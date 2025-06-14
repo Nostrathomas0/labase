@@ -7,6 +7,7 @@ import { ProgressManager } from '../../../utils/ProgressManager';
 
 const NounsPage = () => {
   console.log('NEW NOUNS PAGE LOADED - MainLayout version');
+  
   const [currentPage, setCurrentPage] = useState(0);
   const [progressManager] = useState(() => new ProgressManager());
   const [isLoading, setIsLoading] = useState(false);
@@ -67,15 +68,15 @@ const NounsPage = () => {
 
   // Expose save functions globally for navigation buttons
   useEffect(() => {
-    window.saveProgress = handleSaveProgress;
-    window.completePage = handleCompletePage;
-    
-    // Cleanup on unmount
-    return () => {
-      delete window.saveProgress;
-      delete window.completePage;
-    };
-  }, [handleSaveProgress, handleCompletePage]);
+  window.saveProgress = handleSaveProgress;
+  window.completePage = handleCompletePage;
+  
+  // Cleanup on unmount
+  return () => {
+    delete window.saveProgress;
+    delete window.completePage;
+  };
+}, [handleSaveProgress, handleCompletePage]);
 
   // Save progress before navigating to next page
   const nextPage = useCallback(async () => {
@@ -150,6 +151,8 @@ const NounsPage = () => {
     title: `Nouns - Page ${currentPage + 1}`,
     content: pages[currentPage]?.questions || []
   };
+
+  console.log('About to render, currentPageData:', currentPageData);
 
   const currentProgress = progressManager.getPageProgress();
   
