@@ -7,15 +7,13 @@ import Instructions from './Instructions';
 const LEFT_PANEL_TYPES = [
   'image', 'instructions', 'text', 'heading', 'paragraph', 'title', 
   'subtitle', 'description', 'explanation', 'example', 'note',
-  'reading', 'passage', 'story', 'dialogue', 'conversation'
+  'reading', 'passage', 'story', 'dialogue', 'conversation', 'imagedisplay'
 ];
 
 const RIGHT_PANEL_TYPES = [
   'multipleChoice', 'clickActivity', 'gapFill', 'wordBank', 'wordBankActivity',
   'question', 'exercise', 'activity', 'quiz', 'test', 'assessment',
-  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks',
-  // Add your specific types
-  'click', 'wordBank'
+  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks',  'click', 'wordBank', 'miltiplechoice', 'gapfill'
 ];
 
 export const parseContent = (data) => {
