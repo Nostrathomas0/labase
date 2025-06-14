@@ -6,7 +6,7 @@ import { parseContent } from '../common/ContentParser';
 const MainLayout = (props) => {
   const { 
     layoutType, 
-//    leftContent = null, 
+    leftContent = null, 
     rightContent = null, 
     children,
     // Raw data - will be auto-parsed
@@ -30,7 +30,7 @@ const parsedContent = React.useMemo(() => {
 }, [data]);
 
 // Use parsed content if available, with better fallback logic
-const finalLeftContent = null; 
+const finalLeftContent = parsedContent.leftContent || leftContent;
 const finalExerciseData = parsedContent.exerciseData || lessonData;
   console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData); // Simple debug
 

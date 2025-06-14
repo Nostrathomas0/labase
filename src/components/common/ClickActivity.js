@@ -66,8 +66,8 @@ const ClickActivity = ({
   };
 
   const getWordClassName = (word) => {
-    if (!clickedWords.includes(word.text)) return '';
-    return keyWords.includes(word.text) ? 'correct' : 'incorrect';
+    if (!clickedWords.includes(word.text)) return 'clickable-word';
+    return keyWords.includes(word.text) ? 'clickable-word correct' : 'clickable-word incorrect';
   };
 
   return (
