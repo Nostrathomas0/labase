@@ -19,20 +19,19 @@ const MainLayout = (props) => {
   } = props;
 
   // Auto-parse data if provided
-  const parsedContent = React.useMemo(() => {
-    if (data && !leftContent && !rightContent && !lessonData) {
-      console.log('Parsing data:', data); // Simple debug
-      const result = parseContent(data);
-      console.log('Parse result:', result); // Simple debug
-      return result;
-    }
-    return { leftContent, exerciseData: lessonData };
-  }, [data, leftContent, rightContent, lessonData]);
+const parsedContent = React.useMemo(() => {
+  if (data) {
+    console.log('Parsing data:', data);
+    const result = parseContent(data);
+    console.log('Parse result:', result);
+    return result;
+  }
+  return { leftContent: null, exerciseData: null };
+}, [data]);
 
-  // Use parsed content if available
-  const finalLeftContent = parsedContent.leftContent || leftContent;
-  const finalExerciseData = parsedContent.exerciseData || lessonData;
-
+// Use parsed content if available, with better fallback logic
+const finalLeftContent = parsedContent.leftContent || leftContent;
+const finalExerciseData = parsedContent.exerciseData || lessonData;
   console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData); // Simple debug
 
   const renderLayout = () => {
