@@ -224,7 +224,7 @@ const renderLeftPanelItem = (item, index) => {
         const content = item.text || item.content;
         if (typeof content === 'string') {
           return (
-            <div key={`content-${index}`} className={`content-${itemType || 'unknown'}.toLowerCase().replace(/[^a-z0-9-]/g, '-')}`}>
+            <div key={`content-${index}`} className={`content-${(itemType || 'unknown').toLowerCase().replace(/[^a-z0-9-]/g, '-')}`}>
               <p>{content}</p>
             </div>
           );
