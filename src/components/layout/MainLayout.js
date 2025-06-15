@@ -1,7 +1,7 @@
 // MainLayout.js - Universal Layout Controller for ALL data packet types
 import React from 'react';
 import ExercisePanel from '../common/ExercisePanel.js';
-import { parseContent } from '../common/ContentParser';
+import { parseContent } from '../common/ContentParser.js';
 
 const MainLayout = (props) => {
   const { 
@@ -34,69 +34,7 @@ const finalLeftContent = parsedContent.leftContent || leftContent;
 const finalExerciseData = parsedContent.exerciseData || lessonData;
   console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData); // Simple debug
 
-  // Add this to MainLayout.js right after the parsedContent useMemo:
-
-// DEBUG: Inspect parsed content for problematic data
-React.useEffect(() => {
-  if (parsedContent.leftContent || parsedContent.exerciseData) {
-    console.log('🔍 INSPECTING PARSED CONTENT:');
-    
-    // Check leftContent
-    if (parsedContent.leftContent) {
-      console.log('📄 Left Content:', parsedContent.leftContent);
-      
-      // Try to extract any props with className
-      const inspectElement = (element, path = 'root') => {
-        if (!element) return;
-        
-        if (element.props) {
-          if (element.props.className) {
-            console.log(` Found className at ${path}:`, JSON.stringify(element.props.className));
-            
-            // Check for problematic characters
-            if (typeof element.props.className === 'string') {
-              const problematicChars = /[\x00-\x1F\x7F-\x9F]/.exec(element.props.className);
-              if (problematicChars) {
-                console.error(`🚨 PROBLEMATIC CHARACTER FOUND at ${path}:`, problematicChars);
-              }
-            }
-          }
-          
-          // Recursively check children
-          if (element.props.children) {
-            React.Children.forEach(element.props.children, (child, index) => {
-              inspectElement(child, `${path}.children[${index}]`);
-            });
-          }
-        }
-      };
-      
-      inspectElement(parsedContent.leftContent, 'leftContent');
-    }
-    
-    // Check exerciseData
-    if (parsedContent.exerciseData) {
-      console.log('🎯 Exercise Data:', parsedContent.exerciseData);
-      
-      // Look for any text content that might have bad characters
-      const checkForBadChars = (obj, path = 'exerciseData') => {
-        if (typeof obj === 'string') {
-          const badChars = /[\x00-\x1F\x7F-\x9F]/.exec(obj);
-          if (badChars) {
-            console.error(`🚨 BAD CHARACTER in string at ${path}:`, JSON.stringify(obj));
-            console.error('🚨 Bad character code:', badChars[0].charCodeAt(0));
-          }
-        } else if (typeof obj === 'object' && obj !== null) {
-          Object.keys(obj).forEach(key => {
-            checkForBadChars(obj[key], `${path}.${key}`);
-          });
-        }
-      };
-      
-      checkForBadChars(parsedContent.exerciseData);
-    }
-  }
-}, [parsedContent]);
+  
 
   const renderLayout = () => {
     switch (layoutType) {
