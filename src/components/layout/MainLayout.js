@@ -19,20 +19,22 @@ const MainLayout = (props) => {
   } = props;
 
   // Auto-parse data if provided
-const parsedContent = React.useMemo(() => {
-  if (data) {
-    console.log('Parsing data:', data);
-    const result = parseContent(data);
-    console.log('Parse result:', result);
-    return result;
-  }
-  return { leftContent: null, exerciseData: null };
-}, [data]);
+  const parsedContent = React.useMemo(() => {
+    if (data) {
+      console.log('Parsing data:', data);
+      const result = parseContent(data);
+      console.log('Parse result:', result);
+      return result;
+    }
+    return { leftContent: null, exerciseData: null };
+  }, [data]);
 
-// Use parsed content if available, with better fallback logic
-const finalLeftContent = parsedContent.leftContent || leftContent;
-const finalExerciseData = parsedContent.exerciseData || lessonData;
-  console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData); // Simple debug
+  // Use parsed content if available, with better fallback logic
+  const finalLeftContent = parsedContent.leftContent || leftContent;
+  const finalExerciseData = parsedContent.exerciseData || lessonData;
+  const hasDataForSplit = finalLeftContent || finalExerciseData;
+  
+  console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData);
 
   const renderLayout = () => {
     switch (layoutType) {
@@ -46,67 +48,74 @@ const finalExerciseData = parsedContent.exerciseData || lessonData;
         );
 
       case 'grammar':
+        // Only create split layout if we have data for it
+        if (hasDataForSplit) {
+          return (
+            <div className="layout-split grammar-layout">
+              <div className="split-left grammar-content">
+                {finalLeftContent}
+              </div>
+              <div className="split-right grammar-exercises">
+                {finalExerciseData && progressManager ? (
+                  <ExercisePanel
+                    lessonData={finalExerciseData}
+                    progressManager={progressManager}
+                    onQuestionComplete={onQuestionComplete}
+                    onLessonComplete={onLessonComplete}
+                  />
+                ) : rightContent ? (
+                  rightContent
+                ) : (
+                  <div className="no-exercises">
+                    <p>No exercises available</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        }
+        // Fall back to full-width for children to handle their own layout
         return (
-          <div className="layout-split grammar-layout">
-            {/* LEFT SECTION - Images and Instructions */}
-            <div className="split-left grammar-content">
-              {finalLeftContent || children}
-            </div>
-            
-            {/* RIGHT SECTION - Interactive Exercises */}
-            <div className="split-right grammar-exercises">
-              {finalExerciseData && progressManager ? (
-                <ExercisePanel
-                  lessonData={finalExerciseData}
-                  progressManager={progressManager}
-                  onQuestionComplete={onQuestionComplete}
-                  onLessonComplete={onLessonComplete}
-                />
-              ) : rightContent ? (
-                rightContent
-              ) : (
-                <div className="no-exercises">
-                  <p>No exercises available</p>
-                </div>
-              )}
-            </div>
+          <div className="layout-full-width">
+            {children}
           </div>
         );
 
       case 'exam':
+        // Only create split layout if we have data for it
+        if (hasDataForSplit) {
+          return (
+            <div className="layout-split exam-layout">
+              <div className="split-left exam-text">
+                {finalLeftContent}
+              </div>
+              <div className="split-right exam-questions">
+                {finalExerciseData && progressManager ? (
+                  <ExercisePanel
+                    lessonData={finalExerciseData}
+                    progressManager={progressManager}
+                    onQuestionComplete={onQuestionComplete}
+                    onLessonComplete={onLessonComplete}
+                  />
+                ) : rightContent ? (
+                  rightContent
+                ) : (
+                  <div className="no-questions">
+                    <p>No questions available</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        }
+        // Fall back to full-width for children to handle their own layout
         return (
-          <div className="layout-split exam-layout">
-            {/* LEFT SECTION - Reading Content */}
-            <div className="split-left exam-text">
-              {finalLeftContent || children}
-            </div>
-            
-            {/* RIGHT SECTION - Questions */}
-            <div className="split-right exam-questions">
-              {finalExerciseData && progressManager ? (
-                <ExercisePanel
-                  lessonData={finalExerciseData}
-                  progressManager={progressManager}
-                  onQuestionComplete={onQuestionComplete}
-                  onLessonComplete={onLessonComplete}
-                />
-              ) : rightContent ? (
-                rightContent
-              ) : (
-                <div className="no-questions">
-                  <p>No questions available</p>
-                </div>
-              )}
-            </div>
+          <div className="layout-full-width">
+            {children}
           </div>
         );
 
       default:
-        console.log('About to render layout with data:', {
-          hasLeftContent: !!finalLeftContent,
-          hasExerciseData: !!finalExerciseData,
-          layoutType
-        });
         return (
           <div className="layout-default">
             <div className="content-container">
