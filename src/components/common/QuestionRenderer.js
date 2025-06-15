@@ -42,7 +42,7 @@ const QuestionRenderer = ({
         />
       );
 
-    case 'clickActivity':
+    case 'click':
       return (
         <ClickActivity
           instructions={props.instructions}
