@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import QuestionRenderer from './QuestionRenderer';
+import QuestionRenderer from './QuestionRenderer.js';
 
 const ExercisePanel = ({ 
   lessonData, 
