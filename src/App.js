@@ -45,23 +45,6 @@ import ExamsHomePage from './components/pages/exams/ExamsHomePage';
 import FEDEExamPage from './components/pages/exams/FEDEExamPage';
 import TOEICExamPage from './components/pages/exams/TOEICExamPage';
 
-// Add this at the very top of App.js - NUCLEAR ERROR CATCHER
-const originalCreateElement = React.createElement;
-React.createElement = function(type, props, ...children) {
-  if (props && props.className && typeof props.className === 'string') {
-    // Check for problematic characters
-    if (/[\x00-\x1F\x7F-\x9F]/.test(props.className)) {
-      console.error('🚨 INVALID CLASSNAME:', JSON.stringify(props.className));
-      console.error('🚨 Component type:', type);
-      console.error('🚨 Full props:', props);
-      console.trace('🚨 Stack trace:');
-      // Fix it on the fly
-      props = { ...props, className: 'safe-fallback' };
-    }
-  }
-  return originalCreateElement.call(this, type, props, ...children);
-};
-
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
