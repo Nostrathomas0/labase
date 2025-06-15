@@ -1418,13 +1418,6 @@ nav ul li a:hover, .page-info:hover {
   overflow-y: auto;
 }
 
-.grammar-images-instructions {
-  width: 100%;
-}
-
-.exercises-container {
-  width: 100%;
-}
 
 /* Ensure no weird flexbox issues */
 .lesson-content {
@@ -1526,4 +1519,63 @@ nav ul li a:hover, .page-info:hover {
   font-style: italic;
   color: #6c757d;
   font-size: 0.9em;
+}
+/* Additional styles for the updated MainLayout structure */
+/* Add these to your existing CSS file */
+
+/* Grammar layout specific styling */
+.grammar-layout .split-left {
+  background-color: #f8f9fa;
+}
+
+.grammar-layout .split-right {
+  background-color: #ffffff;
+}
+
+.grammar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.grammar-exercises {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Exam layout specific styling */
+.exam-layout .split-left {
+  background-color: #f8f9fa;
+}
+
+.exam-layout .split-right {
+  background-color: #ffffff;
+}
+
+/* Fallback content for when no exercises/questions are available */
+.no-exercises,
+.no-questions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #6c757d;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Ensure the main layout container takes full height */
+.main-layout {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Update your existing .layout-split to use flex: 1 instead of width: 50% for better flexibility */
+.split-left,
+.split-right {
+  flex: 1; /* This replaces your width: 50% for better flexibility */
+  /* Keep all your existing styles: padding, overflow-y, border-right */
 }

@@ -34,8 +34,6 @@ const finalLeftContent = parsedContent.leftContent || leftContent;
 const finalExerciseData = parsedContent.exerciseData || lessonData;
   console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData); // Simple debug
 
-  
-
   const renderLayout = () => {
     switch (layoutType) {
       case 'navigation':
@@ -50,66 +48,60 @@ const finalExerciseData = parsedContent.exerciseData || lessonData;
       case 'grammar':
         return (
           <div className="layout-split grammar-layout">
+            {/* LEFT SECTION - Images and Instructions */}
             <div className="split-left grammar-content">
-              <div className="grammar-images-instructions">
-                {finalLeftContent || children}
-              </div>
+              {finalLeftContent || children}
             </div>
+            
+            {/* RIGHT SECTION - Interactive Exercises */}
             <div className="split-right grammar-exercises">
-              <div className="exercises-container">
-                {rightContent ? (
-                  rightContent
-                ) : finalExerciseData ? (
-                  <ExercisePanel
-                    lessonData={finalExerciseData}
-                    progressManager={progressManager}
-                    onQuestionComplete={onQuestionComplete}
-                    onLessonComplete={onLessonComplete}
-                  />
-                ) : (
-                  <div className="exercises-placeholder">
-                    <h3>Interactive Exercises</h3>
-                    <p>Complete the exercises to practice this grammar topic.</p>
-                  </div>
-                )}
-              </div>
+              {finalExerciseData && progressManager ? (
+                <ExercisePanel
+                  lessonData={finalExerciseData}
+                  progressManager={progressManager}
+                  onQuestionComplete={onQuestionComplete}
+                  onLessonComplete={onLessonComplete}
+                />
+              ) : rightContent ? (
+                rightContent
+              ) : (
+                <div className="no-exercises">
+                  <p>No exercises available</p>
+                </div>
+              )}
             </div>
           </div>
         );
-        
 
       case 'exam':
         return (
           <div className="layout-split exam-layout">
+            {/* LEFT SECTION - Reading Content */}
             <div className="split-left exam-text">
-              <div className="exam-reading-content">
-                {finalLeftContent || children}
-              </div>
+              {finalLeftContent || children}
             </div>
+            
+            {/* RIGHT SECTION - Questions */}
             <div className="split-right exam-questions">
-              <div className="questions-container">
-                {rightContent ? (
-                  rightContent
-                ) : finalExerciseData ? (
-                  <ExercisePanel
-                    lessonData={finalExerciseData}
-                    progressManager={progressManager}
-                    onQuestionComplete={onQuestionComplete}
-                    onLessonComplete={onLessonComplete}
-                  />
-                ) : (
-                  <div className="questions-placeholder">
-                    <h3>Questions & Navigation</h3>
-                    <p>Answer the questions based on the text passages.</p>
-                  </div>
-                )}
-              </div>
+              {finalExerciseData && progressManager ? (
+                <ExercisePanel
+                  lessonData={finalExerciseData}
+                  progressManager={progressManager}
+                  onQuestionComplete={onQuestionComplete}
+                  onLessonComplete={onLessonComplete}
+                />
+              ) : rightContent ? (
+                rightContent
+              ) : (
+                <div className="no-questions">
+                  <p>No questions available</p>
+                </div>
+              )}
             </div>
           </div>
         );
 
       default:
-        // Add this just before the return in MainLayout
         console.log('About to render layout with data:', {
           hasLeftContent: !!finalLeftContent,
           hasExerciseData: !!finalExerciseData,
