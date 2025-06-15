@@ -127,6 +127,12 @@
   height: auto;
 }
 
+.instructions {
+  margin: 0;
+  line-height: 1.6;
+  text-align: justify; 
+}
+
 .instructions .text {
   font-family: sans-serif;
 }
@@ -150,7 +156,8 @@
 }
 
 .instructions .paragraph {
-  margin-bottom: 10px; /* Adjust as needed */
+  margin: 10px 0; 
+  text-indent: 0;
 }
 
 .instructions .default {
@@ -1260,6 +1267,12 @@ nav ul li a:hover, .page-info:hover {
 }
 
 /* Click Activity Styles */
+.click-activity {
+  clear: left;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+}
 .clickable-word {
   padding: 4px 8px;
   border-radius: 4px;
@@ -1339,7 +1352,26 @@ nav ul li a:hover, .page-info:hover {
 /* Feedback Styles */
 .feedback {
   margin-top: 15px;
-  padding: 10px;
+  padding: 10px;/* NO MORE DYNAMIC GENERATION - JUST THESE FIXED CLASSES */
+
+.lesson-image {
+  float: left;
+  max-width: 500px;
+  margin: 0 20px 20px 0;
+  text-align: center;
+}
+
+.lesson-image img {
+  max-width: 100%;
+  max-height: 500px;  /* or whatever height you want */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.lesson-instructions {
+  margin: 15px 0;
+}
   border-radius: 5px;
   font-weight: 500;
 }
@@ -1441,8 +1473,18 @@ nav ul li a:hover, .page-info:hover {
 /* NO MORE DYNAMIC GENERATION - JUST THESE FIXED CLASSES */
 
 .lesson-image {
-  margin: 20px 0;
+  float: left;
+  max-width: 400px;
+  margin: 0 20px 20px 0;
   text-align: center;
+}
+
+.lesson-image img {
+  max-width: 100%;
+  max-height: 300px;  /* or whatever height you want */
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .lesson-instructions {
@@ -1533,10 +1575,10 @@ nav ul li a:hover, .page-info:hover {
 }
 
 .grammar-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
+  display: block;
+  overflow: hidden;
+  line-height: 1.6;
+  padding: 20px;
 }
 
 .grammar-exercises {
@@ -1578,4 +1620,51 @@ nav ul li a:hover, .page-info:hover {
 .split-right {
   flex: 1; /* This replaces your width: 50% for better flexibility */
   /* Keep all your existing styles: padding, overflow-y, border-right */
+}
+/* Force text to flow around floated image */
+.grammar-content {
+  display: block;
+  overflow: visible;
+}
+
+.lesson-image {
+  float: left;
+  max-width: 250px;
+  margin: 0 15px 15px 0;
+}
+
+.lesson-instructions {
+  overflow: visible;
+}
+
+.instructions .paragraph {
+  overflow: visible;
+  text-align: justify;
+
+}.flowing-content {
+  line-height: 1.6;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.flowing-content .lesson-image {
+  float: left;
+  max-width: 450px;
+  margin: 0 15px 15px 0;
+  text-align: center;
+}
+
+.flowing-content .lesson-image img {
+  max-width: 100%;
+  max-height: 450px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.flowing-content .click-activity {
+  clear: left;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
 }

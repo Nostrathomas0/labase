@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 // STATIC MAPPING - NO MORE DYNAMIC GENERATION!
 const getTextStyleClass = (textStyle) => {
   switch (textStyle) {
-    case 'bold': return 'text-bold';
-    case 'italic': return 'text-italic';
-    case 'underline': return 'text-underline';
-    case 'strikethrough': return 'text-strikethrough';
-    default: return 'text-normal';
+    case 'bold': return 'bold';
+    case 'italic': return 'italic';
+    case 'underline': return 'underline';
+    case 'strikethrough': return 'strike';
+    case 'strike': return 'strike';
+    default: return 'text';
   }
 };
 

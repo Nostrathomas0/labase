@@ -2,20 +2,34 @@
 import React from 'react';
 import ImageDisplay from './ImageDisplay';
 import Instructions from './Instructions';
+import ClickActivity from './ClickActivity';
 
 // Define which content types go where
 const LEFT_PANEL_TYPES = [
   'image', 'instructions', 'text', 'heading', 'paragraph', 'title', 
   'subtitle', 'description', 'explanation', 'example', 'note',
-  'reading', 'passage', 'story', 'dialogue', 'conversation', 'imagedisplay'
+  'reading', 'passage', 'story', 'dialogue', 'conversation', 'imagedisplay',
+  'click', 'clickactivity'  // MOVED: Click activities now go to left panel
 ];
 
 const RIGHT_PANEL_TYPES = [
-  'multipleChoice', 'clickActivity', 'gapFill', 'wordBank', 'wordBankActivity',
+  'multipleChoice', 'gapFill', 'wordBank', 'wordBankActivity',
   'question', 'exercise', 'activity', 'quiz', 'test', 'assessment',
-  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks',  'click', 'wordBank', 'multiplechoice', 'gapfill'
+  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks', 'multiplechoice', 'gapfill'
+  // REMOVED: 'clickActivity', 'click' - these now go to left panel
 ];
 
+// Helper function for text styles
+const getTextStyleClass = (textStyle) => {
+  switch (textStyle) {
+    case 'bold': return 'bold';
+    case 'italic': return 'italic';
+    case 'underline': return 'underline';
+    case 'strikethrough': return 'strike';
+    case 'strike': return 'strike';
+    default: return 'text';
+  }
+};
 
 export const parseContent = (data) => {
   console.log('=== CONTENT PARSER START ===');
@@ -107,7 +121,7 @@ export const parseContent = (data) => {
     // Determine which panel this goes to
     if (LEFT_PANEL_TYPES.includes(normalizedType)) {
       console.log(`Item ${index} -> LEFT PANEL`);
-      leftItems.push(renderLeftPanelItem({...item, type: itemType}, index));
+      leftItems.push({...item, type: itemType, originalIndex: index});
     } else if (RIGHT_PANEL_TYPES.includes(normalizedType)) {
       console.log(`Item ${index} -> RIGHT PANEL`);
       exerciseItems.push({
@@ -127,16 +141,17 @@ export const parseContent = (data) => {
         });
       } else {
         console.log(`Item ${index} -> Looks like content, adding to LEFT PANEL`);
-        leftItems.push(renderLeftPanelItem(item, index));
+        leftItems.push({...item, type: 'text', originalIndex: index});
       }
     }
   });
 
   console.log(`Final results: ${leftItems.length} left items, ${exerciseItems.length} exercise items`);
 
+  // Create flowing content where image and instructions are siblings
   const leftContent = leftItems.length > 0 ? (
-    <div className="lesson-content">
-      {leftItems}
+    <div className="lesson-content flowing-content">
+      {renderFlowingContent(leftItems)}
     </div>
   ) : null;
 
@@ -154,35 +169,105 @@ export const parseContent = (data) => {
   return { leftContent, exerciseData };
 };
 
-/// Replace your entire renderLeftPanelItem function with this version:
-// NO MORE DYNAMIC CSS GENERATION - STATIC CLASSES ONLY
+// NEW: Render flowing content where image and text are siblings
+const renderFlowingContent = (items) => {
+  const flowingElements = [];
+  
+  items.forEach((item, index) => {
+    const itemType = item.type?.toLowerCase();
+    const originalIndex = item.originalIndex || index;
+    
+    if (itemType === 'imagedisplay' || itemType === 'image') {
+      // Add image directly to the flowing content
+      flowingElements.push(
+        <div key={`image-${originalIndex}`} className="lesson-image">
+          <ImageDisplay
+            imagePath={item.imagePath || item.image || item.src}
+            altText={item.altText || item.alt || 'Lesson image'}
+          />
+          {item.caption && (
+            <p className="image-caption">{item.caption}</p>
+          )}
+        </div>
+      );
+    } else if (itemType === 'instructions') {
+      // Add instructions content directly as flowing text
+      if (item.instructions && Array.isArray(item.instructions)) {
+        const paragraphs = [];
+        let currentParagraph = [];
 
+        item.instructions.forEach((instruction, instrIndex) => {
+          // If newParagraph is true, push current paragraph and start new one
+          if (instruction.newParagraph && currentParagraph.length > 0) {
+            paragraphs.push(currentParagraph);
+            currentParagraph = [];
+          }
+
+          const textStyle = getTextStyleClass(instruction.textStyle);
+          currentParagraph.push(
+            <React.Fragment key={`text-${originalIndex}-${instrIndex}`}>
+              {instruction.newLine && <br />}
+              <span className={textStyle}>
+                {instruction.text}
+              </span>
+            </React.Fragment>
+          );
+        });
+
+        // Push any remaining lines to paragraphs
+        if (currentParagraph.length > 0) {
+          paragraphs.push(currentParagraph);
+        }
+
+        // Add paragraphs to flowing content
+        paragraphs.forEach((paragraph, pIndex) => {
+          flowingElements.push(
+            <p key={`paragraph-${originalIndex}-${pIndex}`} className="paragraph">
+              {paragraph}
+            </p>
+          );
+        });
+      }
+    } else if (itemType === 'click' || itemType === 'clickactivity') {
+      // FIRST: Render instructions using the Instructions component for proper formatting
+      if (item.instructions && Array.isArray(item.instructions)) {
+        flowingElements.push(
+          <div key={`click-instructions-${originalIndex}`} className="flowing-instructions">
+            <Instructions instructions={item.instructions} />
+          </div>
+        );
+      }
+
+      // THEN: Add the clickable words section below (clears float)
+      flowingElements.push(
+        <div key={`click-activity-${originalIndex}`} className="click-activity">
+          <ClickActivity
+            instructions={[]} // Empty since we already rendered them above
+            words={item.words || []}
+            keyWords={item.keyWords || []}
+            layout={item.layout || 'horizontal'}
+            questionId={`click-${originalIndex}`}
+            onAnswer={(result) => {
+              console.log('Click activity answered:', result);
+            }}
+          />
+        </div>
+      );
+    } else {
+      // Other content types - render as separate elements
+      flowingElements.push(renderLeftPanelItem(item, originalIndex));
+    }
+  });
+  
+  return flowingElements;
+};
+
+// Keep the original renderLeftPanelItem for non-flowing content
 const renderLeftPanelItem = (item, index) => {
   const itemType = item.type?.toLowerCase();
 
   try {
     switch (itemType) {
-      case 'imagedisplay':
-      case 'image':
-        return (
-          <div key={`image-${index}`} className="lesson-image">
-            <ImageDisplay
-              imagePath={item.imagePath || item.image || item.src}
-              altText={item.altText || item.alt || 'Lesson image'}
-            />
-            {item.caption && (
-              <p className="image-caption">{item.caption}</p>
-            )}
-          </div>
-        );
-
-      case 'instructions':
-        return (
-          <div key={`instructions-${index}`} className="lesson-instructions">
-            <Instructions instructions={item.instructions || []} />
-          </div>
-        );
-
       case 'text':
       case 'paragraph':
         return (
@@ -223,7 +308,6 @@ const renderLeftPanelItem = (item, index) => {
         );
 
       default:
-        // NO MORE DYNAMIC CLASSES - JUST USE A SIMPLE STATIC CLASS
         const content = item.text || item.content;
         if (typeof content === 'string') {
           return (
