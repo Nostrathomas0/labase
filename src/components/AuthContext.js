@@ -13,6 +13,7 @@ export const AuthProvider = ({ children }) => {
   const [userEmail, setUserEmail] = useState('');
   const [loading, setLoading] = useState(true);
   const authAttempted = useRef(false);
+  const jwtAuthSuccess = useRef(false); // Track if JWT auth was successful
 
   useEffect(() => {
     console.log("AuthContext useEffect running");
@@ -42,31 +43,38 @@ export const AuthProvider = ({ children }) => {
           setCurrentUser(jwtUser);
           setUserEmail(decodedToken.email || '');
           setLoading(false);
+          jwtAuthSuccess.current = true; // Mark JWT auth as successful
           return; // Exit early - we have JWT auth
         }
       } catch (error) {
         console.error('JWT Authentication failed:', error);
         clearJwtToken(); // Clear invalid JWT
+        jwtAuthSuccess.current = false;
       }
 
-      // Priority 2: Check Firebase auth (fallback only)
-      const unsubscribe = onAuthStateChanged(auth, async (user) => {
-        console.log("Firebase auth state:", user ? "User logged in" : "No user");
-        
-        if (user) {
-          console.log("Using Firebase user as fallback");
-          setCurrentUser(user);
-          setUserEmail(user.email || '');
-        } else {
-          console.log("No authentication found");
-          setCurrentUser(null);
-          setUserEmail('');
-        }
-        setLoading(false);
-      });
+      // Priority 2: Check Firebase auth (only if JWT failed)
+      if (!jwtAuthSuccess.current) {
+        console.log("No JWT auth, checking Firebase...");
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+          console.log("Firebase auth state:", user ? "User logged in" : "No user");
+          
+          if (user) {
+            console.log("Using Firebase user");
+            setCurrentUser(user);
+            setUserEmail(user.email || '');
+          } else {
+            console.log("No authentication found");
+            setCurrentUser(null);
+            setUserEmail('');
+          }
+          setLoading(false);
+        });
 
-      // Cleanup function
-      return unsubscribe;
+        // Return cleanup function
+        return unsubscribe;
+      } else {
+        console.log("JWT auth successful, skipping Firebase check");
+      }
     };
 
     const cleanup = checkAuthentication();
