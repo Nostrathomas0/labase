@@ -4,7 +4,6 @@ import { jwtDecode } from 'jwt-decode';
 
 console.log("Firebase Auth:", auth);
 
-
 const getJwtTokenManual = () => {
   const cookies = document.cookie.split(';');
   const jwtCookie = cookies.find(cookie => cookie.trim().startsWith('JWT='));
@@ -12,10 +11,11 @@ const getJwtTokenManual = () => {
 };
 
 /**
- * Retrieve the JWT token from cookies.
+ * Retrieve the JWT token from cookies with retry logic.
+ * @param {number} retries - Number of retries if cookie not found
  * @returns {string|null} - The JWT token if found, otherwise null.
  */
-export const getJwtToken = () => {
+export const getJwtToken = (retries = 3) => {
   console.log('All cookies raw:', document.cookie);
   
   // Try js-cookie first
@@ -26,6 +26,16 @@ export const getJwtToken = () => {
   if (!token) {
     token = getJwtTokenManual();
     console.log('Manual cookie reading result:', token);
+  }
+  
+  // If still no token and we have retries left, wait a bit and try again
+  if (!token && retries > 0) {
+    console.log(`No token found, retrying... (${retries} attempts left)`);
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(getJwtToken(retries - 1));
+      }, 100); // Wait 100ms and try again
+    });
   }
   
   console.log('Retrieved JWT from storage:', token ? 'Found' : 'Not found');
@@ -39,13 +49,26 @@ export const getJwtToken = () => {
 export const setJwtToken = (token) => {
   if (token) {
     // Set only JWT cookie (our standardized name)
-    Cookies.set('JWT', token, { 
+    const cookieOptions = { 
       secure: window.location.protocol === 'https:', 
       sameSite: 'strict',
       expires: 7, // 7 days
-      domain: window.location.hostname.includes('languapps.com') ? '.languapps.com' : undefined
-    });
-    console.log('JWT token saved to storage');
+      path: '/', // Make sure path is set
+    };
+    
+    // Only set domain if on languapps.com
+    if (window.location.hostname.includes('languapps.com')) {
+      cookieOptions.domain = '.languapps.com';
+    }
+    
+    Cookies.set('JWT', token, cookieOptions);
+    console.log('JWT token saved to storage with options:', cookieOptions);
+    
+    // Verify it was set
+    setTimeout(() => {
+      const verification = Cookies.get('JWT');
+      console.log('JWT verification after save:', verification ? 'Found' : 'Not found');
+    }, 50);
   } else {
     clearJwtToken();
   }
@@ -55,21 +78,27 @@ export const setJwtToken = (token) => {
  * Clear the JWT token from storage
  */
 export const clearJwtToken = () => {
-  // Clear JWT cookie (our standardized name)
-  Cookies.remove('JWT', { 
-    domain: window.location.hostname.includes('languapps.com') ? '.languapps.com' : undefined 
-  });
+  const removeOptions = { 
+    path: '/'
+  };
   
+  // Only set domain if on languapps.com
+  if (window.location.hostname.includes('languapps.com')) {
+    removeOptions.domain = '.languapps.com';
+  }
+  
+  Cookies.remove('JWT', removeOptions);
   console.log('JWT token cleared from storage');
 };
 
 /**
- * Authenticate the user using the JWT token.
+ * Authenticate the user using the JWT token with async support.
  * @returns {Promise<Object>} - Resolves with decoded token if authentication succeeds.
  */
 export const authenticateWithJwt = async () => {
   try {
-    const token = getJwtToken();
+    // Get token with async support for retries
+    const token = await getJwtToken();
     if (!token) {
       throw new Error('No JWT token found in storage.');
     }
@@ -85,7 +114,6 @@ export const authenticateWithJwt = async () => {
       throw new Error('JWT token has expired');
     }
 
-    // Don't try to sign in with Firebase - your backend JWT IS the authentication
     console.log('User authenticated successfully with JWT.');
     return decodedToken;
   } catch (error) {
