@@ -1441,6 +1441,7 @@ nav ul li a:hover, .page-info:hover {
   width: 50%;
   padding: 20px;
   overflow-y: auto;
+  overflow-y: auto;
   border-right: 1px solid #ddd;
 }
 
@@ -1575,6 +1576,8 @@ nav ul li a:hover, .page-info:hover {
 }
 
 .grammar-content {
+  overflow-y: auto;
+  height: 100%;
   display: block;
   overflow: hidden;
   line-height: 1.6;
@@ -1642,6 +1645,8 @@ nav ul li a:hover, .page-info:hover {
   text-align: justify;
 
 }.flowing-content {
+  height: auto;
+  max-height: none;
   line-height: 1.6;
   text-align: justify;
   overflow: hidden;
