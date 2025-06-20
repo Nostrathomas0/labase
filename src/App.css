@@ -1435,10 +1435,11 @@ nav ul li a:hover, .page-info:hover {
 }
 
 .split-left {
-  width: 50%;
+  flex: 1;
   padding: 20px;
-  overflow-y: auto;        /* Remove duplicate */
-  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  height: calc(100vh - 40px);  /* Account for padding */
+  box-sizing: border-box;
 }
 
 .split-right {
@@ -1567,10 +1568,11 @@ nav ul li a:hover, .page-info:hover {
 
 .grammar-content {
   display: block;
-  overflow-y: auto;           /* Enable vertical scrolling */
-  height: 100%;               /* Take full height */
+  overflow-y: auto;
+  height: calc(100vh - 40px);  /* Subtract padding from viewport height */
   line-height: 1.6;
   padding: 20px;
+  box-sizing: border-box;      /* Include padding in height calculation */
 }
 
 .grammar-exercises {
