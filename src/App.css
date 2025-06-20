@@ -1356,7 +1356,7 @@ nav ul li a:hover, .page-info:hover {
 
 .lesson-image {
   float: left;
-  max-width: 500px;
+  max-width: 450px;
   margin: 0 20px 20px 0;
   text-align: center;
 }
@@ -1440,8 +1440,7 @@ nav ul li a:hover, .page-info:hover {
 .split-left {
   width: 50%;
   padding: 20px;
-  overflow-y: auto;
-  overflow-y: auto;
+  overflow-y: auto;        /* Remove duplicate */
   border-right: 1px solid #ddd;
 }
 
@@ -1473,12 +1472,6 @@ nav ul li a:hover, .page-info:hover {
 /* Add these simple, static CSS classes to your stylesheet */
 /* NO MORE DYNAMIC GENERATION - JUST THESE FIXED CLASSES */
 
-.lesson-image {
-  float: left;
-  max-width: 400px;
-  margin: 0 20px 20px 0;
-  text-align: center;
-}
 
 .lesson-image img {
   max-width: 100%;
@@ -1576,10 +1569,9 @@ nav ul li a:hover, .page-info:hover {
 }
 
 .grammar-content {
-  overflow-y: auto;
-  height: 100%;
   display: block;
-  overflow: hidden;
+  overflow-y: auto;           /* Enable vertical scrolling */
+  height: 100%;               /* Take full height */
   line-height: 1.6;
   padding: 20px;
 }
@@ -1618,23 +1610,12 @@ nav ul li a:hover, .page-info:hover {
   overflow: hidden;
 }
 
-/* Update your existing .layout-split to use flex: 1 instead of width: 50% for better flexibility */
-.split-left,
 .split-right {
   flex: 1; /* This replaces your width: 50% for better flexibility */
   /* Keep all your existing styles: padding, overflow-y, border-right */
 }
 /* Force text to flow around floated image */
-.grammar-content {
-  display: block;
-  overflow: visible;
-}
 
-.lesson-image {
-  float: left;
-  max-width: 250px;
-  margin: 0 15px 15px 0;
-}
 
 .lesson-instructions {
   overflow: visible;
