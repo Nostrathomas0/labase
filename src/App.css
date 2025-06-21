@@ -372,7 +372,9 @@ nav ul li a:hover, .page-info:hover {
   background-color: #f9f9f9;
   font-style: italic;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: blue; /* Optional: Add color for visibility */
+  color: blue;
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 .blockquote.horizontal {
@@ -1278,10 +1280,12 @@ nav ul li a:hover, .page-info:hover {
 
 /* Click Activity Styles */
 .click-activity {
-  clear: left;
+  clear: both;
+  width: 100%;
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #222;
+  overflow: visible;
 }
 .clickable-word {
   padding: 4px 8px;
@@ -1626,9 +1630,10 @@ nav ul li a:hover, .page-info:hover {
 }.flowing-content {
   height: auto;
   max-height: none;
+  min-height: none;
   line-height: 1.6;
   text-align: justify;
-  overflow: hidden;
+  overflow: visable;
 }
 
 .flowing-content .lesson-image {
@@ -1647,7 +1652,7 @@ nav ul li a:hover, .page-info:hover {
 }
 
 .flowing-content .click-activity {
-  clear: left;
+  clear: both;
   margin-top: 20px;
   padding-top: 15px;
   border-top: 1px solid #eee;
