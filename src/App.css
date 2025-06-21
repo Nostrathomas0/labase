@@ -1612,7 +1612,7 @@ nav ul li a:hover, .page-info:hover {
 .main-layout {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .split-right {
@@ -1634,6 +1634,7 @@ nav ul li a:hover, .page-info:hover {
   line-height: 1.6;
   text-align: justify;
   overflow: visible;
+  min-height: 100%;
 }
 
 .flowing-content .lesson-image {
