@@ -1447,14 +1447,8 @@ nav ul li a:hover, .page-info:hover {
   overflow-y: auto;
   height: calc(100vh - 40px);  /* Account for padding */
   box-sizing: border-box;
+  border-right: 1px solid #ddd;
 }
-
-.split-right {
-  width: 50%;
-  padding: 20px;
-  overflow-y: auto;
-}
-
 
 /* Ensure no weird flexbox issues */
 .lesson-content {
@@ -1618,7 +1612,9 @@ nav ul li a:hover, .page-info:hover {
 
 .split-right {
   flex: 1; /* This replaces your width: 50% for better flexibility */
-  /* Keep all your existing styles: padding, overflow-y, border-right */
+  padding: 10px 10px 10px 20px;
+  overflow-y: auto;
+  border-right:#000000;
 }
 /* Force text to flow around floated image */
 
