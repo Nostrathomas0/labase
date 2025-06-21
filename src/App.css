@@ -382,7 +382,7 @@ nav ul li a:hover, .page-info:hover {
 }
 .words-container.horizontal {
   display: flex;
-  flex-wrap: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 100%; /* Fit the container width */
