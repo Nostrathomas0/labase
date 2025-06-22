@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [userEmail, setUserEmail] = useState('');
   const [loading, setLoading] = useState(true);
-  const authAttempted = useRef(false);
+  const authInProgress = useRef(false);
   const jwtAuthSuccess = useRef(false); // Track if JWT auth was successful
 
   useEffect(() => {
@@ -20,8 +20,8 @@ export const AuthProvider = ({ children }) => {
     
     // Check for JWT first, then Firebase as fallback
     const checkAuthentication = async () => {
-      if (authAttempted.current) return;
-      authAttempted.current = true;
+      if (authInProgress.current) return;
+      authInProgress.current = true;
 
       try {
         // Priority 1: Check for JWT token
@@ -29,27 +29,48 @@ export const AuthProvider = ({ children }) => {
         console.log("JWT token found:", !!token);
         
         if (token) {
-          console.log("Attempting JWT authentication");
-          const decodedToken = await authenticateWithJwt();
-          
-          // JWT authentication successful
-          const jwtUser = {
-            uid: decodedToken.uid,
-            email: decodedToken.email,
-            isJwtUser: true
-          };
-          
-          console.log("JWT authentication successful:", jwtUser);
-          setCurrentUser(jwtUser);
-          setUserEmail(decodedToken.email || '');
-          setLoading(false);
-          jwtAuthSuccess.current = true; // Mark JWT auth as successful
-          return; // Exit early - we have JWT auth
+          const payload = JSON.parse(atob(token.split('.')[1]));
+          if (payload.exp * 1000 < Date.now()) {
+            console.warn("JWT token expired, clearing token");
+            clearJwtToken(); // Clear expired JWT
+          } else {
+            console.log("JWT token is valid, proceeding with authentication");
+            const decodedToken = await authenticateWithJwt();
+            const jwtUser = {
+              uid: decodedToken.uid,
+              email: decodedToken.email,
+              isJwtUser: true
+            };
+            
+            console.log("JWT authentication successful:", jwtUser);
+            setCurrentUser(jwtUser);
+            setUserEmail(decodedToken.email || '');
+            setLoading(false);
+            jwtAuthSuccess.current = true;
+
+            // Set up auto refresh
+            const timeUntilExpiry = (payload.exp * 1000) - Date.now();
+            const refreshTime = timeUntilExpiry - (10 * 60 * 1000); // 10 min before expiry
+
+            if (refreshTime > 0) {
+              setTimeout(async () => {
+                try {
+                  await authenticateWithJwt(); // This should refresh the token
+                } catch (error) {
+                  console.error('Auto refresh failed:', error);
+                }
+              }, refreshTime);
+            }
+
+            authInProgress.current = false;
+            return; // Exit early - we have JWT auth
+          }
         }
       } catch (error) {
         console.error('JWT Authentication failed:', error);
         clearJwtToken(); // Clear invalid JWT
         jwtAuthSuccess.current = false;
+        authInProgress.current = false;
       }
 
       // Priority 2: Check Firebase auth (only if JWT failed)
@@ -68,12 +89,14 @@ export const AuthProvider = ({ children }) => {
             setUserEmail('');
           }
           setLoading(false);
+          authInProgress.current = false;
         });
 
         // Return cleanup function
         return unsubscribe;
       } else {
         console.log("JWT auth successful, skipping Firebase check");
+        authInProgress.current = false;
       }
     };
 
