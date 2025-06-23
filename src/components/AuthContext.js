@@ -25,14 +25,18 @@ export const AuthProvider = ({ children }) => {
 
       try {
         // Priority 1: Check for JWT token
-        const token = getJwtToken();
+        const token = await getJwtToken(); // FIXED: Added await
         console.log("JWT token found:", !!token);
+        console.log("DEBUG - Token type:", typeof token);
+        console.log("DEBUG - Token value:", token);
+        console.log("DEBUG - Is string?", typeof token === 'string');
         
         if (token) {
           const payload = JSON.parse(atob(token.split('.')[1]));
           if (payload.exp * 1000 < Date.now()) {
             console.warn("JWT token expired, clearing token");
             clearJwtToken(); // Clear expired JWT
+            authInProgress.current = false;
           } else {
             console.log("JWT token is valid, proceeding with authentication");
             const decodedToken = await authenticateWithJwt();

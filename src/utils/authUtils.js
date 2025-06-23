@@ -13,9 +13,9 @@ const getJwtTokenManual = () => {
 /**
  * Retrieve the JWT token from cookies with retry logic.
  * @param {number} retries - Number of retries if cookie not found
- * @returns {string|null} - The JWT token if found, otherwise null.
+ * @returns {Promise<string|null>} - Always returns a Promise that resolves to the JWT token or null.
  */
-export const getJwtToken = (retries = 3) => {
+export const getJwtToken = async (retries = 3) => {
   console.log('All cookies raw:', document.cookie);
   
   // Try js-cookie first
@@ -31,11 +31,8 @@ export const getJwtToken = (retries = 3) => {
   // If still no token and we have retries left, wait a bit and try again
   if (!token && retries > 0) {
     console.log(`No token found, retrying... (${retries} attempts left)`);
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(getJwtToken(retries - 1));
-      }, 100); // Wait 100ms and try again
-    });
+    await new Promise(resolve => setTimeout(resolve, 100)); // Wait 100ms
+    return getJwtToken(retries - 1); // Recursive call
   }
   
   console.log('Retrieved JWT from storage:', token ? 'Found' : 'Not found');
