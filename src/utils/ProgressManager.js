@@ -1,4 +1,4 @@
-// ProgressManager.js - Updated with Correct Lambda Endpoint
+// ProgressManager.js - Complete fixed version with proper state management
 
 class ProgressManager {
   constructor() {
@@ -11,7 +11,9 @@ class ProgressManager {
       lastActivity: null
     };
     
-    // Load existing progress from JWT when initialized
+    // Track questions using Map for better state management
+    this.questionStates = new Map(); // questionId -> state
+    
     this.loadProgressFromJWT();
     console.log('[ProgressManager] Initialized with existing progress');
   }
@@ -44,7 +46,47 @@ class ProgressManager {
       lastActivity: new Date().toISOString(),
       sessionId: `${level}-${topic}-${page}-${Date.now()}`
     };
+    
+    // Only clear question states if starting completely fresh
+    if (!this.questionStates.size) {
+      this.questionStates.clear();
+      console.log('[ProgressManager] Question states cleared for new session');
+    }
+    
     console.log(`[ProgressManager] Started new session: ${level}-${topic}-p${page}`);
+  }
+
+  // Initialize question only if not already tracked
+  initializeQuestion(questionId) {
+    if (!this.questionStates.has(questionId)) {
+      this.questionStates.set(questionId, {
+        questionId,
+        isAnswered: false,
+        showFeedback: false,
+        userAnswer: null,
+        isCorrect: null
+      });
+      console.log(`[ProgressManager] Initialized new question: ${questionId}`);
+    } else {
+      console.log(`[ProgressManager] Question ${questionId} already initialized`);
+    }
+  }
+
+  // Check if question is already answered
+  isQuestionAnswered(questionId) {
+    const state = this.questionStates.get(questionId);
+    return state ? state.isAnswered : false;
+  }
+
+  // Get current question state
+  getCurrentQuestionState(questionId) {
+    return this.questionStates.get(questionId) || {
+      questionId,
+      isAnswered: false,
+      showFeedback: false,
+      userAnswer: null,
+      isCorrect: null
+    };
   }
 
   // Record an answer to any question type
@@ -59,6 +101,15 @@ class ProgressManager {
       timeSpent: questionData.timeSpent || null,
       attempts: questionData.attempts || 1
     };
+
+    // Update question state in Map
+    this.questionStates.set(answer.questionId, {
+      questionId: answer.questionId,
+      isAnswered: true,
+      showFeedback: true,
+      userAnswer: answer.userAnswer,
+      isCorrect: answer.isCorrect
+    });
 
     // Add or update question in current session
     const existingIndex = this.currentSession.questions.findIndex(
@@ -160,7 +211,7 @@ class ProgressManager {
     return Math.round((end - start) / 1000);
   }
 
-  // Send update to Lambda function - UPDATED WITH CORRECT ENDPOINT
+  // Send update to Lambda function
   async sendJWTUpdate(progressData, updateType = 'update') {
     try {
       const currentJWT = this.getJWTFromCookie();
@@ -172,7 +223,6 @@ class ProgressManager {
       console.log(`[ProgressManager] Sending ${updateType} to Lambda...`);
       console.log('[ProgressManager] Update data:', progressData);
 
-      // UPDATED: Using the correct Lambda endpoint
       const response = await fetch('https://ai98hipstc.execute-api.us-east-1.amazonaws.com/default/LanguFunct', {
         method: 'POST',
         headers: {
@@ -188,7 +238,6 @@ class ProgressManager {
 
       console.log(`[ProgressManager] Lambda response status: ${response.status}`);
 
-      // Get response text first to debug
       const responseText = await response.text();
       console.log('[ProgressManager] Raw Lambda response:', responseText);
 
@@ -237,7 +286,6 @@ class ProgressManager {
 
   // Update JWT cookie
   updateJWTCookie(newJWT) {
-    // Set cookie with proper domain and security settings
     const cookieString = `JWT=${newJWT}; path=/; domain=.languapps.com; secure; samesite=none; max-age=86400`;
     document.cookie = cookieString;
     console.log('[ProgressManager] JWT cookie updated');
@@ -276,7 +324,7 @@ class ProgressManager {
   }
 }
 
-// Enhanced Question Handler
+// Enhanced Question Handler with proper state management
 class QuestionHandler {
   constructor(progressManager) {
     this.progressManager = progressManager;
@@ -284,13 +332,35 @@ class QuestionHandler {
   }
 
   startQuestion(questionId, questionType) {
-    this.questionStartTime = Date.now();
-    this.currentQuestionId = questionId;
-    this.currentQuestionType = questionType;
-    console.log(`[QuestionHandler] Started tracking: ${questionId} (${questionType})`);
+    // Only start if not already answered
+    if (!this.progressManager.isQuestionAnswered(questionId)) {
+      this.progressManager.initializeQuestion(questionId);
+      this.questionStartTime = Date.now();
+      this.currentQuestionId = questionId;
+      this.currentQuestionType = questionType;
+      console.log(`[QuestionHandler] Started tracking: ${questionId} (${questionType})`);
+    } else {
+      console.log(`[QuestionHandler] Question ${questionId} already answered, not starting new tracking`);
+    }
+  }
+
+  // Check if question should show as answered
+  shouldShowAsAnswered(questionId) {
+    return this.progressManager.isQuestionAnswered(questionId);
+  }
+
+  // Get current question display state
+  getQuestionDisplayState(questionId) {
+    return this.progressManager.getCurrentQuestionState(questionId);
   }
 
   handleAnswer(userAnswer, correctAnswer, isCorrect) {
+    // Prevent handling if already answered
+    if (this.progressManager.isQuestionAnswered(this.currentQuestionId)) {
+      console.log(`[QuestionHandler] Question ${this.currentQuestionId} already answered, ignoring`);
+      return this.progressManager.getCurrentQuestionState(this.currentQuestionId);
+    }
+
     const timeSpent = this.questionStartTime ? 
       Math.round((Date.now() - this.questionStartTime) / 1000) : null;
 
@@ -310,10 +380,19 @@ class QuestionHandler {
     console.log(`[QuestionHandler] Current progress: ${progress.correctAnswers}/${progress.totalQuestions} (${progress.score}%)`);
 
     return {
+      questionIndex: this.extractQuestionIndex(this.currentQuestionId),
+      questionId: this.currentQuestionId,
       isCorrect,
+      userAnswer,
+      correctAnswer,
       feedback: this.getFeedback(isCorrect, correctAnswer),
       progress: progress
     };
+  }
+
+  extractQuestionIndex(questionId) {
+    const match = questionId.match(/(\d+)$/);
+    return match ? parseInt(match[1]) : 0;
   }
 
   getFeedback(isCorrect, correctAnswer) {

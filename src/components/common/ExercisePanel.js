@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import QuestionRenderer from './QuestionRenderer.js';
+import { QuestionHandler } from '../../utils/ProgressManager.js';
 
 const ExercisePanel = ({ 
   lessonData, 
@@ -10,12 +11,31 @@ const ExercisePanel = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(currentQuestionIndex);
   const [completedQuestions, setCompletedQuestions] = useState(new Set());
+  const [questionKey, setQuestionKey] = useState(0); // Force re-mount
+  const [questionHandler] = useState(() => new QuestionHandler(progressManager));
 
   // Reset when lesson changes
   useEffect(() => {
     setCurrentIndex(0);
     setCompletedQuestions(new Set());
+    setQuestionKey(0);
   }, [lessonData]);
+
+  // Initialize question when currentIndex changes
+  useEffect(() => {
+    if (lessonData && lessonData.questions && lessonData.questions[currentIndex]) {
+      const currentQuestion = lessonData.questions[currentIndex];
+      const questionId = `q_${currentIndex}`;
+      const questionType = currentQuestion.type || 'multipleChoice';
+      
+      console.log(`[ExercisePanel] Initializing question ${questionId}`);
+      
+      // Small delay to ensure React has finished rendering
+      setTimeout(() => {
+        questionHandler.startQuestion(questionId, questionType);
+      }, 50);
+    }
+  }, [currentIndex, lessonData, questionHandler]);
 
   // Handle when there's no lesson data
   if (!lessonData || !lessonData.questions || lessonData.questions.length === 0) {
@@ -32,6 +52,15 @@ const ExercisePanel = ({
   const totalQuestions = questions.length;
 
   const handleAnswer = (answerData) => {
+    console.log('[ExercisePanel] Answer received:', answerData);
+    
+    // Record the answer through QuestionHandler
+    const result = questionHandler.handleAnswer(
+      answerData.userAnswer,
+      answerData.correctAnswer,
+      answerData.isCorrect
+    );
+
     // Mark this question as completed
     const newCompleted = new Set(completedQuestions);
     newCompleted.add(currentIndex);
@@ -41,16 +70,25 @@ const ExercisePanel = ({
     if (onQuestionComplete) {
       onQuestionComplete({
         questionIndex: currentIndex,
-        ...answerData
+        ...answerData,
+        ...result
       });
     }
 
-    // Auto-advance to next question after a short delay
+    // CRITICAL FIX: Proper delayed transition with state reset
     setTimeout(() => {
       if (currentIndex < totalQuestions - 1) {
+        console.log(`[ExercisePanel] Moving to question ${currentIndex + 1}`);
+        
+        // Force component re-mount by changing key
+        setQuestionKey(prev => prev + 1);
+        
+        // Move to next question
         setCurrentIndex(currentIndex + 1);
+        
       } else {
         // Lesson completed
+        console.log('[ExercisePanel] All questions completed');
         if (onLessonComplete) {
           onLessonComplete({
             totalQuestions,
@@ -63,6 +101,8 @@ const ExercisePanel = ({
 
   const goToQuestion = (index) => {
     if (index >= 0 && index < totalQuestions) {
+      console.log(`[ExercisePanel] Manual navigation to question ${index}`);
+      setQuestionKey(prev => prev + 1); // Force re-mount on manual navigation too
       setCurrentIndex(index);
     }
   };
@@ -98,9 +138,10 @@ const ExercisePanel = ({
         ))}
       </div>
 
-      {/* Current question */}
+      {/* Current question - KEY PROP FORCES RE-MOUNT */}
       <div className="question-container">
         <QuestionRenderer
+          key={`q_${currentIndex}_${questionKey}`} // Forces complete re-mount
           questionData={currentQuestion}
           questionId={`q_${currentIndex}`}
           progressManager={progressManager}
