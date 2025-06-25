@@ -34,7 +34,7 @@
       "questions": [
         {
           "id": "q1",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What did Amazon, the e-commerce giant, recently announce?",
           "options": [
             "that sales have risen",
@@ -47,7 +47,7 @@
         },
         {
           "id": "q2",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What can \"ebbing\" mean?",
           "options": [
             "end",
@@ -60,7 +60,7 @@
         },
         {
           "id": "q3",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "Were Amazon's results in line with Wall Street's projections?",
           "options": [
             "absolutely not",
@@ -73,7 +73,7 @@
         },
         {
           "id": "q4",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What are the estimates taking into account?",
           "options": [
             "the global market",
@@ -86,7 +86,7 @@
         },
         {
           "id": "q5",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How have Tech giants been affected by the current context?",
           "options": [
             "they are not confident in the future",
@@ -99,7 +99,7 @@
         },
         {
           "id": "q6",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "Which, among the following factors, is not affecting the situation?",
           "options": [
             "inflation",
@@ -112,7 +112,7 @@
         },
         {
           "id": "q7",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How does the situation manifest itself?",
           "options": [
             "customers' shopping carts have reduced in size but increased in value",
@@ -125,7 +125,7 @@
         },
         {
           "id": "q8",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What could be a synonym of \"breakneck\"?",
           "options": [
             "postponed",
@@ -138,7 +138,7 @@
         },
         {
           "id": "q9",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How are Amazon's warehouses being impacted?",
           "options": [
             "the number of warehouses has expanded",
@@ -151,7 +151,7 @@
         },
         {
           "id": "q10",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "The measures that have been implemented are....",
           "options": [
             "Ways to cope with the consequences of inflation",
@@ -172,7 +172,7 @@
       "questions": [
         {
           "id": "q11",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What happened in Zhengzhou?",
           "options": [
             "workers disappeared",
@@ -185,7 +185,7 @@
         },
         {
           "id": "q12",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How has Apple been impacted by the situation mentioned in the text?",
           "options": [
             "the price of the iPhone has become higher",
@@ -198,7 +198,7 @@
         },
         {
           "id": "q13",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What is a synonym of \"output\"?",
           "options": [
             "production",
@@ -211,7 +211,7 @@
         },
         {
           "id": "q14",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How might the situation presented in the text affect Apple's plant?",
           "options": [
             "the plant will need to expand",
@@ -224,7 +224,7 @@
         },
         {
           "id": "q15",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How did Apple react to the news?",
           "options": [
             "they increased the price of the iPhone by 8%",
@@ -237,7 +237,7 @@
         },
         {
           "id": "q16",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "Why is the holiday season so significant for Apple?",
           "options": [
             "last year, during the holiday, sales reached 192 million dollars",
@@ -250,7 +250,7 @@
         },
         {
           "id": "q17",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What would be a synonym of \"enhance\"?",
           "options": [
             "dropped",
@@ -263,7 +263,7 @@
         },
         {
           "id": "q18",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How would you define an artery?",
           "options": [
             "a vein in your body",
@@ -276,7 +276,7 @@
         },
         {
           "id": "q19",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "According to the text, how could Apple be impacted in the near future?",
           "options": [
             "Apple may close its factories in China",
@@ -289,7 +289,7 @@
         },
         {
           "id": "q20",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What risk did Apple take by choosing to settle plants in Zhengzhou?",
           "options": [
             "Apple's technology is not secured",
@@ -304,13 +304,13 @@
     },
     {
       "title": "Text 3: Gap Fill Exercise",
-      "sectionType": "gap-fill",
+      "sectionType": "gapFill",
       "points": 90,
       "text": "How Biden Uses His 'Car Guy' Persona to Burnish His Everyman Image",
       "questions": [
         {
           "id": "q21",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "Two years _____ his presidency, Mr. Biden is once again embracing a persona that _____ him since his earliest days in _____ almost five decades ago: the car guy.",
           "correctAnswers": ["into", "has served", "politics"],
           "options": [
@@ -322,7 +322,7 @@
         },
         {
           "id": "q22",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "In a country of car lovers, the president has long used his affinity for cars to burnish his workaday origins and, more recently, to conjure an aura of vitality despite being the _____ president _____ American history.",
           "correctAnswers": ["oldest", "in"],
           "options": [
@@ -333,7 +333,7 @@
         },
         {
           "id": "q23",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "In the run-up to the midterm elections next month — with control of Congress and the future of his agenda _____ stake — Mr. Biden is _____ his gearhead reputation will appeal to some parts of the Republican base.",
           "correctAnswers": ["at", "hoping"],
           "options": [

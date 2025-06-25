@@ -34,7 +34,7 @@
       "questions": [
         {
           "id": "q1",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "According to you, what does \"scourge\" mean?",
           "options": [
             "plague",
@@ -47,7 +47,7 @@
         },
         {
           "id": "q2",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "Where, on the globe, can people be safe from drought?",
           "options": [
             "nowhere",
@@ -60,7 +60,7 @@
         },
         {
           "id": "q3",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "Who is being affected by the drought?",
           "options": [
             "people",
@@ -73,7 +73,7 @@
         },
         {
           "id": "q4",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What would be the synonym of \"depleted\"?",
           "options": [
             "dried",
@@ -86,7 +86,7 @@
         },
         {
           "id": "q5",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How have droughts evolved?",
           "options": [
             "they have always existed",
@@ -99,7 +99,7 @@
         },
         {
           "id": "q6",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "Why is soil water content affected?",
           "options": [
             "because the soil evaporates",
@@ -112,7 +112,7 @@
         },
         {
           "id": "q7",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What could be further consequences of these droughts?",
           "options": [
             "camels may disappear",
@@ -125,7 +125,7 @@
         },
         {
           "id": "q8",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How can the issue be tackled?",
           "options": [
             "by looking for new water supply",
@@ -138,7 +138,7 @@
         },
         {
           "id": "q9",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What may be lacking to deal with this issue?",
           "options": [
             "some rain",
@@ -151,7 +151,7 @@
         },
         {
           "id": "q10",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What type of measures should be implemented?",
           "options": [
             "ways to manage climate",
@@ -172,7 +172,7 @@
       "questions": [
         {
           "id": "q11",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What effort from Elon Musk is being threatened?",
           "options": [
             "his effort to appeal to a judge",
@@ -185,7 +185,7 @@
         },
         {
           "id": "q12",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "Why have talks with investors been paused?",
           "options": [
             "because the price was higher than the original $44 billion deal",
@@ -198,7 +198,7 @@
         },
         {
           "id": "q13",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What is the problem with the spam figures?",
           "options": [
             "they cannot be verified",
@@ -211,7 +211,7 @@
         },
         {
           "id": "q14",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "\"To wiggle out\" of a deal means",
           "options": [
             "to sign the deal",
@@ -224,7 +224,7 @@
         },
         {
           "id": "q15",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How did Elon Musk's team react?",
           "options": [
             "they said his decision may take weeks",
@@ -237,7 +237,7 @@
         },
         {
           "id": "q16",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "Who is Elon Musk?",
           "options": [
             "a business owner",
@@ -250,7 +250,7 @@
         },
         {
           "id": "q17",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What would be a synonym of \"fallen dramatically\"?",
           "options": [
             "increased sharply",
@@ -263,7 +263,7 @@
         },
         {
           "id": "q18",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How would you define a breakup fee?",
           "options": [
             "a fine that the judge asks you to pay",
@@ -276,7 +276,7 @@
         },
         {
           "id": "q19",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "How would you define a \"bot\"?",
           "options": [
             "a fake Twitter representative",
@@ -289,7 +289,7 @@
         },
         {
           "id": "q20",
-          "type": "multiple-choice",
+          "type": "multipleChoice",
           "question": "What will happen to Elon Musk if the judge lets him walk away from the deal?",
           "options": [
             "he will earn $1 billion",
@@ -304,13 +304,13 @@
     },
     {
       "title": "Text 3: Gap Fill Exercise",
-      "sectionType": "gap-fill",
+      "sectionType": "gapFill",
       "points": 90,
       "text": "Europe's Energy Choice",
       "questions": [
         {
           "id": "q21",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "No one doubts that Europe will need _____ increase _____ use of liquefied natural gas, continue _____ coal over the _____ years, and do more _____ help vulnerable communities and some industries manage higher energy costs.",
           "correctAnswers": ["to", "its", "burning", "next few", "to"],
           "options": [
@@ -324,7 +324,7 @@
         },
         {
           "id": "q22",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "Russia's war in Ukraine and the disruption of Russian gas exports to Europe has _____ an energy crunch, with price _____ unlike anything seen _____ 1973. And the situation will get worse before it gets _____.",
           "correctAnswers": ["triggered", "spikes", "since", "better"],
           "options": [
@@ -337,7 +337,7 @@
         },
         {
           "id": "q23",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "The crisis is twofold. The urgency of keeping Europe warm and running through the next few winters must be considered _____ the imperative to accelerate the transition to clean energy. To be sure, the European countries that are most dependent _____ Russian gas and oil will struggle to secure power and heat for the coming winter.",
           "correctAnswers": ["alongside", "on"],
           "options": [
@@ -348,7 +348,7 @@
         },
         {
           "id": "q24",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "The crucial question for major economic powers, then, is _____ they can manage _____ the winter without forcing their big domestic industrial gas consumers to shut _____. The answer is probably yes, _____ that Europeans maximize the use of all other energy sources.",
           "correctAnswers": ["whether", "through", "down", "provided"],
           "options": [
@@ -361,7 +361,7 @@
         },
         {
           "id": "q25",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "Contrary to how the situation is often framed in the media, this choice is not between climate change and civil unrest. _____ matters is how policymakers approach these tasks. Crucially, subsidizing fossil-fuel _____ by capping energy prices at the pump or the power meter will only aggravate price inflation, effectively transferring taxpayers' money to gas and oil producers. Handing _____ checks to those most in need is a good idea, whereas eliminating the incentive for everybody to save energy is a terrible one.",
           "correctAnswers": ["What", "consumption", "out"],
           "options": [
@@ -373,7 +373,7 @@
         },
         {
           "id": "q26",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "This tension is at the center of the debates now playing out _____ Europe. While some Europeans associate today's energy-price inflation with the war in Ukraine, others think it stems _____ broader efforts to combat climate change.",
           "correctAnswers": ["across", "from"],
           "options": [
@@ -384,7 +384,7 @@
         },
         {
           "id": "q27",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "Europe's choice will hold important implications for whether we can limit _____ warming to 1.5° Celsius. That would position the EU decisively as one of the leading major _____ in the green transition – making it _____ with China and demonstrating that wealth and welfare are not synonymous _____ burning fossil fuel.",
           "correctAnswers": ["global", "economies", "competitive", "with"],
           "options": [
@@ -397,7 +397,7 @@
         },
         {
           "id": "q28",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "The European Union has _____ the last few months imposing sanctions on Russia, from travel bans to asset freezes, alongside other western nations like the US and the UK. And while these impacted Russia more indirectly, many said the measures didn't go _____ enough - conveniently missing _____ one very important element - gas.",
           "correctAnswers": ["spent", "far", "out"],
           "options": [
@@ -409,7 +409,7 @@
         },
         {
           "id": "q29",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "In late February, the country announced the cancellation of the €9.9 billion Nord Stream 2 gas pipeline from Russia - which is _____ good news environmentally yet may not hurt Russia quickly enough as the pipeline was not operating yet. But now that the price of oil has topped $140 (€129) per barrel for the first time _____ 2008, and gas imports are set to reduce in the coming years, governments are scrambling to find energy alternatives.",
           "correctAnswers": ["Ø", "since"],
           "options": [
@@ -420,7 +420,7 @@
         },
         {
           "id": "q30",
-          "type": "gap-fill",
+          "type": "gapFill",
           "template": "Brussels is stepping up efforts to rapidly diversify its basket of energy _____ and is reaching out to other gas exporters such as the US, Norway, Qatar, Azerbaijan, Algeria, Egypt, Turkey, Japan and South Korea.",
           "correctAnswers": ["providers"],
           "options": [

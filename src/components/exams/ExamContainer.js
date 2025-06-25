@@ -1,18 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import MultipleChoice from '../common/MultipleChoice';
-import GapFill from '../common/GapFill';
-import ClickActivity from '../common/ClickActivity';
-import WordBankActivity from '../common/WordBankActivity';
-import ImageDisplay from '../common/ImageDisplay';
-import Instructions from '../common/Instructions';
+import MainLayout from '../layout/MainLayout';
+import { ProgressManager } from '../../utils/ProgressManager';
 
 const ExamContainer = ({ examData, examType = 'fede', onExamComplete }) => {
   const [currentSection, setCurrentSection] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
-  const [timeRemaining, setTimeRemaining] = useState(examData.timeLimit * 60); // Convert minutes to seconds
+  const [timeRemaining, setTimeRemaining] = useState(examData.timeLimit * 60);
   const [examStarted, setExamStarted] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [progressManager] = useState(() => new ProgressManager());
 
   const formatTime = (seconds) => {
     const hours = Math.floor(seconds / 3600);
@@ -55,66 +51,16 @@ const ExamContainer = ({ examData, examType = 'fede', onExamComplete }) => {
 
   const startExam = () => {
     setExamStarted(true);
+    // Start progress session for the exam
+    progressManager.startSession('EXAM', examType.toUpperCase(), currentSection + 1);
   };
 
   const getCurrentSection = () => examData.sections[currentSection];
-  const getCurrentQuestion = () => getCurrentSection()?.questions[currentQuestion];
 
   const navigateToSection = (sectionIndex) => {
     setCurrentSection(sectionIndex);
-    setCurrentQuestion(0);
-  };
-
-  const navigateToQuestion = (questionIndex) => {
-    setCurrentQuestion(questionIndex);
-  };
-
-  const renderQuestion = (question) => {
-    const questionId = `${currentSection}-${currentQuestion}`;
-    
-    switch (question.type) {
-      case 'multiple-choice':
-        return (
-          <MultipleChoice
-            question={question.question}
-            options={question.options}
-            correctAnswer={question.correctAnswer}
-            onAnswer={(isCorrect) => handleAnswer(questionId, question.options.find(opt => opt === question.correctAnswer), isCorrect)}
-          />
-        );
-      
-      case 'gap-fill':
-        return (
-          <GapFill
-            template={question.template}
-            correctAnswers={question.correctAnswers}
-            onAnswer={(isCorrect) => handleAnswer(questionId, question.correctAnswers[0], isCorrect)}
-          />
-        );
-      
-      case 'click-activity':
-        return (
-          <ClickActivity
-            instructions={question.instructions}
-            words={question.words}
-            keyWords={question.keyWords}
-            onAnswer={(isCorrect) => handleAnswer(questionId, question.keyWords, isCorrect)}
-          />
-        );
-      
-      case 'word-bank':
-        return (
-          <WordBankActivity
-            paragraph={question.paragraph}
-            wordBank={question.wordBank}
-            correctAnswers={question.correctAnswers}
-            onAnswer={(isCorrect) => handleAnswer(questionId, question.correctAnswers, isCorrect)}
-          />
-        );
-      
-      default:
-        return <div>Unknown question type: {question.type}</div>;
-    }
+    // Update progress manager session
+    progressManager.startSession('EXAM', examType.toUpperCase(), sectionIndex + 1);
   };
 
   // Pre-exam screen
@@ -130,7 +76,15 @@ const ExamContainer = ({ examData, examType = 'fede', onExamComplete }) => {
           </div>
           {examData.instructions && (
             <div className="exam-instructions">
-              <Instructions instructions={examData.instructions} />
+              <div className="instructions-content">
+                {examData.instructions.map((instruction, index) => (
+                  <div key={index} className={`instruction-${instruction.textStyle || 'default'}`}>
+                    {instruction.newParagraph && <br />}
+                    {instruction.newLine && <br />}
+                    <span className={instruction.textStyle}>{instruction.text}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           <button className="start-exam-btn" onClick={startExam}>
@@ -178,11 +132,14 @@ const ExamContainer = ({ examData, examType = 'fede', onExamComplete }) => {
     );
   }
 
-  // Main exam interface
-  return (
-    <div className="exam-container">
-      {/* Exam Header */}
-      <div className="exam-header">
+  // MAIN EXAM INTERFACE - Using MainLayout for left-right split
+  const currentSectionData = getCurrentSection();
+  
+  // Prepare left content (reading passage/text)
+  const leftContent = (
+    <div className="exam-left-content">
+      {/* Exam Header with Timer and Navigation */}
+      <div className="exam-header-controls">
         <div className="exam-title">{examData.title}</div>
         <div className="exam-timer">
           Time Remaining: {formatTime(timeRemaining)}
@@ -192,157 +149,74 @@ const ExamContainer = ({ examData, examType = 'fede', onExamComplete }) => {
         </button>
       </div>
 
-      <div className="exam-content">
-        {examType === 'fede' ? (
-          // FEDE Layout: Free navigation between texts/sections
-          <div className="fede-layout">
-            {/* Section Navigation */}
-            <div className="section-navigation">
-              {examData.sections.map((section, index) => (
-                <button
-                  key={index}
-                  className={`section-tab ${currentSection === index ? 'active' : ''}`}
-                  onClick={() => navigateToSection(index)}
-                >
-                  {section.title}
-                </button>
-              ))}
-            </div>
+      {/* Section Navigation Tabs */}
+      <div className="section-navigation">
+        {examData.sections.map((section, index) => (
+          <button
+            key={index}
+            className={`section-tab ${currentSection === index ? 'active' : ''}`}
+            onClick={() => navigateToSection(index)}
+          >
+            {section.title}
+          </button>
+        ))}
+      </div>
 
-            <div className="fede-content">
-              {/* Left Side: Text/Reading Passage */}
-              <div className="text-panel">
-                <h3>{getCurrentSection()?.title}</h3>
-                {getCurrentSection()?.text && (
-                  <div className="reading-passage">
-                    <p>{getCurrentSection().text}</p>
-                  </div>
-                )}
-                {getCurrentSection()?.image && (
-                  <ImageDisplay 
-                    imagePath={getCurrentSection().image} 
-                    altText={getCurrentSection().title} 
-                  />
-                )}
-              </div>
-
-              {/* Right Side: Questions */}
-              <div className="questions-panel">
-                {/* Question Navigation */}
-                <div className="question-navigation">
-                  {getCurrentSection()?.questions.map((_, index) => {
-                    const questionId = `${currentSection}-${index}`;
-                    const isAnswered = answers[questionId];
-                    
-                    return (
-                      <button
-                        key={index}
-                        className={`question-number ${currentQuestion === index ? 'active' : ''} ${isAnswered ? 'answered' : ''}`}
-                        onClick={() => navigateToQuestion(index)}
-                      >
-                        {index + 1}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* Current Question */}
-                <div className="current-question">
-                  {getCurrentQuestion() && (
-                    <>
-                      <div className="question-header">
-                        <span className="question-label">
-                          Question {currentQuestion + 1} of {getCurrentSection().questions.length}
-                        </span>
-                      </div>
-                      {renderQuestion(getCurrentQuestion())}
-                    </>
-                  )}
-                </div>
-
-                {/* Navigation Buttons */}
-                <div className="question-controls">
-                  <button
-                    onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
-                    disabled={currentQuestion === 0}
-                    className="nav-btn prev-btn"
-                  >
-                    Previous Question
-                  </button>
-                  <button
-                    onClick={() => setCurrentQuestion(Math.min(getCurrentSection().questions.length - 1, currentQuestion + 1))}
-                    disabled={currentQuestion === getCurrentSection().questions.length - 1}
-                    className="nav-btn next-btn"
-                  >
-                    Next Question
-                  </button>
-                </div>
-              </div>
-            </div>
+      {/* Reading Passage/Text Content */}
+      <div className="reading-content">
+        <h3>{currentSectionData?.title}</h3>
+        {currentSectionData?.text && (
+          <div className="reading-passage">
+            {currentSectionData.text.split('\n').map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
-        ) : (
-          // TOEIC Layout: Sequential sections with stricter navigation
-          <div className="toeic-layout">
-            <div className="section-progress">
-              Section {currentSection + 1} of {examData.sections.length}: {getCurrentSection()?.title}
-            </div>
-            
-            <div className="toeic-content">
-              {/* Reading passage or audio prompt */}
-              {getCurrentSection()?.text && (
-                <div className="passage-panel">
-                  <p>{getCurrentSection().text}</p>
-                </div>
-              )}
-              
-              {/* Current Question */}
-              <div className="question-panel">
-                {getCurrentQuestion() && renderQuestion(getCurrentQuestion())}
-                
-                <div className="toeic-navigation">
-                  <button
-                    onClick={() => {
-                      if (currentQuestion > 0) {
-                        setCurrentQuestion(currentQuestion - 1);
-                      } else if (currentSection > 0) {
-                        setCurrentSection(currentSection - 1);
-                        setCurrentQuestion(examData.sections[currentSection - 1].questions.length - 1);
-                      }
-                    }}
-                    disabled={currentSection === 0 && currentQuestion === 0}
-                    className="nav-btn"
-                  >
-                    Previous
-                  </button>
-                  
-                  <span className="question-counter">
-                    Question {currentQuestion + 1} of {getCurrentSection().questions.length}
-                  </span>
-                  
-                  <button
-                    onClick={() => {
-                      if (currentQuestion < getCurrentSection().questions.length - 1) {
-                        setCurrentQuestion(currentQuestion + 1);
-                      } else if (currentSection < examData.sections.length - 1) {
-                        setCurrentSection(currentSection + 1);
-                        setCurrentQuestion(0);
-                      }
-                    }}
-                    disabled={
-                      currentSection === examData.sections.length - 1 && 
-                      currentQuestion === getCurrentSection().questions.length - 1
-                    }
-                    className="nav-btn"
-                  >
-                    Next
-                  </button>
-                </div>
-              </div>
-            </div>
+        )}
+        {currentSectionData?.image && (
+          <div className="section-image">
+            <img src={currentSectionData.image} alt={currentSectionData.title} />
           </div>
         )}
       </div>
     </div>
+  );
+
+  // Prepare exercise data for right panel
+  const exerciseData = {
+    title: currentSectionData?.title || 'Questions',
+    questions: currentSectionData?.questions || [],
+    lessonId: `exam-${examType}-section-${currentSection}`,
+    type: 'exam'
+  };
+
+  const handleQuestionComplete = (answerData) => {
+    const questionId = `${currentSection}-${answerData.questionIndex}`;
+    handleAnswer(questionId, answerData.userAnswer, answerData.isCorrect);
+  };
+
+  const handleSectionComplete = (completionData) => {
+    console.log('Section completed:', completionData);
+    // Auto-advance to next section or complete exam
+    if (currentSection < examData.sections.length - 1) {
+      setTimeout(() => {
+        navigateToSection(currentSection + 1);
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        handleExamComplete();
+      }, 2000);
+    }
+  };
+
+  return (
+    <MainLayout
+      layoutType="exam"
+      leftContent={leftContent}
+      lessonData={exerciseData}
+      progressManager={progressManager}
+      onQuestionComplete={handleQuestionComplete}
+      onLessonComplete={handleSectionComplete}
+    />
   );
 };
 
