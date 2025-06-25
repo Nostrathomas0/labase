@@ -87,7 +87,8 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "B2/4FuturePerf/2.png"
+            "imagePath": "B2/4FuturePerf/2.png",
+            "altText": "Image showing a clock with future events marked, caption: 'Future Perfect Tense'"
           },
           
         {
@@ -126,7 +127,8 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "B2/4FuturePerf/3.png"
+            "imagePath": "B2/4FuturePerf/3.png",
+            "altText": "Image showing a checklist of future tasks, caption: 'Future Perfect Tense in Action'"
           },
           {
             "type": "click",
@@ -176,7 +178,8 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "B2/4FuturePerf/4.png"
+            "imagePath": "B2/4FuturePerf/4.png",
+            "altText": "Image showing a calendar with future dates marked, caption: 'Future Perfect Tense in Context'"
           },
           {
             "type": "wordBank",

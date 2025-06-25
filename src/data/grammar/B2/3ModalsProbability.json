@@ -21,8 +21,8 @@
                 {"text": " or ", "textStyle":"text"},
                 {"text": "Do you think it might rain?", "textStyle":"italic"},
                 {"text": " Might it rain?", "textStyle":"strike"},
-                {"text": " Is said by English speakers with low frequency."},
-                {"text": "1) "}
+                {"text": " Is said by English speakers with low frequency.", "textStyle":"text"},
+                {"text": "1) ", "textStyle":"text"}
               ],
               "words":["Hey", "can", "you", "pitch", "me", "a", "bag", "of", "chips"],
               "keyWords":["pitch", "chips"]

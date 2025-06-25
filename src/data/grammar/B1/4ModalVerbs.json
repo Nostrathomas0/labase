@@ -63,8 +63,8 @@
                 {"text": "Used for probability, conditional phrases, permission and many other conversational functions, modal verbs such as;", "textStyle":"text"},
                 {"text": "would ", "textStyle":"italic"},
                 {"text": "and ", "textStyle":"text"},
-                {"text": "could ", "textStyle":"italic", "newline":true},
-                {"text": "are like alternate forms of other modal verbs; used for past or polite forms.", "textStyle":"text", "newline":true},
+                {"text": "could ", "textStyle":"italic", "newLine":true},
+                {"text": "are like alternate forms of other modal verbs; used for past or polite forms.", "textStyle":"text", "newLine":true},
                 {"text": "precede the subject", "textStyle":"underline"},
                 {"text": " in questions.", "textStyle":"text"}],
                 "words": [
