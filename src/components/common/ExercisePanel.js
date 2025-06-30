@@ -25,7 +25,7 @@ const ExercisePanel = ({
   useEffect(() => {
     if (lessonData && lessonData.questions && lessonData.questions[currentIndex]) {
       const currentQuestion = lessonData.questions[currentIndex];
-      const questionId = `q_${currentIndex}`;
+      const questionId = `${lessonData.lessonId || lessonData.id || 'lesson'}-q_${currentIndex}`;
       const questionType = currentQuestion.type || 'multipleChoice';
       
       console.log(`[ExercisePanel] Initializing question ${questionId}`);
@@ -141,7 +141,7 @@ const ExercisePanel = ({
       {/* Current question - KEY PROP FORCES RE-MOUNT */}
       <div className="question-container">
         <QuestionRenderer
-          key={`q_${currentIndex}_${questionKey}`} // Forces complete re-mount
+          key={`${lessonData.lessonId || lessonData.id || 'lesson'}-q_${currentIndex}_${questionKey}`}
           questionData={currentQuestion}
           questionId={`q_${currentIndex}`}
           progressManager={progressManager}
