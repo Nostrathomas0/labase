@@ -73,19 +73,20 @@
         "questions":  [
           {
             "type": "imageDisplay",
-            "imagePath": "B1/2PastPerfCont/2.png"
+            "imagePath": "B1/2PastPerfCont/2.png",
+            "altText": "Image showing a timeline with past events, caption: 'Past Perfect Continuous Tense'"
           },
           {
             "type":"click",
             "layout": "horizontal",
             "instructions":[
-              {"text":"", "textStyle": ""},
-              {"text":"", "textStyle": ""},
-              {"text":"", "textStyle": ""},
-              {"text":"", "textStyle": ""},
-              {"text":"", "textStyle": ""},
-              {"text":"", "textStyle": ""},
-              {"text":"", "textStyle": ""}
+              {"text":"x", "textStyle": "text"},
+              {"text":"x", "textStyle": "text"},
+              {"text":"x", "textStyle": "text"},
+              {"text":"x", "textStyle": "italic"},
+              {"text":"x", "textStyle": "text"},
+              {"text":"x", "textStyle": "text"},
+              {"text":"x", "textStyle": "text"}
             ],
             "words":[],
             "keyWords":[]
