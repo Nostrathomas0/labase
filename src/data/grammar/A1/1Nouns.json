@@ -12,14 +12,23 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {"text": "Nouns are anyone, anything or any place; ex. ","textStyle": "text"},
-            {"text": " Cleopatra, a dog, the ocean, Asia.", "textStyle": "italic"},
-            {"text": "Place names, and names for people and groups are", "textStyle": "italic"},
-            {"text": " Proper Nouns", "textStyle":"underline"},
-            {"text": " and their first letter is always capitolized.", "textStyle":"text"},
-            {"text": "Common nouns are the words we use for all kinds of things, but they don't like to be alone so add an ", "textStyle":"text", "newParagraph":true},
-            {"text": " article.", "textStyle": "bold"},
-            {"text": " This precedes the noun and functions to tell whether the noun is known, understood and definite. If it's not, introduce it with "},
+            {"text": "Nouns are anyone, anything or any place; ","textStyle": "text"},
+            {"text": " Cleopatra, Asia.", "textStyle": "italic", "newLine":true},
+            {"text": " They can be tangible things you can touch and see, ","textStyle": "text"},
+            {"text": " a car, a house, a computer. ", "textStyle": "italic", "newLine":true},
+            {"text": " Or they can be intangible things you can't touch or see, ","textStyle": "text"},
+            {"text": " love, freedom, intelligence. ", "textStyle": "italic", "newLine":true},
+            {"text": " 1) Click on the proper nouns in the list below.", "textStyle": "italic", "newParagraph":true},
+            {"text": "Names, places and titles for teams, companies or religions are", "textStyle": "italic"},
+            {"text": " proper nouns", "textStyle":"underline"},
+            {"text": " and their first letter is capitalized.", "textStyle":"text"},
+            {"text": "Common nouns are the words we use for things ex.", "textStyle": "text"},
+            {"text": " a dog, the ocean,", "textStyle":"italic"},
+            {"text": ". These things need a determiner because they don't like being alone, so use them with an ", "textStyle":"text", "newParagraph":true},
+            {"text": " article.", "textStyle": "underline"},
+            {"text": " or a  ", "textStyle": "text"},
+            {"text": "a posessive pronoun ", "textStyle": "underline"},
+            {"text": " Determiners precede the noun and tell whether it is known, understood and definite. If it's not, introduce it with "},
             {"text": " a", "textStyle": "bold" },
             {"text": " / ","textStyle": "text"},
             {"text": "an ", "textStyle": "bold" },
@@ -32,9 +41,9 @@
             {"text": "in","textStyle": "italic"},
             {"text": "definite article and, as you can see, it takes an ", "textStyle": "text", "newLine":true}, 
             {"text": " n", "textStyle":"bold"},
-            {"text": " sound before ","textStyle": "text"},
+            {"text": " sound, gliding to the next vowel sound ","textStyle": "text"},
             {"text": "ear","textStyle": "underline"},
-            {"text": "and other words beginning with a vowel sound.", "textStyle":"text"},
+            {"text": "and other words","textStyle": "text"},
             {"text": " The ", "textStyle": "bold", "newParagraph":true },
             {"text": " to a specific thing to make the noun phrase with the definite article.", "textStyle": "text" },
             {"text": " The", "textStyle":"text", "newLine":true},
@@ -58,22 +67,21 @@
             {"text": " are for you and I, together. It's the 1st person, plural.", "textStyle": "text" },
             {"text": "They & them ", "textStyle": "bold",  "newLine": true   },
             {"text": " are for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.",  "textStyle": "text"   },
-            {"text": "1) Click on the pronouns in the sentence below.", "textStyle": "italic",  "newParagraph": true }
+            {"text": "1) Click on correct placenames below.", "textStyle": "italic",  "newParagraph": true }
           ],
           "words": [
-            {"text": "What ",   "feedback": "No, 'what' is a question word." },
-            { "text": "do ", "feedback": "No, 'do' is an aux. verb."},
-            {"text": "you ", "feedback": "Yes, 'you' is a pronoun."},
-            {"text": "think ", "feedback": "No, 'think' is a verb." },
-            {"text": "of ","feedback": "No, 'of' is a preposition." },
-            { "text": "me ","feedback": "Yes, 'me' is a pronoun," },
-            {  "text": "and",   "feedback": "No, 'and' is a conjunction" },
-            { "text": "my",  "feedback": "No, 'my' is a possessive adjective." },
-            { "text": "dog?", "feedback": "No, 'dog' is a noun." }
+            {"text": "The New York",   "feedback": "No, 'what' is a question word." },
+            { "text": "The United States", "feedback": "Yes, this is a proper, plural title."},
+            {"text": "An Arab Emmerate ", "feedback": "Sure, I think it's like Oblast, Prefecture and or State." },
+            {"text": "Mexico", "feedback": "Yes, most countries are never after an article." },
+            {"text": "Brunai","feedback": "Yes, most far off places use proper names." },
+            {"text": "The Carribian","feedback": "Yes, most island chains are titles like family names, with a definite article." },
+            {"text": "The UK",   "feedback": "Yes the old empire of words." },
+            {"text": "The Seychelles",  "feedback": "Yes, French overseas territory" },
+            {"text": "dog?", "feedback": "No, 'dog' is a common noun." }
           ],
           "keyWords": [
-            "you ",
-            "me "
+            "The United States", "The Netherlands", "The Maldives", "Mexico", "Brunai", "The Caribbean", "The UK", "The Seychelles"
           ]
         },
         {
@@ -139,7 +147,7 @@
         {
           "type": "imageDisplay",
           "imagePath": "A1/1Nouns/2.png",
-          "altText": "Image description for accessibility"
+          "altText": "Image = Find the nouns, shoes, a skateboard, a camera ..."
         },
         {
           "type": "click",
@@ -150,30 +158,25 @@
               "textStyle":"text"
             }, 
             {
-              "text": "plural nouns ",
+              "text": "plural nouns, ",
                 "textStyle": "bold"
             },
             {
-              "text": "count ", 
-              "textStyle": "text"
-            },
-            {
-              "text": "  two, three, a few more... ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " And they usually end ",
+              "text": "count, and more than one gets an  ",
               "textStyle": "text"
             },
             {
               "text": "s .",
               "textStyle": "bold"
             },  
-            
+            {
+              "text": " at the end of the word. ",
+              "textStyle": "text"
+            },    
             {
               "text": "The indefinite articles",
               "textStyle": "text",
-              "newLine": true
+              "newParagraph": true
             },
             {
               "text": " A / An ",
@@ -287,7 +290,7 @@
         {
           "type": "imageDisplay",
           "imagePath": "A1/1Nouns/3.png",
-          "altText": "Description for Image 3"
+          "altText": "Noun Phrases and determiners."
         },
         {
           "type": "click",
@@ -296,15 +299,22 @@
             
             
             {
-              "text": " Some nouns count, some don't. For example we count, ",
-              "newParagraph":true
-            },
+              "text": " Countable words", "textStyle": "underline", "newParagraph":false
+             }, 
             {
-              "text": "1 Euro, 2 Euros ",
+              "text": "Sometimes we've got more one or more of the same thing:", "textStyle": "text", "newParagraph":true
+            } ,
+            {
+              "text": " one apple, two apples. ",
               "textStyle": "italic"
             },
             {
-              "text": " but ",
+              "text": " Uncountable words ", 
+              "textStyle": "underline",
+              "newLine":true
+            },
+            {
+              "text": " are for stuff you can't count individually: ",
               "textStyle": "text"
             },
             {
@@ -312,9 +322,17 @@
               "textStyle": "strike"
             },
             {
-              "text": " Money doesn't have a plural form. And neither has ",
+              "text": " although ",
               "textStyle": "text"
             },
+          
+            {
+              "text": "1 Euro, 2 Euroes, 3 Euroes.",
+              "textStyle": "italic"
+            },
+           {
+              "text": " Money doesn't have a plural form. And neither has ",
+              "textStyle": "text"            },
             {
               "text": " information, data ",
               "textStyle": "bold"
@@ -328,27 +346,91 @@
               "textStyle": "bold"
             },
             {
-              "text": "These are collective nouns and are used globally. Avoid the indefinite article.",
+              "text": "Uncountable nouns need different determiners. Avoid the indefinite article, (",
               "textStyle": "text" 
             },
             {
               "text": " an information, an air, a humanity, a trash, a chess, a poetry, a furniture, a homework, a wisdom. ",
               "textStyle": "strike",
-              "newLine":true
+              "newLine":false
             },
             {
-              "text": " Countable nouns are words that you can count.  ",
+              "text": ") Use a quantifier, a countable noun phrase to create a measurement for materials.  ",
               "textStyle": "text",
               "newParagraph":true
             },
             {
-              "text": " 1 drink ",
+              "text": " a",
               "textStyle": "italic",
               "newParagraph":false
-              
             },
             {
-              "text": " is fine to say. You can even say ",
+              "text": "  piece ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+            {
+              "text": " of information, a ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+            {
+              "text": " breath",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": " of air, a ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": " bag ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": " of trash, a ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": " game ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": "  of chess, a ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": " piece ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": "of furniture, a ",
+              "textStyle": "italic",
+              "newParagraph":false
+             },
+              {
+              "text": " bit ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": " of wisdom, a ",
+              "textStyle": "italic",
+              "newParagraph":false
+            },
+             {
+              "text": " glass of water",
+              "textStyle": "italic",
+              "newParagraph":false  
+            },
+             {
+              "text": " of water. Or you can break this rule and order",
               "textStyle": "text"
             },
             {
@@ -356,11 +438,11 @@
               "textStyle": "italic"
             },
             {
-              "text": " to order at a bar, but it's more correct to say",  
+              "text": "at a bar, but it's correcter to say",  
               "textStyle": "text"
             },
             { 
-              "text": " a glass of water.",
+              "text": " a drink of water.",
               "textStyle": "bold"
             },
             {
@@ -372,8 +454,12 @@
               "textStyle": "italic"
             },
             {
-              "text": " are all uncountable.",
-              "textStyle": "text"
+              "text": " but language intersects with culture on whether or not singular things are countable and culture often says no to",
+              "textStyle": "italic"
+            },  
+            {
+              "text": "   Gods, Suns, and Earths .",
+              "textStyle": "strike"
             },
             {
               "text": "1) Click on the countable nouns",
@@ -466,50 +552,23 @@
           "layout":"horizontal",
           "instructions":[ 
             {
-              "text": "  Nouns in general, are pluralized simply by adding a suffix to the base noun and generally speaking of things, we use plural nouns to say what we like, especially things we like, but often not things we like",
+              "text": "  Nouns in general, are pluralized simply by adding a suffix to the root. Generally speaking we use plural nouns to say the things we like, but not the stuff we like. This can cause confusion, especially for words which can refer to both a countable thing and its material substance.",
               "textStyle": "text",
               "newLine":true
             }, 
             {
-              "text": " to eat.",
+              "text": " he threw a marble at me.",
               "textStyle": "underline"
             },
             {
-              "text": "My favorite snack is chips. I like eggs. ",
-              "textStyle":"italic",
+              "text": "My kitchen countertop is made of marble. ",
+              "textStyle":"underline",
               "newLine":true
             },  
             {
               "text": "I like dog.",
-              "textStyle": "strike"
-            },
-            {
-              "text": " Nouns phrases sometimes have other determiners: ",
-              "textStyle": "text"
-            },
-            {
-              "text": " a sack of ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "potatos,",
-              "textStyle": "text"
-            },
-            {
-              "text": " a lot of ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "cheese",
-              "textStyle": "text"
-            },
-            {
-              "text": ", some ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "onions.",
-              "textStyle": "text"
+              "textStyle": "strike",
+              "newLine":true
             },
             {
               "text":"1) Click on the plural nouns",
@@ -695,31 +754,32 @@
               "textStyle": "bold"
             },
             {
-              "text": " 1) Click on the singular nouns"
+              "text": " 1) Click on the proper nouns"
             }
           ],
           "words": [
             {
-              "text": "Remind",
-              "feedback": " them"
+              "text": "Tom",
+              "feedback": " Yes, and I ain't talking about no drum. He after Jerry"
             },
             {
-              "text": "Remind",
-              "feedback": " them"
+              "text": "Redwood Forest",
+              "feedback": "Yes, because it's been capitalized, like on a map."
             },
             {
-              "text": "Remind",
-              "feedback": " them"
+              "text": "Eiffel Tower",
+              "feedback": " Sure, on a tourist brochure, it has no article, but generally speaking it's 'the Eiffel Tower'."
             },
             {
-              "text": "Remind",
-              "feedback": " them"
+              "text": "river",
+              "feedback": " No, 'river' is a common noun."
             },
             {
-              "text": ""
+              "text": "Amazon River",
+              "feedback": " Yes, it's a proper noun"
             }
           ],
-          "keyWords": [
+          "keyWords": [ "Tom", "Redwood Forest", "Amazon River", "Eiffel Tower"  
 
           ]
           },
