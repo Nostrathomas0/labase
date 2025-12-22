@@ -12,41 +12,57 @@ function MultipleChoice({
   const [selected, setSelected] = useState('');
   const [feedback, setFeedback] = useState(null);
   const [answered, setAnswered] = useState(false);
-  const [questionHandler] = useState(() => new QuestionHandler(progressManager));
+  const [questionHandler, setQuestionHandler] = useState(null);
+  const [isInitialized, setIsInitialized] = useState(false);
 
-useEffect(() => {
-  // Start tracking this question
-  if (questionId && progressManager && questionHandler) {
-    questionHandler.startQuestion(questionId, 'multipleChoice');
-  }
-}, [questionId, progressManager, questionHandler]);
+  // Create handler when progressManager is available
+  useEffect(() => {
+    if (progressManager && !questionHandler) {
+      const handler = new QuestionHandler(progressManager);
+      setQuestionHandler(handler);
+    }
+  }, [progressManager, questionHandler]);
+
+  // Initialize question when handler is ready
+  useEffect(() => {
+    if (questionId && questionHandler && !isInitialized) {
+      console.log('[MultipleChoice] Initializing question:', questionId);
+      questionHandler.startQuestion(questionId, 'multipleChoice');
+      setIsInitialized(true);
+    }
+  }, [questionId, questionHandler, isInitialized]);
+
   const handleOptionClick = (option) => {
-    if (answered) return;
+    if (answered || !isInitialized) {
+      console.log('[MultipleChoice] Click blocked - answered or not initialized');
+      return;
+    }
 
     setSelected(option);
-    const isCorrect = option === correctAnswer; // ← Added this line
+    const isCorrect = option === correctAnswer;
 
-    if (progressManager) {
-      // New progress tracking system
-      const result = questionHandler.handleAnswer(option, correctAnswer, isCorrect);
-      setFeedback(result.feedback);
-      
-      if (onAnswer) {
-        onAnswer({
-          questionId,
-          isCorrect,
-          userAnswer: option,
-          correctAnswer,
-          progress: result.progress
-        });
+    if (questionHandler) {
+      try {
+        const result = questionHandler.handleAnswer(option, correctAnswer, isCorrect);
+        setFeedback(result.feedback);
+        
+        if (onAnswer) {
+          onAnswer({
+            questionId,
+            isCorrect,
+            userAnswer: option,
+            correctAnswer,
+            progress: result.progress
+          });
+        }
+      } catch (error) {
+        console.error('[MultipleChoice] Error handling answer:', error);
       }
-    } else {
-      // Backward compatibility - old callback system
-      if (onAnswer) {
-        onAnswer(isCorrect);
-      }
+    } else if (onAnswer) {
+      // Fallback for old system
+      onAnswer(isCorrect);
     }
-    
+
     setAnswered(true);
   };
 
@@ -76,7 +92,7 @@ useEffect(() => {
           <button
             key={index}
             onClick={() => handleOptionClick(option)}
-            disabled={answered}
+            disabled={answered || !isInitialized}
             className={getOptionClassName(option)}
           >
             {option}

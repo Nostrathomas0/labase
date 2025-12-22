@@ -391,9 +391,13 @@ class QuestionHandler {
   }
 
   extractQuestionIndex(questionId) {
-    const match = questionId.match(/(\d+)$/);
-    return match ? parseInt(match[1]) : 0;
+  if (!questionId || typeof questionId !== 'string') {
+    console.warn('[QuestionHandler] Invalid questionId:', questionId);
+    return 0;
   }
+  const match = questionId.match(/(\d+)$/);
+  return match ? parseInt(match[1]) : 0;
+}
 
   getFeedback(isCorrect, correctAnswer) {
     if (isCorrect) {
