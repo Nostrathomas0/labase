@@ -1,10 +1,52 @@
-// HamburgerNavigation.js
-import React, { useState } from 'react';
+// HamburgerNavigation.js - Updated with Score Display
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const HamburgerNavigation = ({ isOpen, onClose }) => {
+const HamburgerNavigation = ({ isOpen, onClose, progressManager }) => {
   const [expandedSections, setExpandedSections] = useState({});
+  const [currentScore, setCurrentScore] = useState(null);
+  const [overallStats, setOverallStats] = useState(null);
   const location = useLocation();
+
+  // Update scores when menu opens or progress changes
+ const updateScores = useCallback(() => { // ← Define FIRST
+  if (!progressManager) return;
+  const pageProgress = progressManager.getPageProgress();
+  setCurrentScore(pageProgress);
+  const stats = progressManager.getOverallStats();
+  setOverallStats(stats);
+}, [progressManager]);
+
+useEffect(() => {
+  if (isOpen && progressManager) {
+    updateScores(); // ← Use SECOND
+  }
+}, [isOpen, progressManager, updateScores]); // ← Include ALL dependencies
+
+  const handleSaveProgress = async () => {
+    if (progressManager) {
+      const success = await progressManager.saveProgress();
+      if (success) {
+        alert('Progress saved successfully!');
+        updateScores(); // Refresh displayed scores
+      } else {
+        alert('Failed to save progress. Please try again.');
+      }
+    }
+  };
+
+  const handleCompletePage = async () => {
+    if (progressManager) {
+      const result = await progressManager.completePage();
+      if (result.jwtUpdated) {
+        alert(`Page completed! Score: ${result.score}%`);
+        updateScores(); // Refresh displayed scores
+        onClose(); // Close menu after completion
+      } else {
+        alert('Failed to complete page. Please try again.');
+      }
+    }
+  };
 
   const toggleSection = (sectionKey) => {
     setExpandedSections(prev => ({
@@ -14,7 +56,6 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
   };
 
   const handleLinkClick = () => {
-    // Close sidebar when a link is clicked (especially useful on mobile)
     onClose();
   };
 
@@ -44,19 +85,69 @@ const HamburgerNavigation = ({ isOpen, onClose }) => {
           >
             🏠 Home
           </Link>
-            {/* Progress Controls */}
+
+          {/* SCORE DISPLAY SECTION */}
+          {progressManager && (
+            <div className="nav-section score-display">
+              <div className="nav-section-header">📊 Your Progress</div>
+              
+              {/* Current Page Score */}
+              {currentScore && currentScore.totalQuestions > 0 && (
+                <div className="score-card current-score">
+                  <div className="score-label">Current Page</div>
+                  <div className="score-value">
+                    <span className="score-number">{currentScore.score}%</span>
+                    <span className="score-details">
+                      {currentScore.correctAnswers}/{currentScore.totalQuestions} correct
+                    </span>
+                  </div>
+                  <div className={`score-status ${currentScore.passed ? 'passed' : 'not-passed'}`}>
+                    {currentScore.passed ? '✅ Passing' : '⏳ In Progress'}
+                  </div>
+                </div>
+              )}
+
+              {/* Overall Statistics */}
+              {overallStats && (
+                <div className="score-card overall-stats">
+                  <div className="stat-row">
+                    <span className="stat-label">📚 Topics Completed:</span>
+                    <span className="stat-value">{overallStats.totalTopicsCompleted}</span>
+                  </div>
+                  <div className="stat-row">
+                    <span className="stat-label">⭐ Average Score:</span>
+                    <span className="stat-value">{overallStats.averageScore}%</span>
+                  </div>
+                  <div className="stat-row">
+                    <span className="stat-label">🔥 Current Streak:</span>
+                    <span className="stat-value">{overallStats.streak}</span>
+                  </div>
+                  <div className="stat-row">
+                    <span className="stat-label">⏱️ Total Time:</span>
+                    <span className="stat-value">
+                      {Math.floor(overallStats.totalTimeSpent / 60)} min
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Progress Controls */}
           <div className="nav-section progress-controls">
-            <div className="nav-section-header">💾 Progress</div>
+            <div className="nav-section-header">💾 Actions</div>
             <div className="nav-subsection">
               <button 
                 className="nav-item progress-btn save-btn"
-                onClick={() => window.saveProgress && window.saveProgress()}
+                onClick={handleSaveProgress}
+                disabled={!progressManager}
               >
                 💾 Save Progress
               </button>
               <button 
                 className="nav-item progress-btn complete-btn"
-                onClick={() => window.completePage && window.completePage()}
+                onClick={handleCompletePage}
+                disabled={!progressManager || !currentScore || currentScore.totalQuestions === 0}
               >
                 ✅ Complete Page
               </button>
