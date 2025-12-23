@@ -137,14 +137,28 @@ const NounsPage = () => {
     // This gets called when individual questions are answered
   };
 
-  const handleLessonComplete = (completionData) => {
-    console.log('Lesson completed:', completionData);
-    // This gets called when all questions are completed
-  };
-
-  if (!pages || pages.length === 0) {
-    return <div>No content available.</div>;
+  const handleLessonComplete = useCallback(async (completionData) => {
+  console.log('Lesson completed:', completionData);
+  
+  setIsLoading(true);
+  setSaveStatus('Auto-completing page...');
+  
+  try {
+    const result = await progressManager.completePage();
+    
+    if (result.jwtUpdated) {
+      setSaveStatus(`Page completed! Score: ${result.score}% (${result.passed ? 'PASSED' : 'FAILED'})`);
+    } else {
+      setSaveStatus('Page completed but save failed');
+    }
+  } catch (error) {
+    console.error('Error completing page:', error);
+    setSaveStatus('Error completing page');
+  } finally {
+    setIsLoading(false);
+    setTimeout(() => setSaveStatus(''), 5000);
   }
+}, [progressManager]);
 
   // Convert the current page questions to the format expected by ContentParser
   const currentPageData = {
