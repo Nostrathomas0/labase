@@ -13,8 +13,11 @@ const ExercisePanel = ({
   const [completedQuestions, setCompletedQuestions] = useState(new Set());
   const [questionKey, setQuestionKey] = useState(0); // Force re-mount
   const [questionHandler] = useState(() => new QuestionHandler(progressManager));
+  const questionId = lessonData && lessonData.questions && lessonData.questions[currentIndex] 
+    ? `${lessonData.lessonId || lessonData.id || 'lesson'}-q_${currentIndex}`
+    : null;
 
-  // Reset when lesson changes
+  // Reset when lesson changes (your existing useEffect starts here)
   useEffect(() => {
     setCurrentIndex(0);
     setCompletedQuestions(new Set());
@@ -23,19 +26,17 @@ const ExercisePanel = ({
 
   // Initialize question when currentIndex changes
   useEffect(() => {
-    if (lessonData && lessonData.questions && lessonData.questions[currentIndex]) {
+    if (questionId) {  // ← Changed: now uses the questionId from above
       const currentQuestion = lessonData.questions[currentIndex];
-      const questionId = `${lessonData.lessonId || lessonData.id || 'lesson'}-q_${currentIndex}`;
       const questionType = currentQuestion.type || 'multipleChoice';
       
       console.log(`[ExercisePanel] Initializing question ${questionId}`);
       
-      // Small delay to ensure React has finished rendering
       setTimeout(() => {
         questionHandler.startQuestion(questionId, questionType);
       }, 50);
     }
-  }, [currentIndex, lessonData, questionHandler]);
+  }, [currentIndex, lessonData, questionHandler, questionId]); // ← Add questionId to dependencies
 
   // Handle when there's no lesson data
   if (!lessonData || !lessonData.questions || lessonData.questions.length === 0) {
@@ -143,7 +144,7 @@ const ExercisePanel = ({
         <QuestionRenderer
           key={`${lessonData.lessonId || lessonData.id || 'lesson'}-q_${currentIndex}_${questionKey}`}
           questionData={currentQuestion}
-          questionId={`q_${currentIndex}`}
+          questionId={questionId}  // ← Use the variable from line 28
           progressManager={progressManager}
           onAnswer={handleAnswer}
         />
