@@ -3,13 +3,12 @@ import React, { useState, useEffect, useCallback } from 'react';
 import MainLayout from '../../layout/MainLayout';
 import NounsData from '../../../data/grammar/A1/1Nouns.json';
 import PageTurner from '../../common/PageTurner';
-import { ProgressManager } from '../../../utils/ProgressManager';
 
-const NounsPage = () => {
+
+const NounsPage = ({ progressManager }) => {
   console.log('NEW NOUNS PAGE LOADED - MainLayout version');
   
   const [currentPage, setCurrentPage] = useState(0);
-  const [progressManager] = useState(() => new ProgressManager());
   const [isLoading, setIsLoading] = useState(false);
   const [saveStatus, setSaveStatus] = useState('');
   const { pages } = NounsData;
@@ -22,61 +21,6 @@ const NounsPage = () => {
     progressManager.startSession('A1', 'nouns', currentPage + 1);
   }, [currentPage, pages, progressManager]);
 
-  // Manual save progress function
-  const handleSaveProgress = useCallback(async () => {
-    setIsLoading(true);
-    setSaveStatus('Saving progress...');
-    
-    try {
-      const saved = await progressManager.saveProgress();
-      
-      if (saved) {
-        setSaveStatus('Progress saved successfully!');
-      } else {
-        setSaveStatus('Failed to save progress');
-      }
-    } catch (error) {
-      console.error('Error saving progress:', error);
-      setSaveStatus('Error saving progress');
-    } finally {
-      setIsLoading(false);
-      setTimeout(() => setSaveStatus(''), 3000);
-    }
-  }, [progressManager]);
-
-  // Complete current page function
-  const handleCompletePage = useCallback(async () => {
-    setIsLoading(true);
-    setSaveStatus('Completing page...');
-    
-    try {
-      const result = await progressManager.completePage();
-      
-      if (result.jwtUpdated) {
-        setSaveStatus(`Page completed! Score: ${result.score}% (${result.passed ? 'PASSED' : 'FAILED'})`);
-      } else {
-        setSaveStatus('Page completed but save failed');
-      }
-    } catch (error) {
-      console.error('Error completing page:', error);
-      setSaveStatus('Error completing page');
-    } finally {
-      setIsLoading(false);
-      setTimeout(() => setSaveStatus(''), 5000);
-    }
-  }, [progressManager]);
-
-  // Expose save functions globally for navigation buttons
-  useEffect(() => {
-  window.saveProgress = handleSaveProgress;
-  window.completePage = handleCompletePage;
-  
-  // Cleanup on unmount
-  return () => {
-    delete window.saveProgress;
-    delete window.completePage;
-  };
-}, [handleSaveProgress, handleCompletePage]);
 
   // Save progress before navigating to next page
   const nextPage = useCallback(async () => {

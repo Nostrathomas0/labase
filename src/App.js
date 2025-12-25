@@ -124,7 +124,7 @@ function App() {
               <Route path="/A1/nouns" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <NounsPage />
+                    <NounsPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
