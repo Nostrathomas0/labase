@@ -3,13 +3,32 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
 
-const MainHeader = ({ onToggleSidebar }) => {
+const MainHeader = ({ onToggleSidebar, progressManager }) => {
   const { currentUser } = useAuth();
   const [isLoggedIn, setIsLoggedIn] = useState(!!currentUser);
+  const [currentScore, setCurrentScore] = useState(null);
+  const [overallStats, setOverallStats] = useState(null);
 
-  useEffect(() => {
-    setIsLoggedIn(!!currentUser);
-  }, [currentUser]);
+  // Your existing useEffect
+useEffect(() => {
+  setIsLoggedIn(!!currentUser);
+}, [currentUser]);
+
+// ADD THIS NEW useEffect:
+useEffect(() => {
+  if (!isLoggedIn || !progressManager) return;
+
+  const updateScores = () => {
+    const pageProgress = progressManager.getPageProgress();
+    setCurrentScore(pageProgress);
+    const stats = progressManager.getOverallStats();
+    setOverallStats(stats);
+  };
+
+  updateScores();
+  const interval = setInterval(updateScores, 2000);
+  return () => clearInterval(interval);
+}, [isLoggedIn, progressManager]);
 
   const handleLogout = () => {
     // Clear JWT and redirect to main domain for sign out
@@ -43,10 +62,46 @@ const MainHeader = ({ onToggleSidebar }) => {
             <span className="user-welcome">
               Welcome, {currentUser?.email?.split('@')[0] || 'User'}
             </span>
-            <div className="status-indicator logged-in" title="Logged in" />
-            <button className="logout-btn" onClick={handleLogout}>
-              Logout
-            </button>
+            {progressManager && (
+        <div className="header-score-display">
+          {currentScore && currentScore.totalQuestions > 0 && (
+            <div className="header-current-score">
+              <span className="score-icon">📝</span>
+              <span className="score-text">
+                {currentScore.correctAnswers}/{currentScore.totalQuestions}
+                <span className="score-percent"> ({currentScore.score}%)</span>
+              </span>
+            </div>
+          )}
+          {overallStats && overallStats.totalTopicsCompleted > 0 && (
+            <div className="header-overall-stats">
+              <span className="stat-item">
+                <span className="stat-icon">📚</span>
+                <span className="stat-value">{overallStats.totalTopicsCompleted}</span>
+              </span>
+              <span className="stat-divider">|</span>
+              <span className="stat-item">
+                <span className="stat-icon">⭐</span>
+                <span className="stat-value">{overallStats.averageScore}%</span>
+              </span>
+              {overallStats.streak > 0 && (
+                <>
+                  <span className="stat-divider">|</span>
+                  <span className="stat-item">
+                    <span className="stat-icon">🔥</span>
+                    <span className="stat-value">{overallStats.streak}</span>
+                  </span>
+                </>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+      <div className="status-indicator logged-in" title="Logged in" />
+      <button className="logout-btn" onClick={handleLogout}>
+        Logout
+      </button>
+            
           </>
         ) : (
           <>

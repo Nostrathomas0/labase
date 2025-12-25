@@ -86,52 +86,38 @@ useEffect(() => {
             🏠 Home
           </Link>
 
-          {/* SCORE DISPLAY SECTION */}
-          {progressManager && (
+ 
+          {progressManager && overallStats && (
             <div className="nav-section score-display">
               <div className="nav-section-header">📊 Your Progress</div>
               
-              {/* Current Page Score */}
-              {currentScore && currentScore.totalQuestions > 0 && (
-                <div className="score-card current-score">
-                  <div className="score-label">Current Page</div>
-                  <div className="score-value">
-                    <span className="score-number">{currentScore.score}%</span>
-                    <span className="score-details">
-                      {currentScore.correctAnswers}/{currentScore.totalQuestions} correct
-                    </span>
-                  </div>
-                  <div className={`score-status ${currentScore.passed ? 'passed' : 'not-passed'}`}>
-                    {currentScore.passed ? '✅ Passing' : '⏳ In Progress'}
-                  </div>
+              <div className="score-card overall-stats">
+                <div className="stat-row">
+                  <span className="stat-label">📚 Topics Completed:</span>
+                  <span className="stat-value">{overallStats.totalTopicsCompleted}</span>
                 </div>
-              )}
-
-              {/* Overall Statistics */}
-              {overallStats && (
-                <div className="score-card overall-stats">
-                  <div className="stat-row">
-                    <span className="stat-label">📚 Topics Completed:</span>
-                    <span className="stat-value">{overallStats.totalTopicsCompleted}</span>
-                  </div>
-                  <div className="stat-row">
-                    <span className="stat-label">⭐ Average Score:</span>
-                    <span className="stat-value">{overallStats.averageScore}%</span>
-                  </div>
-                  <div className="stat-row">
-                    <span className="stat-label">🔥 Current Streak:</span>
-                    <span className="stat-value">{overallStats.streak}</span>
-                  </div>
-                  <div className="stat-row">
-                    <span className="stat-label">⏱️ Total Time:</span>
-                    <span className="stat-value">
-                      {Math.floor(overallStats.totalTimeSpent / 60)} min
-                    </span>
-                  </div>
+                <div className="stat-row">
+                  <span className="stat-label">⭐ Average Score:</span>
+                  <span className="stat-value">{overallStats.averageScore}%</span>
                 </div>
-              )}
+                <div className="stat-row">
+                  <span className="stat-label">🔥 Current Streak:</span>
+                  <span className="stat-value">{overallStats.streak}</span>
+                </div>
+                <div className="stat-row">
+                  <span className="stat-label">⏱️ Total Time:</span>
+                  <span className="stat-value">
+                    {Math.floor(overallStats.totalTimeSpent / 60)} min
+                  </span>
+                </div>
+              </div>
             </div>
           )}
+          {/* END OF ADDED SECTION */}
+
+          {/* Progress Controls */}
+          <div className="nav-section progress-controls"></div>
+    
 
           {/* Progress Controls */}
           <div className="nav-section progress-controls">
