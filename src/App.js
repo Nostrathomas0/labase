@@ -1,7 +1,7 @@
 // App.js - New Flexible Architecture
 import './firebaseInit';
 import './App.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AuthProvider } from './components/AuthContext';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
