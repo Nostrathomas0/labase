@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { AuthProvider } from './components/AuthContext';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
-import { ProcessManager } from './utils/ProgressManager';
+import { ProgressManager } from './utils/ProgressManager';
 // Layout Components
 import MainHeader from './components/layout/MainHeader';
 import HamburgerNavigation from './components/layout/HamburgerNavigation';
@@ -48,7 +48,7 @@ import TOEICExamPage from './components/pages/exams/TOEICExamPage';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [progressManager] = useState(() => new ProcessManager());
+  const [progressManager] = useState(() => new ProgressManager());
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
