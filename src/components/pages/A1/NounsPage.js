@@ -5,7 +5,7 @@ import React from 'react';
 import MainLayout from '../../layout/MainLayout';
 import PageTurner from '../../common/PageTurner';
 import NounsData from '../../../data/grammar/A1/1Nouns.json';
-import { useLessonPage } from '../../hooks/useLessonPage';
+import { useLessonPage } from '../../../hooks/useLessonPage';
 
 const NounsPage = ({ progressManager }) => {
   // ALL logic handled by the hook!
