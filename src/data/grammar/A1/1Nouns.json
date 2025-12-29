@@ -117,7 +117,7 @@
         {
           "type": "gapFill",
           "template": "6) Add an article to the noun. _____ elephant",
-          "correctAnswer": ["an", "the"]
+          "correctAnswers": ["an", "the"]
         },
         {
           "type": "multipleChoice",
