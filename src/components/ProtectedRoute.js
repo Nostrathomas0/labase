@@ -1,4 +1,5 @@
-// ProtectedRoute.js - Updated with Auto-Redirect to Last Session
+// ProtectedRoute.js - AGGRESSIVE INSTANT REDIRECT VERSION
+// Gets users OFF the welcome page and INTO lessons IMMEDIATELY
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from './AuthContext';
@@ -11,32 +12,47 @@ const ProtectedRoute = ({ children }) => {
   const [redirected, setRedirected] = useState(false);
   const [sessionCheckComplete, setSessionCheckComplete] = useState(false);
 
-  // Check for last session and auto-redirect (only on homepage)
+  // AGGRESSIVE AUTO-REDIRECT - Get users to lessons IMMEDIATELY
   useEffect(() => {
-    if (!loading && currentUser && location.pathname === '/' && !sessionCheckComplete) {
-      try {
-        const token = Cookies.get('JWT');
-        
-        if (token) {
-          // Decode JWT manually (safer than jwt-decode library)
-          const payload = JSON.parse(atob(token.split('.')[1]));
+    if (!loading && currentUser && !sessionCheckComplete) {
+      // Don't redirect if already on a lesson page
+      const isOnLessonPage = location.pathname.match(/^\/(A1|A2|B1|B2)\//);
+      
+      if (!isOnLessonPage) {
+        try {
+          const token = Cookies.get('JWT');
           
-          // Check if user has a session in progress
-          if (payload.currentSession) {
-            const { level, topic } = payload.currentSession;
+          if (token) {
+            const payload = JSON.parse(atob(token.split('.')[1]));
+            let targetUrl = null;
             
-            console.log(`Resuming last session: ${level}/${topic}`);
+            // Priority 1: Resume current session if exists
+            if (payload.currentSession) {
+              const { level, topic } = payload.currentSession;
+              targetUrl = `/${level}/${topic}`;
+              console.log('🚀 SNAP BACK to current session:', targetUrl);
+            }
+            // Priority 2: Go to most recent completed lesson
+            else if (payload.recentProgress && payload.recentProgress.length > 0) {
+              const recent = payload.recentProgress[0];
+              targetUrl = `/${recent.level}/${recent.topic}`;
+              console.log('🚀 SNAP BACK to recent lesson:', targetUrl);
+            }
+            // Priority 3: Default to first lesson
+            else {
+              targetUrl = '/A1/nouns';
+              console.log('🚀 SNAP BACK to default start:', targetUrl);
+            }
             
-            // Small delay for better UX
-            setTimeout(() => {
-              navigate(`/${level}/${topic}`);
-            }, 800);
+            // INSTANT redirect - no delay, no mercy
+            navigate(targetUrl, { replace: true });
           }
+        } catch (error) {
+          console.error('Redirect failed:', error);
+        } finally {
+          setSessionCheckComplete(true);
         }
-      } catch (error) {
-        console.error('Failed to check session:', error);
-        // Fail silently - don't break the app
-      } finally {
+      } else {
         setSessionCheckComplete(true);
       }
     }

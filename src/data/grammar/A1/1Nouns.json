@@ -12,9 +12,8 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {"text": "Nouns are anyone, anything or any place. They give them names. The sentences, ","textStyle": "text"},
-            {"text": " Cleopatra lived in Egypt and Rome. ", "textStyle": "italic", "newLine":false},
-            {"text": " has 3 nouns. Nouns can be common objects, ","textStyle": "text"},
+            {"text": "Nouns", "textStyle":"bold"},
+            {"text": " are anyone, anything or any place. They give them names. Nouns can be common objects, ","textStyle": "text"},
             {"text": " a car, a house, a computer, ", "textStyle": "italic", "newLine":false},
             {"text": " or intangible things that you can't touch or see, ","textStyle": "text"},
             {"text": " ideas, love, data. ", "textStyle": "italic", "newLine":false},
@@ -23,15 +22,15 @@
             {"text": " and their first letter is capitalized.", "textStyle":"text"},
             {"text": " Common nouns are the words we use for objects;", "textStyle": "text"},
             {"text": " a dog, an apple,", "textStyle":"italic"},
-            {"text": ". These words don't like being alone need a determiner, so use them with an ", "textStyle":"text"},
+            {"text": ". These words don't like standing alone need a determiner, so use them with an ", "textStyle":"text"},
             {"text": " article", "textStyle": "underline"},
-            {"text": " :a", "textStyle": "italic" },
+            {"text": ": a", "textStyle": "italic" },
             {"text": " / ","textStyle": "text"},
             {"text": "an ", "textStyle": "italic" },
             {"text": ", a", "textStyle": "text"},
             {"text": " posessive", "textStyle": "underline"},
             {"text": " : my, your, his", "textStyle": "italic"},
-            {"text": ", a ", "textStyle": "text"},
+            {"text": ", a", "textStyle": "text"},
             {"text": "demonstrative", "textStyle":"underline"},
             {"text": ": this, that, these, those ", "textStyle":"italic"},
             {"text": "or a ", "textStyle": "text"},
@@ -53,7 +52,7 @@
             {"text": "We & us ",  "textStyle": "bold", "newLine": true },
             {"text": " are for you and I, together. It's the 1st person, plural.", "textStyle": "text" },
             {"text": "They & them ", "textStyle": "bold",  "newLine": true   },
-            {"text": " are for 2+ people or things, neutral or otherwise unspecified; 3rd person plural.",  "textStyle": "text"   },
+            {"text": " are for two or more people or things; 3rd person plural.",  "textStyle": "text"   },
             {"text": "1) Click on correct placenames below.", "textStyle": "italic",  "newParagraph": true }
           ],
           "words": [
@@ -143,23 +142,23 @@
           "layout": "horizontal",
           "instructions": [
             {
-              "text": " Common nouns are any things like objects, thoughts or ideas and they are numerous. They become ", 
+              "text": " Common nouns are any things like objects, thoughts or ideas and when they are numerous, they become ", 
               "textStyle":"text"
             }, 
             {
-              "text": "plural nouns, ",
-                "textStyle": "bold"
+              "text": "plural nouns",
+                "textStyle": "underline"
             },
             {
-              "text": "count, and more than one gets an  ",
+              "text": ". We could count them. Most nouns are made plural by adding an ",
               "textStyle": "text"
             },
             {
-              "text": "s .",
-              "textStyle": "bold"
+              "text": "s ",
+              "textStyle": "italic"
             },  
             {
-              "text": " at the end of the word. ",
+              "text": ". ",
               "textStyle": "text"
             },    
             {
@@ -291,10 +290,10 @@
               "text": " Countable words", "textStyle": "underline", "newParagraph":false
              }, 
             {
-              "text": "Sometimes we've got more one or more of the same thing:", "textStyle": "text", "newParagraph":true
+              "text": "Sometimes we've got many of the same thing:", "textStyle": "text", "newParagraph":true
             } ,
             {
-              "text": " one apple, two apples. ",
+              "text": " two apples. ",
               "textStyle": "italic"
             },
             {
@@ -307,11 +306,11 @@
               "textStyle": "text"
             },
             {
-              "text": "one money, two moneies. ",
+              "text": " two moneys. ",
               "textStyle": "strike"
             },
             {
-              "text": " although ",
+              "text": " We must count it with other words: ",
               "textStyle": "text"
             },
           
@@ -483,7 +482,7 @@
             },
             {
               "text": "rice",
-              "feedback": "'rice' is not a countable noun. You can count grains of rice."
+              "feedback": "'rice' is not a countable noun, even if you've counted grains of rice."
             }
           ],
           "keyWords": [
@@ -541,13 +540,13 @@
           "layout":"horizontal",
           "instructions":[ 
             {
-              "text": "  Nouns in general, are pluralized simply by adding a suffix to the root. Generally speaking we use plural nouns to say the things we like, but not the stuff we like. This can cause confusion, especially for words which can refer to both a countable thing and its material substance.",
-              "textStyle": "text",
-              "newLine":true
+              "text": " Generally speaking, we use plural nouns for the things we like, but not the stuff we like. This can cause confusion, especially for words which can refer to both a countable thing and its material substance.",
+              "textStyle": "text"              
             }, 
             {
-              "text": " he threw a marble at me.",
-              "textStyle": "underline"
+              "text": " He threw his marble.",
+              "textStyle": "underline",
+              "newLine":true
             },
             {
               "text": "My kitchen countertop is made of marble. ",
