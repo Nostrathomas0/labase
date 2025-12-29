@@ -85,9 +85,14 @@ function App() {
             <Routes>
               {/* Public routes */}
               <Route path="/login" element={<HomePage />} />
-              <Route path="/" element={<HomePage />} />
+              
               
               {/* Protected Grammar Level routes */}
+              <Route path="/" element={
+                <ProtectedRoute>
+                <HomePage />
+                </ProtectedRoute>
+              } />
               <Route path="/A1" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="navigation">
