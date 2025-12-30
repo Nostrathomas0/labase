@@ -13,27 +13,32 @@
           "layout":"horizontal",
           "instructions": [
             
-            {"text": "Verbs tell us what's happening and what people do. They're", "textStyle":"text"},
-            {"text": " action words ", "textStyle":"underline"},
-            {"text": "like ", "textStyle": "text"},
+            {"text": "Verbs tell us what's happening.They're thousands of ", "textStyle":"text"},
+            {"text": "action words", "textStyle":"underline"},
+            {"text": " like ", "textStyle": "text"},
             {"text": " run, jump  ", "textStyle": "bold"},
-            {"text": "and", "textStyle": "text"},
+            {"text": "or", "textStyle": "text"},
             {"text": " eat", "textStyle": "bold"},
-            {"text": ", or they're ", "textStyle": "text"},
-            {"text": " states ", "textStyle":"underline"},
+            {"text": ", and they're hundreds more", "textStyle": "text"},
+            {"text": " state verbs ", "textStyle":"underline"},
             {"text": " like", "textStyle": "text"},
-            {"text": " am, is, are, love  ", "textStyle": "bold"},
-            {"text": " and ", "textStyle": "text"},
-            {"text": " have. ", "textStyle": "bold"},
-            {"text": "Sentences have a ", "textStyle":"text", "newLine":true},
-            {"text": " main  ", "textStyle":"bold"},
-            {"text": " verb, which describes the action or state. Verbs change forms with different tenses with common past forms getting ",  "textStyle":"text"},
-            {"text": "-ed ", "textStyle": "bold"},
-            {"text": "suffix. The most common verbs however, are irregular but only a few have more than 2 personal forms, i.e. ", "textStyle":"text"},
-            {"text": " am/is/are ", "textStyle": "italic"},
-            {"text": " and ", "textStyle": "text"},
-            {"text": " have/has .", "textStyle": "italic"},
-            {"text": " Those are also auxilliary verbs which go first in order.", "textStyle": "text"},
+            {"text": " am, was, love, embodies ", "textStyle": "bold"},
+            {"text": " or ", "textStyle": "text"},
+            {"text": " resides. ", "textStyle": "bold"},
+            {"text": " This means that state verbs avoid continuous forms, and may subtly change meaning in", "textStyle": "text", "newParagraph":true},
+            {"text": "-ing", "textStyle": "underline"},
+            {"text": " forms. For example, ", "textStyle":"text", "newLine":true},
+            {"text": " I love you. ", "textStyle": "italic", "newLine":true},
+            {"text": " describes a state of affection, while ", "textStyle":"text", "newLine":true},
+            {"text": " I'm loving it! ", "textStyle": "italic", "newLine":true},
+            {"text": " describes an action or experience.", "textStyle":"text", "newParagraph":true},
+            {"text": " To ", "textStyle":"text"},
+            {"text": "Be", "textStyle":"underline"},
+            {"text": " as a main verb is copula, it describes your attributes, your character and your property. It can't be continuous and it needs a predicate. ", "textStyle":"text"},
+            {"text": "A human being ", "textStyle":"italic", "newLine":true},
+            {"text": " is ", "textStyle":"italic"},
+            {"text": " not a complete sentence. ", "textStyle":"italic", "newLine":true},
+
             {"text": "Click on the main verb below", "textStyle": "italic", "newParagraph":true}
           ],
           "words": [
@@ -45,7 +50,37 @@
           ],
           "keyWords":
            ["filming"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which is the main verb in the sentence 'She is running fast'?",
+          "options": ["is", "running", "fast"],
+          "correctAnswer": "running"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which is the main verb in the sentence 'They are happy'?",
+          "options": ["are", "happy"],
+          "correctAnswer": "are"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which is the main verb in the sentence 'I have a car'?",
+          "options": ["have", "car"],
+          "correctAnswer": "have"
+        },
+        {
+          "type":"gapFill",
+          "template": "He _____ a teacher.",  
+          "correctAnswers": ["is", "was"]
+        },
+        {
+          "type":"gapFill",
+          "template": "They _____ playing football.",  
+          "correctAnswers": ["are", "were"]
         }
+
+      
       ]
     },
     {
@@ -55,11 +90,42 @@
           "imagePath": "A1/3Verbs/2.png",
           "altText": "State v. live, have, like, love, hate, look, look like, appear, smell, smell like, !must "
         },
+
         {
           "type": "multipleChoice",
           "question": "What's the only verb with more than 5 forms?",
           "options": ["go", "do", "have", "be"],
           "correctAnswer": "be"
+        },
+        {
+          "type": "click",
+          "layout":"vertical",
+          "instructions": [
+            
+            {"text": "English verb forms are pretty easy to learn. Most verbs only have a few forms. Regular verbs' 2nd and 3rd forms are the same. Each form has a clear use. Some deal with time;  ", "textStyle":"text"},
+            {"text": "She ", "textStyle":"text"},
+            
+            {"text": "went", "textStyle":"underline"},
+            {"text": " to school.", "textStyle":"text"},
+            {"text": " Describes a single event in the past, but have different forms. ", "textStyle":"text"},
+            {"text": " She ", "textStyle":"italic", "newLine":false},
+            {"text": "was going ", "textStyle":"underline", "newLine":false},
+            {"text": "to school.", "textStyle":"italic", "newLine":false},
+            {"text": " Describes something that happened often over a period in the past. ", "textStyle":"text", "newParagraph":true},
+            {"text": " The verb ", "textStyle":"text"},
+            {"text": " to be ", "textStyle":"underline"},
+            {"text": " is the most common verb in English and has more forms than any other verb. It has 8 personal forms:", "textStyle":"text"},
+            {"text": " am, is, are, was, were, being, been, be ", "textStyle":"bold"}    
+          ],
+          "words": [
+            { "text": "I", "feedback": "Nope, that's a pronoun." }
+      ],
+          "keyWords": [
+            "Does",
+            "'m",
+            "lives",
+            "want"
+          ]
         }
       ]
     },
@@ -140,7 +206,29 @@
           "type":"click",
           "layout":"horizontal",
           "instructions": [
-            {"text":" ", "textStyle":"text"}
+            {"text":" ", "textStyle":"text"},
+                        {"text": " The car ", "textStyle":"italic"},
+            {"text": " is ", "textStyle":"italic"},
+            {"text": " red. ", "textStyle":"italic", "newParagraph":true},
+            {"text": "person", "textStyle":"text"},
+            {"text": " do ", "textStyle":"underline"},
+            {"text": ", ", "textStyle":"text"},
+            {"text": " have ", "textStyle":"underline"},
+            {"text": " or ", "textStyle":"text"},
+            {"text": " do ", "textStyle":"underline"},
+            {"text": "are also auxilliary verbs that help ", "textStyle":"text"},
+            {"text": "form sentences", "textStyle":"underline"},
+            {"text": ", we need verbs. ", "textStyle":"text"},
+            {"text": " "},
+            {"text": "Sentences have a ", "textStyle":"text", "newParagraph":true},
+            {"text": " main  ", "textStyle":"bold"},
+            {"text": " verb, which describes the action or state. Verbs change forms with different tenses with common past forms getting ",  "textStyle":"text"},
+            {"text": "-ed ", "textStyle": "bold"},
+            {"text": "suffix. The most common verbs however, are irregular but only a few have more than 2 personal forms, i.e. ", "textStyle":"text"},
+            {"text": " am/is/are ", "textStyle": "italic"},
+            {"text": " and ", "textStyle": "text"},
+            {"text": " have/has .", "textStyle": "italic"},
+            {"text": " Those are also auxilliary verbs which go first in order.", "textStyle": "text"}
           ]
         },
         {
