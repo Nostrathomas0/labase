@@ -287,10 +287,10 @@
             
             
             {
-              "text": " Countable words", "textStyle": "underline", "newParagraph":false
+              "text": " Countable words", "textStyle": "underline", "newParagraph":true
              }, 
             {
-              "text": "Sometimes we've got many of the same thing:", "textStyle": "text", "newParagraph":true
+              "text": "A number is a suitable determiner for many nouns:", "textStyle": "text", "newParagraph":true
             } ,
             {
               "text": " two apples. ",
@@ -306,11 +306,11 @@
               "textStyle": "text"
             },
             {
-              "text": " two moneys. ",
+              "text": "two moneys",
               "textStyle": "strike"
             },
             {
-              "text": " We must count it with other words: ",
+              "text": ". We must count it with other words: ",
               "textStyle": "text"
             },
           
@@ -334,16 +334,16 @@
               "textStyle": "bold"
             },
             {
-              "text": "Uncountable nouns need different determiners. Avoid the indefinite article, (",
+              "text": "Uncountable nouns need different determiners. Avoid numbers, indefinite articles, (",
               "textStyle": "text" 
             },
             {
-              "text": " an information, an air, a humanity, a trash, a chess, a poetry, a furniture, a homework, a wisdom. ",
+              "text": " one information, an air, a humanity, 4 trashes, a few chess, a poetry, a furniture, 2 homeworks, a wisdom. ",
               "textStyle": "strike",
               "newLine":false
             },
             {
-              "text": ") Use a quantifier, a countable noun phrase to create a measurement for materials.  ",
+              "text": ") Use a quantifier to measure materials.  ",
               "textStyle": "text",
               "newParagraph":true
             },
@@ -448,6 +448,9 @@
             {
               "text": "   Gods, Suns, and Earths .",
               "textStyle": "strike"
+            },
+            {
+              "text": " A word's countability depends on how it's used. Nouns for objects and things are usually countable. Nouns for materials and stuff are usually uncountable.", "textStyle":"text", "newParagraph":true
             },
             {
               "text": "1) Click on the countable nouns",
