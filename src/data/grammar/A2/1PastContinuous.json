@@ -12,27 +12,26 @@
             "instructions": [
               {"text": "A ", "textStyle":"text"},
               {"text": "tense", "textStyle":"italic"},
-              {"text": " deals with ", "textStyle":"text"},
-              {"text": "time","textStyle":"underline"},
-              {"text": " and events when something happens.", "textStyle":"text"},
-              {"text": "Past continuous,", "textStyle":"bold", "newParagraph":true},
-              {"text": " is a verb tense used for past actions in progress.", "textStyle":"text", "newLine":false},
-              {"text": "Like present continuous, it uses aux verb ", "textStyle":"text", "newLine":true},
+              {"text": " deals with time","textStyle":"text"},
+              {"text": " when or how something happens.", "textStyle":"text"},
+              {"text": "Past continuous,", "textStyle":"bold"},
+              {"text": " is a verb tense for past actions in progress.", "textStyle":"text", "newLine":false},
+              {"text": "Like present continuous, it uses aux verb ", "textStyle":"text"},
               {"text": "be", "textStyle":"underline"},
-              {"text": " form 2: ", "textStyle":"text"},
-              {"text": " was/were.", "textStyle":"italic"},
-              {"text": " In continuous tenses, the main verb is always in ", "textStyle":"text"},
-              {"text": " -ing", "textStyle":"underline"},
+              {"text": " in form 2, which is ", "textStyle":"text"},
+              {"text": " was / were.", "textStyle":"italic"},
+              {"text": " In continuous tenses, the main verb is always in -", "textStyle":"text"},
+              {"text": "ing", "textStyle":"underline"},
               {"text": " form.", "textStyle":"text"},
               {"text": " Tell stories and events that were happening by using ", "textStyle":"text", "newParagraph":true},
               {"text": " be,", "textStyle":"underline"},
               {"text": " in the past tense. ", "textStyle":"text"},
               {"text": " Past actions are framed with other events;", "textStyle":"text"},
-              {"text": " I was wondering if you went to class yesterday.", "textStyle": "italic", "newLine":true},
+              {"text": " I was wondering if you went to class yesterday.", "textStyle": "italic"},
               {"text": "Or an event happening ", "textStyle":"text", "newLine":true},
               {"text": "while", "textStyle":"underline"},
               {"text": " another event was going on; ", "textStyle":"text"},
-              {"text": " We were having dinner ", "textStyle":"italic", "newLine":true},
+              {"text": " We were having dinner ", "textStyle":"italic"},
               {"text": "when", "textStyle":"underline"},
               {"text": " we heard the message.","textStyle":"italic"},
               {"text": "1 ) Click on the aux. verbs", "textStyle": "italic", "newParagraph":true }
@@ -66,16 +65,24 @@
           "options": ["watch", "watched", "were watching", "watches"],
           "correctAnswer": "were watching"
         },
-        {
-          "type": "multipleChoice",
-          "question": "4) She _____ (study) at 8 o'clock last night.",
-          "options": ["is studying", "was studying", "studies", "studied"],
-          "correctAnswer": "was studying"
-        },                
+      {
+          "type": "wordBank",
+          "paragraph": "3-5) I don't have _____ friends but I have _____ money to help them. However, I don't have _____ time.",
+          "wordBank": [
+            "some",
+            "many",
+            "much"
+          ],
+          "correctAnswers": [
+            "many",
+            "some",
+            "much"
+          ]
+        },               
         {
           "type": "gapFill",
-          "template": "5) I _____ (read) a book when the lights went out.",
-          "correctAnswers": ["was reading"]
+          "template": "5) I _____ reading a book when the lights went out.",
+          "correctAnswers": ["was", "was reading", "'m", "were"]
         }
       ]
     },
@@ -88,17 +95,45 @@
       {
         "type": "click",
         "instructions": [
-          {"text": "Sets the speaker in place, looking at the sea, for some duration of time in the past. ", "textStyle":"text"},
-          {"text": "Setting describes the scene, in a literary sense.", "textStyle":"text", "newParagraph":true},
-          {"text":  "when, where,  maybe a bit about the weather.", "textStyle":"bold"}
+          {"text": "In a literary sense, present continuous sets the scene and does so quite dramatically.", "textStyle":"text"},
+          {"text": "We were looking at the sea. ", "textStyle":"italic"},
+          {"text": "More than a ", "textStyle":"text"},
+          {"text": "dark and story night,", "textStyle":"italic", "newParagraph":true},
+          {"text":  " it sets an agent in the past and promises a story.", "textStyle":"bold"}
         ],
         "words": [],
         "keyWords": []
       },
       {
         "type": "gapFill",
-        "template": "Continuous uses be in verb 2. Write a form of be in form 2.",
+        "template": "2) Continuous uses be in verb 2. Write a form of be in form 2.",
         "answers": ["was", "were"]
+      },
+      {
+        "type":"multipleChoice",
+        "question": "3) What is the main verb in this sentence? 'I was walking to the store when I saw a dog.'",
+        "options": ["was", "walking", "saw", "to the store"],
+        "correctAnswer": "walking"
+      },
+      {
+        "type":"multipleChoice",
+        "question": "4) Which sentence is correct?",
+        "options": ["She were playing.", "They was running.", "I was eating.", "He were sleeping."],
+        "correctAnswer": "I was eating."
+      },
+      {
+        "type": "wordBank",
+        "paragraph": "5) Oh la, I _____ to work yesterday but when I realized I had forgotten my phone, so I _____ back home, but when I got back there, my parents _____ there.",
+        "wordBank": [
+          "were",
+          "was",
+          "went"
+        ],
+        "correctAnswers": [
+          "was",
+          "went",
+          "were"
+        ]
       }
     ]
     },
@@ -118,20 +153,33 @@
           {"text":" which interrupts an action in progress and ", "textStyle":"text"},
           {"text":"while ", "textStyle":"bold"},
           {"text":" adds another progressive action happening at the same time.", "textStyle":"text"},
-          {"text":" The interrupting action is usually past simple so ", "textStyle":"text"},
+          {"text":" The interrupting action is usually past simple joined by ", "textStyle":"text"},
           {"text":" when ", "textStyle":"bold"},
-          {"text": " usually joins a phrase in past simple with another in past continous.", "textStyle":"text"},
-          {"text": "  not both", "textStyle":"text"},
+          {"text": " to the next phrase .", "textStyle":"text"},
           {"text":" so", "textStyle":"text"},
           {"text": " We were eating when they arrived.", "textStyle":"italic"},
           {"text": "or", "textStyle":"text"} ,
-          {"text":"While we were eating when they arrived", "textStyle":"italic"},
+          {"text":"While we were eating, they arrived", "textStyle":"italic"},
           {"text": "but", "textStyle":"text"},
-          {"text":"While we were eating they were arrived", "textStyle":"strike"}
+          {"text":"While we were eating they were arriving", "textStyle":"strike"}
 
         ],
         "words":[],
         "keyWords":[]
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "3-5) I don't have _____ friends but I have _____ money to help them. However, I don't have _____ time.",
+          "wordBank": [
+            "some",
+            "many",
+            "much"
+          ],
+          "correctAnswers": [
+            "many",
+            "some",
+            "much"
+          ]
         }
       ]
     },
