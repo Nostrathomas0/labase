@@ -13,32 +13,35 @@
           "layout":"horizontal",
           "instructions": [
             
-            {"text": "Adjectives are words that describe things. This can be a simple sentence with the verb ", "textStyle":"text"},
+            {"text": "Adjectives ", "textStyle":"bold"},
+            {"text": " are words that describe things, often in simple sentences with the verb ", "textStyle":"text"},
             {"text": "to be", "textStyle":"underline"},
             {"text": " in its different forms:", "textStyle":"text"},
-            {"text": "You", "textStyle":"italic"},
-            {"text": "are pretty" , "textStyle":"underline"},
-            {"text": ". The class ", "textStyle": "italic"},
-            {"text": " was fast. ", "textStyle": "italic"},
-            {"text": "and", "textStyle": "text"},
-            {"text": " My shoes", "textStyle": "italic"},
-            {"text": " are dirty.", "textStyle": "underline"},
-            {"text": " , Or they can describe things by preceeding them. For example;", "textStyle": "text"},
-            {"text": "a quick class, clean shoes.", "textStyle":"italic"},
+            {"text": "You ", "textStyle":"italic", "newLine":true},
+            {"text": "are ", "textStyle":"italic"},
+            {"text": "pretty" , "textStyle":"underline"},
+            {"text": ". The class ", "textStyle": "italic", "newLine":true},
+            {"text": "was", "textStyle": "underline"},
+            {"text": " fast. ", "textStyle": "italic"},
+            {"text": "My shoes ", "textStyle": "italic", "newLine":true},
+            {"text": "are dirty.", "textStyle": "underline"},
+            {"text": " Or they can describe things by preceeding them and another verb. For example; ", "textStyle": "text", "newParagraph":true},
+            {"text": "I have", "textStyle":"underline"},
+            {"text": " a quick class and clean shoes.", "textStyle":"italic"},
             {"text": "You can use many adjectives side by side. ex. A", "textStyle":"text", "newParagraph":true},
             {"text": " good, old, rusty, red ", "textStyle":"italic"},
-            {"text": "wagon. Adjectives don't have plural forms. ",  "textStyle":"text"},
-            {"text": " sunnies ", "textStyle": "strikethrough"},
-            {"text": "days. There ", "textStyle":"text"},
+            {"text": "wagon. Adjectives don't have plural forms; ",  "textStyle":"text"},
+            {"text": "sunnies", "textStyle": "strikethrough"},
+            {"text": " days. There ", "textStyle":"text"},
             {"text": " are ", "textStyle": "italic"},
             {"text": " superlative & comparative forms though. ", "textStyle": "text"},
             {"text": "Today is", "textStyle": "text", "newLine":true},
             {"text": " sunnier", "textStyle": "italic"},
             {"text": " than yesterday.", "textStyle": "text", "newParagraph":false},
-            {"text": " It's the ", "textStyle":"italic"},
-            {"text": "hottest", "textStyle":"italic"},
-            {"text": " day ever", "textStyle":"italic"},
-            {"text": "Click the adjectives in the sentences below."}
+            {"text": " It's the ", "textStyle":"underline"},
+            {"text": "hottest", "textStyle":"italic"},  
+            {"text": " day ever", "textStyle":"text"},
+            {"text": "Click the adjectives in the sentences below.", "textStyle":"text", "newParagraph":true}
           ],
           "words": [
             {"text":"Autumn ", "feedback":"Incorrect, 'Autumn' is a noun"},
@@ -78,19 +81,25 @@
           "altText": "adj. 'cool', 'good', 'fine', 'alright', colorful, 'friendly', 'sexy' 'confident', 'bright'"
         },
         {
-          "type": "multipleChoice",
-          "question": "1) Adjectives go _______ the noun the describe?",
-          "options": ["before", "after", "either before or after"],
-          "correctAnswer": "before"
-        },
-        {
           "type":"click",
           "instructions": [
-           
+            {"text": "Adjectives", "textStyle": "italic"},
+            {"text": " are words that describe nouns and the come between them and their articles. To make an ", "textStyle": "italic"},
+            {"text": "Adjective phrase", "textStyle": "underline"},
+            {"text": ", you can put more than one adjective before a noun. For example; ", "textStyle": "italic", "newParagraph":true},
+            {"text": "The ", "textStyle": "text"},
+            {"text": "quick brown ", "textStyle": "italic"},
+            {"text": "fox, or put ", "textStyle": "text"},
+            {"text": "adverbs", "textStyle": "underline"},
+            {"text": " before the adjective; The ", "textStyle": "text"},
+            {"text": "very", "textStyle": "underline"},
+            {"text": " quick brown ", "textStyle": "italic"},
+            {"text": "fox. ", "textStyle": "text"},
             {"text": "2) Click on the adjectives in the sentence below.", "textStyle": "italic"}
           ],
           "words": [
             { "text": "The", "feedback": "'The' is not an adjective." },
+            { "text": "very", "feedback": "'very' is not an adjective." },
             { "text": "quick", "feedback": "'quick' is an adjective." },
             { "text": "brown", "feedback": "'brown' is an adjective." },
             { "text": "fox", "feedback": "'fox' is not an adjective." },
@@ -105,6 +114,12 @@
             "brown",
             "lazy"
           ]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "2) When does the adjective come after the noun?",
+          "options": ["with the verb To Be ", "in noun phrases", "either before or after"],
+          "correctAnswer": "with the verb To Be "
         },
         {
           "type": "multipleChoice",
@@ -127,17 +142,18 @@
           "instructions": [
            
             {"text": " Quantifiers determine ", "textStyle":"text"},
-            {"text": "how many ", "textStyle":"underline"},
-            {"text": "countables nouns and ", "textStyle":"text"},
-            {"text": "how much ", "textStyle":"underline"},
-            {"text": "uncountable noun there is, ", "textStyle":"text"},
-            {"text": " plenty of, a lot of, much, many  & tons of ", "textStyle":"bold"},
-            {"text": " describes a high amount, ", "textStyle": "text"},
+            {"text": "how many", "textStyle":"underline"},
+            {"text": "countable nouns and ", "textStyle":"text"},
+            {"text": "how much", "textStyle":"underline"},
+            {"text": " uncountable noun there is of something.", "textStyle":"text"},
+            {"text": " To describe a high amount, use ", "textStyle": "text", "newParagraph":true},
+            {"text": "plenty of, a lot of, much, many & tons of ", "textStyle":"bold"},
+             {"text": " To describe a medium or acceptable ammount use ", "textStyle":"text", "newParagraph":true},
             {"text": " some & enough ", "textStyle":"bold"},
-            {"text": " describe a medium or acceptable ammount and ", "textStyle":"text"},
+            {"text": " To describe an amount equal to zero, use ", "textStyle":"text"},
             {"text": " no ", "textStyle":"bold"},
-            {"text": " describes an amount equal to zero. ", "textStyle":"text"},
-            {"text": "A zero ammount can also be expressed with, ", "textStyle":"text", "newLine":true},
+            {"text": "A zero ammount can also be expressed with, ", "textStyle":"text", "newParagraph":true},
+           
             {"text": " any*", "textStyle":"bold"},
             {"text": " which is also used in questions.  ", "textStyle":"text"},
             {"text": " Do you have any cabbage?", "textStyle":"italic", "newLine":true},
