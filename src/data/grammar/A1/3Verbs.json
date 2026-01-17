@@ -51,7 +51,7 @@
             {"text":"are ","feedback":"Incorrect, 'are' is an auxilliary verb"},
             {"text":"filming", "feedback":"Correct, 'filming' is the main verb"},
             {"text":"a ", "feedback":"Incorrect, 'a' is an indefinite article"},
-            {"text":"movie.", "feedback":"Incorrect, 'movie' is a noun"}
+            {"text":"movie.", "feedback":" 'movie' is a noun"}
           ],
           "keyWords":
            ["filming"]
