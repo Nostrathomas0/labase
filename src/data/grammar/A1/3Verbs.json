@@ -13,31 +13,37 @@
           "layout":"horizontal",
           "instructions": [
             
-            {"text": "Verbs tell us what's happening.They're thousands of ", "textStyle":"text"},
-            {"text": "action words", "textStyle":"underline"},
+            {"text": "Verbs tell us what's happening. They're thousands of ", "textStyle":"text"},
+            {"text": "action verbs", "textStyle":"underline"},
             {"text": " like ", "textStyle": "text"},
             {"text": " run, jump  ", "textStyle": "bold"},
             {"text": "or", "textStyle": "text"},
             {"text": " eat", "textStyle": "bold"},
-            {"text": ", and they're hundreds more", "textStyle": "text"},
-            {"text": " state verbs ", "textStyle":"underline"},
+            {"text": ", and they're hundreds more ", "textStyle": "text"},
+            {"text": "state verbs", "textStyle":"underline"},
             {"text": " like", "textStyle": "text"},
-            {"text": " am, was, love, embodies ", "textStyle": "bold"},
+            {"text": " am, was, love, embodies, lives ", "textStyle": "bold"},
             {"text": " or ", "textStyle": "text"},
-            {"text": " resides. ", "textStyle": "bold"},
-            {"text": " This means that state verbs avoid continuous forms, and may subtly change meaning in", "textStyle": "text", "newParagraph":true},
-            {"text": "-ing", "textStyle": "underline"},
-            {"text": " forms. For example, ", "textStyle":"text", "newLine":true},
-            {"text": " I love you. ", "textStyle": "italic", "newLine":true},
-            {"text": " describes a state of affection, while ", "textStyle":"text", "newLine":true},
-            {"text": " I'm loving it! ", "textStyle": "italic", "newLine":true},
-            {"text": " describes an action or experience.", "textStyle":"text", "newParagraph":true},
-            {"text": " To ", "textStyle":"text"},
-            {"text": "Be", "textStyle":"underline"},
-            {"text": " as a main verb is copula, it describes your attributes, your character and your property. It can't be continuous and it needs a predicate. ", "textStyle":"text"},
-            {"text": "A human being ", "textStyle":"italic", "newLine":true},
-            {"text": " is ", "textStyle":"italic"},
-            {"text": " not a complete sentence. ", "textStyle":"italic", "newLine":true},
+            {"text": " reside. ", "textStyle": "bold"},
+            {"text": " There are several different forms of English verbs but most rarely change form.", "textStyle": "text"},
+            {"text": "I reside", "textStyle":"italic", "newLine":true},
+            {"text": "He resides", "textStyle":"italic", "newLine":true},
+            {"text": "She resided in the past", "textStyle":"italic", "newLine":true},
+            {"text": "They've resided for a while", "textStyle":"italic", "newLine":true},
+            {"text": " We will reside in the future ", "textStyle":"italic", "newLine":true},
+            {"text": " Sentences usually have a main verb which tells us the action or state. ", "textStyle":"text", "newParagraph":true},
+            {"text": " For example, in the sentence ", "textStyle":"text"},
+            {"text": " We are filming a movie. ", "textStyle":"italic", "newLine":true},
+            {"text": " the main verb is ", "textStyle":"text"},
+            {"text": " filming ", "textStyle":"underline"},
+            {"text": " which describes the action. ", "textStyle":"text", "newLine":true},
+            {"text": " The verb ", "textStyle":"text"},
+            {"text": " are ", "textStyle":"underline"},
+            {"text": " is an auxilliary verb that helps to ", "textStyle":"text"},
+            {"text": "form the present continuous tense", "textStyle":"underline"},
+            {"text": ". This tense describes an action that is happening now or around now.  ", "textStyle":"text", "newLine":true},
+            {"text": " TL:DR summary; sentences have a main verb which tells us the action or state and often an auxilliary verbs before the main, for continuing action or marking connection. ", "textStyle":"text", "newParagraph":true},
+            
 
             {"text": "Click on the main verb below", "textStyle": "italic", "newParagraph":true}
           ],
@@ -53,34 +59,22 @@
         },
         {
           "type": "multipleChoice",
-          "question": "Which is the main verb in the sentence 'She is running fast'?",
+          "question": "Click the main verb in the sentence 'She is running fast' .",
           "options": ["is", "running", "fast"],
           "correctAnswer": "running"
         },
         {
           "type": "multipleChoice",
-          "question": "Which is the main verb in the sentence 'They are happy'?",
+          "question": "Click the auxilliary verb in the sentence 'They are walking their dogs' .",
           "options": ["are", "happy"],
           "correctAnswer": "are"
         },
         {
           "type": "multipleChoice",
-          "question": "Which is the main verb in the sentence 'I have a car'?",
-          "options": ["have", "car"],
+          "question": "Which is the main verb in the sentence 'I will have a car'?",
+          "options": ["will","have", "car"],
           "correctAnswer": "have"
-        },
-        {
-          "type":"gapFill",
-          "template": "He _____ a teacher.",  
-          "correctAnswers": ["is", "was"]
-        },
-        {
-          "type":"gapFill",
-          "template": "They _____ playing football.",  
-          "correctAnswers": ["are", "were"]
-        }
-
-      
+        } 
       ]
     },
     {
@@ -90,32 +84,35 @@
           "imagePath": "A1/3Verbs/2.png",
           "altText": "State v. live, have, like, love, hate, look, look like, appear, smell, smell like, !must "
         },
-
-        {
-          "type": "multipleChoice",
-          "question": "What's the only verb with more than 5 forms?",
-          "options": ["go", "do", "have", "be"],
-          "correctAnswer": "be"
-        },
         {
           "type": "click",
           "layout":"vertical",
           "instructions": [
-            
-            {"text": "English verb forms are pretty easy to learn. Most verbs only have a few forms. Regular verbs' 2nd and 3rd forms are the same. Each form has a clear use. Some deal with time;  ", "textStyle":"text"},
+
+            {"text": "Simple tenses don't use auxilliary verbs. ", "textStyle":"text"},
+           {"text": " Present Simple", "textStyle":"underline"},
+             {"text": " just uses the root verb and adds an", "textStyle":"text"},
+            {"text": "s", "textStyle":"underline"},
+            {"text": " or an ", "textStyle":"text"},
+            {"text": "es", "textStyle":"underline"},
+            {"text": " 3rd person singular. ", "textStyle":"text"},
+            {"text": " He walk", "textStyle":"italic", "newLine":false},
+            {"text": "s ", "textStyle":"underline"},
+            {"text": "to school.", "textStyle":"italic", "newLine":false},
+            {"text": "Present Simple describes habits, routines and feelings. ", "textStyle":"text"},
+            {"text": "Past Simple", "textStyle":"underline", "newParagraph":true},
+            {"text": " is for things that happened at a particular time in the past. ", "textStyle":"text"},
             {"text": "She ", "textStyle":"text"},
-            
             {"text": "went", "textStyle":"underline"},
             {"text": " to school.", "textStyle":"text"},
-            {"text": " Describes a single event in the past, but have different forms. ", "textStyle":"text"},
+            {"text": " Describes a single event in a day, or an repeated series of events in the past. ", "textStyle":"text"},
             {"text": " She ", "textStyle":"italic", "newLine":false},
             {"text": "was going ", "textStyle":"underline", "newLine":false},
             {"text": "to school.", "textStyle":"italic", "newLine":false},
-            {"text": " Describes something that happened often over a period in the past. ", "textStyle":"text", "newParagraph":true},
-            {"text": " The verb ", "textStyle":"text"},
-            {"text": " to be ", "textStyle":"underline"},
-            {"text": " is the most common verb in English and has more forms than any other verb. It has 8 personal forms:", "textStyle":"text"},
-            {"text": " am, is, are, was, were, being, been, be ", "textStyle":"bold"}    
+            {"text": " Describes something that happened continuously in the past and the two past sentences are contrasted by ", "textStyle":"text"},
+            {"text": "continuous", "textStyle":"underline"},
+            {"text": " aspect. ", "textStyle":"text"}
+              
           ],
           "words": [
             { "text": "I", "feedback": "Nope, that's a pronoun." }
@@ -126,6 +123,22 @@
             "lives",
             "want"
           ]
+        },
+        {
+          "type":"gapFill",
+          "template": "He _____ a teacher.",  
+          "correctAnswers": ["is", "was", "sees", "asks"]
+        },  
+        {
+          "type":"gapFill",
+          "template": "They _____ playing football.",  
+          "correctAnswers": ["are", "were"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "What's the only verb with more than 5 forms?",
+          "options": ["go", "do", "have", "be"],
+          "correctAnswer": "be"
         }
       ]
     },
@@ -206,6 +219,19 @@
           "type":"click",
           "layout":"horizontal",
           "instructions": [
+            {"text": " This means that state verbs avoid continuous forms, and may subtly change meaning in", "textStyle": "text", "newParagraph":true},
+            {"text": "-ing", "textStyle": "underline"},
+            {"text": " forms. For example, ", "textStyle":"text", "newLine":true},
+            {"text": " I love you. ", "textStyle": "italic", "newLine":true},
+            {"text": " describes a state of affection, while ", "textStyle":"text", "newLine":true},
+            {"text": " I'm loving it! ", "textStyle": "italic", "newLine":true},
+            {"text": " describes an action or experience.", "textStyle":"text", "newParagraph":true},
+            {"text": " To ", "textStyle":"text"},
+            {"text": "Be", "textStyle":"underline"},
+            {"text": " as a main verb is copula, it describes your attributes, your character and your property. It can't be continuous and it needs a predicate. ", "textStyle":"text"},
+            {"text": "A human being ", "textStyle":"italic", "newLine":true},
+            {"text": " is ", "textStyle":"italic"},
+            {"text": " not a complete sentence. ", "textStyle":"italic", "newLine":true},
             {"text":" ", "textStyle":"text"},
                         {"text": " The car ", "textStyle":"italic"},
             {"text": " is ", "textStyle":"italic"},
@@ -403,27 +429,50 @@
           "altText": "V. go, stay, play, wait, have, walk, work"
         },
         {
-          "type": "multipleChoice",
-          "question": "Which is the verb2 form used in past simple?",
-          "options": ["is", "was", "been"],
-          "correctAnswer": "was"
-        }
-      ]
-    },
-    {
-      "questions":  [
-        {
-          "type": "imageDisplay",
-          "imagePath": "A1/3Verbs/9.png",
-          "altText": "V. go, stay, play, wait, have, walk, work"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "Which is the verb2 form used in past simple?",
-          "options": ["is", "was", "been"],
-          "correctAnswer": "was"
-        }
-      ]
-    }
+          "type": "click",
+          "layout":"horizontal",
+          "instructions": [
+              {"text": " There are three main verbs that are irregular and have more than two personal forms. These are ", "textStyle":"text"},
+              {"text": " The verb ", "textStyle":"text"},
+              {"text": " to be ", "textStyle":"underline"},
+              {"text": " is the most common verb in English and has more forms than any other verb. It has 8 personal forms:", "textStyle":"text"},
+              {"text": " am, is, are, was, were, being, been, be ", "textStyle":"bold"} 
+                ],
+                  "words": [
+                    {"text":"right",   "feedback": "No, it's not right because like is a state verb. " },
+                    {"text":"wrong", "feedback": "Yes, it's wrong because when we say 'liking' or 'loving' we're using these as actions, which sounds like clicking the 'like' button or something else."}
+                  ],
+                    "keyWords": ["wrong"]
+          }
+         ]
+      },
+      {
+        "questions":  [
+          {
+            "type": "imageDisplay",
+            "imagePath": "A1/3Verbs/9.png",
+            "altText": "V. go, stay, play, wait, have, walk, work"
+          },
+          {
+            "type": "click",
+            "layout":"horizontal",
+            "instructions": [
+              {"text": " The verb ", "textStyle":"text"},
+              {"text": " to have ", "textStyle":"underline"},
+            ],
+              "words": [
+                {"text":"right",   "feedback": "No, it's not right because like is a state verb. " },
+                {"text":"wrong", "feedback": "Yes, it's wrong because when we say 'liking' or 'loving' we're using these as actions, which sounds like clicking the 'like' button or something else."}
+              ],
+                "keyWords": ["wrong"]
+          },
+          {
+            "type": "multipleChoice",
+            "question": "Which is the verb2 form used in past simple?",
+            "options": ["is", "was", "been"],
+            "correctAnswer": "was"
+          }
+        ]
+      }
   ]
 }
