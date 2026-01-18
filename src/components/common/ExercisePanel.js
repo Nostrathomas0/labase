@@ -1,3 +1,4 @@
+// src/components/common/ExercisePanel.js
 import React, { useState, useEffect } from 'react';
 import QuestionRenderer from './QuestionRenderer.js';
 import { QuestionHandler } from '../../utils/ProgressManager.js';
@@ -161,11 +162,21 @@ const ExercisePanel = ({
         </button>
         
         <button
-          onClick={() => goToQuestion(currentIndex + 1)}
-          disabled={currentIndex === totalQuestions - 1}
+          onClick={() => {
+            if (currentIndex === totalQuestions - 1) {
+              // Last question - complete the lesson
+              if (onLessonComplete) {
+                onLessonComplete();
+              }
+            } else {
+              // Not last question - go to next
+              goToQuestion(currentIndex + 1);
+            }
+          }}
+          disabled={false}  // Never disabled
           className="nav-button next"
         >
-          Next
+          {currentIndex === totalQuestions - 1 ? 'Complete' : 'Next'}
         </button>
       </div>
 
