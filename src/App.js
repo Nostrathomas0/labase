@@ -137,7 +137,7 @@ function App() {
               <Route path="/A1/adjectives" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <AdjectivesPage />
+                    <AdjectivesPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -145,7 +145,7 @@ function App() {
               <Route path="/A1/verbs" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <VerbsPage />
+                    <VerbsPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -153,7 +153,7 @@ function App() {
               <Route path="/A1/there" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <TherePage />
+                    <TherePage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -162,7 +162,7 @@ function App() {
               <Route path="/A2/pastCont" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <PastContPage />
+                    <PastContPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
