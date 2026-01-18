@@ -14,16 +14,15 @@
           "instructions": [
             
             {"text": "Adjectives ", "textStyle":"bold"},
-            {"text": " are words that describe things, often in simple sentences with the verb ", "textStyle":"text"},
+            {"text": " are words that describe things, often with the verb ", "textStyle":"text"},
             {"text": "to be", "textStyle":"underline"},
             {"text": " in its different forms:", "textStyle":"text"},
-            {"text": "You ", "textStyle":"italic", "newLine":true},
+            {"text": "You ", "textStyle":"italic", "newLine":false},
             {"text": "are ", "textStyle":"italic"},
             {"text": "pretty" , "textStyle":"underline"},
-            {"text": ". The class ", "textStyle": "italic", "newLine":true},
+            {"text": ". The class ", "textStyle": "italic", "newLine":false},
             {"text": "was", "textStyle": "underline"},
-            {"text": " fast. ", "textStyle": "italic"},
-            {"text": "My shoes ", "textStyle": "italic", "newLine":true},
+            {"text": " fast. My shoes ", "textStyle": "italic", "newLine":false},
             {"text": "are dirty.", "textStyle": "underline"},
             {"text": " Or they can describe things by preceeding them and another verb. For example; ", "textStyle": "text", "newParagraph":true},
             {"text": "I have", "textStyle":"underline"},
@@ -371,12 +370,12 @@
           ]
         },
         {
-          "type": "GapFill",
+          "type": "gapFill",
           "template": "I want that shirt that _____ lady is wearing.",
           "correctAnswers": ["that", "this"]
         },
         {
-          "type": "GapFill",
+          "type": "gapFill",
           "template": "Look at _____ building over there. It's huge!",
           "correctAnswers": ["that"]
         }
