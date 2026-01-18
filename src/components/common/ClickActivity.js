@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Instructions from './Instructions';
 import { QuestionHandler } from '../../utils/ProgressManager';
 
 const ClickActivity = ({ 
@@ -72,7 +71,7 @@ const ClickActivity = ({
 
   return (
     <div>
-      <Instructions instructions={instructions} />
+      {/* Instructions removed - ContentParser renders them separately */}
       <blockquote className={`blockquote words-container ${layout}`}>
         {words.map((word, index) => {
           if (!word || !word.text) {
