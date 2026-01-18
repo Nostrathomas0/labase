@@ -76,16 +76,21 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
   // Called when all questions on page are completed
   const handleLessonComplete = useCallback(async (completionData) => {
     console.log('Lesson completed:', completionData);
+    console.log('currentPage:', currentPage);
+    console.log('total pages:', pages.length);
     
     setIsLoading(true);
     setSaveStatus('Completing page...');
     
     try {
       const result = await progressManager.completePage();
-      
+      console.log('Page completion result:', result);
+
       if (result.jwtUpdated) {
         const passed = result.passed;
         const score = result.score;
+       
+        console.log(`Page completed. Score: ${score}%. Passed: ${passed}`);
         
         setSaveStatus(`Page completed! Score: ${score}% (${passed ? 'PASSED' : 'FAILED'})`);
         
@@ -99,22 +104,26 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
               setCurrentPage(prev => prev + 1);
             }, 2000);
           } else if (nextPageUrl) {
+            console.log('Navigating to next lesson:', nextPageUrl);
             // Move to next lesson
             setTimeout(() => {
               setSaveStatus('Lesson complete! Moving to next lesson...');
               navigate(nextPageUrl);
             }, 2000);
           } else {
+            console.log('Last page.');
             // Last page of last lesson
             setTimeout(() => {
               setSaveStatus('Congratulations! Lesson complete!');
             }, 2000);
           }
         } else {
+          console.log('Score below 60%. Staying on current page for review.');
           // Score < 60% - stay on page
           setSaveStatus(`Score below 60%. Review and try again!`);
         }
       } else {
+        console.error('JWT not updated on page completion.');
         setSaveStatus('Page completed but save failed');
       }
     } catch (error) {

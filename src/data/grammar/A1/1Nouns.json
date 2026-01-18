@@ -32,7 +32,7 @@
             {"text": "posessive", "textStyle": "underline"},
             {"text": " determiner: my, your, his, her, our ", "textStyle": "italic"},
             {"text": ", or ", "textStyle": "text"},
-            {"text": "their. You can also use a", "textStyle": "italic"},
+            {"text": "their. You can also use a ", "textStyle": "italic"},
             {"text": "demonstrative", "textStyle":"underline"},
             {"text": ": this, that, these, those ", "textStyle":"italic"},
             {"text": "or a ", "textStyle": "text"},
