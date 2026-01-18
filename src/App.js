@@ -170,7 +170,7 @@ function App() {
               <Route path="/A2/future" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <FuturePage />
+                    <FuturePage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -178,7 +178,7 @@ function App() {
               <Route path="/A2/goingTo" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <GoingToPage />
+                    <GoingToPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -186,7 +186,7 @@ function App() {
               <Route path="/A2/compSupe" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <CompSupePage />
+                    <CompSupePage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -195,7 +195,7 @@ function App() {
               <Route path="/B1/presPerfCont" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <PresPerfContPage />
+                    <PresPerfContPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -203,7 +203,7 @@ function App() {
               <Route path="/B1/pastPerfCont" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <PastPerfContPage />
+                    <PastPerfContPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -211,7 +211,7 @@ function App() {
               <Route path="/B1/2ndCond" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <SecCondPage />
+                    <SecCondPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -219,7 +219,7 @@ function App() {
               <Route path="/B1/modalVerbs" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <ModalVerbsPage />
+                    <ModalVerbsPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -228,7 +228,7 @@ function App() {
               <Route path="/B2/mixedCond" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <MixedCondPage />
+                    <MixedCondPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -236,7 +236,7 @@ function App() {
               <Route path="/B2/causitives" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <CausitivesPage />
+                    <CausitivesPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -244,7 +244,7 @@ function App() {
               <Route path="/B2/modalsProb" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <ModalsProbPage />
+                    <ModalsProbPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -252,7 +252,7 @@ function App() {
               <Route path="/B2/futurePerf" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="grammar">
-                    <FuturePerfPage />
+                    <FuturePerfPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -261,7 +261,7 @@ function App() {
               <Route path="/exams" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="navigation">
-                    <ExamsHomePage />
+                    <ExamsHomePage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -269,7 +269,7 @@ function App() {
               <Route path="/exams/fede" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="exam">
-                    <FEDEExamPage />
+                    <FEDEExamPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
@@ -277,7 +277,7 @@ function App() {
               <Route path="/exams/toeic" element={
                 <ProtectedRoute>
                   <MainLayout layoutType="navigation">
-                    <TOEICExamPage />
+                    <TOEICExamPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>
               } />
