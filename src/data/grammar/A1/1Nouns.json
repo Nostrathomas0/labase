@@ -20,26 +20,9 @@
             {"text": "Names, individual places, and titles are ", "textStyle": "text", "newParagraph":true},
             {"text": "proper nouns", "textStyle":"bold"},
             {"text": " and their first letter is capitalized.", "textStyle":"text"},
-            {"text": " Common nouns", "textStyle":"bold", "newParagraph":true},
-            {"text": " are words for people, places and things in general; ","textStyle":"text"},
-            {"text": " a dog, an apple", "textStyle":"italic"},
-            {"text": ". These words can't function alone, so use them in plural, or with an  ", "textStyle":"text"},
-            {"text": "article", "textStyle": "underline"},
-            {"text": ": a", "textStyle": "italic" },
-            {"text": " / ","textStyle": "text"},
-            {"text": "an.", "textStyle": "italic" },
-            {"text": " You can also use a ", "textStyle": "text"},
-            {"text": "posessive", "textStyle": "underline"},
-            {"text": " determiner: my, your, his, her, our ", "textStyle": "italic"},
-            {"text": ", or ", "textStyle": "text"},
-            {"text": "their. You can also use a ", "textStyle": "italic"},
-            {"text": "demonstrative", "textStyle":"underline"},
-            {"text": ": this, that, these, those ", "textStyle":"italic"},
-            {"text": "or a ", "textStyle": "text"},
-            {"text": "quantifier", "textStyle":"underline"},
-            {"text": "to make a noun phrase.", "textStyle": "text"},
+        
             {"text": " Pronouns", "textStyle":"bold", "newParagraph":true},
-            {"text": " There are 12 personal pronouns : ", "textStyle": "text", "newParagraph": true },
+            {"text": " There are 12 personal pronouns : ", "textStyle": "text", "newParagraph": false },
             {"text": "I & me ", "textStyle": "bold","newLine": true },
             {"text": " for the person speaking, ", "textStyle": "text"  },
             {"text": "you ", "textStyle": "bold", "newLine": true },
@@ -61,7 +44,7 @@
             {"text": "The United States", "feedback": "Yes, this is a proper, plural title."},
             {"text": "The Netherlands", "feedback": "Yes, why do some countries use the definite article?" },
             {"text": "The Maldives", "feedback": "Yes, island nations often use the definite article." },
-            {"text": "An Arab Emmerate ", "feedback": "Sure, I think, like a State." },
+            {"text": "The Arab Emmerate ", "feedback": "No, The United Arab Emmerates." },
             {"text": "The Mexico", "feedback": "No, most countries are never with an article." },
             {"text": "Brunai","feedback": "Yes, most far off places use proper names." },
             {"text": "The Carribian","feedback": "Yes, most island chains are titles like family names, with a definite article." },
@@ -142,47 +125,35 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {
-              "text": " Common nouns are any things like objects, thoughts or ideas and when they are numerous, they become ", 
-              "textStyle":"text"
-            }, 
-            {
-              "text": "plural nouns",
-                "textStyle": "underline"
-            },
-            {
-              "text": ". We could count them. Most nouns are made plural by adding an ",
-              "textStyle": "text"
-            },
-            {
-              "text": "s ",
-              "textStyle": "italic"
-            },  
-            {
-              "text": ". ",
-              "textStyle": "text"
-            },    
-            {
-              "text": "The indefinite articles",
-              "textStyle": "text",
-              "newParagraph": true
-            },
-            {
-              "text": " A / An ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " and the definite ",
-              "textStyle": "text"
-            },
-            {
-              "text": " the ",
-              "textStyle": "bold"
-            },
-            {
-              "text":" are articles and more broadly, determiners.",
-              "textStyle":"text"
-            },
+            { "text": " Common nouns",  "textStyle":"bold", "newParagraph": true}, 
+            { "text": "Different sorts of people, places and things are named. There's a lot of them, and we might count them if they allow us. Most nouns are made plural by adding an ",  "textStyle": "text" },
+            { "text": "s ","textStyle": "italic" },  
+            { "text": ". ", "textStyle": "text"},    
+            { "text": "The indefinite articles", "textStyle": "text", "newParagraph": true },
+            { "text": " A / An ",  "textStyle": "bold" },
+            { "text": " and the definite ",   "textStyle": "text" },
+            { "text": " the ", "textStyle": "bold" },
+            { "text":" are articles and more broadly, determiners.", "textStyle":"text"},
+            {"text": " Common nouns", "textStyle":"bold", "newParagraph":true},
+            {"text": " are words for people, places and things in general; ","textStyle":"text"},
+            {"text": " a dog, an apple", "textStyle":"italic"},
+            {"text": ". These words don't like to be alone, so use them in plural, or with an  ", "textStyle":"text"},
+            {"text": "article", "textStyle": "underline"},
+            {"text": ": a", "textStyle": "italic" },
+            {"text": " / ","textStyle": "text"},
+            {"text": "an.", "textStyle": "italic" },
+            {"text": " You can also use a ", "textStyle": "text"},
+            {"text": "posessive", "textStyle": "underline"},
+            {"text": " determiner", "textStyle": "text"},
+            {"text": ": my, your, his, her, our ", "textStyle": "italic"},
+            {"text": ", or ", "textStyle": "text"},
+            {"text": "their. ", "textStyle": "italic"},
+            {"text": "Also available are", "textStyle": "text"},
+            {"text": "demonstratives", "textStyle":"underline"},
+            {"text": ": this, that, these, those ", "textStyle":"italic"},
+            {"text": "and ", "textStyle": "text"},
+            {"text": "quantifiers", "textStyle":"underline"},
+            {"text": " to make a noun phrase.", "textStyle": "text"},
             {
               "text": "1) Click on the articles in the sentence below.",
               "textStyle": "italic",
@@ -274,11 +245,173 @@
         }        
       ]
     },
+      
     {
       "questions": [
         {
           "type": "imageDisplay",
           "imagePath": "A1/1Nouns/3.png",
+          "altText": "Image description for accessibility"
+        },
+        {
+          "type":"click",
+          "layout":"horizontal",
+          "instructions":[ 
+            { "text": " Generally speaking, we use plural nouns for the things we like of which are numerous, but we use a singular noun for the ", "textStyle": "text"  },
+            { "text": " stuff ", "textStyle": "italic"  },
+             { "text": " we like and can't be counted. This can cause confusion, especially for words which can refer to both a countable thing and its material substance.", "textStyle": "text"  }, 
+            {"text": " He threw his marble.",
+              "textStyle": "underline",
+              "newLine":true
+            },
+            { "text": "My kitchen countertop is made of marble. ",
+              "textStyle":"underline",
+              "newLine":true
+            },  
+            {"text": "I like dog.",
+              "textStyle": "strike",
+              "newLine":true
+            },
+            {"text":"1) Click on the plural nouns",
+              "textStyle":"text",
+              "newParagraph":true
+            }
+          ],
+          "words": [
+            {
+              "text": "That",
+              "feedback": "'That' is not."
+            },
+            {
+              "text": "bookstore",
+              "feedback": "that could be right, "
+            },
+            {
+              "text": "has",
+              "feedback": "a"
+            },
+            {
+              "text": "a",
+              "feedback": "a"
+            },
+            {
+              "text": "lot",
+              "feedback": "This is a determiner, close enough"
+            },
+            {
+              "text": "of ",
+              "feedback": "this is a preposition"
+            },
+            {
+              "text": "books",
+              "feedback": "BINGO"
+            },
+            {
+              "text": "but",
+              "feedback": "nay"
+            },
+            {
+              "text": "there's",
+              "feedback": "Adverb of place + Copulate"
+            }
+            ,{
+              "text": "a",
+              "feedback": "a"
+            },
+            {
+              "text": "bigger",
+              "feedback": "no"
+            },
+            {
+              "text": "one",
+              "feedback": "a"
+            },
+            {
+              "text": "a",
+              "feedback": "a"
+            },
+            {
+              "text": "few",
+              "feedback": "nope"
+            },
+            {
+              "text": "streets",
+              "feedback": "BINGO"
+            },
+            {
+              "text": "over.",
+              "feedback": "preposition"
+            }
+          ],
+          "keyWords": [
+            "lot",
+            "books",
+            "streets"
+          ]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "1) Choose the correct plural form of 'city':",
+          "options": [
+            "citys",
+            "cites",
+            "cities"
+          ],
+          "correctAnswer": "cities"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "2) What is the correct plural form of 'knife':",
+          "options": [
+            "knifes",
+            "knives",
+            "knifees"
+          ],
+          "correctAnswer": "knives"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "3) And what about the plural form of 'box'?",
+          "options": [
+            "boxs",
+            "box",
+            "boxes",
+            "boxies"
+          ],
+          "correctAnswer": "boxes"
+        },
+        {
+          "type": "gapFill",
+          "template": "4) Four fox_____ ",
+          "correctAnswers": [
+            "es"
+          ]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "1) Which option correctly completes the sentence? 'There is _____ water left in the glass.'",
+          "options": [
+            "a lot of",
+            "many",
+            "some",
+            "few"
+          ],
+          "correctAnswer": "a lot of"
+        },
+        {
+          "type": "gapFill",
+          "template": "5) _____ time left to finish my assignment.",
+          "correctAnswers": [
+            "much", "a lot of", "any", "no", "", " "
+          ]
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/1Nouns/4.png",
           "altText": "Noun Phrases and determiners."
         },
         {
@@ -529,172 +662,6 @@
           "type":"gapFill",
           "template":" 6)  Make a noun phrase from the word. _____ sheep",
           "correctAnswers":["the", "a", "some", "a lot of", "many", "much", "a few", "any","his", "her", "their", "our", "no", "a few", "loads of", "quite a few"]
-        }
-      ]
-    },  
-    {
-      "questions": [
-        {
-          "type": "imageDisplay",
-          "imagePath": "A1/1Nouns/4.png",
-          "altText": "Image description for accessibility"
-        },
-        {
-          "type":"click",
-          "layout":"horizontal",
-          "instructions":[ 
-            {
-              "text": " Generally speaking, we use plural nouns for the things we like, but not the stuff we like. This can cause confusion, especially for words which can refer to both a countable thing and its material substance.",
-              "textStyle": "text"              
-            }, 
-            {
-              "text": " He threw his marble.",
-              "textStyle": "underline",
-              "newLine":true
-            },
-            {
-              "text": "My kitchen countertop is made of marble. ",
-              "textStyle":"underline",
-              "newLine":true
-            },  
-            {
-              "text": "I like dog.",
-              "textStyle": "strike",
-              "newLine":true
-            },
-            {
-              "text":"1) Click on the plural nouns",
-              "textStyle":"text",
-              "newParagraph":true
-            }
-          ],
-          "words": [
-            {
-              "text": "That",
-              "feedback": "'That' is not."
-            },
-            {
-              "text": "bookstore",
-              "feedback": "that could be right, "
-            },
-            {
-              "text": "has",
-              "feedback": "a"
-            },
-            {
-              "text": "a",
-              "feedback": "a"
-            },
-            {
-              "text": "lot",
-              "feedback": "This is a determiner, close enough"
-            },
-            {
-              "text": "of ",
-              "feedback": "this is a preposition"
-            },
-            {
-              "text": "books",
-              "feedback": "BINGO"
-            },
-            {
-              "text": "but",
-              "feedback": "nay"
-            },
-            {
-              "text": "there's",
-              "feedback": "Adverb of place + Copulate"
-            }
-            ,{
-              "text": "a",
-              "feedback": "a"
-            },
-            {
-              "text": "bigger",
-              "feedback": "no"
-            },
-            {
-              "text": "one",
-              "feedback": "a"
-            },
-            {
-              "text": "a",
-              "feedback": "a"
-            },
-            {
-              "text": "few",
-              "feedback": "nope"
-            },
-            {
-              "text": "streets",
-              "feedback": "BINGO"
-            },
-            {
-              "text": "over.",
-              "feedback": "preposition"
-            }
-          ],
-          "keyWords": [
-            "lot",
-            "books",
-            "streets"
-          ]
-        },
-        {
-          "type": "multipleChoice",
-          "question": "1) Choose the correct plural form of 'city':",
-          "options": [
-            "citys",
-            "cites",
-            "cities"
-          ],
-          "correctAnswer": "cities"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "2) What is the correct plural form of 'knife':",
-          "options": [
-            "knifes",
-            "knives",
-            "knifees"
-          ],
-          "correctAnswer": "knives"
-        },
-        {
-          "type": "multipleChoice",
-          "question": "3) And what about the plural form of 'box'?",
-          "options": [
-            "boxs",
-            "box",
-            "boxes",
-            "boxies"
-          ],
-          "correctAnswer": "boxes"
-        },
-        {
-          "type": "gapFill",
-          "template": "4) Four fox_____ ",
-          "correctAnswers": [
-            "es"
-          ]
-        },
-        {
-          "type": "multipleChoice",
-          "question": "1) Which option correctly completes the sentence? 'There is _____ water left in the glass.'",
-          "options": [
-            "a lot of",
-            "many",
-            "some",
-            "few"
-          ],
-          "correctAnswer": "a lot of"
-        },
-        {
-          "type": "gapFill",
-          "template": "5) _____ time left to finish my assignment.",
-          "correctAnswers": [
-            "much", "a lot of", "any", "no", "", " "
-          ]
         }
       ]
     },
