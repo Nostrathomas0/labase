@@ -21,30 +21,31 @@
             {"text": "proper nouns", "textStyle":"bold"},
             {"text": " and their first letter is capitalized.", "textStyle":"text"},
         
-            {"text": " Pronouns", "textStyle":"bold", "newParagraph":true},
+            {"text": " Pronouns -", "textStyle":"bold", "newParagraph":true},
             {"text": " There are 12 personal pronouns : ", "textStyle": "text", "newParagraph": false },
-            {"text": "I & me ", "textStyle": "bold","newLine": true },
-            {"text": " for the person speaking, ", "textStyle": "text"  },
-            {"text": "you ", "textStyle": "bold", "newLine": true },
+            {"text": "I", "textStyle": "bold", "newLine": true },
+            {"text": " & ", "textStyle": "text"  },
+            {"text": " me ", "textStyle": "bold","newLine": true },
+            {"text": " for the person speaking, and ", "textStyle": "text"  },
+            {"text": "you", "textStyle": "bold", "newLine": true },
             {"text": " for people you're talking to.  ","textStyle": "text"  },
             {"text": "He & him ","textStyle": "bold","newLine": true },
-            {"text": " masc. ","textStyle": "text" },
-            {"text": "She & her ", "textStyle": "bold"   },
-            {"text": " fem. and ", "textStyle": "text"  },
+            {"text": " are masc. ","textStyle": "text" },
+            {"text": "She & her", "textStyle": "bold"   },
+            {"text": " are fem. and ", "textStyle": "text"  },
             {"text": "It ","textStyle": "bold",  "newLine": true  },
             {"text": " is for objects and other things. ", "textStyle": "text"},
             {"text": "We & us ",  "textStyle": "bold", "newLine": true },
             {"text": " are for you and I, together. It's the 1st person, plural.", "textStyle": "text" },
             {"text": "They & them ", "textStyle": "bold",  "newLine": true   },
             {"text": " are for two or more people or things; 3rd person plural.",  "textStyle": "text"   },
-            {"text": "1) Click on correct placenames below.", "textStyle": "italic",  "newParagraph": true }
+            {"text": "1) Click on proper names below.", "textStyle": "italic",  "newParagraph": true }
           ],
           "words": [
             {"text": "The New York",   "feedback": "No, it's just New York." },
             {"text": "The United States", "feedback": "Yes, this is a proper, plural title."},
-            {"text": "The Netherlands", "feedback": "Yes, why do some countries use the definite article?" },
+            {"text": "The Netherlands", "feedback": "Yes, plural and uses the definite article." },
             {"text": "The Maldives", "feedback": "Yes, island nations often use the definite article." },
-            {"text": "The Arab Emmerate ", "feedback": "No, The United Arab Emmerates." },
             {"text": "The Mexico", "feedback": "No, most countries are never with an article." },
             {"text": "Brunai","feedback": "Yes, most far off places use proper names." },
             {"text": "The Carribian","feedback": "Yes, most island chains are titles like family names, with a definite article." },
@@ -125,23 +126,20 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            { "text": " Common nouns",  "textStyle":"bold", "newParagraph": true}, 
-            { "text": "Different sorts of people, places and things are named. There's a lot of them, and we might count them if they allow us. Most nouns are made plural by adding an ",  "textStyle": "text" },
-            { "text": "s ","textStyle": "italic" },  
-            { "text": ". ", "textStyle": "text"},    
-            { "text": "The indefinite articles", "textStyle": "text", "newParagraph": true },
-            { "text": " A / An ",  "textStyle": "bold" },
-            { "text": " and the definite ",   "textStyle": "text" },
-            { "text": " the ", "textStyle": "bold" },
-            { "text":" are articles and more broadly, determiners.", "textStyle":"text"},
-            {"text": " Common nouns", "textStyle":"bold", "newParagraph":true},
-            {"text": " are words for people, places and things in general; ","textStyle":"text"},
-            {"text": " a dog, an apple", "textStyle":"italic"},
-            {"text": ". These words don't like to be alone, so use them in plural, or with an  ", "textStyle":"text"},
-            {"text": "article", "textStyle": "underline"},
-            {"text": ": a", "textStyle": "italic" },
-            {"text": " / ","textStyle": "text"},
-            {"text": "an.", "textStyle": "italic" },
+            {"text": "Common Nouns", "textStyle": "bold", "newParagraph": true},
+            { "text": "Different sorts of people, places and things are named with nouns that are common. We might count them if they allow us. Most that do are made plural by adding an ",  "textStyle": "text" },
+            { "text": "s","textStyle": "underline" },  
+            { "text": ". If you can't count it though, it shouldn't be made plural. To determine that it's known, use ",   "textStyle": "text" },
+            { "text": ", the definite article ", "textStyle": "text"},    
+            { "text": "the", "textStyle": "underline" },
+            { "text": ". The indefinite articles ", "textStyle": "text" },
+            { "text": "a / an",  "textStyle": "underline" },
+            { "text": "introduce nouns novelly ;  these articles and pluralizations create noun phrases. ", "textStyle": "text" },
+          
+            {"text": "Common nouns are words for people, places and things in general but they never stand alone; ","textStyle":"text", "newParagraph":true},
+            {"text": "Look at the dog. Want an apple?", "textStyle":"italic"},
+            {"text": "Nouns don't like to be alone, so use them with one of many", "textStyle":"text"},
+            {"text": "determiners", "textStyle": "underline"},
             {"text": " You can also use a ", "textStyle": "text"},
             {"text": "posessive", "textStyle": "underline"},
             {"text": " determiner", "textStyle": "text"},
@@ -153,7 +151,7 @@
             {"text": ": this, that, these, those ", "textStyle":"italic"},
             {"text": "and ", "textStyle": "text"},
             {"text": "quantifiers", "textStyle":"underline"},
-            {"text": " to make a noun phrase.", "textStyle": "text"},
+            {"text": " to make noun phrases.", "textStyle": "text"},
             {
               "text": "1) Click on the articles in the sentence below.",
               "textStyle": "italic",
@@ -257,7 +255,7 @@
           "type":"click",
           "layout":"horizontal",
           "instructions":[ 
-            { "text": " Generally speaking, we use plural nouns for the things we like of which are numerous, but we use a singular noun for the ", "textStyle": "text"  },
+            { "text": " Generally speaking, we use plural nouns for the things we like of which are numerous, unless they be material,  ", "textStyle": "text"  },
             { "text": " stuff ", "textStyle": "italic"  },
              { "text": " we like and can't be counted. This can cause confusion, especially for words which can refer to both a countable thing and its material substance.", "textStyle": "text"  }, 
             {"text": " He threw his marble.",
@@ -421,19 +419,25 @@
             
             
             {
-              "text": " Countable words", "textStyle": "underline", "newParagraph":true
+              "text": " Countable words", "textStyle": "bold", "newParagraph":true
              }, 
             {
-              "text": "A number is a suitable determiner for many nouns:", "textStyle": "text", "newParagraph":true
+              "text": "A number is a suitable determiner for many nouns: ", "textStyle": "text", "newParagraph":true
             } ,
             {
               "text": " two apples. ",
               "textStyle": "italic"
             },
+             {
+              "text": ", but not for all", "textStyle": "text", "newParagraph":true
+            } ,
+            {
+              "text": " two milks. ",
+              "textStyle": "strike"
+            },
             {
               "text": " Uncountable words ", 
-              "textStyle": "underline",
-              "newLine":true
+              "textStyle": "underline"
             },
             {
               "text": " are for stuff you can't count individually: ",
@@ -444,12 +448,12 @@
               "textStyle": "strike"
             },
             {
-              "text": ". We must count it with other words: ",
+              "text": ". We must count it with a quantifier: ",
               "textStyle": "text"
             },
           
             {
-              "text": "1 Euro, 2 Euroes, 3 Euroes.",
+              "text": "My Euro, 2 Dollars, 3 Lira.",
               "textStyle": "italic"
             },
            {
@@ -477,9 +481,8 @@
               "newLine":false
             },
             {
-              "text": ") Use a quantifier to measure materials.  ",
-              "textStyle": "text",
-              "newParagraph":true
+              "text": " Use a quantifier to measure materials.  ",
+              "textStyle": "text"
             },
             {
               "text": " a",
@@ -676,18 +679,18 @@
           "type":"click",
           "layout": "horizontal",
           "instructions":[
-            {"text": " a", "textStyle": "text"},
-            {"text": " dog, ", "textStyle": "italic"},
-            {"text": " an", "textStyle": "underline"},
+            {"text": "How can we know if a word is uncountable? ", "textStyle": "bold", "newParagraph":true},
+            {"text": " There's a viscous feeling to uncountable nouns. They need a container. They're fluid, or chipped off a greater mass. ", "textStyle": "text"},
+            {"text": " ", "textStyle": "underline"},
             {"text": "  ear.", "textStyle": "italic"},
             {"text": " This is the ","textStyle": "text"},
             {"text": "in","textStyle": "italic"},
-            {"text": "definite article and, as you can see, it takes an ", "textStyle": "text", "newLine":true}, 
+            {"text": "definite article and, as you can see, it takes an ", "textStyle": "text"}, 
             {"text": " n", "textStyle":"bold"},
             {"text": " sound, gliding to the next vowel sound ","textStyle": "text"},
             {"text": "ear","textStyle": "underline"},
             {"text": "and other words","textStyle": "text"},
-            {"text": " The ", "textStyle": "bold", "newParagraph":true },
+            {"text": " What's the best way to learn about this? ", "textStyle": "bold", "newParagraph":true },
             {"text": " to a specific thing to make the noun phrase with the definite article.", "textStyle": "text" },
             {"text": " The", "textStyle":"text", "newLine":true},
             {"text": " Atlantic Ocean", "textStyle":"italic"},
