@@ -13,150 +13,120 @@
           "layout": "horizontal",
           "instructions": [
             {
-              "text": "Adjectives ",
-              "textStyle": "bold"
+              "text": "Adjectives ", "textStyle": "bold"
             },
             {
-              "text": " are words that describe things, often in simple sentences with the verb ",
-              "textStyle": "text"
+              "text": " are words that describe things, often in simple sentences with the verb ", "textStyle": "text"
             },
             {
-              "text": "to be",
-              "textStyle": "underline"
+              "text": "to be", "textStyle": "underline"
             },
             {
-              "text": " in its different forms:",
-              "textStyle": "text"
+              "text": " in its different forms:", "textStyle": "text"
             },
             {
-              "text": "You ",
-              "textStyle": "italic",
-              "newLine": true
+              "text": "You ", "textStyle": "italic", "newLine": true
             },
             {
-              "text": "are ",
-              "textStyle": "italic"
+              "text": "are ", "textStyle": "italic"
             },
             {
-              "text": "pretty",
-              "textStyle": "underline"
+              "text": "pretty", "textStyle": "underline"
             },
             {
-              "text": ". The class ",
-              "textStyle": "italic",
-              "newLine": true
+              "text": ". The class ", "textStyle": "italic", "newLine": true
             },
             {
-              "text": "was",
-              "textStyle": "underline"
+              "text": "was", "textStyle": "underline"
             },
             {
-              "text": " fast. ",
-              "textStyle": "italic"
+              "text": " short. ", "textStyle": "italic"
             },
             {
-              "text": "My shoes ",
-              "textStyle": "italic",
-              "newLine": true
+              "text": "My shoes ", "textStyle": "italic", "newLine": true
             },
             {
-              "text": "are dirty.",
-              "textStyle": "underline"
+              "text": "are ", "textStyle": "text"
             },
             {
-              "text": " Or they can describe things by preceeding them and another verb. For example; ",
-              "textStyle": "text",
+              "text": " dirty.",  "textStyle": "underline"
+            },
+            {
+              "text": "Adjectives go before the thing they describe, for example; ",  "textStyle": "text",  "newParagraph": true
+            },
+            {
+              "text": "I have a", "textStyle": "text"
+            },
+            {
+              "text": " quick class ", "textStyle": "italic"
+            },
+             { "textStyle": "italic"
+            },
+             {
+              "text": "clean shoes.", "textStyle": "italic"
+            },
+            {
+              "text": "You can use many adjectives side by side  : A", "textStyle": "text", "newParagraph": true
+            },
+            {
+              "text": " good, old, rusty, red ", "textStyle": "italic"
+            },
+            {
+              "text": "wagon. ; ",  "textStyle": "text"
+            },
+            
+            {
+              "text": " Adjectives don't have plural forms; ", "textStyle": "text",
               "newParagraph": true
+            }
+            ,{
+              "text": "sunnies", "textStyle": "strikethrough"
             },
             {
-              "text": "I have",
-              "textStyle": "underline"
+              "text": " days. There ",  "textStyle": "text"
             },
             {
-              "text": " a quick class and clean shoes.",
-              "textStyle": "italic"
+              "text": " are ",  "textStyle": "italic"
             },
             {
-              "text": "You can use many adjectives side by side. ex. A",
-              "textStyle": "text",
-              "newParagraph": true
+              "text": " superlative & comparative forms though. ",  "textStyle": "text"
             },
             {
-              "text": " good, old, rusty, red ",
-              "textStyle": "italic"
+              "text": "Today is",  "textStyle": "text",  "newLine": true
             },
             {
-              "text": "wagon. Adjectives don't have plural forms; ",
-              "textStyle": "text"
+              "text": " sunnier", "textStyle": "italic"
             },
             {
-              "text": "sunnies",
-              "textStyle": "strikethrough"
+              "text": " than yesterday.", "textStyle": "text", "newParagraph": false
             },
             {
-              "text": " days. There ",
-              "textStyle": "text"
+              "text": " It's the ", "textStyle": "text"
             },
             {
-              "text": " are ",
-              "textStyle": "italic"
+              "text": "hottest", "textStyle": "italic"
             },
             {
-              "text": " superlative & comparative forms though. ",
-              "textStyle": "text"
+              "text": " day ever", "textStyle": "text"
             },
             {
-              "text": "Today is",
-              "textStyle": "text",
-              "newLine": true
-            },
-            {
-              "text": " sunnier",
-              "textStyle": "italic"
-            },
-            {
-              "text": " than yesterday.",
-              "textStyle": "text",
-              "newParagraph": false
-            },
-            {
-              "text": " It's the ",
-              "textStyle": "underline"
-            },
-            {
-              "text": "hottest",
-              "textStyle": "italic"
-            },
-            {
-              "text": " day ever",
-              "textStyle": "text"
-            },
-            {
-              "text": "Click the adjectives in the sentences below.",
-              "textStyle": "text",
-              "newParagraph": true
+              "text": "Click the adjectives in the sentences below.",  "textStyle": "text",    "newParagraph": true
             }
           ],
           "words": [
-            {
-              "text": "Autumn ",
-              "feedback": "Incorrect, 'Autumn' is a noun"
+            {  "feedback": "Incorrect, 'Autumn' is a noun"
             },
             {
-              "text": "is ",
-              "feedback": "Incorrect, 'is' is a verb"
+              "text": "is ",  "feedback": "Incorrect, 'is' is a verb"
             },
             {
-              "text": "the",
-              "feedback": "Incorrect, 'the' is an article"
+              "text": "the",    "feedback": "Incorrect, 'the' is an article"
             },
             {
-              "text": "rainy ",
-              "feedback": "Correct"
+              "text": "rainy ", "feedback": "Correct"
             },
             {
-              "text": "season.",
-              "feedback": "season, is a noun"
+              "text": "season.", "feedback": "season, is a noun"
             }
           ],
           "keyWords": [
@@ -199,57 +169,49 @@
           "type": "click",
           "instructions": [
             {
-              "text": "Adjectives",
-              "textStyle": "italic"
+              "text": "Adjectives", "textStyle": "italic"
             },
             {
-              "text": " are words that describe nouns and the come between them and their articles. To make an ",
-              "textStyle": "italic"
+              "text": " are words that describe nouns. To make an ", "textStyle": "italic"
             },
             {
-              "text": "Adjective phrase",
-              "textStyle": "underline"
+              "text": "Adjective phrase", "textStyle": "underline"
             },
             {
-              "text": ", you can put more than one adjective before a noun. For example; ",
-              "textStyle": "italic",
-              "newParagraph": true
+              "text": ", you can put more than one adjective before a noun, but after its articles. For example : ", "textStyle": "text"
             },
             {
-              "text": "The ",
-              "textStyle": "text"
+              "text": "The ", "textStyle": "text", "newParagraph": true
             },
             {
-              "text": "quick brown ",
-              "textStyle": "italic"
+              "text": "quick brown ", "textStyle": "italic"
             },
             {
-              "text": "fox, or put ",
-              "textStyle": "text"
+              "text": "fox.", "textStyle": "text"
             },
             {
-              "text": "adverbs",
-              "textStyle": "underline"
+              "text": "A noun phrase can be elongated with ", "textStyle": "text"
             },
             {
-              "text": " before the adjective; The ",
-              "textStyle": "text"
+              "text": "adverbs", "textStyle": "underline"
             },
             {
-              "text": "very",
-              "textStyle": "underline"
+              "text": " before the adjective :", "textStyle": "text"
             },
             {
-              "text": " quick brown ",
-              "textStyle": "italic"
+              "text": "The ", "textStyle": "text", "newLine": true
             },
             {
-              "text": "fox. ",
-              "textStyle": "text"
+              "text": "very", "textStyle": "underline"
             },
             {
-              "text": "2) Click on the adjectives in the sentence below.",
-              "textStyle": "italic"
+              "text": " quick brown ", "textStyle": "italic"
+            },
+            {
+              "text": "fox. ", "textStyle": "text"
+            },
+            {
+              "text": "2) Click on the adjectives in the sentence below.", "textStyle": "italic"
             }
           ],
           "words": [

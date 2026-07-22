@@ -72,6 +72,14 @@ const QuestionRenderer = ({
         />
       );
 
+      case "boxPop":
+        return (
+          <BoxPopActivity
+            question={question}
+            onAnswer={(answer, isCorrect) => onQuestionComplete({ questionIndex, userAnswer: answer, isCorrect})}
+          />
+        );
+
     case 'image':
       return (
         <div className="image-question">
