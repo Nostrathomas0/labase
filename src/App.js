@@ -41,10 +41,17 @@ import CausitivesPage from './components/pages/B2/CausitivesPage';
 import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
+//Premium components
+import PremiumRoute from './components/premium/PremiumRoute';
+
+//Premium grammar pages
+import PossessivesPage from './components/pages/A1/PosessivesPage';
+
 // Exam components
 import ExamsHomePage from './components/pages/exams/ExamsHomePage';
 import FEDEExamPage from './components/pages/exams/FEDEExamPage';
 import TOEICExamPage from './components/pages/exams/TOEICExamPage';
+
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -157,7 +164,18 @@ function App() {
                   </MainLayout>
                 </ProtectedRoute>
               } />
-              
+             
+              {/* A1 Premium Grammar Topic routes */}
+              <Route path="/A1/possessives" element={
+                <ProtectedRoute>
+                  <PremiumRoute>
+                    <MainLayout layoutType="grammar">
+                      <PossessivesPage progressManager={progressManager} />
+                    </MainLayout>
+                  </PremiumRoute>
+                </ProtectedRoute>
+              } />
+
               {/* A2 Grammar Topic routes */}
               <Route path="/A2/pastCont" element={
                 <ProtectedRoute>
@@ -276,7 +294,7 @@ function App() {
               
               <Route path="/exams/toeic" element={
                 <ProtectedRoute>
-                  <MainLayout layoutType="navigation">
+                  <MainLayout layoutType="exam">
                     <TOEICExamPage progressManager={progressManager} />
                   </MainLayout>
                 </ProtectedRoute>

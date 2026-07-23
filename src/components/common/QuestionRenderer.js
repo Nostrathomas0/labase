@@ -5,6 +5,10 @@ import GapFill from './GapFill';
 import WordBankActivity from './WordBankActivity';
 import ImageDisplay from './ImageDisplay';
 import Instructions from './Instructions';
+// NEW
+import BoxPopActivity from './popBox';
+import SentenceBuilder from './SentenceBuilder';
+import MatchingPairs from './MatchingPairs';
 
 const QuestionRenderer = ({ 
   questionData, 
@@ -12,7 +16,6 @@ const QuestionRenderer = ({
   progressManager, 
   onAnswer 
 }) => {
-  // Handle case where no question data is provided
   if (!questionData) {
     return (
       <div className="no-question-message">
@@ -23,7 +26,6 @@ const QuestionRenderer = ({
 
   const { type, ...props } = questionData;
 
-  // Common props for all question components
   const commonProps = {
     questionId,
     progressManager,
@@ -72,13 +74,35 @@ const QuestionRenderer = ({
         />
       );
 
-      case "boxPop":
-        return (
-          <BoxPopActivity
-            question={question}
-            onAnswer={(answer, isCorrect) => onQuestionComplete({ questionIndex, userAnswer: answer, isCorrect})}
-          />
-        );
+    // FIXED - was using wrong variable names
+    case 'boxPop':
+      return (
+        <BoxPopActivity
+          template={props.template}
+          options={props.options}
+          correctAnswers={props.correctAnswers}
+          {...commonProps}
+        />
+      );
+
+    // NEW
+    case 'sentenceBuilder':
+      return (
+        <SentenceBuilder
+          tokens={props.tokens}
+          correctOrder={props.correctOrder}
+          {...commonProps}
+        />
+      );
+
+    // NEW
+    case 'matchingPairs':
+      return (
+        <MatchingPairs
+          pairs={props.pairs}
+          {...commonProps}
+        />
+      );
 
     case 'image':
       return (
