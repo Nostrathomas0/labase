@@ -1,23 +1,39 @@
-// src/components/pages/PossessivesPage.js
 import React from 'react';
 import MainLayout from '../../layout/MainLayout';
 import PossessivesData from '../../../data/grammar/A1/5Possessives.json';
 import PageTurner from '../../common/PageTurner';
 import { useLessonPage } from '../../../hooks/useLessonPage';
 
-const PossessivesPage = () => {
-  const { currentPage, handlePageChange } = useLessonPage();
+const PossessivesPage = ({ progressManager }) => {
+  const {
+    currentPage,
+    nextPage,
+    previousPage,
+    handleQuestionComplete,
+    handleLessonComplete,
+    totalPages
+  } = useLessonPage(
+    PossessivesData,
+    progressManager,
+    'A1',
+    'possessives',
+    '/A1/verbs'
+  );
 
   return (
     <MainLayout
       lessonData={PossessivesData}
       currentPage={currentPage}
-      layoutType="lesson"
+      layoutType="grammar"
+      progressManager={progressManager}
+      onQuestionComplete={handleQuestionComplete}
+      onLessonComplete={handleLessonComplete}
     >
       <PageTurner
-        totalPages={PossessivesData.pages.length}
+        totalPages={totalPages}
         currentPage={currentPage}
-        onPageChange={handlePageChange}
+        onNext={nextPage}
+        onPrevious={previousPage}
       />
     </MainLayout>
   );
