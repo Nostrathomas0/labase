@@ -1,0 +1,283 @@
+{
+  "topic": "Possessives",
+  "pages": [
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/5Possessives/1.png",
+          "altText": "Possessive adjectives: my, your, his, her, its, our, their"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Possessives", "textStyle": "bold" },
+            { "text": " show that something belongs to someone. The most common are ", "textStyle": "text" },
+            { "text": "possessive adjectives", "textStyle": "underline" },
+            { "text": " which go before a noun:", "textStyle": "text" },
+            { "text": "my, your, his, her, its, our, their", "textStyle": "bold", "newLine": true },
+            { "text": "That is ", "textStyle": "italic", "newParagraph": true },
+            { "text": "my", "textStyle": "underline" },
+            { "text": " bag. ", "textStyle": "italic" },
+            { "text": "Is this ", "textStyle": "italic", "newLine": true },
+            { "text": "your", "textStyle": "underline" },
+            { "text": " coat? ", "textStyle": "italic" },
+            { "text": "She left ", "textStyle": "italic", "newLine": true },
+            { "text": "her", "textStyle": "underline" },
+            { "text": " keys on the table.", "textStyle": "italic" },
+            { "text": "Unlike regular adjectives, possessives don't change for plural nouns:", "textStyle": "text", "newParagraph": true },
+            { "text": "my shoe / my shoes", "textStyle": "italic" },
+            { "text": " — possessive stays the same.", "textStyle": "text" },
+            { "text": "Click the possessive adjectives in the sentences below.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "We", "feedback": "'We' is a subject pronoun, not a possessive." },
+            { "text": "left", "feedback": "'left' is a verb." },
+            { "text": "our", "feedback": "Yes! 'our' is a possessive adjective." },
+            { "text": "bikes", "feedback": "'bikes' is a noun." },
+            { "text": "outside.", "feedback": "'outside' is a preposition here." },
+            { "text": "Did", "feedback": "'Did' is an auxiliary verb." },
+            { "text": "you", "feedback": "'you' is a subject pronoun." },
+            { "text": "forget", "feedback": "'forget' is a verb." },
+            { "text": "your", "feedback": "Yes! 'your' is a possessive adjective." },
+            { "text": "keys?", "feedback": "'keys' is a noun." }
+          ],
+          "keyWords": ["our", "your"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "1) Which word is a possessive adjective?",
+          "options": ["he", "his", "him", "himself"],
+          "correctAnswer": "his"
+        },
+        {
+          "type": "wordBank",
+          "paragraph": "2) Arrange to make a possessive phrase: _____ _____",
+          "wordBank": ["car", "their"],
+          "correctAnswers": ["their", "car"]
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/5Possessives/2.png",
+          "altText": "Possessive pronouns: mine, yours, his, hers, ours, theirs"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Possessive pronouns", "textStyle": "underline" },
+            { "text": " replace the noun entirely. You use them when the noun is already understood:", "textStyle": "text" },
+            { "text": "mine, yours, his, hers, ours, theirs", "textStyle": "bold", "newLine": true },
+            { "text": "This bag is ", "textStyle": "italic", "newParagraph": true },
+            { "text": "mine.", "textStyle": "underline" },
+            { "text": " That coat is ", "textStyle": "italic", "newLine": true },
+            { "text": "yours.", "textStyle": "underline" },
+            { "text": "Notice: no noun follows the possessive pronoun.", "textStyle": "text", "newParagraph": true },
+            { "text": "my bag ✓  /  mine bag ✗", "textStyle": "italic", "newLine": true },
+            { "text": "this is mine ✓  /  this is my ✗", "textStyle": "italic", "newLine": true },
+            { "text": "Click the possessive pronouns below.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "That", "feedback": "'That' is a demonstrative pronoun." },
+            { "text": "jacket", "feedback": "'jacket' is a noun." },
+            { "text": "is", "feedback": "'is' is a verb." },
+            { "text": "hers,", "feedback": "Yes! 'hers' is a possessive pronoun." },
+            { "text": "but", "feedback": "'but' is a conjunction." },
+            { "text": "the", "feedback": "'the' is an article." },
+            { "text": "scarf", "feedback": "'scarf' is a noun." },
+            { "text": "is", "feedback": "'is' is a verb." },
+            { "text": "mine.", "feedback": "Yes! 'mine' is a possessive pronoun." }
+          ],
+          "keyWords": ["hers,", "mine."]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "2) When does an Olympic bid, a majority of its citizens usually want it to win?",
+          "options": [
+            "This is my — correct",
+            "This is mine — correct",
+            "This is hers bag — correct",
+            "Mine bag is here — correct"
+          ],
+          "correctAnswer": "This is mine — correct"
+        },
+        {
+          "type": "multipleChoice",
+          "question": "3) Choose the possessive pronoun: 'I lost my pen. Can I borrow _____?'",
+          "options": ["your", "yours", "you're", "you"],
+          "correctAnswer": "yours"
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/5Possessives/3.png",
+          "altText": "Possessive 's — Bob's car, the teacher's desk"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "The possessive ", "textStyle": "text" },
+            { "text": "'s", "textStyle": "bold" },
+            { "text": " attaches directly to a noun to show ownership.", "textStyle": "text" },
+            { "text": "Bob", "textStyle": "italic", "newLine": true },
+            { "text": "'s", "textStyle": "bold" },
+            { "text": " car is red.", "textStyle": "italic" },
+            { "text": "the teacher", "textStyle": "italic", "newLine": true },
+            { "text": "'s", "textStyle": "bold" },
+            { "text": " desk is messy.", "textStyle": "italic" },
+            { "text": "For plural nouns ending in s, just add the apostrophe:", "textStyle": "text", "newParagraph": true },
+            { "text": "the students' books", "textStyle": "italic" },
+            { "text": " (not students's)", "textStyle": "text" },
+            { "text": "Don't confuse possessive 's with the contraction 's meaning 'is':", "textStyle": "text", "newParagraph": true },
+            { "text": "Bob's tired.", "textStyle": "italic" },
+            { "text": " (Bob is tired) ≠ ", "textStyle": "text" },
+            { "text": "Bob's car.", "textStyle": "italic" },
+            { "text": " (ownership)", "textStyle": "text" },
+            { "text": "Click the words that use possessive 's below.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "Maria's", "feedback": "Yes! 'Maria's' shows ownership." },
+            { "text": "dog", "feedback": "'dog' is the noun being owned." },
+            { "text": "is", "feedback": "'is' is a verb." },
+            { "text": "friendlier", "feedback": "'friendlier' is a comparative adjective." },
+            { "text": "than", "feedback": "'than' is a conjunction." },
+            { "text": "John's.", "feedback": "Yes! 'John's' shows ownership." }
+          ],
+          "keyWords": ["Maria's", "John's."]
+        },
+        {
+          "type": "gapFill",
+          "template": "That is _____ book. (Sarah)",
+          "correctAnswers": ["Sarah's"]
+        },
+        {
+          "type": "multipleChoice",
+          "question": "Which sentence uses possessive 's correctly?",
+          "options": [
+            "The dog's are barking.",
+            "That is the dog's bowl.",
+            "The dogs's ran away.",
+            "Dog's is hungry."
+          ],
+          "correctAnswer": "That is the dog's bowl."
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/5Possessives/4.png",
+          "altText": "Conversation: Whose bag is this? It's mine. That one is hers."
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Whose", "textStyle": "bold" },
+            { "text": " asks about possession. It's different from ", "textStyle": "text" },
+            { "text": "who's", "textStyle": "bold" },
+            { "text": " (who is).", "textStyle": "text" },
+            { "text": "Whose bag is this?", "textStyle": "italic", "newLine": true },
+            { "text": " — asking who owns it.", "textStyle": "text" },
+            { "text": "Who's coming tonight?", "textStyle": "italic", "newLine": true },
+            { "text": " — who is coming.", "textStyle": "text" },
+            { "text": "Read the conversation and click the possessive words.", "textStyle": "italic", "newParagraph": true },
+            { "text": "A: Whose coat is on my chair?", "textStyle": "italic", "newLine": true },
+            { "text": "B: Oh sorry, that's mine. Is this yours?", "textStyle": "italic", "newLine": true },
+            { "text": "A: No, it must be Tom's.", "textStyle": "italic", "newLine": true }
+          ],
+          "words": [
+            { "text": "Whose", "feedback": "Yes! 'Whose' asks about possession." },
+            { "text": "coat", "feedback": "'coat' is a noun." },
+            { "text": "is", "feedback": "'is' is a verb." },
+            { "text": "on", "feedback": "'on' is a preposition." },
+            { "text": "my", "feedback": "Yes! 'my' is a possessive adjective." },
+            { "text": "chair?", "feedback": "'chair' is a noun." },
+            { "text": "that's", "feedback": "'that's' means 'that is' here." },
+            { "text": "mine.", "feedback": "Yes! 'mine' is a possessive pronoun." },
+            { "text": "yours?", "feedback": "Yes! 'yours' is a possessive pronoun." },
+            { "text": "Tom's.", "feedback": "Yes! 'Tom's' is the possessive 's form." }
+          ],
+          "keyWords": ["Whose", "my", "mine.", "yours?", "Tom's."]
+        },
+        {
+          "type": "boxPop",
+          "template": "A: ___ bag is that on the table? B: I think it's ___. Ask Clara, it might be ___.",
+          "options": ["Whose", "mine", "hers", "Who's", "my", "their"],
+          "correctAnswers": ["Whose", "mine", "hers"]
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/5Possessives/5.png",
+          "altText": "Summary table: my/mine, your/yours, his/his, her/hers, its/-, our/ours, their/theirs"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Let's review all the forms side by side.", "textStyle": "text" },
+            { "text": "Adjective → before noun", "textStyle": "bold", "newLine": true },
+            { "text": "Pronoun → replaces noun", "textStyle": "bold", "newLine": true },
+            { "text": "my car / ", "textStyle": "italic", "newParagraph": true },
+            { "text": "mine", "textStyle": "underline" },
+            { "text": " your phone / ", "textStyle": "italic", "newLine": true },
+            { "text": "yours", "textStyle": "underline" },
+            { "text": " his jacket / ", "textStyle": "italic", "newLine": true },
+            { "text": "his", "textStyle": "underline" },
+            { "text": " her bag / ", "textStyle": "italic", "newLine": true },
+            { "text": "hers", "textStyle": "underline" },
+            { "text": " our house / ", "textStyle": "italic", "newLine": true },
+            { "text": "ours", "textStyle": "underline" },
+            { "text": " their dog / ", "textStyle": "italic", "newLine": true },
+            { "text": "theirs", "textStyle": "underline" },
+            { "text": "Click all the possessive pronouns in the passage.", "textStyle": "italic", "newParagraph": true }
+          ],
+          "words": [
+            { "text": "Jake", "feedback": "'Jake' is a proper noun." },
+            { "text": "says", "feedback": "'says' is a verb." },
+            { "text": "the", "feedback": "'the' is an article." },
+            { "text": "red", "feedback": "'red' is an adjective." },
+            { "text": "bike", "feedback": "'bike' is a noun." },
+            { "text": "is", "feedback": "'is' is a verb." },
+            { "text": "his,", "feedback": "Yes! 'his' is a possessive pronoun here." },
+            { "text": "but", "feedback": "'but' is a conjunction." },
+            { "text": "Anna", "feedback": "'Anna' is a proper noun." },
+            { "text": "says", "feedback": "'says' is a verb." },
+            { "text": "it's", "feedback": "'it's' means 'it is'." },
+            { "text": "hers.", "feedback": "Yes! 'hers' is a possessive pronoun." }
+          ],
+          "keyWords": ["his,", "hers."]
+        },
+        {
+          "type": "matchingPairs",
+          "pairs": [
+            { "left": "my", "right": "mine" },
+            { "left": "your", "right": "yours" },
+            { "left": "her", "right": "hers" },
+            { "left": "our", "right": "ours" },
+            { "left": "their", "right": "theirs" }
+          ]
+        },
+        {
+          "type": "sentenceBuilder",
+          "tokens": ["is", "That", "hers.", "bag", "not", "mine,"],
+          "correctOrder": ["That", "bag", "is", "mine,", "not", "hers."]
+        }
+      ]
+    }
+  ]
+}
