@@ -9,7 +9,9 @@ const ProtectedRoute = ({ children }) => {
   const { currentUser, loading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [redirected, setRedirected] = useState(false);
+  const [redirected, 
+//    setRedirected
+  ] = useState(false);
   const [sessionCheckComplete, setSessionCheckComplete] = useState(false);
 
   
@@ -60,12 +62,12 @@ const ProtectedRoute = ({ children }) => {
   }, [currentUser, loading, location.pathname, navigate, sessionCheckComplete]);
 
   // Redirect to login if not authenticated
-  useEffect(() => {
-    if (!loading && !currentUser && !redirected) {
-      setRedirected(true);
-      navigate('/login', { state: { from: location } });
-    }
-  }, [currentUser, loading, navigate, location, redirected]);
+  //  useEffect(() => {
+  //    if (!loading && !currentUser && !redirected) {
+  //    setRedirected(true);
+  //    navigate('/login', { state: { from: location } });
+  //  }
+  //}, [currentUser, loading, navigate, location, redirected]);
 
   // Show loading state while checking authentication
   if (loading) {
@@ -78,7 +80,9 @@ const ProtectedRoute = ({ children }) => {
   }
 
   // Only render children if user is authenticated
-  return currentUser ? children : null;
+//  return currentUser ? children : null;
+
+return children; //SANDBOX
 };
 
 export default ProtectedRoute;
