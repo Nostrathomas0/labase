@@ -12,6 +12,7 @@ const ProtectedRoute = ({ children }) => {
   const [redirected, setRedirected] = useState(false);
   const [sessionCheckComplete, setSessionCheckComplete] = useState(false);
 
+  
   // AGGRESSIVE AUTO-REDIRECT - Get users to lessons IMMEDIATELY
   useEffect(() => {
     if (!loading && currentUser && !sessionCheckComplete) {
