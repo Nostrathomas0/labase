@@ -15,6 +15,7 @@ export const AuthProvider = ({ children }) => {
   const authInProgress = useRef(false);
   const jwtAuthSuccess = useRef(false); // Track if JWT auth was successful
 
+  /*
   useEffect(() => {
     console.log("AuthContext useEffect running");
     
@@ -113,6 +114,7 @@ export const AuthProvider = ({ children }) => {
       }
     };
   }, []);
+*/
 
   // Log auth state for debugging
   useEffect(() => {
