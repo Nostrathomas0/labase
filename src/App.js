@@ -169,9 +169,7 @@ function App() {
               <Route path="/A1/possessives" element={
                 <ProtectedRoute>
                   <PremiumRoute>
-                    <MainLayout layoutType="grammar">
-                      <PossessivesPage progressManager={progressManager} />
-                    </MainLayout>
+                    <PossessivesPage progressManager={progressManager} />
                   </PremiumRoute>
                 </ProtectedRoute>
               } />
