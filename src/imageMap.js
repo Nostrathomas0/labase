@@ -1,4 +1,5 @@
 import image_A1_1Nouns_1_png from './assets/images/A1/1Nouns/1.png';
+import image_A1_1Nouns_11_png from './assets/images/A1/1Nouns/11.png';
 import image_A1_1Nouns_2_png from './assets/images/A1/1Nouns/2.png';
 import image_A1_1Nouns_3_png from './assets/images/A1/1Nouns/3.png';
 import image_A1_1Nouns_4_png from './assets/images/A1/1Nouns/4.png';
@@ -88,6 +89,7 @@ import image_B2_4FuturePerf_5_png from './assets/images/B2/4FuturePerf/5.png';
 import image_Cover_png from './assets/images/Cover.png';
 const imageMap = {
   'A1/1Nouns/1.png': image_A1_1Nouns_1_png,
+  'A1/1Nouns/11.png': image_A1_1Nouns_11_png,
   'A1/1Nouns/2.png': image_A1_1Nouns_2_png,
   'A1/1Nouns/3.png': image_A1_1Nouns_3_png,
   'A1/1Nouns/4.png': image_A1_1Nouns_4_png,
