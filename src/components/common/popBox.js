@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { QuestionHandler } from '../../utils/ProgressManager';
-import { parseBlanks } from '../utils/popBoxUtils';
+import { parseBlanks } from '../../utils/popBoxUtils';
 
 const BoxPopActivity = ({
   template,

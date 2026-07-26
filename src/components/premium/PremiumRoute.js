@@ -1,6 +1,6 @@
 // src/components/premium/PremiumRoute.js
 import React from 'react';
-import { usePremiumAccess } from '../../hooks/usePremiumAccess';
+import usePremiumAccess from '../../hooks/usePremiumAccess';
 import UpgradePrompt from './UpgradePrompt';
 
 const PremiumRoute = ({ children }) => {

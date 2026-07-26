@@ -1,9 +1,9 @@
 // src/components/pages/PossessivesPage.js
 import React from 'react';
-import MainLayout from '../layout/MainLayout';
+import MainLayout from '../../layout/MainLayout';
 import PossessivesData from '../../../data/grammar/A1/5Possessives.json';
-import PageTurner from '../common/PageTurner';
-import { useLessonPage } from '../../hooks/useLessonPage';
+import PageTurner from '../../common/PageTurner';
+import { useLessonPage } from '../../../hooks/useLessonPage';
 
 const PossessivesPage = () => {
   const { currentPage, handlePageChange } = useLessonPage();
