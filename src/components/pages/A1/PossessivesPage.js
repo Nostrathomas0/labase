@@ -20,9 +20,15 @@ const PossessivesPage = ({ progressManager }) => {
     '/A1/verbs'
   );
 
+  // Extract current page questions for ExercisePanel
+  const currentPageData = {
+    lessonId: `possessives-p${currentPage}`,
+    questions: PossessivesData.pages[currentPage]?.questions || []
+  };
+
   return (
     <MainLayout
-      lessonData={PossessivesData}
+      lessonData={currentPageData}
       currentPage={currentPage}
       layoutType="grammar"
       progressManager={progressManager}
