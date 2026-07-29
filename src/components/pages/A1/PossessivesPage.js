@@ -1,17 +1,22 @@
+// src/components/pages/A1/PossessivesPage.js
 import React from 'react';
 import MainLayout from '../../layout/MainLayout';
-import PossessivesData from '../../../data/grammar/A1/5Possessives.json';
 import PageTurner from '../../common/PageTurner';
+import PossessivesData from '../../../data/grammar/A1/5Possessives.json';
 import { useLessonPage } from '../../../hooks/useLessonPage';
 
 const PossessivesPage = ({ progressManager }) => {
   const {
     currentPage,
+    currentPageData,
+    currentProgress,
+    isLoading,
+    saveStatus,
+    totalPages,
     nextPage,
     previousPage,
     handleQuestionComplete,
     handleLessonComplete,
-    totalPages
   } = useLessonPage(
     PossessivesData,
     progressManager,
@@ -20,28 +25,37 @@ const PossessivesPage = ({ progressManager }) => {
     '/A1/verbs'
   );
 
-  // Extract current page questions for ExercisePanel
-  const currentPageData = {
-    lessonId: `possessives-p${currentPage}`,
-    questions: PossessivesData.pages[currentPage]?.questions || []
-  };
-
   return (
-    <MainLayout
-      lessonData={currentPageData}
-      currentPage={currentPage}
-      layoutType="grammar"
-      progressManager={progressManager}
-      onQuestionComplete={handleQuestionComplete}
-      onLessonComplete={handleLessonComplete}
-    >
+    <div>
+      <div className="progress-display">
+        <div className="progress-content">
+          <h3>Possessives — Page {currentPage + 1} of {totalPages}</h3>
+          <p>
+            Score: {currentProgress.score}%
+            ({currentProgress.correctAnswers}/{currentProgress.totalQuestions} correct)
+          </p>
+        </div>
+        {saveStatus && (
+          <div className="save-status">{saveStatus}</div>
+        )}
+      </div>
+
+      <MainLayout
+        layoutType="grammar"
+        data={currentPageData}
+        progressManager={progressManager}
+        onQuestionComplete={handleQuestionComplete}
+        onLessonComplete={handleLessonComplete}
+      />
+
       <PageTurner
+        currentPage={currentPage + 1}
         totalPages={totalPages}
-        currentPage={currentPage}
         onNext={nextPage}
         onPrevious={previousPage}
+        disabled={isLoading}
       />
-    </MainLayout>
+    </div>
   );
 };
 

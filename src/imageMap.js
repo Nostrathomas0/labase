@@ -27,6 +27,12 @@ import image_A1_4There_1_png from './assets/images/A1/4There/1.png';
 import image_A1_4There_2_png from './assets/images/A1/4There/2.png';
 import image_A1_4There_3_png from './assets/images/A1/4There/3.png';
 import image_A1_4There_4_png from './assets/images/A1/4There/4.png';
+import image_A1_5Possessives__png from './assets/images/A1/5Possessives/.png';
+import image_A1_5Possessives_1_png from './assets/images/A1/5Possessives/1.png';
+import image_A1_5Possessives_2_png from './assets/images/A1/5Possessives/2.png';
+import image_A1_5Possessives_3_png from './assets/images/A1/5Possessives/3.png';
+import image_A1_5Possessives_4_png from './assets/images/A1/5Possessives/4.png';
+import image_A1_5Possessives_5_png from './assets/images/A1/5Possessives/5.png';
 import image_A2_1PastCont_1_png from './assets/images/A2/1PastCont/1.png';
 import image_A2_1PastCont_2_png from './assets/images/A2/1PastCont/2.png';
 import image_A2_1PastCont_3_png from './assets/images/A2/1PastCont/3.png';
@@ -117,6 +123,12 @@ const imageMap = {
   'A1/4There/2.png': image_A1_4There_2_png,
   'A1/4There/3.png': image_A1_4There_3_png,
   'A1/4There/4.png': image_A1_4There_4_png,
+  'A1/5Possessives/.png': image_A1_5Possessives__png,
+  'A1/5Possessives/1.png': image_A1_5Possessives_1_png,
+  'A1/5Possessives/2.png': image_A1_5Possessives_2_png,
+  'A1/5Possessives/3.png': image_A1_5Possessives_3_png,
+  'A1/5Possessives/4.png': image_A1_5Possessives_4_png,
+  'A1/5Possessives/5.png': image_A1_5Possessives_5_png,
   'A2/1PastCont/1.png': image_A2_1PastCont_1_png,
   'A2/1PastCont/2.png': image_A2_1PastCont_2_png,
   'A2/1PastCont/3.png': image_A2_1PastCont_3_png,

@@ -75,12 +75,12 @@ const QuestionRenderer = ({
       );
 
     // FIXED - was using wrong variable names
-    case 'boxPop':
+    case 'popBox':
       return (
         <BoxPopActivity
-          template={props.template}
-          options={props.options}
-          correctAnswers={props.correctAnswers}
+          columns={props.columns}
+          rows={props.rows}
+          tokens={props.tokens}
           {...commonProps}
         />
       );

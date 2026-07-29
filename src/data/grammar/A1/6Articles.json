@@ -1,0 +1,64 @@
+{
+  "topic": "Articles",
+  "pages": [
+    {
+      "questions": [
+        {
+          "type": "imageDisplay",
+          "imagePath": "A1/6Articles/1.png",
+          "altText": "The : a/an"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "The definite article 'the' is used to refer to specific or particular nouns.", "textStyle": "text" },
+            { "text": "The indefinite articles 'a' and 'an' are used to refer to non-specific or general nouns.", "textStyle": "italic" }
+          ],
+          "words": [
+            { "text": "We", "feedback": "'We' is a subject pronoun, not a possessive." },
+            { "text": "left", "feedback": "'left' is a verb." },
+            { "text": "our", "feedback": "Yes! 'our' is a possessive adjective." },
+            { "text": "bikes", "feedback": "'bikes' is a noun." },
+            { "text": "outside.", "feedback": "'outside' is a preposition here." },
+            { "text": "Did", "feedback": "'Did' is an auxiliary verb." },
+            { "text": "you", "feedback": "'you' is a subject pronoun." },
+            { "text": "forget", "feedback": "'forget' is a verb." },
+            { "text": "your", "feedback": "Yes! 'your' is a possessive adjective." },
+            { "text": "keys?", "feedback": "'keys' is a noun." }
+          ],
+          "keyWords": ["our", "your"]
+        },
+        {
+          "type": "multipleChoice",
+          "questions": "1) Which article is used to refer to specific nouns?",
+          "options": ["the", "a", "an"],
+          "correctAnswer": "the"
+        },
+        {
+          "type": "click",
+          "layout": "horizontal",
+          "instructions": [
+            { "text": "Choose the correct article for the following sentence: 'I saw ___ dog in the park.'" },
+            { "text": "Options: 'the', 'a', 'an'", "correctAnswer": "a" },
+            { "text": "Explanation: 'a' is used because 'dog' is a non-specific noun." },
+            { "text": "Choose the correct article for the following sentence: 'I saw ___ dog in the park.'", "options": ["the", "a", "an"], "correctAnswer": "a"}
+          ]
+        },
+        {
+          "type": "popBox",
+          "columns": ["", "Adjective", "Pronoun"],
+          "rows": [
+            { "header": "1st singular", "blanks": ["my", "mine"] },
+            { "header": "2nd singular", "blanks": ["your", "yours"] },
+            { "header": "3rd singular ♂", "blanks": ["his", "his"] },
+            { "header": "3rd singular ♀", "blanks": ["her", "hers"] },
+            { "header": "1st plural", "blanks": ["our", "ours"] },
+            { "header": "3rd plural", "blanks": ["their", "theirs"] }
+          ],
+          "tokens": ["mine", "my", "yours", "your", "his", "his", "hers", "her", "ours", "our", "theirs", "their"]
+        }
+      ]
+    } 
+  ]
+}

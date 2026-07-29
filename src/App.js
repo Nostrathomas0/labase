@@ -46,6 +46,7 @@ import PremiumRoute from './components/premium/PremiumRoute';
 
 //Premium grammar pages
 import PossessivesPage from './components/pages/A1/PossessivesPage';
+import ArticlesPage from './components/pages/A1/ArticlesPage';
 
 // Exam components
 import ExamsHomePage from './components/pages/exams/ExamsHomePage';
@@ -170,6 +171,14 @@ function App() {
                 <ProtectedRoute>
                   <PremiumRoute>
                     <PossessivesPage progressManager={progressManager} />
+                  </PremiumRoute>
+                </ProtectedRoute>
+              } />
+
+              <Route path="/A1/articles" element={
+                <ProtectedRoute>
+                  <PremiumRoute>
+                    <ArticlesPage progressManager={progressManager} />
                   </PremiumRoute>
                 </ProtectedRoute>
               } />

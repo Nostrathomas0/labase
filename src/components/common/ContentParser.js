@@ -15,7 +15,8 @@ const LEFT_PANEL_TYPES = [
 const RIGHT_PANEL_TYPES = [
   'multipleChoice', 'gapFill', 'wordBank', 'wordBankActivity',
   'question', 'exercise', 'activity', 'quiz', 'test', 'assessment',
-  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks', 'multiplechoice', 'gapfill'
+  'truefalse', 'matching', 'ordering', 'dragdrop', 'fillblanks', 'multiplechoice',
+  'gapfill','boxpop', 'popbox', 'matchingpairs', 'sentencebuilder' 
   // REMOVED: 'clickActivity', 'click' - these now go to left panel
 ];
 
