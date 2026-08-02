@@ -1,5 +1,5 @@
 // src/components/common/MatchingPairs.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { QuestionHandler } from '../../utils/ProgressManager';
 
 // pairs format: [{ left: 'my', right: 'I' }, { left: 'your', right: 'you' }, ...]
@@ -13,9 +13,15 @@ const MatchingPairs = ({
   const [matched, setMatched] = useState({});     // { leftValue: rightValue }
   const [answered, setAnswered] = useState(false);
   const [feedback, setFeedback] = useState('');
-  const [questionHandler] = useState(() => new QuestionHandler(progressManager));
+  const questionHandlerRef = React.useRef(null);
+    if (!questionHandlerRef.current) {
+      questionHandlerRef.current = new QuestionHandler(progressManager);
+    }
+  const questionHandler = questionHandlerRef.current;
 
-  const rightItems = [...pairs.map(p => p.right)].sort(() => Math.random() - 0.5);
+  const rightItems = useMemo(() => 
+    [...pairs.map(p => p.right)].sort(() => Math.random() - 0.5),
+  [pairs]);
 
   useEffect(() => {
     setSelected(null);
@@ -25,10 +31,11 @@ const MatchingPairs = ({
   }, [pairs]);
 
   useEffect(() => {
-    if (questionId && progressManager) {
-      questionHandler.startQuestion(questionId, 'matchingPairs');
-    }
-  }, [questionId, progressManager, questionHandler]);
+      if (questionId && progressManager) {
+        questionHandler.startQuestion(questionId, 'matchingPairs');
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [questionId, progressManager]);
 
   const handleSelect = (side, value) => {
     if (answered) return;

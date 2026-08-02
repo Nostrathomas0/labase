@@ -42,7 +42,7 @@
             { "text": "Choose the correct article for the following sentence: 'I saw ___ dog in the park.'" },
             { "text": "Options: 'the', 'a', 'an'", "correctAnswer": "a" },
             { "text": "Explanation: 'a' is used because 'dog' is a non-specific noun." },
-            { "text": "Choose the correct article for the following sentence: 'I saw ___ dog in the park.'", "options": ["the", "a", "an"], "correctAnswer": "a"}
+            { "tegit xt": "Choose the correct article for the following sentence: 'I saw ___ dog in the park.'", "options": ["the", "a", "an"], "correctAnswer": "a"}
           ]
         },
         {

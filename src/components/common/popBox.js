@@ -1,13 +1,15 @@
 // src/components/common/popBox.js
 import React, { useState, useEffect, useMemo } from 'react';
-import { DndContext, useDroppable, useDraggable } from '@dnd-kit/core';
+import { DndContext, useDroppable, useDraggable, DragOverlay } from '@dnd-kit/core';
 import { QuestionHandler } from '../../utils/ProgressManager';
 
-const Token = ({ id, value, disabled }) => {
+// ── Token in the bank ────────────────────────────────────────────
+const BankToken = ({ id, value, disabled }) => {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id,
     disabled,
-  });
+    data: { origin: 'bank', value },
+    });
   return (
     <span
       ref={setNodeRef}
@@ -24,7 +26,31 @@ const Token = ({ id, value, disabled }) => {
   );
 };
 
-const DropCell = ({ id, filled, answered, isCorrect }) => {
+// ── Token placed inside a cell (draggable back out) ──────────────
+const PlacedToken = ({ cellId, value, answered }) => {
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
+    id: `placed-${cellId}`,
+    disabled: answered,
+    data: { origin: 'cell', cellId, value },
+  });
+  return (
+    <span
+      ref={setNodeRef}
+      {...listeners}
+      {...attributes}
+      className={[
+        'pop-token placed-token',
+        isDragging ? 'dragging' : '',
+      ].join(' ').trim()}
+      title="Drag to move or drop here to remove"
+    >
+      {value}
+    </span>
+  );
+};
+
+// ── Droppable cell — shows PlacedToken or dashed empty state ─────
+const DropCell = ({ id, filled, filledValue, answered, isCorrect }) => {
   const { setNodeRef, isOver } = useDroppable({ id });
   return (
     <div
@@ -36,11 +62,28 @@ const DropCell = ({ id, filled, answered, isCorrect }) => {
         answered ? (isCorrect  ? 'correct' : 'incorrect') : '',
       ].join(' ').trim()}
     >
-      {filled || '·····'}
+      {filled
+        ? <PlacedToken cellId={id} value={filledValue} answered={answered} />
+        : '·····'
+      }
     </div>
   );
 };
 
+// ── Droppable bank zone — drag placed tokens back here ───────────
+const BankZone = ({ children }) => {
+  const { setNodeRef, isOver } = useDroppable({ id: 'bank-zone' });
+  return (
+    <div
+      ref={setNodeRef}
+      className={`pop-token-bank${isOver ? ' bank-over' : ''}`}
+    >
+      {children}
+    </div>
+  );
+};
+
+// ── Main component ───────────────────────────────────────────────
 const BoxPopActivity = ({
   columns = [],
   rows = [],
@@ -49,14 +92,15 @@ const BoxPopActivity = ({
   questionId = 'popbox-default',
   progressManager,
 }) => {
-  const [filled, setFilled]     = useState({});
-  const [feedback, setFeedback] = useState('');
-  const [answered, setAnswered] = useState(false);
+  const [filled, setFilled]           = useState({});
+  const [feedback, setFeedback]       = useState('');
+  const [answered, setAnswered]       = useState(false);
+  const [activeDisplayValue, setActiveDisplayValue] = useState(null); 
   const questionHandlerRef = React.useRef(null);
-    if (!questionHandlerRef.current) {
-      questionHandlerRef.current = new QuestionHandler(progressManager);
-    }
-    const questionHandler = questionHandlerRef.current;
+  if (!questionHandlerRef.current) {
+    questionHandlerRef.current = new QuestionHandler(progressManager);
+  }
+  const questionHandler = questionHandlerRef.current;
 
   const correctMap = useMemo(() => {
     const map = {};
@@ -82,18 +126,54 @@ const BoxPopActivity = ({
     }
   }, [questionId, progressManager, questionHandler]);
 
-  const handleDragEnd = (event) => {
-    const { active, over } = event;
-    if (!active || !over || answered) return;
-    setFilled(prev => ({ ...prev, [over.id]: active.id }));
-  };
+const handleDragStart = (event) => {
+  const val = event.active.data.current?.value;
+  setActiveDisplayValue(
+    val || event.active.id.replace(/^placed-/, '').replace(/-\d+$/, '')
+  );
+};
 
+const handleDragEnd = (event) => {
+  const { active, over } = event;
+  if (!active || answered) return;
+
+  const origin      = active.data.current?.origin;
+  const sourceCellId = active.data.current?.cellId;
+  const overId      = over?.id;
+  const cleanValue  = active.data.current?.value
+    || active.id.replace(/^placed-/, '').replace(/-\d+$/, '');
+
+  setFilled(prev => {
+    const next = { ...prev };
+
+    if (origin === 'bank') {
+      if (overId && overId !== 'bank-zone') {
+        next[overId] = cleanValue;
+      }
+
+    } else if (origin === 'cell') {
+      delete next[sourceCellId];
+      if (overId && overId !== 'bank-zone' && overId !== sourceCellId) {
+        next[overId] = cleanValue;
+      }
+    }
+
+    return next;
+  });
+
+  setActiveDisplayValue(null);
+};
+
+  const handleDragCancel = () => {};
+
+  // ── Submit ───────────────────────────────────────────────────
   const handleSubmit = () => {
     if (answered) return;
 
     let correct = 0;
     Object.entries(correctMap).forEach(([cellId, expected]) => {
-      const placedVal = (filled[cellId] || '').replace(/-\d+$/, '');
+      const raw = filled[cellId] || '';
+      const placedVal = raw.replace(/^placed-/, '').replace(/-\d+$/, '');
       if (placedVal.toLowerCase() === expected.toLowerCase()) correct++;
     });
 
@@ -116,8 +196,16 @@ const BoxPopActivity = ({
     setAnswered(true);
   };
 
+  
+  // Which bank token IDs are currently placed in cells
+  const placedTokenValues = new Set(Object.values(filled));
+
   return (
-    <DndContext onDragEnd={handleDragEnd}>
+    <DndContext
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}
+      onDragCancel={handleDragCancel}
+    >
       <div className="griddrop-container">
 
         <table className="griddrop-table">
@@ -134,14 +222,15 @@ const BoxPopActivity = ({
                 <td className="griddrop-row-header">{row.header}</td>
                 {row.blanks.map((_, c) => {
                   const cellId    = `${r}-${c}`;
-                  const placed    = filled[cellId] || '';
-                  const placedVal = placed.replace(/-\d+$/, '');
+                  const raw       = filled[cellId] || '';
+                  const placedVal = raw.replace(/-\d+$/, '');
                   const expected  = correctMap[cellId];
                   return (
                     <td key={c} className="griddrop-td">
                       <DropCell
                         id={cellId}
-                        filled={placedVal || null}
+                        filled={!!placedVal}
+                        filledValue={placedVal}
                         answered={answered}
                         isCorrect={
                           placedVal.toLowerCase() === expected.toLowerCase()
@@ -155,19 +244,19 @@ const BoxPopActivity = ({
           </tbody>
         </table>
 
-        <div className="pop-token-bank">
+        <BankZone>
           {tokens.map((tok, i) => (
-            <Token
+            <BankToken
               key={`${tok}-${i}`}
               id={`${tok}-${i}`}
               value={tok}
               disabled={
                 answered ||
-                Object.values(filled).includes(`${tok}-${i}`)
+                placedTokenValues.has(`${tok}-${i}`)
               }
             />
           ))}
-        </div>
+        </BankZone>
 
         <button
           onClick={handleSubmit}
@@ -180,8 +269,11 @@ const BoxPopActivity = ({
         {feedback && (
           <div className={`feedback ${
             answered && Object.entries(correctMap).every(
-              ([id, exp]) =>
-                (filled[id] || '').replace(/-\d+$/, '').toLowerCase() === exp.toLowerCase()
+              ([id, exp]) => {
+                const raw = filled[id] || '';
+                const val = raw.replace(/-\d+$/, '');
+                return val.toLowerCase() === exp.toLowerCase();
+              }
             ) ? 'correct' : 'incorrect'
           }`}>
             {feedback}
@@ -189,6 +281,15 @@ const BoxPopActivity = ({
         )}
 
       </div>
+
+      <DragOverlay dropAnimation={null}>
+        {activeDisplayValue ? (
+          <span className="pop-token dragging-overlay">
+            {activeDisplayValue}
+          </span>
+        ) : null}
+      </DragOverlay>
+
     </DndContext>
   );
 };
