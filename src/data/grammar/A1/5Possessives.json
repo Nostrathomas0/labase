@@ -12,21 +12,22 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            { "text": "Possessives", "textStyle": "bold" },
-            { "text": " show that something belongs to someone. The most common are ", "textStyle": "text" },
-            { "text": "possessive adjectives", "textStyle": "underline" },
+            { "text": "To own or possess something is marked grammatically into nouns, pronouns, and names with the apostrophe ", "textstyle": "bold" },
+            { "text": "s", "textStyle": "underline" },
+            { "text": " to show that something belongs to someone. ", "textStyle": "text" },
+            { "text": "Possessive deteminers", "textStyle": "bold" },
             { "text": " which go before a noun:", "textStyle": "text" },
             { "text": "my, your, his, her, its, our, their", "textStyle": "bold", "newLine": true },
             { "text": "That is ", "textStyle": "italic", "newParagraph": true },
             { "text": "my", "textStyle": "underline" },
-            { "text": " bag. ", "textStyle": "italic" },
+            { "text": " son. ", "textStyle": "italic" },
             { "text": "Is this ", "textStyle": "italic", "newLine": true },
             { "text": "your", "textStyle": "underline" },
-            { "text": " coat? ", "textStyle": "italic" },
+            { "text": " wallat? ", "textStyle": "italic" },
             { "text": "She left ", "textStyle": "italic", "newLine": true },
             { "text": "her", "textStyle": "underline" },
-            { "text": " keys on the table.", "textStyle": "italic" },
-            { "text": "Unlike regular adjectives, possessives don't change for plural nouns:", "textStyle": "text", "newParagraph": true },
+            { "text": " phone on the table.", "textStyle": "italic" },
+            { "text": "Like regular adjectives, possessives don't change for plural nouns:", "textStyle": "text", "newParagraph": true },
             { "text": "my shoe / my shoes", "textStyle": "italic" },
             { "text": " — possessive stays the same.", "textStyle": "text" },
             { "text": "Click the possessive adjectives in the sentences below.", "textStyle": "italic", "newParagraph": true }
@@ -211,11 +212,18 @@
           "keyWords": ["Whose", "my", "mine.", "yours?", "Tom's."]
         },
         {
-          "type": "boxPop",
-          "template": "A: ___ bag is that on the table? B: I think it's ___. Ask Clara, it might be ___.",
-          "options": ["Whose", "mine", "hers", "Who's", "my", "their"],
-          "correctAnswers": ["Whose", "mine", "hers"]
-        }
+  "type": "popBox",
+  "columns": ["", "Adjective", "Pronoun"],
+  "rows": [
+    { "header": "1st singular", "blanks": ["my", "mine"] },
+    { "header": "2nd singular", "blanks": ["your", "yours"] },
+    { "header": "3rd singular ♂", "blanks": ["his", "his"] },
+    { "header": "3rd singular ♀", "blanks": ["her", "hers"] },
+    { "header": "1st plural", "blanks": ["our", "ours"] },
+    { "header": "3rd plural", "blanks": ["their", "theirs"] }
+  ],
+  "tokens": ["mine", "my", "yours", "your", "his", "his", "hers", "her", "ours", "our", "theirs", "their"]
+}
       ]
     },
     {

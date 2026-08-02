@@ -4,6 +4,15 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebaseInit';
 
 const usePremiumAccess = () => {
+    // BYPASS: Always return true for premium access
+  return {
+    hasPremium: true, // FORCE TRUE
+    loading: false, // FORCE FALSE
+    checkPremium: () => true // MOCK FUNCTION
+  };
+  
+  // ORIGINAL IMPLEMENTATION (COMMENTED OUT):
+  /*
   const { currentUser } = useAuth();
   const [hasPremium, setHasPremium] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -41,6 +50,7 @@ const usePremiumAccess = () => {
   }, [currentUser]);
 
   return { hasPremium, loading };
+  */
 };
 
 export default usePremiumAccess;

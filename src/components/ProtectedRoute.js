@@ -9,10 +9,14 @@ const ProtectedRoute = ({ children }) => {
   const { currentUser, loading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [redirected, setRedirected] = useState(false);
+  const [redirected, 
+//    setRedirected
+  ] = useState(false);
   const [sessionCheckComplete, setSessionCheckComplete] = useState(false);
 
+  
   // AGGRESSIVE AUTO-REDIRECT - Get users to lessons IMMEDIATELY
+  /*
   useEffect(() => {
     if (!loading && currentUser && !sessionCheckComplete) {
       // Don't redirect if already on a lesson page
@@ -30,18 +34,18 @@ const ProtectedRoute = ({ children }) => {
             if (payload.currentSession) {
               const { level, topic } = payload.currentSession;
               targetUrl = `/${level}/${topic}`;
-              console.log('🚀 SNAP BACK to current session:', targetUrl);
+              console.log(' SNAP BACK to current session:', targetUrl);
             }
             // Priority 2: Go to most recent completed lesson
             else if (payload.recentProgress && payload.recentProgress.length > 0) {
               const recent = payload.recentProgress[0];
               targetUrl = `/${recent.level}/${recent.topic}`;
-              console.log('🚀 SNAP BACK to recent lesson:', targetUrl);
+              console.log(' SNAP BACK to recent lesson:', targetUrl);
             }
             // Priority 3: Default to first lesson
             else {
               targetUrl = '/A1/nouns';
-              console.log('🚀 SNAP BACK to default start:', targetUrl);
+              console.log(' SNAP BACK to default start:', targetUrl);
             }
             
             // INSTANT redirect - no delay, no mercy
@@ -57,27 +61,30 @@ const ProtectedRoute = ({ children }) => {
       }
     }
   }, [currentUser, loading, location.pathname, navigate, sessionCheckComplete]);
-
+*/
   // Redirect to login if not authenticated
-  useEffect(() => {
-    if (!loading && !currentUser && !redirected) {
+  /*
+    useEffect(() => {
+      if (!loading && !currentUser && !redirected) {
       setRedirected(true);
       navigate('/login', { state: { from: location } });
     }
   }, [currentUser, loading, navigate, location, redirected]);
-
+*/
   // Show loading state while checking authentication
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //  return <div>Loading...</div>;
+  // }
 
   // Return null during redirect to prevent additional renders
-  if (!currentUser && redirected) {
-    return null;
-  }
+  //if (!currentUser && redirected) {
+  //  return null;
+  //}
 
   // Only render children if user is authenticated
-  return currentUser ? children : null;
+//  return currentUser ? children : null;
+
+return children; //SANDBOX
 };
 
 export default ProtectedRoute;

@@ -15,7 +15,7 @@
             {"text": "Nouns", "textStyle":"bold"},
             {"text": " are anyone, anything or any place. They give them names. Nouns can be common objects, ","textStyle": "text"},
             {"text": " a car, a house, a computer, ", "textStyle": "italic", "newLine":false},
-            {"text": " or intangible things that you can't touch or see, ","textStyle": "text"},
+            {"text": " things that you can't touch or see, ","textStyle": "text"},
             {"text": " ideas, love, data. ", "textStyle": "italic", "newLine":false},
             {"text": "Names, individual places, and titles are ", "textStyle": "text", "newParagraph":true},
             {"text": "proper nouns", "textStyle":"bold"},
@@ -39,7 +39,7 @@
             {"text": " are for you and I, together. It's the 1st person, plural.", "textStyle": "text" },
             {"text": "They & them ", "textStyle": "bold",  "newLine": true   },
             {"text": " are for two or more people or things; 3rd person plural.",  "textStyle": "text"   },
-            {"text": "1) Click on proper names below.", "textStyle": "italic",  "newParagraph": true }
+            {"text": "1) Click  below.", "textStyle": "italic",  "newParagraph": true }
           ],
           "words": [
             {"text": "The New York",   "feedback": "No, it's just New York." },

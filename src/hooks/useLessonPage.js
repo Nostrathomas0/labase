@@ -2,20 +2,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-/**
- * Custom hook that handles ALL lesson page logic
- * 
- * @param {Object} lessonData - The imported JSON data (e.g., NounsData)
- * @param {Object} progressManager - The progressManager instance from App.js
- * @param {string} level - The level (e.g., 'A1')
- * @param {string} topic - The topic (e.g., 'nouns')
- * @param {string} nextPageUrl - URL to navigate to after completion (e.g., '/A1/adjectives')
- */
 export const useLessonPage = (lessonData, progressManager, level, topic, nextPageUrl = null) => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [saveStatus, setSaveStatus] = useState('');
+  const [completedPages, setCompletedPages] = useState([]);
 
   const { pages } = lessonData;
 
@@ -26,12 +18,36 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
     }
   }, [currentPage, level, topic, progressManager]);
 
+  // ── goToPage — direct jump for LessonTimeline ─────────────────
+  // Checks page title unlock requirement if present in JSON
+  // JSON shape: { "title": "...", "unlockRequires": 60, "questions": [...] }
+  const goToPage = useCallback((index) => {
+    if (index < 0 || index >= pages.length) return;
+
+    // Allow free backward navigation
+    if (index < currentPage) {
+      setCurrentPage(index);
+      return;
+    }
+
+    // Forward: check if previous page was completed at required score
+    const targetPage = pages[index];
+    const requiredScore = targetPage?.unlockRequires ?? 0;
+
+    if (requiredScore > 0 && !completedPages.includes(index - 1)) {
+      setSaveStatus(`Complete page ${index} first to unlock this.`);
+      setTimeout(() => setSaveStatus(''), 3000);
+      return;
+    }
+
+    setCurrentPage(index);
+  }, [pages, currentPage, completedPages]);
+
   // Navigate to next page with auto-save
   const nextPage = useCallback(async () => {
     if (currentPage < pages.length - 1) {
       setIsLoading(true);
       setSaveStatus('Saving progress...');
-      
       try {
         await progressManager.saveCurrentProgress();
         setSaveStatus('Progress saved!');
@@ -52,7 +68,6 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
     if (currentPage > 0) {
       setIsLoading(true);
       setSaveStatus('Saving progress...');
-      
       try {
         await progressManager.saveCurrentProgress();
         setSaveStatus('Progress saved!');
@@ -78,10 +93,10 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
     console.log('Lesson completed:', completionData);
     console.log('currentPage:', currentPage);
     console.log('total pages:', pages.length);
-    
+
     setIsLoading(true);
     setSaveStatus('Completing page...');
-    
+
     try {
       const result = await progressManager.completePage();
       console.log('Page completion result:', result);
@@ -89,42 +104,42 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
       if (result.jwtUpdated) {
         const passed = result.passed;
         const score = result.score;
-       
-        console.log(`Page completed. Score: ${score}%. Passed: ${passed}`);
-        
+
         setSaveStatus(`Page completed! Score: ${score}% (${passed ? 'PASSED' : 'FAILED'})`);
-        
-        // AUTO-ADVANCE LOGIC
+
+        // Mark page as completed for timeline
+        if (!completedPages.includes(currentPage)) {
+          setCompletedPages(prev => [...prev, currentPage]);
+        }
+
         if (score >= 60) {
-          // Check if there's another page in this lesson
           if (currentPage < pages.length - 1) {
-            // Move to next page in same lesson
             setTimeout(() => {
               setSaveStatus('Great job! Moving to next page...');
               setCurrentPage(prev => prev + 1);
             }, 2000);
           } else if (nextPageUrl) {
-            console.log('Navigating to next lesson:', nextPageUrl);
-            // Move to next lesson
             setTimeout(() => {
               setSaveStatus('Lesson complete! Moving to next lesson...');
               navigate(nextPageUrl);
             }, 2000);
           } else {
-            console.log('Last page.');
-            // Last page of last lesson
             setTimeout(() => {
               setSaveStatus('Congratulations! Lesson complete!');
             }, 2000);
           }
         } else {
-          console.log('Score below 60%. Staying on current page for review.');
-          // Score < 60% - stay on page
           setSaveStatus(`Score below 60%. Review and try again!`);
         }
       } else {
-        console.error('JWT not updated on page completion.');
-        setSaveStatus('Page completed but save failed');
+        // Sandbox / no JWT — still mark page complete locally
+        if (!completedPages.includes(currentPage)) {
+          setCompletedPages(prev => [...prev, currentPage]);
+        }
+        setSaveStatus('Page completed');
+        if (currentPage < pages.length - 1) {
+          setTimeout(() => setCurrentPage(prev => prev + 1), 2000);
+        }
       }
     } catch (error) {
       console.error('Error completing page:', error);
@@ -133,15 +148,15 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
       setIsLoading(false);
       setTimeout(() => setSaveStatus(''), 5000);
     }
-  }, [progressManager, currentPage, pages.length, nextPageUrl, navigate]);
+  }, [progressManager, currentPage, pages.length, nextPageUrl, navigate, completedPages]);
 
-  // Get current page data in format expected by ContentParser
+  // Current page data for ContentParser
   const currentPageData = {
     title: `${topic.charAt(0).toUpperCase() + topic.slice(1)} - Page ${currentPage + 1}`,
     content: pages[currentPage]?.questions || []
   };
 
-  // Get current progress for display
+  // Current progress for display
   const currentProgress = progressManager ? progressManager.getPageProgress() : {
     score: 0,
     correctAnswers: 0,
@@ -150,19 +165,18 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
   };
 
   return {
-    // State
     currentPage,
     currentPageData,
     currentProgress,
     isLoading,
     saveStatus,
     totalPages: pages.length,
-    
-    // Handlers
+    completedPages,      // ← consumed by LessonTimeline
+    goToPage,            // ← consumed by LessonTimeline onPageChange
     nextPage,
     previousPage,
     handleQuestionComplete,
-    handleLessonComplete
+    handleLessonComplete,
   };
 };
 

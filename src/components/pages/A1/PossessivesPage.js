@@ -1,25 +1,61 @@
-// src/components/pages/PossessivesPage.js
+// src/components/pages/A1/PossessivesPage.js
 import React from 'react';
-import MainLayout from '../layout/MainLayout';
+import MainLayout from '../../layout/MainLayout';
+import PageTurner from '../../common/PageTurner';
 import PossessivesData from '../../../data/grammar/A1/5Possessives.json';
-import PageTurner from '../common/PageTurner';
-import { useLessonPage } from '../../hooks/useLessonPage';
+import { useLessonPage } from '../../../hooks/useLessonPage';
 
-const PossessivesPage = () => {
-  const { currentPage, handlePageChange } = useLessonPage();
+const PossessivesPage = ({ progressManager }) => {
+  const {
+    currentPage,
+    currentPageData,
+    currentProgress,
+    isLoading,
+    saveStatus,
+    totalPages,
+    nextPage,
+    previousPage,
+    handleQuestionComplete,
+    handleLessonComplete,
+  } = useLessonPage(
+    PossessivesData,
+    progressManager,
+    'A1',
+    'possessives',
+    '/A1/verbs'
+  );
 
   return (
-    <MainLayout
-      lessonData={PossessivesData}
-      currentPage={currentPage}
-      layoutType="lesson"
-    >
-      <PageTurner
-        totalPages={PossessivesData.pages.length}
-        currentPage={currentPage}
-        onPageChange={handlePageChange}
+    <div>
+      <div className="progress-display">
+        <div className="progress-content">
+          <h3>Possessives — Page {currentPage + 1} of {totalPages}</h3>
+          <p>
+            Score: {currentProgress.score}%
+            ({currentProgress.correctAnswers}/{currentProgress.totalQuestions} correct)
+          </p>
+        </div>
+        {saveStatus && (
+          <div className="save-status">{saveStatus}</div>
+        )}
+      </div>
+
+      <MainLayout
+        layoutType="grammar"
+        data={currentPageData}
+        progressManager={progressManager}
+        onQuestionComplete={handleQuestionComplete}
+        onLessonComplete={handleLessonComplete}
       />
-    </MainLayout>
+
+      <PageTurner
+        currentPage={currentPage + 1}
+        totalPages={totalPages}
+        onNext={nextPage}
+        onPrevious={previousPage}
+        disabled={isLoading}
+      />
+    </div>
   );
 };
 

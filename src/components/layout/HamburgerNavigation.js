@@ -203,6 +203,13 @@ useEffect(() => {
                       >
                         There Is/Are
                       </Link>
+                      <Link 
+                        to="/A1/possessives" 
+                        className={`nav-topic ${isActiveRoute('/A1/possessives') ? 'active' : ''}`}
+                        onClick={handleLinkClick}
+                      >
+                        Possessives ⭐
+                      </Link>
                     </div>
                   )}
                 </div>
