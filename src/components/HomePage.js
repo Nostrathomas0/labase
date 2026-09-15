@@ -18,7 +18,7 @@ const HomePage = () => {
     return (
       <div className="auth-prompt-container">
         <h1>Welcome to Languapps</h1>
-        <p>Please sign in to access the grammar learning app.</p>
+        <p>Please sign in.</p>
         
         <div className="auth-actions">
           <a 
@@ -48,7 +48,7 @@ const HomePage = () => {
     <div className="app-container">
       <header className="app-header">
         <h1>Welcome back to Languapps!</h1>
-        <p>Hello, {currentUser.email} 👋</p>
+        <p>Hello, {currentUser.email} </p>
       </header>
       
       <main className="app-main">

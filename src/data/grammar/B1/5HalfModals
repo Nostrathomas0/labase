@@ -1,0 +1,40 @@
+{
+    "topic": "Half Modals",
+    "pages": [
+        {
+            "questions": [
+                {
+                    "type": "imageDisplay",
+                    "imagePath": "src/data/grammar/B1/5HalfModals/images/halfModals.png",
+                    "altText": "Half Modals"
+                },
+                {
+                    "type": "click",
+                    "layout": "horizontal",
+                    "instructions": "Click on the correct half modal for each sentence.",
+                    {"text": "Half modals are used to express ability, possibility, permission, or obligation.", "textStyle": "text"},
+                    {"text": "
+                },
+                {
+                    "type": "multipleChoice",
+                    "question": "Which of the following sentences is correct?",
+                    "options": [
+                        {
+                            "text": "I can to swim.",
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "I can swim.",
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "I can swimming.",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {}
+            ]
+        }
+    ]
+}

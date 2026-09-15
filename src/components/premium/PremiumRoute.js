@@ -4,10 +4,10 @@ import usePremiumAccess from '../../hooks/usePremiumAccess';
 import UpgradePrompt from './UpgradePrompt';
 
 const PremiumRoute = ({ children }) => {
-  //const { hasPremium, loading } = usePremiumAccess();
+  const { hasPremium, loading } = usePremiumAccess();
 
-  //if (loading) return <div className="access-loading">Loading...</div>;
-  //if (!hasPremium) return <UpgradePrompt />;
+  if (loading) return <div className="access-loading">Loading...</div>;
+  if (!hasPremium) return <UpgradePrompt />;
 
   return children;
 };

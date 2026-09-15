@@ -1,0 +1,68 @@
+{
+    "topic": "Helping Verbs",
+    "pages": [
+        {
+            "questions": [
+                {
+                    "type": "imageDisplay",
+                    "imagePath": "A2/6HelpingVerbs/1.png",
+                    "altText": "Image showing... a man and a woman, caption: 'The man is running.'"
+                },
+                {
+                    "type": "click",
+                    "layout": "horizontal",
+                    "instructions": [
+                        { "text": "Helping verbs ", "textStyle": "bold"},
+                        { "text": "are used together with the main verb to form different tenses, voices, or moods.", "textStyle": "normal" },
+                        { "text": "Common helping verbs include 'is', 'are', 'was', 'were', 'has', 'have', and 'had'.", "textStyle": "normal" },
+                        { "text": "For example: 'The man is running.'", "textStyle": "italic", "newLine": true },
+                        { "text": "1) Click on the helping verb in the sentence below.", "textStyle": "italic", "newParagraph": true },
+                        { "text": "Remember, a helping verb is used with the main verb to indicate tense, voice, or mood.", "textStyle": "italic", "newParagraph": true }
+                        ],
+                    "words": [
+                        { "text": "The", "feedback": "No, 'The' is a definite article." },
+                        { "text": "man", "feedback": "No, 'man' is a noun." },
+                        { "text": "is", "feedback": "Yes, 'is' is a helping verb used with the main verb 'running'." },
+                        { "text": "running.", "feedback": "No, 'running' is the main verb." }
+                    ],
+                    "keyWords": ["is"]
+                },
+                {
+                    "type": "multipleChoice",
+                    "question": "2) Which sentence contains a helping verb?",
+                    "options": [
+                        "She runs every morning.",
+                        "He is reading a book.",
+                        "They play football on weekends.",
+                        "I like to swim."
+                    ],
+                    "correctAnswer": "He is reading a book."
+                },
+                {
+                    "type": "popBox",
+                    "columns": ["", "is", "are", "was", "were", "has", "have", "had"],
+                    "rows": [
+                        { "header": "present tense", "blanks": ["He is reading a book.", "They are playing football."] },
+                        { "header": "past tense", "blanks": ["She was running yesterday.", "They were watching a movie."] },
+                        { "header": "perfect tense", "blanks": ["He has finished his homework.", "They have completed the project."] }
+                    ],
+                    "tokens": ["is", "are", "was", "were", "has", "have", "had"]
+                }
+                ]
+            },
+            {
+                "questions": [
+                    {
+                        "type": "sentenceBuilder",
+                        "tokens": ["is", "are", "was", "were", "has", "have", "had", "running", "reading", "finished", "completed"],
+                        "correctOrder": ["He", "is", "running", "."]
+                    },
+                    {
+                        "type": "sentenceBuilder",
+                        "tokens": ["is", "are", "was", "were", "has", "have", "had", "running", "reading", "finished", "completed"],
+                        "correctOrder": ["They", "have", "completed", "the", "project", "."]
+                    }
+                ]
+            }
+        ]
+    }    

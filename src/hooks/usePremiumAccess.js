@@ -4,15 +4,6 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebaseInit';
 
 const usePremiumAccess = () => {
-    // BYPASS: Always return true for premium access
-  return {
-    hasPremium: true, // FORCE TRUE
-    loading: false, // FORCE FALSE
-    checkPremium: () => true // MOCK FUNCTION
-  };
-  
-  // ORIGINAL IMPLEMENTATION (COMMENTED OUT):
-  /*
   const { currentUser } = useAuth();
   const [hasPremium, setHasPremium] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -25,7 +16,7 @@ const usePremiumAccess = () => {
 
     const checkAccess = async () => {
       try {
-        // First: check JWT custom claim (set by Stripe webhook or admin)
+        // Check 1: JWT custom claim (Stripe sets this eventually)
         const token = await currentUser.getIdTokenResult(true);
         if (token.claims.premium) {
           setHasPremium(true);
@@ -33,7 +24,7 @@ const usePremiumAccess = () => {
           return;
         }
 
-        // Second: fallback to Firestore (admin-assignable)
+        // Check 2: Firestore flag (you set this manually in Firebase Console)
         const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
         if (userDoc.exists()) {
           setHasPremium(userDoc.data().premium === true);
@@ -50,7 +41,6 @@ const usePremiumAccess = () => {
   }, [currentUser]);
 
   return { hasPremium, loading };
-  */
 };
 
 export default usePremiumAccess;
