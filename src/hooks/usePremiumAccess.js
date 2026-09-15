@@ -16,18 +16,23 @@ const usePremiumAccess = () => {
 
     const checkAccess = async () => {
       try {
-        // Check 1: JWT custom claim (Stripe sets this eventually)
-        const token = await currentUser.getIdTokenResult(true);
-        if (token.claims.premium) {
-          setHasPremium(true);
-          setLoading(false);
-          return;
+        // JWT users don't have getIdTokenResult — skip to Firestore
+        // Firebase Auth users can use claims (future Stripe integration)
+        if (!currentUser.isJwtUser) {
+          const token = await currentUser.getIdTokenResult(true);
+          if (token.claims.premium) {
+            setHasPremium(true);
+            setLoading(false);
+            return;
+          }
         }
 
-        // Check 2: Firestore flag (you set this manually in Firebase Console)
-        const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
-        if (userDoc.exists()) {
-          setHasPremium(userDoc.data().premium === true);
+        // Firestore check — works for both JWT and Firebase users
+        if (db) {
+          const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
+          if (userDoc.exists()) {
+            setHasPremium(userDoc.data().premium === true);
+          }
         }
       } catch (err) {
         console.error('usePremiumAccess error:', err);
