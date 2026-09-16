@@ -12,8 +12,8 @@ const usePremiumAccess = () => {
       return;
     }
 
-    // Premium field is baked into the JWT payload
-    // currentUser is the decoded JWT object
+    console.log('usePremiumAccess - currentUser:', currentUser);
+    console.log('usePremiumAccess - premium:', currentUser.premium);
     setHasPremium(currentUser.premium === true);
     setLoading(false);
 
