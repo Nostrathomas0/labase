@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
             const jwtUser = {
               uid: decodedToken.uid,
               email: decodedToken.email,
-              premium: decodedToken.premium === false,
+              premium: decodedToken.premium === true,
               isJwtUser: true
             };
             setCurrentUser(jwtUser);
