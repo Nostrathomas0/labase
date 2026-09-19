@@ -1,7 +1,6 @@
 // src/components/pages/A1/PossessivesPage.js
 import React from 'react';
-import MainLayout from '../../layout/MainLayout';
-import PageTurner from '../../common/PageTurner';
+import PremiumLessonLayout from '../../premium/PremiumLessonLayout';
 import PossessivesData from '../../../data/grammar/A1/5Possessives.json';
 import { useLessonPage } from '../../../hooks/useLessonPage';
 
@@ -9,12 +8,10 @@ const PossessivesPage = ({ progressManager }) => {
   const {
     currentPage,
     currentPageData,
-    currentProgress,
+    completedPages,
     isLoading,
     saveStatus,
-    totalPages,
-    nextPage,
-    previousPage,
+    goToPage,
     handleQuestionComplete,
     handleLessonComplete,
   } = useLessonPage(
@@ -22,37 +19,23 @@ const PossessivesPage = ({ progressManager }) => {
     progressManager,
     'A1',
     'possessives',
-    '/A1/verbs'
+    '/A1/articles'
   );
 
   return (
     <div>
-      <div className="progress-display">
-        <div className="progress-content">
-          <h3>Possessives — Page {currentPage + 1} of {totalPages}</h3>
-          <p>
-            Score: {currentProgress.score}%
-            ({currentProgress.correctAnswers}/{currentProgress.totalQuestions} correct)
-          </p>
-        </div>
-        {saveStatus && (
-          <div className="save-status">{saveStatus}</div>
-        )}
-      </div>
-
-      <MainLayout
-        layoutType="grammar"
-        data={currentPageData}
+      {saveStatus && (
+        <div className="save-status">{saveStatus}</div>
+      )}
+      <PremiumLessonLayout
+        lessonData={PossessivesData}
+        currentPage={currentPage}
+        currentPageData={currentPageData}
+        completedPages={completedPages}
+        onPageChange={goToPage}
         progressManager={progressManager}
         onQuestionComplete={handleQuestionComplete}
         onLessonComplete={handleLessonComplete}
-      />
-
-      <PageTurner
-        currentPage={currentPage + 1}
-        totalPages={totalPages}
-        onNext={nextPage}
-        onPrevious={previousPage}
         disabled={isLoading}
       />
     </div>
