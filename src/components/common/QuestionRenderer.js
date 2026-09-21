@@ -104,6 +104,7 @@ const QuestionRenderer = ({
         />
       );
 
+    case 'imageDisplay':
     case 'image':
       return (
         <div className="image-question">
