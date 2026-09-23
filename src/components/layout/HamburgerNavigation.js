@@ -210,6 +210,13 @@ useEffect(() => {
                       >
                         Possessives ⭐
                       </Link>
+                      <Link 
+                        to="/A1/articles" 
+                        className={`nav-topic ${isActiveRoute('/A1/articles') ? 'active' : ''}`}
+                        onClick={handleLinkClick}
+                      >
+                        Articles ⭐
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -262,6 +269,20 @@ useEffect(() => {
                         onClick={handleLinkClick}
                       >
                         Comparatives & Superlatives
+                      </Link>
+                      <Link
+                        to="/A2/helpVerbs"
+                        className={`nav-topic ${isActiveRoute('/A2/helpVerbs') ? 'active' : ''}`}
+                        onClick={handleLinkClick}
+                      >
+                        Helping Verbs ⭐
+                      </Link>
+                      <Link
+                        to="/A2/relativeClauses"
+                        className={`nav-topic ${isActiveRoute('/A2/relativeClauses') ? 'active' : ''}`}
+                        onClick={handleLinkClick}
+                      >
+                        Relative Clauses ⭐
                       </Link>
                     </div>
                   )}
@@ -316,6 +337,20 @@ useEffect(() => {
                       >
                         Modal Verbs
                       </Link>
+                      <Link 
+                        to="/B1/halfModals" 
+                        className={`nav-topic ${isActiveRoute('/B1/halfModals') ? 'active' : ''}`}
+                        onClick={handleLinkClick}
+                      >
+                        Half Modals ⭐
+                      </Link>
+                      <Link 
+                        to="/B1/participles" 
+                        className={`nav-topic ${isActiveRoute('/B1/participles') ? 'active' : ''}`}
+                        onClick={handleLinkClick}
+                      >
+                        Participles ⭐
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -368,6 +403,20 @@ useEffect(() => {
                         onClick={handleLinkClick}
                       >
                         Future Perfect
+                      </Link>
+                      <Link
+                        to="/B2/modalsDeduction"
+                        className={`nav-topic ${isActiveRoute('/B2/modalsDeduction') ? 'active' : ''}`}
+                        onClick={handleLinkClick}
+                      >
+                        Modals of Deduction ⭐
+                      </Link>
+                      <Link
+                        to="/B2/GerInf"
+                        className={`nav-topic ${isActiveRoute('/B2/GerInf') ? 'active' : ''}`}
+                        onClick={handleLinkClick}
+                      >
+                        Gerunds & Infinitives ⭐
                       </Link>
                     </div>
                   )}
