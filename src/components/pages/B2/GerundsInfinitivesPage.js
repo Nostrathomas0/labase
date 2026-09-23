@@ -1,7 +1,7 @@
 // src/components/pages/A1/PossessivesPage.js
 import React from 'react';
 import PremiumLessonLayout from '../../premium/PremiumLessonLayout';
-import GerundsData from '../../../data/grammar/B2/6Gerundsjson';
+import GerundsData from '../../../data/grammar/B2/6Gerunds.json';
 import { useLessonPage } from '../../../hooks/useLessonPage';
 
 const GerundsInfinitivesPage = ({ progressManager }) => {
