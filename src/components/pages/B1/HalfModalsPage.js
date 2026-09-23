@@ -1,7 +1,7 @@
 // src/components/pages/A1/PossessivesPage.js
 import React from 'react';
 import PremiumLessonLayout from '../../premium/PremiumLessonLayout';
-import HalfModalsData from '../../../data/grammar/A1/5HalfModals.json';
+import HalfModalsData from '../../../data/grammar/B1/5HalfModals.json';
 import { useLessonPage } from '../../../hooks/useLessonPage';
 
 const HalfModalsPage = ({ progressManager }) => {
