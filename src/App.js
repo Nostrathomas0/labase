@@ -228,7 +228,7 @@ function App() {
                <Route path="/A2/relClauses" element={
                 <ProtectedRoute>
                   <PremiumRoute>
-                    <PossessivesPage progressManager={progressManager} />
+                    <RelClausesPage progressManager={progressManager} />
                   </PremiumRoute>
                 </ProtectedRoute>
               } />
@@ -236,7 +236,7 @@ function App() {
               <Route path="/A2/helpVerbs" element={
                 <ProtectedRoute>
                   <PremiumRoute>
-                    <PossessivesPage progressManager={progressManager} />
+                    <HelpVerbsPage progressManager={progressManager} />
                   </PremiumRoute>
                 </ProtectedRoute>
               } />
@@ -278,7 +278,7 @@ function App() {
               <Route path="/B1/halfModals" element={
                 <ProtectedRoute>
                   <PremiumRoute>
-                    <PossessivesPage progressManager={progressManager} />
+                    <HalfModalsPage progressManager={progressManager} />
                   </PremiumRoute>
                 </ProtectedRoute>
               } />
@@ -286,7 +286,7 @@ function App() {
               <Route path="/B1/participles" element={
                 <ProtectedRoute>
                   <PremiumRoute>
-                    <PossessivesPage progressManager={progressManager} />
+                    <ParticiplesPage progressManager={progressManager} />
                   </PremiumRoute>
                 </ProtectedRoute>
               } />
@@ -328,7 +328,7 @@ function App() {
               <Route path="/B2/modalsDeduction" element={
                 <ProtectedRoute>
                   <PremiumRoute>
-                    <PossessivesPage progressManager={progressManager} />
+                    <ModalsDeductionPage progressManager={progressManager} />
                   </PremiumRoute>
                 </ProtectedRoute>
               } />
@@ -336,7 +336,7 @@ function App() {
               <Route path="/B2/GerInf" element={
                 <ProtectedRoute>
                   <PremiumRoute>
-                    <PossessivesPage progressManager={progressManager} />
+                    <GerundsInfinitivesPage progressManager={progressManager} />
                   </PremiumRoute>
                 </ProtectedRoute>
               } />
