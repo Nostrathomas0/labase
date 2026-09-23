@@ -1,0 +1,53 @@
+{
+    "topic": " Gerunds",
+    "pages": [
+        {
+            "questions": [
+                {
+                    "type": "imageDisplay",
+                    "imagePath": "src/data/grammar/B2/6Gerunds/images/gerunds.png",
+                    "altText": "Gerunds"
+                },
+                {
+                    "type": "click",
+                    "layout": "horizontal",
+                    "instructions": [
+                        {"text": "Gerunds are verb forms that end in '-ing' and function as nouns in a sentence.", "textStyle": "text"},
+                        {"text": "They can be used as subjects, objects, or complements.", "textStyle": "text"}
+                    ],
+                    "words": [
+                        {"text": "Swimming", "feedback": "Yes, 'Swimming' is a gerund used as a subject."},
+                        {"text": "is", "feedback": "No, 'is' is a verb."},
+                        {"text": "fun.", "feedback": "No, 'fun' is an adjective."},
+                        {"text": "I", "feedback": "         No, 'I' is a subject pronoun."},
+                        {"text": "enjoy", "feedback": "No, 'enjoy' is a verb."},
+                        {"text": "reading", "feedback": "Yes, 'reading' is a gerund used as an object."}
+                    ],
+                    "keyWords": ["Swimming", "reading"]
+                },
+                {
+                    "type": "multipleChoice",
+                    "question": "Which of the following sentences contains a gerund?",
+                    "options": [
+                        {
+                            "text": "I like to read books.",
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "Reading books is my favorite hobby.",
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "She is going to the store.",
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "He plays football every weekend.",
+                            "isCorrect": false  
+}       
+                    ]
+                }
+            ]
+        }
+    ]
+}

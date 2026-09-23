@@ -8,6 +8,8 @@ const B2 = () => {
     { name: 'Causitives', path: '/B2/causitives' },
     { name: 'ModalsProb', path: '/B2/modalsProb' },
     { name: 'FuturePerf', path: '/B2/futurePerf' },
+    { name: 'ModalsDeduction ⭐', path: '/B2/modalsDeduction' },
+    { name: 'Gerunds & Infinitives ⭐', path: '/B2/gerundsInfinitives'  }
     // Add more topics as needed
   ];
 

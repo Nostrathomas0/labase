@@ -215,7 +215,7 @@ function App() {
                   </MainLayout>
                 </ProtectedRoute>
               } />
-              
+              {/* A2 Premium Grammar Topic routes */}
                <Route path="/A2/relClauses" element={
                 <ProtectedRoute>
                   <PremiumRoute>
@@ -265,6 +265,7 @@ function App() {
                 </ProtectedRoute>
               } />
               
+              {/* B1 Premium Grammar Topic routes */}
               <Route path="/B1/halfModals" element={
                 <ProtectedRoute>
                   <PremiumRoute>
@@ -314,6 +315,7 @@ function App() {
                 </ProtectedRoute>
               } />
               
+              {/* B2 Premium Grammar Topic routes */}
               <Route path="/B2/modalsDeduction" element={
                 <ProtectedRoute>
                   <PremiumRoute>

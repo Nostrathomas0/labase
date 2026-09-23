@@ -8,6 +8,8 @@ const B1 = () => {
     { name: 'PastPerfCont', path: '/B1/pastPerfCont' },
     { name: '2ndCond', path: '/B1/2ndCond' },
     { name: 'ModalVerbs', path: '/B1/modalVerbs' },
+    { name: 'HalfModals ⭐', path: '/B1/halfModals' },
+    { name: 'Participles ⭐', path: '/B1/participles ' }
     // Add more topics as needed
   ];
 

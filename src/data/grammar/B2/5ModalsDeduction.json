@@ -1,0 +1,30 @@
+{
+    "topic": "Modals of Deduction",
+    "pages": [
+        {
+            "questions": [
+                {
+                    "type": "imageDisplay",
+                    "imagePath": "src/data/grammar/B2/5ModalsDeduction/images/modals.png",
+                    "altText": "Modals of Deduction"
+                },
+                {
+                    "type": "click",
+                    "layout": "horizontal",
+                    "instructions": [
+                        {"text": "Modals of deduction are used to express certainty or possibility about a situation.", "textStyle": "text"},
+                        {"text": "Common modals of deduction include 'must', 'might', 'could', and 'can't'.", "textStyle": "text"}
+                    ],
+                    "words": [
+                        {"text": "must", "feedback": "Yes, 'must' indicates a high degree of certainty."},
+                        {"text": "might", "feedback": "Yes, 'might' indicates a possibility."},
+                        {"text": "could", "feedback": "Yes, 'could' indicates a possibility."},
+                        {"text": "can't", "feedback": "Yes, 'can't' indicates impossibility."},
+                        {"text": "is", "feedback": "No, 'is' is a verb, not a modal of deduction."}
+                    ],
+                    "keyWords": ["must", "might", "could", "can't"]
+                }
+            ]
+        }
+    ]
+}

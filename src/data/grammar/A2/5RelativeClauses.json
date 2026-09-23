@@ -1,108 +1,108 @@
 {
-    "topic": "Relative Clauses",
-    "pages": [
+"topic": "Relative Clauses",
+"pages": [
+    {
+    "questions": [
         {
-            "questions": [
-                {
-                    "type": "imageDisplay",
-                    "imagePath": "A2/5RelativeClauses/1.png",
-                    "altText": "Image showing... a man and a woman, caption: 'The man who is wearing a blue shirt is my brother.'"
-                },
-                {
-                    "type": "click",
-                    "layout": "horizontal",
-                    "instructions": [
-                        { "text": "Relative clauses ", "textStyle": "bold"},
-                        { "text": "are used to give more information about a noun in a sentence.", "textStyle": "normal" },
-                        { "text": "They are introduced by relative pronouns such as 'who', 'which', and 'that'.", "textStyle": "normal" },
-                        { "text": "For example: 'The man who is wearing a blue shirt is my brother.'", "textStyle": "italic", "newLine": true },
-                        { "text": "1) Click on the relative clause in the sentence below.", "textStyle": "italic", "newParagraph": true },
-                        { "text": "Remember, a relative clause gives more information about a noun and is introduced by a relative pronoun.", "textStyle": "italic", "newParagraph": true }
-                        ],
-                    "words": [
-                        { "text": "The", "feedback": "No, 'The' is a definite article." },
-                        { "text": "man", "feedback": "No, 'man' is a noun." },
-                        { "text": "who", "feedback": "Yes, 'who' is a relative pronoun introducing the relative clause." },
-                        { "text": "is", "feedback": "No, 'is' is a verb." },
-                        { "text": "wearing", "feedback": "No, 'wearing' is a verb." },
-                        { "text": "a", "feedback": "No, 'a' is an indefinite article." },
-                        { "text": "blue", "feedback": "No, 'blue' is an adjective." },
-                        { "text": "shirt", "feedback": "No, 'shirt' is a noun." },
-                        { "text": "is", "feedback": "No, 'is' is a verb." },
-                        { "text": "my", "feedback": "No, 'my' is a possessive pronoun." },
-                        { "text": "brother.", "feedback": "No, 'brother' is a noun." }
-                    ],
-                    "keyWords": ["who", "is wearing a blue shirt"]
-                },
-                {
-                    "type": "multipleChoice",
-                    "question": "2) Which sentence contains a relative clause?",
-                    "options": [
-                        "I like to read books.",
-                        "The book that I am reading is very interesting.",
-                        "She is going to the store.",
-                        "He plays football every weekend."
-                    ],
-                    "correctAnswer": "The book that I am reading is very interesting."
-                },
-                {
-                    "type": "popBox",
-                    "columns": ["", "who", "which", "that"],
-                    "rows": [
-                        { "header": "definining", "blanks": ["The man who is wearing a blue shirt is my brother.", "The book that I am reading is very interesting."] },
-                        { "header": "non-defining", "blanks": ["My brother, who is wearing a blue shirt, is very tall.", "The Eiffel Tower, which is in Paris, is a famous landmark."] }
-                    ],
-                    "tokens": ["who", "which", "that"]
-                }
-                ]
+            "type": "imageDisplay",
+            "imagePath": "A2/5RelativeClauses/1.png",
+            "altText": "Image showing... a man and a woman, caption: 'The man who is wearing a blue shirt is my brother.'"
+        },
+        {
+            "type": "click",
+            "layout": "horizontal",
+            "instructions": [
+                { "text": "Relative clauses ", "textStyle": "bold"},
+                { "text": "are used to give more information about a noun in a sentence.", "textStyle": "normal" },
+                { "text": "They are introduced by relative pronouns such as 'who', 'which', and 'that'.", "textStyle": "normal" },
+                { "text": "For example: 'The man who is wearing a blue shirt is my brother.'", "textStyle": "italic", "newLine": true },
+                { "text": "1) Click on the relative clause in the sentence below.", "textStyle": "italic", "newParagraph": true },
+                { "text": "Remember, a relative clause gives more information about a noun and is introduced by a relative pronoun.", "textStyle": "italic", "newParagraph": true }
+                ],
+            "words": [
+                { "text": "The", "feedback": "No, 'The' is a definite article." },
+                { "text": "man", "feedback": "No, 'man' is a noun." },
+                { "text": "who", "feedback": "Yes, 'who' is a relative pronoun introducing the relative clause." },
+                { "text": "is", "feedback": "No, 'is' is a verb." },
+                { "text": "wearing", "feedback": "No, 'wearing' is a verb." },
+                { "text": "a", "feedback": "No, 'a' is an indefinite article." },
+                { "text": "blue", "feedback": "No, 'blue' is an adjective." },
+                { "text": "shirt", "feedback": "No, 'shirt' is a noun." },
+                { "text": "is", "feedback": "No, 'is' is a verb." },
+                { "text": "my", "feedback": "No, 'my' is a possessive pronoun." },
+                { "text": "brother.", "feedback": "No, 'brother' is a noun." }
+            ],
+            "keyWords": ["who", "is wearing a blue shirt"]
+        },
+        {
+            "type": "multipleChoice",
+            "question": "2) Which sentence contains a relative clause?",
+            "options": [
+                "I like to read books.",
+                "The book that I am reading is very interesting.",
+                "She is going to the store.",
+                "He plays football every weekend."
+            ],
+            "correctAnswer": "The book that I am reading is very interesting."
+        },
+        {
+            "type": "popBox",
+            "columns": ["", "who", "which", "that"],
+            "rows": [
+                { "header": "definining", "blanks": ["The man who is wearing a blue shirt is my brother.", "The book that I am reading is very interesting."] },
+                { "header": "non-defining", "blanks": ["My brother, who is wearing a blue shirt, is very tall.", "The Eiffel Tower, which is in Paris, is a famous landmark."] }
+            ],
+            "tokens": ["who", "which", "that"]
+        }
+        ]
+    },
+    {
+        "questions": [
+            {
+                "type": "imageDisplay",
+                "imagePath": "A2/5RelativeClauses/2.png",
+                "altText": "Image showing... a woman and a dog, caption: 'The dog that is sitting next to the woman is very friendly.'"
             },
             {
-                "questions": [
-                    {
-                        "type": "imageDisplay",
-                        "imagePath": "A2/5RelativeClauses/2.png",
-                        "altText": "Image showing... a woman and a dog, caption: 'The dog that is sitting next to the woman is very friendly.'"
-                    },
-                    {
-                        "type": "click",
-                        "layout": "horizontal",
-                        "instructions": [
-                            { "text": "Relative clauses can be ", "textStyle": "bold"},
-                            { "text": "defining or non-defining.", "textStyle": "normal" },
-                            { "text": "Defining relative clauses give essential information about the noun they describe, while non-defining relative clauses give extra information that can be omitted without changing the meaning of the sentence.", "textStyle": "normal" },
-                            { "text": "For example: 'The dog that is sitting next to the woman is very friendly.' (defining) and 'My dog, which is very friendly        , loves to play fetch.' (non-defining)", "textStyle": "italic", "newLine": true },
-                            { "text": "1) Click on the relative clause in the sentence below.", "textStyle": "italic", "newParagraph": true },
-                            { "text": "Remember, a relative clause gives more information about a noun and is introduced by a relative pronoun.", "textStyle": "italic", "newParagraph": true }
-                        ],
-                        "words": [
-                            { "text": "The", "feedback": "No, 'The' is a definite article." },
-                            { "text": "dog", "feedback": "No, 'dog' is a noun." },
-                            { "text": "that", "feedback": "Yes, 'that' is a relative pronoun introducing the relative clause." },
-                            { "text": "is", "feedback": "No, 'is' is a verb." },
-                            { "text": "sitting", "feedback": "No, 'sitting' is a verb." },  
-                            { "text": "next", "feedback": "No, 'next' is an adverb." },
-                            { "text": "to", "feedback": "No, 'to' is a preposition." },
-                            { "text": "the", "feedback": "No, 'the' is a definite article." },
-                            { "text": "woman", "feedback": "No, 'woman' is a noun." },
-                            { "text": "is", "feedback": "No, 'is' is a verb." },
-                            { "text": "very", "feedback": "No, 'very' is an adverb." },
-                            { "text": "friendly.", "feedback": "No, 'friendly' is an adjective." }
-                        ],
-                        "keyWords": ["that", "is sitting next to the woman"]
-                    },
-                    {
-                        "type": "matchingPairs",
-                        "pairs": [
-                            { "left": "Defining relative clause", "right": "Gives essential information about the noun it describes." },
-                            { "left": "Non-defining relative clause", "right": "Gives extra information that can be omitted without changing the meaning of the sentence." }
-                        ]
-                    },
-                    {   
-                        "type": "sentenceBuilder",
-                        "tokens": ["The", "cat", "that", "is", "sleeping", "on", "the", "sofa", "is", "very", "cute."],
-                        "correctOrder": ["The", "cat", "that", "is", "sleeping", "on", "the", "sofa", "is", "very", "cute"]
-                    }
+                "type": "click",
+                "layout": "horizontal",
+                "instructions": [
+                    { "text": "Relative clauses can be ", "textStyle": "bold"},
+                    { "text": "defining or non-defining.", "textStyle": "normal" },
+                    { "text": "Defining relative clauses give essential information about the noun they describe, while non-defining relative clauses give extra information that can be omitted without changing the meaning of the sentence.", "textStyle": "normal" },
+                    { "text": "For example: 'The dog that is sitting next to the woman is very friendly.' (defining) and 'My dog, which is very friendly        , loves to play fetch.' (non-defining)", "textStyle": "italic", "newLine": true },
+                    { "text": "1) Click on the relative clause in the sentence below.", "textStyle": "italic", "newParagraph": true },
+                    { "text": "Remember, a relative clause gives more information about a noun and is introduced by a relative pronoun.", "textStyle": "italic", "newParagraph": true }
+                ],
+                "words": [
+                    { "text": "The", "feedback": "No, 'The' is a definite article." },
+                    { "text": "dog", "feedback": "No, 'dog' is a noun." },
+                    { "text": "that", "feedback": "Yes, 'that' is a relative pronoun introducing the relative clause." },
+                    { "text": "is", "feedback": "No, 'is' is a verb." },
+                    { "text": "sitting", "feedback": "No, 'sitting' is a verb." },  
+                    { "text": "next", "feedback": "No, 'next' is an adverb." },
+                    { "text": "to", "feedback": "No, 'to' is a preposition." },
+                    { "text": "the", "feedback": "No, 'the' is a definite article." },
+                    { "text": "woman", "feedback": "No, 'woman' is a noun." },
+                    { "text": "is", "feedback": "No, 'is' is a verb." },
+                    { "text": "very", "feedback": "No, 'very' is an adverb." },
+                    { "text": "friendly.", "feedback": "No, 'friendly' is an adjective." }
+                ],
+                "keyWords": ["that", "is sitting next to the woman"]
+            },
+            {
+                "type": "matchingPairs",
+                "pairs": [
+                    { "left": "Defining relative clause", "right": "Gives essential information about the noun it describes." },
+                    { "left": "Non-defining relative clause", "right": "Gives extra information that can be omitted without changing the meaning of the sentence." }
                 ]
+            },
+            {   
+                "type": "sentenceBuilder",
+                "tokens": ["The", "cat", "that", "is", "sleeping", "on", "the", "sofa", "is", "very", "cute."],
+                "correctOrder": ["The", "cat", "that", "is", "sleeping", "on", "the", "sofa", "is", "very", "cute"]
             }
         ]
+    }
+    ]
 }

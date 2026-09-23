@@ -10,10 +10,23 @@
                 },
                 {
                     "type": "click",
-                    "layout": "horizontal",
-                    "instructions": "Click on the correct half modal for each sentence.",
+                    "layout": "horizontal", 
+                    "instructions": [
                     {"text": "Half modals are used to express ability, possibility, permission, or obligation.", "textStyle": "text"},
-                    {"text": "
+                    {"text": "They are", "textStyle": "text"},
+                    {"text": "have to", "textStyle": "text"},
+                    {"text": "Half modals are followed by the base form of the verb.", "textStyle": "text"},
+                    {"text": "For example: I can swim. She should study.", "textStyle": "text"}
+                    ],
+                    "words": [
+                        {"text": "I", "feedback": "No, 'I' is a subject pronoun."},
+                        {"text": "have to", "feedback": "Yes, 'have to' is a half modal."},
+                        {"text": "study", "feedback": "No, 'study' is a verb."},
+                        {"text": "for", "feedback": "No, 'for' is a preposition."},
+                        {"text": "the", "feedback": "No, 'the' is an article."},
+                        {"text": "exam.", "feedback": "No, 'exam' is a noun."}
+                    ],
+                    "keyWords": ["have to"]
                 },
                 {
                     "type": "multipleChoice",

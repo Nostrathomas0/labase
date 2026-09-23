@@ -8,7 +8,8 @@ const A2 = () => {
     { name: 'Will', path: '/A2/future' },
     { name: 'Going To ', path: '/A2/goingTo' },
     { name: 'Comparitives & Superlatives', path: '/A2/compSupe' },
-    // Add more topics as needed
+    { name: 'Relative Clauses ⭐', path: '/A2/relClauses' },
+    { name: 'Helping Verbs ⭐', path: '/A2/helpingVerbs' }
   ];
 
   return (

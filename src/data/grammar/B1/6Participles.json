@@ -1,0 +1,30 @@
+{
+    "topic": "Participles",
+    "pages": [
+        {
+            "questions": [
+                {
+                    "type": "imageDisplay",
+                    "imagePath": "src/data/grammar/B1/6Participles/images/participles.png",
+                    "altText": "Participles"
+                },
+                {
+                    "type": "click",
+                    "layout": "horizontal",
+                    "instructions": [
+                        {"text": "Participles are verb forms that can be used as adjectives.", "textStyle": "text"},
+                        {"text": "They are formed by adding '-ing' or '-ed' to the base form of the verb.", "textStyle": "text"}
+                    ],
+                    "words": [
+                        {"text": "I", "feedback": "No, 'I' is a subject pronoun."},
+                        {"text": "running", "feedback": "Yes, 'running' is a present participle."},
+                        {"text": "walked", "feedback": "Yes, 'walked' is a past participle."},
+                        {"text": "the", "feedback": "No, 'the' is an article."},
+                        {"text": "dog.", "feedback": "No, 'dog' is a noun."}
+                    ],
+                    "keyWords": ["running", "walked"]
+                }
+            ]
+        }
+    ]
+}

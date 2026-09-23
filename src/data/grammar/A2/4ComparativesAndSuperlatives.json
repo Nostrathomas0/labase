@@ -12,124 +12,88 @@
         "layout":"horizontal", 
         "instructions":[
               
-          {
-            "text": "Grab two or more things. Which is",
-            "textStyle": "text"
-          },{
-            "text": " heavier? ",
-            "textStyle": "bold"
-          }, {
-            "text": " Which is  ",
-            "textStyle": "text"
-          }, {
-            "text": "the lightest ?",
-            "textStyle": "bold"
-          },
+          { "text": "Grab two or more things. Which is","textStyle": "text"},
+          {"text": " heavier? ", "textStyle": "bold"}, 
+          {"text": " Which is  ", "textStyle": "text"}, 
+          {"text": "the lightest ?", "textStyle": "bold"},
           {"text": "Comparative adjectives are formed by adding a suffix to short words:", "textStyle":"text"},
           {"text": "Use ", "textStyle": "text"
-          },{
-            "text": " more",
-            "textStyle": "bold"
-          },{"text": " before nouns, and also any adjecteves longer than 2 syllables* like ",
-            "textStyle": "text"
-          },{"text": " ellegent ;  ",
-            "textStyle": "italic"
-          },{"text": " more ellegent.",
-            "textStyle": "bold"
-          },{"text": " Short adjectives like",
-            "textStyle": "text"
-          }, {"text": " 'light' ",
-            "textStyle": "italic"
-          }, { "text": "become ",
-            "textStyle": "text"
           },
+          {"text": " more",
+            "textStyle": "bold"},
+          {"text": " before nouns, and also any adjecteves longer than 2 syllables* like ",
+            "textStyle": "text"},
+          {"text": " ellegent ;  ",
+            "textStyle": "italic"},
+          {"text": " more ellegent.",
+            "textStyle": "bold"},
+          {"text": " Short adjectives like",
+            "textStyle": "text"},
+          {"text": " 'light' ",
+            "textStyle": "italic" },
+          { "text": "become ",
+            "textStyle": "text"},
           {"text": " 'lighter' ",
-           "textStyle": "bold, underline"
-          },
+           "textStyle": "bold, underline"},
           {"text": "and",
-            "textStyle": "text"
-          },
+            "textStyle": "text"},
           {"text": "darker ",
-            "textStyle": "bold"
-          },
+            "textStyle": "bold"},
           {"text": " but it's not just one syllable words that get ",
-            "textStyle": "text"
-          },
+            "textStyle": "text"},
           {"text":  " er ",
-            "textStyle": "italic"
-          },
+            "textStyle": "italic"},
           {"text": " to compare but also 2 syllable adjectives that end in  ",
-            "textStyle":"text"
-          },
+            "textStyle":"text"},
           {"text": "y",
-            "textStyle": "bold, underline"
-          },
+            "textStyle": "bold, underline"},
           {"text": "which are rather common.",
-            "textStyle": "text"
-          },
-          {
-            "text": " Long adjectives ending in ",
-            "textStyle": "text"
-          },
-          { 
-          "text": "y",
-          "textStyle": "bold, underline"
-          },
-          { 
-          "text": " are rarer than anything in English. Common words like",
+            "textStyle": "text"},
+          {"text": " Long adjectives ending in ",
+            "textStyle": "text"},
+          { "text": "y",
+          "textStyle": "bold, underline"},
+          {"text": " are rarer than anything in English. Common words like",
           "textStyle": "text"
           },
-          {
-            "text": " 'deep'",
+          { "text": " 'deep'",
             "textStyle": "italic"
           },
-          {
-            "text": " and ",
+          {"text": " and ",
             "textStyle": "text"
           },
-          { 
-          "text": " 'shallow' ",
+          { "text": " 'shallow' ",
           "textStyle": "bold, underline"
           },
-          {
-            "text": "easily become",
+          {"text": "easily become",
             "textStyle": "text"
           },
-          {
-            "text": " 'deeper' .",
+          {"text": " 'deeper' .",
             "textStyle": "italic"
           },  
-          {
-            "text": "and",
+          { "text": "and",
             "textStyle": "text"
           },
           {"text": " more shallow ", "textStyle":"italic"},
-          {
-            "text": " and even ",
+          { "text": " and even ",
             "textStyle": "text"},
-          {
-            "text": " shallower.**",
+          { "text": " shallower.**",
             "textStyle": "italic"
           },         
-          {
-            "text": " If the adjective is long, like ",
+          {"text": " If the adjective is long, like ",
             "textStyle": "text",
             "newLine": true
           },
-          {
-            "text": "'beautiful',",
+          { "text": "'beautiful',",
             "textStyle": "italic"
           },
-          {
-            "text": " we have to use ",
+          {"text": " we have to use ",
             "textStyle": "text"
           },
-          {
-            "text": " 'more' ",
+          { "text": " 'more' ",
             "textStyle": "bold"
           },
-          {
-            "text": "before the adjective: ",
+          { "text": "before the adjective: ",
             "textStyle": "text"
           },
           {
