@@ -1,0 +1,45 @@
+// src/components/pages/A1/PossessivesPage.js
+import React from 'react';
+import PremiumLessonLayout from '../../premium/PremiumLessonLayout';
+import ModalsDeductionData from '../../../data/grammar/B2/5ModalsDeduction.json';
+import { useLessonPage } from '../../../hooks/useLessonPage';
+
+const ModalsDeductionPage = ({ progressManager }) => {
+  const {
+    currentPage,
+    currentPageData,
+    completedPages,
+    isLoading,
+    saveStatus,
+    goToPage,
+    handleQuestionComplete,
+    handleLessonComplete,
+  } = useLessonPage(
+    ModalsDeductionData,
+    progressManager,
+    'B2',
+    'modals-deduction',
+    '/B2/articles'
+  );
+
+  return (
+    <div>
+      {saveStatus && (
+        <div className="save-status">{saveStatus}</div>
+      )}
+      <PremiumLessonLayout
+        lessonData={ModalsDeductionData}
+        currentPage={currentPage}
+        currentPageData={currentPageData}
+        completedPages={completedPages}
+        onPageChange={goToPage}
+        progressManager={progressManager}
+        onQuestionComplete={handleQuestionComplete}
+        onLessonComplete={handleLessonComplete}
+        disabled={isLoading}
+      />
+    </div>
+  );
+};
+
+export default ModalsDeductionPage;

@@ -26,10 +26,12 @@ import AdjectivesPage from './components/pages/A1/AdjectivesPage';
 import VerbsPage from './components/pages/A1/VerbsPage';
 import TherePage from './components/pages/A1/TherePage';
 
+
 import PastContPage from './components/pages/A2/PastContPage';
 import FuturePage from './components/pages/A2/FuturePage';
 import GoingToPage from './components/pages/A2/GoingToPage';
 import CompSupePage from './components/pages/A2/CompSupePage';
+
 
 import PresPerfContPage from './components/pages/B1/PresPerfContPage';
 import PastPerfContPage from './components/pages/B1/PastPerfContPage';
@@ -41,12 +43,19 @@ import CausitivesPage from './components/pages/B2/CausitivesPage';
 import ModalsProbPage from './components/pages/B2/ModalsProbPage';
 import FuturePerfPage from './components/pages/B2/FuturePerfPage';
 
+
 //Premium components
 import PremiumRoute from './components/premium/PremiumRoute';
 
 //Premium grammar pages
 import PossessivesPage from './components/pages/A1/PossessivesPage';
 import ArticlesPage from './components/pages/A1/ArticlesPage';
+import RelClausesPage from './components/pages/A2/RelClausesPage';
+import HelpVerbsPage from './components/pages/A2/HelpVerbsPage';
+import HalfModalsPage from './components/pages/B1/HalfModalsPage';
+import ParticiplesPage from './components/pages/B1/ParticiplesPage';
+import ModalsDeductionPage from './components/pages/B2/ModalsDeductionPage';
+import GerundsInfinitivesPage from './components/pages/B2/GerundsInfinitivesPage';
 
 // Exam components
 import ExamsHomePage from './components/pages/exams/ExamsHomePage';
