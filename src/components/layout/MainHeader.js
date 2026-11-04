@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
-
+import { clearJwtToken } from '../../utils/authUtils';
 const MainHeader = ({ onToggleSidebar, progressManager }) => {
   const { currentUser } = useAuth();
   const [isLoggedIn, setIsLoggedIn] = useState(!!currentUser);
@@ -31,10 +31,10 @@ useEffect(() => {
 }, [isLoggedIn, progressManager]);
 
   const handleLogout = () => {
-    // Clear JWT and redirect to main domain for sign out
-    document.cookie = "JWT=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.languapps.com";
-    window.location.href = "https://languapps.com";
-  };
+  clearJwtToken();
+  window.location.href = 'https://languapps.com/?logout=1';
+};
+ 
 
   return (
     <header className="main-header">
