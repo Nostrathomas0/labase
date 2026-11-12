@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const useLessonPage = (lessonData, progressManager, level, topic, nextPageUrl = null) => {
+export const useLessonPage = (lessonData, progressManager, level, topic, nextPageUrl = null, displayTitle = null) => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -152,7 +152,7 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
 
   // Current page data for ContentParser
   const currentPageData = {
-    title: `${topic.charAt(0).toUpperCase() + topic.slice(1)} - Page ${currentPage + 1}`,
+    title: `${displayTitle || topic.charAt(0).toUpperCase() + topic.slice(1)} - Page ${currentPage + 1}`,
     content: pages[currentPage]?.questions || []
   };
 

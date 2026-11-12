@@ -1,6 +1,7 @@
 // HamburgerNavigation.js - Updated with Score Display
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { LEVELS, EXAMS, getLessonsByLevel, lessonPath } from '../../catalogue/catalogue';
 
 const HamburgerNavigation = ({ isOpen, onClose, progressManager }) => {
   const [expandedSections, setExpandedSections] = useState({});
@@ -140,9 +141,9 @@ useEffect(() => {
             </div>
           </div>
 
-          {/* Grammar Lessons Section */}
+          {/* Grammar Lessons Section — generated from the catalogue */}
           <div className="nav-section">
-            <button 
+            <button
               className="nav-section-header"
               onClick={() => toggleSection('grammar')}
             >
@@ -151,283 +152,51 @@ useEffect(() => {
                 ▼
               </span>
             </button>
-            
+
             {expandedSections.grammar && (
               <div className="nav-subsection">
-                {/* A1 Level */}
-                <div className="nav-level">
-                  <button 
-                    className={`nav-level-header ${isActiveLevelSection('A1') ? 'active' : ''}`}
-                    onClick={() => toggleSection('A1')}
-                  >
-                    A1 - Beginner
-                    <span className={`chevron ${expandedSections.A1 ? 'expanded' : ''}`}>
-                      ▼
-                    </span>
-                  </button>
-                  <Link 
-                    to="/A1" 
-                    className={`nav-level-overview ${isActiveRoute('/A1') ? 'active' : ''}`}
-                    onClick={handleLinkClick}
-                  >
-                    Overview
-                  </Link>
-                  
-                  {expandedSections.A1 && (
-                    <div className="nav-topics">
-                      <Link 
-                        to="/A1/nouns" 
-                        className={`nav-topic ${isActiveRoute('/A1/nouns') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Nouns
-                      </Link>
-                      <Link 
-                        to="/A1/adjectives" 
-                        className={`nav-topic ${isActiveRoute('/A1/adjectives') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Adjectives
-                      </Link>
-                      <Link 
-                        to="/A1/verbs" 
-                        className={`nav-topic ${isActiveRoute('/A1/verbs') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Verbs
-                      </Link>
-                      <Link 
-                        to="/A1/there" 
-                        className={`nav-topic ${isActiveRoute('/A1/there') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        There Is/Are
-                      </Link>
-                      <Link 
-                        to="/A1/possessives" 
-                        className={`nav-topic ${isActiveRoute('/A1/possessives') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Possessives ⭐
-                      </Link>
-                      <Link 
-                        to="/A1/articles" 
-                        className={`nav-topic ${isActiveRoute('/A1/articles') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Articles ⭐
-                      </Link>
-                    </div>
-                  )}
-                </div>
+                {LEVELS.map((level) => (
+                  <div className="nav-level" key={level.id}>
+                    <button
+                      className={`nav-level-header ${isActiveLevelSection(level.id) ? 'active' : ''}`}
+                      onClick={() => toggleSection(level.id)}
+                    >
+                      {level.label}
+                      <span className={`chevron ${expandedSections[level.id] ? 'expanded' : ''}`}>
+                        ▼
+                      </span>
+                    </button>
+                    <Link
+                      to={`/${level.id}`}
+                      className={`nav-level-overview ${isActiveRoute(`/${level.id}`) ? 'active' : ''}`}
+                      onClick={handleLinkClick}
+                    >
+                      Overview
+                    </Link>
 
-                {/* A2 Level */}
-                <div className="nav-level">
-                  <button 
-                    className={`nav-level-header ${isActiveLevelSection('A2') ? 'active' : ''}`}
-                    onClick={() => toggleSection('A2')}
-                  >
-                    A2 - Elementary
-                    <span className={`chevron ${expandedSections.A2 ? 'expanded' : ''}`}>
-                      ▼
-                    </span>
-                  </button>
-                  <Link 
-                    to="/A2" 
-                    className={`nav-level-overview ${isActiveRoute('/A2') ? 'active' : ''}`}
-                    onClick={handleLinkClick}
-                  >
-                    Overview
-                  </Link>
-                  
-                  {expandedSections.A2 && (
-                    <div className="nav-topics">
-                      <Link 
-                        to="/A2/pastCont" 
-                        className={`nav-topic ${isActiveRoute('/A2/pastCont') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Past Continuous
-                      </Link>
-                      <Link 
-                        to="/A2/future" 
-                        className={`nav-topic ${isActiveRoute('/A2/future') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Future Tense
-                      </Link>
-                      <Link 
-                        to="/A2/goingTo" 
-                        className={`nav-topic ${isActiveRoute('/A2/goingTo') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Going To
-                      </Link>
-                      <Link 
-                        to="/A2/compSupe" 
-                        className={`nav-topic ${isActiveRoute('/A2/compSupe') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Comparatives & Superlatives
-                      </Link>
-                      <Link
-                        to="/A2/helpVerbs"
-                        className={`nav-topic ${isActiveRoute('/A2/helpVerbs') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Helping Verbs ⭐
-                      </Link>
-                      <Link
-                        to="/A2/relativeClauses"
-                        className={`nav-topic ${isActiveRoute('/A2/relativeClauses') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Relative Clauses ⭐
-                      </Link>
-                    </div>
-                  )}
-                </div>
-
-                {/* B1 Level */}
-                <div className="nav-level">
-                  <button 
-                    className={`nav-level-header ${isActiveLevelSection('B1') ? 'active' : ''}`}
-                    onClick={() => toggleSection('B1')}
-                  >
-                    B1 - Pre-Intermediate
-                    <span className={`chevron ${expandedSections.B1 ? 'expanded' : ''}`}>
-                      ▼
-                    </span>
-                  </button>
-                  <Link 
-                    to="/B1" 
-                    className={`nav-level-overview ${isActiveRoute('/B1') ? 'active' : ''}`}
-                    onClick={handleLinkClick}
-                  >
-                    Overview
-                  </Link>
-                  
-                  {expandedSections.B1 && (
-                    <div className="nav-topics">
-                      <Link 
-                        to="/B1/presPerfCont" 
-                        className={`nav-topic ${isActiveRoute('/B1/presPerfCont') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Present Perfect Continuous
-                      </Link>
-                      <Link 
-                        to="/B1/pastPerfCont" 
-                        className={`nav-topic ${isActiveRoute('/B1/pastPerfCont') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Past Perfect Continuous
-                      </Link>
-                      <Link 
-                        to="/B1/2ndCond" 
-                        className={`nav-topic ${isActiveRoute('/B1/2ndCond') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Second Conditional
-                      </Link>
-                      <Link 
-                        to="/B1/modalVerbs" 
-                        className={`nav-topic ${isActiveRoute('/B1/modalVerbs') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Modal Verbs
-                      </Link>
-                      <Link 
-                        to="/B1/halfModals" 
-                        className={`nav-topic ${isActiveRoute('/B1/halfModals') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Half Modals ⭐
-                      </Link>
-                      <Link 
-                        to="/B1/participles" 
-                        className={`nav-topic ${isActiveRoute('/B1/participles') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Participles ⭐
-                      </Link>
-                    </div>
-                  )}
-                </div>
-
-                {/* B2 Level */}
-                <div className="nav-level">
-                  <button 
-                    className={`nav-level-header ${isActiveLevelSection('B2') ? 'active' : ''}`}
-                    onClick={() => toggleSection('B2')}
-                  >
-                    B2 - Intermediate
-                    <span className={`chevron ${expandedSections.B2 ? 'expanded' : ''}`}>
-                      ▼
-                    </span>
-                  </button>
-                  <Link 
-                    to="/B2" 
-                    className={`nav-level-overview ${isActiveRoute('/B2') ? 'active' : ''}`}
-                    onClick={handleLinkClick}
-                  >
-                    Overview
-                  </Link>
-                  
-                  {expandedSections.B2 && (
-                    <div className="nav-topics">
-                      <Link 
-                        to="/B2/mixedCond" 
-                        className={`nav-topic ${isActiveRoute('/B2/mixedCond') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Mixed Conditionals
-                      </Link>
-                      <Link 
-                        to="/B2/causitives" 
-                        className={`nav-topic ${isActiveRoute('/B2/causitives') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Causatives
-                      </Link>
-                      <Link 
-                        to="/B2/modalsProb" 
-                        className={`nav-topic ${isActiveRoute('/B2/modalsProb') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Modals of Probability
-                      </Link>
-                      <Link 
-                        to="/B2/futurePerf" 
-                        className={`nav-topic ${isActiveRoute('/B2/futurePerf') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Future Perfect
-                      </Link>
-                      <Link
-                        to="/B2/modalsDeduction"
-                        className={`nav-topic ${isActiveRoute('/B2/modalsDeduction') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Modals of Deduction ⭐
-                      </Link>
-                      <Link
-                        to="/B2/GerInf"
-                        className={`nav-topic ${isActiveRoute('/B2/GerInf') ? 'active' : ''}`}
-                        onClick={handleLinkClick}
-                      >
-                        Gerunds & Infinitives ⭐
-                      </Link>
-                    </div>
-                  )}
-                </div>
+                    {expandedSections[level.id] && (
+                      <div className="nav-topics">
+                        {getLessonsByLevel(level.id).map((lesson) => (
+                          <Link
+                            key={lesson.id}
+                            to={lessonPath(lesson)}
+                            className={`nav-topic ${isActiveRoute(lessonPath(lesson)) ? 'active' : ''}`}
+                            onClick={handleLinkClick}
+                          >
+                            {lesson.title}{lesson.premium ? ' ⭐' : ''}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             )}
           </div>
 
-          {/* Practice Exams Section */}
+          {/* Practice Exams Section — generated from the catalogue */}
           <div className="nav-section">
-            <button 
+            <button
               className="nav-section-header"
               onClick={() => toggleSection('exams')}
             >
@@ -436,30 +205,26 @@ useEffect(() => {
                 ▼
               </span>
             </button>
-            
+
             {expandedSections.exams && (
               <div className="nav-subsection">
-                <Link 
-                  to="/exams" 
+                <Link
+                  to="/exams"
                   className={`nav-item ${isActiveRoute('/exams') ? 'active' : ''}`}
                   onClick={handleLinkClick}
                 >
                   Exam Overview
                 </Link>
-                <Link 
-                  to="/exams/fede" 
-                  className={`nav-item ${isActiveRoute('/exams/fede') ? 'active' : ''}`}
-                  onClick={handleLinkClick}
-                >
-                  FEDE Exams
-                </Link>
-                <Link 
-                  to="/exams/toeic" 
-                  className={`nav-item ${isActiveRoute('/exams/toeic') ? 'active' : ''}`}
-                  onClick={handleLinkClick}
-                >
-                  TOEIC Exams
-                </Link>
+                {EXAMS.map((exam) => (
+                  <Link
+                    key={exam.id}
+                    to={`/exams/${exam.id}`}
+                    className={`nav-item ${isActiveRoute(`/exams/${exam.id}`) ? 'active' : ''}`}
+                    onClick={handleLinkClick}
+                  >
+                    {exam.title}
+                  </Link>
+                ))}
               </div>
             )}
           </div>

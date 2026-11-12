@@ -1,4 +1,4 @@
-// App.js - New Flexible Architecture
+// App.js
 import './firebaseInit';
 import './App.css';
 import { useState } from 'react';
@@ -6,367 +6,55 @@ import { AuthProvider } from './components/AuthContext';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import { ProgressManager } from './utils/ProgressManager';
-// Layout Components
+
+// Layout
 import MainHeader from './components/layout/MainHeader';
 import HamburgerNavigation from './components/layout/HamburgerNavigation';
-import MainLayout from './components/layout/MainLayout';
 
-// Page Components
+// Views — every lesson, level and exam is driven by src/catalogue/catalogue.js
 import HomePage from './components/HomePage';
-
-// Level components
-import A1 from './components/pages/A1';
-import A2 from './components/pages/A2';
-import B1 from './components/pages/B1';
-import B2 from './components/pages/B2';
-
-// Grammar topic components
-import NounsPage from './components/pages/A1/NounsPage';
-import AdjectivesPage from './components/pages/A1/AdjectivesPage';
-import VerbsPage from './components/pages/A1/VerbsPage';
-import TherePage from './components/pages/A1/TherePage';
-
-
-import PastContPage from './components/pages/A2/PastContPage';
-import FuturePage from './components/pages/A2/FuturePage';
-import GoingToPage from './components/pages/A2/GoingToPage';
-import CompSupePage from './components/pages/A2/CompSupePage';
-
-
-import PresPerfContPage from './components/pages/B1/PresPerfContPage';
-import PastPerfContPage from './components/pages/B1/PastPerfContPage';
-import SecCondPage from './components/pages/B1/SecCondPage';
-import ModalVerbsPage from './components/pages/B1/ModalVerbsPage';
-
-import MixedCondPage from './components/pages/B2/MixedCondPage';
-import CausitivesPage from './components/pages/B2/CausitivesPage';
-import ModalsProbPage from './components/pages/B2/ModalsProbPage';
-import FuturePerfPage from './components/pages/B2/FuturePerfPage';
-
-
-//Premium components
-import PremiumRoute from './components/premium/PremiumRoute';
-
-//Premium grammar pages
-import PossessivesPage from './components/pages/A1/PossessivesPage';
-import ArticlesPage from './components/pages/A1/ArticlesPage';
-import RelClausesPage from './components/pages/A2/RelClausesPage';
-import HelpVerbsPage from './components/pages/A2/HelpVerbsPage';
-import HalfModalsPage from './components/pages/B1/HalfModalsPage';
-import ParticiplesPage from './components/pages/B1/ParticiplesPage';
-import ModalsDeductionPage from './components/pages/B2/ModalsDeductionPage';
-import GerundsInfinitivesPage from './components/pages/B2/GerundsInfinitivesPage';
-
-// Exam components
-import ExamsHomePage from './components/pages/exams/ExamsHomePage';
-import FEDEExamPage from './components/pages/exams/FEDEExamPage';
-import TOEICExamPage from './components/pages/exams/TOEICExamPage';
-
+import LevelPage from './views/LevelPage';
+import LessonPage from './views/LessonPage';
+import ExamsHomePage from './views/ExamsHomePage';
+import ExamTypePage from './views/ExamTypePage';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [progressManager] = useState(() => new ProgressManager());
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
 
-  const closeSidebar = () => {
-    setSidebarOpen(false);
-  };
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  const closeSidebar = () => setSidebarOpen(false);
 
   return (
     <Router>
       <AuthProvider>
         <div className="app">
-          {/* Main Header with hamburger button */}
-          <MainHeader onToggleSidebar={toggleSidebar}
-           progressManager={progressManager} />
-          
-          {/* Hamburger Navigation Sidebar */}
-          <HamburgerNavigation 
-            isOpen={sidebarOpen} 
+          <MainHeader onToggleSidebar={toggleSidebar} progressManager={progressManager} />
+
+          <HamburgerNavigation
+            isOpen={sidebarOpen}
             onClose={closeSidebar}
             progressManager={progressManager}
           />
-          
-          {/* Overlay for mobile sidebar */}
-          {sidebarOpen && (
-            <div 
-              className="sidebar-overlay" 
-              onClick={closeSidebar}
-            />
-          )}
-          
-          {/* Main Content Area */}
+
+          {sidebarOpen && <div className="sidebar-overlay" onClick={closeSidebar} />}
+
           <main className="main-content">
             <Routes>
-              {/* Public routes */}
               <Route path="/login" element={<HomePage />} />
-              
-              
-              {/* Protected Grammar Level routes */}
-              <Route path="/" element={
-                <ProtectedRoute>
-                <HomePage />
-                </ProtectedRoute>
-              } />
-              <Route path="/A1" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="navigation">
-                    <A1 />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/A2" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="navigation">
-                    <A2 />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B1" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="navigation">
-                    <B1 />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B2" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="navigation">
-                    <B2 />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              {/* Protected Grammar Topic routes - Split Layout */}
-              <Route path="/A1/nouns" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <NounsPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/A1/adjectives" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <AdjectivesPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/A1/verbs" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <VerbsPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/A1/there" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <TherePage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-             
-              {/* A1 Premium Grammar Topic routes */}
-              <Route path="/A1/possessives" element={
-                <ProtectedRoute>
-                  <PremiumRoute>
-                    <PossessivesPage progressManager={progressManager} />
-                  </PremiumRoute>
-                </ProtectedRoute>
-              } />
+              <Route path="/" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
 
-              <Route path="/A1/articles" element={
-                <ProtectedRoute>
-                  <PremiumRoute>
-                    <ArticlesPage progressManager={progressManager} />
-                  </PremiumRoute>
-                </ProtectedRoute>
-              } />
+              {/* Exams — static paths outrank the :level routes below */}
+              <Route path="/exams" element={<ProtectedRoute><ExamsHomePage /></ProtectedRoute>} />
+              <Route path="/exams/:examId" element={<ProtectedRoute><ExamTypePage /></ProtectedRoute>} />
 
-              {/* A2 Grammar Topic routes */}
-              <Route path="/A2/pastCont" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <PastContPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/A2/future" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <FuturePage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/A2/goingTo" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <GoingToPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/A2/compSupe" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <CompSupePage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              {/* A2 Premium Grammar Topic routes */}
-               <Route path="/A2/relClauses" element={
-                <ProtectedRoute>
-                  <PremiumRoute>
-                    <RelClausesPage progressManager={progressManager} />
-                  </PremiumRoute>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/A2/helpVerbs" element={
-                <ProtectedRoute>
-                  <PremiumRoute>
-                    <HelpVerbsPage progressManager={progressManager} />
-                  </PremiumRoute>
-                </ProtectedRoute>
-              } />
+              {/* Grammar — /A1, /A1/nouns, etc. Unknown levels/lessons redirect home */}
+              <Route path="/:level" element={<ProtectedRoute><LevelPage /></ProtectedRoute>} />
+              <Route
+                path="/:level/:slug"
+                element={<ProtectedRoute><LessonPage progressManager={progressManager} /></ProtectedRoute>}
+              />
 
-              {/* B1 Grammar Topic routes */}
-              <Route path="/B1/presPerfCont" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <PresPerfContPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B1/pastPerfCont" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <PastPerfContPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B1/2ndCond" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <SecCondPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B1/modalVerbs" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <ModalVerbsPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              {/* B1 Premium Grammar Topic routes */}
-              <Route path="/B1/halfModals" element={
-                <ProtectedRoute>
-                  <PremiumRoute>
-                    <HalfModalsPage progressManager={progressManager} />
-                  </PremiumRoute>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B1/participles" element={
-                <ProtectedRoute>
-                  <PremiumRoute>
-                    <ParticiplesPage progressManager={progressManager} />
-                  </PremiumRoute>
-                </ProtectedRoute>
-              } />
-
-              {/* B2 Grammar Topic routes */}
-              <Route path="/B2/mixedCond" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <MixedCondPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B2/causitives" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <CausitivesPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B2/modalsProb" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <ModalsProbPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B2/futurePerf" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="grammar">
-                    <FuturePerfPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              {/* B2 Premium Grammar Topic routes */}
-              <Route path="/B2/modalsDeduction" element={
-                <ProtectedRoute>
-                  <PremiumRoute>
-                    <ModalsDeductionPage progressManager={progressManager} />
-                  </PremiumRoute>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/B2/GerInf" element={
-                <ProtectedRoute>
-                  <PremiumRoute>
-                    <GerundsInfinitivesPage progressManager={progressManager} />
-                  </PremiumRoute>
-                </ProtectedRoute>
-              } />
-
-              {/* Exam routes */}
-              <Route path="/exams" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="navigation">
-                    <ExamsHomePage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/exams/fede" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="exam">
-                    <FEDEExamPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              <Route path="/exams/toeic" element={
-                <ProtectedRoute>
-                  <MainLayout layoutType="exam">
-                    <TOEICExamPage progressManager={progressManager} />
-                  </MainLayout>
-                </ProtectedRoute>
-              } />
-              
-              {/* Redirect for any other path */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
