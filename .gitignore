@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 LanguFunct/.env
 .env
+
+# generated from content/sessions by scripts/build-sessions.js
+/src/data/sessions/

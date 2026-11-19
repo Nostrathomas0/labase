@@ -20,13 +20,14 @@
   },
   "scripts": {
     "generate-image-map": "node src/components/generateImageMap.js",
-    "prestart": "npm run generate-image-map",
-    "prebuild": "npm run generate-image-map",
+    "prestart": "npm run generate-image-map && npm run build-sessions",
+    "prebuild": "npm run generate-image-map && npm run build-sessions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "validate": "node scripts/validate-lesson.js"
+    "validate": "node scripts/validate-lesson.js",
+    "build-sessions": "node scripts/build-sessions.js"
   },
   "eslintConfig": {
     "extends": [

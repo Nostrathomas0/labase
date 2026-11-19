@@ -125,7 +125,7 @@ if (!files.length) {
 let failed = false;
 files.forEach((file) => {
   const { errors, warnings, exercises } = validate(file);
-  const name = path.basename(file);
+  const name = path.relative(process.cwd(), file);
   if (errors.length) failed = true;
   console.log(`${errors.length ? '✗' : '✓'} ${name}${exercises ? ` (${exercises} exercises)` : ''}`);
   errors.forEach((e) => console.log(`   error:   ${e}`));

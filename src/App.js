@@ -17,6 +17,7 @@ import LevelPage from './views/LevelPage';
 import LessonPage from './views/LessonPage';
 import ExamsHomePage from './views/ExamsHomePage';
 import ExamTypePage from './views/ExamTypePage';
+import SessionPage from './views/SessionPage';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -47,6 +48,12 @@ function App() {
               {/* Exams — static paths outrank the :level routes below */}
               <Route path="/exams" element={<ProtectedRoute><ExamsHomePage /></ProtectedRoute>} />
               <Route path="/exams/:examId" element={<ProtectedRoute><ExamTypePage /></ProtectedRoute>} />
+
+              {/* Class sessions — /session/<id> from content/sessions */}
+              <Route
+                path="/session/:sessionId"
+                element={<ProtectedRoute><SessionPage progressManager={progressManager} /></ProtectedRoute>}
+              />
 
               {/* Grammar — /A1, /A1/nouns, etc. Unknown levels/lessons redirect home */}
               <Route path="/:level" element={<ProtectedRoute><LevelPage /></ProtectedRoute>} />

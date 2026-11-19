@@ -88,15 +88,21 @@ const TimelineLesson = ({ lesson, lessonData, progressManager, nextUrl }) => {
 };
 
 // ── Loads the JSON, then renders the right layout ────────────────
-const LessonLoader = ({ lesson, progressManager }) => {
+// Exported so other routes (e.g. /session/:id) can render any lesson entry.
+// nextUrl: undefined = work it out from the catalogue; null = no next lesson.
+export const LessonLoader = ({ lesson, progressManager, nextUrl }) => {
   const { data, error, loading } = useContent(lesson);
   if (loading) return <div className="access-loading">Loading...</div>;
   if (error || !data || !Array.isArray(data.pages)) {
     return <div className="no-exercises"><p>This lesson couldn't be loaded. Please try again.</p></div>;
   }
 
-  const next = getNextLesson(lesson);
-  const props = { lesson, lessonData: data, progressManager, nextUrl: next ? lessonPath(next) : null };
+  let next = nextUrl;
+  if (next === undefined) {
+    const nextLesson = getNextLesson(lesson);
+    next = nextLesson ? lessonPath(nextLesson) : null;
+  }
+  const props = { lesson, lessonData: data, progressManager, nextUrl: next };
 
   if (lesson.layout === 'timeline') return <TimelineLesson {...props} />;
   return (
