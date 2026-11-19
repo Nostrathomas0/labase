@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { LEVELS, EXAMS, getLessonsByLevel, lessonPath } from '../../catalogue/catalogue';
+import { SESSIONS } from '../../data/sessions';
 
 const HamburgerNavigation = ({ isOpen, onClose, progressManager }) => {
   const [expandedSections, setExpandedSections] = useState({});
@@ -193,6 +194,36 @@ useEffect(() => {
               </div>
             )}
           </div>
+
+          {/* Class Sessions — from content/sessions (temporary until "My classes" reads Firestore) */}
+          {Object.keys(SESSIONS).length > 0 && (
+            <div className="nav-section">
+              <button
+                className="nav-section-header"
+                onClick={() => toggleSection('sessions')}
+              >
+                🎓 Class Sessions
+                <span className={`chevron ${expandedSections.sessions ? 'expanded' : ''}`}>
+                  ▼
+                </span>
+              </button>
+
+              {expandedSections.sessions && (
+                <div className="nav-subsection">
+                  {Object.values(SESSIONS).map((session) => (
+                    <Link
+                      key={session.id}
+                      to={`/session/${session.id}`}
+                      className={`nav-item ${isActiveRoute(`/session/${session.id}`) ? 'active' : ''}`}
+                      onClick={handleLinkClick}
+                    >
+                      {session.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Practice Exams Section — generated from the catalogue */}
           <div className="nav-section">
