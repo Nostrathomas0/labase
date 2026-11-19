@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.0",
+  "id": "plateau-breaker_arc-reactor",
+  "class_id": "plateau-breaker",
+  "title": "Could we build Iron Man's arc reactor?",
+  "level": "Intermediate",
+  "language": "en",
+  "grammar_focus": "could / would for imagined and impossible situations",
+  "source": { "title": "TODO", "url": "TODO" },
+  "content": [
+    {
+      "type": "instructions",
+      "instructions": [
+        { "text": "Part 1: Understanding the video", "textStyle": "bold" },
+        { "text": "Why can't we just make a nuclear reactor small enough to wear? Check what the speaker really says.", "newParagraph": true }
+      ]
+    },
+    {
+      "type": "wordBank",
+      "paragraph": "Put the speaker's points in the order he makes them.",
+      "wordBank": [
+        "He says the arc reactor is fictional",
+        "He says it would destroy your body",
+        "He asks why we can't make reactors smaller",
+        "He adds cooling and shielding",
+        "He admits he loves Iron Man",
+        "He explains the driver energy problem"
+      ],
+      "correctAnswers": [
+        "He asks why we can't make reactors smaller",
+        "He admits he loves Iron Man",
+        "He says the arc reactor is fictional",
+        "He explains the driver energy problem",
+        "He adds cooling and shielding",
+        "He says it would destroy your body"
+      ]
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Why does the speaker say he wishes he could fly?",
+      "options": [
+        "To show he likes the film before he criticises it",
+        "Because he builds flying suits for his job",
+        "Because flying needs fusion energy",
+        "To prove that the arc reactor is real"
+      ],
+      "correctAnswer": "To show he likes the film before he criticises it"
+    },
+    {
+      "type": "click",
+      "instructions": [
+        { "text": "Which sentence would the speaker agree with? Click one." }
+      ],
+      "words": [
+        { "text": "Fusion needs too much energy in too small a space.", "feedback": "Yes. That's his main point: you can't put enough driver energy into a space small enough to wear." },
+        { "text": "Nuclear reactors haven't been invented yet.", "feedback": "No. He says we have already invented nuclear reactors. The problem is making them small." },
+        { "text": "The arc reactor works, but it's too expensive.", "feedback": "No. He never talks about money. He says the arc reactor is fictional." },
+        { "text": "Scientists will make a small one very soon.", "feedback": "No. He says you could never do it in a space small enough to fit on a body." }
+      ],
+      "keyWords": ["Fusion needs too much energy in too small a space."]
+    },
+    {
+      "type": "matchingPairs",
+      "pairs": [
+        { "left": "not enough driver energy", "right": "no fusion" },
+        { "left": "no cooling", "right": "the parts would overheat" },
+        { "left": "no shielding", "right": "it would destroy your body" },
+        { "left": "a very large system", "right": "it wouldn't fit on a body" }
+      ]
+    },
+    {
+      "type": "popBox",
+      "columns": ["Problem", "What you would need", "Why it's impossible on a body"],
+      "rows": [
+        { "header": "Energy", "blanks": ["huge driver energy", "it can't fit in a tiny space"] },
+        { "header": "Heat", "blanks": ["cooling", "too many parts to carry"] },
+        { "header": "Radiation", "blanks": ["shielding", "too close to your chest"] }
+      ],
+      "tokens": [
+        "shielding",
+        "too many parts to carry",
+        "huge driver energy",
+        "too close to your chest",
+        "cooling",
+        "it can't fit in a tiny space"
+      ]
+    },
+    {
+      "type": "gapFill",
+      "template": "You could never put enough energy into a space small enough to _____ on a human body.",
+      "correctAnswers": ["fit"]
+    },
+    {
+      "type": "multipleChoice",
+      "question": "According to the speaker, could a real arc reactor be built?",
+      "options": [
+        "No. It's fictional, and it could never fit safely on a body.",
+        "Yes, but it would be very expensive.",
+        "Yes. Scientists already have one.",
+        "Only if it was used for flying."
+      ],
+      "correctAnswer": "No. It's fictional, and it could never fit safely on a body."
+    },
+    {
+      "type": "sentenceBuilder",
+      "tokens": ["to", "A", "dangerous", "fusion", "is", "big", "wear.", "too", "real", "reactor", "and", "too"],
+      "correctOrder": ["A", "real", "fusion", "reactor", "is", "too", "big", "and", "too", "dangerous", "to", "wear."]
+    },
+    {
+      "type": "instructions",
+      "instructions": [
+        { "text": "Part 2: Vocabulary", "textStyle": "bold" },
+        { "text": "Many words in the video have more than one meaning. Choose the meaning the speaker is using.", "newParagraph": true }
+      ]
+    },
+    {
+      "type": "multipleChoice",
+      "question": "\"...large amounts of driver energy...\" What does driver mean here?",
+      "options": [
+        "A person who drives a vehicle",
+        "A type of fuel burned inside a reactor",
+        "Something that starts or pushes a process forward",
+        "Software that lets a computer use a device",
+        "A musical instrument used in films"
+      ],
+      "correctAnswer": "Something that starts or pushes a process forward"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "\"...into a very small space...\" What does space mean here?",
+      "options": [
+        "The area beyond Earth's atmosphere",
+        "The empty part inside an atom",
+        "A period of time",
+        "An amount of room or area",
+        "A key on a piano"
+      ],
+      "correctAnswer": "An amount of room or area"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "\"The major challenge with fusion reactors...\" What does major mean here?",
+      "options": [
+        "A student's main subject at university",
+        "Very large in physical size",
+        "Main; most important",
+        "An officer in the army",
+        "Happening in the month of May"
+      ],
+      "correctAnswer": "Main; most important"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "\"...cooling the reactor parts and also shielding.\" What does shielding mean here?",
+      "options": [
+        "Protecting someone from criticism",
+        "A metal case that keeps the reactor warm",
+        "Material that protects people from something dangerous",
+        "A type of medieval sport"
+      ],
+      "correctAnswer": "Material that protects people from something dangerous"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "\"...create these fusion conditions...\" What does conditions mean here?",
+      "options": [
+        "The weather",
+        "The exact situation needed for something to happen",
+        "The reactor's instruction manual",
+        "Rules in an agreement",
+        "Something you put in your hair after shampoo"
+      ],
+      "correctAnswer": "The exact situation needed for something to happen"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "\"Iron Man uses an arc reactor...\" What does arc mean here?",
+      "options": [
+        "A curved line, like part of a circle",
+        "A ring-shaped magnet",
+        "How a story develops from start to end",
+        "A bright flow of electricity between two points",
+        "A large boat for animals"
+      ],
+      "correctAnswer": "A bright flow of electricity between two points"
+    },
+    {
+      "type": "instructions",
+      "instructions": [
+        { "text": "Which word fits?", "textStyle": "bold" },
+        { "text": "Some words are from the video and some are new.", "newParagraph": true }
+      ]
+    },
+    {
+      "type": "gapFill",
+      "template": "Low prices are the main _____ of sales this year.",
+      "correctAnswers": ["driver"]
+    },
+    {
+      "type": "multipleChoice",
+      "question": "The story isn't true. It's completely _____.",
+      "options": ["nuclear", "fictional", "major", "fusion"],
+      "correctAnswer": "fictional"
+    },
+    {
+      "type": "gapFill",
+      "template": "Sorry, there's no _____ for a piano in my flat.",
+      "correctAnswers": ["space", "room"]
+    },
+    {
+      "type": "multipleChoice",
+      "question": "You'd need thick _____ to protect the workers from radiation.",
+      "options": ["cooling", "conditions", "shielding", "driver"],
+      "correctAnswer": "shielding"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "That restaurant serves Thai-French _____ food.",
+      "options": ["fiction", "fusion", "reactor", "nuclear"],
+      "correctAnswer": "fusion"
+    },
+    {
+      "type": "gapFill",
+      "template": "These jeans don't _____ me any more.",
+      "correctAnswers": ["fit"]
+    },
+    {
+      "type": "gapFill",
+      "template": "The flight was late. On top of _____, they lost my bag.",
+      "correctAnswers": ["that"]
+    },
+    {
+      "type": "multipleChoice",
+      "question": "As much as I love pizza, _____",
+      "options": [
+        "I eat it every day.",
+        "I couldn't eat it every day.",
+        "so I eat it every day.",
+        "and I love pasta too."
+      ],
+      "correctAnswer": "I couldn't eat it every day."
+    },
+    {
+      "type": "matchingPairs",
+      "pairs": [
+        { "left": "driver", "right": "something that starts a process" },
+        { "left": "shielding", "right": "protection from danger" },
+        { "left": "fictional", "right": "not real; invented" },
+        { "left": "fusion", "right": "joining atoms together" },
+        { "left": "cooling", "right": "making something colder" },
+        { "left": "conditions", "right": "the situation needed for something to happen" }
+      ]
+    },
+    {
+      "type": "instructions",
+      "instructions": [
+        { "text": "Part 3: Grammar. Real or imagined?", "textStyle": "bold" },
+        { "text": "Can and will talk about what is real. Could and would talk about what is imagined or impossible.", "newParagraph": true },
+        { "text": "I wish I could fly. It would destroy your body. You could never do that.", "textStyle": "italic", "newLine": true }
+      ]
+    },
+    {
+      "type": "popBox",
+      "columns": ["Verb", "Real", "Imagined"],
+      "rows": [
+        { "header": "can", "blanks": ["can", "could"] },
+        { "header": "will", "blanks": ["will", "would"] },
+        { "header": "want", "blanks": ["want", "would want"] }
+      ],
+      "tokens": ["would", "want", "could", "will", "would want", "can"]
+    },
+    {
+      "type": "gapFill",
+      "template": "As much as I love Iron Man, I wish that I myself _____ fly.",
+      "correctAnswers": ["could"]
+    },
+    {
+      "type": "gapFill",
+      "template": "I can't speak Chinese. I wish I _____ Chinese.",
+      "correctAnswers": ["could speak"]
+    },
+    {
+      "type": "multipleChoice",
+      "question": "\"It would destroy your body.\" What does would do in this sentence?",
+      "options": [
+        "It talks about a past habit",
+        "It describes an imagined result",
+        "It makes a polite request",
+        "It says the future is certain"
+      ],
+      "correctAnswer": "It describes an imagined result"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "\"You could never fit it on a body.\" What does this mean?",
+      "options": [
+        "It's possible, but difficult",
+        "It was possible in the past",
+        "It's impossible",
+        "You aren't allowed to do it"
+      ],
+      "correctAnswer": "It's impossible"
+    },
+    {
+      "type": "matchingPairs",
+      "pairs": [
+        { "left": "We have already", "right": "invented nuclear reactors." },
+        { "left": "I wish I", "right": "could fly." },
+        { "left": "You wouldn't want", "right": "a reaction to happen near your chest." },
+        { "left": "The other parts need", "right": "to be included." }
+      ]
+    },
+    {
+      "type": "sentenceBuilder",
+      "tokens": ["small", "a", "fit", "We", "reactor.", "space", "enough", "need", "to", "a"],
+      "correctOrder": ["We", "need", "a", "space", "small", "enough", "to", "fit", "a", "reactor."]
+    },
+    {
+      "type": "click",
+      "instructions": [
+        { "text": "Spoken vs written English", "textStyle": "bold" },
+        { "text": "The speaker says \"there's all the other things\". Which sentence is correct in formal writing? Click one.", "newLine": true }
+      ],
+      "words": [
+        { "text": "There's all the other things.", "feedback": "This is normal in speech (the speaker says it), but in writing use \"there are\" with a plural." },
+        { "text": "There are all the other things.", "feedback": "Correct. In writing, use \"there are\" with a plural noun. In speech, many people say \"there's\"." },
+        { "text": "There is all the other thing.", "feedback": "No. \"All the other\" needs a plural: \"things\"." }
+      ],
+      "keyWords": ["There are all the other things."]
+    },
+    {
+      "type": "wordBank",
+      "paragraph": "Put the words in order: \"There are other parts of the system that ___.\"",
+      "wordBank": ["included", "be", "to", "need"],
+      "correctAnswers": ["need", "to", "be", "included"]
+    }
+  ]
+}
