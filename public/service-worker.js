@@ -1,4 +1,4 @@
-const CACHE_NAME = 'languapps-v1';
+const CACHE_NAME = 'languapps-v2';
 
 const STATIC_ASSETS = [
   '/',
@@ -6,6 +6,8 @@ const STATIC_ASSETS = [
   '/manifest.json',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
+  '/icons/maskable-512.png',
+  '/apple-touch-icon.png',
 ];
 
 // Install — cache static assets
@@ -33,8 +35,10 @@ self.addEventListener('activate', event => {
 // Fetch — network first, cache fallback
 self.addEventListener('fetch', event => {
   // Skip non-GET and Firebase/API calls — never cache these
+  const url = new URL(event.request.url);
   if (
     event.request.method !== 'GET' ||
+    url.origin !== self.location.origin ||   // only cache the app's own files
     event.request.url.includes('firebase') ||
     event.request.url.includes('firestore') ||
     event.request.url.includes('googleapis') ||
@@ -54,6 +58,12 @@ self.addEventListener('fetch', event => {
         }
         return response;
       })
-      .catch(() => caches.match(event.request))
+      .catch(() =>
+        caches.match(event.request).then(cached =>
+          // Offline and this page was never cached: any app route can be
+          // served by the app shell, which then routes client-side
+          cached || (event.request.mode === 'navigate' ? caches.match('/') : undefined)
+        )
+      )
   );
 });

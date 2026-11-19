@@ -13,3 +13,9 @@ const root = createRoot(container);
 root.render(
   <App />
 );
+
+// Installable app + offline support (production builds only, so local
+// development never serves stale cached files)
+if (process.env.NODE_ENV === 'production') {
+  serviceWorkerRegistration.register();
+}
