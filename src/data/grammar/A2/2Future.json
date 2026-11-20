@@ -336,16 +336,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "Click on the words to complete the sentence:",
-              "textStyle": "bold",
-              "newParagraph": true
-            },
-            {
-              "text": "They __________ finish the project by Friday.",
-              "textStyle": "normal",
-              "newParagraph": false
-            }
+            {"text": "Click on the words to complete the sentence:", "textStyle": "bold", "newParagraph": true},
+            {"text": "They __________ finish the project by Friday.", "textStyle": "normal", "newParagraph": false}
           ],
           "words": ["will", "won't", "might", "may"],
           "keyWords": ["will"]
@@ -395,16 +387,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "Click on the words to complete the sentence:",
-              "textStyle": "bold",
-              "newParagraph": true
-            },
-            {
-              "text": "They __________ finish the project by Friday.",
-              "textStyle": "normal",
-              "newParagraph": false
-            }
+            {"text": "Click on the words to complete the sentence:", "textStyle": "bold", "newParagraph": true},
+            {"text": "They __________ finish the project by Friday.", "textStyle": "normal", "newParagraph": false}
           ],
           "words": ["will", "won't", "might", "may"],
           "keyWords": ["will"]

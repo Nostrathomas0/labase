@@ -76,9 +76,7 @@
             "type":"click",
             "layout":"horizontal",
             "instructions":[
-              {
-                "text": "d", "textStyle":"text" 
-              },
+              {"text": "d", "textStyle": "text"},
               {"text": "d", "textStyle":"text"}
             ],
             "words":[
@@ -100,9 +98,7 @@
             "type":"click",
             "layout":"horizontal",
             "instructions":[
-              {
-                "text": "d", "textStyle":"text" 
-              },
+              {"text": "d", "textStyle": "text"},
               {"text": "d", "textStyle":"text"}
             ],
             "words":[
@@ -124,9 +120,7 @@
             "type":"click",
             "layout":"horizontal",
             "instructions":[
-              {
-                "text": "d", "textStyle":"text" 
-              },
+              {"text": "d", "textStyle": "text"},
               {"text": "d", "textStyle":"text"}
             ],
             "words":[

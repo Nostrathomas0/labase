@@ -88,23 +88,10 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "Going to",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "is used for good ideas, and the steps we take on the way to our life goals.",
-              "textStyle": "__________",
-              "newParagraph": false
-            },
-            {
-              "text": "Which situations would you use ",
-              "textStyle": "__________",
-              "newParagraph": false
-            },
-            {
-              "text":"going to?", "textStyle":"bold"}
+            {"text": "Going to", "textStyle": "__________", "newParagraph": true},
+            {"text": "is used for good ideas, and the steps we take on the way to our life goals.", "textStyle": "__________", "newParagraph": false},
+            {"text": "Which situations would you use ", "textStyle": "__________", "newParagraph": false},
+            {"text": "going to?", "textStyle": "bold"}
           ],
           "words": [
             {"text":"Asking Permission to Open a Window", "feedback": "No, we use 'can' or 'may' to ask for permission."},
@@ -123,16 +110,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+            {"text": "__________", "textStyle": "__________", "newParagraph": true},
+            {"text": "__________", "textStyle": "__________", "newParagraph": false}
           ],
           "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
           "keyWords": ["__________", "__________", "__________", "__________"]
@@ -284,16 +263,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+            {"text": "__________", "textStyle": "__________", "newParagraph": true},
+            {"text": "__________", "textStyle": "__________", "newParagraph": false}
           ],
           "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
           "keyWords": ["__________", "__________", "__________", "__________"]
@@ -301,16 +272,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            },
+            {"text": "__________", "textStyle": "__________", "newParagraph": true},
+            {"text": "__________", "textStyle": "__________", "newParagraph": false},
             { "text": "Click on the sentences that express future intentions using ", "textStyle": "text" },
             { "text": "be going to", "textStyle": "bold" },
             { "text": " for career goals.", "textStyle": "text" }
@@ -371,16 +334,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+            {"text": "__________", "textStyle": "__________", "newParagraph": true},
+            {"text": "__________", "textStyle": "__________", "newParagraph": false}
           ],
           "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
           "keyWords": ["__________", "__________", "__________", "__________"]
@@ -388,16 +343,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+            {"text": "__________", "textStyle": "__________", "newParagraph": true},
+            {"text": "__________", "textStyle": "__________", "newParagraph": false}
           ],
           "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
           "keyWords": ["__________", "__________", "__________", "__________"]
@@ -447,16 +394,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+            {"text": "__________", "textStyle": "__________", "newParagraph": true},
+            {"text": "__________", "textStyle": "__________", "newParagraph": false}
           ],
           "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
           "keyWords": ["__________", "__________", "__________", "__________"]
@@ -464,16 +403,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+            {"text": "__________", "textStyle": "__________", "newParagraph": true},
+            {"text": "__________", "textStyle": "__________", "newParagraph": false}
           ],
           "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
           "keyWords": ["__________", "__________", "__________", "__________"]

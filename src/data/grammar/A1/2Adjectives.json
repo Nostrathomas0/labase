@@ -12,122 +12,49 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {
-              "text": "Adjectives ", "textStyle": "bold"
-            },
-            {
-              "text": " are words that describe things, often in simple sentences with the verb ", "textStyle": "text"
-            },
-            {
-              "text": "to be", "textStyle": "underline"
-            },
-            {
-              "text": " in its different forms:", "textStyle": "text"
-            },
-            {
-              "text": "You ", "textStyle": "italic", "newLine": true
-            },
-            {
-              "text": "are ", "textStyle": "italic"
-            },
-            {
-              "text": "pretty", "textStyle": "underline"
-            },
-            {
-              "text": ". The class ", "textStyle": "italic", "newLine": true
-            },
-            {
-              "text": "was", "textStyle": "underline"
-            },
-            {
-              "text": " short. ", "textStyle": "italic"
-            },
-            {
-              "text": "My shoes ", "textStyle": "italic", "newLine": true
-            },
-            {
-              "text": "are ", "textStyle": "text"
-            },
-            {
-              "text": " dirty.",  "textStyle": "underline"
-            },
-            {
-              "text": "Adjectives go before the thing they describe, for example; ",  "textStyle": "text",  "newParagraph": true
-            },
-            {
-              "text": "I have a", "textStyle": "text"
-            },
-            {
-              "text": " quick class ", "textStyle": "italic"
-            },
+            {"text": "Adjectives ", "textStyle": "bold"},
+            {"text": " are words that describe things, often in simple sentences with the verb ", "textStyle": "text"},
+            {"text": "to be", "textStyle": "underline"},
+            {"text": " in its different forms:", "textStyle": "text"},
+            {"text": "You ", "textStyle": "italic", "newLine": true},
+            {"text": "are ", "textStyle": "italic"},
+            {"text": "pretty", "textStyle": "underline"},
+            {"text": ". The class ", "textStyle": "italic", "newLine": true},
+            {"text": "was", "textStyle": "underline"},
+            {"text": " short. ", "textStyle": "italic"},
+            {"text": "My shoes ", "textStyle": "italic", "newLine": true},
+            {"text": "are ", "textStyle": "text"},
+            {"text": " dirty.", "textStyle": "underline"},
+            {"text": "Adjectives go before the thing they describe, for example; ", "textStyle": "text", "newParagraph": true},
+            {"text": "I have a", "textStyle": "text"},
+            {"text": " quick class ", "textStyle": "italic"},
              { "textStyle": "italic"
             },
-             {
-              "text": "clean shoes.", "textStyle": "italic"
-            },
-            {
-              "text": "You can use many adjectives side by side  : A", "textStyle": "text", "newParagraph": true
-            },
-            {
-              "text": " good, old, rusty, red ", "textStyle": "italic"
-            },
-            {
-              "text": "wagon. ; ",  "textStyle": "text"
-            },
+             {"text": "clean shoes.", "textStyle": "italic"},
+            {"text": "You can use many adjectives side by side  : A", "textStyle": "text", "newParagraph": true},
+            {"text": " good, old, rusty, red ", "textStyle": "italic"},
+            {"text": "wagon. ; ", "textStyle": "text"},
             
-            {
-              "text": " Adjectives don't have plural forms; ", "textStyle": "text",
-              "newParagraph": true
-            }
-            ,{
-              "text": "sunnies", "textStyle": "strikethrough"
-            },
-            {
-              "text": " days. There ",  "textStyle": "text"
-            },
-            {
-              "text": " are ",  "textStyle": "italic"
-            },
-            {
-              "text": " superlative & comparative forms though. ",  "textStyle": "text"
-            },
-            {
-              "text": "Today is",  "textStyle": "text",  "newLine": true
-            },
-            {
-              "text": " sunnier", "textStyle": "italic"
-            },
-            {
-              "text": " than yesterday.", "textStyle": "text", "newParagraph": false
-            },
-            {
-              "text": " It's the ", "textStyle": "text"
-            },
-            {
-              "text": "hottest", "textStyle": "italic"
-            },
-            {
-              "text": " day ever", "textStyle": "text"
-            },
-            {
-              "text": "Click the adjectives in the sentences below.",  "textStyle": "text",    "newParagraph": true
-            }
+            {"text": " Adjectives don't have plural forms; ", "textStyle": "text", "newParagraph": true}
+            ,{"text": "sunnies", "textStyle": "strikethrough"},
+            {"text": " days. There ", "textStyle": "text"},
+            {"text": " are ", "textStyle": "italic"},
+            {"text": " superlative & comparative forms though. ", "textStyle": "text"},
+            {"text": "Today is", "textStyle": "text", "newLine": true},
+            {"text": " sunnier", "textStyle": "italic"},
+            {"text": " than yesterday.", "textStyle": "text", "newParagraph": false},
+            {"text": " It's the ", "textStyle": "text"},
+            {"text": "hottest", "textStyle": "italic"},
+            {"text": " day ever", "textStyle": "text"},
+            {"text": "Click the adjectives in the sentences below.", "textStyle": "text", "newParagraph": true}
           ],
           "words": [
             {  "feedback": "Incorrect, 'Autumn' is a noun"
             },
-            {
-              "text": "is ",  "feedback": "Incorrect, 'is' is a verb"
-            },
-            {
-              "text": "the",    "feedback": "Incorrect, 'the' is an article"
-            },
-            {
-              "text": "rainy ", "feedback": "Correct"
-            },
-            {
-              "text": "season.", "feedback": "season, is a noun"
-            }
+            {"text": "is ", "feedback": "Incorrect, 'is' is a verb"},
+            {"text": "the", "feedback": "Incorrect, 'the' is an article"},
+            {"text": "rainy ", "feedback": "Correct"},
+            {"text": "season.", "feedback": "season, is a noun"}
           ],
           "keyWords": [
             "rainy "
@@ -168,93 +95,33 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "Adjectives", "textStyle": "italic"
-            },
-            {
-              "text": " are words that describe nouns. To make an ", "textStyle": "italic"
-            },
-            {
-              "text": "Adjective phrase", "textStyle": "underline"
-            },
-            {
-              "text": ", you can put more than one adjective before a noun, but after its articles. For example : ", "textStyle": "text"
-            },
-            {
-              "text": "The ", "textStyle": "text", "newParagraph": true
-            },
-            {
-              "text": "quick brown ", "textStyle": "italic"
-            },
-            {
-              "text": "fox.", "textStyle": "text"
-            },
-            {
-              "text": "A noun phrase can be elongated with ", "textStyle": "text"
-            },
-            {
-              "text": "adverbs", "textStyle": "underline"
-            },
-            {
-              "text": " before the adjective :", "textStyle": "text"
-            },
-            {
-              "text": "The ", "textStyle": "text", "newLine": true
-            },
-            {
-              "text": "very", "textStyle": "underline"
-            },
-            {
-              "text": " quick brown ", "textStyle": "italic"
-            },
-            {
-              "text": "fox. ", "textStyle": "text"
-            },
-            {
-              "text": "2) Click on the adjectives in the sentence below.", "textStyle": "italic"
-            }
+            {"text": "Adjectives", "textStyle": "italic"},
+            {"text": " are words that describe nouns. To make an ", "textStyle": "italic"},
+            {"text": "Adjective phrase", "textStyle": "underline"},
+            {"text": ", you can put more than one adjective before a noun, but after its articles. For example : ", "textStyle": "text"},
+            {"text": "The ", "textStyle": "text", "newParagraph": true},
+            {"text": "quick brown ", "textStyle": "italic"},
+            {"text": "fox.", "textStyle": "text"},
+            {"text": "A noun phrase can be elongated with ", "textStyle": "text"},
+            {"text": "adverbs", "textStyle": "underline"},
+            {"text": " before the adjective :", "textStyle": "text"},
+            {"text": "The ", "textStyle": "text", "newLine": true},
+            {"text": "very", "textStyle": "underline"},
+            {"text": " quick brown ", "textStyle": "italic"},
+            {"text": "fox. ", "textStyle": "text"},
+            {"text": "2) Click on the adjectives in the sentence below.", "textStyle": "italic"}
           ],
           "words": [
-            {
-              "text": "The",
-              "feedback": "'The' is not an adjective."
-            },
-            {
-              "text": "very",
-              "feedback": "'very' is not an adjective."
-            },
-            {
-              "text": "quick",
-              "feedback": "'quick' is an adjective."
-            },
-            {
-              "text": "brown",
-              "feedback": "'brown' is an adjective."
-            },
-            {
-              "text": "fox",
-              "feedback": "'fox' is not an adjective."
-            },
-            {
-              "text": "jumped",
-              "feedback": "'jumped' is not an adjective."
-            },
-            {
-              "text": "over",
-              "feedback": "'over' is not an adjective."
-            },
-            {
-              "text": "the",
-              "feedback": "'the' is not an adjective."
-            },
-            {
-              "text": "lazy",
-              "feedback": "'lazy' is an adjective."
-            },
-            {
-              "text": "dog",
-              "feedback": "'dog' is not an adjective."
-            }
+            {"text": "The", "feedback": "'The' is not an adjective."},
+            {"text": "very", "feedback": "'very' is not an adjective."},
+            {"text": "quick", "feedback": "'quick' is an adjective."},
+            {"text": "brown", "feedback": "'brown' is an adjective."},
+            {"text": "fox", "feedback": "'fox' is not an adjective."},
+            {"text": "jumped", "feedback": "'jumped' is not an adjective."},
+            {"text": "over", "feedback": "'over' is not an adjective."},
+            {"text": "the", "feedback": "'the' is not an adjective."},
+            {"text": "lazy", "feedback": "'lazy' is an adjective."},
+            {"text": "dog", "feedback": "'dog' is not an adjective."}
           ],
           "keyWords": [
             "quick",
@@ -296,214 +163,57 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {
-              "text": " Quantifiers determine ",
-              "textStyle": "text"
-            },
-            {
-              "text": "how many",
-              "textStyle": "underline"
-            },
-            {
-              "text": "countable nouns and ",
-              "textStyle": "text"
-            },
-            {
-              "text": "how much",
-              "textStyle": "underline"
-            },
-            {
-              "text": " uncountable noun there is of something.",
-              "textStyle": "text"
-            },
-            {
-              "text": " To describe a high amount, use ",
-              "textStyle": "text",
-              "newParagraph": true
-            },
-            {
-              "text": "plenty of, a lot of, much, many & tons of ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " To describe a medium or acceptable ammount use ",
-              "textStyle": "text",
-              "newParagraph": true
-            },
-            {
-              "text": " some & enough ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " To describe an amount equal to zero, use ",
-              "textStyle": "text"
-            },
-            {
-              "text": " no ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "A zero ammount can also be expressed with, ",
-              "textStyle": "text",
-              "newParagraph": true
-            },
-            {
-              "text": " any*",
-              "textStyle": "bold"
-            },
-            {
-              "text": " which is also used in questions.  ",
-              "textStyle": "text"
-            },
-            {
-              "text": " Do you have any cabbage?",
-              "textStyle": "italic",
-              "newLine": true
-            },
-            {
-              "text": "* any",
-              "textStyle": "bold",
-              "newParagraph": true
-            },
-            {
-              "text": " makes a zero amount with the",
-              "textStyle": "text"
-            },
-            {
-              "text": "  negative ",
-              "textStyle": "underline"
-            },
-            {
-              "text": " form of a verb.",
-              "textStyle": "text"
-            },
-            {
-              "text": "I ",
-              "textStyle": "italic",
-              "newLine": true
-            },
-            {
-              "text": "don't",
-              "textStyle": "underline"
-            },
-            {
-              "text": " see any surfers.",
-              "textStyle": "italic"
-            },
-            {
-              "text": "That's because there are no waves.",
-              "textStyle": "italic",
-              "newLine": true
-            },
-            {
-              "text": " Any ",
-              "textStyle": "bold",
-              "newParagraph": true
-            },
-            {
-              "text": " asks for something that you're not sure they have.",
-              "textStyle": "text"
-            },
-            {
-              "text": "Do you have any medecine?",
-              "textStyle": "italic",
-              "newLine": true
-            },
-            {
-              "text": "1) Click the quantifiers",
-              "textStyle": "italic",
-              "newParagraph": true
-            }
+            {"text": " Quantifiers determine ", "textStyle": "text"},
+            {"text": "how many", "textStyle": "underline"},
+            {"text": "countable nouns and ", "textStyle": "text"},
+            {"text": "how much", "textStyle": "underline"},
+            {"text": " uncountable noun there is of something.", "textStyle": "text"},
+            {"text": " To describe a high amount, use ", "textStyle": "text", "newParagraph": true},
+            {"text": "plenty of, a lot of, much, many & tons of ", "textStyle": "bold"},
+            {"text": " To describe a medium or acceptable ammount use ", "textStyle": "text", "newParagraph": true},
+            {"text": " some & enough ", "textStyle": "bold"},
+            {"text": " To describe an amount equal to zero, use ", "textStyle": "text"},
+            {"text": " no ", "textStyle": "bold"},
+            {"text": "A zero ammount can also be expressed with, ", "textStyle": "text", "newParagraph": true},
+            {"text": " any*", "textStyle": "bold"},
+            {"text": " which is also used in questions.  ", "textStyle": "text"},
+            {"text": " Do you have any cabbage?", "textStyle": "italic", "newLine": true},
+            {"text": "* any", "textStyle": "bold", "newParagraph": true},
+            {"text": " makes a zero amount with the", "textStyle": "text"},
+            {"text": "  negative ", "textStyle": "underline"},
+            {"text": " form of a verb.", "textStyle": "text"},
+            {"text": "I ", "textStyle": "italic", "newLine": true},
+            {"text": "don't", "textStyle": "underline"},
+            {"text": " see any surfers.", "textStyle": "italic"},
+            {"text": "That's because there are no waves.", "textStyle": "italic", "newLine": true},
+            {"text": " Any ", "textStyle": "bold", "newParagraph": true},
+            {"text": " asks for something that you're not sure they have.", "textStyle": "text"},
+            {"text": "Do you have any medecine?", "textStyle": "italic", "newLine": true},
+            {"text": "1) Click the quantifiers", "textStyle": "italic", "newParagraph": true}
           ],
           "words": [
-            {
-              "text": "Do",
-              "feedback": "'Do' is not a quantifier."
-            },
-            {
-              "text": "we",
-              "feedback": "'we' is not a quantifier."
-            },
-            {
-              "text": "have",
-              "feedback": "'have' is not a quantifier."
-            },
-            {
-              "text": "any",
-              "feedback": "'any' is a quantifier."
-            },
-            {
-              "text": "milk?",
-              "feedback": "'milk?' is not a quantifier."
-            },
-            {
-              "text": "There",
-              "feedback": "'There' is not a quantifier."
-            },
-            {
-              "text": "are",
-              "feedback": "'are' is not a quantifier."
-            },
-            {
-              "text": "no",
-              "feedback": "'no' is a quantifier."
-            },
-            {
-              "text": "cookies",
-              "feedback": "'cookies' is not a quantifier."
-            },
-            {
-              "text": "left",
-              "feedback": "'left' is not a quantifier."
-            },
-            {
-              "text": "in",
-              "feedback": "'in' is not a quantifier."
-            },
-            {
-              "text": "the",
-              "feedback": "'the' is not a quantifier."
-            },
-            {
-              "text": "jar.",
-              "feedback": "'jar.' is not a quantifier."
-            },
-            {
-              "text": "I",
-              "feedback": "'I' is not a quantifier."
-            },
-            {
-              "text": "have",
-              "feedback": "'have' is not a quantifier."
-            },
-            {
-              "text": "some",
-              "feedback": "'some' is a quantifier."
-            },
-            {
-              "text": "money,",
-              "feedback": "'money,' is not a quantifier."
-            },
-            {
-              "text": "but",
-              "feedback": "'but' is not a quantifier."
-            },
-            {
-              "text": "only",
-              "feedback": "'only' is not a quantifier."
-            },
-            {
-              "text": "a",
-              "feedback": "'a' is not a quantifier."
-            },
-            {
-              "text": "few",
-              "feedback": "'few' is a quantifier."
-            },
-            {
-              "text": "coins.",
-              "feedback": "'coins.' is not a quantifier."
-            }
+            {"text": "Do", "feedback": "'Do' is not a quantifier."},
+            {"text": "we", "feedback": "'we' is not a quantifier."},
+            {"text": "have", "feedback": "'have' is not a quantifier."},
+            {"text": "any", "feedback": "'any' is a quantifier."},
+            {"text": "milk?", "feedback": "'milk?' is not a quantifier."},
+            {"text": "There", "feedback": "'There' is not a quantifier."},
+            {"text": "are", "feedback": "'are' is not a quantifier."},
+            {"text": "no", "feedback": "'no' is a quantifier."},
+            {"text": "cookies", "feedback": "'cookies' is not a quantifier."},
+            {"text": "left", "feedback": "'left' is not a quantifier."},
+            {"text": "in", "feedback": "'in' is not a quantifier."},
+            {"text": "the", "feedback": "'the' is not a quantifier."},
+            {"text": "jar.", "feedback": "'jar.' is not a quantifier."},
+            {"text": "I", "feedback": "'I' is not a quantifier."},
+            {"text": "have", "feedback": "'have' is not a quantifier."},
+            {"text": "some", "feedback": "'some' is a quantifier."},
+            {"text": "money,", "feedback": "'money,' is not a quantifier."},
+            {"text": "but", "feedback": "'but' is not a quantifier."},
+            {"text": "only", "feedback": "'only' is not a quantifier."},
+            {"text": "a", "feedback": "'a' is not a quantifier."},
+            {"text": "few", "feedback": "'few' is a quantifier."},
+            {"text": "coins.", "feedback": "'coins.' is not a quantifier."}
           ],
           "keyWords": [
             "any",
@@ -552,193 +262,52 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {
-              "text": "Look at the top of the picture above. Then look at the dictionary listing below. ",
-              "textStyle": "italic"
-            },
-            {
-              "text": " close ",
-              "textStyle": "bold",
-              "newLine": true
-            },
-            {
-              "text": " [klous] ",
-              "textStyle": "text"
-            },
-            {
-              "text": " adj. ",
-              "textStyle": "italic"
-            },
-            {
-              "text": " 1. ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " nearby, in your proximity, not far off ",
-              "textStyle": "text"
-            },
-            {
-              "text": " We live close to school. I can walk there.",
-              "textStyle": "italic"
-            },
-            {
-              "text": "close ",
-              "textStyle": "bold",
-              "newLine": true
-            },
-            {
-              "text": " [klouz] ",
-              "textStyle": "text"
-            },
-            {
-              "text": " verb ",
-              "textStyle": "italic"
-            },
-            {
-              "text": " 2. ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " an action to block. ",
-              "textStyle": "text"
-            },
-            {
-              "text": " Close the window please, it's cold.",
-              "textStyle": "italic"
-            },
-            {
-              "text": " They're spelled the same so they're homo",
-              "textStyle": "text"
-            },
-            {
-              "text": "nyms",
-              "textStyle": "italic"
-            },
-            {
-              "text": " but they aren't homo",
-              "textStyle": "text"
-            },
-            {
-              "text": "phones.",
-              "textStyle": "italic",
-              "newLine": false
-            },
-            {
-              "text": "Imagine the men's conversation.",
-              "textStyle": "italic",
-              "newParagraph": true
-            },
-            {
-              "text": "Bill: ",
-              "textStyle": "text",
-              "newLine": true
-            },
-            {
-              "text": "Hey Bob, was your dog digging a hole in my garden last night?",
-              "textStyle": "italic"
-            },
-            {
-              "text": "Bob: ",
-              "textStyle": "text",
-              "newLine": true
-            },
-            {
-              "text": "Martha? No, it couldn't have been her. She was in bed with me close to 10 o'clock.",
-              "textStyle": "italic"
-            },
-            {
-              "text": "Bill: ",
-              "textStyle": "text",
-              "newLine": true
-            },
-            {
-              "text": "Well I got up and looked out the window last night and saw a pit bull that looked like it struck oil.",
-              "textStyle": "italic"
-            },
-            {
-              "text": "Bob: ",
-              "textStyle": "text",
-              "newLine": true
-            },
-            {
-              "text": "Ah that explains the dirt in my bed. Alright I'll remember to close the gate.",
-              "textStyle": "italic"
-            },
-            {
-              "text": "Click on the adjectives in the sentences below.",
-              "textStyle": "italic",
-              "newParagraph": true
-            }
+            {"text": "Look at the top of the picture above. Then look at the dictionary listing below. ", "textStyle": "italic"},
+            {"text": " close ", "textStyle": "bold", "newLine": true},
+            {"text": " [klous] ", "textStyle": "text"},
+            {"text": " adj. ", "textStyle": "italic"},
+            {"text": " 1. ", "textStyle": "bold"},
+            {"text": " nearby, in your proximity, not far off ", "textStyle": "text"},
+            {"text": " We live close to school. I can walk there.", "textStyle": "italic"},
+            {"text": "close ", "textStyle": "bold", "newLine": true},
+            {"text": " [klouz] ", "textStyle": "text"},
+            {"text": " verb ", "textStyle": "italic"},
+            {"text": " 2. ", "textStyle": "bold"},
+            {"text": " an action to block. ", "textStyle": "text"},
+            {"text": " Close the window please, it's cold.", "textStyle": "italic"},
+            {"text": " They're spelled the same so they're homo", "textStyle": "text"},
+            {"text": "nyms", "textStyle": "italic"},
+            {"text": " but they aren't homo", "textStyle": "text"},
+            {"text": "phones.", "textStyle": "italic", "newLine": false},
+            {"text": "Imagine the men's conversation.", "textStyle": "italic", "newParagraph": true},
+            {"text": "Bill: ", "textStyle": "text", "newLine": true},
+            {"text": "Hey Bob, was your dog digging a hole in my garden last night?", "textStyle": "italic"},
+            {"text": "Bob: ", "textStyle": "text", "newLine": true},
+            {"text": "Martha? No, it couldn't have been her. She was in bed with me close to 10 o'clock.", "textStyle": "italic"},
+            {"text": "Bill: ", "textStyle": "text", "newLine": true},
+            {"text": "Well I got up and looked out the window last night and saw a pit bull that looked like it struck oil.", "textStyle": "italic"},
+            {"text": "Bob: ", "textStyle": "text", "newLine": true},
+            {"text": "Ah that explains the dirt in my bed. Alright I'll remember to close the gate.", "textStyle": "italic"},
+            {"text": "Click on the adjectives in the sentences below.", "textStyle": "italic", "newParagraph": true}
           ],
           "words": [
-            {
-              "text": "His",
-              "feedback": "'His' is not an adjective."
-            },
-            {
-              "text": "naughty",
-              "feedback": "Yes! 'naughty' is an adjective."
-            },
-            {
-              "text": "dog",
-              "feedback": "No 'dog' is not an adjective."
-            },
-            {
-              "text": "was ",
-              "feedback": "'was' is an adjective."
-            },
-            {
-              "text": "out",
-              "feedback": "'out' is not an adjective."
-            },
-            {
-              "text": "last",
-              "feedback": "Yes 'last' is an adjective."
-            },
-            {
-              "text": "night",
-              "feedback": "'night' is not an adjective."
-            },
-            {
-              "text": "and",
-              "feedback": "'and' is not an adjective."
-            },
-            {
-              "text": "he",
-              "feedback": "'he' is not an adjective."
-            },
-            {
-              "text": "dug",
-              "feedback": "No 'dug' is not an adjective."
-            },
-            {
-              "text": "a",
-              "feedback": "Nope 'a' is not an adjective."
-            },
-            {
-              "text": "big ",
-              "feedback": "Yes! 'big' is an adjective."
-            },
-            {
-              "text": "hole",
-              "feedback": "No 'hole' is not an adjective."
-            },
-            {
-              "text": "in",
-              "feedback": "Nope 'in' is not an adjective."
-            },
-            {
-              "text": "Bill's",
-              "feedback": "Not really, it's a possessive noun."
-            },
-            {
-              "text": "flower",
-              "feedback": "More or less true, 'flower' is the former of a compound noun and acts as adj."
-            },
-            {
-              "text": "garden.",
-              "feedback": "'garden"
-            }
+            {"text": "His", "feedback": "'His' is not an adjective."},
+            {"text": "naughty", "feedback": "Yes! 'naughty' is an adjective."},
+            {"text": "dog", "feedback": "No 'dog' is not an adjective."},
+            {"text": "was ", "feedback": "'was' is an adjective."},
+            {"text": "out", "feedback": "'out' is not an adjective."},
+            {"text": "last", "feedback": "Yes 'last' is an adjective."},
+            {"text": "night", "feedback": "'night' is not an adjective."},
+            {"text": "and", "feedback": "'and' is not an adjective."},
+            {"text": "he", "feedback": "'he' is not an adjective."},
+            {"text": "dug", "feedback": "No 'dug' is not an adjective."},
+            {"text": "a", "feedback": "Nope 'a' is not an adjective."},
+            {"text": "big ", "feedback": "Yes! 'big' is an adjective."},
+            {"text": "hole", "feedback": "No 'hole' is not an adjective."},
+            {"text": "in", "feedback": "Nope 'in' is not an adjective."},
+            {"text": "Bill's", "feedback": "Not really, it's a possessive noun."},
+            {"text": "flower", "feedback": "More or less true, 'flower' is the former of a compound noun and acts as adj."},
+            {"text": "garden.", "feedback": "'garden"}
           ],
           "keyWords": [
             "naughty",
@@ -769,29 +338,13 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {
-              "text": " Far ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " (adj.) at a great distance ",
-              "textStyle": "text"
-            },
-            {
-              "text": "click on the phrase that talks about something far.",
-              "textStyle": "underline",
-              "newLine": true
-            }
+            {"text": " Far ", "textStyle": "bold"},
+            {"text": " (adj.) at a great distance ", "textStyle": "text"},
+            {"text": "click on the phrase that talks about something far.", "textStyle": "underline", "newLine": true}
           ],
           "words": [
-            {
-              "text": "This tree right here",
-              "feedback": "This is proximal"
-            },
-            {
-              "text": "That boat over there",
-              "feedback": "That's distal"
-            }
+            {"text": "This tree right here", "feedback": "This is proximal"},
+            {"text": "That boat over there", "feedback": "That's distal"}
           ],
           "keyWords": [
             "That boat over there"
@@ -841,75 +394,24 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {
-              "text": "That",
-              "textStyle": "bold"
-            },
-            {
-              "text": " is a far-out word. It points at things and it calls them demonstratively. It's also used in relative clauses to give extra information in a noun phrase.",
-              "textStyle": "text"
-            },
-            {
-              "text": " I dress for the job ",
-              "textStyle": "italic",
-              "newLine": true
-            },
-            {
-              "text": " that",
-              "textStyle": "underline"
-            },
-            {
-              "text": " I want ",
-              "textStyle": "italic"
-            },
-            {
-              "text": " Those ",
-              "textStyle": "bold",
-              "newLine": true
-            },
-            {
-              "text": " is also useful to point with more than one finger. ",
-              "textStyle": "text"
-            },
-            {
-              "text": "      that tree. ",
-              "textStyle": "italic",
-              "newLine": true
-            },
-            {
-              "text": " In the sentence below, identify and select the demonstrative pronouns ",
-              "newLine": "true"
-            }
+            {"text": "That", "textStyle": "bold"},
+            {"text": " is a far-out word. It points at things and it calls them demonstratively. It's also used in relative clauses to give extra information in a noun phrase.", "textStyle": "text"},
+            {"text": " I dress for the job ", "textStyle": "italic", "newLine": true},
+            {"text": " that", "textStyle": "underline"},
+            {"text": " I want ", "textStyle": "italic"},
+            {"text": " Those ", "textStyle": "bold", "newLine": true},
+            {"text": " is also useful to point with more than one finger. ", "textStyle": "text"},
+            {"text": "      that tree. ", "textStyle": "italic", "newLine": true},
+            {"text": " In the sentence below, identify and select the demonstrative pronouns ", "newLine": "true"}
           ],
           "words": [
-            {
-              "text": "Those",
-              "feedback": "Yes."
-            },
-            {
-              "text": "birds",
-              "feedback": "'birds' is not a demonstrative pronoun or relative pronoun."
-            },
-            {
-              "text": "always",
-              "feedback": "'always' is not a demonstrative pronoun or relative pronoun."
-            },
-            {
-              "text": "roost",
-              "feedback": "'roosts' is birds nesting."
-            },
-            {
-              "text": "in",
-              "feedback": "'in' is not a demonstrative pronoun or relative pronoun."
-            },
-            {
-              "text": "that",
-              "feedback": "'that' is a demonstrative pronoun used to refer to something farther away."
-            },
-            {
-              "text": "tree.",
-              "feedback": "'that' is a relative pronoun used to introduce a relative clause."
-            }
+            {"text": "Those", "feedback": "Yes."},
+            {"text": "birds", "feedback": "'birds' is not a demonstrative pronoun or relative pronoun."},
+            {"text": "always", "feedback": "'always' is not a demonstrative pronoun or relative pronoun."},
+            {"text": "roost", "feedback": "'roosts' is birds nesting."},
+            {"text": "in", "feedback": "'in' is not a demonstrative pronoun or relative pronoun."},
+            {"text": "that", "feedback": "'that' is a demonstrative pronoun used to refer to something farther away."},
+            {"text": "tree.", "feedback": "'that' is a relative pronoun used to introduce a relative clause."}
           ],
           "keyWords": [
             "Those",
@@ -944,86 +446,27 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {
-              "text": "Adjectives can be the object of a sentence.",
-              "textStyle": "text"
-            },
-            {
-              "text": "He lives close.",
-              "textStyle": "italic",
-              "newLine": "true"
-            },
-            {
-              "text": "Close describes their distance.",
-              "textStyle": "text",
-              "newLine": "true"
-            },
-            {
-              "text": "/klous/",
-              "textStyle": "italic"
-            },
-            {
-              "text": "with a clear /s/ sound",
-              "textStyle": "text"
-            }
+            {"text": "Adjectives can be the object of a sentence.", "textStyle": "text"},
+            {"text": "He lives close.", "textStyle": "italic", "newLine": "true"},
+            {"text": "Close describes their distance.", "textStyle": "text", "newLine": "true"},
+            {"text": "/klous/", "textStyle": "italic"},
+            {"text": "with a clear /s/ sound", "textStyle": "text"}
           ],
           "words": [
-            {
-              "text": "Which",
-              "feedback": "'Which' does not have a clear 's' sound."
-            },
-            {
-              "text": "McDonalds",
-              "feedback": "'McDonalds' does not have a clear 's' sound."
-            },
-            {
-              "text": "do",
-              "feedback": "'do' does not have a clear 's' sound."
-            },
-            {
-              "text": "you",
-              "feedback": "'you' does not have a clear 's' sound."
-            },
-            {
-              "text": "want",
-              "feedback": "'want' does not have a clear 's' sound."
-            },
-            {
-              "text": "to",
-              "feedback": "'to' does not have a clear 's' sound."
-            },
-            {
-              "text": "go",
-              "feedback": "'go' does not have a clear 's' sound."
-            },
-            {
-              "text": "to",
-              "feedback": "'to' does not have a clear 's' sound."
-            },
-            {
-              "text": "while",
-              "feedback": "'while' does not have a clear 's' sound."
-            },
-            {
-              "text": "you're",
-              "feedback": "'you're' does not have a clear 's' sound."
-            },
-            {
-              "text": "still",
-              "feedback": "'still' has a clear 's' sound."
-            },
-            {
-              "text": "close",
-              "feedback": "'close' has a clear 's' sound."
-            },
-            {
-              "text": "to",
-              "feedback": "'to' does not have a clear 's' sound."
-            },
-            {
-              "text": "home.",
-              "feedback": "'home.' does not have a clear 's' sound."
-            }
+            {"text": "Which", "feedback": "'Which' does not have a clear 's' sound."},
+            {"text": "McDonalds", "feedback": "'McDonalds' does not have a clear 's' sound."},
+            {"text": "do", "feedback": "'do' does not have a clear 's' sound."},
+            {"text": "you", "feedback": "'you' does not have a clear 's' sound."},
+            {"text": "want", "feedback": "'want' does not have a clear 's' sound."},
+            {"text": "to", "feedback": "'to' does not have a clear 's' sound."},
+            {"text": "go", "feedback": "'go' does not have a clear 's' sound."},
+            {"text": "to", "feedback": "'to' does not have a clear 's' sound."},
+            {"text": "while", "feedback": "'while' does not have a clear 's' sound."},
+            {"text": "you're", "feedback": "'you're' does not have a clear 's' sound."},
+            {"text": "still", "feedback": "'still' has a clear 's' sound."},
+            {"text": "close", "feedback": "'close' has a clear 's' sound."},
+            {"text": "to", "feedback": "'to' does not have a clear 's' sound."},
+            {"text": "home.", "feedback": "'home.' does not have a clear 's' sound."}
           ],
           "keyWords": [
             "still",

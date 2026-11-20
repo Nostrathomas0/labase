@@ -47,8 +47,7 @@
             {"text": " are for talking about something that belongs to the person you're talking to. ", "textStyle": "text" },
             {"text": "my & mine ", "textStyle": "bold"},
             {"text": " are for talking about something that belongs to you. ", "textStyle": "text" },
-            {
-            "text": "we & us ", "textStyle": "bold"},
+            {"text": "we & us ", "textStyle": "bold"},
             {"text": "It's possible ",  "textStyle": "bold", "newLine": true },
             {"text": " are for you and I, together. It's the 1st person, plural.", "textStyle": "text" },
             {"text": "They & them ", "textStyle": "bold",  "newLine": true   },
@@ -167,41 +166,16 @@
             {"text": "and ", "textStyle": "text"},
             {"text": "quantifiers", "textStyle":"underline"},
             {"text": " to make noun phrases.", "textStyle": "text"},
-            {
-              "text": "1) Click on the articles in the sentence below.",
-              "textStyle": "italic",
-              "newParagraph": true
-            }
+            {"text": "1) Click on the articles in the sentence below.", "textStyle": "italic", "newParagraph": true}
           ],
           "words": [
-            {
-              "text": "There",
-              "feedback": "'There' is not an article."
-            },
-            {
-              "text": "was",
-              "feedback": "'was' is not an article."
-            },
-            {
-              "text": "a",
-              "feedback": "'a' is an article."
-            },
-            {
-              "text": "knock",
-              "feedback": "'knock' is not an article."
-            },
-            {
-              "text": "at",
-              "feedback": "'at' is not an article."
-            },
-            {
-              "text": "the",
-              "feedback": "'the' is an article."
-            },
-            {
-              "text": "door.",
-              "feedback": "'door.' is not an article."
-            }
+            {"text": "There", "feedback": "'There' is not an article."},
+            {"text": "was", "feedback": "'was' is not an article."},
+            {"text": "a", "feedback": "'a' is an article."},
+            {"text": "knock", "feedback": "'knock' is not an article."},
+            {"text": "at", "feedback": "'at' is not an article."},
+            {"text": "the", "feedback": "'the' is an article."},
+            {"text": "door.", "feedback": "'door.' is not an article."}
           ],
           "keyWords": [
             "a",
@@ -273,88 +247,28 @@
             { "text": " Generally speaking, we use plural nouns for the things we like of which are numerous, unless they be material,  ", "textStyle": "text"  },
             { "text": " stuff ", "textStyle": "italic"  },
              { "text": " we like and can't be counted. This can cause confusion, especially for words which can refer to both a countable thing and its material substance.", "textStyle": "text"  }, 
-            {"text": " He threw his marble.",
-              "textStyle": "underline",
-              "newLine":true
-            },
-            { "text": "My kitchen countertop is made of marble. ",
-              "textStyle":"underline",
-              "newLine":true
-            },  
-            {"text": "I like dog.",
-              "textStyle": "strike",
-              "newLine":true
-            },
-            {"text":"1) Click on the plural nouns",
-              "textStyle":"text",
-              "newParagraph":true
-            }
+            {"text": " He threw his marble.", "textStyle": "underline", "newLine": true},
+            {"text": "My kitchen countertop is made of marble. ", "textStyle": "underline", "newLine": true},  
+            {"text": "I like dog.", "textStyle": "strike", "newLine": true},
+            {"text": "1) Click on the plural nouns", "textStyle": "text", "newParagraph": true}
           ],
           "words": [
-            {
-              "text": "That",
-              "feedback": "'That' is not."
-            },
-            {
-              "text": "bookstore",
-              "feedback": "that could be right, "
-            },
-            {
-              "text": "has",
-              "feedback": "a"
-            },
-            {
-              "text": "a",
-              "feedback": "a"
-            },
-            {
-              "text": "lot",
-              "feedback": "This is a determiner, close enough"
-            },
-            {
-              "text": "of ",
-              "feedback": "this is a preposition"
-            },
-            {
-              "text": "books",
-              "feedback": "BINGO"
-            },
-            {
-              "text": "but",
-              "feedback": "nay"
-            },
-            {
-              "text": "there's",
-              "feedback": "Adverb of place + Copulate"
-            }
-            ,{
-              "text": "a",
-              "feedback": "a"
-            },
-            {
-              "text": "bigger",
-              "feedback": "no"
-            },
-            {
-              "text": "one",
-              "feedback": "a"
-            },
-            {
-              "text": "a",
-              "feedback": "a"
-            },
-            {
-              "text": "few",
-              "feedback": "nope"
-            },
-            {
-              "text": "streets",
-              "feedback": "BINGO"
-            },
-            {
-              "text": "over.",
-              "feedback": "preposition"
-            }
+            {"text": "That", "feedback": "'That' is not."},
+            {"text": "bookstore", "feedback": "that could be right, "},
+            {"text": "has", "feedback": "a"},
+            {"text": "a", "feedback": "a"},
+            {"text": "lot", "feedback": "This is a determiner, close enough"},
+            {"text": "of ", "feedback": "this is a preposition"},
+            {"text": "books", "feedback": "BINGO"},
+            {"text": "but", "feedback": "nay"},
+            {"text": "there's", "feedback": "Adverb of place + Copulate"}
+            ,{"text": "a", "feedback": "a"},
+            {"text": "bigger", "feedback": "no"},
+            {"text": "one", "feedback": "a"},
+            {"text": "a", "feedback": "a"},
+            {"text": "few", "feedback": "nope"},
+            {"text": "streets", "feedback": "BINGO"},
+            {"text": "over.", "feedback": "preposition"}
           ],
           "keyWords": [
             "lot",
@@ -433,212 +347,57 @@
           "instructions": [
             
             
-            {
-              "text": " Countable words", "textStyle": "bold", "newParagraph":true
-             }, 
-            {
-              "text": "A number is a suitable determiner for many nouns: ", "textStyle": "text", "newParagraph":true
-            } ,
-            {
-              "text": " two apples. ",
-              "textStyle": "italic"
-            },
-             {
-              "text": ", but not for all", "textStyle": "text", "newParagraph":true
-            } ,
-            {
-              "text": " two milks. ",
-              "textStyle": "strike"
-            },
-            {
-              "text": " Uncountable words ", 
-              "textStyle": "underline"
-            },
-            {
-              "text": " are for stuff you can't count individually: ",
-              "textStyle": "text"
-            },
-            {
-              "text": "two moneys",
-              "textStyle": "strike"
-            },
-            {
-              "text": ". We must count it with a quantifier: ",
-              "textStyle": "text"
-            },
+            {"text": " Countable words", "textStyle": "bold", "newParagraph": true}, 
+            {"text": "A number is a suitable determiner for many nouns: ", "textStyle": "text", "newParagraph": true} ,
+            {"text": " two apples. ", "textStyle": "italic"},
+             {"text": ", but not for all", "textStyle": "text", "newParagraph": true} ,
+            {"text": " two milks. ", "textStyle": "strike"},
+            {"text": " Uncountable words ", "textStyle": "underline"},
+            {"text": " are for stuff you can't count individually: ", "textStyle": "text"},
+            {"text": "two moneys", "textStyle": "strike"},
+            {"text": ". We must count it with a quantifier: ", "textStyle": "text"},
           
-            {
-              "text": "My Euro, 2 Dollars, 3 Lira.",
-              "textStyle": "italic"
-            },
-           {
-              "text": " Money doesn't have a plural form. And neither has ",
-              "textStyle": "text"            },
-            {
-              "text": " information, data ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " nor ",
-              "textStyle": "text"
-            },
-            {
-              "text": " punctuation. ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "Uncountable nouns need different determiners. Avoid numbers, indefinite articles, (",
-              "textStyle": "text" 
-            },
-            {
-              "text": " one information, an air, a humanity, 4 trashes, a few chess, a poetry, a furniture, 2 homeworks, a wisdom. ",
-              "textStyle": "strike",
-              "newLine":false
-            },
-            {
-              "text": " Use a quantifier to measure materials.  ",
-              "textStyle": "text"
-            },
-            {
-              "text": " a",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-            {
-              "text": "  piece ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-            {
-              "text": " of information, a ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-            {
-              "text": " breath",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": " of air, a ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": " bag ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": " of trash, a ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": " game ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": "  of chess, a ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": " piece ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": "of furniture, a ",
-              "textStyle": "italic",
-              "newParagraph":false
-             },
-              {
-              "text": " bit ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": " of wisdom, a ",
-              "textStyle": "italic",
-              "newParagraph":false
-            },
-             {
-              "text": " glass of water",
-              "textStyle": "italic",
-              "newParagraph":false  
-            },
-             {
-              "text": " of water. Or you can break this rule and order",
-              "textStyle": "text"
-            },
-            {
-              "text": " a water ",
-              "textStyle": "italic"
-            },
-            {
-              "text": "at a bar, but it's correcter to say",  
-              "textStyle": "text"
-            },
-            { 
-              "text": " a drink of water.",
-              "textStyle": "bold"
-            },
-            {
-              "text": " Materials are uncountable;",
-              "textStyle": "text"
-            },
-            {
-              "text": " fabric, coffee, gasoline, wood, steel, carbon",
-              "textStyle": "italic"
-            },
-            {
-              "text": " but language intersects with culture on whether or not singular things are countable and culture often says no to",
-              "textStyle": "italic"
-            },  
-            {
-              "text": "   Gods, Suns, and Earths .",
-              "textStyle": "strike"
-            },
-            {
-              "text": " A word's countability depends on how it's used. Nouns for objects and things are usually countable. Nouns for materials and stuff are usually uncountable.", "textStyle":"text", "newParagraph":true
-            },
-            {
-              "text": "1) Click on the countable nouns",
-              "textStyle": "italic",
-              "newParagraph": true
-            }
+            {"text": "My Euro, 2 Dollars, 3 Lira.", "textStyle": "italic"},
+           {"text": " Money doesn't have a plural form. And neither has ", "textStyle": "text"},
+            {"text": " information, data ", "textStyle": "bold"},
+            {"text": " nor ", "textStyle": "text"},
+            {"text": " punctuation. ", "textStyle": "bold"},
+            {"text": "Uncountable nouns need different determiners. Avoid numbers, indefinite articles, (", "textStyle": "text"},
+            {"text": " one information, an air, a humanity, 4 trashes, a few chess, a poetry, a furniture, 2 homeworks, a wisdom. ", "textStyle": "strike", "newLine": false},
+            {"text": " Use a quantifier to measure materials.  ", "textStyle": "text"},
+            {"text": " a", "textStyle": "italic", "newParagraph": false},
+            {"text": "  piece ", "textStyle": "italic", "newParagraph": false},
+            {"text": " of information, a ", "textStyle": "italic", "newParagraph": false},
+            {"text": " breath", "textStyle": "italic", "newParagraph": false},
+             {"text": " of air, a ", "textStyle": "italic", "newParagraph": false},
+             {"text": " bag ", "textStyle": "italic", "newParagraph": false},
+             {"text": " of trash, a ", "textStyle": "italic", "newParagraph": false},
+             {"text": " game ", "textStyle": "italic", "newParagraph": false},
+             {"text": "  of chess, a ", "textStyle": "italic", "newParagraph": false},
+             {"text": " piece ", "textStyle": "italic", "newParagraph": false},
+             {"text": "of furniture, a ", "textStyle": "italic", "newParagraph": false},
+              {"text": " bit ", "textStyle": "italic", "newParagraph": false},
+             {"text": " of wisdom, a ", "textStyle": "italic", "newParagraph": false},
+             {"text": " glass of water", "textStyle": "italic", "newParagraph": false},
+             {"text": " of water. Or you can break this rule and order", "textStyle": "text"},
+            {"text": " a water ", "textStyle": "italic"},
+            {"text": "at a bar, but it's correcter to say", "textStyle": "text"},
+            {"text": " a drink of water.", "textStyle": "bold"},
+            {"text": " Materials are uncountable;", "textStyle": "text"},
+            {"text": " fabric, coffee, gasoline, wood, steel, carbon", "textStyle": "italic"},
+            {"text": " but language intersects with culture on whether or not singular things are countable and culture often says no to", "textStyle": "italic"},  
+            {"text": "   Gods, Suns, and Earths .", "textStyle": "strike"},
+            {"text": " A word's countability depends on how it's used. Nouns for objects and things are usually countable. Nouns for materials and stuff are usually uncountable.", "textStyle": "text", "newParagraph": true},
+            {"text": "1) Click on the countable nouns", "textStyle": "italic", "newParagraph": true}
           ],
           "words": [
-            {
-              "text": "milk",
-              "feedback": "'milk' is a liquid, so it's uncountable."
-            },
-            {
-              "text": "apple",
-              "feedback": "'apple' is a countable noun."
-            },
-            {
-              "text": "book",
-              "feedback": "'book' is a countable noun."
-            },
-            {
-              "text": "bread",
-              "feedback": "'bread' is not a countable noun. A loaf of bread is countable."
-            },
-            {
-              "text": "egg",
-              "feedback": "'egg' is a countable noun."
-            },
-            {
-              "text": "car",
-              "feedback": "'car' is a countable noun."
-            },
-            {
-              "text": "rice",
-              "feedback": "'rice' is not a countable noun, even if you've counted grains of rice."
-            }
+            {"text": "milk", "feedback": "'milk' is a liquid, so it's uncountable."},
+            {"text": "apple", "feedback": "'apple' is a countable noun."},
+            {"text": "book", "feedback": "'book' is a countable noun."},
+            {"text": "bread", "feedback": "'bread' is not a countable noun. A loaf of bread is countable."},
+            {"text": "egg", "feedback": "'egg' is a countable noun."},
+            {"text": "car", "feedback": "'car' is a countable noun."},
+            {"text": "rice", "feedback": "'rice' is not a countable noun, even if you've counted grains of rice."}
           ],
           "keyWords": [
             "apple",
@@ -713,67 +472,23 @@
             {"text": "some ", "textStyle":"italic"},
             {"text": "place names. Don't add articles to names or pronouns, only things, i.e. common nouns.", "textStyle": "text", "newLine":true },
             
-            {
-              "text": "sheet",
-              "textStyle": "text"},
-            {
-              "text": " Singular nouns usually have an article and sometimes another determiners:",
-              "textStyle": "text",
-              "newLine":true
-            },
-            {
-              "text": " a ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "potato,",
-              "textStyle": "text"
-            },
-            {
-              "text": " a lot of ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "cheese",
-              "textStyle": "text"
-            },
-            {
-              "text": ", some ",
-              "textStyle": "bold"
-            },
-            {
-              "text": "onion",
-              "textStyle": "text"
-            },
-            {
-              "text": "s.",
-              "textStyle": "bold"
-            },
-            {
-              "text": " 1) Click on the proper nouns"
-            }
+            {"text": "sheet", "textStyle": "text"},
+            {"text": " Singular nouns usually have an article and sometimes another determiners:", "textStyle": "text", "newLine": true},
+            {"text": " a ", "textStyle": "bold"},
+            {"text": "potato,", "textStyle": "text"},
+            {"text": " a lot of ", "textStyle": "bold"},
+            {"text": "cheese", "textStyle": "text"},
+            {"text": ", some ", "textStyle": "bold"},
+            {"text": "onion", "textStyle": "text"},
+            {"text": "s.", "textStyle": "bold"},
+            {"text": " 1) Click on the proper nouns"}
           ],
           "words": [
-            {
-              "text": "Tom",
-              "feedback": " Yes, and I ain't talking about no drum. He after Jerry"
-            },
-            {
-              "text": "Redwood Forest",
-              "feedback": "Yes, because it's been capitalized, like on a map."
-            },
-            {
-              "text": "Eiffel Tower",
-              "feedback": " Sure, on a tourist brochure, it has no article, but generally speaking it's 'the Eiffel Tower'."
-            },
-            {
-              "text": "river",
-              "feedback": " No, 'river' is a common noun."
-            },
-            {
-              "text": "Amazon River",
-              "feedback": " Yes, it's a proper noun"
-            }
+            {"text": "Tom", "feedback": " Yes, and I ain't talking about no drum. He after Jerry"},
+            {"text": "Redwood Forest", "feedback": "Yes, because it's been capitalized, like on a map."},
+            {"text": "Eiffel Tower", "feedback": " Sure, on a tourist brochure, it has no article, but generally speaking it's 'the Eiffel Tower'."},
+            {"text": "river", "feedback": " No, 'river' is a common noun."},
+            {"text": "Amazon River", "feedback": " Yes, it's a proper noun"}
           ],
           "keyWords": [ "Tom", "Redwood Forest", "Amazon River", "Eiffel Tower"  
 
@@ -876,37 +591,19 @@
           "type": "click",
           "layout": "horizontal",
           "instructions": [
-            {
-              "text": " Objects are the pronouns and noun phrases that follow verbs. Don't get used to hearing this but",
-              "textStyle": "text"
-            },
-            {
-              "text": " you ",
-              "textStyle": "bold"
-            },
-            {
-              "text":" is very useful.",
-              "textStyle":"underline"
-            },
+            {"text": " Objects are the pronouns and noun phrases that follow verbs. Don't get used to hearing this but", "textStyle": "text"},
+            {"text": " you ", "textStyle": "bold"},
+            {"text": " is very useful.", "textStyle": "underline"},
             {"text":"'You' is object and subject, singular and plural. Other pronouns have separate object forms.", "textStyle":"text"},
-            {
-              "text": " them  ",
-              "textStyle": "bold"
-            },
-            {
-              "text": " and   ",
-              "textStyle": "text"
-            },
+            {"text": " them  ", "textStyle": "bold"},
+            {"text": " and   ", "textStyle": "text"},
             {"text":"him ", "textStyle":"bold"},
             {"text":" and ", "textStyle":"bold"},
             {"text":" her ", "textStyle":"bold"},
             {"text": " at ","textStyle":"text"},
             {"text": "yourself" , "textStyle":"underline"},
             {"text":" in the mirror.", "textStyle":"text"},
-            {"text": "Click on the object pronoun in the sentence below:",
-            "textStyle": "italic",
-            "newParagraph":true
-            }
+            {"text": "Click on the object pronoun in the sentence below:", "textStyle": "italic", "newParagraph": true}
             ],
             "words": [
               { "text": "She", "feedback": "No, 'She' is a subject pronoun." },

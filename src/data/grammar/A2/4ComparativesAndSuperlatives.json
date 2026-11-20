@@ -17,158 +17,56 @@
           {"text": " Which is  ", "textStyle": "text"}, 
           {"text": "the lightest ?", "textStyle": "bold"},
           {"text": "Comparative adjectives are formed by adding a suffix to short words:", "textStyle":"text"},
-          {"text": "Use ", "textStyle": "text"
-          },
-          {"text": " more",
-            "textStyle": "bold"},
-          {"text": " before nouns, and also any adjecteves longer than 2 syllables* like ",
-            "textStyle": "text"},
-          {"text": " ellegent ;  ",
-            "textStyle": "italic"},
-          {"text": " more ellegent.",
-            "textStyle": "bold"},
-          {"text": " Short adjectives like",
-            "textStyle": "text"},
-          {"text": " 'light' ",
-            "textStyle": "italic" },
-          { "text": "become ",
-            "textStyle": "text"},
-          {"text": " 'lighter' ",
-           "textStyle": "bold, underline"},
-          {"text": "and",
-            "textStyle": "text"},
-          {"text": "darker ",
-            "textStyle": "bold"},
-          {"text": " but it's not just one syllable words that get ",
-            "textStyle": "text"},
-          {"text":  " er ",
-            "textStyle": "italic"},
-          {"text": " to compare but also 2 syllable adjectives that end in  ",
-            "textStyle":"text"},
-          {"text": "y",
-            "textStyle": "bold, underline"},
-          {"text": "which are rather common.",
-            "textStyle": "text"},
-          {"text": " Long adjectives ending in ",
-            "textStyle": "text"},
-          { "text": "y",
-          "textStyle": "bold, underline"},
-          {"text": " are rarer than anything in English. Common words like",
-          "textStyle": "text"
-          },
-          { "text": " 'deep'",
-            "textStyle": "italic"
-          },
-          {"text": " and ",
-            "textStyle": "text"
-          },
-          { "text": " 'shallow' ",
-          "textStyle": "bold, underline"
-          },
-          {"text": "easily become",
-            "textStyle": "text"
-          },
-          {"text": " 'deeper' .",
-            "textStyle": "italic"
-          },  
-          { "text": "and",
-            "textStyle": "text"
-          },
+          {"text": "Use ", "textStyle": "text"},
+          {"text": " more", "textStyle": "bold"},
+          {"text": " before nouns, and also any adjecteves longer than 2 syllables* like ", "textStyle": "text"},
+          {"text": " ellegent ;  ", "textStyle": "italic"},
+          {"text": " more ellegent.", "textStyle": "bold"},
+          {"text": " Short adjectives like", "textStyle": "text"},
+          {"text": " 'light' ", "textStyle": "italic"},
+          {"text": "become ", "textStyle": "text"},
+          {"text": " 'lighter' ", "textStyle": "bold, underline"},
+          {"text": "and", "textStyle": "text"},
+          {"text": "darker ", "textStyle": "bold"},
+          {"text": " but it's not just one syllable words that get ", "textStyle": "text"},
+          {"text": " er ", "textStyle": "italic"},
+          {"text": " to compare but also 2 syllable adjectives that end in  ", "textStyle": "text"},
+          {"text": "y", "textStyle": "bold, underline"},
+          {"text": "which are rather common.", "textStyle": "text"},
+          {"text": " Long adjectives ending in ", "textStyle": "text"},
+          {"text": "y", "textStyle": "bold, underline"},
+          {"text": " are rarer than anything in English. Common words like", "textStyle": "text"},
+          {"text": " 'deep'", "textStyle": "italic"},
+          {"text": " and ", "textStyle": "text"},
+          {"text": " 'shallow' ", "textStyle": "bold, underline"},
+          {"text": "easily become", "textStyle": "text"},
+          {"text": " 'deeper' .", "textStyle": "italic"},  
+          {"text": "and", "textStyle": "text"},
           {"text": " more shallow ", "textStyle":"italic"},
-          { "text": " and even ",
-            "textStyle": "text"},
-          { "text": " shallower.**",
-            "textStyle": "italic"
-          },         
-          {"text": " If the adjective is long, like ",
-            "textStyle": "text",
-            "newLine": true
-          },
-          { "text": "'beautiful',",
-            "textStyle": "italic"
-          },
-          {"text": " we have to use ",
-            "textStyle": "text"
-          },
-          { "text": " 'more' ",
-            "textStyle": "bold"
-          },
-          { "text": "before the adjective: ",
-            "textStyle": "text"
-          },
-          {
-            "text": "'more beautiful'.",
-            "textStyle": "text"
-          },
-          {
-            "text": " Superlatives use most.",
-            "textStyle": "text",
-            "newParagraph": true
-          },
-          {
-            "text": "We add ",
-            "textStyle": "text"
-          },
-          {
-            "text": "-est",
-            "textStyle": "bold"
-          },
-          {
-            "text": " to short adjectives: ",
-            "textStyle": "text"
-          },
-          {
-            "text": "'tallest'.",
-            "textStyle": "italic"
-          },
-          {
-            "text": " For long adjectives, we use ",
-            "textStyle": "text",
-            "newLine": true
-          },
-          {
-            "text": " 'the most' ",
-            "textStyle": "bold"
-          },
-          {
-            "text": " before the adjective: ",
-            "textStyle": "text"
-          },
-          {
-            "text": "'the most beautiful'.",
-            "textStyle": "italic"
-          },
-          {
-            "text": "Here are some examples:",
-            "textStyle": "text",
-            "newParagraph": true
-          },
-          {
-            "text": " My brother is ",
-            "textStyle": "text",
-            "newLine": true
-          },
-          {
-            "text": "taller",
-            "textStyle": "bold"
-          },
-          {
-            "text": " than me.",
-            "textStyle": "text"
-          },
-          {
-            "text": "She is the ",
-            "textStyle": "text",
-            "newLine": true
-          },
-          {
-            "text": "most beautiful",
-            "textStyle": "bold"
-          },
-          {
-            "text": " girl in the class.",
-            "textStyle": "text"
-          },
+          {"text": " and even ", "textStyle": "text"},
+          {"text": " shallower.**", "textStyle": "italic"},         
+          {"text": " If the adjective is long, like ", "textStyle": "text", "newLine": true},
+          {"text": "'beautiful',", "textStyle": "italic"},
+          {"text": " we have to use ", "textStyle": "text"},
+          {"text": " 'more' ", "textStyle": "bold"},
+          {"text": "before the adjective: ", "textStyle": "text"},
+          {"text": "'more beautiful'.", "textStyle": "text"},
+          {"text": " Superlatives use most.", "textStyle": "text", "newParagraph": true},
+          {"text": "We add ", "textStyle": "text"},
+          {"text": "-est", "textStyle": "bold"},
+          {"text": " to short adjectives: ", "textStyle": "text"},
+          {"text": "'tallest'.", "textStyle": "italic"},
+          {"text": " For long adjectives, we use ", "textStyle": "text", "newLine": true},
+          {"text": " 'the most' ", "textStyle": "bold"},
+          {"text": " before the adjective: ", "textStyle": "text"},
+          {"text": "'the most beautiful'.", "textStyle": "italic"},
+          {"text": "Here are some examples:", "textStyle": "text", "newParagraph": true},
+          {"text": " My brother is ", "textStyle": "text", "newLine": true},
+          {"text": "taller", "textStyle": "bold"},
+          {"text": " than me.", "textStyle": "text"},
+          {"text": "She is the ", "textStyle": "text", "newLine": true},
+          {"text": "most beautiful", "textStyle": "bold"},
+          {"text": " girl in the class.", "textStyle": "text"},
           {"text": "* 2 sylable words ending in y are treated as short adjectives.", "textStyle":"text"},
           {"text": "**  mellow`s another short, 2-sylable adjective", "textStyle":"bold", "newLine":true},
           {"text": " 1) Click on the comparative words in the sentence below.", "textStyle": "italic", "newParagraph": true}
@@ -362,16 +260,8 @@
         {
           "type": "click",
           "instructions": [
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": true
-            },
-            {
-              "text": "__________",
-              "textStyle": "__________",
-              "newParagraph": false
-            }
+            {"text": "__________", "textStyle": "__________", "newParagraph": true},
+            {"text": "__________", "textStyle": "__________", "newParagraph": false}
           ],
           "words": ["__________", "__________", "__________", "__________", "__________", "__________", "__________", "__________"],
           "keyWords": ["__________", "__________", "__________", "__________"]
