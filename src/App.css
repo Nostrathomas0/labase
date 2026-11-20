@@ -138,21 +138,25 @@
   font-family: sans-serif;
 }
 
-.instructions .italic {
+.instructions .italic,
+.flowing-content .italic {
   font-style: italic;
   font-family: sans-serif;
 }
 
-.instructions .bold {
+.instructions .bold,
+.flowing-content .bold {
   font-weight: bold;
   font-family: sans-serif;
 }
 
-.instructions .underline {
+.instructions .underline,
+.flowing-content .underline {
   text-decoration: underline;
 }
 
-.instructions .strike {
+.instructions .strike,
+.flowing-content .strike {
   text-decoration: line-through;
 }
 

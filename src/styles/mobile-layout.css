@@ -7,11 +7,12 @@
      ┌──────────────┐
      │ top bar      │  ~5%  (min 44px)
      ├──────────────┤
-     │ lesson       │  75%  scrolls on its own
+     │ lesson       │  as tall as its content, at most 75%
      ├─── handle ───┤        ‹ Page 1/4 ▲ ›   (tap to swap the sizes)
-     │ exercise     │  20%  scrolls on its own
+     │ exercise     │  the rest, at least 20%
      └──────────────┘
-   Tapping the handle (or the exercise strip) swaps to lesson 20% / exercise 75%.
+   Each panel scrolls on its own. Tapping the handle (or a collapsed exercise
+   strip) swaps the sizes: lesson at most 20%, exercise the rest.
 */
 
 /* The handle bar only exists on phones */
@@ -52,7 +53,7 @@
   }
 
   /* ── Lesson screens: exactly one screen tall, no page scroll ── */
-  .app:has(.lesson-shell) {
+  .app:has(.split-shell) {
     height: 100vh;   /* fallback for older browsers */
     height: 100dvh;  /* the visible height, also when the browser bars show/hide */
     display: flex;
@@ -60,11 +61,11 @@
     overflow: hidden;
   }
 
-  .app:has(.lesson-shell) .main-header {
+  .app:has(.split-shell) .main-header {
     flex: 0 0 auto;
   }
 
-  .app:has(.lesson-shell) .main-content {
+  .app:has(.split-shell) .main-content {
     flex: 1 1 auto;
     min-height: 0;
     padding: 0;
@@ -73,10 +74,10 @@
   }
 
   /* The wrappers between <main> and the split only pass the height down */
-  .app:has(.lesson-shell) .main-content > .main-layout,
-  .app:has(.lesson-shell) .main-content > .main-layout > .layout-full-width,
-  .lesson-shell,
-  .lesson-shell > .main-layout {
+  .app:has(.split-shell) .main-content > .main-layout,
+  .app:has(.split-shell) .main-content > .main-layout > .layout-full-width,
+  .split-shell,
+  .split-shell > .main-layout {
     flex: 1 1 auto;
     min-height: 0;
     display: flex;
@@ -84,23 +85,25 @@
   }
 
   /* Desktop score bar and page turner: replaced by the handle bar on phones */
-  .lesson-shell > .progress-display,
-  .lesson-shell > .page-turner-container {
+  .split-shell > .progress-display,
+  .split-shell > .page-turner-container {
     display: none;
   }
 
-  /* ── The split: stacked, 75 / 20 ─────────────────────── */
-  .lesson-shell .layout-split {
+  /* ── The split: stacked, sized by content ────────────── */
+  /* The lesson panel takes the height its content needs, up to 75%.
+     The exercise panel gets everything else, and never less than 20%.
+     So a long grammar page shows 75 / 20, while a short session page
+     (two lines of instructions) gives the exercise most of the screen. */
+  .split-shell .layout-split {
     flex-direction: column;
     flex: 1 1 auto;
     height: auto;
     min-height: 0;
   }
 
-  .lesson-shell .split-left,
-  .lesson-shell .split-right {
-    flex-basis: 0;
-    flex-shrink: 1;
+  .split-shell .split-left,
+  .split-shell .split-right {
     height: auto;
     min-height: 0;
     overflow-y: auto;
@@ -108,35 +111,34 @@
     overscroll-behavior: contain;
     border-right: none;
     box-sizing: border-box;
-    transition: flex-grow 0.25s ease;
   }
 
-  .lesson-shell .split-left {
-    flex-grow: 75;
+  .split-shell .split-left {
+    flex: 0 1 auto;
+    max-height: 75%;
     padding: 14px 16px;
+    transition: max-height 0.25s ease;
   }
 
-  .lesson-shell .split-right {
-    flex-grow: 20;
+  .split-shell .split-right {
+    flex: 1 1 auto;
+    min-height: 20%;
     padding: 8px 12px calc(12px + env(safe-area-inset-bottom));
     background: #fafbfc;
   }
 
-  .lesson-shell .layout-split[data-focus="exercise"] .split-left {
-    flex-grow: 20;
+  /* Swapped: the lesson shrinks to at most 20%, the exercise takes the rest */
+  .split-shell .layout-split[data-focus="exercise"] .split-left {
+    max-height: 20%;
   }
 
-  .lesson-shell .layout-split[data-focus="exercise"] .split-right {
-    flex-grow: 75;
-  }
-
-  .lesson-shell .layout-split[data-focus="lesson"] .split-right {
+  .split-shell .layout-split[data-focus="lesson"] .split-right {
     cursor: pointer;
   }
 
   /* Exercise panel: "Question 1 of 7" and the dots share one line, so the
      question itself shows even in the collapsed 20% strip */
-  .lesson-shell .split-right .exercise-panel {
+  .split-shell .split-right .exercise-panel {
     height: auto;
     padding: 0;
     display: grid;
@@ -146,25 +148,25 @@
     row-gap: 8px;
   }
 
-  .lesson-shell .split-right .exercise-panel > * {
+  .split-shell .split-right .exercise-panel > * {
     grid-column: 1 / -1;
   }
 
-  .lesson-shell .split-right .exercise-panel > .exercise-progress {
+  .split-shell .split-right .exercise-panel > .exercise-progress {
     grid-column: 1;
     margin: 0;
   }
 
-  .lesson-shell .split-right .progress-info {
+  .split-shell .split-right .progress-info {
     margin: 0;
     font-size: 0.8rem;
   }
 
-  .lesson-shell .split-right .progress-bar {
+  .split-shell .split-right .progress-bar {
     display: none; /* the dots already show progress */
   }
 
-  .lesson-shell .split-right .exercise-panel > .question-navigation {
+  .split-shell .split-right .exercise-panel > .question-navigation {
     grid-column: 2;
     justify-content: flex-end;
     gap: 6px;
@@ -173,32 +175,114 @@
     border: 0;
   }
 
-  .lesson-shell .split-right .nav-dot {
+  .split-shell .split-right .nav-dot {
     width: 10px;
     height: 10px;
   }
 
-  .lesson-shell .split-right .question-container {
+  .split-shell .split-right .question-container {
     min-height: 0;
     justify-content: flex-start;
   }
 
   /* Lesson text: no justified text or side-floated images on a narrow screen */
-  .lesson-shell .flowing-content,
-  .lesson-shell .instructions .paragraph {
+  .split-shell .flowing-content,
+  .split-shell .instructions .paragraph {
     text-align: left;
   }
 
-  .lesson-shell .lesson-image,
-  .lesson-shell .flowing-content .lesson-image {
+  .split-shell .lesson-image,
+  .split-shell .flowing-content .lesson-image {
     float: none;
     max-width: 100%;
     margin: 0 0 12px 0;
     min-height: 0;
   }
 
-  .lesson-shell .flowing-content .lesson-image img {
+  .split-shell .flowing-content .lesson-image img {
     max-height: 35dvh;
+  }
+
+  /* ── Practice exams ──────────────────────────────────── */
+
+  /* Intro card (title, info, instructions, Start): stacked, not side by side */
+  .exam-container {
+    padding: 0;
+  }
+
+  .exam-container .exam-header,
+  .exam-page > .exam-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .exam-page > .exam-header h2 {
+    margin: 0;
+  }
+
+  .exam-container .exam-header h1,
+  .exam-container .exam-header h2 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  .exam-container .start-exam-btn {
+    align-self: stretch;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* Running exam: timer, Finish and section tabs stay pinned at the top of the text */
+  .split-shell .exam-header-controls {
+    position: sticky;
+    top: -14px; /* cancels the panel's top padding so it sits flush */
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+    margin: -14px -16px 8px;
+    padding: 8px 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e3e8ef;
+  }
+
+  .split-shell .exam-header-controls .exam-title {
+    flex: 1 1 100%;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .split-shell .exam-header-controls .exam-timer {
+    flex: 1 1 auto;
+    font-size: 0.9rem;
+  }
+
+  .split-shell .exam-header-controls .finish-exam-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .split-shell .section-navigation {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    padding: 6px 0;
+    margin-bottom: 10px;
+    background: transparent;
+  }
+
+  .split-shell .section-tab {
+    flex: 0 0 auto;
+    max-width: 70vw;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* ── Handle bar ──────────────────────────────────────── */
@@ -250,8 +334,25 @@
 
 /* The swap animation is skipped for people who turn off motion */
 @media (max-width: 768px) and (prefers-reduced-motion: reduce) {
-  .lesson-shell .split-left,
-  .lesson-shell .split-right {
+  .split-shell .split-left {
     transition: none;
+  }
+}
+
+/* ── Premium timeline lessons (all screen sizes) ─────────── */
+/* Images in the one-column timeline layout never run past the screen edge */
+.premium-lesson-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .premium-lesson-content .exercise-panel {
+    padding: 8px 0;
+  }
+
+  .premium-lesson-content .question-container {
+    min-height: 0;
+    justify-content: flex-start;
   }
 }

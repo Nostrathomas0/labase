@@ -31,7 +31,11 @@ const MainLayout = (props) => {
   const handleExerciseTapCapture = (e) => {
     const isPhone = typeof window !== 'undefined' &&
       window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
-    if (isPhone && focus === 'lesson') {
+    const panel = e.currentTarget;
+    const split = panel.parentElement;
+    // Only when the strip is actually small (short lessons already give it most of the screen)
+    const isCollapsed = split && panel.getBoundingClientRect().height < split.getBoundingClientRect().height * 0.35;
+    if (isPhone && focus === 'lesson' && isCollapsed) {
       e.preventDefault();
       e.stopPropagation();
       setFocus('exercise');
@@ -39,7 +43,8 @@ const MainLayout = (props) => {
   };
 
   // A new page starts with the lesson in view
-  React.useEffect(() => { setFocus('lesson'); }, [data]);
+  const sectionKey = lessonData && lessonData.lessonId;
+  React.useEffect(() => { setFocus('lesson'); }, [data, sectionKey]);
 
   // Auto-parse data if provided
   const parsedContent = React.useMemo(() => {
@@ -58,6 +63,51 @@ const MainLayout = (props) => {
   const hasDataForSplit = finalLeftContent || finalExerciseData;
   
   console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData);
+
+
+  // Mobile handle bar between the stacked panels (hidden on desktop by CSS):
+  // optional previous/next page buttons + a toggle that swaps the panel sizes.
+  const renderHandle = () => (
+    <div className="split-handle">
+      {pageNav && (
+        <button
+          type="button"
+          className="split-handle-page"
+          onClick={pageNav.onPrev}
+          disabled={pageNav.disabled || pageNav.current <= 1}
+          aria-label="Previous page"
+        >
+          ‹
+        </button>
+      )}
+      <button
+        type="button"
+        className="split-handle-toggle"
+        onClick={toggleFocus}
+        aria-expanded={focus === 'exercise'}
+        aria-label={focus === 'lesson' ? 'Expand exercises' : 'Expand lesson'}
+      >
+        <span className="split-handle-grip" aria-hidden="true" />
+        <span className="split-handle-label">
+          {pageNav ? `Page ${pageNav.current} / ${pageNav.total}` : (focus === 'lesson' ? 'Questions' : 'Text')}
+          <span className="split-handle-arrow" aria-hidden="true">
+            {focus === 'lesson' ? ' ▲' : ' ▼'}
+          </span>
+        </span>
+      </button>
+      {pageNav && (
+        <button
+          type="button"
+          className="split-handle-page"
+          onClick={pageNav.onNext}
+          disabled={pageNav.disabled || pageNav.current >= pageNav.total}
+          aria-label="Next page"
+        >
+          ›
+        </button>
+      )}
+    </div>
+  );
 
   const renderLayout = () => {
     switch (layoutType) {
@@ -79,46 +129,7 @@ const MainLayout = (props) => {
                 {finalLeftContent}
               </div>
 
-              {/* Mobile handle bar (hidden on desktop): page controls + resize toggle */}
-              <div className="split-handle">
-                {pageNav && (
-                  <button
-                    type="button"
-                    className="split-handle-page"
-                    onClick={pageNav.onPrev}
-                    disabled={pageNav.disabled || pageNav.current <= 1}
-                    aria-label="Previous page"
-                  >
-                    ‹
-                  </button>
-                )}
-                <button
-                  type="button"
-                  className="split-handle-toggle"
-                  onClick={toggleFocus}
-                  aria-expanded={focus === 'exercise'}
-                  aria-label={focus === 'lesson' ? 'Expand exercises' : 'Expand lesson'}
-                >
-                  <span className="split-handle-grip" aria-hidden="true" />
-                  <span className="split-handle-label">
-                    {pageNav ? `Page ${pageNav.current} / ${pageNav.total}` : ''}
-                    <span className="split-handle-arrow" aria-hidden="true">
-                      {focus === 'lesson' ? ' ▲' : ' ▼'}
-                    </span>
-                  </span>
-                </button>
-                {pageNav && (
-                  <button
-                    type="button"
-                    className="split-handle-page"
-                    onClick={pageNav.onNext}
-                    disabled={pageNav.disabled || pageNav.current >= pageNav.total}
-                    aria-label="Next page"
-                  >
-                    ›
-                  </button>
-                )}
-              </div>
+              {renderHandle()}
 
               <div className="split-right grammar-exercises" onClickCapture={handleExerciseTapCapture}>
                 {finalExerciseData && progressManager ? (
@@ -150,11 +161,14 @@ const MainLayout = (props) => {
         // Only create split layout if we have data for it
         if (hasDataForSplit) {
           return (
-            <div className="layout-split exam-layout">
+            <div className="layout-split exam-layout" data-focus={focus}>
               <div className="split-left exam-text">
                 {finalLeftContent}
               </div>
-              <div className="split-right exam-questions">
+
+              {renderHandle()}
+
+              <div className="split-right exam-questions" onClickCapture={handleExerciseTapCapture}>
                 {finalExerciseData && progressManager ? (
                   <ExercisePanel
                     lessonData={finalExerciseData}

@@ -120,12 +120,12 @@ export const EXAMS = [
       ['Level', 'B2 level (CECR framework)'],
     ],
     tests: [
-      { id: 'fede-juin-2023', title: 'FEDE Practice Test 1',
-        description: 'Amazon Growth, iPhone Factory, Biden Car Persona',
-        load: () => import('../data/exams/fede/Juin2023.json') },
-      { id: 'fede-jan-2023', title: 'FEDE Practice Test 2',
-        description: 'Drought Risk, Elon Musk Twitter, Europe Energy',
+      { id: 'fede-jan-2023', title: 'FEDE Practice Test 1',
+        description: 'Amazon Returns to Growth, China\'s Covid Lockdown, Gap Fill',
         load: () => import('../data/exams/fede/Jan2023.json') },
+      { id: 'fede-juin-2023', title: 'FEDE Practice Test 2',
+        description: 'Drought Risk, Elon Musk\'s Twitter Deal, Gap Fill',
+        load: () => import('../data/exams/fede/Juin2023.json') },
     ],
   },
   {

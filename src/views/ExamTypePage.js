@@ -144,10 +144,10 @@ const ExamTypePage = () => {
     );
   }
 
-  // The exam
+  // The exam (split-shell: stacked text / questions on phones)
   return (
     <MainLayout layoutType="exam">
-      <div className={pageClass}>
+      <div className={`${pageClass} split-shell`}>
         <ExamContainer
           key={`${selected.test.id}-${attempt}`}
           examData={selected.data}

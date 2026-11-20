@@ -22,7 +22,7 @@ const StandardLesson = ({ lesson, lessonData, progressManager, nextUrl }) => {
   const saved = saveStatus.includes('successfully') || saveStatus.includes('saved!');
 
   return (
-    <div className="lesson-shell">
+    <div className="lesson-shell split-shell">
       <div className="progress-display">
         <div className="progress-content">
           <div>

@@ -197,7 +197,7 @@
           ]
         },
         {
-          "type": "multiple choice",
+          "type": "multipleChoice",
           "question": "Click on what setting doesn't describe",
           "options": ["where", "when", "what happened", "weather"],
           "correctAnswer": "what happened"

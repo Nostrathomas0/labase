@@ -31,20 +31,8 @@
                 {
                     "type": "multipleChoice",
                     "question": "Which of the following sentences is correct?",
-                    "options": [
-                        {
-                            "text": "I can to swim.",
-                            "isCorrect": false
-                        },
-                        {
-                            "text": "I can swim.",
-                            "isCorrect": true
-                        },
-                        {
-                            "text": "I can swimming.",
-                            "isCorrect": false
-                        }
-                    ]
+                    "options": ["I can to swim.", "I can swim.", "I can swimming."],
+                    "correctAnswer": "I can swim."
                 },
                 {}
             ]

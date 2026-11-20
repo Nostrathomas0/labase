@@ -28,24 +28,8 @@
                 {
                     "type": "multipleChoice",
                     "question": "Which of the following sentences contains a gerund?",
-                    "options": [
-                        {
-                            "text": "I like to read books.",
-                            "isCorrect": false
-                        },
-                        {
-                            "text": "Reading books is my favorite hobby.",
-                            "isCorrect": true
-                        },
-                        {
-                            "text": "She is going to the store.",
-                            "isCorrect": false
-                        },
-                        {
-                            "text": "He plays football every weekend.",
-                            "isCorrect": false  
-}       
-                    ]
+                    "options": ["I like to read books.", "Reading books is my favorite hobby.", "She is going to the store.", "He plays football every weekend."],
+                    "correctAnswer": "Reading books is my favorite hobby."
                 }
             ]
         }
