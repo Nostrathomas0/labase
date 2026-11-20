@@ -1,57 +1,92 @@
 #!/usr/bin/env node
 // scripts/build-sessions.js
-// Runs before `npm start` / `npm run build`.
-// 1. Validates every content/sessions/<id>/lesson.json (a broken lesson stops the build,
-//    so it can never be deployed).
-// 2. Copies them into src/data/sessions/ (generated, git-ignored) with an index the app
-//    imports, so each session is its own chunk loaded at /session/<id>.
+// Runs before `npm start` / `npm run build`. See CONTENT.md for the rules.
 //
-// Temporary: once session lessons are uploaded to Firestore, the app reads them from
-// there and this bundling step goes away.
+//   content/lessons/<CODE>.json   app exercises for one session
+//   content/vocab/<CODE>.md       vocab list for that session's reminder email
+//
+// 1. Checks every lesson has a vocab file with the same name and vice versa,
+//    and that each lesson's "id" matches its file name.
+// 2. Validates every lesson (a broken lesson stops the build, so it can't deploy).
+// 3. Copies lessons into src/data/sessions/ (generated, git-ignored) with an index,
+//    so each session loads at /session/<CODE>.
+//
+// Step 3 is temporary: once session lessons are served from Firestore, the app
+// reads them from there and nothing from content/ is bundled.
 
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 
 const root = path.join(__dirname, '..');
-const srcDir = path.join(root, 'content', 'sessions');
+const lessonsDir = path.join(root, 'content', 'lessons');
+const vocabDir = path.join(root, 'content', 'vocab');
 const outDir = path.join(root, 'src', 'data', 'sessions');
 
-const ids = fs.existsSync(srcDir)
-  ? fs.readdirSync(srcDir).filter((d) => fs.existsSync(path.join(srcDir, d, 'lesson.json'))).sort()
-  : [];
+const codesIn = (dir, ext) =>
+  fs.existsSync(dir)
+    ? fs.readdirSync(dir).filter((f) => f.endsWith(ext)).map((f) => f.slice(0, -ext.length)).sort()
+    : [];
 
-if (ids.length) {
+const lessonCodes = codesIn(lessonsDir, '.json');
+const vocabCodes = codesIn(vocabDir, '.md');
+const problems = [];
+
+lessonCodes.forEach((code) => {
+  if (!/^[A-Za-z0-9][A-Za-z0-9_-]*$/.test(code)) {
+    problems.push(`content/lessons/${code}.json: file name may only use letters, numbers, - and _`);
+  }
+  if (!vocabCodes.includes(code)) problems.push(`content/lessons/${code}.json has no content/vocab/${code}.md`);
+});
+vocabCodes.forEach((code) => {
+  if (!lessonCodes.includes(code)) problems.push(`content/vocab/${code}.md has no content/lessons/${code}.json`);
+});
+
+const lessons = {};
+lessonCodes.forEach((code) => {
+  try {
+    lessons[code] = JSON.parse(fs.readFileSync(path.join(lessonsDir, `${code}.json`), 'utf8'));
+    if (lessons[code].id !== code) {
+      problems.push(`content/lessons/${code}.json: "id" is "${lessons[code].id}" but must be "${code}" (the file name)`);
+    }
+  } catch (e) {
+    problems.push(`content/lessons/${code}.json: not valid JSON (${e.message})`);
+  }
+});
+
+if (lessonCodes.length) {
   try {
     execFileSync(process.execPath,
-      [path.join(__dirname, 'validate-lesson.js'), ...ids.map((id) => path.join(srcDir, id, 'lesson.json'))],
+      [path.join(__dirname, 'validate-lesson.js'),
+        ...lessonCodes.map((c) => path.relative(process.cwd(), path.join(lessonsDir, `${c}.json`)))],
       { stdio: 'inherit' });
   } catch (e) {
-    console.error('\nSession lessons have errors (above). Fix them before building.');
-    process.exit(1);
+    problems.push('lesson errors listed above');
   }
+}
+
+if (problems.length) {
+  console.error('\nSession content problems:');
+  problems.forEach((p) => console.error(`  - ${p}`));
+  console.error('Fix these before building. Rules: CONTENT.md');
+  process.exit(1);
 }
 
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
 
-const entries = ids.map((id) => {
-  if (!/^[a-z0-9][a-z0-9_-]*$/i.test(id)) {
-    console.error(`Session folder name "${id}" must use only letters, numbers, - and _`);
-    process.exit(1);
-  }
-  const lesson = JSON.parse(fs.readFileSync(path.join(srcDir, id, 'lesson.json'), 'utf8'));
-  fs.copyFileSync(path.join(srcDir, id, 'lesson.json'), path.join(outDir, `${id}.json`));
-  return `  ${JSON.stringify(id)}: {\n` +
-    `    id: ${JSON.stringify(id)},\n` +
-    `    title: ${JSON.stringify(lesson.title || id)},\n` +
-    `    classId: ${JSON.stringify(lesson.class_id || '')},\n` +
-    `    load: () => import('./${id}.json'),\n` +
+const entries = lessonCodes.map((code) => {
+  fs.copyFileSync(path.join(lessonsDir, `${code}.json`), path.join(outDir, `${code}.json`));
+  return `  ${JSON.stringify(code)}: {\n` +
+    `    id: ${JSON.stringify(code)},\n` +
+    `    title: ${JSON.stringify(lessons[code].title || code)},\n` +
+    `    classId: ${JSON.stringify(lessons[code].class_id || '')},\n` +
+    `    load: () => import('./${code}.json'),\n` +
     '  },';
 });
 
 fs.writeFileSync(path.join(outDir, 'index.js'),
-  '// GENERATED by scripts/build-sessions.js — do not edit. Source: content/sessions/\n' +
+  '// GENERATED by scripts/build-sessions.js — do not edit. Source: content/lessons/\n' +
   `export const SESSIONS = {\n${entries.join('\n')}\n};\n`);
 
-console.log(`Bundled ${ids.length} session lesson${ids.length === 1 ? '' : 's'}.`);
+console.log(`Bundled ${lessonCodes.length} session lesson${lessonCodes.length === 1 ? '' : 's'}.`);
