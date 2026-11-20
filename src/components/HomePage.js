@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 
 const HomePage = () => {
-  const { currentUser, loading } = useAuth();
+  const { currentUser, loading, signOut } = useAuth();
+  const navigate = useNavigate();
 
   // Show loading while checking authentication
   if (loading) {
@@ -70,10 +72,9 @@ const HomePage = () => {
       
       <footer className="app-footer">
         <button 
-          onClick={() => {
-            // Clear JWT and redirect to main domain for sign out
-            document.cookie = "JWT=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.languapps.com";
-            window.location.href = "https://languapps.com";
+          onClick={async () => {
+            await signOut();
+            navigate('/login', { replace: true });
           }}
           className="sign-out-button"
         >

@@ -1,10 +1,10 @@
 // MainHeader.js
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
-import { clearJwtToken } from '../../utils/authUtils';
 const MainHeader = ({ onToggleSidebar, progressManager }) => {
-  const { currentUser } = useAuth();
+  const { currentUser, signOut } = useAuth();
+  const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(!!currentUser);
   const [currentScore, setCurrentScore] = useState(null);
   const [overallStats, setOverallStats] = useState(null);
@@ -30,10 +30,14 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, [isLoggedIn, progressManager]);
 
-  const handleLogout = () => {
-  clearJwtToken();
-  window.location.href = 'https://languapps.com/?logout=1';
-};
+  // Sign out of the app and return to the sign-in screen (the website session is separate)
+  const handleLogout = async () => {
+    try {
+      await signOut();
+    } finally {
+      navigate('/login', { replace: true });
+    }
+  };
  
 
   return (

@@ -2,7 +2,6 @@ import Cookies from 'js-cookie';
 import { auth } from '../firebaseInit';
 import { jwtDecode } from 'jwt-decode';
 
-console.log("Firebase Auth:", auth);
 
 const getJwtTokenManual = () => {
   const cookies = document.cookie.split(';');
@@ -16,26 +15,21 @@ const getJwtTokenManual = () => {
  * @returns {Promise<string|null>} - Always returns a Promise that resolves to the JWT token or null.
  */
 export const getJwtToken = async (retries = 3) => {
-  console.log('All cookies raw:', document.cookie);
   
   // Try js-cookie first
   let token = Cookies.get('JWT');
-  console.log('js-cookie result:', token);
   
   // If js-cookie fails, try manual reading
   if (!token) {
     token = getJwtTokenManual();
-    console.log('Manual cookie reading result:', token);
   }
   
   // If still no token and we have retries left, wait a bit and try again
   if (!token && retries > 0) {
-    console.log(`No token found, retrying... (${retries} attempts left)`);
     await new Promise(resolve => setTimeout(resolve, 100)); // Wait 100ms
     return getJwtToken(retries - 1); // Recursive call
   }
   
-  console.log('Retrieved JWT from storage:', token ? 'Found' : 'Not found');
   return token || null;
 };
 
@@ -101,7 +95,6 @@ export const authenticateWithJwt = async () => {
     }
 
     const decodedToken = jwtDecode(token);
-    console.log('Decoded JWT:', decodedToken);
     
     // Check if token is expired
     const currentTime = Date.now() / 1000;

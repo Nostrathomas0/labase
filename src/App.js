@@ -2,6 +2,7 @@
 import './firebaseInit';
 import './App.css';
 import './styles/mobile-layout.css';
+import './styles/auth.css';
 import { useState } from 'react';
 import { AuthProvider } from './components/AuthContext';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
@@ -14,6 +15,7 @@ import HamburgerNavigation from './components/layout/HamburgerNavigation';
 
 // Views — every lesson, level and exam is driven by src/catalogue/catalogue.js
 import HomePage from './components/HomePage';
+import LoginPage from './views/LoginPage';
 import LevelPage from './views/LevelPage';
 import LessonPage from './views/LessonPage';
 import ExamsHomePage from './views/ExamsHomePage';
@@ -43,7 +45,7 @@ function App() {
 
           <main className="main-content">
             <Routes>
-              <Route path="/login" element={<HomePage />} />
+              <Route path="/login" element={<LoginPage />} />
               <Route path="/" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
 
               {/* Exams — static paths outrank the :level routes below */}
