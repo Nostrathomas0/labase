@@ -15,8 +15,31 @@ const MainLayout = (props) => {
     lessonData = null,
     progressManager = null,
     onQuestionComplete = null,
-    onLessonComplete = null
+    onLessonComplete = null,
+    // Optional page controls shown in the mobile handle bar:
+    // { current (1-based), total, onPrev, onNext, disabled }
+    pageNav = null
   } = props;
+
+  // Mobile only: which panel gets the large share of the screen.
+  // 'lesson' = lesson 75% / exercise 20% (default); 'exercise' = the reverse.
+  const [focus, setFocus] = React.useState('lesson');
+  const toggleFocus = () => setFocus((f) => (f === 'lesson' ? 'exercise' : 'lesson'));
+
+  // On phones, the first tap on the collapsed exercise strip only expands it,
+  // so a student can't pick an answer by accident while it's small.
+  const handleExerciseTapCapture = (e) => {
+    const isPhone = typeof window !== 'undefined' &&
+      window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    if (isPhone && focus === 'lesson') {
+      e.preventDefault();
+      e.stopPropagation();
+      setFocus('exercise');
+    }
+  };
+
+  // A new page starts with the lesson in view
+  React.useEffect(() => { setFocus('lesson'); }, [data]);
 
   // Auto-parse data if provided
   const parsedContent = React.useMemo(() => {
@@ -51,11 +74,53 @@ const MainLayout = (props) => {
         // Only create split layout if we have data for it
         if (hasDataForSplit) {
           return (
-            <div className="layout-split grammar-layout">
+            <div className="layout-split grammar-layout" data-focus={focus}>
               <div className="split-left grammar-content">
                 {finalLeftContent}
               </div>
-              <div className="split-right grammar-exercises">
+
+              {/* Mobile handle bar (hidden on desktop): page controls + resize toggle */}
+              <div className="split-handle">
+                {pageNav && (
+                  <button
+                    type="button"
+                    className="split-handle-page"
+                    onClick={pageNav.onPrev}
+                    disabled={pageNav.disabled || pageNav.current <= 1}
+                    aria-label="Previous page"
+                  >
+                    ‹
+                  </button>
+                )}
+                <button
+                  type="button"
+                  className="split-handle-toggle"
+                  onClick={toggleFocus}
+                  aria-expanded={focus === 'exercise'}
+                  aria-label={focus === 'lesson' ? 'Expand exercises' : 'Expand lesson'}
+                >
+                  <span className="split-handle-grip" aria-hidden="true" />
+                  <span className="split-handle-label">
+                    {pageNav ? `Page ${pageNav.current} / ${pageNav.total}` : ''}
+                    <span className="split-handle-arrow" aria-hidden="true">
+                      {focus === 'lesson' ? ' ▲' : ' ▼'}
+                    </span>
+                  </span>
+                </button>
+                {pageNav && (
+                  <button
+                    type="button"
+                    className="split-handle-page"
+                    onClick={pageNav.onNext}
+                    disabled={pageNav.disabled || pageNav.current >= pageNav.total}
+                    aria-label="Next page"
+                  >
+                    ›
+                  </button>
+                )}
+              </div>
+
+              <div className="split-right grammar-exercises" onClickCapture={handleExerciseTapCapture}>
                 {finalExerciseData && progressManager ? (
                   <ExercisePanel
                     lessonData={finalExerciseData}

@@ -22,7 +22,7 @@ const StandardLesson = ({ lesson, lessonData, progressManager, nextUrl }) => {
   const saved = saveStatus.includes('successfully') || saveStatus.includes('saved!');
 
   return (
-    <div>
+    <div className="lesson-shell">
       <div className="progress-display">
         <div className="progress-content">
           <div>
@@ -49,6 +49,13 @@ const StandardLesson = ({ lesson, lessonData, progressManager, nextUrl }) => {
         progressManager={progressManager}
         onQuestionComplete={handleQuestionComplete}
         onLessonComplete={handleLessonComplete}
+        pageNav={{
+          current: currentPage + 1,
+          total: totalPages,
+          onPrev: previousPage,
+          onNext: nextPage,
+          disabled: isLoading,
+        }}
       />
 
       <PageTurner

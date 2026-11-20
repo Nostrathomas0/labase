@@ -1,0 +1,257 @@
+/* src/styles/mobile-layout.css
+   Phone layout (screens up to 768px wide). Loaded after App.css, so these rules win.
+   Desktop is unchanged: everything below is inside the media query except the
+   one line that hides the phone-only handle bar.
+
+   Lesson screens on a phone:
+     ┌──────────────┐
+     │ top bar      │  ~5%  (min 44px)
+     ├──────────────┤
+     │ lesson       │  75%  scrolls on its own
+     ├─── handle ───┤        ‹ Page 1/4 ▲ ›   (tap to swap the sizes)
+     │ exercise     │  20%  scrolls on its own
+     └──────────────┘
+   Tapping the handle (or the exercise strip) swaps to lesson 20% / exercise 75%.
+*/
+
+/* The handle bar only exists on phones */
+.split-handle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* ── Top bar (all pages) ─────────────────────────────── */
+  .main-header {
+    height: max(5dvh, 44px);
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .main-header .header-left {
+    gap: 10px;
+    opacity: 1;
+  }
+
+  .main-header .header-logo {
+    font-size: 1.15rem;
+  }
+
+  .main-header .header-right {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .main-header .user-welcome {
+    display: none;
+  }
+
+  .main-header .logout-btn,
+  .main-header .login-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* ── Lesson screens: exactly one screen tall, no page scroll ── */
+  .app:has(.lesson-shell) {
+    height: 100vh;   /* fallback for older browsers */
+    height: 100dvh;  /* the visible height, also when the browser bars show/hide */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .app:has(.lesson-shell) .main-header {
+    flex: 0 0 auto;
+  }
+
+  .app:has(.lesson-shell) .main-content {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* The wrappers between <main> and the split only pass the height down */
+  .app:has(.lesson-shell) .main-content > .main-layout,
+  .app:has(.lesson-shell) .main-content > .main-layout > .layout-full-width,
+  .lesson-shell,
+  .lesson-shell > .main-layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Desktop score bar and page turner: replaced by the handle bar on phones */
+  .lesson-shell > .progress-display,
+  .lesson-shell > .page-turner-container {
+    display: none;
+  }
+
+  /* ── The split: stacked, 75 / 20 ─────────────────────── */
+  .lesson-shell .layout-split {
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  .lesson-shell .split-left,
+  .lesson-shell .split-right {
+    flex-basis: 0;
+    flex-shrink: 1;
+    height: auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    border-right: none;
+    box-sizing: border-box;
+    transition: flex-grow 0.25s ease;
+  }
+
+  .lesson-shell .split-left {
+    flex-grow: 75;
+    padding: 14px 16px;
+  }
+
+  .lesson-shell .split-right {
+    flex-grow: 20;
+    padding: 8px 12px calc(12px + env(safe-area-inset-bottom));
+    background: #fafbfc;
+  }
+
+  .lesson-shell .layout-split[data-focus="exercise"] .split-left {
+    flex-grow: 20;
+  }
+
+  .lesson-shell .layout-split[data-focus="exercise"] .split-right {
+    flex-grow: 75;
+  }
+
+  .lesson-shell .layout-split[data-focus="lesson"] .split-right {
+    cursor: pointer;
+  }
+
+  /* Exercise panel: "Question 1 of 7" and the dots share one line, so the
+     question itself shows even in the collapsed 20% strip */
+  .lesson-shell .split-right .exercise-panel {
+    height: auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+
+  .lesson-shell .split-right .exercise-panel > * {
+    grid-column: 1 / -1;
+  }
+
+  .lesson-shell .split-right .exercise-panel > .exercise-progress {
+    grid-column: 1;
+    margin: 0;
+  }
+
+  .lesson-shell .split-right .progress-info {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  .lesson-shell .split-right .progress-bar {
+    display: none; /* the dots already show progress */
+  }
+
+  .lesson-shell .split-right .exercise-panel > .question-navigation {
+    grid-column: 2;
+    justify-content: flex-end;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .lesson-shell .split-right .nav-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .lesson-shell .split-right .question-container {
+    min-height: 0;
+    justify-content: flex-start;
+  }
+
+  /* Lesson text: no justified text or side-floated images on a narrow screen */
+  .lesson-shell .flowing-content,
+  .lesson-shell .instructions .paragraph {
+    text-align: left;
+  }
+
+  .lesson-shell .lesson-image,
+  .lesson-shell .flowing-content .lesson-image {
+    float: none;
+    max-width: 100%;
+    margin: 0 0 12px 0;
+    min-height: 0;
+  }
+
+  .lesson-shell .flowing-content .lesson-image img {
+    max-height: 35dvh;
+  }
+
+  /* ── Handle bar ──────────────────────────────────────── */
+  .split-handle {
+    display: flex;
+    align-items: stretch;
+    flex: 0 0 40px;
+    background: #f1f4f8;
+    border-top: 1px solid #dde3ea;
+    border-bottom: 1px solid #dde3ea;
+  }
+
+  .split-handle-toggle {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border: 0;
+    background: transparent;
+    color: #34495e;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .split-handle-grip {
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    background: #b8c2cc;
+  }
+
+  .split-handle-page {
+    flex: 0 0 52px;
+    border: 0;
+    background: transparent;
+    color: #007bff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .split-handle-page:disabled {
+    color: #c5ccd3;
+    cursor: default;
+  }
+}
+
+/* The swap animation is skipped for people who turn off motion */
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .lesson-shell .split-left,
+  .lesson-shell .split-right {
+    transition: none;
+  }
+}
