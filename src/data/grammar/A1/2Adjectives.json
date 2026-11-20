@@ -28,8 +28,7 @@
             {"text": "Adjectives go before the thing they describe, for example; ", "textStyle": "text", "newParagraph": true},
             {"text": "I have a", "textStyle": "text"},
             {"text": " quick class ", "textStyle": "italic"},
-             { "textStyle": "italic"
-            },
+             {"textStyle": "italic"},
              {"text": "clean shoes.", "textStyle": "italic"},
             {"text": "You can use many adjectives side by side  : A", "textStyle": "text", "newParagraph": true},
             {"text": " good, old, rusty, red ", "textStyle": "italic"},
@@ -49,8 +48,7 @@
             {"text": "Click the adjectives in the sentences below.", "textStyle": "text", "newParagraph": true}
           ],
           "words": [
-            {  "feedback": "Incorrect, 'Autumn' is a noun"
-            },
+            {"feedback": "Incorrect, 'Autumn' is a noun"},
             {"text": "is ", "feedback": "Incorrect, 'is' is a verb"},
             {"text": "the", "feedback": "Incorrect, 'the' is an article"},
             {"text": "rainy ", "feedback": "Correct"},
