@@ -30,14 +30,11 @@ function GapFill({
     e.preventDefault();
     if (answered) return;
 
-    console.log("User Input:", userInput.trim().toLowerCase());
-    console.log("Correct Answers:", correctAnswers);
 
     const isCorrect = correctAnswers.some(answer => 
       answer.toLowerCase() === userInput.trim().toLowerCase()
     );
 
-    console.log("Is Correct:", isCorrect);
 
     if (progressManager) {
       // New progress tracking system

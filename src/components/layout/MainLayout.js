@@ -49,9 +49,7 @@ const MainLayout = (props) => {
   // Auto-parse data if provided
   const parsedContent = React.useMemo(() => {
     if (data) {
-      console.log('Parsing data:', data);
       const result = parseContent(data);
-      console.log('Parse result:', result);
       return result;
     }
     return { leftContent: null, exerciseData: null };
@@ -62,7 +60,6 @@ const MainLayout = (props) => {
   const finalExerciseData = parsedContent.exerciseData || lessonData;
   const hasDataForSplit = finalLeftContent || finalExerciseData;
   
-  console.log('Final content - Left:', !!finalLeftContent, 'Exercise:', !!finalExerciseData);
 
 
   // Mobile handle bar between the stacked panels (hidden on desktop by CSS):

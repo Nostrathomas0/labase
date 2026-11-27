@@ -28,9 +28,7 @@ function registerValidSW(swUrl) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              console.log('New content available — will load on next visit.');
             } else {
-              console.log('Content cached for offline use.');
             }
           }
         };
@@ -54,7 +52,7 @@ function checkValidServiceWorker(swUrl) {
         registerValidSW(swUrl);
       }
     })
-    .catch(() => console.log('No internet connection. App running in offline mode.'));
+    .catch(() => {}); // offline: the app keeps running from the cache
 }
 
 export function unregister() {

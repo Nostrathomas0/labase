@@ -4,7 +4,7 @@ import imageMap from '../../imageMap';
 
 function ImageDisplay({ imagePath, altText = 'image' }) {
   const ImageSrc = imageMap[imagePath];
-  console.log('Rendering image:', imagePath, ImageSrc); // Add this line for debugging
+   // Add this line for debugging
 
   if (!ImageSrc) {
     console.error(`Image not found for path: ${imagePath}`);

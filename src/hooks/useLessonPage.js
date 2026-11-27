@@ -85,23 +85,18 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
 
   // Called when individual questions are answered
   const handleQuestionComplete = useCallback((answerData) => {
-    console.log('Question completed:', answerData);
   }, []);
 
   // Called when all questions on page are completed
   const handleLessonComplete = useCallback(async (completionData) => {
-    console.log('Lesson completed:', completionData);
-    console.log('currentPage:', currentPage);
-    console.log('total pages:', pages.length);
 
     setIsLoading(true);
     setSaveStatus('Completing page...');
 
     try {
       const result = await progressManager.completePage();
-      console.log('Page completion result:', result);
 
-      if (result.jwtUpdated) {
+      if (result.saved) {
         const passed = result.passed;
         const score = result.score;
 
@@ -132,7 +127,7 @@ export const useLessonPage = (lessonData, progressManager, level, topic, nextPag
           setSaveStatus(`Score below 60%. Review and try again!`);
         }
       } else {
-        // Sandbox / no JWT — still mark page complete locally
+        // Not signed in — still mark page complete locally
         if (!completedPages.includes(currentPage)) {
           setCompletedPages(prev => [...prev, currentPage]);
         }

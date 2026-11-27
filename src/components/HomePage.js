@@ -65,7 +65,6 @@ const HomePage = () => {
           
           <div className="user-info">
             <p><strong>User ID:</strong> {currentUser.uid}</p>
-            <p><strong>Auth Type:</strong> {currentUser.isJwtUser ? 'JWT Token' : 'Firebase'}</p>
           </div>
         </div>
       </main>

@@ -40,7 +40,7 @@ useEffect(() => {
   const handleCompletePage = async () => {
     if (progressManager) {
       const result = await progressManager.completePage();
-      if (result.jwtUpdated) {
+      if (result.saved) {
         alert(`Page completed! Score: ${result.score}%`);
         updateScores(); // Refresh displayed scores
         onClose(); // Close menu after completion

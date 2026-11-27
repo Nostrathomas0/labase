@@ -14,13 +14,11 @@ const getTextStyleClass = (textStyle) => {
 };
 
 const Instructions = ({ instructions = [] }) => {
-  console.log('Rendering Instructions with instructions:', instructions);
 
   const paragraphs = [];
   let currentParagraph = [];
 
   instructions.forEach((instruction, index) => {
-    console.log(`Processing instruction ${index}:`, instruction);
     
     // If newParagraph is true, push current paragraph to paragraphs array and start a new paragraph
     if (instruction.newParagraph) {
@@ -32,7 +30,6 @@ const Instructions = ({ instructions = [] }) => {
 
     // Use STATIC class mapping instead of dynamic generation
     const staticClassName = getTextStyleClass(instruction.textStyle);
-    console.log(`Instruction ${index} textStyle: "${instruction.textStyle}" -> static className: "${staticClassName}"`);
 
     currentParagraph.push(
       <React.Fragment key={index}>

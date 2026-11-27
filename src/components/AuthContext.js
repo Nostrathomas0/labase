@@ -6,9 +6,9 @@
 // from Firestore users/{uid}, so changes made in the console or by the Stripe
 // webhook apply immediately, with no sign-out needed.
 //
-// Transition: if there is no Firebase session but a valid JWT cookie from
-// languapps.com, that JWT is still accepted (read-only, as before). Remove
-// this fallback once progress no longer uses the JWT.
+// Coming from languapps.com: the website sends the user to the app with a
+// one-time Firebase custom token in the address (#handoff=...). The app signs
+// in with it and removes it from the address straight away.
 
 import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import {
@@ -19,12 +19,11 @@ import {
   getRedirectResult,
   GoogleAuthProvider,
   sendPasswordResetEmail,
+  signInWithCustomToken,
   signOut as firebaseSignOut,
 } from 'firebase/auth';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { auth, db } from '../firebaseInit';
-import { jwtDecode } from 'jwt-decode';
-import { getJwtToken, clearJwtToken } from '../utils/authUtils';
 
 const AuthContext = createContext(null);
 
@@ -34,35 +33,32 @@ const isStandaloneApp = () =>
   ((window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
     window.navigator.standalone === true);
 
-// A JWT cookie from languapps.com, if present and not expired (transition only)
-const readJwtUser = async () => {
-  try {
-    const token = await getJwtToken(0);
-    if (!token) return null;
-    const payload = jwtDecode(token);
-    if (!payload.uid || (payload.exp && payload.exp * 1000 < Date.now())) {
-      clearJwtToken();
-      return null;
-    }
-    return {
-      uid: payload.uid,
-      email: payload.email || '',
-      displayName: '',
-      premium: payload.premium === true,
-      isJwtUser: true,
-    };
-  } catch (error) {
-    clearJwtToken();
-    return null;
-  }
+// One-time sign-in token from languapps.com, read once when the app loads.
+// It is taken out of the address at once so it is never bookmarked or shared.
+const takeHandoffToken = () => {
+  if (typeof window === 'undefined') return null;
+  const match = window.location.hash.match(/(?:^#|&)handoff=([^&]+)/);
+  if (!match) return null;
+  const rest = window.location.hash
+    .replace(/^#/, '')
+    .split('&')
+    .filter((part) => !part.startsWith('handoff='))
+    .join('&');
+  window.history.replaceState(
+    null,
+    '',
+    window.location.pathname + window.location.search + (rest ? `#${rest}` : '')
+  );
+  return decodeURIComponent(match[1]);
 };
+
+const initialHandoffToken = takeHandoffToken();
 
 export const AuthProvider = ({ children }) => {
   const [firebaseUser, setFirebaseUser] = useState(undefined); // undefined = not known yet
   const [profile, setProfile] = useState(null);                // users/{uid} document data
   const [profileLoaded, setProfileLoaded] = useState(false);
-  const [jwtUser, setJwtUser] = useState(null);
-  const [jwtChecked, setJwtChecked] = useState(false);
+  const [handoffPending, setHandoffPending] = useState(!!initialHandoffToken);
 
   // Firebase session (persists across app restarts)
   useEffect(() => {
@@ -73,15 +69,12 @@ export const AuthProvider = ({ children }) => {
     getRedirectResult(auth).catch((error) => {
       console.warn('Google sign-in redirect failed:', error.code || error.message);
     });
+    if (initialHandoffToken) {
+      signInWithCustomToken(auth, initialHandoffToken)
+        .catch((error) => console.warn('Sign-in from the website failed:', error.code || error.message))
+        .finally(() => setHandoffPending(false));
+    }
     return onAuthStateChanged(auth, (user) => setFirebaseUser(user || null));
-  }, []);
-
-  // Transition: JWT cookie from the website
-  useEffect(() => {
-    readJwtUser().then((user) => {
-      setJwtUser(user);
-      setJwtChecked(true);
-    });
   }, []);
 
   // Live profile from Firestore for the signed-in Firebase user
@@ -114,15 +107,14 @@ export const AuthProvider = ({ children }) => {
         displayName: firebaseUser.displayName || '',
         premium: !!(profile && profile.premium === true),
         bookedClasses: (profile && profile.bookedClasses) || [],
-        isJwtUser: false,
       };
     }
-    return jwtUser;
-  }, [firebaseUser, profile, jwtUser]);
+    return null;
+  }, [firebaseUser, profile]);
 
   // Signed-in state is known as soon as Firebase answers (works offline).
   // The Firestore profile can arrive later; only premium checks wait for it.
-  const loading = firebaseUser === undefined || !jwtChecked;
+  const loading = firebaseUser === undefined || handoffPending;
   const profileLoading = !!firebaseUser && !profileLoaded;
 
   // ── Actions ─────────────────────────────────────────────
@@ -148,8 +140,6 @@ export const AuthProvider = ({ children }) => {
   const resetPassword = useCallback((email) => sendPasswordResetEmail(auth, email.trim()), []);
 
   const signOut = useCallback(async () => {
-    clearJwtToken();
-    setJwtUser(null);
     if (auth && auth.currentUser) await firebaseSignOut(auth);
   }, []);
 

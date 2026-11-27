@@ -26,7 +26,6 @@ function MultipleChoice({
   // Initialize question when handler is ready
   useEffect(() => {
     if (questionId && questionHandler && !isInitialized) {
-      console.log('[MultipleChoice] Initializing question:', questionId);
       questionHandler.startQuestion(questionId, 'multipleChoice');
       setIsInitialized(true);
     }
@@ -34,7 +33,6 @@ function MultipleChoice({
 
   const handleOptionClick = (option) => {
     if (answered || !isInitialized) {
-      console.log('[MultipleChoice] Click blocked - answered or not initialized');
       return;
     }
 

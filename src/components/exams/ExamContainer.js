@@ -195,7 +195,6 @@ const ExamContainer = ({ examData, examType = 'fede', onExamComplete }) => {
   };
 
   const handleSectionComplete = (completionData) => {
-    console.log('Section completed:', completionData);
     // Auto-advance to next section or complete exam
     if (currentSection < examData.sections.length - 1) {
       setTimeout(() => {

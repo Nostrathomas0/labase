@@ -31,7 +31,6 @@ const ExercisePanel = ({
       const currentQuestion = lessonData.questions[currentIndex];
       const questionType = currentQuestion.type || 'multipleChoice';
       
-      console.log(`[ExercisePanel] Initializing question ${questionId}`);
       
       setTimeout(() => {
         questionHandler.startQuestion(questionId, questionType);
@@ -54,7 +53,6 @@ const ExercisePanel = ({
   const totalQuestions = questions.length;
 
   const handleAnswer = (answerData) => {
-    console.log('[ExercisePanel] Answer received:', answerData);
     
     // Record the answer through QuestionHandler
     const result = questionHandler.handleAnswer(
@@ -80,7 +78,6 @@ const ExercisePanel = ({
     // CRITICAL FIX: Proper delayed transition with state reset
     setTimeout(() => {
       if (currentIndex < totalQuestions - 1) {
-        console.log(`[ExercisePanel] Moving to question ${currentIndex + 1}`);
         
         // Force component re-mount by changing key
         setQuestionKey(prev => prev + 1);
@@ -90,7 +87,6 @@ const ExercisePanel = ({
         
       } else {
         // Lesson completed
-        console.log('[ExercisePanel] All questions completed');
         if (onLessonComplete) {
           onLessonComplete({
             totalQuestions,
@@ -103,7 +99,6 @@ const ExercisePanel = ({
 
   const goToQuestion = (index) => {
     if (index >= 0 && index < totalQuestions) {
-      console.log(`[ExercisePanel] Manual navigation to question ${index}`);
       setQuestionKey(prev => prev + 1); // Force re-mount on manual navigation too
       setCurrentIndex(index);
     }

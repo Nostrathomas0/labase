@@ -36,19 +36,16 @@ try {
     localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
   });
   auth = getAuth(app);
-  console.log('Firebase App Initialized:', app.name);
 
   setPersistence(auth, browserLocalPersistence)
-    .then(() => console.log("🔥 Firebase Auth Persistence Set"))
     .catch((error) => console.error("Auth Persistence Error:", error));
 
   if (window.location.hostname === "localhost") {
     connectAuthEmulator(auth, "http://localhost:9099");
     connectFirestoreEmulator(db, "localhost", 8080);
-    console.log("🔥 Firebase Emulator connected!");
   }
 } catch (error) {
-  console.warn("Firebase initialization failed — running in JWT-only mode:", error.message);
+  console.warn("Firebase initialization failed — the app will run without sign-in:", error.message);
 }
 
 export { app, db, auth };
