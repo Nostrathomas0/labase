@@ -165,6 +165,7 @@ class ProgressManager {
     this.currentSession.lastActivity = new Date().toISOString();
 
     this.saveAttempt(answer);
+    this.writePage(); // keeps the page result and "last active" current
   }
 
   saveAttempt(answer) {
@@ -220,7 +221,10 @@ class ProgressManager {
       topic: String(topic),
       page: Number(page) || 0,
       score: progress.score,
-      bestScore: Math.max(progress.score, previous.bestScore || 0),
+      // best score of a finished run of the page (0 until one is finished)
+      bestScore: extra.completed
+        ? Math.max(progress.score, previous.bestScore || 0)
+        : (previous.bestScore || 0),
       correctAnswers: progress.correctAnswers || 0,
       totalQuestions: progress.totalQuestions || 0,
       passed: !!progress.passed,
@@ -280,7 +284,7 @@ class ProgressManager {
     const completed = results.filter((p) => p.completed);
     const scored = results.filter((p) => p.totalQuestions > 0);
     const averageScore = scored.length
-      ? Math.round(scored.reduce((sum, p) => sum + (p.bestScore || 0), 0) / scored.length)
+      ? Math.round(scored.reduce((sum, p) => sum + (p.bestScore || p.score || 0), 0) / scored.length)
       : 0;
 
     // Streak: consecutive days with activity, ending today or yesterday
