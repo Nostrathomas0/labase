@@ -30,13 +30,14 @@ const ExercisePanel = ({
     if (questionId) {  // ← Changed: now uses the questionId from above
       const currentQuestion = lessonData.questions[currentIndex];
       const questionType = currentQuestion.type || 'multipleChoice';
+      progressManager.setQuestionData(questionId, currentQuestion);
       
       
       setTimeout(() => {
         questionHandler.startQuestion(questionId, questionType);
       }, 50);
     }
-  }, [currentIndex, lessonData, questionHandler, questionId]); // ← Add questionId to dependencies
+  }, [currentIndex, lessonData, questionHandler, questionId, progressManager]);
 
   // Handle when there's no lesson data
   if (!lessonData || !lessonData.questions || lessonData.questions.length === 0) {

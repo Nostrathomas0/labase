@@ -24,6 +24,26 @@ const asText = (value) => {
 const pageKey = (level, topic, page) =>
   `${level}_${topic}_${page}`.replace(/[^A-Za-z0-9_-]/g, '-');
 
+// A readable version of a question, saved with each answer for teacher reports
+const describeQuestion = (q) => {
+  if (!q || typeof q !== 'object') return '';
+  const textOf = (runs) => (Array.isArray(runs)
+    ? runs.map((r) => (r && typeof r.text === 'string' ? r.text : '')).join('')
+    : '');
+  let text = '';
+  switch (q.type) {
+    case 'multipleChoice': text = q.question || ''; break;
+    case 'gapFill': text = q.template || ''; break;
+    case 'wordBank': text = q.paragraph || ''; break;
+    case 'sentenceBuilder': text = q.prompt || (Array.isArray(q.tokens) ? q.tokens.join(' ') : ''); break;
+    case 'click': text = textOf(q.instructions); break;
+    case 'popBox': text = q.instructions || (Array.isArray(q.columns) ? q.columns.join(' | ') : ''); break;
+    case 'matchingPairs': text = q.instructions || (Array.isArray(q.pairs) ? q.pairs.map((p) => p.left).join(', ') : ''); break;
+    default: text = q.question || q.prompt || textOf(q.instructions) || '';
+  }
+  return asText(String(text || '').replace(/\s+/g, ' ').trim());
+};
+
 const currentUid = () => (auth && auth.currentUser ? auth.currentUser.uid : null);
 
 const dayString = (date) => date.toISOString().slice(0, 10);
@@ -40,6 +60,7 @@ class ProgressManager {
     };
     this.questionStates = new Map(); // questionId -> state
     this.pages = new Map();          // pageKey -> saved page result
+    this.questionTexts = new Map();  // questionId -> readable question
     this.loadedFor = null;
 
     // Load the signed-in user's saved page results (and reload when the user changes)
@@ -74,6 +95,11 @@ class ProgressManager {
       lastActivity: new Date().toISOString(),
       sessionId: `${level}-${topic}-${page}-${Date.now()}`,
     };
+  }
+
+  // Called by the exercise panel with the question's data, before it is answered
+  setQuestionData(questionId, questionData) {
+    if (questionId) this.questionTexts.set(questionId, describeQuestion(questionData));
   }
 
   initializeQuestion(questionId) {
@@ -151,6 +177,7 @@ class ProgressManager {
       page: Number(page) || 0,
       questionId: String(answer.questionId),
       questionType: String(answer.questionType || ''),
+      questionText: this.questionTexts.get(answer.questionId) || '',
       userAnswer: asText(answer.userAnswer),
       correctAnswer: asText(answer.correctAnswer),
       isCorrect: answer.isCorrect === true,
@@ -350,4 +377,4 @@ class QuestionHandler {
   }
 }
 
-export { ProgressManager, QuestionHandler };
+export { ProgressManager, QuestionHandler, describeQuestion };
